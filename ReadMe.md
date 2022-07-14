@@ -1,3 +1,6 @@
-# Emby.SDK
+# Emby.SDK Beta
 
-See https://dev.emby.media
+
+### [Open Documentation](Documentation/index.html)
+
+See also https://betadev.emby.media
