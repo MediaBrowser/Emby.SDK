@@ -1,0 +1,1147 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>getLibraryVirtualfoldersQuery </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="getLibraryVirtualfoldersQuery ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/getLibraryVirtualfoldersQuery">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/getLibraryVirtualfoldersQuery">
+
+<h1 id="emby_restapi_getLibraryVirtualfoldersQuery" data-uid="emby.restapi/getLibraryVirtualfoldersQuery" class="text-capitalize text-break">getLibraryVirtualfoldersQuery</h1>
+<div class="markdown level0 description"><p>Requires authentication as administrator</p>
+</div>
+
+
+
+
+  
+  
+  
+   <h3 id="emby_restapi_getLibraryVirtualfoldersQuery_operation" data-uid="emby.restapi/getLibraryVirtualfoldersQuery/operation" style="display:none;" class="text-capitalize">getLibraryVirtualfoldersQuery</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Library/VirtualFolders/Query</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>In</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">StartIndex</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The record index to start at. All items with a lower index will be dropped from the results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Limit</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum number of records to return</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+  
+              <a href="#QueryResult_VirtualFolderInfo" class="typelink">QueryResult_VirtualFolderInfo</a>
+              
+        </td>
+        <td><p>Operation successful. Returning a QueryResult<virtualfolderinfo> object.<p>
+</virtualfolderinfo></td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+  
+  <h3 id="QueryResult_VirtualFolderInfo" class="text-capitalize">QueryResult_VirtualFolderInfo</h3>
+  <div>
+      <span class="xref">QueryResult_VirtualFolderInfo</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Items</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_VirtualFolderInfo" class="typelink">VirtualFolderInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TotalRecordCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_VirtualFolderInfo" class="text-capitalize">VirtualFolderInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.VirtualFolderInfo.html">MediaBrowser.Model.Entities.VirtualFolderInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Locations</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CollectionType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LibraryOptions</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_LibraryOptions" class="typelink">LibraryOptions[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryImageItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RefreshProgress</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RefreshStatus</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Configuration_LibraryOptions" class="text-capitalize">LibraryOptions</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.LibraryOptions.html">MediaBrowser.Model.Configuration.LibraryOptions</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">EnableArchiveMediaFiles</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnablePhotos</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableRealtimeMonitor</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableMarkerDetection</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableMarkerDetectionDuringLibraryScan</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IntroDetectionFingerprintLength</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableChapterImageExtraction</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtractChapterImagesDuringLibraryScan</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DownloadImagesInAdvance</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PathInfos</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_MediaPathInfo" class="typelink">MediaPathInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IgnoreHiddenFiles</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IgnoreFileExtensions</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SaveLocalMetadata</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SaveMetadataHidden</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SaveLocalThumbnailSets</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImportMissingEpisodes</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImportPlaylists</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAutomaticSeriesGrouping</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableEmbeddedTitles</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAudioResume</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AutomaticRefreshIntervalDays</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PreferredMetadataLanguage</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PreferredImageLanguage</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ContentType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MetadataCountryCode</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeasonZeroDisplayName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MetadataSavers</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisabledLocalMetadataReaders</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LocalMetadataReaderOrder</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisabledLyricsFetchers</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SaveLyricsWithMedia</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LyricsDownloadMaxAgeDays</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LyricsFetcherOrder</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LyricsDownloadLanguages</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisabledSubtitleFetchers</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleFetcherOrder</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SkipSubtitlesIfEmbeddedSubtitlesPresent</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SkipSubtitlesIfAudioTrackMatches</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleDownloadLanguages</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleDownloadMaxAgeDays</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequirePerfectSubtitleMatch</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SaveSubtitlesWithMedia</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ForcedSubtitlesOnly</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TypeOptions</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_TypeOptions" class="typelink">TypeOptions[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CollapseSingleItemFolders</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAdultMetadata</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImportCollections</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinCollectionItems</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MusicFolderStructure</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinResumePct</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxResumePct</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinResumeDurationSeconds</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ThumbnailImagesIntervalSeconds</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SampleIgnoreSize</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Configuration_MediaPathInfo" class="text-capitalize">MediaPathInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.MediaPathInfo.html">MediaBrowser.Model.Configuration.MediaPathInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Path</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">NetworkPath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Configuration_TypeOptions" class="text-capitalize">TypeOptions</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.TypeOptions.html">MediaBrowser.Model.Configuration.TypeOptions</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MetadataFetchers</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MetadataFetcherOrder</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImageFetchers</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImageFetcherOrder</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImageOptions</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_ImageOption" class="typelink">ImageOption[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Configuration_ImageOption" class="text-capitalize">ImageOption</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.ImageOption.html">MediaBrowser.Model.Configuration.ImageOption</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ImageType" class="typelink">ImageType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Limit</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinWidth</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_ImageType" class="text-capitalize">ImageType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ImageType.html">MediaBrowser.Model.Entities.ImageType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Primary</li>
+  <li>Art</li>
+  <li>Backdrop</li>
+  <li>Banner</li>
+  <li>Logo</li>
+  <li>Thumb</li>
+  <li>Disc</li>
+  <li>Box</li>
+  <li>Screenshot</li>
+  <li>Menu</li>
+  <li>Chapter</li>
+  <li>BoxRear</li>
+  <li>Thumbnail</li>
+  <li>LogoLight</li>
+  <li>LogoLightColor</li>
+  </ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

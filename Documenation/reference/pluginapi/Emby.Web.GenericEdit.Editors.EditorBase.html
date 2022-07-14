@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EditorBase
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EditorBase
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="Emby.Web.GenericEdit.Editors.EditorBase">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Emby.Web.GenericEdit.Editors.EditorBase">
+  
+  
+  <h1 id="Emby_Web_GenericEdit_Editors_EditorBase" data-uid="Emby.Web.GenericEdit.Editors.EditorBase" class="text-break">Class EditorBase
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">EditorBase</span></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorBoolean.html">EditorBoolean</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorButtonGroup.html">EditorButtonGroup</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorButtonItem.html">EditorButtonItem</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorCaptionItem.html">EditorCaptionItem</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorDateTime.html">EditorDateTime</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorFilePicker.html">EditorFilePicker</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorFolderPicker.html">EditorFolderPicker</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorGrid.html">EditorGrid</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorGroup.html">EditorGroup</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorItemList.html">EditorItemList</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorLabelItem.html">EditorLabelItem</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorNumeric.html">EditorNumeric</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorPivotGrid.html">EditorPivotGrid</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorProgressItem.html">EditorProgressItem</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorRadioGroup.html">EditorRadioGroup</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorSelectBase.html">EditorSelectBase</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorSpacerItem.html">EditorSpacerItem</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorStatusItem.html">EditorStatusItem</a></div>
+      <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.Editors.EditorText.html">EditorText</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Web.GenericEdit.Editors.html">Emby.Web.GenericEdit.Editors</a></h6>
+  <h6><strong>Assembly</strong>: Emby.Web.GenericEdit.dll</h6>
+  <h5 id="Emby_Web_GenericEdit_Editors_EditorBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class EditorBase</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase__ctor_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.#ctor*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase__ctor" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.#ctor">EditorBase()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EditorBase()</code></pre>
+  </div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase__ctor_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.#ctor*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase__ctor_Emby_Web_GenericEdit_Common_EditorTypes_System_String_System_String_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.#ctor(Emby.Web.GenericEdit.Common.EditorTypes,System.String,System.String)">EditorBase(EditorTypes, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EditorBase(EditorTypes editorType, string name, string parentId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Common.EditorTypes.html">EditorTypes</a></td>
+        <td><span class="parametername">editorType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">parentId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_AllowEmpty_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.AllowEmpty*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_AllowEmpty" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.AllowEmpty">AllowEmpty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AllowEmpty { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_Description_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.Description*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_Description" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.Description">Description</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_DisplayName_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.DisplayName*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_DisplayName" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_EditorType_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.EditorType*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_EditorType" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.EditorType">EditorType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EditorTypes EditorType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Common.EditorTypes.html">EditorTypes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_Id_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.Id*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_Id" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.Id">Id</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_IsAdvanced_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.IsAdvanced*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_IsAdvanced" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.IsAdvanced">IsAdvanced</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsAdvanced { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_IsReadOnly_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.IsReadOnly*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_IsReadOnly" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsReadOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_Name_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.Name*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_Name" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorBase_ParentId_" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.ParentId*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorBase_ParentId" data-uid="Emby.Web.GenericEdit.Editors.EditorBase.ParentId">ParentId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

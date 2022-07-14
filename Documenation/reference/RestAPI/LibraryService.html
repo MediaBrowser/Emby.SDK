@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>LibraryService </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="LibraryService ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/tag/LibraryService">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/tag/LibraryService">
+
+<h1 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/tag/LibraryService" class="text-capitalize text-break">LibraryService</h1>
+
+
+<a href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library" class=""><p>API Documentation: Browsing the Library</p>
+</a>
+
+ <a class="xref" href="LibraryService/deleteItems.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/deleteItems/operationlistitem" class="text-capitalize">deleteItems</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Items</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes an item from the library and file system</p>
+</div>
+ <a class="xref" href="LibraryService/deleteItemsById.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/deleteItemsById/operationlistitem" class="text-capitalize">deleteItemsById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Items/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes an item from the library and file system</p>
+</div>
+ <a class="xref" href="LibraryService/getAlbumsByIdSimilar.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getAlbumsByIdSimilar/operationlistitem" class="text-capitalize">getAlbumsByIdSimilar</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Albums/{Id}/Similar</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Finds albums similar to a given album.</p>
+</div>
+ <a class="xref" href="LibraryService/getArtistsByIdSimilar.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getArtistsByIdSimilar/operationlistitem" class="text-capitalize">getArtistsByIdSimilar</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Artists/{Id}/Similar</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Finds albums similar to a given album.</p>
+</div>
+ <a class="xref" href="LibraryService/getGamesByIdSimilar.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getGamesByIdSimilar/operationlistitem" class="text-capitalize">getGamesByIdSimilar</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Games/{Id}/Similar</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Finds games similar to a given game.</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdAncestors.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdAncestors/operationlistitem" class="text-capitalize">getItemsByIdAncestors</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/Ancestors</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets all parents of an item</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdCriticreviews.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdCriticreviews/operationlistitem" class="text-capitalize">getItemsByIdCriticreviews</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/CriticReviews</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets critic reviews for an item</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdDeleteinfo.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdDeleteinfo/operationlistitem" class="text-capitalize">getItemsByIdDeleteinfo</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/DeleteInfo</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets delete info for an item</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdDownload.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdDownload/operationlistitem" class="text-capitalize">getItemsByIdDownload</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/Download</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Downloads item media</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdFile.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdFile/operationlistitem" class="text-capitalize">getItemsByIdFile</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/File</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets the original file of an item</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdSimilar.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdSimilar/operationlistitem" class="text-capitalize">getItemsByIdSimilar</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/Similar</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets similar items</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdThememedia.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdThememedia/operationlistitem" class="text-capitalize">getItemsByIdThememedia</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/ThemeMedia</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets theme videos and songs for an item</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdThemesongs.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdThemesongs/operationlistitem" class="text-capitalize">getItemsByIdThemesongs</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/ThemeSongs</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets theme songs for an item</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsByIdThemevideos.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsByIdThemevideos/operationlistitem" class="text-capitalize">getItemsByIdThemevideos</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/ThemeVideos</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets theme videos for an item</p>
+</div>
+ <a class="xref" href="LibraryService/getItemsCounts.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsCounts/operationlistitem" class="text-capitalize">getItemsCounts</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/Counts</code></pre>
+</div>
+ <a class="xref" href="LibraryService/getItemsIntros.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getItemsIntros/operationlistitem" class="text-capitalize">getItemsIntros</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/Intros</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets info to debug intros</p>
+</div>
+ <a class="xref" href="LibraryService/getLibrariesAvailableoptions.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getLibrariesAvailableoptions/operationlistitem" class="text-capitalize">getLibrariesAvailableoptions</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Libraries/AvailableOptions</code></pre>
+</div>
+ <a class="xref" href="LibraryService/getLibraryMediafolders.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getLibraryMediafolders/operationlistitem" class="text-capitalize">getLibraryMediafolders</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Library/MediaFolders</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets all user media folders.</p>
+</div>
+ <a class="xref" href="LibraryService/getLibraryPhysicalpaths.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getLibraryPhysicalpaths/operationlistitem" class="text-capitalize">getLibraryPhysicalpaths</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Library/PhysicalPaths</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a list of physical paths from virtual folders</p>
+</div>
+ <a class="xref" href="LibraryService/getLibrarySelectablemediafolders.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getLibrarySelectablemediafolders/operationlistitem" class="text-capitalize">getLibrarySelectablemediafolders</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Library/SelectableMediaFolders</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets all user media folders.</p>
+</div>
+ <a class="xref" href="LibraryService/getMoviesByIdSimilar.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getMoviesByIdSimilar/operationlistitem" class="text-capitalize">getMoviesByIdSimilar</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Movies/{Id}/Similar</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Finds movies and trailers similar to a given movie.</p>
+</div>
+ <a class="xref" href="LibraryService/getShowsByIdSimilar.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getShowsByIdSimilar/operationlistitem" class="text-capitalize">getShowsByIdSimilar</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Shows/{Id}/Similar</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Finds tv shows similar to a given one.</p>
+</div>
+ <a class="xref" href="LibraryService/getTrailersByIdSimilar.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/getTrailersByIdSimilar/operationlistitem" class="text-capitalize">getTrailersByIdSimilar</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Trailers/{Id}/Similar</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Finds movies and trailers similar to a given trailer.</p>
+</div>
+ <a class="xref" href="LibraryService/postItemsByIdDelete.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postItemsByIdDelete/operationlistitem" class="text-capitalize">postItemsByIdDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes an item from the library and file system</p>
+</div>
+ <a class="xref" href="LibraryService/postItemsDelete.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postItemsDelete/operationlistitem" class="text-capitalize">postItemsDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes an item from the library and file system</p>
+</div>
+ <a class="xref" href="LibraryService/postLibraryMediaUpdated.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postLibraryMediaUpdated/operationlistitem" class="text-capitalize">postLibraryMediaUpdated</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Library/Media/Updated</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Reports that new movies have been added by an external source</p>
+</div>
+ <a class="xref" href="LibraryService/postLibraryMoviesAdded.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postLibraryMoviesAdded/operationlistitem" class="text-capitalize">postLibraryMoviesAdded</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Library/Movies/Added</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deprecated. Use /Library/Media/Updated</p>
+</div>
+ <a class="xref" href="LibraryService/postLibraryMoviesUpdated.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postLibraryMoviesUpdated/operationlistitem" class="text-capitalize">postLibraryMoviesUpdated</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Library/Movies/Updated</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deprecated. Use /Library/Media/Updated</p>
+</div>
+ <a class="xref" href="LibraryService/postLibraryRefresh.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postLibraryRefresh/operationlistitem" class="text-capitalize">postLibraryRefresh</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Library/Refresh</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Starts a library scan</p>
+</div>
+ <a class="xref" href="LibraryService/postLibrarySeriesAdded.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postLibrarySeriesAdded/operationlistitem" class="text-capitalize">postLibrarySeriesAdded</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Library/Series/Added</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deprecated. Use /Library/Media/Updated</p>
+</div>
+ <a class="xref" href="LibraryService/postLibrarySeriesUpdated.html"><h3 id="emby_restapi_tag_LibraryService" data-uid="emby.restapi/postLibrarySeriesUpdated/operationlistitem" class="text-capitalize">postLibrarySeriesUpdated</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Library/Series/Updated</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deprecated. Use /Library/Media/Updated</p>
+</div>
+
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

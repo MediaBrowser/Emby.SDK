@@ -1,0 +1,3524 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseItemsRequest
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseItemsRequest
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Api.BaseItemsRequest">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest">
+  
+  
+  <h1 id="MediaBrowser_Controller_Api_BaseItemsRequest" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest" class="text-break">Class BaseItemsRequest
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">BaseItemsRequest</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Controller.Api.IHasDtoOptions.html">IHasDtoOptions</a></div>
+    <div><a class="xref" href="MediaBrowser.Controller.Api.IHasItemFields.html">IHasItemFields</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Api.html">MediaBrowser.Controller.Api</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_Api_BaseItemsRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BaseItemsRequest : IHasDtoOptions, IHasItemFields</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest__ctor_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.#ctor*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest__ctor" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.#ctor">BaseItemsRequest()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseItemsRequest()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AdjacentTo_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AdjacentTo*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AdjacentTo" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AdjacentTo">AdjacentTo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AdjacentTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AiredDuringSeason_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AiredDuringSeason*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AiredDuringSeason" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AiredDuringSeason">AiredDuringSeason</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AiredDuringSeason { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AlbumArtistIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AlbumArtistIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AlbumArtistIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AlbumArtistIds">AlbumArtistIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlbumArtistIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AlbumArtistStartsWithOrGreater_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AlbumArtistStartsWithOrGreater*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AlbumArtistStartsWithOrGreater" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AlbumArtistStartsWithOrGreater">AlbumArtistStartsWithOrGreater</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlbumArtistStartsWithOrGreater { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AlbumIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AlbumIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AlbumIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AlbumIds">AlbumIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlbumIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Albums_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Albums*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Albums" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Albums">Albums</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Albums { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AnyProviderIdEquals_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AnyProviderIdEquals*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AnyProviderIdEquals" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AnyProviderIdEquals">AnyProviderIdEquals</h4>
+  <div class="markdown level1 summary"><p>Provider IDs to match at least one of.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AnyProviderIdEquals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The any provider id equals filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ArtistIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ArtistIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ArtistIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ArtistIds">ArtistIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ArtistIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Artists_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Artists*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Artists" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Artists">Artists</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the studios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Artists { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The studios.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ArtistStartsWithOrGreater_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ArtistStartsWithOrGreater*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ArtistStartsWithOrGreater" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ArtistStartsWithOrGreater">ArtistStartsWithOrGreater</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ArtistStartsWithOrGreater { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ArtistType_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ArtistType*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ArtistType" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ArtistType">ArtistType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ArtistType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AudioCodecs_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AudioCodecs*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AudioCodecs" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AudioCodecs">AudioCodecs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AudioCodecs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_AudioLanguages_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AudioLanguages*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_AudioLanguages" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.AudioLanguages">AudioLanguages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AudioLanguages { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_CollectionIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.CollectionIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_CollectionIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.CollectionIds">CollectionIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CollectionIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Containers_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Containers*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Containers" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Containers">Containers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Containers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ContributingArtistIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ContributingArtistIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ContributingArtistIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ContributingArtistIds">ContributingArtistIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ContributingArtistIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableImages_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableImages*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableImages" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableImages">EnableImages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? EnableImages { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableImageTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableImageTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableImageTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableImageTypes">EnableImageTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EnableImageTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableTotalRecordCount_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableTotalRecordCount*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableTotalRecordCount" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableTotalRecordCount">EnableTotalRecordCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableTotalRecordCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableUserData_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableUserData*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_EnableUserData" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.EnableUserData">EnableUserData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? EnableUserData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeArtistIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeArtistIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeArtistIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeArtistIds">ExcludeArtistIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExcludeArtistIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeItemIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeItemIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeItemIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeItemIds">ExcludeItemIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExcludeItemIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeItemTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeItemTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeItemTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeItemTypes">ExcludeItemTypes</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the exclude item types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExcludeItemTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The exclude item types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeLocationTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeLocationTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ExcludeLocationTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ExcludeLocationTypes">ExcludeLocationTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExcludeLocationTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Fields_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Fields*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Fields" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Fields">Fields</h4>
+  <div class="markdown level1 summary"><p>Fields to return within the items, in addition to basic information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Fields { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Filters_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Filters*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Filters" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Filters">Filters</h4>
+  <div class="markdown level1 summary"><p>Filters to apply to the results</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Filters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The filters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GenreIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GenreIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GenreIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GenreIds">GenreIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GenreIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Genres_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Genres*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Genres" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Genres">Genres</h4>
+  <div class="markdown level1 summary"><p>Limit results to items containing specific genres</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Genres { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The genres.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GroupItemsInto_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GroupItemsInto*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GroupItemsInto" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GroupItemsInto">GroupItemsInto</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemLinkType? GroupItemsInto { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GroupItemsIntoCollections_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GroupItemsIntoCollections*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GroupItemsIntoCollections" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GroupItemsIntoCollections">GroupItemsIntoCollections</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GroupItemsIntoCollections { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GroupProgramsBySeries_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GroupProgramsBySeries*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GroupProgramsBySeries" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GroupProgramsBySeries">GroupProgramsBySeries</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GroupProgramsBySeries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasAired_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasAired*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasAired" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasAired">HasAired</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasAired { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasImdbId_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasImdbId*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasImdbId" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasImdbId">HasImdbId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasImdbId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasOfficialRating_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasOfficialRating*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasOfficialRating" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasOfficialRating">HasOfficialRating</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasOfficialRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasOverview_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasOverview*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasOverview" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasOverview">HasOverview</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasOverview { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasParentalRating_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasParentalRating*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasParentalRating" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasParentalRating">HasParentalRating</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasParentalRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasSpecialFeature_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasSpecialFeature*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasSpecialFeature" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasSpecialFeature">HasSpecialFeature</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasSpecialFeature { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasSubtitles_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasSubtitles*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasSubtitles" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasSubtitles">HasSubtitles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasSubtitles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasThemeSong_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasThemeSong*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasThemeSong" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasThemeSong">HasThemeSong</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasThemeSong { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasThemeVideo_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasThemeVideo*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasThemeVideo" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasThemeVideo">HasThemeVideo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasThemeVideo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasTmdbId_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasTmdbId*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasTmdbId" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasTmdbId">HasTmdbId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasTmdbId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasTrailer_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasTrailer*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasTrailer" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasTrailer">HasTrailer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasTrailer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_HasTvdbId_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasTvdbId*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_HasTvdbId" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.HasTvdbId">HasTvdbId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasTvdbId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Ids_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Ids*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Ids" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Ids">Ids</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the item ids.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Ids { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The item ids.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ImageTypeLimit_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ImageTypeLimit*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ImageTypeLimit" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ImageTypeLimit">ImageTypeLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ImageTypeLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ImageTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ImageTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ImageTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ImageTypes">ImageTypes</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the image types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ImageTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The image types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IncludeItemTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IncludeItemTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IncludeItemTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IncludeItemTypes">IncludeItemTypes</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the include item types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string IncludeItemTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The include item types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Is3D_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Is3D*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Is3D" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Is3D">Is3D</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the video formats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Is3D { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>The video formats.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Is4K_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Is4K*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Is4K" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Is4K">Is4K</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Is4K { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsAiring_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsAiring*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsAiring" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsAiring">IsAiring</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsAiring { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsFavorite_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsFavorite*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsFavorite" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsFavorite">IsFavorite</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the Isfavorite option</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsFavorite { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>IsFavorite</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsHD_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsHD*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsHD" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsHD">IsHD</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsHD { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsKids_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsKids*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsKids" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsKids">IsKids</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsKids { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsLocked_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsLocked*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsLocked" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsLocked">IsLocked</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsLocked { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsMissing_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsMissing*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsMissing" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsMissing">IsMissing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsMissing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsMovie_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsMovie*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsMovie" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsMovie">IsMovie</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsMovie { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsNews_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsNews*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsNews" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsNews">IsNews</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsNews { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsPlaceHolder_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsPlaceHolder*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsPlaceHolder" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsPlaceHolder">IsPlaceHolder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsPlaceHolder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsPlayed_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsPlayed*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsPlayed" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsPlayed">IsPlayed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsPlayed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsSeries_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsSeries*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsSeries" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsSeries">IsSeries</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsSeries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsSports_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsSports*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsSports" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsSports">IsSports</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsSports { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_IsUnaired_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsUnaired*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_IsUnaired" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.IsUnaired">IsUnaired</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsUnaired { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Limit_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Limit*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Limit" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Limit">Limit</h4>
+  <div class="markdown level1 summary"><p>The maximum number of items to return</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Limit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The limit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ListItemIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ListItemIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ListItemIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ListItemIds">ListItemIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ListItemIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_LocationTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.LocationTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_LocationTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.LocationTypes">LocationTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LocationTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxHeight_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxHeight*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxHeight" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxHeight">MaxHeight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxOfficialRating_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxOfficialRating*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxOfficialRating" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxOfficialRating">MaxOfficialRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the max offical rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MaxOfficialRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The max offical rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxPlayers_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxPlayers*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxPlayers" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxPlayers">MaxPlayers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxPlayers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxPremiereDate_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxPremiereDate*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxPremiereDate" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxPremiereDate">MaxPremiereDate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MaxPremiereDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxWidth_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxWidth*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MaxWidth" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MaxWidth">MaxWidth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MediaTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MediaTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MediaTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MediaTypes">MediaTypes</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the media types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MediaTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The media types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinCommunityRating_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinCommunityRating*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinCommunityRating" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinCommunityRating">MinCommunityRating</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? MinCommunityRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinCriticRating_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinCriticRating*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinCriticRating" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinCriticRating">MinCriticRating</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? MinCriticRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinDateLastSaved_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinDateLastSaved*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinDateLastSaved" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinDateLastSaved">MinDateLastSaved</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MinDateLastSaved { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinDateLastSavedForUser_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinDateLastSavedForUser*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinDateLastSavedForUser" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinDateLastSavedForUser">MinDateLastSavedForUser</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MinDateLastSavedForUser { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinHeight_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinHeight*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinHeight" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinHeight">MinHeight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MinHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinIndexNumber_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinIndexNumber*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinIndexNumber" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinIndexNumber">MinIndexNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MinIndexNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinOfficialRating_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinOfficialRating*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinOfficialRating" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinOfficialRating">MinOfficialRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the min offical rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MinOfficialRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The min offical rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinPlayers_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinPlayers*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinPlayers" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinPlayers">MinPlayers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MinPlayers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinPremiereDate_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinPremiereDate*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinPremiereDate" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinPremiereDate">MinPremiereDate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MinPremiereDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_MinWidth_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinWidth*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_MinWidth" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.MinWidth">MinWidth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MinWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_NameLessThan_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.NameLessThan*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_NameLessThan" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.NameLessThan">NameLessThan</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NameLessThan { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_NameStartsWith_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.NameStartsWith*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_NameStartsWith" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.NameStartsWith">NameStartsWith</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NameStartsWith { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_NameStartsWithOrGreater_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.NameStartsWithOrGreater*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_NameStartsWithOrGreater" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.NameStartsWithOrGreater">NameStartsWithOrGreater</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NameStartsWithOrGreater { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_OfficialRatings_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.OfficialRatings*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_OfficialRatings" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.OfficialRatings">OfficialRatings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OfficialRatings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_OuterIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.OuterIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_OuterIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.OuterIds">OuterIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OuterIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ParentId_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ParentId*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ParentId" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ParentId">ParentId</h4>
+  <div class="markdown level1 summary"><p>Specify this to localize the search to a specific item or folder. Omit to use the root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The parent id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_ParentIndexNumber_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ParentIndexNumber*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_ParentIndexNumber" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.ParentIndexNumber">ParentIndexNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ParentIndexNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Path_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Path*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Path" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Path">Path</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Person_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Person*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Person" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Person">Person</h4>
+  <div class="markdown level1 summary"><p>Limit results to items containing a specific person</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Person { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The person.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_PersonIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.PersonIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_PersonIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.PersonIds">PersonIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PersonIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_PersonTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.PersonTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_PersonTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.PersonTypes">PersonTypes</h4>
+  <div class="markdown level1 summary"><p>If the Person filter is used, this can also be used to restrict to a specific person type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PersonTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The type of the person.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Recursive_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Recursive*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Recursive" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Recursive">Recursive</h4>
+  <div class="markdown level1 summary"><p>Whether or not to perform the query recursively</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Recursive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if recursive; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_SearchTerm_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SearchTerm*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_SearchTerm" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SearchTerm">SearchTerm</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SearchTerm { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_SeriesStatus_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SeriesStatus*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_SeriesStatus" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SeriesStatus">SeriesStatus</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the series status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeriesStatus { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The series status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_SortBy_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SortBy*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_SortBy" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SortBy">SortBy</h4>
+  <div class="markdown level1 summary"><p>What to sort the results by</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SortBy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The sort by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_SortOrder_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SortOrder*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_SortOrder" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SortOrder">SortOrder</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the sort order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SortOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The sort order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_StartIndex_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.StartIndex*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_StartIndex" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.StartIndex">StartIndex</h4>
+  <div class="markdown level1 summary"><p>Skips over a given number of items within the results. Use for paging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? StartIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The start index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_StudioIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.StudioIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_StudioIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.StudioIds">StudioIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string StudioIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Studios_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Studios*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Studios" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Studios">Studios</h4>
+  <div class="markdown level1 summary"><p>Limit results to items containing specific studios</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Studios { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The studios.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_SubtitleCodecs_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SubtitleCodecs*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_SubtitleCodecs" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SubtitleCodecs">SubtitleCodecs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SubtitleCodecs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_SubtitleLanguages_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SubtitleLanguages*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_SubtitleLanguages" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.SubtitleLanguages">SubtitleLanguages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SubtitleLanguages { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_TagIds_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.TagIds*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_TagIds" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.TagIds">TagIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TagIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Tags_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Tags*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Tags" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Tags">Tags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Tags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_UserId_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.UserId*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_UserId" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.UserId">UserId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the user id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid UserId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><p>The user id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_VideoCodecs_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.VideoCodecs*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_VideoCodecs" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.VideoCodecs">VideoCodecs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VideoCodecs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_VideoTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.VideoTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_VideoTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.VideoTypes">VideoTypes</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the video types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VideoTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The video types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_Years_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Years*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_Years" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.Years">Years</h4>
+  <div class="markdown level1 summary"><p>Limit results to items containing specific years</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Years { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The years.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetAnyProviderIdEquals_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetAnyProviderIdEquals*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetAnyProviderIdEquals" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetAnyProviderIdEquals">GetAnyProviderIdEquals()</h4>
+  <div class="markdown level1 summary"><p>Gets the AnyProviderIdEquals filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;KeyValuePair&lt;string, string&gt;&gt; GetAnyProviderIdEquals()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><p>Dictionary{string, string}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetAudioCodecs_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetAudioCodecs*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetAudioCodecs" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetAudioCodecs">GetAudioCodecs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetAudioCodecs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetAudioLanguages_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetAudioLanguages*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetAudioLanguages" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetAudioLanguages">GetAudioLanguages()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetAudioLanguages()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetContainers_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetContainers*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetContainers" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetContainers">GetContainers()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetContainers()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetExcludeItemTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetExcludeItemTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetExcludeItemTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetExcludeItemTypes">GetExcludeItemTypes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetExcludeItemTypes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetFilters_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetFilters*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetFilters" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetFilters">GetFilters()</h4>
+  <div class="markdown level1 summary"><p>Gets the filters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemFilter[] GetFilters()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.ItemFilter.html">ItemFilter</a>[]</td>
+        <td><p>IEnumerable{ItemFilter}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetGenres_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetGenres*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetGenres" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetGenres">GetGenres()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetGenres()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetImageTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetImageTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetImageTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetImageTypes">GetImageTypes()</h4>
+  <div class="markdown level1 summary"><p>Gets the image types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImageType[] GetImageTypes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a>[]</td>
+        <td><p>IEnumerable{ImageType}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetIncludeItemTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetIncludeItemTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetIncludeItemTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetIncludeItemTypes">GetIncludeItemTypes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetIncludeItemTypes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetMediaTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetMediaTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetMediaTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetMediaTypes">GetMediaTypes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetMediaTypes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetOfficialRatings_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetOfficialRatings*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetOfficialRatings" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetOfficialRatings">GetOfficialRatings()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetOfficialRatings()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetOrderBy_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetOrderBy*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetOrderBy" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetOrderBy">GetOrderBy()</h4>
+  <div class="markdown level1 summary"><p>Gets the order by.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (string, SortOrder)[] GetOrderBy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="MediaBrowser.Model.Entities.SortOrder.html">SortOrder</a>&gt;[]</td>
+        <td><p>IEnumerable{ItemSortBy}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetOrderBy_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetOrderBy*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetOrderBy_System_String_System_String_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetOrderBy(System.String,System.String)">GetOrderBy(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static (string, SortOrder)[] GetOrderBy(string sortBy, string requestedSortOrder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sortBy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">requestedSortOrder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="MediaBrowser.Model.Entities.SortOrder.html">SortOrder</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetPersonTypes_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetPersonTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetPersonTypes" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetPersonTypes">GetPersonTypes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersonType[] GetPersonTypes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.PersonType.html">PersonType</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetStudios_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetStudios*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetStudios" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetStudios">GetStudios()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetStudios()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetSubtitleCodecs_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetSubtitleCodecs*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetSubtitleCodecs" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetSubtitleCodecs">GetSubtitleCodecs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetSubtitleCodecs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetSubtitleLanguages_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetSubtitleLanguages*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetSubtitleLanguages" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetSubtitleLanguages">GetSubtitleLanguages()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetSubtitleLanguages()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetTags_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetTags*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetTags" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetTags">GetTags()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetTags()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetVideoCodecs_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetVideoCodecs*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetVideoCodecs" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetVideoCodecs">GetVideoCodecs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] GetVideoCodecs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseItemsRequest_GetYears_" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetYears*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseItemsRequest_GetYears" data-uid="MediaBrowser.Controller.Api.BaseItemsRequest.GetYears">GetYears()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int[] GetYears()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Api.IHasDtoOptions.html">IHasDtoOptions</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Api.IHasItemFields.html">IHasItemFields</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Api.ItemFieldsExtensions.html#MediaBrowser_Controller_Api_ItemFieldsExtensions_GetItemFields_MediaBrowser_Controller_Api_IHasItemFields_">ItemFieldsExtensions.GetItemFields(IHasItemFields)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

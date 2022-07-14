@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content=" ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/socialbar.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="emby.restapi">
+    
+    <meta property="docfx:rel" content="../">
+    
+    <script type="text/javascript" src="../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../index.html">
+        		    <img id="logo" class="svg" src="../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi">
+
+<h1 id="emby_restapi" data-uid="emby.restapi" class="text-capitalize text-break"></h1>
+
+<a class="xref" href="RestAPI/ActivityLogService.html"><h4 id="ActivityLogService" data-uid="emby.restapi/tag/ActivityLogService/taglistitem" class="text-capitalize">ActivityLogService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ArtistsService.html"><h4 id="ArtistsService" data-uid="emby.restapi/tag/ArtistsService/taglistitem" class="text-capitalize">ArtistsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/AudioService.html"><h4 id="AudioService" data-uid="emby.restapi/tag/AudioService/taglistitem" class="text-capitalize">AudioService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Audio-Streaming" class=""><p>API Documentation: Audio streaming</p>
+</a>
+<a class="xref" href="RestAPI/BifService.html"><h4 id="BifService" data-uid="emby.restapi/tag/BifService/taglistitem" class="text-capitalize">BifService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/BrandingService.html"><h4 id="BrandingService" data-uid="emby.restapi/tag/BrandingService/taglistitem" class="text-capitalize">BrandingService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ChannelService.html"><h4 id="ChannelService" data-uid="emby.restapi/tag/ChannelService/taglistitem" class="text-capitalize">ChannelService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/CodecParameterService.html"><h4 id="CodecParameterService" data-uid="emby.restapi/tag/CodecParameterService/taglistitem" class="text-capitalize">CodecParameterService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/CollectionService.html"><h4 id="CollectionService" data-uid="emby.restapi/tag/CollectionService/taglistitem" class="text-capitalize">CollectionService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ConfigurationService.html"><h4 id="ConfigurationService" data-uid="emby.restapi/tag/ConfigurationService/taglistitem" class="text-capitalize">ConfigurationService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ConnectService.html"><h4 id="ConnectService" data-uid="emby.restapi/tag/ConnectService/taglistitem" class="text-capitalize">ConnectService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DashboardService.html"><h4 id="DashboardService" data-uid="emby.restapi/tag/DashboardService/taglistitem" class="text-capitalize">DashboardService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DemoApiService.html"><h4 id="DemoApiService" data-uid="emby.restapi/tag/DemoApiService/taglistitem" class="text-capitalize">DemoApiService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DeviceService.html"><h4 id="DeviceService" data-uid="emby.restapi/tag/DeviceService/taglistitem" class="text-capitalize">DeviceService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DiagnosticsPluginService.html"><h4 id="DiagnosticsPluginService" data-uid="emby.restapi/tag/DiagnosticsPluginService/taglistitem" class="text-capitalize">DiagnosticsPluginService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DisplayPreferencesService.html"><h4 id="DisplayPreferencesService" data-uid="emby.restapi/tag/DisplayPreferencesService/taglistitem" class="text-capitalize">DisplayPreferencesService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DlnaServerService.html"><h4 id="DlnaServerService" data-uid="emby.restapi/tag/DlnaServerService/taglistitem" class="text-capitalize">DlnaServerService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DlnaService.html"><h4 id="DlnaService" data-uid="emby.restapi/tag/DlnaService/taglistitem" class="text-capitalize">DlnaService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/DynamicHlsService.html"><h4 id="DynamicHlsService" data-uid="emby.restapi/tag/DynamicHlsService/taglistitem" class="text-capitalize">DynamicHlsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Http-Live-Streaming" class=""><p>API Documentation: Http Live Streaming</p>
+</a>
+<a class="xref" href="RestAPI/EncodingInfoService.html"><h4 id="EncodingInfoService" data-uid="emby.restapi/tag/EncodingInfoService/taglistitem" class="text-capitalize">EncodingInfoService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/EnvironmentService.html"><h4 id="EnvironmentService" data-uid="emby.restapi/tag/EnvironmentService/taglistitem" class="text-capitalize">EnvironmentService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/FfmpegOptionsService.html"><h4 id="FfmpegOptionsService" data-uid="emby.restapi/tag/FfmpegOptionsService/taglistitem" class="text-capitalize">FfmpegOptionsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/GameGenresService.html"><h4 id="GameGenresService" data-uid="emby.restapi/tag/GameGenresService/taglistitem" class="text-capitalize">GameGenresService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/GamesService.html"><h4 id="GamesService" data-uid="emby.restapi/tag/GamesService/taglistitem" class="text-capitalize">GamesService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/GenresService.html"><h4 id="GenresService" data-uid="emby.restapi/tag/GenresService/taglistitem" class="text-capitalize">GenresService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/HlsSegmentService.html"><h4 id="HlsSegmentService" data-uid="emby.restapi/tag/HlsSegmentService/taglistitem" class="text-capitalize">HlsSegmentService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ImageByNameService.html"><h4 id="ImageByNameService" data-uid="emby.restapi/tag/ImageByNameService/taglistitem" class="text-capitalize">ImageByNameService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ImageService.html"><h4 id="ImageService" data-uid="emby.restapi/tag/ImageService/taglistitem" class="text-capitalize">ImageService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Images" class=""><p>API Documentation: Images</p>
+</a>
+<a class="xref" href="RestAPI/InstantMixService.html"><h4 id="InstantMixService" data-uid="emby.restapi/tag/InstantMixService/taglistitem" class="text-capitalize">InstantMixService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ItemLookupService.html"><h4 id="ItemLookupService" data-uid="emby.restapi/tag/ItemLookupService/taglistitem" class="text-capitalize">ItemLookupService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ItemRefreshService.html"><h4 id="ItemRefreshService" data-uid="emby.restapi/tag/ItemRefreshService/taglistitem" class="text-capitalize">ItemRefreshService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ItemUpdateService.html"><h4 id="ItemUpdateService" data-uid="emby.restapi/tag/ItemUpdateService/taglistitem" class="text-capitalize">ItemUpdateService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ItemsService.html"><h4 id="ItemsService" data-uid="emby.restapi/tag/ItemsService/taglistitem" class="text-capitalize">ItemsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Item-Information" class=""><p>API Documentation: Item Information</p>
+</a>
+<a class="xref" href="RestAPI/LibraryService.html"><h4 id="LibraryService" data-uid="emby.restapi/tag/LibraryService/taglistitem" class="text-capitalize">LibraryService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library" class=""><p>API Documentation: Browsing the Library</p>
+</a>
+<a class="xref" href="RestAPI/LibraryStructureService.html"><h4 id="LibraryStructureService" data-uid="emby.restapi/tag/LibraryStructureService/taglistitem" class="text-capitalize">LibraryStructureService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/LiveTvService.html"><h4 id="LiveTvService" data-uid="emby.restapi/tag/LiveTvService/taglistitem" class="text-capitalize">LiveTvService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/LocalizationService.html"><h4 id="LocalizationService" data-uid="emby.restapi/tag/LocalizationService/taglistitem" class="text-capitalize">LocalizationService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/MediaInfoService.html"><h4 id="MediaInfoService" data-uid="emby.restapi/tag/MediaInfoService/taglistitem" class="text-capitalize">MediaInfoService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/MoviesService.html"><h4 id="MoviesService" data-uid="emby.restapi/tag/MoviesService/taglistitem" class="text-capitalize">MoviesService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/MusicGenresService.html"><h4 id="MusicGenresService" data-uid="emby.restapi/tag/MusicGenresService/taglistitem" class="text-capitalize">MusicGenresService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/NotificationsService.html"><h4 id="NotificationsService" data-uid="emby.restapi/tag/NotificationsService/taglistitem" class="text-capitalize">NotificationsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/OfficialRatingService.html"><h4 id="OfficialRatingService" data-uid="emby.restapi/tag/OfficialRatingService/taglistitem" class="text-capitalize">OfficialRatingService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/OpenApiService.html"><h4 id="OpenApiService" data-uid="emby.restapi/tag/OpenApiService/taglistitem" class="text-capitalize">OpenApiService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/PackageService.html"><h4 id="PackageService" data-uid="emby.restapi/tag/PackageService/taglistitem" class="text-capitalize">PackageService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/PersonsService.html"><h4 id="PersonsService" data-uid="emby.restapi/tag/PersonsService/taglistitem" class="text-capitalize">PersonsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/PlaylistService.html"><h4 id="PlaylistService" data-uid="emby.restapi/tag/PlaylistService/taglistitem" class="text-capitalize">PlaylistService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Playlists" class=""><p>API Documentation: Playlists</p>
+</a>
+<a class="xref" href="RestAPI/PlaystateService.html"><h4 id="PlaystateService" data-uid="emby.restapi/tag/PlaystateService/taglistitem" class="text-capitalize">PlaystateService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/PluginService.html"><h4 id="PluginService" data-uid="emby.restapi/tag/PluginService/taglistitem" class="text-capitalize">PluginService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/RemoteImageService.html"><h4 id="RemoteImageService" data-uid="emby.restapi/tag/RemoteImageService/taglistitem" class="text-capitalize">RemoteImageService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ScheduledTaskService.html"><h4 id="ScheduledTaskService" data-uid="emby.restapi/tag/ScheduledTaskService/taglistitem" class="text-capitalize">ScheduledTaskService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/SessionsService.html"><h4 id="SessionsService" data-uid="emby.restapi/tag/SessionsService/taglistitem" class="text-capitalize">SessionsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Remote-control" class=""><p>API Documentation: Remote control</p>
+</a>
+<a class="xref" href="RestAPI/StudiosService.html"><h4 id="StudiosService" data-uid="emby.restapi/tag/StudiosService/taglistitem" class="text-capitalize">StudiosService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/SubtitleOptionsService.html"><h4 id="SubtitleOptionsService" data-uid="emby.restapi/tag/SubtitleOptionsService/taglistitem" class="text-capitalize">SubtitleOptionsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/SubtitleService.html"><h4 id="SubtitleService" data-uid="emby.restapi/tag/SubtitleService/taglistitem" class="text-capitalize">SubtitleService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/SuggestionsService.html"><h4 id="SuggestionsService" data-uid="emby.restapi/tag/SuggestionsService/taglistitem" class="text-capitalize">SuggestionsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/SyncService.html"><h4 id="SyncService" data-uid="emby.restapi/tag/SyncService/taglistitem" class="text-capitalize">SyncService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Sync" class=""><p>API Documentation: Sync</p>
+</a>
+<a class="xref" href="RestAPI/SystemService.html"><h4 id="SystemService" data-uid="emby.restapi/tag/SystemService/taglistitem" class="text-capitalize">SystemService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/TagService.html"><h4 id="TagService" data-uid="emby.restapi/tag/TagService/taglistitem" class="text-capitalize">TagService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/ToneMapOptionsService.html"><h4 id="ToneMapOptionsService" data-uid="emby.restapi/tag/ToneMapOptionsService/taglistitem" class="text-capitalize">ToneMapOptionsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/TrailersService.html"><h4 id="TrailersService" data-uid="emby.restapi/tag/TrailersService/taglistitem" class="text-capitalize">TrailersService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/TvShowsService.html"><h4 id="TvShowsService" data-uid="emby.restapi/tag/TvShowsService/taglistitem" class="text-capitalize">TvShowsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/UniversalAudioService.html"><h4 id="UniversalAudioService" data-uid="emby.restapi/tag/UniversalAudioService/taglistitem" class="text-capitalize">UniversalAudioService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Audio-Streaming" class=""><p>API Documentation: Audio streaming</p>
+</a>
+<a class="xref" href="RestAPI/UserLibraryService.html"><h4 id="UserLibraryService" data-uid="emby.restapi/tag/UserLibraryService/taglistitem" class="text-capitalize">UserLibraryService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library" class=""><p>API Documentation: Browsing the Library</p>
+</a>
+<a class="xref" href="RestAPI/UserService.html"><h4 id="UserService" data-uid="emby.restapi/tag/UserService/taglistitem" class="text-capitalize">UserService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/UserViewsService.html"><h4 id="UserViewsService" data-uid="emby.restapi/tag/UserViewsService/taglistitem" class="text-capitalize">UserViewsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library" class=""><p>API Documentation: Browsing the Library</p>
+</a>
+<a class="xref" href="RestAPI/VideoHlsService.html"><h4 id="VideoHlsService" data-uid="emby.restapi/tag/VideoHlsService/taglistitem" class="text-capitalize">VideoHlsService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+<a class="xref" href="RestAPI/VideoService.html"><h4 id="VideoService" data-uid="emby.restapi/tag/VideoService/taglistitem" class="text-capitalize">VideoService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki/Video-Streaming" class=""><p>API Documentation: Video streaming</p>
+</a>
+<a class="xref" href="RestAPI/VideosService.html"><h4 id="VideosService" data-uid="emby.restapi/tag/VideosService/taglistitem" class="text-capitalize">VideosService</h4></a>
+<a style="display:none;" href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+
+
+
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../searchIndex.js"></script>
+    <script type="text/javascript" src="../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

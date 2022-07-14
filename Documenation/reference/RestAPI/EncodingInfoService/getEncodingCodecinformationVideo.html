@@ -1,0 +1,1449 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>getEncodingCodecinformationVideo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="getEncodingCodecinformationVideo ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/getEncodingCodecinformationVideo">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/getEncodingCodecinformationVideo">
+
+<h1 id="emby_restapi_getEncodingCodecinformationVideo" data-uid="emby.restapi/getEncodingCodecinformationVideo" class="text-capitalize text-break">getEncodingCodecinformationVideo</h1>
+<div class="markdown level0 summary"><p>Gets details about available video encoders and decoders</p>
+</div>
+<div class="markdown level0 description"><p>Requires authentication as administrator</p>
+</div>
+
+
+
+
+  
+  
+  
+   <h3 id="emby_restapi_getEncodingCodecinformationVideo_operation" data-uid="emby.restapi/getEncodingCodecinformationVideo/operation" style="display:none;" class="text-capitalize">getEncodingCodecinformationVideo</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Encoding/CodecInformation/Video</code></pre>
+  </div>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+  
+              <a href="#Emby_Server_MediaEncoding_Codecs_VideoCodecs_VideoCodecBase" class="typelink">VideoCodecBase</a>
+              []
+        </td>
+        <td><p>Operation successful. Returning a VideoCodecBase[] object.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+  
+  <h3 id="Emby_Server_MediaEncoding_Codecs_VideoCodecs_VideoCodecBase" class="text-capitalize">VideoCodecBase</h3>
+  <div>
+      <span class="xref">Emby.Server.MediaEncoding.Codecs.VideoCodecs.VideoCodecBase</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">CodecDeviceInfo</span></td>
+              <td>
+  
+                      <a href="#Emby_Server_MediaEncoding_Codecs_Common_Interfaces_ICodecDeviceInfo" class="typelink">ICodecDeviceInfo</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CodecKind</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Enums_CodecKinds" class="typelink">CodecKinds</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MediaTypeName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VideoMediaType</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Enums_VideoMediaTypes" class="typelink">VideoMediaTypes</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinWidth</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxWidth</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinHeight</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxHeight</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">WidthAlignment</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HeightAlignment</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxBitRate</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Types_BitRate" class="typelink">BitRate</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportedColorFormats</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Enums_ColorFormats" class="typelink">ColorFormats[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportedColorFormatStrings</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProfileAndLevelInformation</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Types_ProfileLevelInformation" class="typelink">ProfileLevelInformation[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Direction</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Enums_CodecDirections" class="typelink">CodecDirections</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Description</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">FrameworkCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsHardwareCodec</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SecondaryFramework</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Enums_SecondaryFrameworks" class="typelink">SecondaryFrameworks</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SecondaryFrameworkCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxInstanceCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsEnabledByDefault</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DefaultPriority</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Server_MediaEncoding_Codecs_Common_Interfaces_ICodecDeviceInfo" class="text-capitalize">ICodecDeviceInfo</h3>
+  <div>
+      <span class="xref">Emby.Server.MediaEncoding.Codecs.Common.Interfaces.ICodecDeviceInfo</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Capabilities</span></td>
+              <td>
+  
+                      <a href="#Emby_Server_MediaEncoding_Codecs_Common_Interfaces_ICodecDeviceCapabilities" class="typelink">ICodecDeviceCapabilities</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Adapter</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Desription</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Driver</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DriverVersion</span></td>
+              <td>
+  
+                      <a href="#System_Version" class="typelink">Version</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ApiVersion</span></td>
+              <td>
+  
+                      <a href="#System_Version" class="typelink">Version</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VendorId</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeviceId</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeviceIdentifier</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HardwareContextFramework</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Enums_SecondaryFrameworks" class="typelink">SecondaryFrameworks</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DevPath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DrmNode</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VendorName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeviceName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Server_MediaEncoding_Codecs_Common_Interfaces_ICodecDeviceCapabilities" class="text-capitalize">ICodecDeviceCapabilities</h3>
+  <div>
+      <span class="xref">Emby.Server.MediaEncoding.Codecs.Common.Interfaces.ICodecDeviceCapabilities</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">SupportsHwUpload</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsHwDownload</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsStandaloneDeviceInit</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Supports10BitProcessing</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsNativeToneMapping</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="System_Version" class="text-capitalize">Version</h3>
+  <div>
+      <p>see also <a href="https://docs.microsoft.com/dotnet/api/system.version">System.Version</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Major</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Minor</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Build</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Revision</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MajorRevision</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinorRevision</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Media_Model_Enums_SecondaryFrameworks" class="text-capitalize">SecondaryFrameworks</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Enums.SecondaryFrameworks</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Unknown</li>
+  <li>None</li>
+  <li>AmdAmf</li>
+  <li>MediaCodec</li>
+  <li>NvEncDec</li>
+  <li>OpenMax</li>
+  <li>QuickSync</li>
+  <li>VaApi</li>
+  <li>V4L2</li>
+  <li>DxVa</li>
+  <li>D3d11va</li>
+  <li>VideoToolbox</li>
+  <li>Mmal</li>
+  </ul>
+  
+  <h3 id="Emby_Media_Model_Enums_CodecKinds" class="text-capitalize">CodecKinds</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Enums.CodecKinds</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Audio</li>
+  <li>Video</li>
+  <li>SubTitles</li>
+  </ul>
+  
+  <h3 id="Emby_Media_Model_Enums_VideoMediaTypes" class="text-capitalize">VideoMediaTypes</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Enums.VideoMediaTypes</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Unknown</li>
+  <li>copy</li>
+  <li>flv1</li>
+  <li>h263</li>
+  <li>h263p</li>
+  <li>h264</li>
+  <li>hevc</li>
+  <li>mjpeg</li>
+  <li>mpeg1video</li>
+  <li>mpeg2video</li>
+  <li>mpeg4</li>
+  <li>msvideo1</li>
+  <li>theora</li>
+  <li>vc1image</li>
+  <li>vc1</li>
+  <li>vp8</li>
+  <li>vp9</li>
+  <li>wmv1</li>
+  <li>wmv2</li>
+  <li>wmv3</li>
+  <li>_012v</li>
+  <li>_4xm</li>
+  <li>_8bps</li>
+  <li>a64_multi</li>
+  <li>a64_multi5</li>
+  <li>aasc</li>
+  <li>aic</li>
+  <li>alias_pix</li>
+  <li>amv</li>
+  <li>anm</li>
+  <li>ansi</li>
+  <li>apng</li>
+  <li>asv1</li>
+  <li>asv2</li>
+  <li>aura</li>
+  <li>aura2</li>
+  <li>av1</li>
+  <li>avrn</li>
+  <li>avrp</li>
+  <li>avs</li>
+  <li>avui</li>
+  <li>ayuv</li>
+  <li>bethsoftvid</li>
+  <li>bfi</li>
+  <li>binkvideo</li>
+  <li>bintext</li>
+  <li>bitpacked</li>
+  <li>bmp</li>
+  <li>bmv_video</li>
+  <li>brender_pix</li>
+  <li>c93</li>
+  <li>cavs</li>
+  <li>cdgraphics</li>
+  <li>cdxl</li>
+  <li>cfhd</li>
+  <li>cinepak</li>
+  <li>clearvideo</li>
+  <li>cljr</li>
+  <li>cllc</li>
+  <li>cmv</li>
+  <li>cpia</li>
+  <li>cscd</li>
+  <li>cyuv</li>
+  <li>daala</li>
+  <li>dds</li>
+  <li>dfa</li>
+  <li>dirac</li>
+  <li>dnxhd</li>
+  <li>dpx</li>
+  <li>dsicinvideo</li>
+  <li>dvvideo</li>
+  <li>dxa</li>
+  <li>dxtory</li>
+  <li>dxv</li>
+  <li>escape124</li>
+  <li>escape130</li>
+  <li>exr</li>
+  <li>ffv1</li>
+  <li>ffvhuff</li>
+  <li>fic</li>
+  <li>fits</li>
+  <li>flashsv</li>
+  <li>flashsv2</li>
+  <li>flic</li>
+  <li>fmvc</li>
+  <li>fraps</li>
+  <li>frwu</li>
+  <li>g2m</li>
+  <li>gdv</li>
+  <li>gif</li>
+  <li>h261</li>
+  <li>h263i</li>
+  <li>hap</li>
+  <li>hnm4video</li>
+  <li>hq_hqa</li>
+  <li>hqx</li>
+  <li>huffyuv</li>
+  <li>idcin</li>
+  <li>idf</li>
+  <li>iff_ilbm</li>
+  <li>indeo2</li>
+  <li>indeo3</li>
+  <li>indeo4</li>
+  <li>indeo5</li>
+  <li>interplayvideo</li>
+  <li>jpeg2000</li>
+  <li>jpegls</li>
+  <li>jv</li>
+  <li>kgv1</li>
+  <li>kmvc</li>
+  <li>lagarith</li>
+  <li>ljpeg</li>
+  <li>loco</li>
+  <li>m101</li>
+  <li>mad</li>
+  <li>magicyuv</li>
+  <li>mdec</li>
+  <li>mimic</li>
+  <li>mjpegb</li>
+  <li>mmvideo</li>
+  <li>motionpixels</li>
+  <li>msa1</li>
+  <li>mscc</li>
+  <li>msmpeg4v1</li>
+  <li>msmpeg4v2</li>
+  <li>msmpeg4v3</li>
+  <li>msrle</li>
+  <li>mss1</li>
+  <li>mss2</li>
+  <li>mszh</li>
+  <li>mts2</li>
+  <li>mvc1</li>
+  <li>mvc2</li>
+  <li>mxpeg</li>
+  <li>nuv</li>
+  <li>paf_video</li>
+  <li>pam</li>
+  <li>pbm</li>
+  <li>pcx</li>
+  <li>pgm</li>
+  <li>pgmyuv</li>
+  <li>pictor</li>
+  <li>pixlet</li>
+  <li>png</li>
+  <li>ppm</li>
+  <li>prores</li>
+  <li>psd</li>
+  <li>ptx</li>
+  <li>qdraw</li>
+  <li>qpeg</li>
+  <li>qtrle</li>
+  <li>r10k</li>
+  <li>r210</li>
+  <li>rawvideo</li>
+  <li>rl2</li>
+  <li>roq</li>
+  <li>rpza</li>
+  <li>rscc</li>
+  <li>rv10</li>
+  <li>rv20</li>
+  <li>rv30</li>
+  <li>rv40</li>
+  <li>sanm</li>
+  <li>scpr</li>
+  <li>screenpresso</li>
+  <li>sgi</li>
+  <li>sgirle</li>
+  <li>sheervideo</li>
+  <li>smackvideo</li>
+  <li>smc</li>
+  <li>smvjpeg</li>
+  <li>snow</li>
+  <li>sp5x</li>
+  <li>speedhq</li>
+  <li>srgc</li>
+  <li>sunrast</li>
+  <li>svg</li>
+  <li>svq1</li>
+  <li>svq3</li>
+  <li>targa</li>
+  <li>targa_y216</li>
+  <li>tdsc</li>
+  <li>tgq</li>
+  <li>tgv</li>
+  <li>thp</li>
+  <li>tiertexseqvideo</li>
+  <li>tiff</li>
+  <li>tmv</li>
+  <li>tqi</li>
+  <li>truemotion1</li>
+  <li>truemotion2</li>
+  <li>truemotion2rt</li>
+  <li>tscc</li>
+  <li>tscc2</li>
+  <li>txd</li>
+  <li>ulti</li>
+  <li>utvideo</li>
+  <li>v210</li>
+  <li>v210x</li>
+  <li>v308</li>
+  <li>v408</li>
+  <li>v410</li>
+  <li>vb</li>
+  <li>vble</li>
+  <li>vcr1</li>
+  <li>vixl</li>
+  <li>vmdvideo</li>
+  <li>vmnc</li>
+  <li>vp3</li>
+  <li>vp5</li>
+  <li>vp6</li>
+  <li>vp6a</li>
+  <li>vp6f</li>
+  <li>vp7</li>
+  <li>webp</li>
+  <li>wmv3image</li>
+  <li>wnv1</li>
+  <li>wrapped_avframe</li>
+  <li>ws_vqa</li>
+  <li>xan_wc3</li>
+  <li>xan_wc4</li>
+  <li>xbin</li>
+  <li>xbm</li>
+  <li>xface</li>
+  <li>xpm</li>
+  <li>xwd</li>
+  <li>y41p</li>
+  <li>ylc</li>
+  <li>yop</li>
+  <li>yuv4</li>
+  <li>zerocodec</li>
+  <li>zlib</li>
+  <li>zmbv</li>
+  </ul>
+  
+  <h3 id="Emby_Media_Model_Types_BitRate" class="text-capitalize">BitRate</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Types.BitRate</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">bps</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">kbps</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Mbps</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Media_Model_Enums_ColorFormats" class="text-capitalize">ColorFormats</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Enums.ColorFormats</span>
+  </div>
+  
+  <h3 id="Emby_Media_Model_Types_ProfileLevelInformation" class="text-capitalize">ProfileLevelInformation</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Types.ProfileLevelInformation</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Profile</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Types_ProfileInformation" class="typelink">ProfileInformation</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Level</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Types_LevelInformation" class="typelink">LevelInformation</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Media_Model_Types_ProfileInformation" class="text-capitalize">ProfileInformation</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Types.ProfileInformation</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">ShortName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Description</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Details</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BitDepths</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Media_Model_Types_LevelInformation" class="text-capitalize">LevelInformation</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Types.LevelInformation</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">ShortName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Description</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Ordinal</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxBitRate</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Types_BitRate" class="typelink">BitRate</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxBitRateDisplay</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ResolutionRates</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Types_ResolutionWithRate" class="typelink">ResolutionWithRate[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ResolutionRateStrings</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ResolutionRatesDisplay</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Media_Model_Types_ResolutionWithRate" class="text-capitalize">ResolutionWithRate</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Types.ResolutionWithRate</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Width</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Height</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">FrameRate</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Resolution</span></td>
+              <td>
+  
+                      <a href="#Emby_Media_Model_Types_Resolution" class="typelink">Resolution</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Media_Model_Types_Resolution" class="text-capitalize">Resolution</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Types.Resolution</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Width</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Height</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Media_Model_Enums_CodecDirections" class="text-capitalize">CodecDirections</h3>
+  <div>
+      <span class="xref">Emby.Media.Model.Enums.CodecDirections</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Encoder</li>
+  <li>Decoder</li>
+  </ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

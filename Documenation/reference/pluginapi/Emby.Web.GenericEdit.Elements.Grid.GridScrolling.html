@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GridScrolling
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GridScrolling
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="Emby.Web.GenericEdit.Elements.Grid.GridScrolling">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling">
+  
+  
+  <h1 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling" class="text-break">Class GridScrolling
+  </h1>
+  <div class="markdown level0 summary"><p>Scrolling allows a user to browse data left outside the current viewport. The widget provides several
+scrolling modes detailed in the mode option description.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">GridScrolling</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.html">Emby.Web.GenericEdit.Elements.Grid</a></h6>
+  <h6><strong>Assembly</strong>: Emby.Web.GenericEdit.dll</h6>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GridScrolling</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_columnRenderingMode_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.columnRenderingMode*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_columnRenderingMode" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.columnRenderingMode">columnRenderingMode</h4>
+  <div class="markdown level1 summary"><p>Specifies the rendering mode for columns. Applies when columns are left outside the viewport. Requires the
+columnWidth, columnAutoWidth, or width (for all columns) option specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridScrolling.ColumnRenderingMode? columnRenderingMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.ColumnRenderingMode.html">GridScrolling.ColumnRenderingMode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_minTimeout_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.minTimeout*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_minTimeout" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.minTimeout">minTimeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? minTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_mode_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.mode*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_mode" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.mode">mode</h4>
+  <div class="markdown level1 summary"><p>Specifies the scrolling mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridScrolling.ScrollingMode? mode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.ScrollingMode.html">GridScrolling.ScrollingMode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_mode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Regardless of the scrolling mode, you can use the paging.pageSize option to specify the number of rows on a
+page.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_preloadEnabled_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.preloadEnabled*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_preloadEnabled" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.preloadEnabled">preloadEnabled</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the widget should load adjacent pages. Applies only if scrolling.mode is &quot;virtual&quot; or
+&quot;infinite&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? preloadEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_preloadEnabled_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In virtual and infinite scrolling modes, pages are loaded on demand. If you set this option to true, the
+adjacent pages are loaded in advance for smoother scrolling. This option can reduce the performance on older
+devices.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_removeInvisiblePages_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.removeInvisiblePages*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_removeInvisiblePages" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.removeInvisiblePages">removeInvisiblePages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? removeInvisiblePages { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_renderingThreshold_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.renderingThreshold*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_renderingThreshold" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.renderingThreshold">renderingThreshold</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? renderingThreshold { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_rowPageSize_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.rowPageSize*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_rowPageSize" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.rowPageSize">rowPageSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? rowPageSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_rowRenderingMode_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.rowRenderingMode*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_rowRenderingMode" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.rowRenderingMode">rowRenderingMode</h4>
+  <div class="markdown level1 summary"><p>Specifies the rendering mode for loaded rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridScrolling.RowRenderingMode? rowRenderingMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.RowRenderingMode.html">GridScrolling.RowRenderingMode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_scrollByContent_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.scrollByContent*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_scrollByContent" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.scrollByContent">scrollByContent</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can scroll the content with a swipe gesture. Applies only if useNative is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? scrollByContent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_scrollByThumb_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.scrollByThumb*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_scrollByThumb" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.scrollByThumb">scrollByThumb</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can scroll the content with the scrollbar. Applies only if useNative is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? scrollByThumb { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_showScrollbar_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.showScrollbar*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_showScrollbar" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.showScrollbar">showScrollbar</h4>
+  <div class="markdown level1 summary"><p>Specifies when to show scrollbars. Applies only if useNative is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridScrolling.ShowScrollbarMode? showScrollbar { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.ShowScrollbarMode.html">GridScrolling.ShowScrollbarMode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_showScrollbar_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The scrollbars help to scroll the content vertically and horizontally. Vertical scrolling is available when
+all the rows do not fit in the widget's height. Horizontal scrolling is available when all the columns do not fit
+in the widget's width, which can happen when columns have fixed widths or the columnAutoWidth option is set to
+true.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_timeout_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.timeout*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_timeout" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.timeout">timeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? timeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_updateTimeout_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.updateTimeout*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_updateTimeout" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.updateTimeout">updateTimeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? updateTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_useNative_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.useNative*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_useNative" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridScrolling.useNative">useNative</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the widget should use native or simulated scrolling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string useNative { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridScrolling_useNative_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>By default, the widget employs native scrolling on most platforms, except non-Mac desktops and devices based
+on Android older than version 4. To employ native scrolling on all platforms without exception, assign true to this
+option. If you assign false, the widget simulates scrolling on all platforms.By default, the widget employs native
+scrolling on most platforms, except non-Mac desktops and devices based on Android older than version 4. To employ
+native scrolling on all platforms without exception, assign true to this option. If you assign false, the widget
+simulates scrolling on all platforms.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

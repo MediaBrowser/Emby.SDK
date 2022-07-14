@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IsPublishable>True</IsPublishable>
+    <ErrorReport>none</ErrorReport>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
+    <FileVersion>4.8.0.0</FileVersion>
+    <AssemblyInformationalVersion>4.8.0.0</AssemblyInformationalVersion>
+    <ProductVersion>4.8.0.0</ProductVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="GenericEditIcon.jpg" />
+    <None Remove="Web\genericeditdemo.html" />
+    <None Remove="Web\genericeditdemo.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GenericEditIcon.jpg" />
+    <EmbeddedResource Include="Web\genericeditdemo.html" />
+    <EmbeddedResource Include="Web\genericeditdemo.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Emby.Web.GenericEdit" Version="4.7.0.33" />
+    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.3-beta" />
+  </ItemGroup>
+</Project>

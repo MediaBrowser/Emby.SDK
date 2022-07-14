@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GridEditing
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GridEditing
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="Emby.Web.GenericEdit.Elements.Grid.GridEditing">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing">
+  
+  
+  <h1 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing" class="text-break">Class GridEditing
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">GridEditing</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.html">Emby.Web.GenericEdit.Elements.Grid</a></h6>
+  <h6><strong>Assembly</strong>: Emby.Web.GenericEdit.dll</h6>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GridEditing</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_allowAdding_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.allowAdding*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_allowAdding" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.allowAdding">allowAdding</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can add new rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowAdding { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>The allow adding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_allowDeleting_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.allowDeleting*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_allowDeleting" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.allowDeleting">allowDeleting</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can delete rows. It is called for each data row when defined as a function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowDeleting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>The allow deleting.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_allowUpdating_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.allowUpdating*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_allowUpdating" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.allowUpdating">allowUpdating</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can update rows. It is called for each data row when defined as a function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowUpdating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>The allow updating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_form_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.form*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_form" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.form">form</h4>
+  <div class="markdown level1 summary"><p>Configures the form. Used only if editing.mode is &quot;form&quot; or &quot;popup&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object form { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>The form.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_highlightEditableColumns_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.highlightEditableColumns*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_highlightEditableColumns" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.highlightEditableColumns">highlightEditableColumns</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? highlightEditableColumns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_mode_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.mode*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_mode" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.mode">mode</h4>
+  <div class="markdown level1 summary"><p>Specifies how a user edits data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridEditing.GridEditMode? mode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.GridEditing.GridEditMode.html">GridEditing.GridEditMode</a>&gt;</td>
+        <td><p>The mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_popup_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.popup*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_popup" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.popup">popup</h4>
+  <div class="markdown level1 summary"><p>Configures the popup. Used only if editing.mode is &quot;popup&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object popup { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>The popup.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_refreshMode_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.refreshMode*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_refreshMode" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.refreshMode">refreshMode</h4>
+  <div class="markdown level1 summary"><p>Specifies operations that are performed after saving changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridEditing.GridEditRefreshMode? refreshMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.GridEditing.GridEditRefreshMode.html">GridEditing.GridEditRefreshMode</a>&gt;</td>
+        <td><p>The refresh mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_selectTextOnEditStart_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.selectTextOnEditStart*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_selectTextOnEditStart" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.selectTextOnEditStart">selectTextOnEditStart</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to select text in a cell when a user starts editing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? selectTextOnEditStart { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>The select text on edit start.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_selectTextOnEditStart_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Default is false.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_startEditAction_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.startEditAction*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_startEditAction" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.startEditAction">startEditAction</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a single or double click should switch a cell to the editing state. Applies if editing.mode is &quot;cell&quot; or &quot;batch&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string startEditAction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The start edit action.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_startEditAction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Accepted Values: 'click' | 'dblClick'. Default Value: 'click'.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_texts_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.texts*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_texts" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.texts">texts</h4>
+  <div class="markdown level1 summary"><p>Contains options that specify texts for editing-related UI elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridEditingTexts texts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Elements.Grid.GridEditingTexts.html">GridEditingTexts</a></td>
+        <td><p>The texts.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_useIcons_" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.useIcons*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_Grid_GridEditing_useIcons" data-uid="Emby.Web.GenericEdit.Elements.Grid.GridEditing.useIcons">useIcons</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the editing column uses icons instead of links.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? useIcons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>The use icons.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK 4.8.0.3 Beta
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC. All Rights Reserved
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

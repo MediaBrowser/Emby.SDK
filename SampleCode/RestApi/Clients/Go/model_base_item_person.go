@@ -1,0 +1,16 @@
+/*
+ * Emby Server REST API (BETA)
+ *
+ * Explore the Emby Server API
+ *
+ * API version: 4.8.0.3
+ */
+package embyclient-rest-go
+
+type BaseItemPerson struct {
+	Name string `json:"Name,omitempty"`
+	Id string `json:"Id,omitempty"`
+	Role string `json:"Role,omitempty"`
+	Type_ *PersonType `json:"Type,omitempty"`
+	PrimaryImageTag string `json:"PrimaryImageTag,omitempty"`
+}
