@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.3
+ * OpenAPI spec version: 4.8.0.5
  * 
  *
  * NOTE: This class is auto generated.
@@ -16,7 +16,7 @@ import ProvidersPersonLookupInfo from './ProvidersPersonLookupInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersPersonLookupInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersPersonLookupInfo
-* @version 4.8.0.3
+* @version 4.8.0.5
 */
 export default class ProvidersRemoteSearchQueryProvidersPersonLookupInfo {
     /**
@@ -52,6 +52,9 @@ export default class ProvidersRemoteSearchQueryProvidersPersonLookupInfo {
             if (data.hasOwnProperty('SearchProviderName')) {
                 obj['SearchProviderName'] = ApiClient.convertToType(data['SearchProviderName'], 'String');
             }
+            if (data.hasOwnProperty('Providers')) {
+                obj['Providers'] = ApiClient.convertToType(data['Providers'], ['String']);
+            }
             if (data.hasOwnProperty('IncludeDisabledProviders')) {
                 obj['IncludeDisabledProviders'] = ApiClient.convertToType(data['IncludeDisabledProviders'], 'Boolean');
             }
@@ -71,6 +74,10 @@ export default class ProvidersRemoteSearchQueryProvidersPersonLookupInfo {
     * @member {String} SearchProviderName
     */
     'SearchProviderName' = undefined;
+    /**
+    * @member {Array.<String>} Providers
+    */
+    'Providers' = undefined;
     /**
     * @member {Boolean} IncludeDisabledProviders
     */

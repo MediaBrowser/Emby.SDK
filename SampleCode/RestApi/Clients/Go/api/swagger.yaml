@@ -6,13 +6,13 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.3
+  version: 4.8.0.5
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
 servers:
 - url: http://emby.media/emby
-  description: SILVER2
+  description: WIN-P8TCTP8PVTV
 tags:
 - name: ArtistsService
 - name: TagService
@@ -60,11 +60,8 @@ tags:
 - name: SubtitleOptionsService
 - name: FfmpegOptionsService
 - name: CodecParameterService
-- name: DiagnosticsPluginService
 - name: EnvironmentService
 - name: GamesService
-- name: DemoApiService
-- name: ImageByNameService
 - name: RemoteImageService
 - name: ItemUpdateService
 - name: LibraryStructureService
@@ -18044,166 +18041,6 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
-  /EncodingDiagnostics/DiagnosticOptions:
-    summary: Gets the EncodingDiagnosticOptions for generic editor
-    get:
-      tags:
-      - DiagnosticsPluginService
-      summary: Gets the EncodingDiagnosticOptions for generic editor
-      description: Requires authentication as user
-      operationId: getEncodingdiagnosticsDiagnosticoptions
-      responses:
-        "200":
-          description: Operation successful. Returning a EditObjectContainer object.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Emby.Web.GenericEdit.EditObjectContainer'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Emby.Web.GenericEdit.EditObjectContainer'
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
-    post:
-      tags:
-      - DiagnosticsPluginService
-      summary: Updates EncodingDiagnosticOptions from generic editor
-      description: Requires authentication as administrator
-      operationId: postEncodingdiagnosticsDiagnosticoptions
-      requestBody:
-        description: Binary stream
-        content:
-          application/octet-stream:
-            schema:
-              type: string
-              format: binary
-        required: true
-      responses:
-        "200":
-          description: Operation successful. Empty response.
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as administrator
-  /EncodingDiagnostics/CodecParameters:
-    summary: Gets the parameters for a specified codec.
-    get:
-      tags:
-      - CodecParameterService
-      summary: Gets the parameters for a specified codec.
-      description: Requires authentication as user
-      operationId: getEncodingdiagnosticsCodecparameters
-      parameters:
-      - name: CodecId
-        in: query
-        description: Codec Id
-        required: true
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: ParameterContext
-        in: query
-        description: Parameter Context
-        required: true
-        style: form
-        explode: false
-        schema:
-          $ref: '#/components/schemas/MediaEncoding.CodecParameterContext'
-      responses:
-        "200":
-          description: Operation successful. Returning a EditObjectContainer object.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Emby.Web.GenericEdit.EditObjectContainer'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Emby.Web.GenericEdit.EditObjectContainer'
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
-    post:
-      tags:
-      - CodecParameterService
-      summary: Updates the parameters for a specified codec.
-      description: Requires authentication as administrator
-      operationId: postEncodingdiagnosticsCodecparameters
-      parameters:
-      - name: CodecId
-        in: query
-        description: Codec Id
-        required: true
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: ParameterContext
-        in: query
-        description: Parameter Context
-        required: true
-        style: form
-        explode: false
-        schema:
-          $ref: '#/components/schemas/MediaEncoding.CodecParameterContext'
-      requestBody:
-        description: Binary stream
-        content:
-          application/octet-stream:
-            schema:
-              type: string
-              format: binary
-        required: true
-      responses:
-        "200":
-          description: Operation successful. Empty response.
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as administrator
   /Environment/ValidatePath:
     summary: Gets the contents of a given directory in the file system
     post:
@@ -18607,155 +18444,6 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
-  /GenericEditDemo/DemoTypes:
-    summary: Gets a list of demos
-    get:
-      tags:
-      - DemoApiService
-      summary: Gets a list of demos
-      description: Requires authentication as administrator
-      operationId: getGenericeditdemoDemotypes
-      parameters:
-      - name: DemoSet
-        in: query
-        description: Set of demos
-        required: true
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-      responses:
-        "200":
-          description: Operation successful. Returning a IEnumerable<DemoTypeInfo>
-            object.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Emby.Plugin.GenericEditDemo.Data.DemoTypeInfo'
-                x-content-type: application/json
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Emby.Plugin.GenericEditDemo.Data.DemoTypeInfo'
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as administrator
-  /GenericEditDemo/Demo:
-    summary: Gets GenericEdit demo data
-    get:
-      tags:
-      - DemoApiService
-      summary: Gets GenericEdit demo data
-      description: Requires authentication as administrator
-      operationId: getGenericeditdemoDemo
-      parameters:
-      - name: DemoSet
-        in: query
-        description: Set of demos
-        required: true
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-      - name: DemoType
-        in: query
-        description: Type of demo object
-        required: true
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-      responses:
-        "200":
-          description: Operation successful. Returning a EditObjectContainer object.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Emby.Web.GenericEdit.EditObjectContainer'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Emby.Web.GenericEdit.EditObjectContainer'
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as administrator
-    post:
-      tags:
-      - DemoApiService
-      summary: Updates GenericEdit demo data
-      description: Requires authentication as administrator
-      operationId: postGenericeditdemoDemo
-      parameters:
-      - name: DemoSet
-        in: query
-        description: Set of demos
-        required: true
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-      - name: DemoType
-        in: query
-        description: Type of demo object
-        required: true
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-      requestBody:
-        description: Binary stream
-        content:
-          application/octet-stream:
-            schema:
-              type: string
-              format: binary
-        required: true
-      responses:
-        "200":
-          description: Operation successful. Empty response.
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as administrator
   /Genres/{Name}:
     summary: "Gets a genre, by name"
     get:
@@ -18795,117 +18483,6 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/BaseItemDto'
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
-  /Images/MediaInfo:
-    summary: Gets all media info image by name
-    get:
-      tags:
-      - ImageByNameService
-      summary: Gets all media info image by name
-      description: Requires authentication as user
-      operationId: getImagesMediainfo
-      responses:
-        "200":
-          description: Operation successful. Returning a List<ImageByNameInfo> object.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ImageByNameInfo'
-                x-content-type: application/json
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ImageByNameInfo'
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
-  /Images/Ratings:
-    summary: Gets all rating images by name
-    get:
-      tags:
-      - ImageByNameService
-      summary: Gets all rating images by name
-      description: Requires authentication as user
-      operationId: getImagesRatings
-      responses:
-        "200":
-          description: Operation successful. Returning a List<ImageByNameInfo> object.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ImageByNameInfo'
-                x-content-type: application/json
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ImageByNameInfo'
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
-  /Images/General:
-    summary: Gets all general images by name
-    get:
-      tags:
-      - ImageByNameService
-      summary: Gets all general images by name
-      description: Requires authentication as user
-      operationId: getImagesGeneral
-      responses:
-        "200":
-          description: Operation successful. Returning a List<ImageByNameInfo> object.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ImageByNameInfo'
-                x-content-type: application/json
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ImageByNameInfo'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -42831,111 +42408,6 @@ paths:
         "500":
           description: Server error.
       x-RequiredAuthentication: No authentication required
-  /Images/General/{Name}/{Type}:
-    summary: Gets a general image by name
-    get:
-      tags:
-      - ImageByNameService
-      summary: Gets a general image by name
-      description: No authentication required
-      operationId: getImagesGeneralByNameByType
-      parameters:
-      - name: Name
-        in: path
-        description: The name of the image
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: Type
-        in: path
-        description: "Image Type (primary, backdrop, logo, etc)."
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Operation successful. Response content unknown.
-        "400":
-          description: Bad Request. Server cannot process request.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      x-RequiredAuthentication: No authentication required
-  /Images/Ratings/{Theme}/{Name}:
-    summary: Gets a rating image by name
-    get:
-      tags:
-      - ImageByNameService
-      summary: Gets a rating image by name
-      description: No authentication required
-      operationId: getImagesRatingsByThemeByName
-      parameters:
-      - name: Name
-        in: path
-        description: The name of the image
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: Theme
-        in: path
-        description: The theme to get the image from
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Operation successful. Response content unknown.
-        "400":
-          description: Bad Request. Server cannot process request.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      x-RequiredAuthentication: No authentication required
-  /Images/MediaInfo/{Theme}/{Name}:
-    summary: Gets a media info image by name
-    get:
-      tags:
-      - ImageByNameService
-      summary: Gets a media info image by name
-      description: No authentication required
-      operationId: getImagesMediainfoByThemeByName
-      parameters:
-      - name: Name
-        in: path
-        description: The name of the image
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: Theme
-        in: path
-        description: The theme to get the image from
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Operation successful. Response content unknown.
-        "400":
-          description: Bad Request. Server cannot process request.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      x-RequiredAuthentication: No authentication required
   /Items/RemoteSearch/Apply/{Id}:
     summary: Applies search criteria to an item and refreshes metadata
     post:
@@ -58493,39 +57965,6 @@ components:
         GameCount: 0
         Name: Name
       x-internal-ref-name: MediaBrowser.Model.Dto.GameSystemSummary
-    Emby.Plugin.GenericEditDemo.Data.DemoTypeInfo:
-      type: object
-      properties:
-        DemoType:
-          type: integer
-          format: int32
-        Name:
-          type: string
-      example:
-        DemoType: 0
-        Name: Name
-      x-internal-ref-name: Emby.Plugin.GenericEditDemo.Data.DemoTypeInfo
-    ImageByNameInfo:
-      type: object
-      properties:
-        Name:
-          type: string
-        Theme:
-          type: string
-        Context:
-          type: string
-        FileLength:
-          type: integer
-          format: int64
-        Format:
-          type: string
-      example:
-        Context: Context
-        Format: Format
-        Theme: Theme
-        Name: Name
-        FileLength: 0
-      x-internal-ref-name: MediaBrowser.Model.Dto.ImageByNameInfo
     ItemCounts:
       type: object
       properties:
@@ -68927,6 +68366,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.TrailerInfo:
@@ -69033,6 +68476,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.BookInfo:
@@ -69079,6 +68526,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.MovieInfo:
@@ -69123,6 +68574,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.SeriesInfo:
@@ -69180,6 +68635,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.GameInfo:
@@ -69224,6 +68683,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.ItemLookupInfo:
@@ -69268,6 +68731,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.MusicVideoInfo:
@@ -69316,6 +68783,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.PersonLookupInfo:
@@ -69360,6 +68831,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.AlbumInfo:
@@ -69458,6 +68933,10 @@ components:
           format: int64
         SearchProviderName:
           type: string
+        Providers:
+          type: array
+          items:
+            type: string
         IncludeDisabledProviders:
           type: boolean
     Providers.ArtistInfo:

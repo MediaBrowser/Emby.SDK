@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.3
+ * OpenAPI spec version: 4.8.0.5
  * 
  *
  * NOTE: This class is auto generated.
@@ -24,7 +24,7 @@ import EmbyDlnaProfilesProtocolInfoDetection from './EmbyDlnaProfilesProtocolInf
 /**
 * The EmbyDlnaProfilesDlnaProfile model module.
 * @module model/EmbyDlnaProfilesDlnaProfile
-* @version 4.8.0.3
+* @version 4.8.0.5
 */
 export default class EmbyDlnaProfilesDlnaProfile {
     /**

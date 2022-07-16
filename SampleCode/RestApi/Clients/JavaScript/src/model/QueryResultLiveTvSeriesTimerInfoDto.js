@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.3
+ * OpenAPI spec version: 4.8.0.5
  * 
  *
  * NOTE: This class is auto generated.
@@ -16,7 +16,7 @@ import LiveTvSeriesTimerInfoDto from './LiveTvSeriesTimerInfoDto';
 /**
 * The QueryResultLiveTvSeriesTimerInfoDto model module.
 * @module model/QueryResultLiveTvSeriesTimerInfoDto
-* @version 4.8.0.3
+* @version 4.8.0.5
 */
 export default class QueryResultLiveTvSeriesTimerInfoDto {
     /**

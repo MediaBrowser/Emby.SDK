@@ -14,12 +14,14 @@ public struct ProvidersRemoteSearchQueryProvidersItemLookupInfo: Codable {
     public var searchInfo: ProvidersItemLookupInfo?
     public var itemId: Int64?
     public var searchProviderName: String?
+    public var providers: [String]?
     public var includeDisabledProviders: Bool?
 
-    public init(searchInfo: ProvidersItemLookupInfo? = nil, itemId: Int64? = nil, searchProviderName: String? = nil, includeDisabledProviders: Bool? = nil) {
+    public init(searchInfo: ProvidersItemLookupInfo? = nil, itemId: Int64? = nil, searchProviderName: String? = nil, providers: [String]? = nil, includeDisabledProviders: Bool? = nil) {
         self.searchInfo = searchInfo
         self.itemId = itemId
         self.searchProviderName = searchProviderName
+        self.providers = providers
         self.includeDisabledProviders = includeDisabledProviders
     }
 
@@ -27,6 +29,7 @@ public struct ProvidersRemoteSearchQueryProvidersItemLookupInfo: Codable {
         case searchInfo = "SearchInfo"
         case itemId = "ItemId"
         case searchProviderName = "SearchProviderName"
+        case providers = "Providers"
         case includeDisabledProviders = "IncludeDisabledProviders"
     }
 

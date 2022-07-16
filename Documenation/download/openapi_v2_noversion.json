@@ -14447,232 +14447,6 @@
       },
       "x-summary": "Gets the parameters for a specified codec."
     },
-    "/EncodingDiagnostics/DiagnosticOptions": {
-      "get": {
-        "tags": [
-          "DiagnosticsPluginService"
-        ],
-        "summary": "Gets the EncodingDiagnosticOptions for generic editor",
-        "description": "Requires authentication as user",
-        "operationId": "getEncodingdiagnosticsDiagnosticoptions",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a EditObjectContainer object.",
-            "schema": {
-              "$ref": "#/definitions/Emby.Web.GenericEdit.EditObjectContainer"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "post": {
-        "tags": [
-          "DiagnosticsPluginService"
-        ],
-        "summary": "Updates EncodingDiagnosticOptions from generic editor",
-        "description": "Requires authentication as administrator",
-        "operationId": "postEncodingdiagnosticsDiagnosticoptions",
-        "consumes": [
-          "application/octet-stream"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Binary stream",
-            "required": true,
-            "schema": {
-              "format": "binary",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets the EncodingDiagnosticOptions for generic editor"
-    },
-    "/EncodingDiagnostics/CodecParameters": {
-      "get": {
-        "tags": [
-          "CodecParameterService"
-        ],
-        "summary": "Gets the parameters for a specified codec.",
-        "description": "Requires authentication as user",
-        "operationId": "getEncodingdiagnosticsCodecparameters",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "CodecId",
-            "description": "Codec Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ParameterContext",
-            "description": "Parameter Context",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a EditObjectContainer object.",
-            "schema": {
-              "$ref": "#/definitions/Emby.Web.GenericEdit.EditObjectContainer"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "post": {
-        "tags": [
-          "CodecParameterService"
-        ],
-        "summary": "Updates the parameters for a specified codec.",
-        "description": "Requires authentication as administrator",
-        "operationId": "postEncodingdiagnosticsCodecparameters",
-        "consumes": [
-          "application/octet-stream"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "CodecId",
-            "description": "Codec Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ParameterContext",
-            "description": "Parameter Context",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Binary stream",
-            "required": true,
-            "schema": {
-              "format": "binary",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets the parameters for a specified codec."
-    },
     "/Environment/ValidatePath": {
       "post": {
         "tags": [
@@ -15190,199 +14964,6 @@
       },
       "x-summary": "Finds games similar to a given game."
     },
-    "/GenericEditDemo/DemoTypes": {
-      "get": {
-        "tags": [
-          "DemoApiService"
-        ],
-        "summary": "Gets a list of demos",
-        "description": "Requires authentication as administrator",
-        "operationId": "getGenericeditdemoDemotypes",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "DemoSet",
-            "description": "Set of demos",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a IEnumerable<DemoTypeInfo> object.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Emby.Plugin.GenericEditDemo.Data.DemoTypeInfo"
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets a list of demos"
-    },
-    "/GenericEditDemo/Demo": {
-      "get": {
-        "tags": [
-          "DemoApiService"
-        ],
-        "summary": "Gets GenericEdit demo data",
-        "description": "Requires authentication as administrator",
-        "operationId": "getGenericeditdemoDemo",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "DemoSet",
-            "description": "Set of demos",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "DemoType",
-            "description": "Type of demo object",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a EditObjectContainer object.",
-            "schema": {
-              "$ref": "#/definitions/Emby.Web.GenericEdit.EditObjectContainer"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "post": {
-        "tags": [
-          "DemoApiService"
-        ],
-        "summary": "Updates GenericEdit demo data",
-        "description": "Requires authentication as administrator",
-        "operationId": "postGenericeditdemoDemo",
-        "consumes": [
-          "application/octet-stream"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "DemoSet",
-            "description": "Set of demos",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "DemoType",
-            "description": "Type of demo object",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Binary stream",
-            "required": true,
-            "schema": {
-              "format": "binary",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets GenericEdit demo data"
-    },
     "/Genres/{Name}": {
       "get": {
         "tags": [
@@ -15449,156 +15030,6 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a genre, by name"
-    },
-    "/Images/MediaInfo": {
-      "get": {
-        "tags": [
-          "ImageByNameService"
-        ],
-        "summary": "Gets all media info image by name",
-        "description": "Requires authentication as user",
-        "operationId": "getImagesMediainfo",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a List<ImageByNameInfo> object.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ImageByNameInfo"
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Gets all media info image by name"
-    },
-    "/Images/Ratings": {
-      "get": {
-        "tags": [
-          "ImageByNameService"
-        ],
-        "summary": "Gets all rating images by name",
-        "description": "Requires authentication as user",
-        "operationId": "getImagesRatings",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a List<ImageByNameInfo> object.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ImageByNameInfo"
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Gets all rating images by name"
-    },
-    "/Images/General": {
-      "get": {
-        "tags": [
-          "ImageByNameService"
-        ],
-        "summary": "Gets all general images by name",
-        "description": "Requires authentication as user",
-        "operationId": "getImagesGeneral",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a List<ImageByNameInfo> object.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ImageByNameInfo"
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Gets all general images by name"
     },
     "/Images/Remote": {
       "get": {
@@ -39363,132 +38794,6 @@
         "x-RequiredAuthentication": "No authentication required"
       }
     },
-    "/Images/General/{Name}/{Type}": {
-      "get": {
-        "tags": [
-          "ImageByNameService"
-        ],
-        "summary": "Gets a general image by name",
-        "description": "No authentication required",
-        "operationId": "getImagesGeneralByNameByType",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "Name",
-            "description": "The name of the image",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type (primary, backdrop, logo, etc).",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Response content unknown."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "x-RequiredAuthentication": "No authentication required"
-      },
-      "x-summary": "Gets a general image by name"
-    },
-    "/Images/Ratings/{Theme}/{Name}": {
-      "get": {
-        "tags": [
-          "ImageByNameService"
-        ],
-        "summary": "Gets a rating image by name",
-        "description": "No authentication required",
-        "operationId": "getImagesRatingsByThemeByName",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "Name",
-            "description": "The name of the image",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "Theme",
-            "description": "The theme to get the image from",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Response content unknown."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "x-RequiredAuthentication": "No authentication required"
-      },
-      "x-summary": "Gets a rating image by name"
-    },
-    "/Images/MediaInfo/{Theme}/{Name}": {
-      "get": {
-        "tags": [
-          "ImageByNameService"
-        ],
-        "summary": "Gets a media info image by name",
-        "description": "No authentication required",
-        "operationId": "getImagesMediainfoByThemeByName",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "Name",
-            "description": "The name of the image",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "Theme",
-            "description": "The theme to get the image from",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Response content unknown."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "x-RequiredAuthentication": "No authentication required"
-      },
-      "x-summary": "Gets a media info image by name"
-    },
     "/Items/RemoteSearch/Apply/{Id}": {
       "post": {
         "tags": [
@@ -52662,41 +51967,6 @@
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.GameSystemSummary"
     },
-    "Emby.Plugin.GenericEditDemo.Data.DemoTypeInfo": {
-      "type": "object",
-      "properties": {
-        "DemoType": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "Name": {
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "Emby.Plugin.GenericEditDemo.Data.DemoTypeInfo"
-    },
-    "ImageByNameInfo": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "Theme": {
-          "type": "string"
-        },
-        "Context": {
-          "type": "string"
-        },
-        "FileLength": {
-          "format": "int64",
-          "type": "integer"
-        },
-        "Format": {
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Dto.ImageByNameInfo"
-    },
     "ItemCounts": {
       "type": "object",
       "properties": {
@@ -56527,6 +55797,12 @@
         "SearchProviderName": {
           "type": "string"
         },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "IncludeDisabledProviders": {
           "type": "boolean"
         }
@@ -56641,6 +55917,12 @@
         "SearchProviderName": {
           "type": "string"
         },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "IncludeDisabledProviders": {
           "type": "boolean"
         }
@@ -56702,6 +55984,12 @@
         "SearchProviderName": {
           "type": "string"
         },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "IncludeDisabledProviders": {
           "type": "boolean"
         }
@@ -56759,6 +56047,12 @@
         },
         "SearchProviderName": {
           "type": "string"
+        },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "IncludeDisabledProviders": {
           "type": "boolean"
@@ -56834,6 +56128,12 @@
         "SearchProviderName": {
           "type": "string"
         },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "IncludeDisabledProviders": {
           "type": "boolean"
         }
@@ -56892,6 +56192,12 @@
         "SearchProviderName": {
           "type": "string"
         },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "IncludeDisabledProviders": {
           "type": "boolean"
         }
@@ -56949,6 +56255,12 @@
         },
         "SearchProviderName": {
           "type": "string"
+        },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "IncludeDisabledProviders": {
           "type": "boolean"
@@ -57014,6 +56326,12 @@
         "SearchProviderName": {
           "type": "string"
         },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "IncludeDisabledProviders": {
           "type": "boolean"
         }
@@ -57071,6 +56389,12 @@
         },
         "SearchProviderName": {
           "type": "string"
+        },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "IncludeDisabledProviders": {
           "type": "boolean"
@@ -57202,6 +56526,12 @@
         },
         "SearchProviderName": {
           "type": "string"
+        },
+        "Providers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "IncludeDisabledProviders": {
           "type": "boolean"
@@ -58623,19 +57953,10 @@
       "name": "CodecParameterService"
     },
     {
-      "name": "DiagnosticsPluginService"
-    },
-    {
       "name": "EnvironmentService"
     },
     {
       "name": "GamesService"
-    },
-    {
-      "name": "DemoApiService"
-    },
-    {
-      "name": "ImageByNameService"
     },
     {
       "name": "RemoteImageService"

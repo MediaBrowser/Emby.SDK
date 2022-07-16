@@ -3,7 +3,7 @@
  *
  * Explore the Emby Server API
  *
- * API version: 4.8.0.3
+ * API version: 4.8.0.5
  */
 package embyclient-rest-go
 
@@ -35,7 +35,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
-// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.3
+// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.5
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -65,11 +65,7 @@ type APIClient struct {
 
 	DashboardServiceApi *DashboardServiceApiService
 
-	DemoApiServiceApi *DemoApiServiceApiService
-
 	DeviceServiceApi *DeviceServiceApiService
-
-	DiagnosticsPluginServiceApi *DiagnosticsPluginServiceApiService
 
 	DisplayPreferencesServiceApi *DisplayPreferencesServiceApiService
 
@@ -92,8 +88,6 @@ type APIClient struct {
 	GenresServiceApi *GenresServiceApiService
 
 	HlsSegmentServiceApi *HlsSegmentServiceApiService
-
-	ImageByNameServiceApi *ImageByNameServiceApiService
 
 	ImageServiceApi *ImageServiceApiService
 
@@ -205,9 +199,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.ConfigurationServiceApi = (*ConfigurationServiceApiService)(&c.common)
 	c.ConnectServiceApi = (*ConnectServiceApiService)(&c.common)
 	c.DashboardServiceApi = (*DashboardServiceApiService)(&c.common)
-	c.DemoApiServiceApi = (*DemoApiServiceApiService)(&c.common)
 	c.DeviceServiceApi = (*DeviceServiceApiService)(&c.common)
-	c.DiagnosticsPluginServiceApi = (*DiagnosticsPluginServiceApiService)(&c.common)
 	c.DisplayPreferencesServiceApi = (*DisplayPreferencesServiceApiService)(&c.common)
 	c.DlnaServerServiceApi = (*DlnaServerServiceApiService)(&c.common)
 	c.DlnaServiceApi = (*DlnaServiceApiService)(&c.common)
@@ -219,7 +211,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.GamesServiceApi = (*GamesServiceApiService)(&c.common)
 	c.GenresServiceApi = (*GenresServiceApiService)(&c.common)
 	c.HlsSegmentServiceApi = (*HlsSegmentServiceApiService)(&c.common)
-	c.ImageByNameServiceApi = (*ImageByNameServiceApiService)(&c.common)
 	c.ImageServiceApi = (*ImageServiceApiService)(&c.common)
 	c.InstantMixServiceApi = (*InstantMixServiceApiService)(&c.common)
 	c.ItemLookupServiceApi = (*ItemLookupServiceApiService)(&c.common)

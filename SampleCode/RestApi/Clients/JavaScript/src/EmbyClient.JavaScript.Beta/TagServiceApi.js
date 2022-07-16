@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.3
+ * OpenAPI spec version: 4.8.0.5
  * 
  *
  * NOTE: This class is auto generated.
@@ -18,7 +18,7 @@ import UserLibraryAddTags from '../model/UserLibraryAddTags';
 /**
 * TagService service.
 * @module EmbyClient.JavaScript.Beta/TagServiceApi
-* @version 4.8.0.3
+* @version 4.8.0.5
 */
 export default class TagServiceApi {
 

@@ -1,6 +1,6 @@
 /*
  * EmbyClient.Dotnet.Beta
- * API Version: 4.8.0.3
+ * API Version: 4.8.0.5
  */
 
 

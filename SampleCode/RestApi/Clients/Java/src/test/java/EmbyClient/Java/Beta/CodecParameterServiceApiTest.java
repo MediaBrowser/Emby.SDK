@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * 
  *
- * API version: 4.8.0.3
+ * API version: 4.8.0.5
  */
 
 package EmbyClient.Java.Beta;
@@ -44,22 +44,6 @@ public class CodecParameterServiceApiTest {
         // TODO: test validations
     }
     /**
-     * Gets the parameters for a specified codec.
-     *
-     * Requires authentication as user
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getEncodingdiagnosticsCodecparametersTest() throws Exception {
-        String codecId = null;
-        MediaEncodingCodecParameterContext parameterContext = null;
-        EmbyWebGenericEditEditObjectContainer response = api.getEncodingdiagnosticsCodecparameters(codecId, parameterContext);
-
-        // TODO: test validations
-    }
-    /**
      * Updates the parameters for a specified codec.
      *
      * Requires authentication as administrator
@@ -73,23 +57,6 @@ public class CodecParameterServiceApiTest {
         String codecId = null;
         MediaEncodingCodecParameterContext parameterContext = null;
         api.postEncodingCodecparameters(body, codecId, parameterContext);
-
-        // TODO: test validations
-    }
-    /**
-     * Updates the parameters for a specified codec.
-     *
-     * Requires authentication as administrator
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void postEncodingdiagnosticsCodecparametersTest() throws Exception {
-        Object body = null;
-        String codecId = null;
-        MediaEncodingCodecParameterContext parameterContext = null;
-        api.postEncodingdiagnosticsCodecparameters(body, codecId, parameterContext);
 
         // TODO: test validations
     }

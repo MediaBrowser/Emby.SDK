@@ -3,7 +3,7 @@
 """
     Emby Server REST API (BETA)
 
-    API version: 4.8.0.3
+    API version: 4.8.0.5
 """
 
 from __future__ import absolute_import

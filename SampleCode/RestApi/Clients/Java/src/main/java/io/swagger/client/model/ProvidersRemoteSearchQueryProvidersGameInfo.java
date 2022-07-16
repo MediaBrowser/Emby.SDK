@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * 
  *
- * API version: 4.8.0.3
+ * API version: 4.8.0.5
  */
 
 package io.swagger.client.model;
@@ -17,6 +17,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.ProvidersGameInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * ProvidersRemoteSearchQueryProvidersGameInfo
  */
@@ -31,6 +33,9 @@ public class ProvidersRemoteSearchQueryProvidersGameInfo {
 
   @SerializedName("SearchProviderName")
   private String searchProviderName = null;
+
+  @SerializedName("Providers")
+  private List<String> providers = null;
 
   @SerializedName("IncludeDisabledProviders")
   private Boolean includeDisabledProviders = null;
@@ -89,6 +94,32 @@ public class ProvidersRemoteSearchQueryProvidersGameInfo {
     this.searchProviderName = searchProviderName;
   }
 
+  public ProvidersRemoteSearchQueryProvidersGameInfo providers(List<String> providers) {
+    this.providers = providers;
+    return this;
+  }
+
+  public ProvidersRemoteSearchQueryProvidersGameInfo addProvidersItem(String providersItem) {
+    if (this.providers == null) {
+      this.providers = new ArrayList<String>();
+    }
+    this.providers.add(providersItem);
+    return this;
+  }
+
+   /**
+   * Get providers
+   * @return providers
+  **/
+  @Schema(description = "")
+  public List<String> getProviders() {
+    return providers;
+  }
+
+  public void setProviders(List<String> providers) {
+    this.providers = providers;
+  }
+
   public ProvidersRemoteSearchQueryProvidersGameInfo includeDisabledProviders(Boolean includeDisabledProviders) {
     this.includeDisabledProviders = includeDisabledProviders;
     return this;
@@ -120,12 +151,13 @@ public class ProvidersRemoteSearchQueryProvidersGameInfo {
     return Objects.equals(this.searchInfo, providersRemoteSearchQueryProvidersGameInfo.searchInfo) &&
         Objects.equals(this.itemId, providersRemoteSearchQueryProvidersGameInfo.itemId) &&
         Objects.equals(this.searchProviderName, providersRemoteSearchQueryProvidersGameInfo.searchProviderName) &&
+        Objects.equals(this.providers, providersRemoteSearchQueryProvidersGameInfo.providers) &&
         Objects.equals(this.includeDisabledProviders, providersRemoteSearchQueryProvidersGameInfo.includeDisabledProviders);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(searchInfo, itemId, searchProviderName, includeDisabledProviders);
+    return Objects.hash(searchInfo, itemId, searchProviderName, providers, includeDisabledProviders);
   }
 
 
@@ -137,6 +169,7 @@ public class ProvidersRemoteSearchQueryProvidersGameInfo {
     sb.append("    searchInfo: ").append(toIndentedString(searchInfo)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    searchProviderName: ").append(toIndentedString(searchProviderName)).append("\n");
+    sb.append("    providers: ").append(toIndentedString(providers)).append("\n");
     sb.append("    includeDisabledProviders: ").append(toIndentedString(includeDisabledProviders)).append("\n");
     sb.append("}");
     return sb.toString();

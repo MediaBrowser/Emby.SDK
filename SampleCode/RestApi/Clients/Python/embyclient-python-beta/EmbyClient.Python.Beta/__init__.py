@@ -14,9 +14,7 @@ from embyclient-python-beta.EmbyClient.Python.Beta.collection_service_api import
 from embyclient-python-beta.EmbyClient.Python.Beta.configuration_service_api import ConfigurationServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.connect_service_api import ConnectServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.dashboard_service_api import DashboardServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.demo_api_service_api import DemoApiServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.device_service_api import DeviceServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.diagnostics_plugin_service_api import DiagnosticsPluginServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.display_preferences_service_api import DisplayPreferencesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.dlna_server_service_api import DlnaServerServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.dlna_service_api import DlnaServiceApi
@@ -28,7 +26,6 @@ from embyclient-python-beta.EmbyClient.Python.Beta.game_genres_service_api impor
 from embyclient-python-beta.EmbyClient.Python.Beta.games_service_api import GamesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.genres_service_api import GenresServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.hls_segment_service_api import HlsSegmentServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.image_by_name_service_api import ImageByNameServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.image_service_api import ImageServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.instant_mix_service_api import InstantMixServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.item_lookup_service_api import ItemLookupServiceApi

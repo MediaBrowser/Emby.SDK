@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.3
+ * OpenAPI spec version: 4.8.0.5
  * 
  *
  * NOTE: This class is auto generated.
@@ -89,7 +89,6 @@ import EmbyMediaModelTypesResolutionWithRate from './model/EmbyMediaModelTypesRe
 import EmbyNotificationsApiNotification from './model/EmbyNotificationsApiNotification';
 import EmbyNotificationsApiNotificationResult from './model/EmbyNotificationsApiNotificationResult';
 import EmbyNotificationsApiNotificationsSummary from './model/EmbyNotificationsApiNotificationsSummary';
-import EmbyPluginGenericEditDemoDataDemoTypeInfo from './model/EmbyPluginGenericEditDemoDataDemoTypeInfo';
 import EmbyWebApiConfigurationPageInfo from './model/EmbyWebApiConfigurationPageInfo';
 import EmbyWebGenericEditActionsPostbackAction from './model/EmbyWebGenericEditActionsPostbackAction';
 import EmbyWebGenericEditCommonEditorTypes from './model/EmbyWebGenericEditCommonEditorTypes';
@@ -110,7 +109,6 @@ import GlobalizationCultureDto from './model/GlobalizationCultureDto';
 import GlobalizationLocalizatonOption from './model/GlobalizationLocalizatonOption';
 import IOFileSystemEntryInfo from './model/IOFileSystemEntryInfo';
 import IOFileSystemEntryType from './model/IOFileSystemEntryType';
-import ImageByNameInfo from './model/ImageByNameInfo';
 import ImageInfo from './model/ImageInfo';
 import ImageProviderInfo from './model/ImageProviderInfo';
 import ImageType from './model/ImageType';
@@ -319,9 +317,7 @@ import CollectionServiceApi from './EmbyClient.JavaScript.Beta/CollectionService
 import ConfigurationServiceApi from './EmbyClient.JavaScript.Beta/ConfigurationServiceApi';
 import ConnectServiceApi from './EmbyClient.JavaScript.Beta/ConnectServiceApi';
 import DashboardServiceApi from './EmbyClient.JavaScript.Beta/DashboardServiceApi';
-import DemoApiServiceApi from './EmbyClient.JavaScript.Beta/DemoApiServiceApi';
 import DeviceServiceApi from './EmbyClient.JavaScript.Beta/DeviceServiceApi';
-import DiagnosticsPluginServiceApi from './EmbyClient.JavaScript.Beta/DiagnosticsPluginServiceApi';
 import DisplayPreferencesServiceApi from './EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi';
 import DlnaServerServiceApi from './EmbyClient.JavaScript.Beta/DlnaServerServiceApi';
 import DlnaServiceApi from './EmbyClient.JavaScript.Beta/DlnaServiceApi';
@@ -333,7 +329,6 @@ import GameGenresServiceApi from './EmbyClient.JavaScript.Beta/GameGenresService
 import GamesServiceApi from './EmbyClient.JavaScript.Beta/GamesServiceApi';
 import GenresServiceApi from './EmbyClient.JavaScript.Beta/GenresServiceApi';
 import HlsSegmentServiceApi from './EmbyClient.JavaScript.Beta/HlsSegmentServiceApi';
-import ImageByNameServiceApi from './EmbyClient.JavaScript.Beta/ImageByNameServiceApi';
 import ImageServiceApi from './EmbyClient.JavaScript.Beta/ImageServiceApi';
 import InstantMixServiceApi from './EmbyClient.JavaScript.Beta/InstantMixServiceApi';
 import ItemLookupServiceApi from './EmbyClient.JavaScript.Beta/ItemLookupServiceApi';
@@ -405,7 +400,7 @@ import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.3
+* @version 4.8.0.5
 */
 export {
     /**
@@ -883,12 +878,6 @@ export {
     EmbyNotificationsApiNotificationsSummary,
 
     /**
-     * The EmbyPluginGenericEditDemoDataDemoTypeInfo model constructor.
-     * @property {module:model/EmbyPluginGenericEditDemoDataDemoTypeInfo}
-     */
-    EmbyPluginGenericEditDemoDataDemoTypeInfo,
-
-    /**
      * The EmbyWebApiConfigurationPageInfo model constructor.
      * @property {module:model/EmbyWebApiConfigurationPageInfo}
      */
@@ -1007,12 +996,6 @@ export {
      * @property {module:model/IOFileSystemEntryType}
      */
     IOFileSystemEntryType,
-
-    /**
-     * The ImageByNameInfo model constructor.
-     * @property {module:model/ImageByNameInfo}
-     */
-    ImageByNameInfo,
 
     /**
      * The ImageInfo model constructor.
@@ -2263,22 +2246,10 @@ export {
     DashboardServiceApi,
 
     /**
-    * The DemoApiServiceApi service constructor.
-    * @property {module:EmbyClient.JavaScript.Beta/DemoApiServiceApi}
-    */
-    DemoApiServiceApi,
-
-    /**
     * The DeviceServiceApi service constructor.
     * @property {module:EmbyClient.JavaScript.Beta/DeviceServiceApi}
     */
     DeviceServiceApi,
-
-    /**
-    * The DiagnosticsPluginServiceApi service constructor.
-    * @property {module:EmbyClient.JavaScript.Beta/DiagnosticsPluginServiceApi}
-    */
-    DiagnosticsPluginServiceApi,
 
     /**
     * The DisplayPreferencesServiceApi service constructor.
@@ -2345,12 +2316,6 @@ export {
     * @property {module:EmbyClient.JavaScript.Beta/HlsSegmentServiceApi}
     */
     HlsSegmentServiceApi,
-
-    /**
-    * The ImageByNameServiceApi service constructor.
-    * @property {module:EmbyClient.JavaScript.Beta/ImageByNameServiceApi}
-    */
-    ImageByNameServiceApi,
 
     /**
     * The ImageServiceApi service constructor.

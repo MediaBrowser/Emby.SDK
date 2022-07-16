@@ -3,7 +3,7 @@
 """
     Emby Server REST API (BETA)
 
-    API version: 4.8.0.3
+    API version: 4.8.0.5
 """
 
 import pprint
@@ -27,6 +27,7 @@ class ProvidersRemoteSearchQueryProvidersGameInfo(object):
         'search_info': 'ProvidersGameInfo',
         'item_id': 'int',
         'search_provider_name': 'str',
+        'providers': 'list[str]',
         'include_disabled_providers': 'bool'
     }
 
@@ -34,14 +35,16 @@ class ProvidersRemoteSearchQueryProvidersGameInfo(object):
         'search_info': 'SearchInfo',
         'item_id': 'ItemId',
         'search_provider_name': 'SearchProviderName',
+        'providers': 'Providers',
         'include_disabled_providers': 'IncludeDisabledProviders'
     }
 
-    def __init__(self, search_info=None, item_id=None, search_provider_name=None, include_disabled_providers=None):  # noqa: E501
+    def __init__(self, search_info=None, item_id=None, search_provider_name=None, providers=None, include_disabled_providers=None):  # noqa: E501
         """ProvidersRemoteSearchQueryProvidersGameInfo - a model defined in Swagger"""  # noqa: E501
         self._search_info = None
         self._item_id = None
         self._search_provider_name = None
+        self._providers = None
         self._include_disabled_providers = None
         self.discriminator = None
         if search_info is not None:
@@ -50,6 +53,8 @@ class ProvidersRemoteSearchQueryProvidersGameInfo(object):
             self.item_id = item_id
         if search_provider_name is not None:
             self.search_provider_name = search_provider_name
+        if providers is not None:
+            self.providers = providers
         if include_disabled_providers is not None:
             self.include_disabled_providers = include_disabled_providers
 
@@ -115,6 +120,27 @@ class ProvidersRemoteSearchQueryProvidersGameInfo(object):
         """
 
         self._search_provider_name = search_provider_name
+
+    @property
+    def providers(self):
+        """Gets the providers of this ProvidersRemoteSearchQueryProvidersGameInfo.  # noqa: E501
+
+
+        :return: The providers of this ProvidersRemoteSearchQueryProvidersGameInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._providers
+
+    @providers.setter
+    def providers(self, providers):
+        """Sets the providers of this ProvidersRemoteSearchQueryProvidersGameInfo.
+
+
+        :param providers: The providers of this ProvidersRemoteSearchQueryProvidersGameInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._providers = providers
 
     @property
     def include_disabled_providers(self):

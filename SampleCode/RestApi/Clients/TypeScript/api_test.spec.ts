@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.3
+ * OpenAPI spec version: 4.8.0.5
  * 
  *
  * NOTE: This file is auto generated.
@@ -417,22 +417,11 @@ describe("CodecParameterServiceApi", () => {
     const parameterContext: MediaEncodingCodecParameterContext = undefined
     return expect(instance.getEncodingCodecparameters(codecId, parameterContext, {})).resolves.toBe(null)
   })
-  test("getEncodingdiagnosticsCodecparameters", () => {
-    const codecId: string = "codecId_example"
-    const parameterContext: MediaEncodingCodecParameterContext = undefined
-    return expect(instance.getEncodingdiagnosticsCodecparameters(codecId, parameterContext, {})).resolves.toBe(null)
-  })
   test("postEncodingCodecparameters", () => {
     const body: Object = undefined
     const codecId: string = "codecId_example"
     const parameterContext: MediaEncodingCodecParameterContext = undefined
     return expect(instance.postEncodingCodecparameters(body, codecId, parameterContext, {})).resolves.toBe(null)
-  })
-  test("postEncodingdiagnosticsCodecparameters", () => {
-    const body: Object = undefined
-    const codecId: string = "codecId_example"
-    const parameterContext: MediaEncodingCodecParameterContext = undefined
-    return expect(instance.postEncodingdiagnosticsCodecparameters(body, codecId, parameterContext, {})).resolves.toBe(null)
   })
 })
 
@@ -535,29 +524,6 @@ describe("DashboardServiceApi", () => {
   })
 })
 
-describe("DemoApiServiceApi", () => {
-  let instance: api.DemoApiServiceApi
-  beforeEach(function() {
-    instance = new api.DemoApiServiceApi(config)
-  });
-
-  test("getGenericeditdemoDemo", () => {
-    const demoSet: number = 56
-    const demoType: number = 56
-    return expect(instance.getGenericeditdemoDemo(demoSet, demoType, {})).resolves.toBe(null)
-  })
-  test("getGenericeditdemoDemotypes", () => {
-    const demoSet: number = 56
-    return expect(instance.getGenericeditdemoDemotypes(demoSet, {})).resolves.toBe(null)
-  })
-  test("postGenericeditdemoDemo", () => {
-    const body: Object = undefined
-    const demoSet: number = 56
-    const demoType: number = 56
-    return expect(instance.postGenericeditdemoDemo(body, demoSet, demoType, {})).resolves.toBe(null)
-  })
-})
-
 describe("DeviceServiceApi", () => {
   let instance: api.DeviceServiceApi
   beforeEach(function() {
@@ -597,21 +563,6 @@ describe("DeviceServiceApi", () => {
     const body: api.DevicesDeviceOptions = undefined
     const id: string = "id_example"
     return expect(instance.postDevicesOptions(body, id, {})).resolves.toBe(null)
-  })
-})
-
-describe("DiagnosticsPluginServiceApi", () => {
-  let instance: api.DiagnosticsPluginServiceApi
-  beforeEach(function() {
-    instance = new api.DiagnosticsPluginServiceApi(config)
-  });
-
-  test("getEncodingdiagnosticsDiagnosticoptions", () => {
-    return expect(instance.getEncodingdiagnosticsDiagnosticoptions({})).resolves.toBe(null)
-  })
-  test("postEncodingdiagnosticsDiagnosticoptions", () => {
-    const body: Object = undefined
-    return expect(instance.postEncodingdiagnosticsDiagnosticoptions(body, {})).resolves.toBe(null)
   })
 })
 
@@ -1259,38 +1210,6 @@ describe("HlsSegmentServiceApi", () => {
     const deviceId: string = "deviceId_example"
     const playSessionId: string = "playSessionId_example"
     return expect(instance.postVideosActiveencodingsDelete(deviceId, playSessionId, {})).resolves.toBe(null)
-  })
-})
-
-describe("ImageByNameServiceApi", () => {
-  let instance: api.ImageByNameServiceApi
-  beforeEach(function() {
-    instance = new api.ImageByNameServiceApi(config)
-  });
-
-  test("getImagesGeneral", () => {
-    return expect(instance.getImagesGeneral({})).resolves.toBe(null)
-  })
-  test("getImagesGeneralByNameByType", () => {
-    const name: string = "name_example"
-    const type: string = "type_example"
-    return expect(instance.getImagesGeneralByNameByType(name, type, {})).resolves.toBe(null)
-  })
-  test("getImagesMediainfo", () => {
-    return expect(instance.getImagesMediainfo({})).resolves.toBe(null)
-  })
-  test("getImagesMediainfoByThemeByName", () => {
-    const name: string = "name_example"
-    const theme: string = "theme_example"
-    return expect(instance.getImagesMediainfoByThemeByName(name, theme, {})).resolves.toBe(null)
-  })
-  test("getImagesRatings", () => {
-    return expect(instance.getImagesRatings({})).resolves.toBe(null)
-  })
-  test("getImagesRatingsByThemeByName", () => {
-    const name: string = "name_example"
-    const theme: string = "theme_example"
-    return expect(instance.getImagesRatingsByThemeByName(name, theme, {})).resolves.toBe(null)
   })
 })
 

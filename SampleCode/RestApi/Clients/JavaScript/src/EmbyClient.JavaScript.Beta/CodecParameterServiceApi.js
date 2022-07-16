@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.3
+ * OpenAPI spec version: 4.8.0.5
  * 
  *
  * NOTE: This class is auto generated.
@@ -17,7 +17,7 @@ import MediaEncodingCodecParameterContext from '../model/MediaEncodingCodecParam
 /**
 * CodecParameterService service.
 * @module EmbyClient.JavaScript.Beta/CodecParameterServiceApi
-* @version 4.8.0.3
+* @version 4.8.0.5
 */
 export default class CodecParameterServiceApi {
 
@@ -72,45 +72,6 @@ export default class CodecParameterServiceApi {
       );
     }
     /**
-     * Callback function to receive the result of the getEncodingdiagnosticsCodecparameters operation.
-     * @callback module:EmbyClient.JavaScript.Beta/CodecParameterServiceApi~getEncodingdiagnosticsCodecparametersCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericEditEditObjectContainer} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets the parameters for a specified codec.
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript.Beta/CodecParameterServiceApi~getEncodingdiagnosticsCodecparametersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericEditEditObjectContainer}
-     */
-    getEncodingdiagnosticsCodecparameters() {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'CodecId': codecId,
-        'ParameterContext': parameterContext
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericEditEditObjectContainer;
-
-      return this.apiClient.callApi(
-        '/EncodingDiagnostics/CodecParameters', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
      * Callback function to receive the result of the postEncodingCodecparameters operation.
      * @callback module:EmbyClient.JavaScript.Beta/CodecParameterServiceApi~postEncodingCodecparametersCallback
      * @param {String} error Error message, if any.
@@ -144,44 +105,6 @@ export default class CodecParameterServiceApi {
 
       return this.apiClient.callApi(
         '/Encoding/CodecParameters', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the postEncodingdiagnosticsCodecparameters operation.
-     * @callback module:EmbyClient.JavaScript.Beta/CodecParameterServiceApi~postEncodingdiagnosticsCodecparametersCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Updates the parameters for a specified codec.
-     * Requires authentication as administrator
-     * @param {module:EmbyClient.JavaScript.Beta/CodecParameterServiceApi~postEncodingdiagnosticsCodecparametersCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    postEncodingdiagnosticsCodecparameters() {
-      let postBody = body;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'CodecId': codecId,
-        'ParameterContext': parameterContext
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = ['application/octet-stream'];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/EncodingDiagnostics/CodecParameters', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

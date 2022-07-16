@@ -1,6 +1,6 @@
 /*
  * EmbyClient.Dotnet.Beta
- * API Version: 4.8.0.3
+ * API Version: 4.8.0.5
  */
 
 using System;
@@ -30,12 +30,14 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="searchInfo">searchInfo.</param>
         /// <param name="itemId">itemId.</param>
         /// <param name="searchProviderName">searchProviderName.</param>
+        /// <param name="providers">providers.</param>
         /// <param name="includeDisabledProviders">includeDisabledProviders.</param>
-        public ProvidersRemoteSearchQueryProvidersSeriesInfo(ProvidersSeriesInfo searchInfo = default(ProvidersSeriesInfo), long? itemId = default(long?), string searchProviderName = default(string), bool? includeDisabledProviders = default(bool?))
+        public ProvidersRemoteSearchQueryProvidersSeriesInfo(ProvidersSeriesInfo searchInfo = default(ProvidersSeriesInfo), long? itemId = default(long?), string searchProviderName = default(string), List<string> providers = default(List<string>), bool? includeDisabledProviders = default(bool?))
         {
             this.SearchInfo = searchInfo;
             this.ItemId = itemId;
             this.SearchProviderName = searchProviderName;
+            this.Providers = providers;
             this.IncludeDisabledProviders = includeDisabledProviders;
         }
         
@@ -58,6 +60,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string SearchProviderName { get; set; }
 
         /// <summary>
+        /// Gets or Sets Providers
+        /// </summary>
+        [DataMember(Name="Providers", EmitDefaultValue=false)]
+        public List<string> Providers { get; set; }
+
+        /// <summary>
         /// Gets or Sets IncludeDisabledProviders
         /// </summary>
         [DataMember(Name="IncludeDisabledProviders", EmitDefaultValue=false)]
@@ -74,6 +82,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  SearchInfo: ").Append(SearchInfo).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  SearchProviderName: ").Append(SearchProviderName).Append("\n");
+            sb.Append("  Providers: ").Append(Providers).Append("\n");
             sb.Append("  IncludeDisabledProviders: ").Append(IncludeDisabledProviders).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -125,6 +134,12 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.SearchProviderName.Equals(input.SearchProviderName))
                 ) && 
                 (
+                    this.Providers == input.Providers ||
+                    this.Providers != null &&
+                    input.Providers != null &&
+                    this.Providers.SequenceEqual(input.Providers)
+                ) && 
+                (
                     this.IncludeDisabledProviders == input.IncludeDisabledProviders ||
                     (this.IncludeDisabledProviders != null &&
                     this.IncludeDisabledProviders.Equals(input.IncludeDisabledProviders))
@@ -146,6 +161,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.SearchProviderName != null)
                     hashCode = hashCode * 59 + this.SearchProviderName.GetHashCode();
+                if (this.Providers != null)
+                    hashCode = hashCode * 59 + this.Providers.GetHashCode();
                 if (this.IncludeDisabledProviders != null)
                     hashCode = hashCode * 59 + this.IncludeDisabledProviders.GetHashCode();
                 return hashCode;

@@ -5,7 +5,7 @@
 """
     Emby Server REST API (BETA)
 
-    API version: 4.8.0.3
+    API version: 4.8.0.5
 """
 
 from __future__ import absolute_import
@@ -22,9 +22,7 @@ from embyclient-python-beta.EmbyClient.Python.Beta.collection_service_api import
 from embyclient-python-beta.EmbyClient.Python.Beta.configuration_service_api import ConfigurationServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.connect_service_api import ConnectServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.dashboard_service_api import DashboardServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.demo_api_service_api import DemoApiServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.device_service_api import DeviceServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.diagnostics_plugin_service_api import DiagnosticsPluginServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.display_preferences_service_api import DisplayPreferencesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.dlna_server_service_api import DlnaServerServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.dlna_service_api import DlnaServiceApi
@@ -36,7 +34,6 @@ from embyclient-python-beta.EmbyClient.Python.Beta.game_genres_service_api impor
 from embyclient-python-beta.EmbyClient.Python.Beta.games_service_api import GamesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.genres_service_api import GenresServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.hls_segment_service_api import HlsSegmentServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.image_by_name_service_api import ImageByNameServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.image_service_api import ImageServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.instant_mix_service_api import InstantMixServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.item_lookup_service_api import ItemLookupServiceApi
@@ -160,7 +157,6 @@ from embyclient-python-beta.models.emby_media_model_types_resolution_with_rate i
 from embyclient-python-beta.models.emby_notifications_api_notification import EmbyNotificationsApiNotification
 from embyclient-python-beta.models.emby_notifications_api_notification_result import EmbyNotificationsApiNotificationResult
 from embyclient-python-beta.models.emby_notifications_api_notifications_summary import EmbyNotificationsApiNotificationsSummary
-from embyclient-python-beta.models.emby_plugin_generic_edit_demo_data_demo_type_info import EmbyPluginGenericEditDemoDataDemoTypeInfo
 from embyclient-python-beta.models.emby_web_api_configuration_page_info import EmbyWebApiConfigurationPageInfo
 from embyclient-python-beta.models.emby_web_generic_edit_actions_postback_action import EmbyWebGenericEditActionsPostbackAction
 from embyclient-python-beta.models.emby_web_generic_edit_common_editor_types import EmbyWebGenericEditCommonEditorTypes
@@ -181,7 +177,6 @@ from embyclient-python-beta.models.globalization_culture_dto import Globalizatio
 from embyclient-python-beta.models.globalization_localizaton_option import GlobalizationLocalizatonOption
 from embyclient-python-beta.models.io_file_system_entry_info import IOFileSystemEntryInfo
 from embyclient-python-beta.models.io_file_system_entry_type import IOFileSystemEntryType
-from embyclient-python-beta.models.image_by_name_info import ImageByNameInfo
 from embyclient-python-beta.models.image_info import ImageInfo
 from embyclient-python-beta.models.image_provider_info import ImageProviderInfo
 from embyclient-python-beta.models.image_type import ImageType
