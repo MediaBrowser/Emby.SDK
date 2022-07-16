@@ -20,6 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Emby.Web.GenericEdit" Version="4.7.0.33" />
-    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.5-beta" />
+    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.6-beta" />
   </ItemGroup>
 </Project>

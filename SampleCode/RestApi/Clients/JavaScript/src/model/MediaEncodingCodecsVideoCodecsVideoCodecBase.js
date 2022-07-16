@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.5
+ * OpenAPI spec version: 4.8.0.6
  * 
  *
  * NOTE: This class is auto generated.
@@ -23,7 +23,7 @@ import MediaEncodingCodecsCommonInterfacesICodecDeviceInfo from './MediaEncoding
 /**
 * The MediaEncodingCodecsVideoCodecsVideoCodecBase model module.
 * @module model/MediaEncodingCodecsVideoCodecsVideoCodecBase
-* @version 4.8.0.5
+* @version 4.8.0.6
 */
 export default class MediaEncodingCodecsVideoCodecsVideoCodecBase {
     /**

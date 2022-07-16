@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * 
  *
- * API version: 4.8.0.5
+ * API version: 4.8.0.6
  */
 
 package EmbyClient.Java.Beta;

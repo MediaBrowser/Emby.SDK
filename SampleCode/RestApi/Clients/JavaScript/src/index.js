@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.5
+ * OpenAPI spec version: 4.8.0.6
  * 
  *
  * NOTE: This class is auto generated.
@@ -400,7 +400,7 @@ import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.5
+* @version 4.8.0.6
 */
 export {
     /**

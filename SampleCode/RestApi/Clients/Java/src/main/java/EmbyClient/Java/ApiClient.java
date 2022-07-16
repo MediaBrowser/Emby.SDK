@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * 
  *
- * API version: 4.8.0.5
+ * API version: 4.8.0.6
  */
 
 package EmbyClient.Java;
@@ -81,7 +81,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("/4.8.0.5/java");
+        setUserAgent("/4.8.0.6/java");
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();

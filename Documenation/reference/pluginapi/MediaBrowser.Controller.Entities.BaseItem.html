@@ -1776,6 +1776,33 @@ public virtual bool IsResolvedToFolder { get; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSecondaryMergedItemInSameFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSecondaryMergedItemInSameFolder">IsSecondaryMergedItemInSameFolder</h4>
+  <div class="markdown level1 summary"><p>Internal use only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public bool IsSecondaryMergedItemInSameFolder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_IsShortcut_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsShortcut*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsShortcut" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsShortcut">IsShortcut</h4>
   <div class="markdown level1 summary"></div>
@@ -2053,32 +2080,6 @@ public long ListItemEntryId { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds_" data-uid="MediaBrowser.Controller.Entities.BaseItem.LocalTrailerIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds" data-uid="MediaBrowser.Controller.Entities.BaseItem.LocalTrailerIds">LocalTrailerIds</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public Guid[] LocalTrailerIds { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2889,6 +2890,33 @@ public string[] RemoteTrailers { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_ResolvedExtras_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ResolvedExtras*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_ResolvedExtras" data-uid="MediaBrowser.Controller.Entities.BaseItem.ResolvedExtras">ResolvedExtras</h4>
+  <div class="markdown level1 summary"><p>Internal use only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public List&lt;BaseItem&gt; ResolvedExtras { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_RunTimeTicks_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RunTimeTicks*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_RunTimeTicks" data-uid="MediaBrowser.Controller.Entities.BaseItem.RunTimeTicks">RunTimeTicks</h4>
   <div class="markdown level1 summary"><p>Gets or sets the run time ticks.</p>
@@ -3292,7 +3320,7 @@ public virtual bool SupportsLocalTrailers { get; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-protected virtual bool SupportsOwnedItems { get; }</code></pre>
+public virtual bool SupportsOwnedItems { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3541,58 +3569,6 @@ public string[] Tags { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ThemeSongIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds" data-uid="MediaBrowser.Controller.Entities.BaseItem.ThemeSongIds">ThemeSongIds</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public Guid[] ThemeSongIds { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_ThemeVideoIds_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ThemeVideoIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_ThemeVideoIds" data-uid="MediaBrowser.Controller.Entities.BaseItem.ThemeVideoIds">ThemeVideoIds</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public Guid[] ThemeVideoIds { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -5376,48 +5352,6 @@ public int Width { get; set; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetExtraGuids_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtraGuids*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetExtraGuids_MediaBrowser_Model_Entities_ExtraType___" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtraGuids(MediaBrowser.Model.Entities.ExtraType[])">GetExtraGuids(ExtraType[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Guid[] GetExtraGuids(ExtraType[] extraTypes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>[]</td>
-        <td><span class="parametername">extraTypes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetExtraIds_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtraIds*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetExtraIds_MediaBrowser_Model_Entities_ExtraType___" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtraIds(MediaBrowser.Model.Entities.ExtraType[])">GetExtraIds(ExtraType[])</h4>
   <div class="markdown level1 summary"></div>
@@ -5617,7 +5551,7 @@ public int Width { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual FileSystemMetadata[] GetFileSystemChildren(IDirectoryService directoryService)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual FileSystemMetadata[] GetFileSystemChildren(IDirectoryService directoryService)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7667,31 +7601,6 @@ This overload is for CoverArt</p>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSecondaryMergedItemInSameFolder*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSecondaryMergedItemInSameFolder">IsSecondaryMergedItemInSameFolder()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual bool IsSecondaryMergedItemInSameFolder()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_BaseItem_IsUnplayed_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsUnplayed*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsUnplayed_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsUnplayed(MediaBrowser.Controller.Entities.User)">IsUnplayed(User)</h4>
   <div class="markdown level1 summary"></div>
@@ -8058,65 +7967,6 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
         <td><span class="parametername">list2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshedOwnedItems*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshedOwnedItems(MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Model.Configuration.LibraryOptions,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Threading.CancellationToken)">RefreshedOwnedItems(MetadataRefreshOptions, LibraryOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Refreshes owned items such as trailers, theme videos, special features, etc.
-Returns true or false indicating if changes were found.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual async Task&lt;bool&gt; RefreshedOwnedItems(MetadataRefreshOptions options, LibraryOptions libraryOptions, List&lt;FileSystemMetadata&gt; fileSystemChildren, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
-        <td><span class="parametername">fileSystemChildren</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

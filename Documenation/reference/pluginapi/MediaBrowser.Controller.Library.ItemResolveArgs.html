@@ -180,13 +180,13 @@ whenever needed.  Primarily for entity resolution.</p>
   
   
   <a id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor(MediaBrowser.Controller.IServerApplicationPaths,MediaBrowser.Controller.Providers.IDirectoryService)">ItemResolveArgs(IServerApplicationPaths, IDirectoryService)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor(MediaBrowser.Controller.Providers.IDirectoryService)">ItemResolveArgs(IDirectoryService)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Controller.Library.ItemResolveArgs.html">ItemResolveArgs</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemResolveArgs(IServerApplicationPaths appPaths, IDirectoryService directoryService)</code></pre>
+    <pre><code class="lang-csharp hljs">public ItemResolveArgs(IDirectoryService directoryService)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,12 +198,6 @@ whenever needed.  Primarily for entity resolution.</p>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationPaths.html">IServerApplicationPaths</a></td>
-        <td><span class="parametername">appPaths</span></td>
-        <td><p>The app paths.</p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
         <td><span class="parametername">directoryService</span></td>
@@ -341,60 +335,6 @@ whenever needed.  Primarily for entity resolution.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if this instance is directory; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_IsPhysicalRoot_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsPhysicalRoot*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_IsPhysicalRoot" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsPhysicalRoot">IsPhysicalRoot</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is physical root.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPhysicalRoot { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if this instance is physical root; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_IsVf_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsVf*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_IsVf" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsVf">IsVf</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is vf.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsVf { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if this instance is vf; otherwise, <code>false</code>.</p>
 </td>
       </tr>
     </tbody>

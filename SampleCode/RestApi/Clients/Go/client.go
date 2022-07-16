@@ -3,7 +3,7 @@
  *
  * Explore the Emby Server API
  *
- * API version: 4.8.0.5
+ * API version: 4.8.0.6
  */
 package embyclient-rest-go
 
@@ -35,7 +35,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
-// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.5
+// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.6
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration

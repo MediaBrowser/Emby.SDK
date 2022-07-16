@@ -3,7 +3,7 @@
  *
  * Explore the Emby Server API
  *
- * API version: 4.8.0.5
+ * API version: 4.8.0.6
  */
 package embyclient-rest-go
 import (

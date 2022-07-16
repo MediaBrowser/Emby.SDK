@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.5
+ * OpenAPI spec version: 4.8.0.6
  * 
  *
  * NOTE: This class is auto generated.
@@ -16,7 +16,7 @@ import NameValuePair from './NameValuePair';
 /**
 * The LiveTvListingsProviderInfo model module.
 * @module model/LiveTvListingsProviderInfo
-* @version 4.8.0.5
+* @version 4.8.0.6
 */
 export default class LiveTvListingsProviderInfo {
     /**
