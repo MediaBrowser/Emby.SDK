@@ -12,7 +12,6 @@ externalDocs:
   url: https://github.com/MediaBrowser/Emby/wiki
 servers:
 - url: http://emby.media/emby
-  description: WIN-P8TCTP8PVTV
 tags:
 - name: ArtistsService
 - name: TagService

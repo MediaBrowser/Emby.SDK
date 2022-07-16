@@ -12,8 +12,7 @@
   },
   "servers": [
     {
-      "url": "http://emby.media/emby",
-      "description": "WIN-P8TCTP8PVTV"
+      "url": "http://emby.media/emby"
     }
   ],
   "paths": {

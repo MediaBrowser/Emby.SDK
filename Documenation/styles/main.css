@@ -7,6 +7,7 @@
     --accent-dim: #e0e0e0;
     --accent-super-dim: #f3f3f3;
     --font-color: #424242;
+    --toc-font-color: #222222;
     --tab-hover-color: #444444;
     --card-box-shadow: 0 1px 2px 0 rgba(61, 65, 68, 0.06), 0 1px 3px 1px rgba(61, 65, 68, 0.16);
     --search-box-shadow: 0 1px 2px 0 rgba(41, 45, 48, 0.36), 0 1px 3px 1px rgba(41, 45, 48, 0.46);
@@ -131,7 +132,8 @@ article h3 {
 article h4 {
     padding-bottom: 6px;
     border-bottom: 1px solid #ddd;
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 17px;
 }
 
 th {
@@ -173,7 +175,7 @@ b, optgroup, strong {
 /* SIDEBAR */
 
 .toc .nav > li > a {
-    color: var(--font-color);
+    color: var(--toc-font-color);
 }
 
 .sidefilter {
@@ -520,3 +522,37 @@ header {
     .opspan.opspan-options {
         background: #0d5aa7;
     }
+
+.grad-bottom {
+    background: linear-gradient(rgb(0 0 0 / 0%), rgb(0 0 0 / 8%));
+    height: 5px;
+}
+
+.footer {
+    border-top: 1px solid #ededed;
+    background-color: #111;
+    padding: 15px 0;
+    color: #757575;
+}
+
+.footer a.lnk {
+    color: #9e9e9e;
+}
+
+.refdoc pre {
+    margin: 0;
+}
+
+.refdoc h4 {
+    margin-top: 40px;
+}
+
+.refdoc h4 {
+    margin-top: 50px;
+    padding-bottom: 3px;
+}
+
+.refdoc h5 {
+    padding-bottom: 3px;
+    margin-top: 16px;
+}
