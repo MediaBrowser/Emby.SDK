@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Audio Streaming </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Audio Streaming ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="doc-restapi-Audio-Streaming">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-restapi-Audio-Streaming">
+<h1 id="audio-streaming">Audio Streaming</h1>
+
+<p>Emby has a single <a class="xref" href="../../reference/RestAPI/UniversalAudioService/getAudioByIdUniversal.html">Universal Audio API Endpoint</a> that supports both direct play as well as transcoding. You specify your supported formats as part of the URL, and the server will decide between direct play and transcoding.</p>
+<p>The following are the available params:</p>
+<ul>
+<li>UserId (required)</li>
+<li>DeviceId (required)</li>
+<li>api_key (required)</li>
+<li>MaxStreamingBitrate (required)</li>
+<li>Container = comma delimited list of supported audio containers</li>
+<li>MaxSampleRate = max supported audio sample rate, e.g. 48000</li>
+<li>PlaySessionId (required) this should be generated client-side and is intended to be a unique value per stream URL</li>
+<li>TranscodingProtocol = hls or omit this for progressive (see notes below).</li>
+<li>TranscodingContainer = hls audio transcoding supports ts, aac or mp3.</li>
+<li>AudioCodec = The audio codec to use when transcoding.</li>
+<li>EnableRedirection = true/false. Allow redirects to external stream URL's</li>
+<li>EnableRemoteMedia = true/false. If true, all external domains will be allowed with the EnableRedirection option. If false, only cloud synced domains will be allowed.</li>
+</ul>
+<p>Below is a sample URL:</p>
+<pre><code class="lang-restApi">/Audio/{Id}/universal?UserId=xxx&amp;DeviceId=xxx&amp;MaxStreamingBitrate=140000000&amp;Container=opus,mp3,aac,m4a,flac,webma,webm,wav,ogg,aac,mp3,mpa,wav,wma,mp2,ogg,oga,webma,ape,opus,flac,m4a&amp;TranscodingContainer=ts&amp;TranscodingProtocol=hls&amp;AudioCodec=aac&amp;MaxSampleRate=48000&amp;PlaySessionId=1496213367201
+</code></pre>
+<h2 id="notes-on-transcoding">Notes On Transcoding</h2>
+<p>It is highly recommended that client players support HLS audio. HLS audio will guarantee that seeking is always client-side. Using progressive transcoding will result in much more complicated seeking.</p>
+<h2 id="remote-media">Remote Media</h2>
+<p>You can indicate support for redirects using the <strong>EnableRedirection</strong> param. Additionally you can indicate support for remote media using <strong>EnableRemoteMedia</strong>. Here is how they work:</p>
+<ul>
+<li><p>If EnableRedirection = true and EnableRemoteMedia = true, then both remote media (IPTV) and cloud synced media will be allowed for http redirects.</p>
+</li>
+<li><p>If EnableRedirection = true and EnableRemoteMedia = false, then remote media (IPTV) will not be allowed but cloud synced media will be allowed for http redirects.</p>
+</li>
+<li><p>If EnableRedirection = false then neither will be allowed.</p>
+</li>
+</ul>
+<h3 id="legacy-api">Legacy API</h3>
+<p>The base audio url is <a class="xref" href="../../reference/RestAPI/AudioService/getAudioByIdStream.html">/Audio/{Id}/stream</a>. Some players will have better results when the url has an audio file extension, so we also provide several aliases to account for that:</p>
+<ul>
+<li><a class="xref" href="../../reference/RestAPI/AudioService/getAudioByIdStream.html">/Audio/{Id}/stream</a></li>
+<li><a class="xref" href="../../reference/RestAPI/AudioService/getAudioByIdStreamByContainer.html">/Audio/{Id}/stream.{Container}</a><br>
+Examples:
+<ul>
+<li>/Audio/{Id}/stream.mp3</li>
+<li>/Audio/{Id}/stream.aac</li>
+<li>/Audio/{Id}/stream.ogg</li>
+<li>/Audio/{Id}/stream.oga</li>
+<li>/Audio/{Id}/stream.webma</li>
+<li>/Audio/{Id}/stream.wma</li>
+<li>/Audio/{Id}/stream.flac</li>
+</ul>
+</li>
+</ul>
+<p>If using a url with an extension, the extension <strong>should be based upon the output format</strong>, rather than the input.</p>
+<p>Generally, it is recommend to use a url with a file extension that matches the format you wish to encode to as many players will perform better seeing the file extension in the url.</p>
+<p>Item <strong>Id</strong> and <strong>MediaSourceId</strong> are the only required parameters.</p>
+<p>All of the optional parameters can be viewed using the swagger documentation. Generally, you will also want to supply:</p>
+<ul>
+<li>AudioCodec</li>
+<li>AudioBitrate</li>
+<li>MaxAudioChannels</li>
+<li>AudioSampleRate</li>
+</ul>
+<h2 id="direct-stream">Direct Stream</h2>
+<p>To direct stream an audio file, simply use the static=true parameter.</p>
+<h2 id="seeking">Seeking</h2>
+<p>When direct streaming, the file will be served statically and client-side seeking will be possible. When transcoding, this will not be possible. In order to seek you'll have to stop the stream and start a new one using the StartTimeTicks parameter.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+.mb-socials-heading {
+    color: #cccccc;
+    background-color: #101010;
+/*    padding-left: 40px;
+    padding-right: 40px;
+*/    display: block;
+}
+
+.mb-socials-heading-inner {
+    height: 100%;
+    position: relative;
+}
+
+.mb-socials-heading-right {
+    float: right;
+/*    margin-left: 15px;
+    margin-right: 15px;
+*/}
+
+
+@media only screen and (max-width: 900px) {
+    .mb-socials-heading {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .mb-socials-heading-right {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.mb-socials-list {
+    margin: 0 0 -4px;
+}
+
+.mb-socials-item {
+    margin: 0 4px 4px 0;
+}
+
+.mb-socials-heading .mb-socials-item {
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.mb-socials-item-link {
+    box-shadow: none !important;
+    background: none !important;
+    color: inherit;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    width: 36px;
+}
+
+.mb-socials-heading .mb-socials-item .mb-socials-item-link {
+    font-size: 17px;
+    height: 40px;
+    width: 36px;
+    box-shadow: none !important;
+    background: none !important;
+    color: inherit;
+}
+
+.mb-socials.align_center .mb-socials-item {
+    margin: 0 2px 4px;
+}
+
+.mb-socials.align_right .mb-socials-item {
+    margin: 0 0 4px 4px;
+}
+
+
+.no-touch .mb-socials-item-link:hover {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0) inset, 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mb-socials-item-link:after {
+    font-family: FontAwesome;
+    position: relative;
+    vertical-align: top;
+}
+
+.mb-socials-item-popup {
+    line-height: 28px;
+    bottom: 52px;
+    left: 5px;
+    border-radius: 3px;
+    display: none !important;
+}
+
+.mb-socials-item.facebook .mb-socials-item-link:after {
+    content: '\f09a';
+}
+
+.mb-socials-item.twitter .mb-socials-item-link:after {
+    content: '\f099';
+}
+
+.mb-socials-item.pinterest .mb-socials-item-link:after {
+    content: '\f0d2';
+}
+
+.mb-socials-item.tumblr .mb-socials-item-link:after {
+    content: '\f173';
+}
+
+.mb-socials-item.rss .mb-socials-item-link:after {
+    content: '\f09e';
+}
+
+.mb-socials-item.github .mb-socials-item-link:after {
+    content: '\f09b';
+}

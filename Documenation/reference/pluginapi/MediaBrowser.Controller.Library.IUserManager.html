@@ -1,0 +1,2062 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IUserManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IUserManager
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Library.IUserManager">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Library.IUserManager">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_Library_IUserManager" data-uid="MediaBrowser.Controller.Library.IUserManager" class="text-break">Interface IUserManager
+  </h1>
+  <div class="markdown level0 summary"><p>Interface IUserManager</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Library.html">MediaBrowser.Controller.Library</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_Library_IUserManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IUserManager</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_Users_" data-uid="MediaBrowser.Controller.Library.IUserManager.Users*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_Users" data-uid="MediaBrowser.Controller.Library.IUserManager.Users">Users</h4>
+  <div class="markdown level1 summary"><p>Gets the users.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GetUsers, GetUserList, GetUserIds, GetUserIdList, or GetUserCount to get a list of users based on a filter set. Avoid working with the entire user list all at once.&quot;)]
+User[] Users { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>[]</td>
+        <td><p>The users.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_AddParts_" data-uid="MediaBrowser.Controller.Library.IUserManager.AddParts*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Authentication_IAuthenticationProvider__" data-uid="MediaBrowser.Controller.Library.IUserManager.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Authentication.IAuthenticationProvider})">AddParts(IEnumerable&lt;IAuthenticationProvider&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddParts(IEnumerable&lt;IAuthenticationProvider&gt; authenticationProviders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Authentication.IAuthenticationProvider.html">IAuthenticationProvider</a>&gt;</td>
+        <td><span class="parametername">authenticationProviders</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_AuthenticateUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.AuthenticateUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_AuthenticateUser_System_String_System_String_System_Boolean_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.AuthenticateUser(System.String,System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)">AuthenticateUser(String, String, Boolean, Boolean, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Authenticates the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;User&gt; AuthenticateUser(string username, string password, bool isInLocalNetwork, bool isUserSession, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">username</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isInLocalNetwork</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isUserSession</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_ChangeEasyPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangeEasyPassword*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_ChangeEasyPassword_MediaBrowser_Controller_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangeEasyPassword(MediaBrowser.Controller.Entities.User,System.String)">ChangeEasyPassword(User, String)</h4>
+  <div class="markdown level1 summary"><p>Changes the easy password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ChangeEasyPassword(User user, string newPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_ChangePassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangePassword*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_ChangePassword_MediaBrowser_Controller_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangePassword(MediaBrowser.Controller.Entities.User,System.String)">ChangePassword(User, String)</h4>
+  <div class="markdown level1 summary"><p>Changes the password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ChangePassword(User user, string newPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_CreateUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.CreateUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_CreateUser_System_String_MediaBrowser_Model_Users_UserPolicy_" data-uid="MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String,MediaBrowser.Model.Users.UserPolicy)">CreateUser(String, UserPolicy)</h4>
+  <div class="markdown level1 summary"><p>Creates the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;User&gt; CreateUser(string name, UserPolicy userPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Users.UserPolicy.html">UserPolicy</a></td>
+        <td><span class="parametername">userPolicy</span></td>
+        <td><p>The user policy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;</td>
+        <td><p>User.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_DeleteUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.DeleteUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_DeleteUser_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.DeleteUser(MediaBrowser.Controller.Entities.User)">DeleteUser(User)</h4>
+  <div class="markdown level1 summary"><p>Deletes the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteUser(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>user</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetAuthenticationProviders_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetAuthenticationProviders*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetAuthenticationProviders" data-uid="MediaBrowser.Controller.Library.IUserManager.GetAuthenticationProviders">GetAuthenticationProviders()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NameIdPair[] GetAuthenticationProviders()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.NameIdPair.html">NameIdPair</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetGuid_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetGuid*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetGuid_System_Int64_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetGuid(System.Int64)">GetGuid(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid GetGuid(long id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetGuid_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetGuid*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetGuid_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.IUserManager.GetGuid(System.ReadOnlySpan{System.Char})">GetGuid(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid GetGuid(ReadOnlySpan&lt;char&gt; id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetInternalId_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetInternalId*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetInternalId_System_Guid_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetInternalId(System.Guid)">GetInternalId(Guid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long GetInternalId(Guid id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetInternalId_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetInternalId*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetInternalId_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.IUserManager.GetInternalId(System.ReadOnlySpan{System.Char})">GetInternalId(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long GetInternalId(ReadOnlySpan&lt;char&gt; id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserById_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserById_System_Guid_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById(System.Guid)">GetUserById(Guid)</h4>
+  <div class="markdown level1 summary"><p>Gets a User by Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User GetUserById(Guid id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><p>User.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserById_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserById_System_Int64_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById(System.Int64)">GetUserById(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User GetUserById(long id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserById_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserById_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById(System.ReadOnlySpan{System.Char})">GetUserById(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User GetUserById(ReadOnlySpan&lt;char&gt; id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserById_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserById_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserById(System.String)">GetUserById(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the user by identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User GetUserById(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><p>User.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserByName_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserByName*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserByName_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserByName(System.ReadOnlySpan{System.Char})">GetUserByName(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the user by.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User GetUserByName(ReadOnlySpan&lt;char&gt; name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><p>User.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserConfiguration_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserConfiguration*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserConfiguration_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserConfiguration(MediaBrowser.Controller.Entities.User)">GetUserConfiguration(User)</h4>
+  <div class="markdown level1 summary"><p>Gets the user configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UserConfiguration GetUserConfiguration(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.UserConfiguration.html">UserConfiguration</a></td>
+        <td><p>UserConfiguration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserCount_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserCount*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserCount_MediaBrowser_Model_Querying_UserQuery_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserCount(MediaBrowser.Model.Querying.UserQuery)">GetUserCount(UserQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetUserCount(UserQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.UserQuery.html">UserQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto(MediaBrowser.Controller.Entities.User,System.Boolean)">GetUserDto(User, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the user dto.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UserDto GetUserDto(User user, bool isInLocalNetwork = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isInLocalNetwork</span></td>
+        <td><p>if set to <code>true</code> [is in local network].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a></td>
+        <td><p>UserDto.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto(MediaBrowser.Controller.Entities.User,System.Boolean,System.Boolean)">GetUserDto(User, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UserDto GetUserDto(User user, bool isAuthenticated, bool isInLocalNetwork = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isAuthenticated</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isInLocalNetwork</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserIdList_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserIdList*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserIdList_MediaBrowser_Model_Querying_UserQuery_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserIdList(MediaBrowser.Model.Querying.UserQuery)">GetUserIdList(UserQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long[] GetUserIdList(UserQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.UserQuery.html">UserQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserIds_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserIds*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserIds_MediaBrowser_Model_Querying_UserQuery_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserIds(MediaBrowser.Model.Querying.UserQuery)">GetUserIds(UserQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;long&gt; GetUserIds(UserQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.UserQuery.html">UserQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserList_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserList*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserList_MediaBrowser_Model_Querying_UserQuery_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserList(MediaBrowser.Model.Querying.UserQuery)">GetUserList(UserQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User[] GetUserList(UserQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.UserQuery.html">UserQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUserPolicy_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserPolicy*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserPolicy_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserPolicy(MediaBrowser.Controller.Entities.User)">GetUserPolicy(User)</h4>
+  <div class="markdown level1 summary"><p>Gets the user policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UserPolicy GetUserPolicy(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Users.UserPolicy.html">UserPolicy</a></td>
+        <td><p>UserPolicy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_GetUsers_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUsers*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUsers_MediaBrowser_Model_Querying_UserQuery_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUsers(MediaBrowser.Model.Querying.UserQuery)">GetUsers(UserQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;User&gt; GetUsers(UserQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.UserQuery.html">UserQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_MakeValidUsername_" data-uid="MediaBrowser.Controller.Library.IUserManager.MakeValidUsername*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_MakeValidUsername_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.MakeValidUsername(System.String)">MakeValidUsername(String)</h4>
+  <div class="markdown level1 summary"><p>Makes the valid username.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string MakeValidUsername(string username)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">username</span></td>
+        <td><p>The username.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)">RedeemPasswordResetPin(String)</h4>
+  <div class="markdown level1 summary"><p>Redeems the password reset pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PinRedeemResult&gt; RedeemPasswordResetPin(string pin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">pin</span></td>
+        <td><p>The pin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Users.PinRedeemResult.html">PinRedeemResult</a>&gt;</td>
+        <td><p><code>true</code> if XXXX, <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_RefreshUsersMetadata_" data-uid="MediaBrowser.Controller.Library.IUserManager.RefreshUsersMetadata*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_RefreshUsersMetadata_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.RefreshUsersMetadata(System.Threading.CancellationToken)">RefreshUsersMetadata(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Refreshes metadata for each user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task RefreshUsersMetadata(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_RenameUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.RenameUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_RenameUser_MediaBrowser_Controller_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.RenameUser(MediaBrowser.Controller.Entities.User,System.String)">RenameUser(User, String)</h4>
+  <div class="markdown level1 summary"><p>Renames the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task RenameUser(User user, string newName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The new name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>user</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_ResetEasyPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetEasyPassword*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_ResetEasyPassword_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetEasyPassword(MediaBrowser.Controller.Entities.User)">ResetEasyPassword(User)</h4>
+  <div class="markdown level1 summary"><p>Resets the easy password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ResetEasyPassword(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_ResetPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetPassword*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_ResetPassword_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetPassword(MediaBrowser.Controller.Entities.User)">ResetPassword(User)</h4>
+  <div class="markdown level1 summary"><p>Resets the password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ResetPassword(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_" data-uid="MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess(System.String,System.Boolean)">StartForgotPasswordProcess(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Starts the forgot password process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ForgotPasswordResult&gt; StartForgotPasswordProcess(string enteredUsername, bool isInNetwork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">enteredUsername</span></td>
+        <td><p>The entered username.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isInNetwork</span></td>
+        <td><p>if set to <code>true</code> [is in network].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Users.ForgotPasswordResult.html">ForgotPasswordResult</a>&gt;</td>
+        <td><p>ForgotPasswordResult.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_UpdateConfiguration_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateConfiguration*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateConfiguration_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Configuration_UserConfiguration_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateConfiguration(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Configuration.UserConfiguration)">UpdateConfiguration(User, UserConfiguration)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateConfiguration(User user, UserConfiguration newConfiguration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.UserConfiguration.html">UserConfiguration</a></td>
+        <td><span class="parametername">newConfiguration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_UpdateConfiguration_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateConfiguration*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateConfiguration_System_Int64_MediaBrowser_Model_Configuration_UserConfiguration_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateConfiguration(System.Int64,MediaBrowser.Model.Configuration.UserConfiguration)">UpdateConfiguration(Int64, UserConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Updates the configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateConfiguration(long userId, UserConfiguration newConfiguration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The user identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.UserConfiguration.html">UserConfiguration</a></td>
+        <td><span class="parametername">newConfiguration</span></td>
+        <td><p>The new configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_UpdateUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateUser_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUser(MediaBrowser.Controller.Entities.User)">UpdateUser(User)</h4>
+  <div class="markdown level1 summary"><p>Updates the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateUser(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>user</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_UpdateUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateUser_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUser(MediaBrowser.Controller.Entities.User,System.Boolean)">UpdateUser(User, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateUser(User user, bool triggerEvent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">triggerEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_UpdateUserPolicy_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUserPolicy*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateUserPolicy_System_Int64_MediaBrowser_Model_Users_UserPolicy_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUserPolicy(System.Int64,MediaBrowser.Model.Users.UserPolicy)">UpdateUserPolicy(Int64, UserPolicy)</h4>
+  <div class="markdown level1 summary"><p>Updates the user policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateUserPolicy(long userId, UserPolicy userPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The user identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Users.UserPolicy.html">UserPolicy</a></td>
+        <td><span class="parametername">userPolicy</span></td>
+        <td><p>The user policy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UserConfigurationUpdated" data-uid="MediaBrowser.Controller.Library.IUserManager.UserConfigurationUpdated">UserConfigurationUpdated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;User&gt;&gt; UserConfigurationUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UserCreated" data-uid="MediaBrowser.Controller.Library.IUserManager.UserCreated">UserCreated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;User&gt;&gt; UserCreated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UserDeleted" data-uid="MediaBrowser.Controller.Library.IUserManager.UserDeleted">UserDeleted</h4>
+  <div class="markdown level1 summary"><p>Occurs when [user deleted].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;User&gt;&gt; UserDeleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UserLockedOut" data-uid="MediaBrowser.Controller.Library.IUserManager.UserLockedOut">UserLockedOut</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;User&gt;&gt; UserLockedOut</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UserPasswordChanged" data-uid="MediaBrowser.Controller.Library.IUserManager.UserPasswordChanged">UserPasswordChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;User&gt;&gt; UserPasswordChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UserPolicyUpdated" data-uid="MediaBrowser.Controller.Library.IUserManager.UserPolicyUpdated">UserPolicyUpdated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;User&gt;&gt; UserPolicyUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UserUpdated" data-uid="MediaBrowser.Controller.Library.IUserManager.UserUpdated">UserUpdated</h4>
+  <div class="markdown level1 summary"><p>Occurs when [user updated].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;User&gt;&gt; UserUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

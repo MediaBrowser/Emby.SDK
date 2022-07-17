@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Movie Library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Movie Library ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="doc-restapi-Movie-Library">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-restapi-Movie-Library">
+<h1 id="movie-library">Movie Library</h1>
+
+<p>The <strong>recommended</strong> structure is to put each movie in it's own folder.</p>
+<pre>/Movies
+   /Home Alone (1990)
+      Home Alone.avi
+
+   /The Dark Knight (2008)
+      The Dark Side.mkv</pre>
+<p>It is also possible to store movies together in one folder.</p>
+<pre>/Movies
+    Home Alone (1990).avi
+    Casino Royale (2006).mkv
+</pre>
+<h4 id="isos-dvds-and-blu-ray-rips">ISO's, Dvd's and Blu-ray rips</h4>
+<p>Examples:</p>
+<pre>/Movies
+   /Home Alone (1990)
+      Home Alone.iso
+
+   /The Dark Knight (2008)
+      The Dark Side.img
+</pre>
+<pre>/Movies
+   /Home Alone (1990)
+     /VIDEO_TS
+
+   /The Dark Knight (2008)
+     /BDMV
+</pre>
+<h4 id="multi-file-and-multi-disc-movies">Multi-file and multi-disc movies</h4>
+<p>Multi-file and multi-disc movies are supported. The movie must have it's own folder containing all parts of the movie. Additionally, each video file or folder must be suffixed using one of the following conventions:</p>
+<ul>
+<li>cdX</li>
+<li>discX</li>
+<li>diskX</li>
+<li>dvdX</li>
+<li>partX</li>
+<li>ptX</li>
+</ul>
+<p>Where X is the part number. Spaces are allowed before the number, for example, &quot;part 7&quot; is accepted. Here is a complete example of a multi-file movie:</p>
+<pre>
+/Movies
+   /Home Alone (1990)
+      Home Alone - part1.mkv
+      Home Alone - part2.mkv
+      Home Alone - part3.mkv
+
+</pre>
+<p>Multi-disc movie:</p>
+<pre>
+/Movies
+   /Home Alone (1990)
+      /Home Alone Disc 1
+          /VIDEO_TS
+      /Home Alone Disc 2
+          /VIDEO_TS
+
+   /Rocky (1976)
+      /Rocky Disc 1
+          /BDMV
+      /Rocky Disc 2
+          /BDMV
+
+</pre>
+<p>Please note that at this time, each part will have to be played individually. Displayed metadata will be based on information from the first part, and the additional parts will be made playable through a menu.</p>
+<h4 id="box-sets">Box Sets</h4>
+<p>Movies can be grouped together into box sets.</p>
+<pre>/Movies
+   /Lord of the Rings[boxset]
+      /The Lord of the Rings - The Fellowship of The Ring
+      /The Lord of the Rings - The Two Towers
+      /The Lord of the Rings - The Return of The King
+</pre>
+<p>In order to be detected as a boxset, the folder must have [boxset] within the name, or a collection.xml metadata file within it.</p>
+<p>In addition to movies within the boxset folder, movies can also be added from elsewhere in the library using shortcut files (.lnk). Simply place a shortcut file that points to the movie folder within the boxset folder. <strong>The path being pointed to from the shortcut must also exist in the library, using exactly the same path</strong>. It is simply a link to a pre-existing library item.</p>
+<p><strong>Shortcut example</strong>:</p>
+<pre>
+/Movies
+   /Home Alone (1990)
+     /Home Alone (1990).mkv
+
+/Boxsets
+   /Home Alone Collection [boxset]
+     /homealone.lnk (points to /Home Alone (1990) folder)
+</pre>
+<p>If Home Alone was added to the library as \my-server\movies\Home Alone (1990), then <strong>the path contained in the shortcut must point to</strong> \my-server\movies\Home Alone (1990), and not D:\Movies\Home Alone (1990)</p>
+<h4 id="special-features">Special Features</h4>
+<p>Special features for movies can be stored in a specials folder under movie folders. <strong>Nested folders are not supported</strong>.</p>
+<pre>/Movies
+   /Home Alone (1990)
+     /Home Alone (1990).mkv
+     /specials
+         deleted-scenes.mkv
+</pre>
+<h4 id="3d-videos">3D Videos</h4>
+<p>Any video can be marked as 3D by placing one of the following tags within the filename:</p>
+<ul>
+<li>[fsbs] - Full side by side</li>
+<li>[ftab] - Full top and bottom</li>
+<li>[hsbs] - Half side by side</li>
+<li>[htab] - Half top and bottom</li>
+</ul>
+<p>This will indicate the 3D format, which will be needed when streaming video and extracting images. The MB2 conventions of [3d] and [sbs3d] are still supported and will default to HSBS.</p>
+<p>Alternatively this can be done by editing metadata within the server dashboard.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

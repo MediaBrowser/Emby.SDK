@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>deleteSyncJobsById </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="deleteSyncJobsById ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/deleteSyncJobsById">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/deleteSyncJobsById">
+<div class="refdoc">
+
+<h1 id="emby_restapi_deleteSyncJobsById" data-uid="emby.restapi/deleteSyncJobsById" class="text-capitalize text-break">deleteSyncJobsById</h1>
+<div class="markdown level0 summary"><p>Cancels a sync job.</p>
+</div>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
+</div>
+
+
+
+
+  
+  
+  
+   <h3 id="emby_restapi_deleteSyncJobsById_operation" data-uid="emby.restapi/deleteSyncJobsById/operation" style="display:none;" class="text-capitalize">deleteSyncJobsById</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Sync/Jobs/{Id}</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>In</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*Id</span></td>
+        <td>path</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Operation successful. Empty response.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1831 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MediaStream
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MediaStream
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Entities.MediaStream">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Entities.MediaStream">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_Entities_MediaStream" data-uid="MediaBrowser.Model.Entities.MediaStream" class="text-break">Class MediaStream
+  </h1>
+  <div class="markdown level0 summary"><p>Class MediaStream</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">MediaStream</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Entities.html">MediaBrowser.Model.Entities</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MediaStream</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_AspectRatio_" data-uid="MediaBrowser.Model.Entities.MediaStream.AspectRatio*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_AspectRatio" data-uid="MediaBrowser.Model.Entities.MediaStream.AspectRatio">AspectRatio</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the aspect ratio.</p>
+<p>Probe Field: <code>display_aspect_ratio</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.
+<br>Actual type: <span class="xref">Emby.Media.Model.Types.Rational</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AspectRatio { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The aspect ratio as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_AttachmentSize_" data-uid="MediaBrowser.Model.Entities.MediaStream.AttachmentSize*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_AttachmentSize" data-uid="MediaBrowser.Model.Entities.MediaStream.AttachmentSize">AttachmentSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the size of the attachment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AttachmentSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The size of the attachment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_AverageFrameRate_" data-uid="MediaBrowser.Model.Entities.MediaStream.AverageFrameRate*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_AverageFrameRate" data-uid="MediaBrowser.Model.Entities.MediaStream.AverageFrameRate">AverageFrameRate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the average frame rate..</p>
+<p>Probe Field: <code>avg_frame_rate</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.
+<br>Actual type: <span class="xref">Emby.Media.Model.Types.Rational</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? AverageFrameRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><p>The average frame rate as float.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_BitDepth_" data-uid="MediaBrowser.Model.Entities.MediaStream.BitDepth*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_BitDepth" data-uid="MediaBrowser.Model.Entities.MediaStream.BitDepth">BitDepth</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the bit depth.</p>
+<p>Probe Field: <code>bits_per_sample</code> or <code>bits_per_raw_sample</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? BitDepth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The bit depth.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_BitRate_" data-uid="MediaBrowser.Model.Entities.MediaStream.BitRate*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_BitRate" data-uid="MediaBrowser.Model.Entities.MediaStream.BitRate">BitRate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the bit rate.</p>
+<p>Probe Field: <code>bit_rate</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? BitRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The bit rate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_BitRate_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS!</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_ChannelLayout_" data-uid="MediaBrowser.Model.Entities.MediaStream.ChannelLayout*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_ChannelLayout" data-uid="MediaBrowser.Model.Entities.MediaStream.ChannelLayout">ChannelLayout</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the channel layout.</p>
+<p>Probe Field: <code>channel_layout</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>
+<br>Related Enum: <a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_ChannelLayout">ChannelLayout</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChannelLayout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The channel layout string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Channels_" data-uid="MediaBrowser.Model.Entities.MediaStream.Channels*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Channels" data-uid="MediaBrowser.Model.Entities.MediaStream.Channels">Channels</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the audio channel count.</p>
+<p>Probe Field: <code>channels</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Channels { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The audio channel count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Codec_" data-uid="MediaBrowser.Model.Entities.MediaStream.Codec*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Codec" data-uid="MediaBrowser.Model.Entities.MediaStream.Codec">Codec</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the codec.</p>
+<p>Probe Field: <code>codec_name</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>
+<br>Related Enums: <span class="xref">T:Emby.Media.Model.Enums.VideoMediaTypes</span>, <span class="xref">Emby.Media.Model.Enums.AudioMediaTypes</span>, <span class="xref">Emby.Media.Model.Enums.SubtitleMediaTypes</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Codec { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The codec tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_CodecTag_" data-uid="MediaBrowser.Model.Entities.MediaStream.CodecTag*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_CodecTag" data-uid="MediaBrowser.Model.Entities.MediaStream.CodecTag">CodecTag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the codec tag.</p>
+<p>Probe Field: <code>codec_tag</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CodecTag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The codec tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_CodecTimeBase_" data-uid="MediaBrowser.Model.Entities.MediaStream.CodecTimeBase*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_CodecTimeBase" data-uid="MediaBrowser.Model.Entities.MediaStream.CodecTimeBase">CodecTimeBase</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the codec time-base.</p>
+<p>Probe Field: <code>codec_time_base</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.
+<br>Actual type: <span class="xref">Emby.Media.Model.Types.Rational</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CodecTimeBase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The codec time-base as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_ColorPrimaries_" data-uid="MediaBrowser.Model.Entities.MediaStream.ColorPrimaries*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_ColorPrimaries" data-uid="MediaBrowser.Model.Entities.MediaStream.ColorPrimaries">ColorPrimaries</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the chromaticity coordinates of the source primaries.</p>
+<p>Probe Field: <code>color_primaries</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>
+<br>Related Enum: <span class="xref">Emby.Media.Model.Enums.ColorPrimaries</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ColorPrimaries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The chromaticity coordinates of the source primaries as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_ColorSpace_" data-uid="MediaBrowser.Model.Entities.MediaStream.ColorSpace*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_ColorSpace" data-uid="MediaBrowser.Model.Entities.MediaStream.ColorSpace">ColorSpace</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the YUV colorspace type.</p>
+<p>Probe Field: <code>color_space</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>
+<br>Related Enum: <span class="xref">Emby.Media.Model.Enums.ColorSpaces</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ColorSpace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The YUV colorspace type as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_ColorTransfer_" data-uid="MediaBrowser.Model.Entities.MediaStream.ColorTransfer*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_ColorTransfer" data-uid="MediaBrowser.Model.Entities.MediaStream.ColorTransfer">ColorTransfer</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the color transfer characteristics.</p>
+<p>Probe Field: <code>color_transfer</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>
+<br>Related Enum: <span class="xref">Emby.Media.Model.Enums.ColorTransfers</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ColorTransfer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The color transfer characteristics value as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Comment_" data-uid="MediaBrowser.Model.Entities.MediaStream.Comment*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Comment" data-uid="MediaBrowser.Model.Entities.MediaStream.Comment">Comment</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the comment.</p>
+<p>Probe Field: <code>tags[&quot;comment&quot;]</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Comment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The comment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_DeliveryMethod_" data-uid="MediaBrowser.Model.Entities.MediaStream.DeliveryMethod*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_DeliveryMethod" data-uid="MediaBrowser.Model.Entities.MediaStream.DeliveryMethod">DeliveryMethod</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SubtitleDeliveryMethod? DeliveryMethod { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dlna.SubtitleDeliveryMethod.html">SubtitleDeliveryMethod</a>&gt;</td>
+        <td><p>The method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_DeliveryMethod_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Custom property set by the application.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_DeliveryUrl_" data-uid="MediaBrowser.Model.Entities.MediaStream.DeliveryUrl*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_DeliveryUrl" data-uid="MediaBrowser.Model.Entities.MediaStream.DeliveryUrl">DeliveryUrl</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the delivery URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DeliveryUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The delivery URL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_DeliveryUrl_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Custom property set by the application.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_DisplayLanguage_" data-uid="MediaBrowser.Model.Entities.MediaStream.DisplayLanguage*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_DisplayLanguage" data-uid="MediaBrowser.Model.Entities.MediaStream.DisplayLanguage">DisplayLanguage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the display language.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayLanguage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The display language.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_DisplayLanguage_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Custom property set by the application.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_DisplayTitle_" data-uid="MediaBrowser.Model.Entities.MediaStream.DisplayTitle*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_DisplayTitle" data-uid="MediaBrowser.Model.Entities.MediaStream.DisplayTitle">DisplayTitle</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the display title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The display title.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_DisplayTitle_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Custom property set by the application.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Extradata_" data-uid="MediaBrowser.Model.Entities.MediaStream.Extradata*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Extradata" data-uid="MediaBrowser.Model.Entities.MediaStream.Extradata">Extradata</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the extradata.</p>
+<p>Probe Field: <code>extradata</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Extradata { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The codec extradata as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_Extradata_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Currently, this value is only parsed for subtitle streams with codec <span class="xref">Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext</span>.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Height_" data-uid="MediaBrowser.Model.Entities.MediaStream.Height*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Height" data-uid="MediaBrowser.Model.Entities.MediaStream.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the height.</p>
+<p>Probe Field: <code>height</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Index_" data-uid="MediaBrowser.Model.Entities.MediaStream.Index*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Index" data-uid="MediaBrowser.Model.Entities.MediaStream.Index">Index</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the index of the stream inside its container.</p>
+<p>Probe Field: <code>index</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Index { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The index of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsAnamorphic_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsAnamorphic*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsAnamorphic" data-uid="MediaBrowser.Model.Entities.MediaStream.IsAnamorphic">IsAnamorphic</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is anamorphic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsAnamorphic { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is anamorphic; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsAVC_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsAVC*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsAVC" data-uid="MediaBrowser.Model.Entities.MediaStream.IsAVC">IsAVC</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the IsAVC property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public bool? IsAVC { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>The IsAVC property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_IsAVC_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is redundant. AVC means H264 codec.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsClosedCaptions_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsClosedCaptions*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsClosedCaptions" data-uid="MediaBrowser.Model.Entities.MediaStream.IsClosedCaptions">IsClosedCaptions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public bool IsClosedCaptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsDefault_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsDefault*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsDefault" data-uid="MediaBrowser.Model.Entities.MediaStream.IsDefault">IsDefault</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is default.</p>
+<p>Probe Field: <code>disposition[&quot;default&quot;]</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDefault { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is default; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsExternal_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsExternal*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsExternal" data-uid="MediaBrowser.Model.Entities.MediaStream.IsExternal">IsExternal</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is external.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExternal { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is external; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_IsExternal_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Custom property set by the application.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsExternalUrl_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsExternalUrl*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsExternalUrl" data-uid="MediaBrowser.Model.Entities.MediaStream.IsExternalUrl">IsExternalUrl</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is external URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsExternalUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>null</code> if [is external URL] contains no value, <code>true</code> if [is external URL]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Entities_MediaStream_IsExternalUrl_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Custom property set by the application.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsForced_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsForced*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsForced" data-uid="MediaBrowser.Model.Entities.MediaStream.IsForced">IsForced</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is forced.</p>
+<p>Probe Field: <code>disposition[&quot;forced&quot;]</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsForced { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is forced; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsInterlaced_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsInterlaced*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsInterlaced" data-uid="MediaBrowser.Model.Entities.MediaStream.IsInterlaced">IsInterlaced</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is interlaced.</p>
+<p>Probe Field: <code>field_order</code> != <code>progressive</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInterlaced { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is interlaced; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsTextSubtitleStream_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsTextSubtitleStream*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsTextSubtitleStream" data-uid="MediaBrowser.Model.Entities.MediaStream.IsTextSubtitleStream">IsTextSubtitleStream</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTextSubtitleStream { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_ItemId_" data-uid="MediaBrowser.Model.Entities.MediaStream.ItemId*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_ItemId" data-uid="MediaBrowser.Model.Entities.MediaStream.ItemId">ItemId</h4>
+  <div class="markdown level1 summary"><p>Used only by our Windows app. Not used by Emby Server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ItemId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Language_" data-uid="MediaBrowser.Model.Entities.MediaStream.Language*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Language" data-uid="MediaBrowser.Model.Entities.MediaStream.Language">Language</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the language.</p>
+<p>Probe Field: <code>tags[&quot;language&quot;]</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Language { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The language.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Level_" data-uid="MediaBrowser.Model.Entities.MediaStream.Level*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Level" data-uid="MediaBrowser.Model.Entities.MediaStream.Level">Level</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the codec level.</p>
+<p>Probe Field: <code>level</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>
+<br>Related Enums: <span class="xref">Emby.Media.Model.Enums.AvcLevels</span>, <span class="xref">Emby.Media.Model.Enums.H263Levels</span>, <span class="xref">Emby.Media.Model.Enums.HevcLevels</span>, <span class="xref">Emby.Media.Model.Enums.Mpeg2Levels</span>,
+<span class="xref">Emby.Media.Model.Enums.Vc1Levels</span>, <span class="xref">Emby.Media.Model.Enums.Mpeg4Levels</span>, <span class="xref">Emby.Media.Model.Enums.Vp8Levels</span>, <span class="xref">Emby.Media.Model.Enums.Vp9Levels</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? Level { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><p>The codec level as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_MimeType_" data-uid="MediaBrowser.Model.Entities.MediaStream.MimeType*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_MimeType" data-uid="MediaBrowser.Model.Entities.MediaStream.MimeType">MimeType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type of the MIME.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MimeType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The type of the MIME.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_NalLengthSize_" data-uid="MediaBrowser.Model.Entities.MediaStream.NalLengthSize*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_NalLengthSize" data-uid="MediaBrowser.Model.Entities.MediaStream.NalLengthSize">NalLengthSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the nal length size.</p>
+<p>Probe Field: <code>nal_length_size</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a> of type <span class="xref">Emby.Media.Model.Enums.VideoMediaTypes.h264</span>.
+<br>Actual type: <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NalLengthSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The nal length size as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Path_" data-uid="MediaBrowser.Model.Entities.MediaStream.Path*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Path" data-uid="MediaBrowser.Model.Entities.MediaStream.Path">Path</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the filename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The filename.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_PixelFormat_" data-uid="MediaBrowser.Model.Entities.MediaStream.PixelFormat*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_PixelFormat" data-uid="MediaBrowser.Model.Entities.MediaStream.PixelFormat">PixelFormat</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the pixel format.</p>
+<p>Probe Field: <code>pix_fmt</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.
+<br>Actual type: <a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_PixelFormat">PixelFormat</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PixelFormat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The pixel format as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Profile_" data-uid="MediaBrowser.Model.Entities.MediaStream.Profile*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Profile" data-uid="MediaBrowser.Model.Entities.MediaStream.Profile">Profile</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the profile.</p>
+<p>Probe Field: <code>profile</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>
+<br>Related Enums: <span class="xref">Emby.Media.Model.Enums.AacProfiles</span>, <span class="xref">Emby.Media.Model.Enums.AvcProfiles</span>, <span class="xref">Emby.Media.Model.Enums.H263Profiles</span>, <span class="xref">Emby.Media.Model.Enums.HevcProfiles</span>, <span class="xref">Emby.Media.Model.Enums.Mpeg2Profiles</span>,
+<span class="xref">Emby.Media.Model.Enums.Vc1Profiles</span>, <span class="xref">Emby.Media.Model.Enums.Mpeg4Profiles</span>, <span class="xref">Emby.Media.Model.Enums.Vp8Profiles</span>, <span class="xref">Emby.Media.Model.Enums.Vp9Profiles</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Profile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The profile as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Protocol_" data-uid="MediaBrowser.Model.Entities.MediaStream.Protocol*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Protocol" data-uid="MediaBrowser.Model.Entities.MediaStream.Protocol">Protocol</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaProtocol Protocol { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_RealFrameRate_" data-uid="MediaBrowser.Model.Entities.MediaStream.RealFrameRate*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_RealFrameRate" data-uid="MediaBrowser.Model.Entities.MediaStream.RealFrameRate">RealFrameRate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the real frame rate..</p>
+<p>Probe Field: <code>r_frame_rate</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.
+<br>Actual type: <span class="xref">Emby.Media.Model.Types.Rational</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? RealFrameRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><p>The real frame rate as float.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_RefFrames_" data-uid="MediaBrowser.Model.Entities.MediaStream.RefFrames*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_RefFrames" data-uid="MediaBrowser.Model.Entities.MediaStream.RefFrames">RefFrames</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the reference frames.</p>
+<p>Probe Field: <code>refs</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? RefFrames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The reference frames.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Rotation_" data-uid="MediaBrowser.Model.Entities.MediaStream.Rotation*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Rotation" data-uid="MediaBrowser.Model.Entities.MediaStream.Rotation">Rotation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Rotation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_SampleRate_" data-uid="MediaBrowser.Model.Entities.MediaStream.SampleRate*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_SampleRate" data-uid="MediaBrowser.Model.Entities.MediaStream.SampleRate">SampleRate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the sample rate.</p>
+<p>Probe Field: <code>sample_rate</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>
+<br>Related Enum: <span class="xref">Emby.Media.Model.Enums.SampleRates</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SampleRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The sample rate as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_ServerId_" data-uid="MediaBrowser.Model.Entities.MediaStream.ServerId*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_ServerId" data-uid="MediaBrowser.Model.Entities.MediaStream.ServerId">ServerId</h4>
+  <div class="markdown level1 summary"><p>Used only by our Windows app. Not used by Emby Server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServerId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_StreamStartTimeTicks_" data-uid="MediaBrowser.Model.Entities.MediaStream.StreamStartTimeTicks*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_StreamStartTimeTicks" data-uid="MediaBrowser.Model.Entities.MediaStream.StreamStartTimeTicks">StreamStartTimeTicks</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the start time of the stream.</p>
+<p>Probe Field: <code>start_time</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.
+<br>Actual type: <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? StreamStartTimeTicks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><p>The start time of the stream as ticks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_SubtitleLocationType_" data-uid="MediaBrowser.Model.Entities.MediaStream.SubtitleLocationType*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_SubtitleLocationType" data-uid="MediaBrowser.Model.Entities.MediaStream.SubtitleLocationType">SubtitleLocationType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SubtitleLocationType? SubtitleLocationType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.SubtitleLocationType.html">SubtitleLocationType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_SupportsExternalStream_" data-uid="MediaBrowser.Model.Entities.MediaStream.SupportsExternalStream*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_SupportsExternalStream" data-uid="MediaBrowser.Model.Entities.MediaStream.SupportsExternalStream">SupportsExternalStream</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [supports external stream].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SupportsExternalStream { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [supports external stream]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_TimeBase_" data-uid="MediaBrowser.Model.Entities.MediaStream.TimeBase*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_TimeBase" data-uid="MediaBrowser.Model.Entities.MediaStream.TimeBase">TimeBase</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the time-base.</p>
+<p>Probe Field: <code>time_base</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.
+<br>Actual type: <span class="xref">Emby.Media.Model.Types.Rational</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TimeBase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The time-base as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Title_" data-uid="MediaBrowser.Model.Entities.MediaStream.Title*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Title" data-uid="MediaBrowser.Model.Entities.MediaStream.Title">Title</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the title.</p>
+<p>Probe Field: <code>tags[&quot;title&quot;]</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The title.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Type_" data-uid="MediaBrowser.Model.Entities.MediaStream.Type*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Type" data-uid="MediaBrowser.Model.Entities.MediaStream.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the stream type.</p>
+<p>Probe Field: <code>codec_type</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Audio">Audio</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Subtitle">Subtitle</a>, <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Attachment">Attachment</a>
+<br>Related Enums: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html">MediaStreamType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaStreamType Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html">MediaStreamType</a></td>
+        <td><p>The stream type as string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_VideoRange_" data-uid="MediaBrowser.Model.Entities.MediaStream.VideoRange*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_VideoRange" data-uid="MediaBrowser.Model.Entities.MediaStream.VideoRange">VideoRange</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VideoRange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_Width_" data-uid="MediaBrowser.Model.Entities.MediaStream.Width*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_Width" data-uid="MediaBrowser.Model.Entities.MediaStream.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the width.</p>
+<p>Probe Field: <code>width</code>
+<br>Applies to: <a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html#MediaBrowser_Model_Entities_MediaStreamType_Video">Video</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The width.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsTextFormat_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsTextFormat*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsTextFormat_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.Entities.MediaStream.IsTextFormat(System.ReadOnlySpan{System.Char})">IsTextFormat(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsTextFormat(ReadOnlySpan&lt;char&gt; codec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">codec</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_IsTextFormat_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsTextFormat*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_IsTextFormat_System_String_" data-uid="MediaBrowser.Model.Entities.MediaStream.IsTextFormat(System.String)">IsTextFormat(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsTextFormat(string codec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">codec</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Entities_MediaStream_ToString_" data-uid="MediaBrowser.Model.Entities.MediaStream.ToString*"></a>
+  <h4 id="MediaBrowser_Model_Entities_MediaStream_ToString" data-uid="MediaBrowser.Model.Entities.MediaStream.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A string that represents the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a></div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1219 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IServerApplicationHost
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IServerApplicationHost
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.IServerApplicationHost">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.IServerApplicationHost">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_IServerApplicationHost" data-uid="MediaBrowser.Controller.IServerApplicationHost" class="text-break">Interface IServerApplicationHost
+  </h1>
+  <div class="markdown level0 summary"><p>Interface IServerApplicationHost</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_OperatingSystemDisplayName">IApplicationHost.OperatingSystemDisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_Name">IApplicationHost.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_SystemId">IApplicationHost.SystemId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_ApplicationUpdated">IApplicationHost.ApplicationUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_HasPendingRestart">IApplicationHost.HasPendingRestart</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_IsShuttingDown">IApplicationHost.IsShuttingDown</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_IsStartupComplete">IApplicationHost.IsStartupComplete</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_CanSelfRestart">IApplicationHost.CanSelfRestart</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_HasPendingRestartChanged">IApplicationHost.HasPendingRestartChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_NotifyPendingRestart">IApplicationHost.NotifyPendingRestart()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_Restart">IApplicationHost.Restart()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_ApplicationVersion">IApplicationHost.ApplicationVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_CanSelfUpdate">IApplicationHost.CanSelfUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_GetExports__1_System_Boolean_">IApplicationHost.GetExports&lt;T&gt;(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_CheckForApplicationUpdate_System_Threading_CancellationToken_System_IProgress_System_Double__">IApplicationHost.CheckForApplicationUpdate(CancellationToken, IProgress&lt;Double&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_UpdateApplication_MediaBrowser_Model_Updates_PackageVersionInfo_System_Threading_CancellationToken_System_IProgress_System_Double__">IApplicationHost.UpdateApplication(PackageVersionInfo, CancellationToken, IProgress&lt;Double&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_Resolve__1">IApplicationHost.Resolve&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_TryResolve__1">IApplicationHost.TryResolve&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_Shutdown">IApplicationHost.Shutdown()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_Plugins">IApplicationHost.Plugins</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_RemovePlugin_MediaBrowser_Common_Plugins_IPlugin_">IApplicationHost.RemovePlugin(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_Init">IApplicationHost.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_CreateInstance_System_Type_">IApplicationHost.CreateInstance(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_SystemUpdateLevel">IApplicationHost.SystemUpdateLevel</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html#MediaBrowser_Common_IApplicationHost_ContainsStartupOption_System_String_">IApplicationHost.ContainsStartupOption(String)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.html">MediaBrowser.Controller</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_IServerApplicationHost_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IServerApplicationHost : IApplicationHost</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_CanLaunchWebBrowser_" data-uid="MediaBrowser.Controller.IServerApplicationHost.CanLaunchWebBrowser*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_CanLaunchWebBrowser" data-uid="MediaBrowser.Controller.IServerApplicationHost.CanLaunchWebBrowser">CanLaunchWebBrowser</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanLaunchWebBrowser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_CodecProviders_" data-uid="MediaBrowser.Controller.IServerApplicationHost.CodecProviders*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_CodecProviders" data-uid="MediaBrowser.Controller.IServerApplicationHost.CodecProviders">CodecProviders</h4>
+  <div class="markdown level1 summary"><p>Gets the codec providers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICodecProvider[] CodecProviders { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Codecs.ICodecProvider.html">ICodecProvider</a>[]</td>
+        <td><p>The codec providers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_EnableHttps_" data-uid="MediaBrowser.Controller.IServerApplicationHost.EnableHttps*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_EnableHttps" data-uid="MediaBrowser.Controller.IServerApplicationHost.EnableHttps">EnableHttps</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether [supports HTTPS].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool EnableHttps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [supports HTTPS]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_FriendlyName_" data-uid="MediaBrowser.Controller.IServerApplicationHost.FriendlyName*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_FriendlyName" data-uid="MediaBrowser.Controller.IServerApplicationHost.FriendlyName">FriendlyName</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the friendly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string FriendlyName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of the friendly.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_HardwareAccelerationRequiresPremiere_" data-uid="MediaBrowser.Controller.IServerApplicationHost.HardwareAccelerationRequiresPremiere*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_HardwareAccelerationRequiresPremiere" data-uid="MediaBrowser.Controller.IServerApplicationHost.HardwareAccelerationRequiresPremiere">HardwareAccelerationRequiresPremiere</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HardwareAccelerationRequiresPremiere { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_HasUpdateAvailable_" data-uid="MediaBrowser.Controller.IServerApplicationHost.HasUpdateAvailable*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_HasUpdateAvailable" data-uid="MediaBrowser.Controller.IServerApplicationHost.HasUpdateAvailable">HasUpdateAvailable</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance has update available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasUpdateAvailable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance has update available; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_HttpPort_" data-uid="MediaBrowser.Controller.IServerApplicationHost.HttpPort*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_HttpPort" data-uid="MediaBrowser.Controller.IServerApplicationHost.HttpPort">HttpPort</h4>
+  <div class="markdown level1 summary"><p>Gets the HTTP server port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int HttpPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The HTTP server port.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_HttpsPort_" data-uid="MediaBrowser.Controller.IServerApplicationHost.HttpsPort*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_HttpsPort" data-uid="MediaBrowser.Controller.IServerApplicationHost.HttpsPort">HttpsPort</h4>
+  <div class="markdown level1 summary"><p>Gets the HTTPS port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int HttpsPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The HTTPS port.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_PluginConfigurationPages_" data-uid="MediaBrowser.Controller.IServerApplicationHost.PluginConfigurationPages*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_PluginConfigurationPages" data-uid="MediaBrowser.Controller.IServerApplicationHost.PluginConfigurationPages">PluginConfigurationPages</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the plugin configuration pages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPluginConfigurationPage[] PluginConfigurationPages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Plugins.IPluginConfigurationPage.html">IPluginConfigurationPage</a>[]</td>
+        <td><p>The plugin configuration pages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_SupportsAutoRunAtStartup_" data-uid="MediaBrowser.Controller.IServerApplicationHost.SupportsAutoRunAtStartup*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_SupportsAutoRunAtStartup" data-uid="MediaBrowser.Controller.IServerApplicationHost.SupportsAutoRunAtStartup">SupportsAutoRunAtStartup</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether [supports automatic run at startup].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsAutoRunAtStartup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [supports automatic run at startup]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_ExpandVirtualPath_" data-uid="MediaBrowser.Controller.IServerApplicationHost.ExpandVirtualPath*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_ExpandVirtualPath_System_String_" data-uid="MediaBrowser.Controller.IServerApplicationHost.ExpandVirtualPath(System.String)">ExpandVirtualPath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ExpandVirtualPath(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetLocalApiUrl_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalApiUrl*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetLocalApiUrl_System_Net_IPAddress_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalApiUrl(System.Net.IPAddress)">GetLocalApiUrl(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Gets the local API URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetLocalApiUrl(IPAddress address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetLocalApiUrl_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalApiUrl*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetLocalApiUrl_System_String_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalApiUrl(System.String)">GetLocalApiUrl(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the local API URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetLocalApiUrl(string host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The host.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetLocalApiUrl_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalApiUrl*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetLocalApiUrl_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalApiUrl(System.Threading.CancellationToken)">GetLocalApiUrl(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the local API URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetLocalApiUrl(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>The local API URL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetLocalIpAddresses_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalIpAddresses*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetLocalIpAddresses_System_Net_Sockets_AddressFamily_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalIpAddresses(System.Net.Sockets.AddressFamily,System.Threading.CancellationToken)">GetLocalIpAddresses(AddressFamily, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;IPAddress&gt;&gt; GetLocalIpAddresses(AddressFamily family, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.sockets.addressfamily">AddressFamily</a></td>
+        <td><span class="parametername">family</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetLocalIpAddresses_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalIpAddresses*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetLocalIpAddresses_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalIpAddresses(System.Threading.CancellationToken)">GetLocalIpAddresses(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the local ip address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;IPAddress&gt;&gt; GetLocalIpAddresses(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a>&gt;&gt;</td>
+        <td><p>The local ip address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetLocalIpAddressForRemoteAddress_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalIpAddressForRemoteAddress*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetLocalIpAddressForRemoteAddress_System_Net_IPAddress_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetLocalIpAddressForRemoteAddress(System.Net.IPAddress,System.Threading.CancellationToken)">GetLocalIpAddressForRemoteAddress(IPAddress, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPAddress&gt; GetLocalIpAddressForRemoteAddress(IPAddress address, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetPublicSystemInfo_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetPublicSystemInfo*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetPublicSystemInfo_System_Net_IPAddress_MediaBrowser_Controller_Net_AuthorizationInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetPublicSystemInfo(System.Net.IPAddress,MediaBrowser.Controller.Net.AuthorizationInfo,System.Threading.CancellationToken)">GetPublicSystemInfo(IPAddress, AuthorizationInfo, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PublicSystemInfo&gt; GetPublicSystemInfo(IPAddress remoteAddress, AuthorizationInfo authorizationInfo, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">remoteAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.AuthorizationInfo.html">AuthorizationInfo</a></td>
+        <td><span class="parametername">authorizationInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.System.PublicSystemInfo.html">PublicSystemInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetPublicSystemInfo_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetPublicSystemInfo*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetPublicSystemInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetPublicSystemInfo(System.Threading.CancellationToken)">GetPublicSystemInfo(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PublicSystemInfo&gt; GetPublicSystemInfo(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.System.PublicSystemInfo.html">PublicSystemInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetReleaseNotes_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetReleaseNotes*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetReleaseNotes_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetReleaseNotes(System.String,System.Threading.CancellationToken)">GetReleaseNotes(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PackageVersionInfo&gt; GetReleaseNotes(string version, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetReleaseNotesVersions_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetReleaseNotesVersions*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetReleaseNotesVersions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetReleaseNotesVersions(System.Threading.CancellationToken)">GetReleaseNotesVersions(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PackageVersionInfo[]&gt; GetReleaseNotesVersions(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>[]&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetSystemInfo_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetSystemInfo*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetSystemInfo_System_Net_IPAddress_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetSystemInfo(System.Net.IPAddress,System.Threading.CancellationToken)">GetSystemInfo(IPAddress, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the system info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;SystemInfo&gt; GetSystemInfo(IPAddress remoteAddress, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">remoteAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.System.SystemInfo.html">SystemInfo</a>&gt;</td>
+        <td><p>SystemInfo.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_GetWakeOnLanInfo_" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_GetWakeOnLanInfo" data-uid="MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo">GetWakeOnLanInfo()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WakeOnLanInfo[] GetWakeOnLanInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.System.WakeOnLanInfo.html">WakeOnLanInfo</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_LaunchUrl_" data-uid="MediaBrowser.Controller.IServerApplicationHost.LaunchUrl*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_LaunchUrl_System_String_" data-uid="MediaBrowser.Controller.IServerApplicationHost.LaunchUrl(System.String)">LaunchUrl(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LaunchUrl(string url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_IServerApplicationHost_ReverseVirtualPath_" data-uid="MediaBrowser.Controller.IServerApplicationHost.ReverseVirtualPath*"></a>
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_ReverseVirtualPath_System_String_" data-uid="MediaBrowser.Controller.IServerApplicationHost.ReverseVirtualPath(System.String)">ReverseVirtualPath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ReverseVirtualPath(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="MediaBrowser_Controller_IServerApplicationHost_HasUpdateAvailableChanged" data-uid="MediaBrowser.Controller.IServerApplicationHost.HasUpdateAvailableChanged">HasUpdateAvailableChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler HasUpdateAvailableChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

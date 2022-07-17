@@ -1,0 +1,1343 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ProgramInfo
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProgramInfo
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.LiveTv.ProgramInfo">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_LiveTv_ProgramInfo" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo" class="text-break">Class ProgramInfo
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ProgramInfo</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.LiveTv.html">MediaBrowser.Controller.LiveTv</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_LiveTv_ProgramInfo_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ProgramInfo</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Audio_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Audio*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Audio" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Audio">Audio</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the audio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProgramAudio? Audio { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.LiveTv.ProgramAudio.html">ProgramAudio</a>&gt;</td>
+        <td><p>The audio.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_BackdropImageUrl_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.BackdropImageUrl*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_BackdropImageUrl" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.BackdropImageUrl">BackdropImageUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BackdropImageUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ChannelId_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ChannelId*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ChannelId" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ChannelId">ChannelId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the channel identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChannelId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The channel identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_CommunityRating_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.CommunityRating*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_CommunityRating" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.CommunityRating">CommunityRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the community rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? CommunityRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><p>The community rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_EndDate_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.EndDate*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_EndDate" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.EndDate">EndDate</h4>
+  <div class="markdown level1 summary"><p>The end date of the program, in UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset EndDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_EpisodeNumber_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.EpisodeNumber*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_EpisodeNumber" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.EpisodeNumber">EpisodeNumber</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the episode number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? EpisodeNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The episode number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_EpisodeTitle_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.EpisodeTitle*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_EpisodeTitle" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.EpisodeTitle">EpisodeTitle</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the episode title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EpisodeTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The episode title.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Etag_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Etag*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Etag" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Etag">Etag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the etag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Etag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The etag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Genres_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Genres*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Genres" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Genres">Genres</h4>
+  <div class="markdown level1 summary"><p>Genre of the program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Genres { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Height_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Height*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Height" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Height">Height</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_HomePageUrl_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.HomePageUrl*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_HomePageUrl" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.HomePageUrl">HomePageUrl</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the home page URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string HomePageUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The home page URL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Id_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Id*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Id" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Id of the program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ImageHeight_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ImageHeight*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ImageHeight" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ImageHeight">ImageHeight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ImageHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ImageUrl_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ImageUrl*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ImageUrl" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ImageUrl">ImageUrl</h4>
+  <div class="markdown level1 summary"><p>Supply the image url if it can be downloaded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ImageUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The image URL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ImageWidth_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ImageWidth*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ImageWidth" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ImageWidth">ImageWidth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ImageWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Is3D_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Is3D*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Is3D" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Is3D">Is3D</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Is3D { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsEducational_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsEducational*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsEducational" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsEducational">IsEducational</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEducational { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsHD_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsHD*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsHD" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsHD">IsHD</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is hd.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsHD { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is hd; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsKids_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsKids*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsKids" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsKids">IsKids</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is kids.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsKids { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is kids; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsLive_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsLive*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsLive" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsLive">IsLive</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is live.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is live; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsMovie_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsMovie*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsMovie" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsMovie">IsMovie</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is movie.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMovie { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is movie; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsNew_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsNew*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsNew" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsNew">IsNew</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNew { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsNews_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsNews*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsNews" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsNews">IsNews</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is news.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNews { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is news; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsPremiere_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsPremiere*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsPremiere" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsPremiere">IsPremiere</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is premiere.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPremiere { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is premiere; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsRepeat_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsRepeat*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsRepeat" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsRepeat">IsRepeat</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is repeat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRepeat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is repeat; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsSeries_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsSeries*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsSeries" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsSeries">IsSeries</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is series.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSeries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is series; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsSports_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsSports*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsSports" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsSports">IsSports</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is sports.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSports { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is sports; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsSubjectToBlackout_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsSubjectToBlackout*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_IsSubjectToBlackout" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.IsSubjectToBlackout">IsSubjectToBlackout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSubjectToBlackout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_LogoImageUrl_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.LogoImageUrl*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_LogoImageUrl" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.LogoImageUrl">LogoImageUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LogoImageUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Name_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Name*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Name" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the program</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_OfficialRating_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.OfficialRating*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_OfficialRating" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.OfficialRating">OfficialRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the official rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OfficialRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The official rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_OriginalAirDate_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.OriginalAirDate*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_OriginalAirDate" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.OriginalAirDate">OriginalAirDate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the original air date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? OriginalAirDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><p>The original air date.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Overview_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Overview*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Overview" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Overview">Overview</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the overview.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Overview { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The overview.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ProductionYear_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ProductionYear*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ProductionYear" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ProductionYear">ProductionYear</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the production year.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ProductionYear { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The production year.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ProviderIds_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ProviderIds*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ProviderIds" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ProviderIds">ProviderIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderIdDictionary ProviderIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ProviderIdDictionary.html">ProviderIdDictionary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_SeasonNumber_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.SeasonNumber*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_SeasonNumber" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.SeasonNumber">SeasonNumber</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the season number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SeasonNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The season number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_SeriesId_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.SeriesId*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_SeriesId" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.SeriesId">SeriesId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the series identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeriesId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The series identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_SeriesProviderIds_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.SeriesProviderIds*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_SeriesProviderIds" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.SeriesProviderIds">SeriesProviderIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderIdDictionary SeriesProviderIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ProviderIdDictionary.html">ProviderIdDictionary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ShortOverview_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ShortOverview*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ShortOverview" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ShortOverview">ShortOverview</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the short overview.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ShortOverview { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The short overview.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ShowId_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ShowId*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ShowId" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ShowId">ShowId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets an Id for the content that will always be the same regarless of air time or channel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ShowId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The show identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_StartDate_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.StartDate*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_StartDate" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.StartDate">StartDate</h4>
+  <div class="markdown level1 summary"><p>The start date of the program, in UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset StartDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_ThumbImageUrl_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ThumbImageUrl*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_ThumbImageUrl" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.ThumbImageUrl">ThumbImageUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ThumbImageUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ProgramInfo_Width_" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Width*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ProgramInfo_Width" data-uid="MediaBrowser.Controller.LiveTv.ProgramInfo.Width">Width</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3475 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IFileSystem
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IFileSystem
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.IO.IFileSystem">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.IO.IFileSystem">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_IO_IFileSystem" data-uid="MediaBrowser.Model.IO.IFileSystem" class="text-break">Interface IFileSystem
+  </h1>
+  <div class="markdown level0 summary"><p>Interface IFileSystem</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.IO.html">MediaBrowser.Model.IO</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_IO_IFileSystem_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFileSystem</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_CommonFolders_" data-uid="MediaBrowser.Model.IO.IFileSystem.CommonFolders*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_CommonFolders" data-uid="MediaBrowser.Model.IO.IFileSystem.CommonFolders">CommonFolders</h4>
+  <div class="markdown level1 summary"><p>Returns a list of drives and common folders for convienent folder browsing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;FileSystemMetadata&gt; CommonFolders { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_DefaultDirectory_" data-uid="MediaBrowser.Model.IO.IFileSystem.DefaultDirectory*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_DefaultDirectory" data-uid="MediaBrowser.Model.IO.IFileSystem.DefaultDirectory">DefaultDirectory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DefaultDirectory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_DirectorySeparatorChar_" data-uid="MediaBrowser.Model.IO.IFileSystem.DirectorySeparatorChar*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_DirectorySeparatorChar" data-uid="MediaBrowser.Model.IO.IFileSystem.DirectorySeparatorChar">DirectorySeparatorChar</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">char DirectorySeparatorChar { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_AreEqual_" data-uid="MediaBrowser.Model.IO.IFileSystem.AreEqual*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_AreEqual_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.AreEqual(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">AreEqual(ReadOnlySpan&lt;Char&gt;, ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AreEqual(ReadOnlySpan&lt;char&gt; path1, ReadOnlySpan&lt;char&gt; path2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ContainsSubPath_" data-uid="MediaBrowser.Model.IO.IFileSystem.ContainsSubPath*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ContainsSubPath_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.ContainsSubPath(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">ContainsSubPath(ReadOnlySpan&lt;Char&gt;, ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether [contains sub path] [the specified parent path].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ContainsSubPath(ReadOnlySpan&lt;char&gt; parentPath, ReadOnlySpan&lt;char&gt; path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">parentPath</span></td>
+        <td><p>The parent path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [contains sub path] [the specified parent path]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_CopyFile_" data-uid="MediaBrowser.Model.IO.IFileSystem.CopyFile*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_CopyFile_System_String_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.CopyFile(System.String,System.String,System.Boolean)">CopyFile(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Copies the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CopyFile(string source, string target, bool overwrite)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">overwrite</span></td>
+        <td><p>if set to <code>true</code> [overwrite].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_CreateDirectory_" data-uid="MediaBrowser.Model.IO.IFileSystem.CreateDirectory*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_CreateDirectory_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.CreateDirectory(System.String)">CreateDirectory(String)</h4>
+  <div class="markdown level1 summary"><p>Creates the directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CreateDirectory(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_DeleteDirectory_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteDirectory*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_DeleteDirectory_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteDirectory(System.String,System.Boolean)">DeleteDirectory(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Deletes the directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteDirectory(string path, bool recursive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>if set to <code>true</code> [recursive].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_DeleteDirectory_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteDirectory*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_DeleteDirectory_System_String_System_Boolean_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteDirectory(System.String,System.Boolean,System.Boolean)">DeleteDirectory(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteDirectory(string path, bool recursive, bool sendToRecycleBin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">sendToRecycleBin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_DeleteFile_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteFile*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_DeleteFile_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteFile(System.String)">DeleteFile(String)</h4>
+  <div class="markdown level1 summary"><p>Deletes the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteFile(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_DeleteFile_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteFile*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_DeleteFile_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.DeleteFile(System.String,System.Boolean)">DeleteFile(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteFile(string path, bool sendToRecycleBin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">sendToRecycleBin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_DirectoryExists_" data-uid="MediaBrowser.Model.IO.IFileSystem.DirectoryExists*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_DirectoryExists_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.DirectoryExists(System.String)">DirectoryExists(String)</h4>
+  <div class="markdown level1 summary"><p>Directories the exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool DirectoryExists(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if XXXX, <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_FileExists_" data-uid="MediaBrowser.Model.IO.IFileSystem.FileExists*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_FileExists_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.FileExists(System.String)">FileExists(String)</h4>
+  <div class="markdown level1 summary"><p>Files the exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool FileExists(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if XXXX, <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetCreationTimeUtc_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetCreationTimeUtc*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetCreationTimeUtc_MediaBrowser_Model_IO_FileSystemMetadata_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetCreationTimeUtc(MediaBrowser.Model.IO.FileSystemMetadata)">GetCreationTimeUtc(FileSystemMetadata)</h4>
+  <div class="markdown level1 summary"><p>Gets the creation time UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset GetCreationTimeUtc(FileSystemMetadata info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><p>DateTime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetCreationTimeUtc_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetCreationTimeUtc*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetCreationTimeUtc_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetCreationTimeUtc(System.String)">GetCreationTimeUtc(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the creation time UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset GetCreationTimeUtc(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><p>DateTime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetDirectories_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectories*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetDirectories_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectories(System.String,System.Boolean)">GetDirectories(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the directories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;FileSystemMetadata&gt; GetDirectories(string path, bool recursive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>if set to <code>true</code> [recursive].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><p>IEnumerable&lt;DirectoryInfo&gt;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryInfo_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryInfo*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryInfo_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryInfo(System.String)">GetDirectoryInfo(String)</h4>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object for the specified directory path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FileSystemMetadata GetDirectoryInfo(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>A path to a directory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><p>A <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryInfo_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the specified path points to a file, the returned <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object&apos;s
+<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html#MediaBrowser_Model_IO_FileSystemMetadata_IsDirectory">IsDirectory</a> property will be set to true and the <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html#MediaBrowser_Model_IO_FileSystemMetadata_Exists">Exists</a> property will be set to false.</p>
+<p>For automatic handling of files <strong>and</strong> directories, use <a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html#MediaBrowser_Model_IO_IFileSystem_GetFileSystemInfo_System_String_">GetFileSystemInfo(String)</a>.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryName_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryName*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryName_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryName(System.ReadOnlySpan{System.Char})">GetDirectoryName(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReadOnlySpan&lt;char&gt; GetDirectoryName(ReadOnlySpan&lt;char&gt; path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryName_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryName*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryName_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryName(System.String)">GetDirectoryName(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetDirectoryName(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryPaths_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryPaths*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetDirectoryPaths_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDirectoryPaths(System.String,System.Boolean)">GetDirectoryPaths(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the directory paths.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetDirectoryPaths(string path, bool recursive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>if set to <code>true</code> [recursive].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>IEnumerable&lt;System.String&gt;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetDriveInfo_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDriveInfo*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetDriveInfo_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDriveInfo(System.String)">GetDriveInfo(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DriveInfo GetDriveInfo(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.driveinfo">DriveInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetDrives_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDrives*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetDrives" data-uid="MediaBrowser.Model.IO.IFileSystem.GetDrives">GetDrives()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;FileSystemMetadata&gt; GetDrives()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileInfo_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileInfo*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileInfo_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileInfo(System.String)">GetFileInfo(String)</h4>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object for the specified file path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FileSystemMetadata GetFileInfo(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>A path to a file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><p>A <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_IO_IFileSystem_GetFileInfo_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the specified path points to a directory, the returned <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object&apos;s
+<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html#MediaBrowser_Model_IO_FileSystemMetadata_IsDirectory">IsDirectory</a> property and the <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html#MediaBrowser_Model_IO_FileSystemMetadata_Exists">Exists</a> property will both be set to false.</p>
+<p>For automatic handling of files <strong>and</strong> directories, use <a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html#MediaBrowser_Model_IO_IFileSystem_GetFileSystemInfo_System_String_">GetFileSystemInfo(String)</a>.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileNameWithoutExtension_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileNameWithoutExtension*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileNameWithoutExtension_MediaBrowser_Model_IO_FileSystemMetadata_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileNameWithoutExtension(MediaBrowser.Model.IO.FileSystemMetadata)">GetFileNameWithoutExtension(FileSystemMetadata)</h4>
+  <div class="markdown level1 summary"><p>Gets the file name without extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetFileNameWithoutExtension(FileSystemMetadata info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileNameWithoutExtension_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileNameWithoutExtension*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileNameWithoutExtension_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileNameWithoutExtension(System.ReadOnlySpan{System.Char})">GetFileNameWithoutExtension(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the file name without extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReadOnlySpan&lt;char&gt; GetFileNameWithoutExtension(ReadOnlySpan&lt;char&gt; path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileNameWithoutExtension_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileNameWithoutExtension*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileNameWithoutExtension_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileNameWithoutExtension(System.String)">GetFileNameWithoutExtension(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetFileNameWithoutExtension(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFilePaths_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFilePaths*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFilePaths_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFilePaths(System.String,System.Boolean)">GetFilePaths(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the file paths.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetFilePaths(string path, bool recursive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>if set to <code>true</code> [recursive].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>IEnumerable&lt;System.String&gt;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFilePaths_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFilePaths*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFilePaths_System_String_System_String___System_Boolean_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFilePaths(System.String,System.String[],System.Boolean,System.Boolean)">GetFilePaths(String, String[], Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetFilePaths(string path, string[] extensions, bool enableCaseSensitiveExtensions, bool recursive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">extensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableCaseSensitiveExtensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFiles_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFiles*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFiles_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFiles(System.String,System.Boolean)">GetFiles(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;FileSystemMetadata&gt; GetFiles(string path, bool recursive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFiles_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFiles*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFiles_System_String_System_String___System_Boolean_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFiles(System.String,System.String[],System.Boolean,System.Boolean)">GetFiles(String, String[], Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;FileSystemMetadata&gt; GetFiles(string path, string[] extensions, bool enableCaseSensitiveExtensions, bool recursive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">extensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableCaseSensitiveExtensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_MediaBrowser_Model_IO_FileOpenOptions_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,MediaBrowser.Model.IO.FileOpenOptions)">GetFileStream(String, FileOpenMode, FileAccessMode, FileOpenOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, FileOpenOptions fileOpenOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenOptions.html">FileOpenOptions</a></td>
+        <td><span class="parametername">fileOpenOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_MediaBrowser_Model_IO_FileOpenOptions_System_Int64_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,MediaBrowser.Model.IO.FileOpenOptions,System.Int64)">GetFileStream(String, FileOpenMode, FileAccessMode, FileOpenOptions, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, FileOpenOptions fileOpenOptions, long preAllocationSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenOptions.html">FileOpenOptions</a></td>
+        <td><span class="parametername">fileOpenOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">preAllocationSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_MediaBrowser_Model_IO_FileShareMode_MediaBrowser_Model_IO_FileOpenOptions_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,MediaBrowser.Model.IO.FileShareMode,MediaBrowser.Model.IO.FileOpenOptions)">GetFileStream(String, FileOpenMode, FileAccessMode, FileShareMode, FileOpenOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, FileShareMode share, FileOpenOptions fileOpenOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileShareMode.html">FileShareMode</a></td>
+        <td><span class="parametername">share</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenOptions.html">FileOpenOptions</a></td>
+        <td><span class="parametername">fileOpenOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_MediaBrowser_Model_IO_FileShareMode_MediaBrowser_Model_IO_FileOpenOptions_System_Int64_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,MediaBrowser.Model.IO.FileShareMode,MediaBrowser.Model.IO.FileOpenOptions,System.Int64)">GetFileStream(String, FileOpenMode, FileAccessMode, FileShareMode, FileOpenOptions, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, FileShareMode share, FileOpenOptions fileOpenOptions, long preAllocationSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileShareMode.html">FileShareMode</a></td>
+        <td><span class="parametername">share</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenOptions.html">FileOpenOptions</a></td>
+        <td><span class="parametername">fileOpenOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">preAllocationSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_MediaBrowser_Model_IO_FileShareMode_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,MediaBrowser.Model.IO.FileShareMode,System.Boolean)">GetFileStream(String, FileOpenMode, FileAccessMode, FileShareMode, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the file stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, FileShareMode share, bool isAsync = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>The mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td><p>The access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileShareMode.html">FileShareMode</a></td>
+        <td><span class="parametername">share</span></td>
+        <td><p>The share.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isAsync</span></td>
+        <td><p>if set to <code>true</code> [is asynchronous].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><p>FileStream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_MediaBrowser_Model_IO_FileShareMode_System_Int32_MediaBrowser_Model_IO_FileOpenOptions_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,MediaBrowser.Model.IO.FileShareMode,System.Int32,MediaBrowser.Model.IO.FileOpenOptions)">GetFileStream(String, FileOpenMode, FileAccessMode, FileShareMode, Int32, FileOpenOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, FileShareMode share, int bufferSize, FileOpenOptions fileOpenOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileShareMode.html">FileShareMode</a></td>
+        <td><span class="parametername">share</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">bufferSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenOptions.html">FileOpenOptions</a></td>
+        <td><span class="parametername">fileOpenOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_MediaBrowser_Model_IO_FileShareMode_System_Int32_MediaBrowser_Model_IO_FileOpenOptions_System_Int64_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,MediaBrowser.Model.IO.FileShareMode,System.Int32,MediaBrowser.Model.IO.FileOpenOptions,System.Int64)">GetFileStream(String, FileOpenMode, FileAccessMode, FileShareMode, Int32, FileOpenOptions, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, FileShareMode share, int bufferSize, FileOpenOptions fileOpenOptions, long preAllocationSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileShareMode.html">FileShareMode</a></td>
+        <td><span class="parametername">share</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">bufferSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenOptions.html">FileOpenOptions</a></td>
+        <td><span class="parametername">fileOpenOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">preAllocationSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileStream_System_String_MediaBrowser_Model_IO_FileOpenMode_MediaBrowser_Model_IO_FileAccessMode_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileStream(System.String,MediaBrowser.Model.IO.FileOpenMode,MediaBrowser.Model.IO.FileAccessMode,System.Boolean)">GetFileStream(String, FileOpenMode, FileAccessMode, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetFileStream(string path, FileOpenMode mode, FileAccessMode access, bool isAsync = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileAccessMode.html">FileAccessMode</a></td>
+        <td><span class="parametername">access</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isAsync</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileSystemEntries_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileSystemEntries*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileSystemEntries_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileSystemEntries(System.String,System.Boolean)">GetFileSystemEntries(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the file system entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;FileSystemMetadata&gt; GetFileSystemEntries(string path, bool recursive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>if set to <code>true</code> [recursive].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><p>IEnumerable&lt;FileSystemMetadata&gt;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileSystemEntryPaths_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileSystemEntryPaths*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileSystemEntryPaths_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileSystemEntryPaths(System.String,System.Boolean)">GetFileSystemEntryPaths(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the file system entry paths.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetFileSystemEntryPaths(string path, bool recursive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>if set to <code>true</code> [recursive].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>IEnumerable&lt;System.String&gt;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFileSystemInfo_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileSystemInfo*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFileSystemInfo_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFileSystemInfo(System.String)">GetFileSystemInfo(String)</h4>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object for the specified file or directory path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FileSystemMetadata GetFileSystemInfo(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>A path to a file or directory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><p>A <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_IO_IFileSystem_GetFileSystemInfo_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the specified path points to a directory, the returned <a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a> object's
+<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html#MediaBrowser_Model_IO_FileSystemMetadata_IsDirectory">IsDirectory</a> property will be set to true and all other properties will reflect the properties of the directory.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetFullPath_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFullPath*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetFullPath_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetFullPath(System.String)">GetFullPath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetFullPath(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetLastWriteTimeUtc_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetLastWriteTimeUtc*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetLastWriteTimeUtc_MediaBrowser_Model_IO_FileSystemMetadata_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetLastWriteTimeUtc(MediaBrowser.Model.IO.FileSystemMetadata)">GetLastWriteTimeUtc(FileSystemMetadata)</h4>
+  <div class="markdown level1 summary"><p>Gets the last write time UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset GetLastWriteTimeUtc(FileSystemMetadata info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><p>DateTime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetLastWriteTimeUtc_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetLastWriteTimeUtc*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetLastWriteTimeUtc_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetLastWriteTimeUtc(System.String)">GetLastWriteTimeUtc(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the last write time UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset GetLastWriteTimeUtc(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><p>DateTime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetLastWriteTimeUtc_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetLastWriteTimeUtc*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetLastWriteTimeUtc_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetLastWriteTimeUtc(System.String,System.Boolean)">GetLastWriteTimeUtc(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset GetLastWriteTimeUtc(string path, bool fileExists)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">fileExists</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_GetValidFilename_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetValidFilename*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_GetValidFilename_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.GetValidFilename(System.String)">GetValidFilename(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the valid filename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetValidFilename(string filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>The filename.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_IsPathFile_" data-uid="MediaBrowser.Model.IO.IFileSystem.IsPathFile*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_IsPathFile_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.IsPathFile(System.ReadOnlySpan{System.Char})">IsPathFile(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether [is path file] [the specified path].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsPathFile(ReadOnlySpan&lt;char&gt; path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [is path file] [the specified path]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_IsRootPath_" data-uid="MediaBrowser.Model.IO.IFileSystem.IsRootPath*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_IsRootPath_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.IsRootPath(System.ReadOnlySpan{System.Char})">IsRootPath(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether [is root path] [the specified path].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsRootPath(ReadOnlySpan&lt;char&gt; path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [is root path] [the specified path]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_MakeAbsolutePath_" data-uid="MediaBrowser.Model.IO.IFileSystem.MakeAbsolutePath*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_MakeAbsolutePath_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.MakeAbsolutePath(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">MakeAbsolutePath(ReadOnlySpan&lt;Char&gt;, ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReadOnlySpan&lt;char&gt; MakeAbsolutePath(ReadOnlySpan&lt;char&gt; folderPath, ReadOnlySpan&lt;char&gt; filePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">folderPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">filePath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_MoveDirectory_" data-uid="MediaBrowser.Model.IO.IFileSystem.MoveDirectory*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_MoveDirectory_System_String_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.MoveDirectory(System.String,System.String)">MoveDirectory(String, String)</h4>
+  <div class="markdown level1 summary"><p>Moves the directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MoveDirectory(string source, string target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_MoveFile_" data-uid="MediaBrowser.Model.IO.IFileSystem.MoveFile*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_MoveFile_System_String_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.MoveFile(System.String,System.String)">MoveFile(String, String)</h4>
+  <div class="markdown level1 summary"><p>Moves the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MoveFile(string source, string target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_NormalizePath_" data-uid="MediaBrowser.Model.IO.IFileSystem.NormalizePath*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_NormalizePath_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.NormalizePath(System.ReadOnlySpan{System.Char})">NormalizePath(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Normalizes the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReadOnlySpan&lt;char&gt; NormalizePath(ReadOnlySpan&lt;char&gt; path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_OpenRead_" data-uid="MediaBrowser.Model.IO.IFileSystem.OpenRead*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_OpenRead_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.OpenRead(System.String)">OpenRead(String)</h4>
+  <div class="markdown level1 summary"><p>Opens the read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream OpenRead(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><p>Stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ReadAllBytesAsync_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllBytesAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ReadAllBytesAsync_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllBytesAsync(System.String,System.Threading.CancellationToken)">ReadAllBytesAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;byte[]&gt; ReadAllBytesAsync(string path, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ReadAllLines_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllLines*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ReadAllLines_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllLines(System.String)">ReadAllLines(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string[] ReadAllLines(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ReadAllLinesAsync_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllLinesAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ReadAllLinesAsync_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllLinesAsync(System.String,System.Threading.CancellationToken)">ReadAllLinesAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string[]&gt; ReadAllLinesAsync(string path, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ReadAllText_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllText*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ReadAllText_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllText(System.String)">ReadAllText(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ReadAllText(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ReadAllTextAsync_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllTextAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ReadAllTextAsync_System_String_System_Text_Encoding_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllTextAsync(System.String,System.Text.Encoding,System.Threading.CancellationToken)">ReadAllTextAsync(String, Encoding, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads all text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ReadAllTextAsync(string path, Encoding encoding, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>The encoding.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ReadAllTextAsync_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllTextAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ReadAllTextAsync_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IFileSystem.ReadAllTextAsync(System.String,System.Threading.CancellationToken)">ReadAllTextAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads all text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ReadAllTextAsync(string path, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>System.String.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_SetAttributes_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetAttributes*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_SetAttributes_System_String_System_Boolean_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetAttributes(System.String,System.Boolean,System.Boolean)">SetAttributes(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetAttributes(string path, bool isHidden, bool readOnly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isHidden</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readOnly</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_SetExecutable_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetExecutable*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_SetExecutable_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetExecutable(System.String)">SetExecutable(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetExecutable(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_SetHidden_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetHidden*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_SetHidden_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetHidden(System.String,System.Boolean)">SetHidden(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetHidden(string path, bool isHidden)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isHidden</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_SetLastWriteTimeUtc_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetLastWriteTimeUtc*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_SetLastWriteTimeUtc_System_String_System_DateTime_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetLastWriteTimeUtc(System.String,System.DateTime)">SetLastWriteTimeUtc(String, DateTime)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetLastWriteTimeUtc(string path, DateTime lastWriteTimeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">lastWriteTimeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_SetReadOnly_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetReadOnly*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_SetReadOnly_System_String_System_Boolean_" data-uid="MediaBrowser.Model.IO.IFileSystem.SetReadOnly(System.String,System.Boolean)">SetReadOnly(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetReadOnly(string path, bool readOnly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readOnly</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_SupportsPathNatively_" data-uid="MediaBrowser.Model.IO.IFileSystem.SupportsPathNatively*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_SupportsPathNatively_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.SupportsPathNatively(System.String)">SupportsPathNatively(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsPathNatively(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_SwapFiles_" data-uid="MediaBrowser.Model.IO.IFileSystem.SwapFiles*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_SwapFiles_System_String_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.SwapFiles(System.String,System.String)">SwapFiles(String, String)</h4>
+  <div class="markdown level1 summary"><p>Swaps the files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SwapFiles(string file1, string file2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">file1</span></td>
+        <td><p>The file1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">file2</span></td>
+        <td><p>The file2.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_WriteAllBytes_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllBytes*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_WriteAllBytes_System_String_System_Byte___" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllBytes(System.String,System.Byte[])">WriteAllBytes(String, Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteAllBytes(string path, byte[] bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_WriteAllBytesAsync_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllBytesAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_WriteAllBytesAsync_System_String_System_Byte___System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllBytesAsync(System.String,System.Byte[],System.Threading.CancellationToken)">WriteAllBytesAsync(String, Byte[], CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAllBytesAsync(string path, byte[] bytes, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_WriteAllLines_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllLines*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_WriteAllLines_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllLines(System.String,System.Collections.Generic.IEnumerable{System.String})">WriteAllLines(String, IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteAllLines(string path, IEnumerable&lt;string&gt; lines)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">lines</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_WriteAllText_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllText*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_WriteAllText_System_String_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllText(System.String,System.String)">WriteAllText(String, String)</h4>
+  <div class="markdown level1 summary"><p>Writes all text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteAllText(string path, string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_WriteAllText_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllText*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_WriteAllText_System_String_System_String_System_Text_Encoding_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllText(System.String,System.String,System.Text.Encoding)">WriteAllText(String, String, Encoding)</h4>
+  <div class="markdown level1 summary"><p>Writes all text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteAllText(string path, string text, Encoding encoding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>The encoding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_WriteAllTextAsync_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllTextAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_WriteAllTextAsync_System_String_System_String_System_Text_Encoding_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllTextAsync(System.String,System.String,System.Text.Encoding,System.Threading.CancellationToken)">WriteAllTextAsync(String, String, Encoding, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAllTextAsync(string path, string text, Encoding encoding, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_WriteAllTextAsync_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllTextAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_WriteAllTextAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IFileSystem.WriteAllTextAsync(System.String,System.String,System.Threading.CancellationToken)">WriteAllTextAsync(String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAllTextAsync(string path, string text, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

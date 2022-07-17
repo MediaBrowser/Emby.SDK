@@ -1,0 +1,4240 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseItemDto
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseItemDto
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Dto.BaseItemDto">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Dto.BaseItemDto">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_Dto_BaseItemDto" data-uid="MediaBrowser.Model.Dto.BaseItemDto" class="text-break">Class BaseItemDto
+  </h1>
+  <div class="markdown level0 summary"><p>This is strictly used as a data transfer object from the api layer.
+This holds information about a BaseItem in a format that is convenient for the client.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">BaseItemDto</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
+    <div><a class="xref" href="MediaBrowser.Model.Dto.IItemDto.html">IItemDto</a></div>
+    <div><a class="xref" href="MediaBrowser.Model.Dto.IHasServerId.html">IHasServerId</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Dto.html">MediaBrowser.Model.Dto</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Dto_BaseItemDto_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BaseItemDto : IHasProviderIds, IItemDto, IHasServerId</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AffiliateCallSign_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AffiliateCallSign*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AffiliateCallSign" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AffiliateCallSign">AffiliateCallSign</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AffiliateCallSign { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AirDays_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirDays*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AirDays" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirDays">AirDays</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the air days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DayOfWeek[] AirDays { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dayofweek">DayOfWeek</a>[]</td>
+        <td><p>The air days.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AirsAfterSeasonNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirsAfterSeasonNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AirsAfterSeasonNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirsAfterSeasonNumber">AirsAfterSeasonNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AirsAfterSeasonNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AirsBeforeEpisodeNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirsBeforeEpisodeNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AirsBeforeEpisodeNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirsBeforeEpisodeNumber">AirsBeforeEpisodeNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AirsBeforeEpisodeNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AirsBeforeSeasonNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirsBeforeSeasonNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AirsBeforeSeasonNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AirsBeforeSeasonNumber">AirsBeforeSeasonNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AirsBeforeSeasonNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Album_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Album*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Album" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Album">Album</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the album.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Album { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The album.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AlbumArtist_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumArtist*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AlbumArtist" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumArtist">AlbumArtist</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the album artist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlbumArtist { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The album artist.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AlbumArtists_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumArtists*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AlbumArtists" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumArtists">AlbumArtists</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the album artists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NameIdPair[] AlbumArtists { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.NameIdPair.html">NameIdPair</a>[]</td>
+        <td><p>The album artists.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AlbumCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AlbumCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumCount">AlbumCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AlbumCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AlbumId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AlbumId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumId">AlbumId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the album id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlbumId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The album id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AlbumPrimaryImageTag_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumPrimaryImageTag*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AlbumPrimaryImageTag" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AlbumPrimaryImageTag">AlbumPrimaryImageTag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the album image tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlbumPrimaryImageTag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The album image tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Altitude_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Altitude*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Altitude" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Altitude">Altitude</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? Altitude { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Aperture_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Aperture*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Aperture" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Aperture">Aperture</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? Aperture { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ArtistItems_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ArtistItems*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ArtistItems" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ArtistItems">ArtistItems</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the artist items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NameIdPair[] ArtistItems { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.NameIdPair.html">NameIdPair</a>[]</td>
+        <td><p>The artist items.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Artists_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Artists*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Artists" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Artists">Artists</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the artists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Artists { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>The artists.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_AsSeries_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AsSeries*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_AsSeries" data-uid="MediaBrowser.Model.Dto.BaseItemDto.AsSeries">AsSeries</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? AsSeries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_BackdropImageTags_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.BackdropImageTags*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_BackdropImageTags" data-uid="MediaBrowser.Model.Dto.BaseItemDto.BackdropImageTags">BackdropImageTags</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the backdrop image tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] BackdropImageTags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>The backdrop image tags.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Bitrate_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Bitrate*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Bitrate" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Bitrate">Bitrate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Bitrate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CameraMake_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CameraMake*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CameraMake" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CameraMake">CameraMake</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CameraMake { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CameraModel_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CameraModel*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CameraModel" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CameraModel">CameraModel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CameraModel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CanDelete_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CanDelete*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CanDelete" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CanDelete">CanDelete</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? CanDelete { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CanDownload_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CanDownload*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CanDownload" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CanDownload">CanDownload</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? CanDownload { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ChannelId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ChannelId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelId">ChannelId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the channel identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChannelId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The channel identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ChannelName_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelName*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ChannelName" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelName">ChannelName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChannelName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ChannelNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ChannelNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelNumber">ChannelNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChannelNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ChannelPrimaryImageTag_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelPrimaryImageTag*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ChannelPrimaryImageTag" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChannelPrimaryImageTag">ChannelPrimaryImageTag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the channel primary image tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChannelPrimaryImageTag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The channel primary image tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Chapters_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Chapters*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Chapters" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Chapters">Chapters</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the chapters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ChapterInfo&gt; Chapters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
+        <td><p>The chapters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ChildCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChildCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ChildCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ChildCount">ChildCount</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the child count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ChildCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The child count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CollectionType_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CollectionType*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CollectionType" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CollectionType">CollectionType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type of the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CollectionType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The type of the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CommunityRating_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CommunityRating*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CommunityRating" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CommunityRating">CommunityRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the community rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? CommunityRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><p>The community rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CompletionPercentage_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CompletionPercentage*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CompletionPercentage" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CompletionPercentage">CompletionPercentage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the completion percentage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? CompletionPercentage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><p>The completion percentage.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Composers_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Composers*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Composers" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Composers">Composers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NameIdPair[] Composers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.NameIdPair.html">NameIdPair</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Container_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Container*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Container" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Container">Container</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Container { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CriticRating_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CriticRating*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CriticRating" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CriticRating">CriticRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the critic rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? CriticRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><p>The critic rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CurrentProgram_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CurrentProgram*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CurrentProgram" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CurrentProgram">CurrentProgram</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the current program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseItemDto CurrentProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.BaseItemDto.html">BaseItemDto</a></td>
+        <td><p>The current program.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_CustomRating_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CustomRating*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_CustomRating" data-uid="MediaBrowser.Model.Dto.BaseItemDto.CustomRating">CustomRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the custom rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CustomRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The custom rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_DateCreated_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.DateCreated*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_DateCreated" data-uid="MediaBrowser.Model.Dto.BaseItemDto.DateCreated">DateCreated</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the date created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? DateCreated { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><p>The date created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Disabled_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Disabled*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Disabled" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Disabled">Disabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Disabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_DisplayOrder_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.DisplayOrder*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_DisplayOrder" data-uid="MediaBrowser.Model.Dto.BaseItemDto.DisplayOrder">DisplayOrder</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the display order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The display order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_DisplayPreferencesId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.DisplayPreferencesId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_DisplayPreferencesId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.DisplayPreferencesId">DisplayPreferencesId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the display preferences id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayPreferencesId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The display preferences id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_EndDate_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.EndDate*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_EndDate" data-uid="MediaBrowser.Model.Dto.BaseItemDto.EndDate">EndDate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the end date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? EndDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><p>The end date.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_EpisodeTitle_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.EpisodeTitle*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_EpisodeTitle" data-uid="MediaBrowser.Model.Dto.BaseItemDto.EpisodeTitle">EpisodeTitle</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the episode title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EpisodeTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The episode title.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Etag_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Etag*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Etag" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Etag">Etag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the etag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Etag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The etag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ExposureTime_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ExposureTime*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ExposureTime" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ExposureTime">ExposureTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? ExposureTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ExternalUrls_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ExternalUrls*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ExternalUrls" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ExternalUrls">ExternalUrls</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the external urls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExternalUrl[] ExternalUrls { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Providers.ExternalUrl.html">ExternalUrl</a>[]</td>
+        <td><p>The external urls.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ExtraType_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ExtraType*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ExtraType" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ExtraType">ExtraType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExtraType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_FileName_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.FileName*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_FileName" data-uid="MediaBrowser.Model.Dto.BaseItemDto.FileName">FileName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FileName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_FocalLength_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.FocalLength*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_FocalLength" data-uid="MediaBrowser.Model.Dto.BaseItemDto.FocalLength">FocalLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? FocalLength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ForcedSortName_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ForcedSortName*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ForcedSortName" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ForcedSortName">ForcedSortName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ForcedSortName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_GameSystem_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.GameSystem*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_GameSystem" data-uid="MediaBrowser.Model.Dto.BaseItemDto.GameSystem">GameSystem</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the game system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GameSystem { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The game system.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_GameSystemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.GameSystemId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_GameSystemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.GameSystemId">GameSystemId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? GameSystemId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_GenreItems_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.GenreItems*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_GenreItems" data-uid="MediaBrowser.Model.Dto.BaseItemDto.GenreItems">GenreItems</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NameLongIdPair[] GenreItems { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.NameLongIdPair.html">NameLongIdPair</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Genres_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Genres*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Genres" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Genres">Genres</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the genres.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Genres { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>The genres.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Height_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Height*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Height" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Height">Height</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Id_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Id*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Id" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ImageOrientation_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ImageOrientation*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ImageOrientation" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ImageOrientation">ImageOrientation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImageOrientation? ImageOrientation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Drawing.ImageOrientation.html">ImageOrientation</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ImageTags_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ImageTags*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ImageTags" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ImageTags">ImageTags</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the image tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;ImageType, string&gt; ImageTags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>The image tags.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IndexNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IndexNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IndexNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IndexNumber">IndexNumber</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the index number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? IndexNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The index number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IndexNumberEnd_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IndexNumberEnd*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IndexNumberEnd" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IndexNumberEnd">IndexNumberEnd</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the index number end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? IndexNumberEnd { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The index number end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsFolder_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsFolder*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsFolder" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsFolder">IsFolder</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsFolder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is folder; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsKids_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsKids*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsKids" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsKids">IsKids</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is kids.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsKids { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is kids; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsLive_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsLive*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsLive" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsLive">IsLive</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is live.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsLive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is live; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsMovie_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsMovie*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsMovie" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsMovie">IsMovie</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is movie.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsMovie { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is movie; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsNew_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsNew*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsNew" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsNew">IsNew</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsNew { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsNews_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsNews*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsNews" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsNews">IsNews</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is news.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsNews { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is news; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsoSpeedRating_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsoSpeedRating*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsoSpeedRating" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsoSpeedRating">IsoSpeedRating</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? IsoSpeedRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsPremiere_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsPremiere*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsPremiere" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsPremiere">IsPremiere</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is premiere.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsPremiere { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is premiere; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsRepeat_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsRepeat*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsRepeat" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsRepeat">IsRepeat</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is repeat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsRepeat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is repeat; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsSeries_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsSeries*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsSeries" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsSeries">IsSeries</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is series.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsSeries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is series; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsSports_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsSports*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsSports" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsSports">IsSports</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is sports.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsSports { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if this instance is sports; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Latitude_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Latitude*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Latitude" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Latitude">Latitude</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? Latitude { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ListingsChannelId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsChannelId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ListingsChannelId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsChannelId">ListingsChannelId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ListingsChannelId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ListingsChannelName_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsChannelName*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ListingsChannelName" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsChannelName">ListingsChannelName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ListingsChannelName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ListingsChannelNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsChannelNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ListingsChannelNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsChannelNumber">ListingsChannelNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ListingsChannelNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ListingsId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ListingsId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsId">ListingsId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ListingsId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ListingsPath_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsPath*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ListingsPath" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsPath">ListingsPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ListingsPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ListingsProviderId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsProviderId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ListingsProviderId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ListingsProviderId">ListingsProviderId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ListingsProviderId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_LocalTrailerCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LocalTrailerCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_LocalTrailerCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LocalTrailerCount">LocalTrailerCount</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the local trailer count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? LocalTrailerCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The local trailer count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_LocationType_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LocationType*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_LocationType" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LocationType">LocationType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type of the location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocationType? LocationType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.LocationType.html">LocationType</a>&gt;</td>
+        <td><p>The type of the location.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_LockData_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LockData*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_LockData" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LockData">LockData</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [enable internet providers].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? LockData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p><code>true</code> if [enable internet providers]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_LockedFields_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LockedFields*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_LockedFields" data-uid="MediaBrowser.Model.Dto.BaseItemDto.LockedFields">LockedFields</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the locked fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetadataFields[] LockedFields { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.MetadataFields.html">MetadataFields</a>[]</td>
+        <td><p>The locked fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Longitude_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Longitude*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Longitude" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Longitude">Longitude</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? Longitude { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ManagementId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ManagementId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ManagementId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ManagementId">ManagementId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ManagementId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_MediaSources_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MediaSources*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_MediaSources" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MediaSources">MediaSources</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the media versions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaSourceInfo[] MediaSources { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>[]</td>
+        <td><p>The media versions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_MediaStreams_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MediaStreams*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_MediaStreams" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MediaStreams">MediaStreams</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the media streams.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaStream[] MediaStreams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>[]</td>
+        <td><p>The media streams.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_MediaType_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MediaType*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_MediaType" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MediaType">MediaType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type of the media.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MediaType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The type of the media.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_MovieCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MovieCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_MovieCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MovieCount">MovieCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MovieCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_MusicVideoCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MusicVideoCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_MusicVideoCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.MusicVideoCount">MusicVideoCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MusicVideoCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Name_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Name*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Name" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Number_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Number*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Number" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Number">Number</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Number { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_OfficialRating_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.OfficialRating*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_OfficialRating" data-uid="MediaBrowser.Model.Dto.BaseItemDto.OfficialRating">OfficialRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the official rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OfficialRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The official rating.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_OriginalTitle_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.OriginalTitle*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_OriginalTitle" data-uid="MediaBrowser.Model.Dto.BaseItemDto.OriginalTitle">OriginalTitle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OriginalTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Overview_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Overview*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Overview" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Overview">Overview</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the overview.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Overview { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The overview.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentBackdropImageTags_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentBackdropImageTags*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentBackdropImageTags" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentBackdropImageTags">ParentBackdropImageTags</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the parent backdrop image tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] ParentBackdropImageTags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>The parent backdrop image tags.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentBackdropItemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentBackdropItemId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentBackdropItemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentBackdropItemId">ParentBackdropItemId</h4>
+  <div class="markdown level1 summary"><p>If the item does not have any backdrops, this will hold the Id of the Parent that has one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentBackdropItemId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The parent backdrop item id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentId">ParentId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the parent id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The parent id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentIndexNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentIndexNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentIndexNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentIndexNumber">ParentIndexNumber</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the parent index number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ParentIndexNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The parent index number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentLogoImageTag_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentLogoImageTag*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentLogoImageTag" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentLogoImageTag">ParentLogoImageTag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the parent logo image tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentLogoImageTag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The parent logo image tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentLogoItemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentLogoItemId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentLogoItemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentLogoItemId">ParentLogoItemId</h4>
+  <div class="markdown level1 summary"><p>If the item does not have a logo, this will hold the Id of the Parent that has one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentLogoItemId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The parent logo item id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentThumbImageTag_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentThumbImageTag*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentThumbImageTag" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentThumbImageTag">ParentThumbImageTag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the parent thumb image tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentThumbImageTag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The parent thumb image tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentThumbItemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentThumbItemId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentThumbItemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentThumbItemId">ParentThumbItemId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the parent thumb item id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentThumbItemId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The parent thumb item id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PartCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PartCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PartCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PartCount">PartCount</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the part count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? PartCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The part count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Path_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Path*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Path" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Path">Path</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_People_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.People*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_People" data-uid="MediaBrowser.Model.Dto.BaseItemDto.People">People</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the people.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseItemPerson[] People { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.BaseItemPerson.html">BaseItemPerson</a>[]</td>
+        <td><p>The people.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PlayAccess_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PlayAccess*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PlayAccess" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PlayAccess">PlayAccess</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the play access.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayAccess? PlayAccess { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Library.PlayAccess.html">PlayAccess</a>&gt;</td>
+        <td><p>The play access.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PlaylistItemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PlaylistItemId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PlaylistItemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PlaylistItemId">PlaylistItemId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the playlist item identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlaylistItemId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The playlist item identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PreferredMetadataCountryCode_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PreferredMetadataCountryCode*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PreferredMetadataCountryCode" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PreferredMetadataCountryCode">PreferredMetadataCountryCode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PreferredMetadataCountryCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PreferredMetadataLanguage_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PreferredMetadataLanguage*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PreferredMetadataLanguage" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PreferredMetadataLanguage">PreferredMetadataLanguage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PreferredMetadataLanguage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Prefix_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Prefix*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Prefix" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Prefix">Prefix</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the Prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Prefix { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The Prefix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PremiereDate_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PremiereDate*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PremiereDate" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PremiereDate">PremiereDate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the premiere date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? PremiereDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><p>The premiere date.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PresentationUniqueKey_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PresentationUniqueKey*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PresentationUniqueKey" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PresentationUniqueKey">PresentationUniqueKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PresentationUniqueKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_PrimaryImageAspectRatio_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PrimaryImageAspectRatio*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_PrimaryImageAspectRatio" data-uid="MediaBrowser.Model.Dto.BaseItemDto.PrimaryImageAspectRatio">PrimaryImageAspectRatio</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the primary image aspect ratio, after image enhancements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? PrimaryImageAspectRatio { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><p>The primary image aspect ratio.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ProductionLocations_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ProductionLocations*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ProductionLocations" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ProductionLocations">ProductionLocations</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] ProductionLocations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ProductionYear_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ProductionYear*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ProductionYear" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ProductionYear">ProductionYear</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the production year.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ProductionYear { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The production year.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ProviderIds_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ProviderIds*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ProviderIds" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ProviderIds">ProviderIds</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the provider ids.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderIdDictionary ProviderIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ProviderIdDictionary.html">ProviderIdDictionary</a></td>
+        <td><p>The provider ids.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_RecursiveItemCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.RecursiveItemCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_RecursiveItemCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.RecursiveItemCount">RecursiveItemCount</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the recursive item count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? RecursiveItemCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The recursive item count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_RemoteTrailers_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.RemoteTrailers*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_RemoteTrailers" data-uid="MediaBrowser.Model.Dto.BaseItemDto.RemoteTrailers">RemoteTrailers</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the trailer urls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaUrl[] RemoteTrailers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.MediaUrl.html">MediaUrl</a>[]</td>
+        <td><p>The trailer urls.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_RunTimeTicks_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.RunTimeTicks*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_RunTimeTicks" data-uid="MediaBrowser.Model.Dto.BaseItemDto.RunTimeTicks">RunTimeTicks</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the run time ticks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? RunTimeTicks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><p>The run time ticks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeasonId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeasonId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeasonId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeasonId">SeasonId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the season identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeasonId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The season identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeasonName_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeasonName*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeasonName" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeasonName">SeasonName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the season.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeasonName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of the season.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeriesCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeriesCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesCount">SeriesCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SeriesCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeriesId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeriesId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesId">SeriesId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the series id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeriesId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The series id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeriesName_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesName*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeriesName" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesName">SeriesName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the series.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeriesName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of the series.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeriesPrimaryImageTag_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesPrimaryImageTag*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeriesPrimaryImageTag" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesPrimaryImageTag">SeriesPrimaryImageTag</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the series primary image tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeriesPrimaryImageTag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The series primary image tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeriesStudio_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesStudio*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeriesStudio" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesStudio">SeriesStudio</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the series studio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeriesStudio { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The series studio.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SeriesTimerId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesTimerId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SeriesTimerId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SeriesTimerId">SeriesTimerId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the series timer identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SeriesTimerId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The series timer identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ServerId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ServerId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ServerId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ServerId">ServerId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the server identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServerId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The server identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_ShutterSpeed_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ShutterSpeed*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ShutterSpeed" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ShutterSpeed">ShutterSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? ShutterSpeed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Size_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Size*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Size" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Size">Size</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? Size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Software_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Software*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Software" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Software">Software</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Software { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SongCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SongCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SongCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SongCount">SongCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SongCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SortIndexNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SortIndexNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SortIndexNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SortIndexNumber">SortIndexNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SortIndexNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SortName_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SortName*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SortName" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SortName">SortName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the sort.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SortName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of the sort.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SortParentIndexNumber_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SortParentIndexNumber*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SortParentIndexNumber" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SortParentIndexNumber">SortParentIndexNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SortParentIndexNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SpecialFeatureCount_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SpecialFeatureCount*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SpecialFeatureCount" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SpecialFeatureCount">SpecialFeatureCount</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the special feature count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SpecialFeatureCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The special feature count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_StartDate_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.StartDate*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_StartDate" data-uid="MediaBrowser.Model.Dto.BaseItemDto.StartDate">StartDate</h4>
+  <div class="markdown level1 summary"><p>The start date of the recording, in UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? StartDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Status_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Status*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Status" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Status { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Studios_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Studios*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Studios" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Studios">Studios</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the studios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NameLongIdPair[] Studios { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.NameLongIdPair.html">NameLongIdPair</a>[]</td>
+        <td><p>The studios.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Subviews_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Subviews*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Subviews" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Subviews">Subviews</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Subviews { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SupportsResume_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SupportsResume*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SupportsResume" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SupportsResume">SupportsResume</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? SupportsResume { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_SupportsSync_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SupportsSync*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_SupportsSync" data-uid="MediaBrowser.Model.Dto.BaseItemDto.SupportsSync">SupportsSync</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [supports synchronize].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? SupportsSync { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_TagItems_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.TagItems*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_TagItems" data-uid="MediaBrowser.Model.Dto.BaseItemDto.TagItems">TagItems</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NameLongIdPair[] TagItems { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.NameLongIdPair.html">NameLongIdPair</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Taglines_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Taglines*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Taglines" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Taglines">Taglines</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the taglines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Taglines { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>The taglines.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Tags_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Tags*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Tags" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Tags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>The tags.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_TimerId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.TimerId*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_TimerId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.TimerId">TimerId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the timer identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TimerId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The timer identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_TimerType_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.TimerType*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_TimerType" data-uid="MediaBrowser.Model.Dto.BaseItemDto.TimerType">TimerType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimerType? TimerType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.LiveTv.TimerType.html">TimerType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Type_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Type*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Type" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_UserData_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.UserData*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_UserData" data-uid="MediaBrowser.Model.Dto.BaseItemDto.UserData">UserData</h4>
+  <div class="markdown level1 summary"><p>User data for this item based on the user it's being requested for</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UserItemDataDto UserData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemDataDto.html">UserItemDataDto</a></td>
+        <td><p>The user data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Video3DFormat_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Video3DFormat*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Video3DFormat" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Video3DFormat">Video3DFormat</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the video3 D format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Video3DFormat? Video3DFormat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
+        <td><p>The video3 D format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_Width_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Width*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_Width" data-uid="MediaBrowser.Model.Dto.BaseItemDto.Width">Width</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Dto_BaseItemDto_IsType_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsType*"></a>
+  <h4 id="MediaBrowser_Model_Dto_BaseItemDto_IsType_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.Dto.BaseItemDto.IsType(System.ReadOnlySpan{System.Char})">IsType(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified type is type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsType(ReadOnlySpan&lt;char&gt; type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the specified type is type; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Dto.IItemDto.html">IItemDto</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Dto.IHasServerId.html">IHasServerId</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProviders_">ProviderIdsExtensions.HasProviderId(IHasProviderIds, MetadataProviders)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_">ProviderIdsExtensions.HasProviderId(IHasProviderIds, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProviders_">ProviderIdsExtensions.GetProviderId(IHasProviderIds, MetadataProviders)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_">ProviderIdsExtensions.GetProviderId(IHasProviderIds, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderIds_MediaBrowser_Model_Entities_IHasProviderIds_System_String_">ProviderIdsExtensions.GetProviderIds(IHasProviderIds, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String_">ProviderIdsExtensions.SetProviderId(IHasProviderIds, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String___">ProviderIdsExtensions.SetProviderId(IHasProviderIds, String, String[])</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProviders_System_String_">ProviderIdsExtensions.SetProviderId(IHasProviderIds, MetadataProviders, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProviders_System_String___">ProviderIdsExtensions.SetProviderId(IHasProviderIds, MetadataProviders, String[])</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

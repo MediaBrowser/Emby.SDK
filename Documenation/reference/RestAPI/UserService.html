@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UserService </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UserService ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/tag/UserService">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/tag/UserService">
+<div class="refdoc">
+
+<h1 id="emby_restapi_tag_UserService" data-uid="emby.restapi/tag/UserService" class="text-capitalize text-break">UserService</h1>
+
+
+<a href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+
+ <a class="xref" href="UserService/deleteUsersById.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/deleteUsersById/operationlistitem" class="text-capitalize">deleteUsersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Users/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a user</p>
+</div>
+ <a class="xref" href="UserService/deleteUsersByIdTrackselectionsByTracktype.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/deleteUsersByIdTrackselectionsByTracktype/operationlistitem" class="text-capitalize">deleteUsersByIdTrackselectionsByTracktype</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Users/{Id}/TrackSelections/{TrackType}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Clears audio or subtitle track selections for a user</p>
+</div>
+ <a class="xref" href="UserService/getUsersById.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/getUsersById/operationlistitem" class="text-capitalize">getUsersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a user by Id</p>
+</div>
+ <a class="xref" href="UserService/getUsersPrefixes.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/getUsersPrefixes/operationlistitem" class="text-capitalize">getUsersPrefixes</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/Prefixes</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a list of users</p>
+</div>
+ <a class="xref" href="UserService/getUsersPublic.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/getUsersPublic/operationlistitem" class="text-capitalize">getUsersPublic</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/Public</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a list of publicly visible users for display on a login screen.</p>
+</div>
+ <a class="xref" href="UserService/getUsersQuery.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/getUsersQuery/operationlistitem" class="text-capitalize">getUsersQuery</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/Query</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a list of users</p>
+</div>
+ <a class="xref" href="UserService/postUsersAuthenticatebyname.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersAuthenticatebyname/operationlistitem" class="text-capitalize">postUsersAuthenticatebyname</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/AuthenticateByName</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Authenticates a user</p>
+</div>
+ <a class="xref" href="UserService/postUsersById.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersById/operationlistitem" class="text-capitalize">postUsersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a user</p>
+</div>
+ <a class="xref" href="UserService/postUsersByIdAuthenticate.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdAuthenticate/operationlistitem" class="text-capitalize">postUsersByIdAuthenticate</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Authenticate</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Authenticates a user</p>
+</div>
+ <a class="xref" href="UserService/postUsersByIdConfiguration.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdConfiguration/operationlistitem" class="text-capitalize">postUsersByIdConfiguration</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Configuration</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a user configuration</p>
+</div>
+ <a class="xref" href="UserService/postUsersByIdDelete.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdDelete/operationlistitem" class="text-capitalize">postUsersByIdDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a user</p>
+</div>
+ <a class="xref" href="UserService/postUsersByIdEasypassword.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdEasypassword/operationlistitem" class="text-capitalize">postUsersByIdEasypassword</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/EasyPassword</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a user's easy password</p>
+</div>
+ <a class="xref" href="UserService/postUsersByIdPassword.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdPassword/operationlistitem" class="text-capitalize">postUsersByIdPassword</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Password</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a user's password</p>
+</div>
+ <a class="xref" href="UserService/postUsersByIdPolicy.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdPolicy/operationlistitem" class="text-capitalize">postUsersByIdPolicy</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Policy</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a user policy</p>
+</div>
+ <a class="xref" href="UserService/postUsersByIdTrackselectionsByTracktypeDelete.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdTrackselectionsByTracktypeDelete/operationlistitem" class="text-capitalize">postUsersByIdTrackselectionsByTracktypeDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/TrackSelections/{TrackType}/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Clears audio or subtitle track selections for a user</p>
+</div>
+ <a class="xref" href="UserService/postUsersForgotpassword.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersForgotpassword/operationlistitem" class="text-capitalize">postUsersForgotpassword</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/ForgotPassword</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Initiates the forgot password process for a local user</p>
+</div>
+ <a class="xref" href="UserService/postUsersForgotpasswordPin.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersForgotpasswordPin/operationlistitem" class="text-capitalize">postUsersForgotpasswordPin</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/ForgotPassword/Pin</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Redeems a forgot password pin</p>
+</div>
+ <a class="xref" href="UserService/postUsersNew.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersNew/operationlistitem" class="text-capitalize">postUsersNew</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/New</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Creates a user</p>
+</div>
+
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

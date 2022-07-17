@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>LiveTvService </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="LiveTvService ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/tag/LiveTvService">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/tag/LiveTvService">
+<div class="refdoc">
+
+<h1 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/tag/LiveTvService" class="text-capitalize text-break">LiveTvService</h1>
+
+
+<a href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+</a>
+
+ <a class="xref" href="LiveTvService/deleteLivetvChannelmappingoptions.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/deleteLivetvChannelmappingoptions/operationlistitem" class="text-capitalize">deleteLivetvChannelmappingoptions</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /LiveTv/ChannelMappingOptions</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/deleteLivetvChannelmappings.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/deleteLivetvChannelmappings/operationlistitem" class="text-capitalize">deleteLivetvChannelmappings</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /LiveTv/ChannelMappings</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/deleteLivetvListingproviders.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/deleteLivetvListingproviders/operationlistitem" class="text-capitalize">deleteLivetvListingproviders</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /LiveTv/ListingProviders</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a listing provider</p>
+</div>
+ <a class="xref" href="LiveTvService/deleteLivetvRecordingsById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/deleteLivetvRecordingsById/operationlistitem" class="text-capitalize">deleteLivetvRecordingsById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /LiveTv/Recordings/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a live tv recording</p>
+</div>
+ <a class="xref" href="LiveTvService/deleteLivetvSeriestimersById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/deleteLivetvSeriestimersById/operationlistitem" class="text-capitalize">deleteLivetvSeriestimersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /LiveTv/SeriesTimers/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Cancels a live tv series timer</p>
+</div>
+ <a class="xref" href="LiveTvService/deleteLivetvTimersById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/deleteLivetvTimersById/operationlistitem" class="text-capitalize">deleteLivetvTimersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /LiveTv/Timers/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Cancels a live tv timer</p>
+</div>
+ <a class="xref" href="LiveTvService/deleteLivetvTunerhosts.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/deleteLivetvTunerhosts/operationlistitem" class="text-capitalize">deleteLivetvTunerhosts</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /LiveTv/TunerHosts</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a tuner host</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvChannelmappingoptions.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvChannelmappingoptions/operationlistitem" class="text-capitalize">getLivetvChannelmappingoptions</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ChannelMappingOptions</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvChannelmappings.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvChannelmappings/operationlistitem" class="text-capitalize">getLivetvChannelmappings</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ChannelMappings</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvChannels.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvChannels/operationlistitem" class="text-capitalize">getLivetvChannels</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Channels</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets available live tv channels.</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvChannelsById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvChannelsById/operationlistitem" class="text-capitalize">getLivetvChannelsById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Channels/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a live tv channel</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvChanneltags.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvChanneltags/operationlistitem" class="text-capitalize">getLivetvChanneltags</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ChannelTags</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets live tv channel tags</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvChanneltagsPrefixes.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvChanneltagsPrefixes/operationlistitem" class="text-capitalize">getLivetvChanneltagsPrefixes</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ChannelTags/Prefixes</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets live tv channel tag prefixes</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvEPG.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvEPG/operationlistitem" class="text-capitalize">getLivetvEPG</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/EPG</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets the epg.</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvFolder.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvFolder/operationlistitem" class="text-capitalize">getLivetvFolder</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Folder</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets the top level live tv folder</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvGuideinfo.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvGuideinfo/operationlistitem" class="text-capitalize">getLivetvGuideinfo</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/GuideInfo</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets guide info</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvInfo.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvInfo/operationlistitem" class="text-capitalize">getLivetvInfo</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Info</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets available live tv services.</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvListingproviders.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvListingproviders/operationlistitem" class="text-capitalize">getLivetvListingproviders</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ListingProviders</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets current listing providers</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvListingprovidersAvailable.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvListingprovidersAvailable/operationlistitem" class="text-capitalize">getLivetvListingprovidersAvailable</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ListingProviders/Available</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets listing provider</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvListingprovidersDefault.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvListingprovidersDefault/operationlistitem" class="text-capitalize">getLivetvListingprovidersDefault</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ListingProviders/Default</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvListingprovidersLineups.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvListingprovidersLineups/operationlistitem" class="text-capitalize">getLivetvListingprovidersLineups</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ListingProviders/Lineups</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets available lineups</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvListingprovidersSchedulesdirectCountries.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvListingprovidersSchedulesdirectCountries/operationlistitem" class="text-capitalize">getLivetvListingprovidersSchedulesdirectCountries</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ListingProviders/SchedulesDirect/Countries</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets available lineups</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvLiverecordingsByIdStream.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvLiverecordingsByIdStream/operationlistitem" class="text-capitalize">getLivetvLiverecordingsByIdStream</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/LiveRecordings/{Id}/stream</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a live tv channel</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvLivestreamfilesByIdStreamByContainer.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvLivestreamfilesByIdStreamByContainer/operationlistitem" class="text-capitalize">getLivetvLivestreamfilesByIdStreamByContainer</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/LiveStreamFiles/{Id}/stream.{Container}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a live tv channel</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvManageChannels.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvManageChannels/operationlistitem" class="text-capitalize">getLivetvManageChannels</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Manage/Channels</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets the channel management list</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvPrograms.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvPrograms/operationlistitem" class="text-capitalize">getLivetvPrograms</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Programs</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets available live tv epgs..</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvProgramsRecommended.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvProgramsRecommended/operationlistitem" class="text-capitalize">getLivetvProgramsRecommended</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Programs/Recommended</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets available live tv epgs..</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvRecordings.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvRecordings/operationlistitem" class="text-capitalize">getLivetvRecordings</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Recordings</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets live tv recordings</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvRecordingsById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvRecordingsById/operationlistitem" class="text-capitalize">getLivetvRecordingsById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Recordings/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a live tv recording</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvRecordingsFolders.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvRecordingsFolders/operationlistitem" class="text-capitalize">getLivetvRecordingsFolders</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Recordings/Folders</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets recording folders</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvRecordingsGroups.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvRecordingsGroups/operationlistitem" class="text-capitalize">getLivetvRecordingsGroups</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Recordings/Groups</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets live tv recording groups</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvRecordingsSeries.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvRecordingsSeries/operationlistitem" class="text-capitalize">getLivetvRecordingsSeries</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Recordings/Series</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets live tv recordings</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvSeriestimers.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvSeriestimers/operationlistitem" class="text-capitalize">getLivetvSeriestimers</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/SeriesTimers</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets live tv series timers</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvSeriestimersById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvSeriestimersById/operationlistitem" class="text-capitalize">getLivetvSeriestimersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/SeriesTimers/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a live tv series timer</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvTimers.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvTimers/operationlistitem" class="text-capitalize">getLivetvTimers</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Timers</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets live tv timers</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvTimersById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvTimersById/operationlistitem" class="text-capitalize">getLivetvTimersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Timers/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a live tv timer</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvTimersDefaults.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvTimersDefaults/operationlistitem" class="text-capitalize">getLivetvTimersDefaults</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Timers/Defaults</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets default values for a new timer</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvTunerhosts.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvTunerhosts/operationlistitem" class="text-capitalize">getLivetvTunerhosts</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/TunerHosts</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets tuner hosts</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvTunerhostsDefaultByType.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvTunerhostsDefaultByType/operationlistitem" class="text-capitalize">getLivetvTunerhostsDefaultByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/TunerHosts/Default/{Type}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets tuner hosts</p>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvTunerhostsTypes.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvTunerhostsTypes/operationlistitem" class="text-capitalize">getLivetvTunerhostsTypes</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/TunerHosts/Types</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/getLivetvTunersDiscvover.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/getLivetvTunersDiscvover/operationlistitem" class="text-capitalize">getLivetvTunersDiscvover</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/Tuners/Discvover</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/headLivetvChannelmappingoptions.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/headLivetvChannelmappingoptions/operationlistitem" class="text-capitalize">headLivetvChannelmappingoptions</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /LiveTv/ChannelMappingOptions</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/headLivetvChannelmappings.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/headLivetvChannelmappings/operationlistitem" class="text-capitalize">headLivetvChannelmappings</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /LiveTv/ChannelMappings</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvChannelmappingoptions.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvChannelmappingoptions/operationlistitem" class="text-capitalize">postLivetvChannelmappingoptions</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/ChannelMappingOptions</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvChannelmappings.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvChannelmappings/operationlistitem" class="text-capitalize">postLivetvChannelmappings</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/ChannelMappings</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvListingproviders.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvListingproviders/operationlistitem" class="text-capitalize">postLivetvListingproviders</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/ListingProviders</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Adds a listing provider</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvListingprovidersDelete.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvListingprovidersDelete/operationlistitem" class="text-capitalize">postLivetvListingprovidersDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/ListingProviders/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a listing provider</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvManageChannelsByIdDisabled.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvManageChannelsByIdDisabled/operationlistitem" class="text-capitalize">postLivetvManageChannelsByIdDisabled</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Manage/Channels/{Id}/Disabled</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Sets a channel disabled or not</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvManageChannelsByIdSortindex.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvManageChannelsByIdSortindex/operationlistitem" class="text-capitalize">postLivetvManageChannelsByIdSortindex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Manage/Channels/{Id}/SortIndex</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Sets a channel sort index</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvPrograms.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvPrograms/operationlistitem" class="text-capitalize">postLivetvPrograms</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Programs</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets available live tv epgs..</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvRecordingsByIdDelete.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvRecordingsByIdDelete/operationlistitem" class="text-capitalize">postLivetvRecordingsByIdDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Recordings/{Id}/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a live tv recording</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvSeriestimers.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvSeriestimers/operationlistitem" class="text-capitalize">postLivetvSeriestimers</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/SeriesTimers</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Creates a live tv series timer</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvSeriestimersById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvSeriestimersById/operationlistitem" class="text-capitalize">postLivetvSeriestimersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/SeriesTimers/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a live tv series timer</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvSeriestimersByIdDelete.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvSeriestimersByIdDelete/operationlistitem" class="text-capitalize">postLivetvSeriestimersByIdDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/SeriesTimers/{Id}/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Cancels a live tv series timer</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvTimers.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvTimers/operationlistitem" class="text-capitalize">postLivetvTimers</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Timers</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Creates a live tv timer</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvTimersById.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvTimersById/operationlistitem" class="text-capitalize">postLivetvTimersById</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Timers/{Id}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a live tv timer</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvTimersByIdDelete.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvTimersByIdDelete/operationlistitem" class="text-capitalize">postLivetvTimersByIdDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Timers/{Id}/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Cancels a live tv timer</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvTunerhosts.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvTunerhosts/operationlistitem" class="text-capitalize">postLivetvTunerhosts</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/TunerHosts</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Adds a tuner host</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvTunerhostsDelete.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvTunerhostsDelete/operationlistitem" class="text-capitalize">postLivetvTunerhostsDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/TunerHosts/Delete</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Deletes a tuner host</p>
+</div>
+ <a class="xref" href="LiveTvService/postLivetvTunersByIdReset.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/postLivetvTunersByIdReset/operationlistitem" class="text-capitalize">postLivetvTunersByIdReset</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Tuners/{Id}/Reset</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Resets a tv tuner</p>
+</div>
+ <a class="xref" href="LiveTvService/putLivetvChannelmappingoptions.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/putLivetvChannelmappingoptions/operationlistitem" class="text-capitalize">putLivetvChannelmappingoptions</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-put">put</span> /LiveTv/ChannelMappingOptions</code></pre>
+</div>
+ <a class="xref" href="LiveTvService/putLivetvChannelmappings.html"><h3 id="emby_restapi_tag_LiveTvService" data-uid="emby.restapi/putLivetvChannelmappings/operationlistitem" class="text-capitalize">putLivetvChannelmappings</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-put">put</span> /LiveTv/ChannelMappings</code></pre>
+</div>
+
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

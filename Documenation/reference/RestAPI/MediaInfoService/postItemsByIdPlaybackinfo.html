@@ -1,0 +1,2312 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>postItemsByIdPlaybackinfo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="postItemsByIdPlaybackinfo ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/postItemsByIdPlaybackinfo">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/postItemsByIdPlaybackinfo">
+<div class="refdoc">
+
+<h1 id="emby_restapi_postItemsByIdPlaybackinfo" data-uid="emby.restapi/postItemsByIdPlaybackinfo" class="text-capitalize text-break">postItemsByIdPlaybackinfo</h1>
+<div class="markdown level0 summary"><p>Gets live playback media info for an item</p>
+</div>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
+</div>
+
+
+
+
+  
+  
+  
+   <h3 id="emby_restapi_postItemsByIdPlaybackinfo_operation" data-uid="emby.restapi/postItemsByIdPlaybackinfo/operation" style="display:none;" class="text-capitalize">postItemsByIdPlaybackinfo</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/PlaybackInfo</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>In</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*Id</span></td>
+        <td>path</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*body</span></td>
+        <td>body</td>
+        <td>
+  
+              <a href="#MediaBrowser_Model_MediaInfo_PlaybackInfoRequest" class="typelink">PlaybackInfoRequest</a>
+              
+        </td>
+        <td></td>
+        <td><p>PlaybackInfoRequest:</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+  
+              <a href="#MediaBrowser_Model_MediaInfo_PlaybackInfoResponse" class="typelink">PlaybackInfoResponse</a>
+              
+        </td>
+        <td><p>Operation successful. Returning a PlaybackInfoResponse object.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+  
+  <h3 id="MediaBrowser_Model_MediaInfo_PlaybackInfoRequest" class="text-capitalize">PlaybackInfoRequest</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.MediaInfo.PlaybackInfoRequest.html">MediaBrowser.Model.MediaInfo.PlaybackInfoRequest</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">UserId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxStreamingBitrate</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StartTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AudioStreamIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleStreamIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxAudioChannels</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MediaSourceId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LiveStreamId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeviceProfile</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_DeviceProfile" class="typelink">DeviceProfile[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableDirectPlay</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableDirectStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableTranscoding</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowInterlacedVideoStreamCopy</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowVideoStreamCopy</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowAudioStreamCopy</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsPlayback</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AutoOpenLiveStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DirectPlayProtocols</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CurrentPlaySessionId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_DeviceProfile" class="text-capitalize">DeviceProfile</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.DeviceProfile.html">MediaBrowser.Model.Dlna.DeviceProfile</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportedMediaTypes</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxStreamingBitrate</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MusicStreamingTranscodingBitrate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxStaticMusicBitrate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DirectPlayProfiles</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_DirectPlayProfile" class="typelink">DirectPlayProfile[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodingProfiles</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_TranscodingProfile" class="typelink">TranscodingProfile[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ContainerProfiles</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ContainerProfile" class="typelink">ContainerProfile[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CodecProfiles</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_CodecProfile" class="typelink">CodecProfile[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ResponseProfiles</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ResponseProfile" class="typelink">ResponseProfile[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleProfiles</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_SubtitleProfile" class="typelink">SubtitleProfile[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_DirectPlayProfile" class="text-capitalize">DirectPlayProfile</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.DirectPlayProfile.html">MediaBrowser.Model.Dlna.DirectPlayProfile</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AudioCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VideoCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_DlnaProfileType" class="typelink">DlnaProfileType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_DlnaProfileType" class="text-capitalize">DlnaProfileType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.DlnaProfileType.html">MediaBrowser.Model.Dlna.DlnaProfileType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Audio</li>
+  <li>Video</li>
+  <li>Photo</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_TranscodingProfile" class="text-capitalize">TranscodingProfile</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.TranscodingProfile.html">MediaBrowser.Model.Dlna.TranscodingProfile</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_DlnaProfileType" class="typelink">DlnaProfileType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VideoCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AudioCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Protocol</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EstimateContentLength</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableMpegtsM2TsMode</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodeSeekInfo</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_TranscodeSeekInfo" class="typelink">TranscodeSeekInfo</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CopyTimestamps</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Context</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_EncodingContext" class="typelink">EncodingContext</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxAudioChannels</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MinSegments</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SegmentLength</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BreakOnNonKeyFrames</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowInterlacedVideoStreamCopy</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ManifestSubtitles</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxManifestSubtitles</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_TranscodeSeekInfo" class="text-capitalize">TranscodeSeekInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.TranscodeSeekInfo.html">MediaBrowser.Model.Dlna.TranscodeSeekInfo</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Auto</li>
+  <li>Bytes</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_EncodingContext" class="text-capitalize">EncodingContext</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.EncodingContext.html">MediaBrowser.Model.Dlna.EncodingContext</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Streaming</li>
+  <li>Static</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_ContainerProfile" class="text-capitalize">ContainerProfile</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.ContainerProfile.html">MediaBrowser.Model.Dlna.ContainerProfile</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_DlnaProfileType" class="typelink">DlnaProfileType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Conditions</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ProfileCondition" class="typelink">ProfileCondition[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_ProfileCondition" class="text-capitalize">ProfileCondition</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.ProfileCondition.html">MediaBrowser.Model.Dlna.ProfileCondition</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Condition</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ProfileConditionType" class="typelink">ProfileConditionType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Property</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ProfileConditionValue" class="typelink">ProfileConditionValue</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Value</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsRequired</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_ProfileConditionType" class="text-capitalize">ProfileConditionType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.ProfileConditionType.html">MediaBrowser.Model.Dlna.ProfileConditionType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Equals</li>
+  <li>NotEquals</li>
+  <li>LessThanEqual</li>
+  <li>GreaterThanEqual</li>
+  <li>EqualsAny</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_ProfileConditionValue" class="text-capitalize">ProfileConditionValue</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.ProfileConditionValue.html">MediaBrowser.Model.Dlna.ProfileConditionValue</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>AudioChannels</li>
+  <li>AudioBitrate</li>
+  <li>AudioProfile</li>
+  <li>Width</li>
+  <li>Height</li>
+  <li>Has64BitOffsets</li>
+  <li>PacketLength</li>
+  <li>VideoBitDepth</li>
+  <li>VideoBitrate</li>
+  <li>VideoFramerate</li>
+  <li>VideoLevel</li>
+  <li>VideoProfile</li>
+  <li>VideoTimestamp</li>
+  <li>IsAnamorphic</li>
+  <li>RefFrames</li>
+  <li>NumAudioStreams</li>
+  <li>NumVideoStreams</li>
+  <li>IsSecondaryAudio</li>
+  <li>VideoCodecTag</li>
+  <li>IsAvc</li>
+  <li>IsInterlaced</li>
+  <li>AudioSampleRate</li>
+  <li>AudioBitDepth</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_CodecProfile" class="text-capitalize">CodecProfile</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.CodecProfile.html">MediaBrowser.Model.Dlna.CodecProfile</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_CodecType" class="typelink">CodecType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Conditions</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ProfileCondition" class="typelink">ProfileCondition[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ApplyConditions</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ProfileCondition" class="typelink">ProfileCondition[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Codec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_CodecType" class="text-capitalize">CodecType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.CodecType.html">MediaBrowser.Model.Dlna.CodecType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Video</li>
+  <li>VideoAudio</li>
+  <li>Audio</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_ResponseProfile" class="text-capitalize">ResponseProfile</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.ResponseProfile.html">MediaBrowser.Model.Dlna.ResponseProfile</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AudioCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VideoCodec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_DlnaProfileType" class="typelink">DlnaProfileType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OrgPn</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MimeType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Conditions</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_ProfileCondition" class="typelink">ProfileCondition[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_SubtitleProfile" class="text-capitalize">SubtitleProfile</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.SubtitleProfile.html">MediaBrowser.Model.Dlna.SubtitleProfile</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Format</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Method</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_SubtitleDeliveryMethod" class="typelink">SubtitleDeliveryMethod</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DidlMode</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Language</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Protocol</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dlna_SubtitleDeliveryMethod" class="text-capitalize">SubtitleDeliveryMethod</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.SubtitleDeliveryMethod.html">MediaBrowser.Model.Dlna.SubtitleDeliveryMethod</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Encode</li>
+  <li>Embed</li>
+  <li>External</li>
+  <li>Hls</li>
+  <li>VideoSideData</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_MediaInfo_MediaProtocol" class="text-capitalize">MediaProtocol</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaBrowser.Model.MediaInfo.MediaProtocol</a></p>
+
+  </div>
+  
+  <h3 id="MediaBrowser_Model_MediaInfo_PlaybackInfoResponse" class="text-capitalize">PlaybackInfoResponse</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.MediaInfo.PlaybackInfoResponse.html">MediaBrowser.Model.MediaInfo.PlaybackInfoResponse</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">MediaSources</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_MediaSourceInfo" class="typelink">MediaSourceInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlaySessionId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ErrorCode</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_PlaybackErrorCode" class="typelink">PlaybackErrorCode</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dto_MediaSourceInfo" class="text-capitalize">MediaSourceInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaBrowser.Model.Dto.MediaSourceInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Protocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Path</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EncoderPath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EncoderProtocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_MediaSourceType" class="typelink">MediaSourceType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Size</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SortName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsRemote</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RunTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ContainerStartTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsTranscoding</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsDirectStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsDirectPlay</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsInfiniteStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiresOpening</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OpenToken</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiresClosing</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LiveStreamId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BufferMs</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiresLooping</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsProbing</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Video3DFormat</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_Video3DFormat" class="typelink">Video3DFormat</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MediaStreams</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MediaStream" class="typelink">MediaStream[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Formats</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Bitrate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Timestamp</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_TransportStreamTimestamp" class="typelink">TransportStreamTimestamp</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiredHttpHeaders</span></td>
+              <td>
+                    object
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DirectStreamUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodingUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodingSubProtocol</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodingContainer</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AnalyzeDurationMs</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ReadAtNativeFramerate</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DefaultAudioStreamIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DefaultSubtitleStreamIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dto_MediaSourceType" class="text-capitalize">MediaSourceType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.MediaSourceType.html">MediaBrowser.Model.Dto.MediaSourceType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Default</li>
+  <li>Grouping</li>
+  <li>Placeholder</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_Video3DFormat" class="text-capitalize">Video3DFormat</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.Video3DFormat.html">MediaBrowser.Model.Entities.Video3DFormat</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>HalfSideBySide</li>
+  <li>FullSideBySide</li>
+  <li>FullTopAndBottom</li>
+  <li>HalfTopAndBottom</li>
+  <li>MVC</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_MediaStream" class="text-capitalize">MediaStream</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.MediaStream.html">MediaBrowser.Model.Entities.MediaStream</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Codec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CodecTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Language</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ColorTransfer</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ColorPrimaries</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ColorSpace</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Comment</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StreamStartTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TimeBase</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CodecTimeBase</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Title</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Extradata</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VideoRange</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayTitle</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayLanguage</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">NalLengthSize</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsInterlaced</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsAVC</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelLayout</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BitRate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BitDepth</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RefFrames</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Rotation</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Channels</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SampleRate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsDefault</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsForced</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Height</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Width</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AverageFrameRate</span></td>
+              <td>
+                    number
+                      (float)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RealFrameRate</span></td>
+              <td>
+                    number
+                      (float)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Profile</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MediaStreamType" class="typelink">MediaStreamType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AspectRatio</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Index</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsExternal</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeliveryMethod</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_SubtitleDeliveryMethod" class="typelink">SubtitleDeliveryMethod</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeliveryUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsExternalUrl</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsTextSubtitleStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsExternalStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Path</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Protocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PixelFormat</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Level</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsAnamorphic</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AttachmentSize</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MimeType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsClosedCaptions</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleLocationType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_SubtitleLocationType" class="typelink">SubtitleLocationType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_MediaStreamType" class="text-capitalize">MediaStreamType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.MediaStreamType.html">MediaBrowser.Model.Entities.MediaStreamType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Unknown</li>
+  <li>Audio</li>
+  <li>Video</li>
+  <li>Subtitle</li>
+  <li>EmbeddedImage</li>
+  <li>Attachment</li>
+  <li>Data</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_SubtitleLocationType" class="text-capitalize">SubtitleLocationType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.SubtitleLocationType.html">MediaBrowser.Model.Entities.SubtitleLocationType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>InternalStream</li>
+  <li>VideoSideData</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_MediaInfo_TransportStreamTimestamp" class="text-capitalize">TransportStreamTimestamp</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.MediaInfo.TransportStreamTimestamp.html">MediaBrowser.Model.MediaInfo.TransportStreamTimestamp</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Zero</li>
+  <li>Valid</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_PlaybackErrorCode" class="text-capitalize">PlaybackErrorCode</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.PlaybackErrorCode.html">MediaBrowser.Model.Dlna.PlaybackErrorCode</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>NotAllowed</li>
+  <li>NoCompatibleStream</li>
+  <li>RateLimitExceeded</li>
+  </ul>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

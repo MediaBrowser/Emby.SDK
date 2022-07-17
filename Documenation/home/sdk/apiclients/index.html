@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>REST API Clients </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="REST API Clients ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="rest-api-clients">REST API Clients</h1>
+
+<p>The SDK includes a number of auto-generated client libraries for accessing Emby Server via REST API.</p>
+<h3 id="important">Important</h3>
+<p>Those clients are provided AS-IS. We don't provide support or any of those clients, and these are are not guaranteed o work at all in the provided form.<br>
+It is rather expected that there are issues with each of hose clients. We still provide them because we think that hese might be helpful as a starting point and as an accelerator for developing applications accessing Emby Server.<br>
+For those reasons, the clients are provided als <strong>source code only</strong> rather than as compiled libraries.</p>
+<h3 id="licensing">Licensing</h3>
+<p>There are no licenses attached to the code and developers are absolutely free to decide how to make use of the provided code.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>While developers are free to do with the code whatever they like to do, we would like to ask you not to create any packages from the provided code and publish those to any package store in a way that they would appear to be official Emby packages.</p>
+<p><strong>Not OK:</strong> emby-javaclient, js.restclient.emby, Emby.Server.ApiClient<br>
+<strong>OK:</strong> franks-embyclient-java, js.acme.foo.embyclient, SoftLib.Core.EmbyClient</p>
+</div>
+<h3 id="usage">Usage</h3>
+<p>In general, we do not recommend to use the code, compile a library from it, and then try to use such compiled library. Over time,  too many adjustments will be required to get it working according to your requirements.<br>
+It is a better approach to include the provided source code files in your development directly and use these as your own code, just as when you would have to build this all from scratch.
+Of course you are free to take just the parts you need - like model classes or just the code for those APIs that you actually need.</p>
+<p>We hope this will be useful for your project!</p>
+<h2 id="available-implementations">Available Implementations</h2>
+<table>
+<thead>
+<tr>
+<th>Client</th>
+<th>Language</th>
+<th>SDK Folder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Net.RestSharp/README.html">Net.RestSharp Client</a></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</a></td>
+<td>SampleCode/RestApi/Clients/Net.RestSharp</td>
+</tr>
+<tr>
+<td><a href="Net.AutoRest/README.html">Net.AutoRest Client</a></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</a></td>
+<td>SampleCode/RestApi/Clients/Net.AutoRest</td>
+</tr>
+<tr>
+<td><a href="Java/README.html">Java Client</a></td>
+<td><a href="https://www.java.com/">Java</a></td>
+<td>SampleCode/RestApi/Clients/Java</td>
+</tr>
+<tr>
+<td><a href="JavaScript/README.html">JavaScript Client</a></td>
+<td><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></td>
+<td>SampleCode/RestApi/Clients/JavaScript</td>
+</tr>
+<tr>
+<td><a href="TypeScript/README.html">TypeScript Client</a></td>
+<td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
+<td>SampleCode/RestApi/Clients/TypeScript</td>
+</tr>
+<tr>
+<td><a href="Python/README.html">Python Client</a></td>
+<td><a href="https://www.python.org/">Python</a></td>
+<td>SampleCode/RestApi/Clients/Python</td>
+</tr>
+<tr>
+<td><a href="Swift5/README.html">Swift Client</a></td>
+<td><a href="https://swift.org/">Swift</a></td>
+<td>SampleCode/RestApi/Clients/Swift5</td>
+</tr>
+<tr>
+<td><a href="Go/README.html">Go Client</a></td>
+<td><a href="https://go.dev/">Go</a></td>
+<td>SampleCode/RestApi/Clients/Go</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation-links">Documentation Links</h2>
+<p>For general documentation, please refer to <a href="../../../doc/restapi/index.html">Accessing Emby Server via REST API</a>.</p>
+<p>The available API endpoints are documented in the <a href="../../../reference/RestAPI.html">REST API Reference</a> section.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

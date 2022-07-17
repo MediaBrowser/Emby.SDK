@@ -1,0 +1,2259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Video
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Video
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Entities.Video">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Entities.Video">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_Entities_Video" data-uid="MediaBrowser.Controller.Entities.Video" class="text-break">Class Video
+  </h1>
+  <div class="markdown level0 summary"><p>Class Video</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></div>
+    <div class="level2"><span class="xref">Video</span></div>
+      <div class="level3"><a class="xref" href="MediaBrowser.Controller.Entities.Movies.Movie.html">Movie</a></div>
+      <div class="level3"><a class="xref" href="MediaBrowser.Controller.Entities.MusicVideo.html">MusicVideo</a></div>
+      <div class="level3"><a class="xref" href="MediaBrowser.Controller.Entities.Trailer.html">Trailer</a></div>
+      <div class="level3"><a class="xref" href="MediaBrowser.Controller.Entities.TV.Episode.html">Episode</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
+    <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
+    <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasMediaSources.html">IHasMediaSources</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlayCount">BaseItem.PlayCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LastPlayedDate">BaseItem.LastPlayedDate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Played">BaseItem.Played</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AudioStreamIndex">BaseItem.AudioStreamIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SubtitleStreamIndex">BaseItem.SubtitleStreamIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserDataKey">BaseItem.UserDataKey</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFavorite">BaseItem.IsFavorite</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlaybackPositionTicks">BaseItem.PlaybackPositionTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserDataSet">BaseItem.UserDataSet</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_InternalId">BaseItem.InternalId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoteTrailers">BaseItem.RemoteTrailers</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ListItemEntryId">BaseItem.ListItemEntryId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugReplaceChars">BaseItem.SlugReplaceChars</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugChar">BaseItem.SlugChar</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions">BaseItem.SupportedImageExtensions</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensionsList">BaseItem.SupportedImageExtensionsList</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrailerFolderName">BaseItem.TrailerFolderName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongsFolderName">BaseItem.ThemeSongsFolderName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongFilename">BaseItem.ThemeSongFilename</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeVideosFolderName">BaseItem.ThemeVideosFolderName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExtrasSubFolders">BaseItem.ExtrasSubFolders</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsUserData">BaseItem.SupportsUserData</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds">BaseItem.ThemeSongIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPlaceHolder">BaseItem.IsPlaceHolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeVideoIds">BaseItem.ThemeVideoIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsCompleteMedia">BaseItem.IsCompleteMedia</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds">BaseItem.LocalTrailerIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayExtraTypes">BaseItem.DisplayExtraTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayExtraIds">BaseItem.GetDisplayExtraIds()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtraGuids_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtraGuids(ExtraType[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalParts_System_Int64_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_">BaseItem.GetAdditionalParts(Int64, DtoOptions, User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalPartIds_System_Int64_">BaseItem.GetAdditionalPartIds(Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtraIds_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtraIds(ExtraType[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtras(ExtraType[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Int64_System_String_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetExtras(Int64, String, ExtraType[], DtoOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Int64_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetExtras(Int64, ExtraType[], DtoOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeSongs">BaseItem.GetThemeSongs()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos">BaseItem.GetThemeVideos()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PreferredMetadataCountryCode">BaseItem.PreferredMetadataCountryCode</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PreferredMetadataLanguage">BaseItem.PreferredMetadataLanguage</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Size">BaseItem.Size</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Prefix">BaseItem.Prefix</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Container">BaseItem.Container</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Tagline">BaseItem.Tagline</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImageInfos">BaseItem.ImageInfos</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVirtualItem">BaseItem.IsVirtualItem</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AlbumId">BaseItem.AlbumId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Album">BaseItem.Album</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsEditingAlbum">BaseItem.SupportsEditingAlbum</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetStandaloneDisplayName">BaseItem.GetStandaloneDisplayName()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsInMixedFolder">BaseItem.IsInMixedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayOrderIntValue">BaseItem.GetDisplayOrderIntValue()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetDisplayOrder_System_String_">BaseItem.SetDisplayOrder(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaContainingFolderPath_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaContainingFolderPath(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsRemoteImageDownloading">BaseItem.SupportsRemoteImageDownloading</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Name">BaseItem.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsShortcut">BaseItem.IsShortcut</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsUnaired">BaseItem.IsUnaired</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TotalBitrate">BaseItem.TotalBitrate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExtraType">BaseItem.ExtraType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsThemeMedia">BaseItem.IsThemeMedia</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OriginalTitle">BaseItem.OriginalTitle</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Id">BaseItem.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultMediaSourceId">BaseItem.GetDefaultMediaSourceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OwnerId">BaseItem.OwnerId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Width">BaseItem.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Height">BaseItem.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayPreferencesId">BaseItem.DisplayPreferencesId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Path">BaseItem.Path</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExternalId">BaseItem.ExternalId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SeriesPresentationUniqueKey">BaseItem.SeriesPresentationUniqueKey</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHidden">BaseItem.IsHidden</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetOwner">BaseItem.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocationType">BaseItem.LocationType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PathProtocol">BaseItem.PathProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_MediaBrowser_Model_MediaInfo_MediaProtocol_">BaseItem.IsPathProtocol(MediaProtocol)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFileProtocol">BaseItem.IsFileProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasPathProtocol">BaseItem.HasPathProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FileName">BaseItem.FileName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableAlphaNumericSorting">BaseItem.EnableAlphaNumericSorting</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PrimaryImagePath">BaseItem.PrimaryImagePath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsMetadataFetcherEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsMetadataFetcherEnabled(LibraryOptions, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsImageFetcherEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsImageFetcherEnabled(LibraryOptions, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDownload_MediaBrowser_Controller_Entities_User_">BaseItem.IsAuthorizedToDownload(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload_MediaBrowser_Controller_Entities_User_">BaseItem.CanDownload(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownloadAsSingleMedia">BaseItem.CanDownloadAsSingleMedia()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownloadAsFolder">BaseItem.CanDownloadAsFolder()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateCreated">BaseItem.DateCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateModified">BaseItem.DateModified</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateModifiedChanged_System_DateTimeOffset_">BaseItem.HasDateModifiedChanged(DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastSaved">BaseItem.DateLastSaved</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastRefreshed">BaseItem.DateLastRefreshed</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsGreaterThanDateLastSaved_System_DateTimeOffset_">BaseItem.IsGreaterThanDateLastSaved(DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Logger">BaseItem.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LibraryManager">BaseItem.LibraryManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserManager">BaseItem.UserManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ConfigurationManager">BaseItem.ConfigurationManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProviderManager">BaseItem.ProviderManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalizationManager">BaseItem.LocalizationManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ItemRepository">BaseItem.ItemRepository</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FileSystem">BaseItem.FileSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserDataManager">BaseItem.UserDataManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ChannelManager">BaseItem.ChannelManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaSourceManager">BaseItem.MediaSourceManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ToString">BaseItem.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsLocked">BaseItem.IsLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LockedFields">BaseItem.LockedFields</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SortName">BaseItem.SortName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetSortNameDirect_System_String_">BaseItem.SetSortNameDirect(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFieldLocked_MediaBrowser_Model_Entities_MetadataFields_">BaseItem.IsFieldLocked(MetadataFields)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddProviderIdsToName_System_String_System_String___">BaseItem.AddProviderIdsToName(String, String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath">BaseItem.GetInternalMetadataPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_">BaseItem.GetInternalMetadataPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_Guid_System_String_">BaseItem.GetInternalMetadataPath(Guid, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreateSortName">BaseItem.CreateSortName()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreateSortName_System_ReadOnlySpan_System_Char__">BaseItem.CreateSortName(ReadOnlySpan&lt;Char&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ParentId">BaseItem.ParentId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Parent">BaseItem.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_Folder_">BaseItem.SetParent(Folder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParent">BaseItem.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParents">BaseItem.GetParents()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FindParent__1">BaseItem.FindParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayParentId">BaseItem.DisplayParentId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImageDisplayParentId">BaseItem.ImageDisplayParentId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayParent">BaseItem.DisplayParent</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PremiereDate">BaseItem.PremiereDate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EndDate">BaseItem.EndDate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OfficialRating">BaseItem.OfficialRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CriticRating">BaseItem.CriticRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CustomRating">BaseItem.CustomRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Overview">BaseItem.Overview</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Studios">BaseItem.Studios</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_StudioItems">BaseItem.StudioItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Genres">BaseItem.Genres</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GenreItems">BaseItem.GenreItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Tags">BaseItem.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TagItems">BaseItem.TagItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Collections">BaseItem.Collections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImportedCollections">BaseItem.ImportedCollections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImportedCollections">BaseItem.GetImportedCollections()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAllKnownCollections">BaseItem.GetAllKnownCollections()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImportedCollections_MediaBrowser_Model_Dto_LinkedItemInfo___">BaseItem.AddImportedCollections(LinkedItemInfo[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ContainsTag_System_String_">BaseItem.ContainsTag(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetTags_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetTags(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetCollections_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetCollections(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetGenres_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetGenres(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProductionLocations">BaseItem.ProductionLocations</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CommunityRating">BaseItem.CommunityRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RunTimeTicks">BaseItem.RunTimeTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProductionYear">BaseItem.ProductionYear</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IndexNumber">BaseItem.IndexNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ParentIndexNumber">BaseItem.ParentIndexNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OfficialRatingForComparison">BaseItem.OfficialRatingForComparison</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CustomRatingForComparison">BaseItem.CustomRatingForComparison</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPlayAccess_MediaBrowser_Controller_Entities_User_">BaseItem.GetPlayAccess(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaStreams">BaseItem.GetMediaStreams()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkTaggedItemsLoaded">BaseItem.MarkTaggedItemsLoaded()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnsureTaggedItemsLoaded">BaseItem.EnsureTaggedItemsLoaded()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetSupportedItemLinkTypes">BaseItem.GetSupportedItemLinkTypes()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FillItemLinks_System_Collections_Generic_List_System_ValueTuple_MediaBrowser_Controller_Library_ItemLinkType_System_String_System_Int64___">BaseItem.FillItemLinks(List&lt;(T1, T2, T3)&lt;ItemLinkType, String, Int64&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaSources(Boolean, Boolean, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaSources(User, Boolean, Boolean, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TriggerOnRefreshStart">BaseItem.TriggerOnRefreshStart()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TriggerOnRefreshComplete">BaseItem.TriggerOnRefreshComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableInternalIdsExternally">BaseItem.EnableInternalIdsExternally</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientId">BaseItem.GetClientId()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientId_System_Boolean_">BaseItem.GetClientId(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, LibraryOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsOwnedItems">BaseItem.SupportsOwnedItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsTags">BaseItem.SupportsTags</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsCollections">BaseItem.SupportsCollections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_">BaseItem.RefreshedOwnedItems(MetadataRefreshOptions, LibraryOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.GetFileSystemChildren(IDirectoryService)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUniquelyIdentifiableProviderIds">BaseItem.GetUniquelyIdentifiableProviderIds()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProviderIds">BaseItem.ProviderIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LatestItemsContainerId">BaseItem.LatestItemsContainerId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ForceDefaultAspectRatio">BaseItem.ForceDefaultAspectRatio</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPrimaryImageAspectRatio">BaseItem.GetDefaultPrimaryImageAspectRatio()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey">BaseItem.CreatePresentationUniqueKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPresentationUniqueKey">BaseItem.GetDefaultPresentationUniqueKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PresentationUniqueKey">BaseItem.PresentationUniqueKey</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey">BaseItem.GetPresentationUniqueKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RequiresRefresh_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.RequiresRefresh(IDirectoryService)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AfterMetadataRefresh">BaseItem.AfterMetadataRefresh()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataLanguage">BaseItem.GetPreferredMetadataLanguage()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataLanguage_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredMetadataLanguage(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredImageLanguage_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredImageLanguage(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataCountryCode">BaseItem.GetPreferredMetadataCountryCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataCountryCode_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredMetadataCountryCode(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalMetadataEnabled(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsParentalAllowed_MediaBrowser_Controller_Entities_User_">BaseItem.IsParentalAllowed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParentalRatingValue">BaseItem.GetParentalRatingValue()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInheritedParentalRatingValue">BaseItem.GetInheritedParentalRatingValue()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleViaTags_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleViaTags(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedType">BaseItem.GetBlockUnratedType()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedValue_MediaBrowser_Model_Users_UserPolicy_">BaseItem.GetBlockUnratedValue(UserPolicy)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisible_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisible(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandalone_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandalone(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsInheritedParentImages">BaseItem.SupportsInheritedParentImages</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandaloneInternal_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandaloneInternal(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFolder">BaseItem.IsFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsDisplayedAsFolder">BaseItem.IsDisplayedAsFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientTypeName">BaseItem.GetClientTypeName()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableRememberingTrackSelections">BaseItem.EnableRememberingTrackSelections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddStudio_System_String_">BaseItem.AddStudio(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetStudios_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetStudios(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddGenre_System_String_">BaseItem.AddGenre(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollection_System_String_">BaseItem.AddCollection(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollection_MediaBrowser_Model_Dto_LinkedItemInfo_">BaseItem.AddCollection(LinkedItemInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollectionInfo_MediaBrowser_Model_Dto_LinkedItemInfo_">BaseItem.AddCollectionInfo(LinkedItemInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollection_MediaBrowser_Controller_Entities_BoxSet_">BaseItem.AddCollection(BoxSet)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveCollection_System_Int64_">BaseItem.RemoveCollection(Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_System_DateTimeOffset__System_Boolean_">BaseItem.MarkPlayed(User, Nullable&lt;DateTimeOffset&gt;, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateHideFromResume_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_UserItemData_System_Boolean_">BaseItem.UpdateHideFromResume(User, UserItemData, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkUnplayed_MediaBrowser_Controller_Entities_User_">BaseItem.MarkUnplayed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasImage_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.HasImage(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetImage_MediaBrowser_Controller_Entities_ItemImageInfo_System_Int32_">BaseItem.SetImage(ItemImageInfo, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetImage_MediaBrowser_Controller_Entities_ItemImageInfo_System_Int32_System_Boolean_">BaseItem.SetImage(ItemImageInfo, Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImage_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Model_Entities_ImageType_">BaseItem.AddImage(FileSystemMetadata, ImageType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DeleteImage_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.DeleteImage(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImage_MediaBrowser_Model_Entities_ImageType_System_String_">BaseItem.RemoveImage(ImageType, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImage_MediaBrowser_Controller_Entities_ItemImageInfo_">BaseItem.RemoveImage(ItemImageInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_List_MediaBrowser_Controller_Entities_ItemImageInfo__">BaseItem.RemoveImages(List&lt;ItemImageInfo&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_">BaseItem.UpdateToRepository(ItemUpdateType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Providers_MetadataRefreshOptions_">BaseItem.UpdateToRepository(ItemUpdateType, MetadataRefreshOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImagePath_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.GetImagePath(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImageInfo_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.GetImageInfo(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImages_MediaBrowser_Model_Entities_ImageType_">BaseItem.GetImages(ImageType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImages_MediaBrowser_Model_Entities_ImageType_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Boolean_">BaseItem.AddImages(ImageType, List&lt;FileSystemMetadata&gt;, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetLocalMetadataFilesToDelete">BaseItem.GetLocalMetadataFilesToDelete()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowsMultipleImages_MediaBrowser_Model_Entities_ImageType_">BaseItem.AllowsMultipleImages(ImageType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ReorderImage_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_">BaseItem.ReorderImage(ImageType, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MoveFiles_System_String___System_String___">BaseItem.MoveFiles(String[], String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPlayed_MediaBrowser_Controller_Entities_User_">BaseItem.IsPlayed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFavoriteOrLiked_MediaBrowser_Controller_Entities_User_">BaseItem.IsFavoriteOrLiked(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsUnplayed_MediaBrowser_Controller_Entities_User_">BaseItem.IsUnplayed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_IHasLookupInfo_MediaBrowser_Controller_Providers_ItemLookupInfo__GetLookupInfo_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IHasLookupInfo&lt;ItemLookupInfo&gt;.GetLookupInfo(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemLookupInfo__1_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetItemLookupInfo&lt;T&gt;(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetNameForMetadataLookup">BaseItem.GetNameForMetadataLookup()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_BeforeMetadataRefresh_System_Boolean_">BaseItem.BeforeMetadataRefresh(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMappedPath_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaProtocol__MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMappedPath(String, Nullable&lt;MediaProtocol&gt;, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadataForOwnedItem(BaseItem, MetadataRefreshOptions, LibraryOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetEtag_MediaBrowser_Controller_Entities_User_">BaseItem.GetEtag(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetEtagValues_MediaBrowser_Controller_Entities_User_">BaseItem.GetEtagValues(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalAncestorIds">BaseItem.GetInternalAncestorIds()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParentId">BaseItem.GetTopParentId()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsTopParent">BaseItem.IsTopParent</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery">BaseItem.GetIdsForAncestorQuery()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRefreshProgress">BaseItem.GetRefreshProgress()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_MediaBrowser_Controller_Entities_BaseItem___">BaseItem.UpdateRatingToItems(BaseItem[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowEditingField_MediaBrowser_Model_Entities_MetadataFields_">BaseItem.AllowEditingField(MetadataFields)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_Entities_Video_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Video : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasMediaSources</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_ContainingFolderPath_" data-uid="MediaBrowser.Controller.Entities.Video.ContainingFolderPath*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_ContainingFolderPath" data-uid="MediaBrowser.Controller.Entities.Video.ContainingFolderPath">ContainingFolderPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override string ContainingFolderPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ContainingFolderPath">BaseItem.ContainingFolderPath</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_EnableAlternateVersions_" data-uid="MediaBrowser.Controller.Entities.Video.EnableAlternateVersions*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_EnableAlternateVersions" data-uid="MediaBrowser.Controller.Entities.Video.EnableAlternateVersions">EnableAlternateVersions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+protected virtual bool EnableAlternateVersions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_EnableDefaultVideoUserDataKeys_" data-uid="MediaBrowser.Controller.Entities.Video.EnableDefaultVideoUserDataKeys*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_EnableDefaultVideoUserDataKeys" data-uid="MediaBrowser.Controller.Entities.Video.EnableDefaultVideoUserDataKeys">EnableDefaultVideoUserDataKeys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+protected virtual bool EnableDefaultVideoUserDataKeys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_FileNameWithoutExtension_" data-uid="MediaBrowser.Controller.Entities.Video.FileNameWithoutExtension*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_FileNameWithoutExtension" data-uid="MediaBrowser.Controller.Entities.Video.FileNameWithoutExtension">FileNameWithoutExtension</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override string FileNameWithoutExtension { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FileNameWithoutExtension">BaseItem.FileNameWithoutExtension</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_Is3D_" data-uid="MediaBrowser.Controller.Entities.Video.Is3D*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_Is3D" data-uid="MediaBrowser.Controller.Entities.Video.Is3D">Is3D</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether [is3 D].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public bool Is3D { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [is3 D]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_IsResolvedToFolder_" data-uid="MediaBrowser.Controller.Entities.Video.IsResolvedToFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_IsResolvedToFolder" data-uid="MediaBrowser.Controller.Entities.Video.IsResolvedToFolder">IsResolvedToFolder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool IsResolvedToFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsResolvedToFolder">BaseItem.IsResolvedToFolder</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_LiveTvManager_" data-uid="MediaBrowser.Controller.Entities.Video.LiveTvManager*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_LiveTvManager" data-uid="MediaBrowser.Controller.Entities.Video.LiveTvManager">LiveTvManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILiveTvManager LiveTvManager { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.LiveTv.ILiveTvManager.html">ILiveTvManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_MediaType_" data-uid="MediaBrowser.Controller.Entities.Video.MediaType*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_MediaType" data-uid="MediaBrowser.Controller.Entities.Video.MediaType">MediaType</h4>
+  <div class="markdown level1 summary"><p>Gets the type of the media.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override string MediaType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The type of the media.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaType">BaseItem.MediaType</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsExternalTransfer_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsExternalTransfer*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsExternalTransfer" data-uid="MediaBrowser.Controller.Entities.Video.SupportsExternalTransfer">SupportsExternalTransfer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsExternalTransfer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsExternalTransfer">BaseItem.SupportsExternalTransfer</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsExtras_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsExtras*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsExtras" data-uid="MediaBrowser.Controller.Entities.Video.SupportsExtras">SupportsExtras</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsExtras { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsExtras">BaseItem.SupportsExtras</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsGenres_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsGenres*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsGenres" data-uid="MediaBrowser.Controller.Entities.Video.SupportsGenres">SupportsGenres</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsGenres { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsGenres">BaseItem.SupportsGenres</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsLocalTrailers_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsLocalTrailers*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsLocalTrailers" data-uid="MediaBrowser.Controller.Entities.Video.SupportsLocalTrailers">SupportsLocalTrailers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsLocalTrailers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsLocalTrailers">BaseItem.SupportsLocalTrailers</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsPeople_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsPeople*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsPeople" data-uid="MediaBrowser.Controller.Entities.Video.SupportsPeople">SupportsPeople</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsPeople { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPeople">BaseItem.SupportsPeople</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsStudios_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsStudios*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsStudios" data-uid="MediaBrowser.Controller.Entities.Video.SupportsStudios">SupportsStudios</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsStudios { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsStudios">BaseItem.SupportsStudios</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsThemeMedia_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsThemeMedia*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsThemeMedia" data-uid="MediaBrowser.Controller.Entities.Video.SupportsThemeMedia">SupportsThemeMedia</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsThemeMedia { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsThemeMedia">BaseItem.SupportsThemeMedia</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsThumbnails_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsThumbnails*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsThumbnails" data-uid="MediaBrowser.Controller.Entities.Video.SupportsThumbnails">SupportsThumbnails</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public bool SupportsThumbnails { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_Video3DFormat_" data-uid="MediaBrowser.Controller.Entities.Video.Video3DFormat*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_Video3DFormat" data-uid="MediaBrowser.Controller.Entities.Video.Video3DFormat">Video3DFormat</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the video3 D format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public Video3DFormat? Video3DFormat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
+        <td><p>The video3 D format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_CanDownload_" data-uid="MediaBrowser.Controller.Entities.Video.CanDownload*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_CanDownload" data-uid="MediaBrowser.Controller.Entities.Video.CanDownload">CanDownload()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanDownload()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_CreateBif_" data-uid="MediaBrowser.Controller.Entities.Video.CreateBif*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_CreateBif_System_IO_Stream_System_Int32_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__" data-uid="MediaBrowser.Controller.Entities.Video.CreateBif(System.IO.Stream,System.Int32,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata})">CreateBif(Stream, Int32, List&lt;FileSystemMetadata&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static async Task CreateBif(Stream stream, int intervalMs, List&lt;FileSystemMetadata&gt; images)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">intervalMs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><span class="parametername">images</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_CreatePresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.Video.CreatePresentationUniqueKey*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_CreatePresentationUniqueKey_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Video.CreatePresentationUniqueKey(MediaBrowser.Model.Configuration.LibraryOptions)">CreatePresentationUniqueKey(LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string CreatePresentationUniqueKey(LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.CreatePresentationUniqueKey(LibraryOptions)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetAllItemsForMediaSources_" data-uid="MediaBrowser.Controller.Entities.Video.GetAllItemsForMediaSources*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetAllItemsForMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Video.GetAllItemsForMediaSources(MediaBrowser.Controller.Entities.User,System.Boolean)">GetAllItemsForMediaSources(User, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override List&lt;Tuple&lt;BaseItem, MediaSourceType&gt;&gt; GetAllItemsForMediaSources(User user, bool enableAlternateMediaSources)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableAlternateMediaSources</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.MediaSourceType.html">MediaSourceType</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAllItemsForMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_">BaseItem.GetAllItemsForMediaSources(User, Boolean)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetAlternateVersionIds_" data-uid="MediaBrowser.Controller.Entities.Video.GetAlternateVersionIds*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetAlternateVersionIds" data-uid="MediaBrowser.Controller.Entities.Video.GetAlternateVersionIds">GetAlternateVersionIds()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;long&gt; GetAlternateVersionIds()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetDefaultVideoStream_" data-uid="MediaBrowser.Controller.Entities.Video.GetDefaultVideoStream*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetDefaultVideoStream" data-uid="MediaBrowser.Controller.Entities.Video.GetDefaultVideoStream">GetDefaultVideoStream()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaStream GetDefaultVideoStream()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetDeletePaths_" data-uid="MediaBrowser.Controller.Entities.Video.GetDeletePaths*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetDeletePaths_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Video.GetDeletePaths(System.Boolean)">GetDeletePaths(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override List&lt;FileSystemMetadata&gt; GetDeletePaths(bool mediaFilesOnly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">mediaFilesOnly</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDeletePaths_System_Boolean_">BaseItem.GetDeletePaths(Boolean)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetLocalThumbnailSetInfos_" data-uid="MediaBrowser.Controller.Entities.Video.GetLocalThumbnailSetInfos*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetLocalThumbnailSetInfos_System_ReadOnlySpan_System_Char__MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Video.GetLocalThumbnailSetInfos(System.ReadOnlySpan{System.Char},MediaBrowser.Controller.Providers.IDirectoryService)">GetLocalThumbnailSetInfos(ReadOnlySpan&lt;Char&gt;, IDirectoryService)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;ThumbnailSetInfo&gt; GetLocalThumbnailSetInfos(ReadOnlySpan&lt;char&gt; videoPath, IDirectoryService directoryService)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">videoPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
+        <td><span class="parametername">directoryService</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ThumbnailSetInfo.html">ThumbnailSetInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetMetadataFolderThumbnailSetInfos_" data-uid="MediaBrowser.Controller.Entities.Video.GetMetadataFolderThumbnailSetInfos*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetMetadataFolderThumbnailSetInfos_System_ReadOnlySpan_System_Char__System_Guid_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Video.GetMetadataFolderThumbnailSetInfos(System.ReadOnlySpan{System.Char},System.Guid,MediaBrowser.Controller.Providers.IDirectoryService)">GetMetadataFolderThumbnailSetInfos(ReadOnlySpan&lt;Char&gt;, Guid, IDirectoryService)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;ThumbnailSetInfo&gt; GetMetadataFolderThumbnailSetInfos(ReadOnlySpan&lt;char&gt; videoPath, Guid itemGuid, IDirectoryService directoryService)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">videoPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemGuid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
+        <td><span class="parametername">directoryService</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ThumbnailSetInfo.html">ThumbnailSetInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetRelatedUrls_" data-uid="MediaBrowser.Controller.Entities.Video.GetRelatedUrls*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetRelatedUrls" data-uid="MediaBrowser.Controller.Entities.Video.GetRelatedUrls">GetRelatedUrls()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override List&lt;ExternalUrl&gt; GetRelatedUrls()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.ExternalUrl.html">ExternalUrl</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetRunTimeTicksForPlayState_" data-uid="MediaBrowser.Controller.Entities.Video.GetRunTimeTicksForPlayState*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetRunTimeTicksForPlayState" data-uid="MediaBrowser.Controller.Entities.Video.GetRunTimeTicksForPlayState">GetRunTimeTicksForPlayState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long GetRunTimeTicksForPlayState()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRunTimeTicksForPlayState">BaseItem.GetRunTimeTicksForPlayState()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetSupportsPositionTicksResume_" data-uid="MediaBrowser.Controller.Entities.Video.GetSupportsPositionTicksResume*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetSupportsPositionTicksResume_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Video.GetSupportsPositionTicksResume(MediaBrowser.Model.Configuration.LibraryOptions)">GetSupportsPositionTicksResume(LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool GetSupportsPositionTicksResume(LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetSupportsPositionTicksResume_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetSupportsPositionTicksResume(LibraryOptions)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetThumbnailSetInfos_" data-uid="MediaBrowser.Controller.Entities.Video.GetThumbnailSetInfos*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetThumbnailSetInfos_System_ReadOnlySpan_System_Char__System_Guid_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Video.GetThumbnailSetInfos(System.ReadOnlySpan{System.Char},System.Guid,MediaBrowser.Controller.Providers.IDirectoryService)">GetThumbnailSetInfos(ReadOnlySpan&lt;Char&gt;, Guid, IDirectoryService)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;ThumbnailSetInfo&gt; GetThumbnailSetInfos(ReadOnlySpan&lt;char&gt; videoPath, Guid itemGuid, IDirectoryService directoryService)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">videoPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemGuid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
+        <td><span class="parametername">directoryService</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ThumbnailSetInfo.html">ThumbnailSetInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetThumbnailSetInfos_" data-uid="MediaBrowser.Controller.Entities.Video.GetThumbnailSetInfos*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetThumbnailSetInfos_System_ReadOnlySpan_System_Char__System_Guid_MediaBrowser_Controller_Providers_IDirectoryService_System_Int32_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Video.GetThumbnailSetInfos(System.ReadOnlySpan{System.Char},System.Guid,MediaBrowser.Controller.Providers.IDirectoryService,System.Int32,System.Boolean)">GetThumbnailSetInfos(ReadOnlySpan&lt;Char&gt;, Guid, IDirectoryService, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;ThumbnailSetInfo&gt; GetThumbnailSetInfos(ReadOnlySpan&lt;char&gt; videoPath, Guid itemGuid, IDirectoryService directoryService, int maxWidth, bool enableStrictWidthRequirement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">videoPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemGuid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
+        <td><span class="parametername">directoryService</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">maxWidth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableStrictWidthRequirement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ThumbnailSetInfo.html">ThumbnailSetInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetUserDataKey_" data-uid="MediaBrowser.Controller.Entities.Video.GetUserDataKey*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetUserDataKey" data-uid="MediaBrowser.Controller.Entities.Video.GetUserDataKey">GetUserDataKey()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetUserDataKey()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_GetUserDataKey_" data-uid="MediaBrowser.Controller.Entities.Video.GetUserDataKey*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_GetUserDataKey_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Entities.Video.GetUserDataKey(MediaBrowser.Controller.Entities.BaseItem)">GetUserDataKey(BaseItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetUserDataKey(BaseItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_IsActiveRecording_" data-uid="MediaBrowser.Controller.Entities.Video.IsActiveRecording*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_IsActiveRecording" data-uid="MediaBrowser.Controller.Entities.Video.IsActiveRecording">IsActiveRecording()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsActiveRecording()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsActiveRecording">BaseItem.IsActiveRecording()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_IsSecondaryMergedItemInSameFolder_" data-uid="MediaBrowser.Controller.Entities.Video.IsSecondaryMergedItemInSameFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_IsSecondaryMergedItemInSameFolder" data-uid="MediaBrowser.Controller.Entities.Video.IsSecondaryMergedItemInSameFolder">IsSecondaryMergedItemInSameFolder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsSecondaryMergedItemInSameFolder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder">BaseItem.IsSecondaryMergedItemInSameFolder()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SplitVersion_" data-uid="MediaBrowser.Controller.Entities.Video.SplitVersion*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SplitVersion" data-uid="MediaBrowser.Controller.Entities.Video.SplitVersion">SplitVersion()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SplitVersion()</code></pre>
+  </div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Video_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsPlayedStatus*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Video_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Video.SupportsPlayedStatus(MediaBrowser.Model.Configuration.LibraryOptions)">SupportsPlayedStatus(LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus(LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.SupportsPlayedStatus(LibraryOptions)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IHasMediaSources.html">IHasMediaSources</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItemExtensions.html#MediaBrowser_Controller_Entities_BaseItemExtensions_GetImagePath_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_">BaseItemExtensions.GetImagePath(BaseItem, ImageType)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItemExtensions.html#MediaBrowser_Controller_Entities_BaseItemExtensions_HasImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_">BaseItemExtensions.HasImage(BaseItem, ImageType)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Extensions.html#MediaBrowser_Controller_Entities_Extensions_AddTrailerUrl_MediaBrowser_Controller_Entities_BaseItem_System_String_">Extensions.AddTrailerUrl(BaseItem, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_AddTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.AddTag(BaseItem, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_RemoveTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.RemoveTag(BaseItem, String)</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

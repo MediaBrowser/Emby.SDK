@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Emby Simple Plugin Template</Description>
+    <PackageTags>emby;plugin;pms;media;server;</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MediaBrowser.Server.Core" Version="4.7.5" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,675 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BasePlugin&lt;TConfigurationType&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BasePlugin&lt;TConfigurationType&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Common.Plugins.BasePlugin`1">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Common_Plugins_BasePlugin_1" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1" class="text-break">Class BasePlugin&lt;TConfigurationType&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a common base class for all plugins</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html">BasePlugin</a></div>
+    <div class="level2"><span class="xref">BasePlugin&lt;TConfigurationType&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Common.Plugins.IPlugin.html">IPlugin</a></div>
+    <div><a class="xref" href="MediaBrowser.Common.Plugins.IPluginAssembly.html">IPluginAssembly</a></div>
+    <div><a class="xref" href="MediaBrowser.Common.Plugins.IHasPluginConfiguration.html">IHasPluginConfiguration</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_Name">BasePlugin.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_Description">BasePlugin.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_Id">BasePlugin.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_Version">BasePlugin.Version</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_AssemblyFilePath">BasePlugin.AssemblyFilePath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_OnUninstalling">BasePlugin.OnUninstalling()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_SetAttributes_System_String_System_String_System_Version_">BasePlugin.SetAttributes(String, String, Version)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_SetId_System_Guid_">BasePlugin.SetId(Guid)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_DataFolderPath">BasePlugin.DataFolderPath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_GetPluginPageUrl_System_String_">BasePlugin.GetPluginPageUrl(String)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Common.Plugins.html">MediaBrowser.Common.Plugins</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Common.dll</h6>
+  <h5 id="MediaBrowser_Common_Plugins_BasePlugin_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BasePlugin&lt;TConfigurationType&gt; : BasePlugin, IPlugin, IPluginAssembly, IHasPluginConfiguration where TConfigurationType : BasePluginConfiguration</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TConfigurationType</span></td>
+        <td><p>The type of the T configuration type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1__ctor_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.#ctor*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1__ctor_MediaBrowser_Common_Configuration_IApplicationPaths_MediaBrowser_Model_Serialization_IXmlSerializer_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.#ctor(MediaBrowser.Common.Configuration.IApplicationPaths,MediaBrowser.Model.Serialization.IXmlSerializer)">BasePlugin(IApplicationPaths, IXmlSerializer)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin-1.html">BasePlugin&lt;TConfigurationType&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BasePlugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Configuration.IApplicationPaths.html">IApplicationPaths</a></td>
+        <td><span class="parametername">applicationPaths</span></td>
+        <td><p>The application paths.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Serialization.IXmlSerializer.html">IXmlSerializer</a></td>
+        <td><span class="parametername">xmlSerializer</span></td>
+        <td><p>The XML serializer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_ApplicationPaths_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ApplicationPaths*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_ApplicationPaths" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ApplicationPaths">ApplicationPaths</h4>
+  <div class="markdown level1 summary"><p>Gets the application paths.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IApplicationPaths ApplicationPaths { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Configuration.IApplicationPaths.html">IApplicationPaths</a></td>
+        <td><p>The application paths.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_AssemblyFileName_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.AssemblyFileName*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_AssemblyFileName" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.AssemblyFileName">AssemblyFileName</h4>
+  <div class="markdown level1 summary"><p>Gets the name the assembly file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string AssemblyFileName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of the assembly file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_Configuration_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.Configuration*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_Configuration" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.Configuration">Configuration</h4>
+  <div class="markdown level1 summary"><p>Gets the plugin's configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TConfigurationType Configuration { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TConfigurationType</span></td>
+        <td><p>The configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_ConfigurationFileName_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ConfigurationFileName*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_ConfigurationFileName" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ConfigurationFileName">ConfigurationFileName</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the configuration file. Subclasses should override</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConfigurationFileName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of the configuration file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_ConfigurationFilePath_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ConfigurationFilePath*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_ConfigurationFilePath" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ConfigurationFilePath">ConfigurationFilePath</h4>
+  <div class="markdown level1 summary"><p>Gets the full path to the configuration file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConfigurationFilePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The configuration file path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_ConfigurationType_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ConfigurationType*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_ConfigurationType" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.ConfigurationType">ConfigurationType</h4>
+  <div class="markdown level1 summary"><p>Gets the type of configuration this plugin uses</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type ConfigurationType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><p>The type of the configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_IsFirstRun_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.IsFirstRun*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_IsFirstRun" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.IsFirstRun">IsFirstRun</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is first run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFirstRun { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is first run; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_XmlSerializer_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.XmlSerializer*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_XmlSerializer" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.XmlSerializer">XmlSerializer</h4>
+  <div class="markdown level1 summary"><p>Gets the XML serializer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IXmlSerializer XmlSerializer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Serialization.IXmlSerializer.html">IXmlSerializer</a></td>
+        <td><p>The XML serializer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_GetPluginInfo_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.GetPluginInfo*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_GetPluginInfo" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.GetPluginInfo">GetPluginInfo()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PluginInfo GetPluginInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.PluginInfo.html">PluginInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Common.Plugins.BasePlugin.html#MediaBrowser_Common_Plugins_BasePlugin_GetPluginInfo">BasePlugin.GetPluginInfo()</a></div>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_SaveConfiguration_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.SaveConfiguration*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_SaveConfiguration" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.SaveConfiguration">SaveConfiguration()</h4>
+  <div class="markdown level1 summary"><p>Saves the current configuration to the file system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SaveConfiguration()</code></pre>
+  </div>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_SetStartupInfo_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.SetStartupInfo*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_SetStartupInfo_System_Action_System_String__" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.SetStartupInfo(System.Action{System.String})">SetStartupInfo(Action&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStartupInfo(Action&lt;string&gt; directoryCreateFn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">directoryCreateFn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_UpdateConfiguration_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.UpdateConfiguration*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_UpdateConfiguration_MediaBrowser_Model_Plugins_BasePluginConfiguration_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.UpdateConfiguration(MediaBrowser.Model.Plugins.BasePluginConfiguration)">UpdateConfiguration(BasePluginConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Completely overwrites the current configuration with a new copy
+Returns true or false indicating success or failure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateConfiguration(BasePluginConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.BasePluginConfiguration.html">BasePluginConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>configuration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="MediaBrowser_Common_Plugins_BasePlugin_1_MediaBrowser_Common_Plugins_IHasPluginConfiguration_Configuration_" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.MediaBrowser#Common#Plugins#IHasPluginConfiguration#Configuration*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_BasePlugin_1_MediaBrowser_Common_Plugins_IHasPluginConfiguration_Configuration" data-uid="MediaBrowser.Common.Plugins.BasePlugin`1.MediaBrowser#Common#Plugins#IHasPluginConfiguration#Configuration">IHasPluginConfiguration.Configuration</h4>
+  <div class="markdown level1 summary"><p>Gets the plugin's configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BasePluginConfiguration IHasPluginConfiguration.Configuration { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.BasePluginConfiguration.html">BasePluginConfiguration</a></td>
+        <td><p>The configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.IPlugin.html">IPlugin</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.IPluginAssembly.html">IPluginAssembly</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.IHasPluginConfiguration.html">IHasPluginConfiguration</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

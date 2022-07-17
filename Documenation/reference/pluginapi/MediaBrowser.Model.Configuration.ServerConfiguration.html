@@ -1,0 +1,1714 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ServerConfiguration
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ServerConfiguration
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Configuration.ServerConfiguration">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_Configuration_ServerConfiguration" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration" class="text-break">Class ServerConfiguration
+  </h1>
+  <div class="markdown level0 summary"><p>Represents the server configuration.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html">BaseApplicationConfiguration</a></div>
+    <div class="level2"><span class="xref">ServerConfiguration</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html#MediaBrowser_Model_Configuration_BaseApplicationConfiguration_EnableDebugLevelLogging">BaseApplicationConfiguration.EnableDebugLevelLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html#MediaBrowser_Model_Configuration_BaseApplicationConfiguration_RevertDebugLogging">BaseApplicationConfiguration.RevertDebugLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html#MediaBrowser_Model_Configuration_BaseApplicationConfiguration_EnableAutoUpdate">BaseApplicationConfiguration.EnableAutoUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html#MediaBrowser_Model_Configuration_BaseApplicationConfiguration_LogFileRetentionDays">BaseApplicationConfiguration.LogFileRetentionDays</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html#MediaBrowser_Model_Configuration_BaseApplicationConfiguration_RunAtStartup">BaseApplicationConfiguration.RunAtStartup</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html#MediaBrowser_Model_Configuration_BaseApplicationConfiguration_IsStartupWizardCompleted">BaseApplicationConfiguration.IsStartupWizardCompleted</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html#MediaBrowser_Model_Configuration_BaseApplicationConfiguration_CachePath">BaseApplicationConfiguration.CachePath</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Configuration.html">MediaBrowser.Model.Configuration</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Configuration_ServerConfiguration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ServerConfiguration : BaseApplicationConfiguration</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration__ctor_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration__ctor" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.#ctor">ServerConfiguration()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Model.Configuration.ServerConfiguration.html">ServerConfiguration</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ServerConfiguration()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_DefaultHttpPort" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DefaultHttpPort">DefaultHttpPort</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultHttpPort = 8096</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_DefaultHttpsPort" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DefaultHttpsPort">DefaultHttpsPort</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultHttpsPort = 8920</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_AutoRunWebApp_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.AutoRunWebApp*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_AutoRunWebApp" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.AutoRunWebApp">AutoRunWebApp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoRunWebApp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_CertificatePassword_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CertificatePassword*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_CertificatePassword" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CertificatePassword">CertificatePassword</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CertificatePassword { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_CertificatePath_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CertificatePath*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_CertificatePath" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CertificatePath">CertificatePath</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value pointing to the file system where the ssl certiifcate is located..</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CertificatePath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The value pointing to the file system where the ssl certiifcate is located..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_ChannelOptionsUpgraded_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ChannelOptionsUpgraded*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_ChannelOptionsUpgraded" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ChannelOptionsUpgraded">ChannelOptionsUpgraded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ChannelOptionsUpgraded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_CollapseVideoFolders_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CollapseVideoFolders*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_CollapseVideoFolders" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CollapseVideoFolders">CollapseVideoFolders</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CollapseVideoFolders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_CollectionFolderIdsMigrated_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CollectionFolderIdsMigrated*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_CollectionFolderIdsMigrated" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.CollectionFolderIdsMigrated">CollectionFolderIdsMigrated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CollectionFolderIdsMigrated { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_DashboardSourcePath_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DashboardSourcePath*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_DashboardSourcePath" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DashboardSourcePath">DashboardSourcePath</h4>
+  <div class="markdown level1 summary"><p>Allows the dashboard to be served from a custom path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DashboardSourcePath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The dashboard source path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_DatabaseAnalysisLimit_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DatabaseAnalysisLimit*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_DatabaseAnalysisLimit" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DatabaseAnalysisLimit">DatabaseAnalysisLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DatabaseAnalysisLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_DatabaseCacheSizeMB_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DatabaseCacheSizeMB*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_DatabaseCacheSizeMB" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DatabaseCacheSizeMB">DatabaseCacheSizeMB</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DatabaseCacheSizeMB { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_DisableAsyncIO_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DisableAsyncIO*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_DisableAsyncIO" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DisableAsyncIO">DisableAsyncIO</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableAsyncIO { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_DisplaySpecialsWithinSeasons_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DisplaySpecialsWithinSeasons*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_DisplaySpecialsWithinSeasons" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.DisplaySpecialsWithinSeasons">DisplaySpecialsWithinSeasons</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisplaySpecialsWithinSeasons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableAutomaticRestart_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableAutomaticRestart*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableAutomaticRestart" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableAutomaticRestart">EnableAutomaticRestart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableAutomaticRestart { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableCaseSensitiveItemIds_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableCaseSensitiveItemIds*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableCaseSensitiveItemIds" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableCaseSensitiveItemIds">EnableCaseSensitiveItemIds</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [enable case sensitive item ids].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableCaseSensitiveItemIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [enable case sensitive item ids]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableDashboardResponseCaching_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableDashboardResponseCaching*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableDashboardResponseCaching" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableDashboardResponseCaching">EnableDashboardResponseCaching</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [enable dashboard response caching].
+Allows potential contributors without visual studio to modify production dashboard code and test changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableDashboardResponseCaching { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [enable dashboard response caching]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableExternalContentInSuggestions_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableExternalContentInSuggestions*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableExternalContentInSuggestions" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableExternalContentInSuggestions">EnableExternalContentInSuggestions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableExternalContentInSuggestions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableHttps_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableHttps*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableHttps" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableHttps">EnableHttps</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [use HTTPS].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableHttps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [use HTTPS]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableOriginalTrackTitles_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableOriginalTrackTitles*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableOriginalTrackTitles" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableOriginalTrackTitles">EnableOriginalTrackTitles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableOriginalTrackTitles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnablePeopleLetterSubFolders_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnablePeopleLetterSubFolders*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnablePeopleLetterSubFolders" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnablePeopleLetterSubFolders">EnablePeopleLetterSubFolders</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnablePeopleLetterSubFolders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableRemoteAccess_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableRemoteAccess*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableRemoteAccess" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableRemoteAccess">EnableRemoteAccess</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableRemoteAccess { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableSqLiteMmio_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableSqLiteMmio*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableSqLiteMmio" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableSqLiteMmio">EnableSqLiteMmio</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableSqLiteMmio { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableUPnP_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableUPnP*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableUPnP" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableUPnP">EnableUPnP</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [enable u pn p].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableUPnP { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [enable u pn p]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_ForcedSortNameUpgraded_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ForcedSortNameUpgraded*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_ForcedSortNameUpgraded" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ForcedSortNameUpgraded">ForcedSortNameUpgraded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ForcedSortNameUpgraded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_HttpServerPortNumber_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.HttpServerPortNumber*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_HttpServerPortNumber" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.HttpServerPortNumber">HttpServerPortNumber</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the HTTP server port number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int HttpServerPortNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The HTTP server port number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_HttpsPortNumber_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.HttpsPortNumber*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_HttpsPortNumber" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.HttpsPortNumber">HttpsPortNumber</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the HTTPS server port number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int HttpsPortNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The HTTPS server port number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_ImageExtractionTimeoutMs_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ImageExtractionTimeoutMs*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_ImageExtractionTimeoutMs" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ImageExtractionTimeoutMs">ImageExtractionTimeoutMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ImageExtractionTimeoutMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_ImageSavingConvention_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ImageSavingConvention*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_ImageSavingConvention" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ImageSavingConvention">ImageSavingConvention</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the image saving convention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImageSavingConvention ImageSavingConvention { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.ImageSavingConvention.html">ImageSavingConvention</a></td>
+        <td><p>The image saving convention.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_InheritedParentalRatingValueUpgraded_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.InheritedParentalRatingValueUpgraded*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_InheritedParentalRatingValueUpgraded" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.InheritedParentalRatingValueUpgraded">InheritedParentalRatingValueUpgraded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InheritedParentalRatingValueUpgraded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_IsBehindProxy_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.IsBehindProxy*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_IsBehindProxy" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.IsBehindProxy">IsBehindProxy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBehindProxy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_IsPortAuthorized_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.IsPortAuthorized*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_IsPortAuthorized" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.IsPortAuthorized">IsPortAuthorized</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether this instance is port authorized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPortAuthorized { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if this instance is port authorized; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_IsRemoteIPFilterBlacklist_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.IsRemoteIPFilterBlacklist*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_IsRemoteIPFilterBlacklist" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.IsRemoteIPFilterBlacklist">IsRemoteIPFilterBlacklist</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRemoteIPFilterBlacklist { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_LibraryMonitorDelay_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LibraryMonitorDelay*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_LibraryMonitorDelay" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LibraryMonitorDelay">LibraryMonitorDelay</h4>
+  <div class="markdown level1 summary"><p>The delay in seconds that we will wait after a file system change to try and discover what has been added/removed
+Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several
+different directories and files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LibraryMonitorDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The file watcher delay.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_LocalNetworkAddresses_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LocalNetworkAddresses*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_LocalNetworkAddresses" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LocalNetworkAddresses">LocalNetworkAddresses</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] LocalNetworkAddresses { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_LocalNetworkSubnets_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LocalNetworkSubnets*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_LocalNetworkSubnets" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LocalNetworkSubnets">LocalNetworkSubnets</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] LocalNetworkSubnets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_LogAllQueryTimes_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LogAllQueryTimes*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_LogAllQueryTimes" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.LogAllQueryTimes">LogAllQueryTimes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LogAllQueryTimes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_MetadataCountryCode_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.MetadataCountryCode*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_MetadataCountryCode" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.MetadataCountryCode">MetadataCountryCode</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the metadata country code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MetadataCountryCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The metadata country code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_MetadataNetworkPath_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.MetadataNetworkPath*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_MetadataNetworkPath" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.MetadataNetworkPath">MetadataNetworkPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MetadataNetworkPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_MetadataPath_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.MetadataPath*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_MetadataPath" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.MetadataPath">MetadataPath</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the metadata path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MetadataPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The metadata path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_NextUpUpgraded_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.NextUpUpgraded*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_NextUpUpgraded" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.NextUpUpgraded">NextUpUpgraded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NextUpUpgraded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_OptimizeDatabaseOnShutdown_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.OptimizeDatabaseOnShutdown*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_OptimizeDatabaseOnShutdown" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.OptimizeDatabaseOnShutdown">OptimizeDatabaseOnShutdown</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OptimizeDatabaseOnShutdown { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_PathSubstitutions_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PathSubstitutions*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_PathSubstitutions" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PathSubstitutions">PathSubstitutions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathSubstitution[] PathSubstitutions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.PathSubstitution.html">PathSubstitution</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_PreferredMetadataLanguage_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PreferredMetadataLanguage*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_PreferredMetadataLanguage" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PreferredMetadataLanguage">PreferredMetadataLanguage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the preferred metadata language.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PreferredMetadataLanguage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The preferred metadata language.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_PublicHttpsPort_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PublicHttpsPort*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_PublicHttpsPort" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PublicHttpsPort">PublicHttpsPort</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the public HTTPS port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PublicHttpsPort { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The public HTTPS port.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_PublicPort_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PublicPort*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_PublicPort" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.PublicPort">PublicPort</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the public mapped port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PublicPort { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The public mapped port.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_RemoteClientBitrateLimit_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.RemoteClientBitrateLimit*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_RemoteClientBitrateLimit" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.RemoteClientBitrateLimit">RemoteClientBitrateLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoteClientBitrateLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_RemoteIPFilter_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.RemoteIPFilter*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_RemoteIPFilter" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.RemoteIPFilter">RemoteIPFilter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] RemoteIPFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_RequireHttps_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.RequireHttps*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_RequireHttps" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.RequireHttps">RequireHttps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequireHttps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_SaveMetadataHidden_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SaveMetadataHidden*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_SaveMetadataHidden" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SaveMetadataHidden">SaveMetadataHidden</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaveMetadataHidden { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_ServerName_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ServerName*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_ServerName" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.ServerName">ServerName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServerName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_SimultaneousStreamLimit_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SimultaneousStreamLimit*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_SimultaneousStreamLimit" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SimultaneousStreamLimit">SimultaneousStreamLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SimultaneousStreamLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_SortRemoveWords_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SortRemoveWords*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_SortRemoveWords" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SortRemoveWords">SortRemoveWords</h4>
+  <div class="markdown level1 summary"><p>Words to be removed from strings to create a sort name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] SortRemoveWords { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>The sort remove words.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_TimerIdsUpgraded_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.TimerIdsUpgraded*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_TimerIdsUpgraded" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.TimerIdsUpgraded">TimerIdsUpgraded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TimerIdsUpgraded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_UICulture_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.UICulture*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_UICulture" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.UICulture">UICulture</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UICulture { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_UninstalledPlugins_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.UninstalledPlugins*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_UninstalledPlugins" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.UninstalledPlugins">UninstalledPlugins</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] UninstalledPlugins { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_VacuumDatabaseOnStartup_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.VacuumDatabaseOnStartup*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_VacuumDatabaseOnStartup" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.VacuumDatabaseOnStartup">VacuumDatabaseOnStartup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool VacuumDatabaseOnStartup { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_WanDdns_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.WanDdns*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_WanDdns" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.WanDdns">WanDdns</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string WanDdns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

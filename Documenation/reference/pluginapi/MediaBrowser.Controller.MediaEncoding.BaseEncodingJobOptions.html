@@ -1,0 +1,1780 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseEncodingJobOptions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseEncodingJobOptions
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions" class="text-break">Class BaseEncodingJobOptions
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">BaseEncodingJobOptions</span></div>
+      <div class="level2"><a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobOptions.html">EncodingJobOptions</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.MediaEncoding.html">MediaBrowser.Controller.MediaEncoding</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BaseEncodingJobOptions</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions__ctor_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.#ctor*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions__ctor" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.#ctor">BaseEncodingJobOptions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseEncodingJobOptions()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AllowAudioStreamCopy_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AllowAudioStreamCopy*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AllowAudioStreamCopy" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AllowAudioStreamCopy">AllowAudioStreamCopy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowAudioStreamCopy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AllowInterlacedVideoStreamCopy_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AllowInterlacedVideoStreamCopy*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AllowInterlacedVideoStreamCopy" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AllowInterlacedVideoStreamCopy">AllowInterlacedVideoStreamCopy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowInterlacedVideoStreamCopy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AllowVideoStreamCopy_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AllowVideoStreamCopy*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AllowVideoStreamCopy" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AllowVideoStreamCopy">AllowVideoStreamCopy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowVideoStreamCopy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioBitRate_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioBitRate*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioBitRate" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioBitRate">AudioBitRate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the audio bit rate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AudioBitRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The audio bit rate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioChannels_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioChannels*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioChannels" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioChannels">AudioChannels</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the audio channels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AudioChannels { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The audio channels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioCodec_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioCodec*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioCodec" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioCodec">AudioCodec</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the audio codec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AudioCodec { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The audio codec.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioSampleRate_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioSampleRate*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioSampleRate" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioSampleRate">AudioSampleRate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the audio sample rate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AudioSampleRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The audio sample rate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioStreamIndex_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioStreamIndex*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioStreamIndex" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioStreamIndex">AudioStreamIndex</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the index of the audio stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AudioStreamIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The index of the audio stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioStreams_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioStreams*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_AudioStreams" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.AudioStreams">AudioStreams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public RequestedStreamInfo[] AudioStreams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.RequestedStreamInfo.html">RequestedStreamInfo</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_BreakOnNonKeyFrames_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.BreakOnNonKeyFrames*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_BreakOnNonKeyFrames" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.BreakOnNonKeyFrames">BreakOnNonKeyFrames</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BreakOnNonKeyFrames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Container_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Container*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Container" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Container">Container</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Container { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Context_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Context*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Context" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Context">Context</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EncodingContext Context { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.EncodingContext.html">EncodingContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_CopyTimestamps_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.CopyTimestamps*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_CopyTimestamps" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.CopyTimestamps">CopyTimestamps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CopyTimestamps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_CpuCoreLimit_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.CpuCoreLimit*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_CpuCoreLimit" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.CpuCoreLimit">CpuCoreLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? CpuCoreLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeInterlace_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeInterlace*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeInterlace" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeInterlace">DeInterlace</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeInterlace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeleteOutputOnCancellation_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeleteOutputOnCancellation*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeleteOutputOnCancellation" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeleteOutputOnCancellation">DeleteOutputOnCancellation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteOutputOnCancellation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeleteOutputOnException_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeleteOutputOnException*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeleteOutputOnException" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeleteOutputOnException">DeleteOutputOnException</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteOutputOnException { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeviceId_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeviceId*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DeviceId" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DeviceId">DeviceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DeviceId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DurationTicks_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DurationTicks*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_DurationTicks" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.DurationTicks">DurationTicks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? DurationTicks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_EnableAutoStreamCopy_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.EnableAutoStreamCopy*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_EnableAutoStreamCopy" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.EnableAutoStreamCopy">EnableAutoStreamCopy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableAutoStreamCopy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_EnableMpegtsM2TsMode_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.EnableMpegtsM2TsMode*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_EnableMpegtsM2TsMode" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.EnableMpegtsM2TsMode">EnableMpegtsM2TsMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableMpegtsM2TsMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Framerate_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Framerate*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Framerate" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Framerate">Framerate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the framerate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? Framerate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><p>The framerate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Height_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Height*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Height" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Id_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Id*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Id" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Level_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Level*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Level" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Level">Level</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Level { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The level.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_LiveStreamId_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.LiveStreamId*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_LiveStreamId" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.LiveStreamId">LiveStreamId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LiveStreamId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_ManifestSubtitles_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.ManifestSubtitles*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_ManifestSubtitles" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.ManifestSubtitles">ManifestSubtitles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ManifestSubtitles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxAudioBitDepth_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxAudioBitDepth*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxAudioBitDepth" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxAudioBitDepth">MaxAudioBitDepth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxAudioBitDepth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxAudioChannels_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxAudioChannels*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxAudioChannels" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxAudioChannels">MaxAudioChannels</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxAudioChannels { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxFramerate_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxFramerate*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxFramerate" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxFramerate">MaxFramerate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? MaxFramerate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxHeight_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxHeight*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxHeight" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxHeight">MaxHeight</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the height of the max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The height of the max.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxRefFrames_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxRefFrames*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxRefFrames" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxRefFrames">MaxRefFrames</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxRefFrames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxVideoBitDepth_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxVideoBitDepth*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxVideoBitDepth" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxVideoBitDepth">MaxVideoBitDepth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxVideoBitDepth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxWidth_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxWidth*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MaxWidth" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MaxWidth">MaxWidth</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the width of the max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The width of the max.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MediaSourceId_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MediaSourceId*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_MediaSourceId" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.MediaSourceId">MediaSourceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MediaSourceId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_PlaySessionId_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.PlaySessionId*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_PlaySessionId" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.PlaySessionId">PlaySessionId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlaySessionId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Profile_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Profile*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Profile" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Profile">Profile</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Profile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_RequireNonAnamorphic_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.RequireNonAnamorphic*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_RequireNonAnamorphic" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.RequireNonAnamorphic">RequireNonAnamorphic</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequireNonAnamorphic { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SegmentContainer_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SegmentContainer*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SegmentContainer" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SegmentContainer">SegmentContainer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SegmentContainer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SegmentLength_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SegmentLength*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SegmentLength" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SegmentLength">SegmentLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SegmentLength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_StartTimeTicks_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.StartTimeTicks*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_StartTimeTicks" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.StartTimeTicks">StartTimeTicks</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the start time ticks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? StartTimeTicks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><p>The start time ticks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Static_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Static*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Static" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Static">Static</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Static { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_StreamOptions_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.StreamOptions*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_StreamOptions" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.StreamOptions">StreamOptions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; StreamOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleCodec_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleCodec*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleCodec" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleCodec">SubtitleCodec</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SubtitleCodec { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleMethod_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleMethod*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleMethod" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleMethod">SubtitleMethod</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SubtitleDeliveryMethod SubtitleMethod { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.SubtitleDeliveryMethod.html">SubtitleDeliveryMethod</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleStreamIndex_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleStreamIndex*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleStreamIndex" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleStreamIndex">SubtitleStreamIndex</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the index of the subtitle stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SubtitleStreamIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The index of the subtitle stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleStreamIndexes_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleStreamIndexes*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleStreamIndexes" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleStreamIndexes">SubtitleStreamIndexes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SubtitleStreamIndexes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleStreams_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleStreams*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_SubtitleStreams" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.SubtitleStreams">SubtitleStreams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public RequestedStreamInfo[] SubtitleStreams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.RequestedStreamInfo.html">RequestedStreamInfo</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_TranscodeReasons_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.TranscodeReasons*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_TranscodeReasons" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.TranscodeReasons">TranscodeReasons</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TranscodeReasons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_TranscodingMaxAudioChannels_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.TranscodingMaxAudioChannels*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_TranscodingMaxAudioChannels" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.TranscodingMaxAudioChannels">TranscodingMaxAudioChannels</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TranscodingMaxAudioChannels { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoBitRate_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoBitRate*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoBitRate" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoBitRate">VideoBitRate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the video bit rate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? VideoBitRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The video bit rate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoCodec_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoCodec*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoCodec" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoCodec">VideoCodec</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the video codec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VideoCodec { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The video codec.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoSideDataSubs_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoSideDataSubs*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoSideDataSubs" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoSideDataSubs">VideoSideDataSubs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VideoSideDataSubs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoStreamIndex_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoStreamIndex*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_VideoStreamIndex" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.VideoStreamIndex">VideoStreamIndex</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the index of the video stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? VideoStreamIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The index of the video stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Width_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Width*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_Width" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The width.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetAudioStreams_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetAudioStreams*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetAudioStreams" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetAudioStreams">GetAudioStreams()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RequestedStreamInfo[] GetAudioStreams()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.RequestedStreamInfo.html">RequestedStreamInfo</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetOption_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetOption*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetOption_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetOption(System.String)">GetOption(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetOption(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetOption_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetOption*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetOption_System_String_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetOption(System.String,System.String)">GetOption(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetOption(string qualifier, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">qualifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetSubtitleStreams_" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetSubtitleStreams*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_BaseEncodingJobOptions_GetSubtitleStreams" data-uid="MediaBrowser.Controller.MediaEncoding.BaseEncodingJobOptions.GetSubtitleStreams">GetSubtitleStreams()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RequestedStreamInfo[] GetSubtitleStreams()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.RequestedStreamInfo.html">RequestedStreamInfo</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

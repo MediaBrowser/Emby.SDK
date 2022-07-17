@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Playback Check-ins </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Playback Check-ins ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="doc-restapi-Playback-Check-ins">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-restapi-Playback-Check-ins">
+<h1 id="playback-check-ins">Playback Check-ins</h1>
+
+<p>When a client is ready to start media playback, there are three API methods that are used to keep the server up to date with the users activity, and record the users current playback position.</p>
+<h2 id="playback-started">Playback Started</h2>
+<p>To let the server know playback started, make an HTTP POST call to <strong>/Sessions/Playing</strong></p>
+<p>The body of the request should be a JSON object with the following properties:</p>
+<ul>
+<li>QueueableMediaTypes (Array[string] - Audio,Video),</li>
+<li>CanSeek (boolean),</li>
+<li>ItemId (string) or Item {object},</li>
+<li>MediaSourceId (string),</li>
+<li>AudioStreamIndex (int, optional),</li>
+<li>SubtitleStreamIndex (int, optional),</li>
+<li>IsPaused (boolean),</li>
+<li>IsMuted (boolean),</li>
+<li>PositionTicks (long, optional),</li>
+<li>VolumeLevel (int, optional 0-100),</li>
+<li>PlayMethod (string) = ['Transcode' or 'DirectStream' or 'DirectPlay']</li>
+<li>PlaySessionId</li>
+<li>LiveStreamId</li>
+<li>PlaylistIndex (current index in the play queue)</li>
+<li>PlaylistLength (current length of the play queue)</li>
+<li>SubtitleOffset (floating point value)</li>
+<li>PlaybackRate (floating point value)</li>
+</ul>
+<p>The content type of the request should be <strong>application/json</strong>.</p>
+<p>Once this API call is made, the server dashboard will show the current item that the user is watching.</p>
+<h3 id="itemid-vs-item">ItemId vs Item</h3>
+<p>If the user is playing a server library item, simply supply the ItemId property and omit Item. If the user is playing content that is not part of the server library, it can still be reported by supplying an object containing information describing the media.</p>
+<h3 id="item-properties">Item Properties</h3>
+<ul>
+<li>Name (string),</li>
+<li>MediaType (string - Audio, Video, Book, Game),</li>
+<li>Type (string - Movie, Episode, Trailer, Video, Audio, Book, Game),</li>
+<li>RunTimeTicks (long, optional),</li>
+<li>PremiereDate (Date, optional),</li>
+<li>ProductionYear (int, optional),</li>
+<li>IndexNumber (int, optional),</li>
+<li>IndexNumberEnd (int, optional),</li>
+<li>ParentIndexNumber (int, optional),</li>
+<li>SeriesName (string),</li>
+<li>Album (string),</li>
+<li>Artists (Array[string])</li>
+</ul>
+<h2 id="playback-progress">Playback Progress</h2>
+<p>To report progress make an HTTP POST call to <strong>/Sessions/Playing/Progress</strong></p>
+<p>The contents of the request are identical to the playback start message, except with an additional EventName property. Playback progress should be reported at the following times:</p>
+<ul>
+<li>Automatically every 10 seconds</li>
+<li>Immediately following any user interaction with the player, for example, pause, un-pause, etc.</li>
+</ul>
+<p>The EventName property tells the server why you're reporting progress. It accepts the following values:</p>
+<ul>
+<li>TimeUpdate</li>
+<li>Pause</li>
+<li>Unpause</li>
+<li>VolumeChange</li>
+<li>RepeatModeChange</li>
+<li>AudioTrackChange</li>
+<li>SubtitleTrackChange</li>
+<li>PlaylistItemMove</li>
+<li>PlaylistItemRemove</li>
+<li>PlaylistItemAdd</li>
+<li>QualityChange</li>
+<li>SubtitleOffsetChange</li>
+<li>PlaybackRateChange</li>
+</ul>
+<p>The server will automatically increment playback progress every second, so it is not necessary to automatically report more often than at 10 second intervals. The progress reports coming from the app will be used to re-calibrate the automatic progress increment on the server.</p>
+<h2 id="playback-stopped">Playback Stopped</h2>
+<p>Once playback is stopped, make an HTTP POST call to <strong>/Sessions/Playing/Stopped</strong></p>
+<p>The contents of the request are identical to the playback start message.</p>
+<h2 id="web-socket">Web Socket</h2>
+<p>For improved performance, the progress messages can also be sent to the server via the web socket connection. The structure of the messages are as follows:</p>
+<ul>
+<li>{MessageType: &quot;ReportPlaybackProgress&quot;, Data: {...}}</li>
+</ul>
+<p>Where Data is an identical object to the HTTP request objects.</p>
+<h2 id="manually-marking-watchedunwatched">Manually marking watched/unwatched</h2>
+<p>An Item can be marked watched manually by sending a POST to</p>
+<p>/Users/{UserId}/PlayedItems/{Id}</p>
+<p>To mark an item unwatched, send a DELETE to</p>
+<p>/Users/{UserId}/PlayedItems/{Id}</p>
+<h2 id="more-info">More Info</h2>
+<p>For more information on these three methods, consult the Swagger API documentation. The <a href="https://github.com/MediaBrowser/MediaBrowser.ApiClient">Emby.ApiClient</a> repository also has examples of these methods.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3462 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>postLivetvTimers </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="postLivetvTimers ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/postLivetvTimers">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/postLivetvTimers">
+<div class="refdoc">
+
+<h1 id="emby_restapi_postLivetvTimers" data-uid="emby.restapi/postLivetvTimers" class="text-capitalize text-break">postLivetvTimers</h1>
+<div class="markdown level0 summary"><p>Creates a live tv timer</p>
+</div>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
+</div>
+
+
+
+
+  
+  
+  
+   <h3 id="emby_restapi_postLivetvTimers_operation" data-uid="emby.restapi/postLivetvTimers/operation" style="display:none;" class="text-capitalize">postLivetvTimers</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /LiveTv/Timers</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>In</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*body</span></td>
+        <td>body</td>
+        <td>
+  
+              <a href="#MediaBrowser_Model_LiveTv_TimerInfoDto" class="typelink">TimerInfoDto</a>
+              
+        </td>
+        <td></td>
+        <td><p>TimerInfoDto:</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Operation successful. Empty response.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+  
+  <h3 id="MediaBrowser_Model_LiveTv_TimerInfoDto" class="text-capitalize">TimerInfoDto</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.LiveTv.TimerInfoDto.html">MediaBrowser.Model.LiveTv.TimerInfoDto</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Status</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_LiveTv_RecordingStatus" class="typelink">RecordingStatus</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeriesTimerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RunTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProgramInfo</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_BaseItemDto" class="typelink">BaseItemDto[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TimerType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_LiveTv_TimerType" class="typelink">TimerType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelPrimaryImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProgramId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Overview</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StartDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EndDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Priority</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrePaddingSeconds</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PostPaddingSeconds</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsPrePaddingRequired</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentBackdropItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentBackdropImageTags</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsPostPaddingRequired</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">KeepUntil</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_LiveTv_KeepUntil" class="typelink">KeepUntil</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_LiveTv_RecordingStatus" class="text-capitalize">RecordingStatus</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.LiveTv.RecordingStatus.html">MediaBrowser.Model.LiveTv.RecordingStatus</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>New</li>
+  <li>InProgress</li>
+  <li>Completed</li>
+  <li>Cancelled</li>
+  <li>ConflictedOk</li>
+  <li>ConflictedNotOk</li>
+  <li>Error</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dto_BaseItemDto" class="text-capitalize">BaseItemDto</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.BaseItemDto.html">MediaBrowser.Model.Dto.BaseItemDto</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OriginalTitle</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Etag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Prefix</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlaylistItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DateCreated</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtraType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SortIndexNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SortParentIndexNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AirsBeforeSeasonNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AirsAfterSeasonNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AirsBeforeEpisodeNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanDelete</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanDownload</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsResume</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PresentationUniqueKey</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PreferredMetadataLanguage</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PreferredMetadataCountryCode</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsSync</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SortName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ForcedSortName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Video3DFormat</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_Video3DFormat" class="typelink">Video3DFormat</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PremiereDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExternalUrls</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Providers_ExternalUrl" class="typelink">ExternalUrl[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MediaSources</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_MediaSourceInfo" class="typelink">MediaSourceInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CriticRating</span></td>
+              <td>
+                    number
+                      (float)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">GameSystemId</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AsSeries</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">GameSystem</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProductionLocations</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Path</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OfficialRating</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CustomRating</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Overview</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Taglines</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Genres</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CommunityRating</span></td>
+              <td>
+                    number
+                      (float)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RunTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Size</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">FileName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Bitrate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlayAccess</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Library_PlayAccess" class="typelink">PlayAccess</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProductionYear</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Number</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelNumber</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IndexNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IndexNumberEnd</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentIndexNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RemoteTrailers</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MediaUrl" class="typelink">MediaUrl[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProviderIds</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ProviderIdDictionary" class="typelink">ProviderIdDictionary</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsFolder</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">People</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_BaseItemPerson" class="typelink">BaseItemPerson[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Studios</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_NameLongIdPair" class="typelink">NameLongIdPair[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">GenreItems</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_NameLongIdPair" class="typelink">NameLongIdPair[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TagItems</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_NameLongIdPair" class="typelink">NameLongIdPair[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentLogoItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentBackdropItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentBackdropImageTags</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LocalTrailerCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">UserData</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_UserItemDataDto" class="typelink">UserItemDataDto[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RecursiveItemCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChildCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeriesName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeriesId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeasonId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SpecialFeatureCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayPreferencesId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Status</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AirDays</span></td>
+              <td>
+  
+                      <a href="#System_DayOfWeek" class="typelink">DayOfWeek[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Tags</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryImageAspectRatio</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Artists</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ArtistItems</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_NameIdPair" class="typelink">NameIdPair[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Composers</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_NameIdPair" class="typelink">NameIdPair[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Album</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CollectionType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayOrder</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AlbumId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AlbumPrimaryImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeriesPrimaryImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AlbumArtist</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AlbumArtists</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_NameIdPair" class="typelink">NameIdPair[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeasonName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MediaStreams</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MediaStream" class="typelink">MediaStream[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PartCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImageTags</span></td>
+              <td>
+                    object
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BackdropImageTags</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentLogoImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeriesStudio</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentThumbItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ParentThumbImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Chapters</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ChapterInfo" class="typelink">ChapterInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LocationType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_LocationType" class="typelink">LocationType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MediaType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EndDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LockedFields</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MetadataFields" class="typelink">MetadataFields[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LockData</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Width</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Height</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CameraMake</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CameraModel</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Software</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExposureTime</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">FocalLength</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImageOrientation</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Drawing_ImageOrientation" class="typelink">ImageOrientation</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Aperture</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ShutterSpeed</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Latitude</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Longitude</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Altitude</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsoSpeedRating</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeriesTimerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelPrimaryImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StartDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CompletionPercentage</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsRepeat</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsNew</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EpisodeTitle</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsMovie</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsSports</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsSeries</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsLive</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsNews</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsKids</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsPremiere</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TimerType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_LiveTv_TimerType" class="typelink">TimerType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Disabled</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ManagementId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TimerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CurrentProgram</span></td>
+              <td>
+                    
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MovieCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SeriesCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AlbumCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SongCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MusicVideoCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Subviews</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ListingsProviderId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ListingsChannelId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ListingsPath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ListingsId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ListingsChannelName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ListingsChannelNumber</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AffiliateCallSign</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_Video3DFormat" class="text-capitalize">Video3DFormat</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.Video3DFormat.html">MediaBrowser.Model.Entities.Video3DFormat</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>HalfSideBySide</li>
+  <li>FullSideBySide</li>
+  <li>FullTopAndBottom</li>
+  <li>HalfTopAndBottom</li>
+  <li>MVC</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Providers_ExternalUrl" class="text-capitalize">ExternalUrl</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Providers.ExternalUrl.html">MediaBrowser.Model.Providers.ExternalUrl</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Url</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dto_MediaSourceInfo" class="text-capitalize">MediaSourceInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaBrowser.Model.Dto.MediaSourceInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Protocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Path</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EncoderPath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EncoderProtocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_MediaSourceType" class="typelink">MediaSourceType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Container</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Size</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SortName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsRemote</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RunTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ContainerStartTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsTranscoding</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsDirectStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsDirectPlay</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsInfiniteStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiresOpening</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OpenToken</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiresClosing</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LiveStreamId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BufferMs</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiresLooping</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsProbing</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Video3DFormat</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_Video3DFormat" class="typelink">Video3DFormat</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MediaStreams</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MediaStream" class="typelink">MediaStream[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Formats</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Bitrate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Timestamp</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_TransportStreamTimestamp" class="typelink">TransportStreamTimestamp</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RequiredHttpHeaders</span></td>
+              <td>
+                    object
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DirectStreamUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodingUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodingSubProtocol</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TranscodingContainer</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AnalyzeDurationMs</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ReadAtNativeFramerate</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DefaultAudioStreamIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DefaultSubtitleStreamIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_MediaInfo_MediaProtocol" class="text-capitalize">MediaProtocol</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaBrowser.Model.MediaInfo.MediaProtocol</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>File</li>
+  <li>Http</li>
+  <li>Rtmp</li>
+  <li>Rtsp</li>
+  <li>Udp</li>
+  <li>Rtp</li>
+  <li>Ftp</li>
+  <li>Mms</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dto_MediaSourceType" class="text-capitalize">MediaSourceType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.MediaSourceType.html">MediaBrowser.Model.Dto.MediaSourceType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Default</li>
+  <li>Grouping</li>
+  <li>Placeholder</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_MediaStream" class="text-capitalize">MediaStream</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.MediaStream.html">MediaBrowser.Model.Entities.MediaStream</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Codec</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CodecTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Language</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ColorTransfer</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ColorPrimaries</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ColorSpace</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Comment</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StreamStartTimeTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TimeBase</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CodecTimeBase</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Title</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Extradata</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VideoRange</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayTitle</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayLanguage</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">NalLengthSize</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsInterlaced</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsAVC</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChannelLayout</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BitRate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BitDepth</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RefFrames</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Rotation</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Channels</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SampleRate</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsDefault</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsForced</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Height</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Width</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AverageFrameRate</span></td>
+              <td>
+                    number
+                      (float)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RealFrameRate</span></td>
+              <td>
+                    number
+                      (float)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Profile</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MediaStreamType" class="typelink">MediaStreamType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AspectRatio</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Index</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsExternal</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeliveryMethod</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dlna_SubtitleDeliveryMethod" class="typelink">SubtitleDeliveryMethod</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DeliveryUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsExternalUrl</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsTextSubtitleStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SupportsExternalStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Path</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Protocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PixelFormat</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Level</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsAnamorphic</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AttachmentSize</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MimeType</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsClosedCaptions</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleLocationType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_SubtitleLocationType" class="typelink">SubtitleLocationType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_MediaStreamType" class="text-capitalize">MediaStreamType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.MediaStreamType.html">MediaBrowser.Model.Entities.MediaStreamType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Unknown</li>
+  <li>Audio</li>
+  <li>Video</li>
+  <li>Subtitle</li>
+  <li>EmbeddedImage</li>
+  <li>Attachment</li>
+  <li>Data</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dlna_SubtitleDeliveryMethod" class="text-capitalize">SubtitleDeliveryMethod</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dlna.SubtitleDeliveryMethod.html">MediaBrowser.Model.Dlna.SubtitleDeliveryMethod</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Encode</li>
+  <li>Embed</li>
+  <li>External</li>
+  <li>Hls</li>
+  <li>VideoSideData</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_SubtitleLocationType" class="text-capitalize">SubtitleLocationType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.SubtitleLocationType.html">MediaBrowser.Model.Entities.SubtitleLocationType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>InternalStream</li>
+  <li>VideoSideData</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_MediaInfo_TransportStreamTimestamp" class="text-capitalize">TransportStreamTimestamp</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.MediaInfo.TransportStreamTimestamp.html">MediaBrowser.Model.MediaInfo.TransportStreamTimestamp</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Zero</li>
+  <li>Valid</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Library_PlayAccess" class="text-capitalize">PlayAccess</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Library.PlayAccess.html">MediaBrowser.Model.Library.PlayAccess</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Full</li>
+  <li>None</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_MediaUrl" class="text-capitalize">MediaUrl</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.MediaUrl.html">MediaBrowser.Model.Entities.MediaUrl</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Url</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_ProviderIdDictionary" class="text-capitalize">ProviderIdDictionary</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ProviderIdDictionary.html">MediaBrowser.Model.Entities.ProviderIdDictionary</a></p>
+
+  </div>
+  
+  <h3 id="MediaBrowser_Model_Dto_BaseItemPerson" class="text-capitalize">BaseItemPerson</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.BaseItemPerson.html">MediaBrowser.Model.Dto.BaseItemPerson</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Role</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_PersonType" class="typelink">PersonType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_PersonType" class="text-capitalize">PersonType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.PersonType.html">MediaBrowser.Model.Entities.PersonType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Actor</li>
+  <li>Director</li>
+  <li>Writer</li>
+  <li>Producer</li>
+  <li>GuestStar</li>
+  <li>Composer</li>
+  <li>Conductor</li>
+  <li>Lyricist</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dto_NameLongIdPair" class="text-capitalize">NameLongIdPair</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.NameLongIdPair.html">MediaBrowser.Model.Dto.NameLongIdPair</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dto_UserItemDataDto" class="text-capitalize">UserItemDataDto</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.UserItemDataDto.html">MediaBrowser.Model.Dto.UserItemDataDto</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Rating</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlayedPercentage</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">UnplayedItemCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlaybackPositionTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlayCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsFavorite</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LastPlayedDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Played</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Key</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="System_DayOfWeek" class="text-capitalize">DayOfWeek</h3>
+  <div>
+      <p>see also <a href="https://docs.microsoft.com/dotnet/api/system.dayofweek">System.DayOfWeek</a></p>
+
+  </div>
+  
+  <h3 id="MediaBrowser_Model_Dto_NameIdPair" class="text-capitalize">NameIdPair</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.NameIdPair.html">MediaBrowser.Model.Dto.NameIdPair</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_ChapterInfo" class="text-capitalize">ChapterInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ChapterInfo.html">MediaBrowser.Model.Entities.ChapterInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">StartPositionTicks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MarkerType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_MarkerType" class="typelink">MarkerType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChapterIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_MarkerType" class="text-capitalize">MarkerType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.MarkerType.html">MediaBrowser.Model.Entities.MarkerType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Chapter</li>
+  <li>IntroStart</li>
+  <li>IntroEnd</li>
+  <li>CreditsStart</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_LocationType" class="text-capitalize">LocationType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.LocationType.html">MediaBrowser.Model.Entities.LocationType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>FileSystem</li>
+  <li>Virtual</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_MetadataFields" class="text-capitalize">MetadataFields</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.MetadataFields.html">MediaBrowser.Model.Entities.MetadataFields</a></p>
+
+  </div>
+  
+  <h3 id="MediaBrowser_Model_Drawing_ImageOrientation" class="text-capitalize">ImageOrientation</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Drawing.ImageOrientation.html">MediaBrowser.Model.Drawing.ImageOrientation</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>TopLeft</li>
+  <li>TopRight</li>
+  <li>BottomRight</li>
+  <li>BottomLeft</li>
+  <li>LeftTop</li>
+  <li>RightTop</li>
+  <li>RightBottom</li>
+  <li>LeftBottom</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_LiveTv_TimerType" class="text-capitalize">TimerType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.LiveTv.TimerType.html">MediaBrowser.Model.LiveTv.TimerType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Program</li>
+  <li>DateTime</li>
+  <li>Keyword</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_LiveTv_KeepUntil" class="text-capitalize">KeepUntil</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.LiveTv.KeepUntil.html">MediaBrowser.Model.LiveTv.KeepUntil</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>UntilDeleted</li>
+  <li>UntilSpaceNeeded</li>
+  <li>UntilWatched</li>
+  <li>UntilDate</li>
+  </ul>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

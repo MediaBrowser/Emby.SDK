@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ImageService </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ImageService ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/tag/ImageService">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/tag/ImageService">
+<div class="refdoc">
+
+<h1 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/tag/ImageService" class="text-capitalize text-break">ImageService</h1>
+
+
+<a href="https://github.com/MediaBrowser/Emby/wiki/Images" class=""><p>API Documentation: Images</p>
+</a>
+
+ <a class="xref" href="ImageService/deleteItemsByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/deleteItemsByIdImagesByType/operationlistitem" class="text-capitalize">deleteItemsByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Items/{Id}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/deleteItemsByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/deleteItemsByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">deleteItemsByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Items/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/deleteUsersByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/deleteUsersByIdImagesByType/operationlistitem" class="text-capitalize">deleteUsersByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Users/{Id}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/deleteUsersByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/deleteUsersByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">deleteUsersByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Users/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getArtistsByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getArtistsByNameImagesByType/operationlistitem" class="text-capitalize">getArtistsByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Artists/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getArtistsByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getArtistsByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">getArtistsByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Artists/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getGamegenresByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getGamegenresByNameImagesByType/operationlistitem" class="text-capitalize">getGamegenresByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /GameGenres/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getGamegenresByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getGamegenresByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">getGamegenresByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /GameGenres/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getGenresByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getGenresByNameImagesByType/operationlistitem" class="text-capitalize">getGenresByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Genres/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getGenresByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getGenresByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">getGenresByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Genres/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getItemsByIdImages.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getItemsByIdImages/operationlistitem" class="text-capitalize">getItemsByIdImages</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/Images</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets information about an item's images</p>
+</div>
+ <a class="xref" href="ImageService/getItemsByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getItemsByIdImagesByType/operationlistitem" class="text-capitalize">getItemsByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getItemsByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getItemsByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">getItemsByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount/operationlistitem" class="text-capitalize">getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getMusicgenresByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getMusicgenresByNameImagesByType/operationlistitem" class="text-capitalize">getMusicgenresByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /MusicGenres/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getMusicgenresByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getMusicgenresByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">getMusicgenresByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /MusicGenres/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getPersonsByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getPersonsByNameImagesByType/operationlistitem" class="text-capitalize">getPersonsByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Persons/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getPersonsByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getPersonsByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">getPersonsByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Persons/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getStudiosByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getStudiosByNameImagesByType/operationlistitem" class="text-capitalize">getStudiosByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Studios/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getStudiosByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getStudiosByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">getStudiosByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Studios/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getUsersByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getUsersByIdImagesByType/operationlistitem" class="text-capitalize">getUsersByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/{Id}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/getUsersByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/getUsersByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">getUsersByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headArtistsByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headArtistsByNameImagesByType/operationlistitem" class="text-capitalize">headArtistsByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Artists/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headArtistsByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headArtistsByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">headArtistsByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Artists/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headGamegenresByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headGamegenresByNameImagesByType/operationlistitem" class="text-capitalize">headGamegenresByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /GameGenres/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headGamegenresByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headGamegenresByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">headGamegenresByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /GameGenres/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headGenresByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headGenresByNameImagesByType/operationlistitem" class="text-capitalize">headGenresByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Genres/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headGenresByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headGenresByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">headGenresByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Genres/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headItemsByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headItemsByIdImagesByType/operationlistitem" class="text-capitalize">headItemsByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Items/{Id}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headItemsByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headItemsByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">headItemsByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Items/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount/operationlistitem" class="text-capitalize">headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headMusicgenresByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headMusicgenresByNameImagesByType/operationlistitem" class="text-capitalize">headMusicgenresByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /MusicGenres/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headMusicgenresByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headMusicgenresByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">headMusicgenresByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /MusicGenres/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headPersonsByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headPersonsByNameImagesByType/operationlistitem" class="text-capitalize">headPersonsByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Persons/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headPersonsByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headPersonsByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">headPersonsByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Persons/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headStudiosByNameImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headStudiosByNameImagesByType/operationlistitem" class="text-capitalize">headStudiosByNameImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Studios/{Name}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headStudiosByNameImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headStudiosByNameImagesByTypeByIndex/operationlistitem" class="text-capitalize">headStudiosByNameImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Studios/{Name}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headUsersByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headUsersByIdImagesByType/operationlistitem" class="text-capitalize">headUsersByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Users/{Id}/Images/{Type}</code></pre>
+</div>
+ <a class="xref" href="ImageService/headUsersByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/headUsersByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">headUsersByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Users/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+ <a class="xref" href="ImageService/postItemsByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postItemsByIdImagesByType/operationlistitem" class="text-capitalize">postItemsByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Images/{Type}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Uploads an image for an item, must be base64 encoded.</p>
+</div>
+ <a class="xref" href="ImageService/postItemsByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postItemsByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">postItemsByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Uploads an image for an item, must be base64 encoded.</p>
+</div>
+ <a class="xref" href="ImageService/postItemsByIdImagesByTypeByIndexDelete.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postItemsByIdImagesByTypeByIndexDelete/operationlistitem" class="text-capitalize">postItemsByIdImagesByTypeByIndexDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Images/{Type}/{Index}/Delete</code></pre>
+</div>
+ <a class="xref" href="ImageService/postItemsByIdImagesByTypeByIndexIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postItemsByIdImagesByTypeByIndexIndex/operationlistitem" class="text-capitalize">postItemsByIdImagesByTypeByIndexIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Images/{Type}/{Index}/Index</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates the index for an item image</p>
+</div>
+ <a class="xref" href="ImageService/postItemsByIdImagesByTypeByIndexUrl.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postItemsByIdImagesByTypeByIndexUrl/operationlistitem" class="text-capitalize">postItemsByIdImagesByTypeByIndexUrl</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Images/{Type}/{Index}/Url</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates the index for an item image</p>
+</div>
+ <a class="xref" href="ImageService/postItemsByIdImagesByTypeDelete.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postItemsByIdImagesByTypeDelete/operationlistitem" class="text-capitalize">postItemsByIdImagesByTypeDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Images/{Type}/Delete</code></pre>
+</div>
+ <a class="xref" href="ImageService/postUsersByIdImagesByType.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postUsersByIdImagesByType/operationlistitem" class="text-capitalize">postUsersByIdImagesByType</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Images/{Type}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Uploads an image for an item, must be base64 encoded.</p>
+</div>
+ <a class="xref" href="ImageService/postUsersByIdImagesByTypeByIndex.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postUsersByIdImagesByTypeByIndex/operationlistitem" class="text-capitalize">postUsersByIdImagesByTypeByIndex</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Images/{Type}/{Index}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Uploads an image for an item, must be base64 encoded.</p>
+</div>
+ <a class="xref" href="ImageService/postUsersByIdImagesByTypeByIndexDelete.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postUsersByIdImagesByTypeByIndexDelete/operationlistitem" class="text-capitalize">postUsersByIdImagesByTypeByIndexDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Images/{Type}/{Index}/Delete</code></pre>
+</div>
+ <a class="xref" href="ImageService/postUsersByIdImagesByTypeDelete.html"><h3 id="emby_restapi_tag_ImageService" data-uid="emby.restapi/postUsersByIdImagesByTypeDelete/operationlistitem" class="text-capitalize">postUsersByIdImagesByTypeDelete</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Images/{Type}/Delete</code></pre>
+</div>
+
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

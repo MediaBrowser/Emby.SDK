@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Remote Control </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Remote Control ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="doc-restapi-Remote-Control">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-restapi-Remote-Control">
+<h1 id="remote-control">Remote Control</h1>
+
+<p>Clients can easily remote control other clients.</p>
+<p>The first step is to make a call to <a href="sref:emby.restapi/getSessions">/Sessions</a> Add the <strong>ControllableByUserId</strong> param to only receive sessions that are controllable by a given user.</p>
+<p>An example session is:</p>
+<pre><code class="lang-json">  {
+    &quot;SupportedCommands&quot;: [
+      &quot;MoveUp&quot;,
+      &quot;MoveDown&quot;,
+      &quot;MoveLeft&quot;,
+      &quot;MoveRight&quot;,
+      &quot;PageUp&quot;,
+      &quot;PageDown&quot;,
+      &quot;PreviousLetter&quot;,
+      &quot;NextLetter&quot;,
+      &quot;ToggleOsdMenu&quot;,
+      &quot;ToggleContextMenu&quot;,
+      &quot;Select&quot;,
+      &quot;Back&quot;,
+      &quot;TakeScreenshot&quot;,
+      &quot;SendKey&quot;,
+      &quot;SendString&quot;,
+      &quot;GoHome&quot;,
+      &quot;GoToSettings&quot;,
+      &quot;VolumeUp&quot;,
+      &quot;VolumeDown&quot;,
+      &quot;Mute&quot;,
+      &quot;Unmute&quot;,
+      &quot;ToggleMute&quot;,
+      &quot;SetVolume&quot;,
+      &quot;SetAudioStreamIndex&quot;,
+      &quot;SetSubtitleStreamIndex&quot;,
+      &quot;ToggleFullscreen&quot;,
+      &quot;DisplayContent&quot;,
+      &quot;GoToSearch&quot;,
+      &quot;DisplayMessage&quot;,
+      &quot;Guide&quot;
+    ],
+    &quot;RemoteEndPoint&quot;: &quot;192.168.1.4&quot;,
+    &quot;QueueableMediaTypes&quot;: [
+      &quot;Video&quot;
+    ],
+    &quot;PlayableMediaTypes&quot;: [
+      &quot;Audio&quot;,
+      &quot;Video&quot;,
+      &quot;Game&quot;,
+      &quot;Photo&quot;,
+      &quot;Book&quot;
+    ],
+    &quot;Id&quot;: &quot;4de66e1e6b8a4cae89542dc6f7ee7623&quot;,
+    &quot;UserId&quot;: &quot;e8837bc1ad67520e8cd2f629e3155721&quot;,
+    &quot;UserPrimaryImageTag&quot;: &quot;605eed331af1e1a8770643ee6fd1c2b9&quot;,
+    &quot;UserName&quot;: &quot;John&quot;,
+    &quot;AdditionalUsers&quot;: [],
+    &quot;ApplicationVersion&quot;: &quot;3.0.5243.22734&quot;,
+    &quot;Client&quot;: &quot;Emby Theater&quot;,
+    &quot;LastActivityDate&quot;: &quot;2014-05-15T09:52:52.5898360Z&quot;,
+    &quot;NowViewingItem&quot;: {
+      &quot;Name&quot;: &quot;Partridge&quot;,
+      &quot;Id&quot;: &quot;0f8d0805a66f7ed429ecd8890146c7c3&quot;,
+      &quot;Type&quot;: &quot;Episode&quot;,
+      &quot;MediaType&quot;: &quot;Video&quot;,
+      &quot;RunTimeTicks&quot;: 12882240000,
+      &quot;PrimaryImageTag&quot;: &quot;d7c02f11a99ba4b7381e86bb602596c1&quot;,
+      &quot;PrimaryImageItemId&quot;: &quot;0f8d0805a66f7ed429ecd8890146c7c3&quot;,
+      &quot;LogoImageTag&quot;: &quot;108e85fbb573fc406652374b785ec6be&quot;,
+      &quot;LogoItemId&quot;: &quot;09bed955402d0bf2d59c2e9cee67beed&quot;,
+      &quot;ThumbImageTag&quot;: &quot;01760cf565aaba7cd9ac5350bb46383b&quot;,
+      &quot;ThumbItemId&quot;: &quot;09bed955402d0bf2d59c2e9cee67beed&quot;,
+      &quot;BackdropImageTag&quot;: &quot;a6aeacb6a86f13e8c6a582ebf03b3f2a&quot;,
+      &quot;BackdropItemId&quot;: &quot;09bed955402d0bf2d59c2e9cee67beed&quot;,
+      &quot;PremiereDate&quot;: &quot;2013-04-04T04:00:00.0000000Z&quot;,
+      &quot;ProductionYear&quot;: 2013,
+      &quot;IndexNumber&quot;: 17,
+      &quot;ParentIndexNumber&quot;: 5,
+      &quot;SeriesName&quot;: &quot;Parks and Recreation&quot;,
+      &quot;Artists&quot;: [],
+      &quot;MediaStreams&quot;: [],
+      &quot;Chapters&quot;: []
+    },
+    &quot;DeviceName&quot;: &quot;LIVINGROOM-PC&quot;,
+    &quot;DeviceId&quot;: &quot;LIVINGROOM-PC&quot;,
+    &quot;PlayState&quot;: {
+      &quot;CanSeek&quot;: false,
+      &quot;IsPaused&quot;: false,
+      &quot;IsMuted&quot;: false
+    }
+  }
+</code></pre>
+<h3 id="sending-a-play-command">Sending a play command</h3>
+<p>You can instruct a client to play something by posting to the following url:</p>
+<ul>
+<li><a class="xref" href="../../reference/RestAPI/SessionsService/postSessionsByIdPlaying.html">/Sessions/{Id}/Playing</a></li>
+</ul>
+<p>The following values should be included within post data:</p>
+<ul>
+<li>ItemIds - A comma-delimited list of item id's</li>
+<li>PlayCommand - PlayNow, PlayNext or PlayLast</li>
+<li>StartPositionTicks - If supplied, this is the position in which the first title should start at.</li>
+<li>MediaSourceId - If supplied, this is the media source that should be used for the first item</li>
+<li>AudioStreamIndex - If supplied, this is the audio stream that should be used for the first item</li>
+<li>SubtitleStreamIndex - If supplied, this is the subtitle stream that should be used for the first item</li>
+<li>StartIndex - If supplied, and if playing a list of items, this is the index of the first item that should be played.</li>
+</ul>
+<p>Note: StartPositionTicks is ignored when PlayCommand is PlayNext or PlayLast.</p>
+<h3 id="sending-a-playstate-command">Sending a playstate command</h3>
+<p>The following commands are available:</p>
+<ul>
+<li><a class="xref" href="../../reference/RestAPI/SessionsService/postSessionsByIdPlayingByCommand.html">/Sessions/{Id}/Playing/{Command}</a><br>
+Examples
+<ul>
+<li>/Sessions/{Id}/Playing/Stop</li>
+<li>/Sessions/{Id}/Playing/Pause</li>
+<li>/Sessions/{Id}/Playing/Unpause</li>
+<li>/Sessions/{Id}/Playing/PlayPause</li>
+<li>/Sessions/{Id}/Playing/NextTrack</li>
+<li>/Sessions/{Id}/Playing/PreviousTrack</li>
+<li>/Sessions/{Id}/Playing/Seek?SeekPositionTicks=xxx</li>
+</ul>
+</li>
+</ul>
+<h3 id="sending-a-general-command">Sending a general command</h3>
+<p>General commands are sent using <a class="xref" href="../../reference/RestAPI/SessionsService/postSessionsByIdCommandByCommand.html">/Sessions/{Id}/Command/{Command}</a></p>
+<p>If arguments are required, the body of the request should be of contentType application/json and have the following structure:</p>
+<pre><code class="lang-json">{
+    Arguments:{
+        &quot;Name&quot;: &quot;Value&quot;
+    }
+}
+</code></pre>
+<p>Below are the list of known core command <strong>names</strong>, along with the list of properties available in Arguments.</p>
+<ul>
+<li>MoveUp,</li>
+<li>MoveDown,</li>
+<li>MoveLeft,</li>
+<li>MoveRight,</li>
+<li>PageUp,</li>
+<li>PageDown,</li>
+<li>PreviousLetter (scroll list to previous letter),</li>
+<li>NextLetter (scroll list to next letter),</li>
+<li>ToggleOsdMenu  (show or hide video player OSD),</li>
+<li>ToggleContextMenu (show or hide information relating to selected list item),</li>
+<li>Select (enter),</li>
+<li>Back,</li>
+<li>TakeScreenshot,</li>
+<li>SendKey (tbd),</li>
+<li>SendString (Enter text into application - Arguments: String),</li>
+<li>GoHome,</li>
+<li>GoToSettings,</li>
+<li>VolumeUp,</li>
+<li>VolumeDown,</li>
+<li>Mute,</li>
+<li>Unmute,</li>
+<li>ToggleMute,</li>
+<li>SetVolume (Arguments: Volume 0-100 scale),</li>
+<li>SetAudioStreamIndex = (Arguments: Index),</li>
+<li>SetSubtitleStreamIndex = (Arguments: Index. If -1 turn off subtitles),</li>
+<li>ToggleFullscreen ,</li>
+<li>DisplayContent (Arguments: ItemName, ItemId, ItemType),</li>
+<li>GoToSearch,</li>
+<li>PlayMediaSource - used to indicate support for media source selection for an item,</li>
+<li>PlayTrailers (Arguments: ItemId),</li>
+<li>DisplayMessage (Arguments: Header, Text, TimeoutMs - if timeout is omitted, message should be modal)</li>
+<li>SetPlaybackRate (Arguments: PlaybackRate - floating point playback rate value)</li>
+<li>SetSubtitleOffset (Arguments: SubtitleOffset - floating point subtitle offset value)</li>
+<li>IncrementSubtitleOffset (Arguments: Increment - floating point subtitle offset increment value)</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

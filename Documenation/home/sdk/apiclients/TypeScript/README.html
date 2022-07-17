@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TypeScript Client </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="TypeScript Client ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="stylesheet" href="../../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../../styles/header.css">
+    <link rel="stylesheet" href="../../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:uid" content="">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+    <script type="text/javascript" src="../../../../nav.js"></script>
+    <script type="text/javascript" src="../../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../../index.html">
+        		    <img id="logo" class="svg" src="../../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="typescript-client">TypeScript Client</h1>
+
+<table><tr></tr>
+    <tr>
+        <th valign="top" align="left">Name</th>
+        <td>EmbyClient.TypeScript</td>
+    </tr>
+    <tr>
+        <th valign="top" align="left">Language</th>
+        <td>TypeScript</td>
+    </tr>
+    <tr>
+        <th valign="top" align="left">SDK Folder</th>
+        <td>SampleCode/RestApi/Clients/TypeScript</td>
+    </tr>
+</table>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This TypeScript client utilizes the <a href="https://fetch.spec.whatwg.org/">Fetch API</a>. The generated Node module can be used in the following environments:</p>
+<h3 id="environment">Environment</h3>
+<ul>
+<li>Node.js</li>
+<li>Webpack</li>
+<li>Browserify</li>
+</ul>
+<h3 id="language-level">Language level</h3>
+<ul>
+<li>ES5 - you must have a Promises/A+ library installed</li>
+<li>ES6</li>
+</ul>
+<h3 id="module-system">Module system</h3>
+<ul>
+<li>CommonJS</li>
+<li>ES6 module system</li>
+</ul>
+<p>It can be used in both TypeScript and JavaScript. In TypeScript, the definition should be automatically resolved via <code>package.json</code>. (<a href="http://www.typescriptlang.org/docs/handbook/typings-for-npm-packages.html">Reference</a>)</p>
+<h3 id="building">Building</h3>
+<p>To build and compile the typescript sources to javascript use:</p>
+<pre><code>npm install
+npm run build
+</code></pre>
+<h3 id="publishing">Publishing</h3>
+<h5 id="important">Important</h5>
+<p>We do not recommend to use and install this code as a package. Probably too many adjustments will be required to get it working according to your requirements.<br>
+A better approach is to use the code files directly in your project!</p>
+<p>First build the package then run <code>npm publish</code></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please edit the package name to a custom name of yours before publishing anywhere!</p>
+</div>
+<h3 id="consuming">Consuming</h3>
+<p>Navigate to the folder of your consuming project and run one of the following commands.</p>
+<h5 id="published">Published</h5>
+<pre><code>npm install {{npmName}}@{{npmVersion}} --save
+</code></pre>
+<h5 id="unpublished">UnPublished</h5>
+<pre><code>npm install PATH_TO_GENERATED_PACKAGE --save
+</code></pre>
+<h2 id="documentation-links">Documentation Links</h2>
+<p>For general documentation, please refer to <a href="../../../../doc/restapi/index.html">Accessing Emby Server via REST API</a>.</p>
+<p>The available API endpoints are documented in the <a href="../../../../reference/RestAPI.html">REST API Reference</a> section.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

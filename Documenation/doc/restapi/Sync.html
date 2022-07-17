@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sync </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sync ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="doc-restapi-Sync">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-restapi-Sync">
+<h1 id="sync">Sync</h1>
+
+<p>Any client can report that it supports sync with two additions to their ClientCapabilities:</p>
+<ul>
+<li>Specify <strong>SupportsSync</strong> = true</li>
+<li>Specify DeviceProfile object</li>
+</ul>
+<p>A DeviceProfile is the same structure that is used by Dlna Profiles. The default profile can be found here:</p>
+<p><a href="https://github.com/MediaBrowser/MediaBrowser/blob/master/MediaBrowser.Model/Dlna/Profiles/DefaultProfile.cs">https://github.com/MediaBrowser/MediaBrowser/blob/master/MediaBrowser.Model/Dlna/Profiles/DefaultProfile.cs</a></p>
+<p>For brevity, all Dlna-specific properties such as ProtocolInfo, Manufacturer/Model, etc. can be omitted.</p>
+<p>To verify the server acknowledges your sync support, create a sync job using the web interface and test to make sure the device shows up as a selectable sync target.</p>
+<h2 id="determining-user-sync-privileges">Determining user sync privileges</h2>
+<p>To determine if a user has sync privileges, check user.Policy.EnableSync.</p>
+<h2 id="sync-selections">Sync Selections</h2>
+<p>Clients should make sync available from as many contexts as possible. This includes, but is not limited to:</p>
+<ul>
+<li>Detail screens</li>
+<li>List screens (single selection)</li>
+<li>List screens (multi-selection)</li>
+<li>Home screen (single selection)</li>
+<li>Home screen (category selection, e.g. Next Up, Latest Movies, etc).</li>
+</ul>
+<p>All library items are eligible for sync and clients should not artificially filter them. Instead, simply check the <strong>SupportsSync</strong> property to determine if an item supports syncing. You will need to include <strong>SyncInfo</strong> as part of your requested fields in order to make this property available.</p>
+<h2 id="sync-dialog">Sync Dialog</h2>
+<p>This will discuss the menu that should be presented after a user has chosen to sync something.</p>
+<p>Note: If using our api libraries, simply call SyncHelper.GetSyncOptions and it will return a list of all the choices that should be presented based on what the user has selected.</p>
+<ul>
+<li><strong>Name</strong> - Display only if multiple items have been selected. If a single item or category, omit and the server will automatically assign a name.</li>
+<li><strong>Quality</strong> - Only if syncing video content. See SyncHelper for examples.</li>
+<li><strong>Unwatched</strong> - Only if syncing video content. See SyncHelper for examples.</li>
+<li><strong>SyncNewContent</strong> - Only if syncing a folder or category. See SyncHelper for examples.</li>
+<li><strong>ItemLimit</strong> - Only if syncing a folder or category. See SyncHelper for examples.</li>
+</ul>
+<h2 id="creating-sync-jobs">Creating Sync Jobs</h2>
+<p>To create a sync job, send a Post to <a class="xref" href="../../reference/RestAPI/SyncService/getSyncJobs.html">/Sync/Jobs</a>. The <strong>TargetId</strong> property should be the client's reported <strong>DeviceId</strong>.</p>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li><p>If the user chooses to sync a Genre, MusicGenre, GameGenre, Studio, or Person, then the ParentId property should also be supplied, in order to limit the scope of the sync to the section of the library they're currently browsing. The ParentId is the Id of the top level user view.</p>
+</li>
+<li><p>If the user chooses to sync a special category (e.g. Latest, Resume, Next Up), then a ParentId should also be supplied (see above note).</p>
+</li>
+</ul>
+<p>A complete example is available in our ApiClient libraries. See CreateSyncJob.</p>
+<h2 id="running-sync-jobs">Running sync jobs</h2>
+<p>All of the client-side code needed to run sync jobs is provided in our Api libraries. The MultiServerSync operation will handle both sync and camera upload for all authenticated servers. It is available in both .NET and Java:</p>
+<p><a href="https://github.com/MediaBrowser/MediaBrowser.ApiClient">https://github.com/MediaBrowser/MediaBrowser.ApiClient</a>
+<a href="https://github.com/MediaBrowser/MediaBrowser.ApiClient.Java">https://github.com/MediaBrowser/MediaBrowser.ApiClient.Java</a></p>
+<p>If using another language it will need to be ported.</p>
+<h2 id="client-side-sync-management">Client-side sync management</h2>
+<p>Coming soon.</p>
+<h2 id="online-access">Online access</h2>
+<p>Coming soon.</p>
+<h2 id="offline-access">Offline access</h2>
+<p>Coming soon.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

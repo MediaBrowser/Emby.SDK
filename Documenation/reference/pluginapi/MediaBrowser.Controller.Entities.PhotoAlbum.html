@@ -1,0 +1,1287 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PhotoAlbum
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PhotoAlbum
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Entities.PhotoAlbum">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_Entities_PhotoAlbum" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum" class="text-break">Class PhotoAlbum
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></div>
+    <div class="level2"><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></div>
+    <div class="level3"><span class="xref">PhotoAlbum</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
+    <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_UserViewManager">Folder.UserViewManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsPreSorted">Folder.IsPreSorted</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsPhysicalRoot">Folder.IsPhysicalRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsResolvedToFolder">Folder.IsResolvedToFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsTopParent">Folder.IsTopParent</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsFolder">Folder.IsFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsDisplayedAsFolder">Folder.IsDisplayedAsFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsCumulativeRunTimeTicks">Folder.SupportsCumulativeRunTimeTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsExternalTransfer">Folder.SupportsExternalTransfer</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CanDelete_MediaBrowser_Controller_Entities_Folder___">Folder.CanDelete(Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FileNameWithoutExtension">Folder.FileNameWithoutExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsShortcutChildren">Folder.SupportsShortcutChildren</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_">Folder.AddChild(BaseItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildren_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetChildren(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildrenIds_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetChildrenIds(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsVisibleViaTags_MediaBrowser_Controller_Entities_User_">Folder.IsVisibleViaTags(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsVisible_MediaBrowser_Controller_Entities_User_">Folder.IsVisible(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRefreshProgress">Folder.GetRefreshProgress()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_">Folder.ValidateChildren(IProgress&lt;Double&gt;, CancellationToken, MetadataRefreshOptions, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshStart">Folder.TriggerOnRefreshStart()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshComplete">Folder.TriggerOnRefreshComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_">Folder.ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, MetadataRefreshOptions, IDirectoryService)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SortChildrenForValidation_MediaBrowser_Controller_Entities_BaseItem___">Folder.SortChildrenForValidation(BaseItem[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.GetNonCachedChildren(IDirectoryService, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildCount_MediaBrowser_Controller_Entities_User_">Folder.GetChildCount(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_">Folder.GetRecursiveChildCount(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_QueryRecursiveForItemIds_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.QueryRecursiveForItemIds(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_QueryRecursive_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.QueryRecursive(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItems(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemIdList_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemIdList(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemList_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemList(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemIdsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemIdsInternal(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemsInternal(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildren_MediaBrowser_Controller_Entities_User_">Folder.GetChildren(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRecursiveChildren">Folder.GetRecursiveChildren()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsOwnedItems">Folder.SupportsOwnedItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_MarkDirectlyAsPlayed">Folder.MarkDirectlyAsPlayed</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_System_DateTimeOffset__System_Boolean_">Folder.MarkPlayed(User, Nullable&lt;DateTimeOffset&gt;, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_MarkUnplayed_MediaBrowser_Controller_Entities_User_">Folder.MarkUnplayed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsPlayed_MediaBrowser_Controller_Entities_User_">Folder.IsPlayed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsUnplayed_MediaBrowser_Controller_Entities_User_">Folder.IsUnplayed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AllowRecursiveCounts">Folder.AllowRecursiveCounts</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlayCount">BaseItem.PlayCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LastPlayedDate">BaseItem.LastPlayedDate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Played">BaseItem.Played</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AudioStreamIndex">BaseItem.AudioStreamIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SubtitleStreamIndex">BaseItem.SubtitleStreamIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserDataKey">BaseItem.UserDataKey</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFavorite">BaseItem.IsFavorite</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlaybackPositionTicks">BaseItem.PlaybackPositionTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserDataSet">BaseItem.UserDataSet</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_InternalId">BaseItem.InternalId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoteTrailers">BaseItem.RemoteTrailers</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ListItemEntryId">BaseItem.ListItemEntryId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugReplaceChars">BaseItem.SlugReplaceChars</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugChar">BaseItem.SlugChar</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions">BaseItem.SupportedImageExtensions</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensionsList">BaseItem.SupportedImageExtensionsList</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrailerFolderName">BaseItem.TrailerFolderName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongsFolderName">BaseItem.ThemeSongsFolderName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongFilename">BaseItem.ThemeSongFilename</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeVideosFolderName">BaseItem.ThemeVideosFolderName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExtrasSubFolders">BaseItem.ExtrasSubFolders</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsUserData">BaseItem.SupportsUserData</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds">BaseItem.ThemeSongIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPlaceHolder">BaseItem.IsPlaceHolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeVideoIds">BaseItem.ThemeVideoIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsExtras">BaseItem.SupportsExtras</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsCompleteMedia">BaseItem.IsCompleteMedia</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds">BaseItem.LocalTrailerIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayExtraTypes">BaseItem.DisplayExtraTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayExtraIds">BaseItem.GetDisplayExtraIds()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtraGuids_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtraGuids(ExtraType[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalParts_System_Int64_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_">BaseItem.GetAdditionalParts(Int64, DtoOptions, User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalPartIds_System_Int64_">BaseItem.GetAdditionalPartIds(Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtraIds_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtraIds(ExtraType[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtras(ExtraType[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Int64_System_String_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetExtras(Int64, String, ExtraType[], DtoOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Int64_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetExtras(Int64, ExtraType[], DtoOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeSongs">BaseItem.GetThemeSongs()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos">BaseItem.GetThemeVideos()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRunTimeTicksForPlayState">BaseItem.GetRunTimeTicksForPlayState()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PreferredMetadataCountryCode">BaseItem.PreferredMetadataCountryCode</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PreferredMetadataLanguage">BaseItem.PreferredMetadataLanguage</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Size">BaseItem.Size</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Prefix">BaseItem.Prefix</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Container">BaseItem.Container</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Tagline">BaseItem.Tagline</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImageInfos">BaseItem.ImageInfos</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVirtualItem">BaseItem.IsVirtualItem</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AlbumId">BaseItem.AlbumId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Album">BaseItem.Album</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsEditingAlbum">BaseItem.SupportsEditingAlbum</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetStandaloneDisplayName">BaseItem.GetStandaloneDisplayName()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsInMixedFolder">BaseItem.IsInMixedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayOrderIntValue">BaseItem.GetDisplayOrderIntValue()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetDisplayOrder_System_String_">BaseItem.SetDisplayOrder(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaContainingFolderPath_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaContainingFolderPath(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetSupportsPositionTicksResume_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetSupportsPositionTicksResume(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsRemoteImageDownloading">BaseItem.SupportsRemoteImageDownloading</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Name">BaseItem.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsShortcut">BaseItem.IsShortcut</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsUnaired">BaseItem.IsUnaired</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TotalBitrate">BaseItem.TotalBitrate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExtraType">BaseItem.ExtraType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsThemeMedia">BaseItem.IsThemeMedia</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OriginalTitle">BaseItem.OriginalTitle</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Id">BaseItem.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultMediaSourceId">BaseItem.GetDefaultMediaSourceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OwnerId">BaseItem.OwnerId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Width">BaseItem.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Height">BaseItem.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayPreferencesId">BaseItem.DisplayPreferencesId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Path">BaseItem.Path</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ContainingFolderPath">BaseItem.ContainingFolderPath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExternalId">BaseItem.ExternalId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SeriesPresentationUniqueKey">BaseItem.SeriesPresentationUniqueKey</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHidden">BaseItem.IsHidden</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetOwner">BaseItem.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocationType">BaseItem.LocationType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PathProtocol">BaseItem.PathProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_MediaBrowser_Model_MediaInfo_MediaProtocol_">BaseItem.IsPathProtocol(MediaProtocol)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFileProtocol">BaseItem.IsFileProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasPathProtocol">BaseItem.HasPathProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FileName">BaseItem.FileName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableAlphaNumericSorting">BaseItem.EnableAlphaNumericSorting</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PrimaryImagePath">BaseItem.PrimaryImagePath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsMetadataFetcherEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsMetadataFetcherEnabled(LibraryOptions, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsImageFetcherEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsImageFetcherEnabled(LibraryOptions, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDownload_MediaBrowser_Controller_Entities_User_">BaseItem.IsAuthorizedToDownload(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload_MediaBrowser_Controller_Entities_User_">BaseItem.CanDownload(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownloadAsSingleMedia">BaseItem.CanDownloadAsSingleMedia()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownloadAsFolder">BaseItem.CanDownloadAsFolder()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateCreated">BaseItem.DateCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateModified">BaseItem.DateModified</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateModifiedChanged_System_DateTimeOffset_">BaseItem.HasDateModifiedChanged(DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastSaved">BaseItem.DateLastSaved</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastRefreshed">BaseItem.DateLastRefreshed</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsGreaterThanDateLastSaved_System_DateTimeOffset_">BaseItem.IsGreaterThanDateLastSaved(DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Logger">BaseItem.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LibraryManager">BaseItem.LibraryManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserManager">BaseItem.UserManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ConfigurationManager">BaseItem.ConfigurationManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProviderManager">BaseItem.ProviderManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalizationManager">BaseItem.LocalizationManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ItemRepository">BaseItem.ItemRepository</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FileSystem">BaseItem.FileSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserDataManager">BaseItem.UserDataManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ChannelManager">BaseItem.ChannelManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaSourceManager">BaseItem.MediaSourceManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ToString">BaseItem.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsLocked">BaseItem.IsLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LockedFields">BaseItem.LockedFields</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaType">BaseItem.MediaType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SortName">BaseItem.SortName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetSortNameDirect_System_String_">BaseItem.SetSortNameDirect(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFieldLocked_MediaBrowser_Model_Entities_MetadataFields_">BaseItem.IsFieldLocked(MetadataFields)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddProviderIdsToName_System_String_System_String___">BaseItem.AddProviderIdsToName(String, String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath">BaseItem.GetInternalMetadataPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_">BaseItem.GetInternalMetadataPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_Guid_System_String_">BaseItem.GetInternalMetadataPath(Guid, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreateSortName">BaseItem.CreateSortName()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreateSortName_System_ReadOnlySpan_System_Char__">BaseItem.CreateSortName(ReadOnlySpan&lt;Char&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ParentId">BaseItem.ParentId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Parent">BaseItem.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_Folder_">BaseItem.SetParent(Folder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParent">BaseItem.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParents">BaseItem.GetParents()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FindParent__1">BaseItem.FindParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayParentId">BaseItem.DisplayParentId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImageDisplayParentId">BaseItem.ImageDisplayParentId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayParent">BaseItem.DisplayParent</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PremiereDate">BaseItem.PremiereDate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EndDate">BaseItem.EndDate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OfficialRating">BaseItem.OfficialRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CriticRating">BaseItem.CriticRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CustomRating">BaseItem.CustomRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Overview">BaseItem.Overview</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Studios">BaseItem.Studios</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_StudioItems">BaseItem.StudioItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Genres">BaseItem.Genres</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GenreItems">BaseItem.GenreItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Tags">BaseItem.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TagItems">BaseItem.TagItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Collections">BaseItem.Collections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImportedCollections">BaseItem.ImportedCollections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImportedCollections">BaseItem.GetImportedCollections()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAllKnownCollections">BaseItem.GetAllKnownCollections()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImportedCollections_MediaBrowser_Model_Dto_LinkedItemInfo___">BaseItem.AddImportedCollections(LinkedItemInfo[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ContainsTag_System_String_">BaseItem.ContainsTag(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetTags_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetTags(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetCollections_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetCollections(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetGenres_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetGenres(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProductionLocations">BaseItem.ProductionLocations</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CommunityRating">BaseItem.CommunityRating</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RunTimeTicks">BaseItem.RunTimeTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProductionYear">BaseItem.ProductionYear</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IndexNumber">BaseItem.IndexNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ParentIndexNumber">BaseItem.ParentIndexNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OfficialRatingForComparison">BaseItem.OfficialRatingForComparison</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CustomRatingForComparison">BaseItem.CustomRatingForComparison</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPlayAccess_MediaBrowser_Controller_Entities_User_">BaseItem.GetPlayAccess(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaStreams">BaseItem.GetMediaStreams()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkTaggedItemsLoaded">BaseItem.MarkTaggedItemsLoaded()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnsureTaggedItemsLoaded">BaseItem.EnsureTaggedItemsLoaded()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetSupportedItemLinkTypes">BaseItem.GetSupportedItemLinkTypes()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FillItemLinks_System_Collections_Generic_List_System_ValueTuple_MediaBrowser_Controller_Library_ItemLinkType_System_String_System_Int64___">BaseItem.FillItemLinks(List&lt;(T1, T2, T3)&lt;ItemLinkType, String, Int64&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsActiveRecording">BaseItem.IsActiveRecording()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaSources(Boolean, Boolean, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaSources(User, Boolean, Boolean, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAllItemsForMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_">BaseItem.GetAllItemsForMediaSources(User, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableInternalIdsExternally">BaseItem.EnableInternalIdsExternally</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientId">BaseItem.GetClientId()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientId_System_Boolean_">BaseItem.GetClientId(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, LibraryOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPeople">BaseItem.SupportsPeople</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsStudios">BaseItem.SupportsStudios</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsTags">BaseItem.SupportsTags</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsCollections">BaseItem.SupportsCollections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsThemeMedia">BaseItem.SupportsThemeMedia</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsLocalTrailers">BaseItem.SupportsLocalTrailers</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_">BaseItem.RefreshedOwnedItems(MetadataRefreshOptions, LibraryOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.GetFileSystemChildren(IDirectoryService)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder">BaseItem.IsSecondaryMergedItemInSameFolder()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUniquelyIdentifiableProviderIds">BaseItem.GetUniquelyIdentifiableProviderIds()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProviderIds">BaseItem.ProviderIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LatestItemsContainerId">BaseItem.LatestItemsContainerId</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ForceDefaultAspectRatio">BaseItem.ForceDefaultAspectRatio</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey">BaseItem.CreatePresentationUniqueKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.CreatePresentationUniqueKey(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPresentationUniqueKey">BaseItem.GetDefaultPresentationUniqueKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PresentationUniqueKey">BaseItem.PresentationUniqueKey</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey">BaseItem.GetPresentationUniqueKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RequiresRefresh_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.RequiresRefresh(IDirectoryService)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AfterMetadataRefresh">BaseItem.AfterMetadataRefresh()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataLanguage">BaseItem.GetPreferredMetadataLanguage()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataLanguage_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredMetadataLanguage(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredImageLanguage_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredImageLanguage(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataCountryCode">BaseItem.GetPreferredMetadataCountryCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataCountryCode_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredMetadataCountryCode(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalMetadataEnabled(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsParentalAllowed_MediaBrowser_Controller_Entities_User_">BaseItem.IsParentalAllowed(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParentalRatingValue">BaseItem.GetParentalRatingValue()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInheritedParentalRatingValue">BaseItem.GetInheritedParentalRatingValue()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedType">BaseItem.GetBlockUnratedType()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedValue_MediaBrowser_Model_Users_UserPolicy_">BaseItem.GetBlockUnratedValue(UserPolicy)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandalone_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandalone(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandaloneInternal_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandaloneInternal(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientTypeName">BaseItem.GetClientTypeName()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableRememberingTrackSelections">BaseItem.EnableRememberingTrackSelections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddStudio_System_String_">BaseItem.AddStudio(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetStudios_System_Collections_Generic_IEnumerable_System_String__">BaseItem.SetStudios(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddGenre_System_String_">BaseItem.AddGenre(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollection_System_String_">BaseItem.AddCollection(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollection_MediaBrowser_Model_Dto_LinkedItemInfo_">BaseItem.AddCollection(LinkedItemInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollectionInfo_MediaBrowser_Model_Dto_LinkedItemInfo_">BaseItem.AddCollectionInfo(LinkedItemInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddCollection_MediaBrowser_Controller_Entities_BoxSet_">BaseItem.AddCollection(BoxSet)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveCollection_System_Int64_">BaseItem.RemoveCollection(Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateHideFromResume_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_UserItemData_System_Boolean_">BaseItem.UpdateHideFromResume(User, UserItemData, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasImage_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.HasImage(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetImage_MediaBrowser_Controller_Entities_ItemImageInfo_System_Int32_">BaseItem.SetImage(ItemImageInfo, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetImage_MediaBrowser_Controller_Entities_ItemImageInfo_System_Int32_System_Boolean_">BaseItem.SetImage(ItemImageInfo, Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImage_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Model_Entities_ImageType_">BaseItem.AddImage(FileSystemMetadata, ImageType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DeleteImage_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.DeleteImage(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImage_MediaBrowser_Model_Entities_ImageType_System_String_">BaseItem.RemoveImage(ImageType, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImage_MediaBrowser_Controller_Entities_ItemImageInfo_">BaseItem.RemoveImage(ItemImageInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_List_MediaBrowser_Controller_Entities_ItemImageInfo__">BaseItem.RemoveImages(List&lt;ItemImageInfo&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_">BaseItem.UpdateToRepository(ItemUpdateType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Providers_MetadataRefreshOptions_">BaseItem.UpdateToRepository(ItemUpdateType, MetadataRefreshOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImagePath_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.GetImagePath(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImageInfo_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.GetImageInfo(ImageType, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImages_MediaBrowser_Model_Entities_ImageType_">BaseItem.GetImages(ImageType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImages_MediaBrowser_Model_Entities_ImageType_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Boolean_">BaseItem.AddImages(ImageType, List&lt;FileSystemMetadata&gt;, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDeletePaths_System_Boolean_">BaseItem.GetDeletePaths(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetLocalMetadataFilesToDelete">BaseItem.GetLocalMetadataFilesToDelete()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowsMultipleImages_MediaBrowser_Model_Entities_ImageType_">BaseItem.AllowsMultipleImages(ImageType)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ReorderImage_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_">BaseItem.ReorderImage(ImageType, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MoveFiles_System_String___System_String___">BaseItem.MoveFiles(String[], String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFavoriteOrLiked_MediaBrowser_Controller_Entities_User_">BaseItem.IsFavoriteOrLiked(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_IHasLookupInfo_MediaBrowser_Controller_Providers_ItemLookupInfo__GetLookupInfo_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IHasLookupInfo&lt;ItemLookupInfo&gt;.GetLookupInfo(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemLookupInfo__1_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetItemLookupInfo&lt;T&gt;(LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetNameForMetadataLookup">BaseItem.GetNameForMetadataLookup()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_BeforeMetadataRefresh_System_Boolean_">BaseItem.BeforeMetadataRefresh(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMappedPath_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaProtocol__MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMappedPath(String, Nullable&lt;MediaProtocol&gt;, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadataForOwnedItem(BaseItem, MetadataRefreshOptions, LibraryOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetEtag_MediaBrowser_Controller_Entities_User_">BaseItem.GetEtag(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetEtagValues_MediaBrowser_Controller_Entities_User_">BaseItem.GetEtagValues(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalAncestorIds">BaseItem.GetInternalAncestorIds()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParentId">BaseItem.GetTopParentId()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery">BaseItem.GetIdsForAncestorQuery()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_MediaBrowser_Controller_Entities_BaseItem___">BaseItem.UpdateRatingToItems(BaseItem[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowEditingField_MediaBrowser_Model_Entities_MetadataFields_">BaseItem.AllowEditingField(MetadataFields)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_Entities_PhotoAlbum_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PhotoAlbum : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_PhotoAlbum_SupportsGenres_" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.SupportsGenres*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_PhotoAlbum_SupportsGenres" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.SupportsGenres">SupportsGenres</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsGenres { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsGenres">BaseItem.SupportsGenres</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_PhotoAlbum_SupportsInheritedParentImages_" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.SupportsInheritedParentImages*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_PhotoAlbum_SupportsInheritedParentImages" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.SupportsInheritedParentImages">SupportsInheritedParentImages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsInheritedParentImages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsInheritedParentImages">Folder.SupportsInheritedParentImages</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_PhotoAlbum_GetDefaultPrimaryImageAspectRatio_" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.GetDefaultPrimaryImageAspectRatio*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_PhotoAlbum_GetDefaultPrimaryImageAspectRatio" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.GetDefaultPrimaryImageAspectRatio">GetDefaultPrimaryImageAspectRatio()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override double GetDefaultPrimaryImageAspectRatio()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPrimaryImageAspectRatio">BaseItem.GetDefaultPrimaryImageAspectRatio()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_PhotoAlbum_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.SupportsPlayedStatus*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_PhotoAlbum_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.PhotoAlbum.SupportsPlayedStatus(MediaBrowser.Model.Configuration.LibraryOptions)">SupportsPlayedStatus(LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus(LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.SupportsPlayedStatus(LibraryOptions)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItemExtensions.html#MediaBrowser_Controller_Entities_BaseItemExtensions_GetImagePath_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_">BaseItemExtensions.GetImagePath(BaseItem, ImageType)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItemExtensions.html#MediaBrowser_Controller_Entities_BaseItemExtensions_HasImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_">BaseItemExtensions.HasImage(BaseItem, ImageType)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Extensions.html#MediaBrowser_Controller_Entities_Extensions_AddTrailerUrl_MediaBrowser_Controller_Entities_BaseItem_System_String_">Extensions.AddTrailerUrl(BaseItem, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_AddTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.AddTag(BaseItem, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_RemoveTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.RemoveTag(BaseItem, String)</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

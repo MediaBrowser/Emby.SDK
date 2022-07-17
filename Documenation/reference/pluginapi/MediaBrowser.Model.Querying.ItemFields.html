@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum ItemFields
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum ItemFields
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Querying.ItemFields">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Querying.ItemFields">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_Querying_ItemFields" data-uid="MediaBrowser.Model.Querying.ItemFields" class="text-break">Enum ItemFields
+  </h1>
+  <div class="markdown level0 summary"><p>Used to control the data that gets attached to DtoBaseItems</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Querying.html">MediaBrowser.Model.Querying</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Querying_ItemFields_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum ItemFields</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_AirDays">AirDays</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_AirTime">AirTime</td>
+        <td><p>The air time</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_AlternateMediaSources">AlternateMediaSources</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_BasicSyncInfo">BasicSyncInfo</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Bitrate">Bitrate</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_CanDelete">CanDelete</td>
+        <td><p>The can delete</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_CanDownload">CanDownload</td>
+        <td><p>The can download</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ChannelImage">ChannelImage</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ChannelInfo">ChannelInfo</td>
+        <td><p>The channel information</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ChannelMappingInfo">ChannelMappingInfo</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Chapters">Chapters</td>
+        <td><p>The chapters</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ChildCount">ChildCount</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_CollectionName">CollectionName</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_CommunityRating">CommunityRating</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Container">Container</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_CriticRating">CriticRating</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_CustomRating">CustomRating</td>
+        <td><p>The custom rating</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_DateCreated">DateCreated</td>
+        <td><p>The date created of the item</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_DateLastRefreshed">DateLastRefreshed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_DateLastSaved">DateLastSaved</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_DateModified">DateModified</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_DisplayOrder">DisplayOrder</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_DisplayPreferencesId">DisplayPreferencesId</td>
+        <td><p>Item display preferences</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_EndDate">EndDate</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Etag">Etag</td>
+        <td><p>The etag</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ExternalId">ExternalId</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ExternalUrls">ExternalUrls</td>
+        <td><p>The external urls</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ExtraIds">ExtraIds</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_FileName">FileName</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Genres">Genres</td>
+        <td><p>Genres</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Guid">Guid</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Height">Height</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Id">Id</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_IsInMixedFolder">IsInMixedFolder</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_IsVirtualItem">IsVirtualItem</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ItemCounts">ItemCounts</td>
+        <td><p>The item counts</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_LocalTrailerCount">LocalTrailerCount</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_MediaSources">MediaSources</td>
+        <td><p>The media versions</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_MediaStreams">MediaStreams</td>
+        <td><p>The media streams</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_OfficialRating">OfficialRating</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_OriginalTitle">OriginalTitle</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Overview">Overview</td>
+        <td><p>The item overview</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ParentId">ParentId</td>
+        <td><p>The id of the item's parent</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_PartCount">PartCount</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Path">Path</td>
+        <td><p>The physical path of the item</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_People">People</td>
+        <td><p>The list of people for the item</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_PlayAccess">PlayAccess</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Prefix">Prefix</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_PremiereDate">PremiereDate</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_PresentationUniqueKey">PresentationUniqueKey</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_PrimaryImageAspectRatio">PrimaryImageAspectRatio</td>
+        <td><p>The aspect ratio of the primary image</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ProductionLocations">ProductionLocations</td>
+        <td><p>The production locations</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ProductionYear">ProductionYear</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ProgramPrimaryImageAspectRatio">ProgramPrimaryImageAspectRatio</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_ProviderIds">ProviderIds</td>
+        <td><p>Imdb, tmdb, etc</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_RecursiveItemCount">RecursiveItemCount</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_RemoteTrailers">RemoteTrailers</td>
+        <td><p>The trailer url of the item</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_RunTimeTicks">RunTimeTicks</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SeasonUserData">SeasonUserData</td>
+        <td><p>The season user data</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SeriesPresentationUniqueKey">SeriesPresentationUniqueKey</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SeriesPrimaryImage">SeriesPrimaryImage</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SeriesStudio">SeriesStudio</td>
+        <td><p>The series studio</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Settings">Settings</td>
+        <td><p>The settings</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Size">Size</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SortName">SortName</td>
+        <td><p>The sort name of the item</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SpecialEpisodeNumbers">SpecialEpisodeNumbers</td>
+        <td><p>The special episode numbers</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SpecialFeatureCount">SpecialFeatureCount</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_StartDate">StartDate</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Status">Status</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Studios">Studios</td>
+        <td><p>The studios of the item</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_SubViews">SubViews</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Taglines">Taglines</td>
+        <td><p>The taglines of the item</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Tags">Tags</td>
+        <td><p>The tags</p>
+</td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Video3DFormat">Video3DFormat</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Model_Querying_ItemFields_Width">Width</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

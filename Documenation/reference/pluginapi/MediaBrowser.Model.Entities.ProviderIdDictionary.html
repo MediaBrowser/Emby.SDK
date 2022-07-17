@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ProviderIdDictionary
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProviderIdDictionary
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Entities.ProviderIdDictionary">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Entities.ProviderIdDictionary">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_Entities_ProviderIdDictionary" data-uid="MediaBrowser.Model.Entities.ProviderIdDictionary" class="text-break">Class ProviderIdDictionary
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</div>
+    <div class="level2"><span class="xref">ProviderIdDictionary</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.idictionary">IDictionary</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.serialization.ideserializationcallback">IDeserializationCallback</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.IDictionary.get_Item(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.IDictionary.set_Item(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.add#system-collections-generic-dictionary-2-add(-0-1)">Dictionary&lt;String, String&gt;.Add(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.clear#system-collections-generic-dictionary-2-clear">Dictionary&lt;String, String&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.containskey#system-collections-generic-dictionary-2-containskey(-0)">Dictionary&lt;String, String&gt;.ContainsKey(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.containsvalue#system-collections-generic-dictionary-2-containsvalue(-1)">Dictionary&lt;String, String&gt;.ContainsValue(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.getenumerator#system-collections-generic-dictionary-2-getenumerator">Dictionary&lt;String, String&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.getobjectdata#system-collections-generic-dictionary-2-getobjectdata(system-runtime-serialization-serializationinfo-system-runtime-serialization-streamingcontext)">Dictionary&lt;String, String&gt;.GetObjectData(SerializationInfo, StreamingContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.ondeserialization#system-collections-generic-dictionary-2-ondeserialization(system-object)">Dictionary&lt;String, String&gt;.OnDeserialization(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.remove#system-collections-generic-dictionary-2-remove(-0)">Dictionary&lt;String, String&gt;.Remove(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;&gt;.Add(System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;&gt;.Contains(System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;&gt;.CopyTo(System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;[], System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;&gt;.Remove(System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;&gt;.GetEnumerator()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-copyto#system-collections-generic-dictionary-2-system-collections-icollection-copyto(system-array-system-int32)">Dictionary&lt;String, String&gt;.ICollection.CopyTo(Array, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-add#system-collections-generic-dictionary-2-system-collections-idictionary-add(system-object-system-object)">Dictionary&lt;String, String&gt;.IDictionary.Add(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-contains#system-collections-generic-dictionary-2-system-collections-idictionary-contains(system-object)">Dictionary&lt;String, String&gt;.IDictionary.Contains(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-getenumerator#system-collections-generic-dictionary-2-system-collections-idictionary-getenumerator">Dictionary&lt;String, String&gt;.IDictionary.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-remove#system-collections-generic-dictionary-2-system-collections-idictionary-remove(system-object)">Dictionary&lt;String, String&gt;.IDictionary.Remove(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-ienumerable-getenumerator#system-collections-generic-dictionary-2-system-collections-ienumerable-getenumerator">Dictionary&lt;String, String&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.trygetvalue#system-collections-generic-dictionary-2-trygetvalue(-0-1@)">Dictionary&lt;String, String&gt;.TryGetValue(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.comparer#system-collections-generic-dictionary-2-comparer">Dictionary&lt;String, String&gt;.Comparer</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.count#system-collections-generic-dictionary-2-count">Dictionary&lt;String, String&gt;.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.item#system-collections-generic-dictionary-2-item(-0)">Dictionary&lt;String, String&gt;.Item[String]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.keys#system-collections-generic-dictionary-2-keys">Dictionary&lt;String, String&gt;.Keys</a>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String, System.String&gt;&gt;.IsReadOnly</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.IDictionary&lt;System.String, System.String&gt;.Keys</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.IDictionary&lt;System.String, System.String&gt;.Values</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.IReadOnlyDictionary&lt;System.String, System.String&gt;.Keys</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.Dictionary&lt;System.String, System.String&gt;.System.Collections.Generic.IReadOnlyDictionary&lt;System.String, System.String&gt;.Values</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-issynchronized#system-collections-generic-dictionary-2-system-collections-icollection-issynchronized">Dictionary&lt;String, String&gt;.ICollection.IsSynchronized</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-icollection-syncroot#system-collections-generic-dictionary-2-system-collections-icollection-syncroot">Dictionary&lt;String, String&gt;.ICollection.SyncRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-isfixedsize#system-collections-generic-dictionary-2-system-collections-idictionary-isfixedsize">Dictionary&lt;String, String&gt;.IDictionary.IsFixedSize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-isreadonly#system-collections-generic-dictionary-2-system-collections-idictionary-isreadonly">Dictionary&lt;String, String&gt;.IDictionary.IsReadOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-item#system-collections-generic-dictionary-2-system-collections-idictionary-item(system-object)">Dictionary&lt;String, String&gt;.IDictionary.Item[Object]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-keys#system-collections-generic-dictionary-2-system-collections-idictionary-keys">Dictionary&lt;String, String&gt;.IDictionary.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.system-collections-idictionary-values#system-collections-generic-dictionary-2-system-collections-idictionary-values">Dictionary&lt;String, String&gt;.IDictionary.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.values#system-collections-generic-dictionary-2-values">Dictionary&lt;String, String&gt;.Values</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Entities.html">MediaBrowser.Model.Entities</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Entities_ProviderIdDictionary_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ProviderIdDictionary : Dictionary&lt;string, string&gt;, IDictionary&lt;string, string&gt;, ICollection&lt;KeyValuePair&lt;string, string&gt;&gt;, IReadOnlyDictionary&lt;string, string&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;string, string&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt;, IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Entities_ProviderIdDictionary__ctor_" data-uid="MediaBrowser.Model.Entities.ProviderIdDictionary.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_Entities_ProviderIdDictionary__ctor" data-uid="MediaBrowser.Model.Entities.ProviderIdDictionary.#ctor">ProviderIdDictionary()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderIdDictionary()</code></pre>
+  </div>
+  
+  
+  <a id="MediaBrowser_Model_Entities_ProviderIdDictionary__ctor_" data-uid="MediaBrowser.Model.Entities.ProviderIdDictionary.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_Entities_ProviderIdDictionary__ctor_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="MediaBrowser.Model.Entities.ProviderIdDictionary.#ctor(System.Collections.Generic.Dictionary{System.String,System.String})">ProviderIdDictionary(Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderIdDictionary(Dictionary&lt;string, string&gt; source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">System.Collections.Generic.ICollection&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.idictionary">System.Collections.IDictionary</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.icollection">System.Collections.ICollection</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.serialization.ideserializationcallback">System.Runtime.Serialization.IDeserializationCallback</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">System.Runtime.Serialization.ISerializable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Sorting.SortExtensions.html#MediaBrowser_Controller_Sorting_SortExtensions_OrderByString__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_String__">SortExtensions.OrderByString&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Sorting.SortExtensions.html#MediaBrowser_Controller_Sorting_SortExtensions_OrderByStringDescending__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_String__">SortExtensions.OrderByStringDescending&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Extensions.LinqExtensions.html#MediaBrowser_Model_Extensions_LinqExtensions_ToArray__1_System_Collections_Generic_IEnumerable___0__System_Int32_">LinqExtensions.ToArray&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Int32)</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
