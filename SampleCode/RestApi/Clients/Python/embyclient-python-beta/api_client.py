@@ -1,8 +1,6 @@
 # coding: utf-8
 """
     Emby Server REST API (BETA)
-
-    API version: 4.8.0.6
 """
 from __future__ import absolute_import
 

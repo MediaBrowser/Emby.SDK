@@ -1,6 +1,5 @@
 /*
  * EmbyClient.Dotnet.Beta
- * API Version: 4.8.0.6
  */
 
 using Newtonsoft.Json.Converters;

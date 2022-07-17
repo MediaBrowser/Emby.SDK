@@ -414,7 +414,7 @@ header {
 }
 
 .navbar-brand {
-    height: 52px;
+    height: unset;
 }
 
 .sideaffix {
@@ -454,6 +454,12 @@ header {
 
 .article.grid-right {
     margin-left: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+    .article.grid-right {
+        margin-left: 0;
+    }
 }
 
 
