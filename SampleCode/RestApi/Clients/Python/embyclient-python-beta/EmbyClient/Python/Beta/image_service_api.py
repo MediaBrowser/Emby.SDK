@@ -464,9 +464,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -503,9 +500,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -515,7 +509,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -566,12 +560,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -628,9 +616,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -667,9 +652,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -678,7 +660,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -735,12 +717,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -794,9 +770,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -833,9 +806,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -845,7 +815,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -896,12 +866,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -958,9 +922,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -997,9 +958,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1008,7 +966,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1065,12 +1023,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -1124,9 +1076,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1163,9 +1112,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1175,7 +1121,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1226,12 +1172,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -1288,9 +1228,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1327,9 +1264,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1338,7 +1272,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1395,12 +1329,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -1549,9 +1477,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1588,9 +1513,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1600,7 +1522,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1651,12 +1573,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -1713,9 +1629,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1752,9 +1665,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1763,7 +1673,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1820,12 +1730,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -1858,13 +1762,13 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1873,8 +1777,6 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -1882,7 +1784,6 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1892,18 +1793,18 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
             return data
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1912,8 +1813,6 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -1921,7 +1820,6 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -1930,7 +1828,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'percent_played', 'unplayed_count', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'add_played_indicator', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1965,14 +1863,6 @@ class ImageServiceApi(object):
         if ('format' not in params or
                 params['format'] is None):
             raise ValueError("Missing the required parameter `format` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'percent_played' is set
-        if ('percent_played' not in params or
-                params['percent_played'] is None):
-            raise ValueError("Missing the required parameter `percent_played` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'unplayed_count' is set
-        if ('unplayed_count' not in params or
-                params['unplayed_count'] is None):
-            raise ValueError("Missing the required parameter `unplayed_count` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'type' is set
         if ('type' not in params or
                 params['type'] is None):
@@ -1995,10 +1885,6 @@ class ImageServiceApi(object):
             path_params['Tag'] = params['tag']  # noqa: E501
         if 'format' in params:
             path_params['Format'] = params['format']  # noqa: E501
-        if 'percent_played' in params:
-            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
-        if 'unplayed_count' in params:
-            path_params['UnplayedCount'] = params['unplayed_count']  # noqa: E501
         if 'type' in params:
             path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
@@ -2015,8 +1901,6 @@ class ImageServiceApi(object):
             query_params.append(('CropWhitespace', params['crop_whitespace']))  # noqa: E501
         if 'enable_image_enhancers' in params:
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -2070,9 +1954,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2109,9 +1990,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2121,7 +1999,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2172,12 +2050,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -2234,9 +2106,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2273,9 +2142,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2284,7 +2150,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2341,12 +2207,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -2400,9 +2260,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2439,9 +2296,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2451,7 +2305,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2502,12 +2356,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -2564,9 +2412,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2603,9 +2448,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2614,7 +2456,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2671,12 +2513,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -2730,9 +2566,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2769,9 +2602,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2781,7 +2611,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2832,12 +2662,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -2894,9 +2718,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2933,9 +2754,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -2944,7 +2762,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3001,12 +2819,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -3060,9 +2872,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3099,9 +2908,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3111,7 +2917,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3162,12 +2968,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -3224,9 +3024,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3263,9 +3060,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3274,7 +3068,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3331,12 +3125,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -3390,9 +3178,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3429,9 +3214,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3441,7 +3223,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3492,12 +3274,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -3554,9 +3330,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3593,9 +3366,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3604,7 +3374,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3661,12 +3431,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -3720,9 +3484,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3759,9 +3520,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3771,7 +3529,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3822,12 +3580,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -3884,9 +3636,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3923,9 +3672,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -3934,7 +3680,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3991,12 +3737,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -4050,9 +3790,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4089,9 +3826,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4101,7 +3835,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4152,12 +3886,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -4214,9 +3942,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4253,9 +3978,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4264,7 +3986,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4321,12 +4043,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -4380,9 +4096,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4419,9 +4132,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4431,7 +4141,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4482,12 +4192,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -4544,9 +4248,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4583,9 +4284,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4594,7 +4292,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4651,12 +4349,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -4689,13 +4381,13 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -4704,8 +4396,6 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -4713,7 +4403,6 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4723,18 +4412,18 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
             return data
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -4743,8 +4432,6 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -4752,7 +4439,6 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4761,7 +4447,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'percent_played', 'unplayed_count', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'add_played_indicator', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4796,14 +4482,6 @@ class ImageServiceApi(object):
         if ('format' not in params or
                 params['format'] is None):
             raise ValueError("Missing the required parameter `format` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'percent_played' is set
-        if ('percent_played' not in params or
-                params['percent_played'] is None):
-            raise ValueError("Missing the required parameter `percent_played` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'unplayed_count' is set
-        if ('unplayed_count' not in params or
-                params['unplayed_count'] is None):
-            raise ValueError("Missing the required parameter `unplayed_count` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'type' is set
         if ('type' not in params or
                 params['type'] is None):
@@ -4826,10 +4504,6 @@ class ImageServiceApi(object):
             path_params['Tag'] = params['tag']  # noqa: E501
         if 'format' in params:
             path_params['Format'] = params['format']  # noqa: E501
-        if 'percent_played' in params:
-            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
-        if 'unplayed_count' in params:
-            path_params['UnplayedCount'] = params['unplayed_count']  # noqa: E501
         if 'type' in params:
             path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
@@ -4846,8 +4520,6 @@ class ImageServiceApi(object):
             query_params.append(('CropWhitespace', params['crop_whitespace']))  # noqa: E501
         if 'enable_image_enhancers' in params:
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -4901,9 +4573,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4940,9 +4609,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -4952,7 +4618,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5003,12 +4669,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -5065,9 +4725,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5104,9 +4761,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5115,7 +4769,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5172,12 +4826,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -5231,9 +4879,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5270,9 +4915,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5282,7 +4924,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5333,12 +4975,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -5395,9 +5031,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5434,9 +5067,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5445,7 +5075,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5502,12 +5132,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -5561,9 +5185,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5600,9 +5221,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5612,7 +5230,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5663,12 +5281,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -5725,9 +5337,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5764,9 +5373,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5775,7 +5381,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5832,12 +5438,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -5891,9 +5491,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5930,9 +5527,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -5942,7 +5536,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5993,12 +5587,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
@@ -6055,9 +5643,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -6094,9 +5679,6 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
@@ -6105,7 +5687,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6162,12 +5744,6 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:

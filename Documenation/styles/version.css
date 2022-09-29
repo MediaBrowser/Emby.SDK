@@ -1,4 +1,8 @@
 .sdkVersionSpan:before {
-    content: '4.8.0.6 Beta';
+    content: '4.8.0.10 Beta';
+}
+
+DIV.sdkversion {
+    color: #f34407;
 }
 

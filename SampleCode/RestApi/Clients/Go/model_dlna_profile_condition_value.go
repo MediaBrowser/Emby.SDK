@@ -34,4 +34,5 @@ const (
 	AUDIO_SAMPLE_RATE_DlnaProfileConditionValue DlnaProfileConditionValue = "AudioSampleRate"
 	AUDIO_BIT_DEPTH_DlnaProfileConditionValue DlnaProfileConditionValue = "AudioBitDepth"
 	VIDEO_RANGE_DlnaProfileConditionValue DlnaProfileConditionValue = "VideoRange"
+	VIDEO_ROTATION_DlnaProfileConditionValue DlnaProfileConditionValue = "VideoRotation"
 )

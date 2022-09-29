@@ -55,6 +55,7 @@ type ConfigurationServerConfiguration struct {
 	TimerIdsUpgraded bool `json:"TimerIdsUpgraded,omitempty"`
 	ForcedSortNameUpgraded bool `json:"ForcedSortNameUpgraded,omitempty"`
 	InheritedParentalRatingValueUpgraded bool `json:"InheritedParentalRatingValueUpgraded,omitempty"`
+	ImageExtractorUpgraded bool `json:"ImageExtractorUpgraded,omitempty"`
 	EnablePeopleLetterSubFolders bool `json:"EnablePeopleLetterSubFolders,omitempty"`
 	OptimizeDatabaseOnShutdown bool `json:"OptimizeDatabaseOnShutdown,omitempty"`
 	DatabaseAnalysisLimit int32 `json:"DatabaseAnalysisLimit,omitempty"`

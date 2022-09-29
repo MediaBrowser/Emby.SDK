@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to build a Server Plugin </title>
+    <title>Server Plugins </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to build a Server Plugin ">
+    <meta name="title" content="Server Plugins ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    <meta property="docfx:uid" content="doc-plugins-How-to-build-a-Server-Plugin">
+    <meta property="docfx:uid" content="doc-plugins">
     
     <meta property="docfx:rel" content="../../">
     
@@ -145,47 +145,16 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="doc-plugins-How-to-build-a-Server-Plugin">
-<h1 id="how-to-build-a-server-plugin">How to build a Server Plugin</h1>
+            <article class="content wrap" id="_content" data-uid="doc-plugins">
+<h1 id="server-plugins">Server Plugins</h1>
 
-<div class="NOTE">
-<h5>Note</h5>
-<p>Please see our <a href="Development-Policy.html">Development Policy</a> before beginning development.</p>
-</div>
-<p>First install Emby Server, and get it up and running. Install Visual Studio 2017 or later along with the .NET Core SDK.</p>
-<h2 id="overview">Overview</h2>
-<p>Emby Server runs on two different runtimes: .NET Core 2.0+, and Mono. The following instructions will show you how to build one plugin that will run on all platforms supported by Emby Server.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>The easiest and recommened way is to use one of the <a href="../../home/sdk/plugins/index.html">Plugin Templates</a> which are provided in the <a href="../../home/sdk/index.html">Emby SDK</a>.</p>
-<p>For example, with the <a href="../../home/sdk/plugins/template_simple.html">Simple Plugin</a>) template, follow these steps:</p>
-<ul>
-<li>Open the <code>EmbySimplePlugin.sln</code> solution in Visual Studio</li>
-<li>In the Plugin class, replace all the indicated values with your own</li>
-<li>Rename the <code>EmbySimplePlugin</code> project in Visual Studio to a name of your choosing.
-This will also change the file name</li>
-<li>Adjust the namespace in the Plugin class accordingl</li>
-</ul>
-<h2 id="create-a-post-build-event">Create a Post-Build Event</h2>
-<p>Right click the project -&gt; Properties. Create a post-build event that will copy the assembly to the server's plugins directory. For example:</p>
-<p><code>xcopy &quot;$(TargetPath)&quot; &quot;%AppData%\Emby-Server\Plugins\&quot; /y</code></p>
-<h2 id="test-the-plugin">Test the Plugin</h2>
-<p>Shutdown the server, rebuild your solution, and restart the server. At this point you should see your plugin in the Dashboard's Plugins menu.</p>
-<h2 id="add-functionality">Add Functionality</h2>
-<p>To add real functionality to your plugin, you will need an entrypoint that can initialize and accept the various dependencies you may need in order to interact with the Emby environment.</p>
-<p>This is done by creating a class that implements the <a class="xref" href="../../reference/pluginapi/MediaBrowser.Controller.Plugins.IServerEntryPoint.html">IServerEntryPoint</a> interface.<br>
-See <a href="Automatic-Type-Discovery.html">Automatic Type Discovery</a> for this and other types you can include in your plug-in. Its constructor can accept any number of injected dependencies - depending on what your plugin needs to access.<br>
-See also: <a href="Dependency-Injection.html">Dependency Injection</a>.</p>
-<p>If your plugin will be a premium plugin, see <a class="xref" href="../../reference/pluginapi/MediaBrowser.Common.Security.IRequiresRegistration.html">IRequiresRegistration</a> in <a href="Other-Interfaces.html">Other Interfaces</a>.</p>
-<p>In addition, use these Emby interfaces when applicable:</p>
-<ul>
-<li><a class="xref" href="../../reference/pluginapi/MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></li>
-<li><a class="xref" href="../../reference/pluginapi/MediaBrowser.Common.Net.IHttpClient.html">IHttpClient</a></li>
-<li><a class="xref" href="../../reference/pluginapi/MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a></li>
-<li><a class="xref" href="../../reference/pluginapi/MediaBrowser.Model.Diagnostics.IProcessFactory.html">IProcessFactory</a></li>
-<li><a class="xref" href="../../reference/pluginapi/MediaBrowser.Model.IO.IZipClient.html">IZipClient</a></li>
-</ul>
-<h2 id="debugging">Debugging</h2>
-<p>The quickest way to test code changes is to work without the debugger. If you do this, you can leave the server running at all times. Simply use the Rebuild command on your plugin project, and right click the server tray -&gt; Restart Server. If that option is not visible you'll need to enable developer tools in the Dashboard under Advanced.</p>
+<p>Server plugins provide a way to enhannce and amend Emby functionality in many different ways.</p>
+<h2 id="plugin-development">Plugin Development</h2>
+<p><a href="dev/index.html">Plugin Development</a></p>
+<p>Explains how to create a plugin from scratch or from template code, how to add functionality and eventually build and deploy a plugin.</p>
+<h2 id="plugin-ui">Plugin UI</h2>
+<p><a href="ui/index.html">Plugin UI</a></p>
+<p>There's a new and simple way to add user interfaces (like a settings page) to your plugin, with minimal code and without needing to work with html and javascript files.</p>
 </article>
           </div>
           

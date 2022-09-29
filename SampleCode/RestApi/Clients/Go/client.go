@@ -34,7 +34,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
-// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.6
+// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.10
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -83,6 +83,8 @@ type APIClient struct {
 	GameGenresServiceApi *GameGenresServiceApiService
 
 	GamesServiceApi *GamesServiceApiService
+
+	GenericUIApiServiceApi *GenericUIApiServiceApiService
 
 	GenresServiceApi *GenresServiceApiService
 
@@ -208,6 +210,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.FfmpegOptionsServiceApi = (*FfmpegOptionsServiceApiService)(&c.common)
 	c.GameGenresServiceApi = (*GameGenresServiceApiService)(&c.common)
 	c.GamesServiceApi = (*GamesServiceApiService)(&c.common)
+	c.GenericUIApiServiceApi = (*GenericUIApiServiceApiService)(&c.common)
 	c.GenresServiceApi = (*GenresServiceApiService)(&c.common)
 	c.HlsSegmentServiceApi = (*HlsSegmentServiceApiService)(&c.common)
 	c.ImageServiceApi = (*ImageServiceApiService)(&c.common)

@@ -15,7 +15,7 @@ import GameSystemSummary from '../model/GameSystemSummary';
 /**
 * GamesService service.
 * @module EmbyClient.JavaScript.Beta/GamesServiceApi
-* @version 4.8.0.6
+* @version 4.8.0.10
 */
 export default class GamesServiceApi {
 

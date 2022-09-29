@@ -18,10 +18,12 @@ public struct EmbyWebApiConfigurationPageInfo: Codable {
     public var displayName: String?
     public var configurationPageType: PluginsConfigurationPageType?
     public var pluginId: String?
+    public var href: String?
+    public var navMenuId: String?
     public var plugin: CommonPluginsIPlugin?
     public var translations: [String]?
 
-    public init(name: String? = nil, enableInMainMenu: Bool? = nil, menuSection: String? = nil, menuIcon: String? = nil, displayName: String? = nil, configurationPageType: PluginsConfigurationPageType? = nil, pluginId: String? = nil, plugin: CommonPluginsIPlugin? = nil, translations: [String]? = nil) {
+    public init(name: String? = nil, enableInMainMenu: Bool? = nil, menuSection: String? = nil, menuIcon: String? = nil, displayName: String? = nil, configurationPageType: PluginsConfigurationPageType? = nil, pluginId: String? = nil, href: String? = nil, navMenuId: String? = nil, plugin: CommonPluginsIPlugin? = nil, translations: [String]? = nil) {
         self.name = name
         self.enableInMainMenu = enableInMainMenu
         self.menuSection = menuSection
@@ -29,6 +31,8 @@ public struct EmbyWebApiConfigurationPageInfo: Codable {
         self.displayName = displayName
         self.configurationPageType = configurationPageType
         self.pluginId = pluginId
+        self.href = href
+        self.navMenuId = navMenuId
         self.plugin = plugin
         self.translations = translations
     }
@@ -41,6 +45,8 @@ public struct EmbyWebApiConfigurationPageInfo: Codable {
         case displayName = "DisplayName"
         case configurationPageType = "ConfigurationPageType"
         case pluginId = "PluginId"
+        case href = "Href"
+        case navMenuId = "NavMenuId"
         case plugin = "Plugin"
         case translations = "Translations"
     }

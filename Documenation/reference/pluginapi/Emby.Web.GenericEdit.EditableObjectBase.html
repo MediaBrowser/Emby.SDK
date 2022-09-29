@@ -157,7 +157,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">EditableObjectBase</span></div>
       <div class="level2"><a class="xref" href="Emby.Web.GenericEdit.EditableOptionsBase.html">EditableOptionsBase</a></div>
   </div>
@@ -221,7 +221,7 @@ public virtual string EditorDescription { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><p>The editor description.</p>
 </td>
       </tr>
@@ -249,7 +249,7 @@ public abstract string EditorTitle { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><p>The editor title.</p>
 </td>
       </tr>
@@ -331,7 +331,7 @@ public virtual ButtonItem TitleButton { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">jsonStream</span></td>
         <td></td>
       </tr>
@@ -378,7 +378,7 @@ public virtual ButtonItem TitleButton { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">jsonString</span></td>
         <td></td>
       </tr>
@@ -424,7 +424,7 @@ public virtual ButtonItem TitleButton { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.PropertyDiff.PropertyChangeInfo.html">PropertyChangeInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.PropertyDiff.PropertyChangeInfo.html">PropertyChangeInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -454,9 +454,107 @@ public virtual ButtonItem TitleButton { get; }</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_EditableObjectBase_Validate_" data-uid="Emby.Web.GenericEdit.EditableObjectBase.Validate*"></a>
+  <h4 id="Emby_Web_GenericEdit_EditableObjectBase_Validate" data-uid="Emby.Web.GenericEdit.EditableObjectBase.Validate">Validate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValidationResult Validate()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Validation.ValidationResult.html">ValidationResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_EditableObjectBase_Validate_" data-uid="Emby.Web.GenericEdit.EditableObjectBase.Validate*"></a>
+  <h4 id="Emby_Web_GenericEdit_EditableObjectBase_Validate_Emby_Web_GenericEdit_Validation_ValidationContext_" data-uid="Emby.Web.GenericEdit.EditableObjectBase.Validate(Emby.Web.GenericEdit.Validation.ValidationContext)">Validate(ValidationContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Validate(ValidationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Validation.ValidationContext.html">ValidationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_EditableObjectBase_ValidateChildGroup_" data-uid="Emby.Web.GenericEdit.EditableObjectBase.ValidateChildGroup*"></a>
+  <h4 id="Emby_Web_GenericEdit_EditableObjectBase_ValidateChildGroup_Emby_Web_GenericEdit_Validation_ValidationContext_System_String_" data-uid="Emby.Web.GenericEdit.EditableObjectBase.ValidateChildGroup(Emby.Web.GenericEdit.Validation.ValidationContext,System.String)">ValidateChildGroup(ValidationContext, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ValidateChildGroup(ValidationContext context, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Validation.ValidationContext.html">ValidationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_EditableObjectBase_ValidateOrThrow_" data-uid="Emby.Web.GenericEdit.EditableObjectBase.ValidateOrThrow*"></a>
+  <h4 id="Emby_Web_GenericEdit_EditableObjectBase_ValidateOrThrow" data-uid="Emby.Web.GenericEdit.EditableObjectBase.ValidateOrThrow">ValidateOrThrow()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ValidateOrThrow()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.GenericEdit.IEditableObject.html">IEditableObject</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
   </div>
 </div>
 </article>

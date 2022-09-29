@@ -97,12 +97,19 @@ import EmbyWebGenericEditEditObjectContainer from './model/EmbyWebGenericEditEdi
 import EmbyWebGenericEditEditorsEditorBase from './model/EmbyWebGenericEditEditorsEditorBase';
 import EmbyWebGenericEditEditorsEditorButtonItem from './model/EmbyWebGenericEditEditorsEditorButtonItem';
 import EmbyWebGenericEditEditorsEditorRoot from './model/EmbyWebGenericEditEditorsEditorRoot';
+import EmbyWebGenericUIApiEndpointsRunUICommand from './model/EmbyWebGenericUIApiEndpointsRunUICommand';
+import EmbyWebGenericUIModelEnumsUICommandType from './model/EmbyWebGenericUIModelEnumsUICommandType';
+import EmbyWebGenericUIModelEnumsUIViewType from './model/EmbyWebGenericUIModelEnumsUIViewType';
+import EmbyWebGenericUIModelUICommand from './model/EmbyWebGenericUIModelUICommand';
+import EmbyWebGenericUIModelUITabPageInfo from './model/EmbyWebGenericUIModelUITabPageInfo';
+import EmbyWebGenericUIModelUIViewInfo from './model/EmbyWebGenericUIModelUIViewInfo';
 import ExternalIdInfo from './model/ExternalIdInfo';
 import ExternalUrl from './model/ExternalUrl';
 import ForgotPassword from './model/ForgotPassword';
 import ForgotPasswordPin from './model/ForgotPasswordPin';
 import GameSystemSummary from './model/GameSystemSummary';
 import GeneralCommand from './model/GeneralCommand';
+import GenericEditIEditObjectContainer from './model/GenericEditIEditObjectContainer';
 import GlobalizationCountryInfo from './model/GlobalizationCountryInfo';
 import GlobalizationCultureDto from './model/GlobalizationCultureDto';
 import GlobalizationLocalizatonOption from './model/GlobalizationLocalizatonOption';
@@ -326,6 +333,7 @@ import EnvironmentServiceApi from './EmbyClient.JavaScript.Beta/EnvironmentServi
 import FfmpegOptionsServiceApi from './EmbyClient.JavaScript.Beta/FfmpegOptionsServiceApi';
 import GameGenresServiceApi from './EmbyClient.JavaScript.Beta/GameGenresServiceApi';
 import GamesServiceApi from './EmbyClient.JavaScript.Beta/GamesServiceApi';
+import GenericUIApiServiceApi from './EmbyClient.JavaScript.Beta/GenericUIApiServiceApi';
 import GenresServiceApi from './EmbyClient.JavaScript.Beta/GenresServiceApi';
 import HlsSegmentServiceApi from './EmbyClient.JavaScript.Beta/HlsSegmentServiceApi';
 import ImageServiceApi from './EmbyClient.JavaScript.Beta/ImageServiceApi';
@@ -399,7 +407,7 @@ import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.6
+* @version 4.8.0.10
 */
 export {
     /**
@@ -931,6 +939,42 @@ export {
     EmbyWebGenericEditEditorsEditorRoot,
 
     /**
+     * The EmbyWebGenericUIApiEndpointsRunUICommand model constructor.
+     * @property {module:model/EmbyWebGenericUIApiEndpointsRunUICommand}
+     */
+    EmbyWebGenericUIApiEndpointsRunUICommand,
+
+    /**
+     * The EmbyWebGenericUIModelEnumsUICommandType model constructor.
+     * @property {module:model/EmbyWebGenericUIModelEnumsUICommandType}
+     */
+    EmbyWebGenericUIModelEnumsUICommandType,
+
+    /**
+     * The EmbyWebGenericUIModelEnumsUIViewType model constructor.
+     * @property {module:model/EmbyWebGenericUIModelEnumsUIViewType}
+     */
+    EmbyWebGenericUIModelEnumsUIViewType,
+
+    /**
+     * The EmbyWebGenericUIModelUICommand model constructor.
+     * @property {module:model/EmbyWebGenericUIModelUICommand}
+     */
+    EmbyWebGenericUIModelUICommand,
+
+    /**
+     * The EmbyWebGenericUIModelUITabPageInfo model constructor.
+     * @property {module:model/EmbyWebGenericUIModelUITabPageInfo}
+     */
+    EmbyWebGenericUIModelUITabPageInfo,
+
+    /**
+     * The EmbyWebGenericUIModelUIViewInfo model constructor.
+     * @property {module:model/EmbyWebGenericUIModelUIViewInfo}
+     */
+    EmbyWebGenericUIModelUIViewInfo,
+
+    /**
      * The ExternalIdInfo model constructor.
      * @property {module:model/ExternalIdInfo}
      */
@@ -965,6 +1009,12 @@ export {
      * @property {module:model/GeneralCommand}
      */
     GeneralCommand,
+
+    /**
+     * The GenericEditIEditObjectContainer model constructor.
+     * @property {module:model/GenericEditIEditObjectContainer}
+     */
+    GenericEditIEditObjectContainer,
 
     /**
      * The GlobalizationCountryInfo model constructor.
@@ -2303,6 +2353,12 @@ export {
     * @property {module:EmbyClient.JavaScript.Beta/GamesServiceApi}
     */
     GamesServiceApi,
+
+    /**
+    * The GenericUIApiServiceApi service constructor.
+    * @property {module:EmbyClient.JavaScript.Beta/GenericUIApiServiceApi}
+    */
+    GenericUIApiServiceApi,
 
     /**
     * The GenresServiceApi service constructor.

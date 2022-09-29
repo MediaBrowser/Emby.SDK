@@ -160,6 +160,12 @@ export default class DlnaProfileConditionValue {
          */
         videoRange = "VideoRange";
 
+        /**
+         * value: "VideoRotation"
+         * @const
+         */
+        videoRotation = "VideoRotation";
+
 
     /**
     * Returns a <code>DlnaProfileConditionValue</code> enum value from a Javascript object name.

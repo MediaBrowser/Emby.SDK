@@ -610,9 +610,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -622,7 +619,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -650,12 +647,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -698,7 +689,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getArtistsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getArtistsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getArtistsByNameImagesByType(Async)");
@@ -708,7 +699,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getArtistsByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -731,17 +722,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getArtistsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getArtistsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -758,9 +746,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -768,8 +753,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getArtistsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getArtistsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -787,9 +772,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -798,7 +780,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -819,7 +801,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -837,9 +819,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -848,7 +827,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -877,12 +856,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -923,7 +896,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getArtistsByNameImagesByTypeByIndex(Async)");
@@ -937,7 +910,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getArtistsByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -961,16 +934,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getArtistsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getArtistsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -988,17 +958,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -1017,9 +984,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1027,7 +991,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1048,7 +1012,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1065,9 +1029,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1077,7 +1038,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1105,12 +1066,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -1153,7 +1108,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getGamegenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getGamegenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getGamegenresByNameImagesByType(Async)");
@@ -1163,7 +1118,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getGamegenresByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -1186,17 +1141,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getGamegenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getGamegenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -1213,9 +1165,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1223,8 +1172,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getGamegenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getGamegenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -1242,9 +1191,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1253,7 +1199,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1274,7 +1220,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1292,9 +1238,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1303,7 +1246,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1332,12 +1275,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -1378,7 +1315,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getGamegenresByNameImagesByTypeByIndex(Async)");
@@ -1392,7 +1329,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getGamegenresByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -1416,16 +1353,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getGamegenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getGamegenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -1443,17 +1377,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -1472,9 +1403,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1482,7 +1410,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1503,7 +1431,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1520,9 +1448,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1532,7 +1457,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getGenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getGenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1560,12 +1485,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -1608,7 +1527,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getGenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getGenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getGenresByNameImagesByType(Async)");
@@ -1618,7 +1537,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getGenresByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -1641,17 +1560,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getGenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getGenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -1668,9 +1584,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1678,8 +1591,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getGenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getGenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -1697,9 +1610,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1708,7 +1618,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1729,7 +1639,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1747,9 +1657,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1758,7 +1665,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1787,12 +1694,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -1833,7 +1734,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getGenresByNameImagesByTypeByIndex(Async)");
@@ -1847,7 +1748,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getGenresByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -1871,16 +1772,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getGenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getGenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -1898,17 +1796,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getGenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getGenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -1927,9 +1822,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -1937,7 +1829,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1958,7 +1850,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2100,9 +1992,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2112,7 +2001,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -2140,12 +2029,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -2188,7 +2071,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdImagesByType(Async)");
@@ -2198,7 +2081,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getItemsByIdImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -2221,17 +2104,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getItemsByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getItemsByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -2248,9 +2128,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2258,8 +2135,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getItemsByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getItemsByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -2277,9 +2154,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2288,7 +2162,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2309,7 +2183,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2327,9 +2201,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2338,7 +2209,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -2367,12 +2238,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -2413,7 +2278,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdImagesByTypeByIndex(Async)");
@@ -2427,7 +2292,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getItemsByIdImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -2451,16 +2316,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getItemsByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getItemsByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -2478,17 +2340,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -2507,9 +2366,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2517,7 +2373,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2538,7 +2394,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2549,8 +2405,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -2558,7 +2412,6 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2567,7 +2420,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -2577,8 +2430,6 @@ public class ImageServiceApi {
             .replaceAll("\\{" + "MaxHeight" + "\\}", apiClient.escapeString(maxHeight.toString()))
             .replaceAll("\\{" + "Tag" + "\\}", apiClient.escapeString(tag.toString()))
             .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()))
-            .replaceAll("\\{" + "PercentPlayed" + "\\}", apiClient.escapeString(percentPlayed.toString()))
-            .replaceAll("\\{" + "UnplayedCount" + "\\}", apiClient.escapeString(unplayedCount.toString()))
             .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
             .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
 
@@ -2594,8 +2445,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("CropWhitespace", cropWhitespace));
         if (enableImageEnhancers != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -2636,7 +2485,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -2657,14 +2506,6 @@ public class ImageServiceApi {
         if (format == null) {
             throw new ApiException("Missing the required parameter 'format' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
-        // verify the required parameter 'percentPlayed' is set
-        if (percentPlayed == null) {
-            throw new ApiException("Missing the required parameter 'percentPlayed' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
-        }
-        // verify the required parameter 'unplayedCount' is set
-        if (unplayedCount == null) {
-            throw new ApiException("Missing the required parameter 'unplayedCount' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
-        }
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -2674,7 +2515,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -2691,8 +2532,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -2700,14 +2539,13 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient);
+    public void getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -2718,8 +2556,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -2727,15 +2563,14 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -2747,8 +2582,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -2756,7 +2589,6 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2764,7 +2596,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2785,7 +2617,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2802,9 +2634,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2814,7 +2643,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -2842,12 +2671,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -2890,7 +2713,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getMusicgenresByNameImagesByType(Async)");
@@ -2900,7 +2723,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getMusicgenresByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -2923,17 +2746,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getMusicgenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getMusicgenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -2950,9 +2770,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2960,8 +2777,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getMusicgenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getMusicgenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -2979,9 +2796,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -2990,7 +2804,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3011,7 +2825,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -3029,9 +2843,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3040,7 +2851,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -3069,12 +2880,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -3115,7 +2920,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getMusicgenresByNameImagesByTypeByIndex(Async)");
@@ -3129,7 +2934,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getMusicgenresByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -3153,16 +2958,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getMusicgenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getMusicgenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -3180,17 +2982,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -3209,9 +3008,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3219,7 +3015,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3240,7 +3036,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -3257,9 +3053,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3269,7 +3062,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -3297,12 +3090,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -3345,7 +3132,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getPersonsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getPersonsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getPersonsByNameImagesByType(Async)");
@@ -3355,7 +3142,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getPersonsByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -3378,17 +3165,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getPersonsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getPersonsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -3405,9 +3189,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3415,8 +3196,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getPersonsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getPersonsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -3434,9 +3215,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3445,7 +3223,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3466,7 +3244,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -3484,9 +3262,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3495,7 +3270,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -3524,12 +3299,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -3570,7 +3339,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getPersonsByNameImagesByTypeByIndex(Async)");
@@ -3584,7 +3353,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getPersonsByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -3608,16 +3377,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getPersonsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getPersonsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -3635,17 +3401,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -3664,9 +3427,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3674,7 +3434,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3695,7 +3455,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -3712,9 +3472,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3724,7 +3481,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -3752,12 +3509,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -3800,7 +3551,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStudiosByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getStudiosByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getStudiosByNameImagesByType(Async)");
@@ -3810,7 +3561,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getStudiosByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -3833,17 +3584,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getStudiosByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getStudiosByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -3860,9 +3608,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3870,8 +3615,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getStudiosByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getStudiosByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -3889,9 +3634,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3900,7 +3642,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3921,7 +3663,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -3939,9 +3681,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -3950,7 +3689,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -3979,12 +3718,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -4025,7 +3758,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getStudiosByNameImagesByTypeByIndex(Async)");
@@ -4039,7 +3772,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getStudiosByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -4063,16 +3796,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getStudiosByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getStudiosByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -4090,17 +3820,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -4119,9 +3846,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4129,7 +3853,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4150,7 +3874,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -4167,9 +3891,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4181,7 +3902,7 @@ public class ImageServiceApi {
      * API Documentation: Authentication
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -4209,12 +3930,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -4257,7 +3972,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getUsersByIdImagesByType(Async)");
@@ -4267,7 +3982,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling getUsersByIdImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -4290,9 +4005,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4301,8 +4013,8 @@ public class ImageServiceApi {
      * API Documentation: Authentication
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
      */
-    public void getUsersByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        getUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void getUsersByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        getUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -4319,9 +4031,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4331,8 +4040,8 @@ public class ImageServiceApi {
      * API Documentation: Authentication
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
      */
-    public ApiResponse<Void> getUsersByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> getUsersByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -4350,9 +4059,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4363,7 +4069,7 @@ public class ImageServiceApi {
      * API Documentation: Authentication
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4384,7 +4090,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -4402,9 +4108,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4413,7 +4116,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -4442,12 +4145,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -4488,7 +4185,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getUsersByIdImagesByTypeByIndex(Async)");
@@ -4502,7 +4199,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getUsersByIdImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -4526,16 +4223,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getUsersByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void getUsersByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -4553,17 +4247,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getUsersByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getUsersByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -4582,9 +4273,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4592,7 +4280,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4613,7 +4301,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -4630,9 +4318,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4642,7 +4327,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -4670,12 +4355,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -4718,7 +4397,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headArtistsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headArtistsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headArtistsByNameImagesByType(Async)");
@@ -4728,7 +4407,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headArtistsByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -4751,17 +4430,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headArtistsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headArtistsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -4778,9 +4454,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4788,8 +4461,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headArtistsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headArtistsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -4807,9 +4480,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4818,7 +4488,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4839,7 +4509,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -4857,9 +4527,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -4868,7 +4535,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -4897,12 +4564,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -4943,7 +4604,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headArtistsByNameImagesByTypeByIndex(Async)");
@@ -4957,7 +4618,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headArtistsByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -4981,16 +4642,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headArtistsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headArtistsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -5008,17 +4666,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -5037,9 +4692,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5047,7 +4699,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5068,7 +4720,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5085,9 +4737,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5097,7 +4746,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -5125,12 +4774,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -5173,7 +4816,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headGamegenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headGamegenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headGamegenresByNameImagesByType(Async)");
@@ -5183,7 +4826,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headGamegenresByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -5206,17 +4849,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headGamegenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headGamegenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -5233,9 +4873,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5243,8 +4880,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headGamegenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headGamegenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -5262,9 +4899,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5273,7 +4907,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5294,7 +4928,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5312,9 +4946,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5323,7 +4954,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -5352,12 +4983,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -5398,7 +5023,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headGamegenresByNameImagesByTypeByIndex(Async)");
@@ -5412,7 +5037,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headGamegenresByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -5436,16 +5061,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headGamegenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headGamegenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -5463,17 +5085,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -5492,9 +5111,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5502,7 +5118,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5523,7 +5139,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5540,9 +5156,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5552,7 +5165,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headGenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headGenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -5580,12 +5193,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -5628,7 +5235,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headGenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headGenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headGenresByNameImagesByType(Async)");
@@ -5638,7 +5245,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headGenresByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -5661,17 +5268,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headGenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headGenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -5688,9 +5292,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5698,8 +5299,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headGenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headGenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -5717,9 +5318,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5728,7 +5326,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headGenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headGenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5749,7 +5347,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5767,9 +5365,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5778,7 +5373,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -5807,12 +5402,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -5853,7 +5442,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headGenresByNameImagesByTypeByIndex(Async)");
@@ -5867,7 +5456,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headGenresByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -5891,16 +5480,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headGenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headGenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -5918,17 +5504,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headGenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headGenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -5947,9 +5530,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -5957,7 +5537,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5978,7 +5558,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5995,9 +5575,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6007,7 +5584,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -6035,12 +5612,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -6083,7 +5654,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headItemsByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headItemsByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headItemsByIdImagesByType(Async)");
@@ -6093,7 +5664,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headItemsByIdImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -6116,17 +5687,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headItemsByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headItemsByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -6143,9 +5711,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6153,8 +5718,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headItemsByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headItemsByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -6172,9 +5737,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6183,7 +5745,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6204,7 +5766,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -6222,9 +5784,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6233,7 +5792,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -6262,12 +5821,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -6308,7 +5861,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headItemsByIdImagesByTypeByIndex(Async)");
@@ -6322,7 +5875,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headItemsByIdImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -6346,16 +5899,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headItemsByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headItemsByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -6373,17 +5923,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -6402,9 +5949,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6412,7 +5956,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6433,7 +5977,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -6444,8 +5988,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -6453,7 +5995,6 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6462,7 +6003,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -6472,8 +6013,6 @@ public class ImageServiceApi {
             .replaceAll("\\{" + "MaxHeight" + "\\}", apiClient.escapeString(maxHeight.toString()))
             .replaceAll("\\{" + "Tag" + "\\}", apiClient.escapeString(tag.toString()))
             .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()))
-            .replaceAll("\\{" + "PercentPlayed" + "\\}", apiClient.escapeString(percentPlayed.toString()))
-            .replaceAll("\\{" + "UnplayedCount" + "\\}", apiClient.escapeString(unplayedCount.toString()))
             .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
             .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
 
@@ -6489,8 +6028,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("CropWhitespace", cropWhitespace));
         if (enableImageEnhancers != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -6531,7 +6068,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -6552,14 +6089,6 @@ public class ImageServiceApi {
         if (format == null) {
             throw new ApiException("Missing the required parameter 'format' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
-        // verify the required parameter 'percentPlayed' is set
-        if (percentPlayed == null) {
-            throw new ApiException("Missing the required parameter 'percentPlayed' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
-        }
-        // verify the required parameter 'unplayedCount' is set
-        if (unplayedCount == null) {
-            throw new ApiException("Missing the required parameter 'unplayedCount' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
-        }
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -6569,7 +6098,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
         
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -6586,8 +6115,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -6595,14 +6122,13 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient);
+    public void headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -6613,8 +6139,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -6622,15 +6146,14 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -6642,8 +6165,6 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param percentPlayed Optional percent to render for the percent played overlay (required)
-     * @param unplayedCount Optional unplayed count overlay to render (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
      * @param width The fixed image width to return. (optional)
@@ -6651,7 +6172,6 @@ public class ImageServiceApi {
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6659,7 +6179,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(String id, Integer maxWidth, Integer maxHeight, String tag, String format, Double percentPlayed, Integer unplayedCount, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, Boolean addPlayedIndicator, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6680,7 +6200,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -6697,9 +6217,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6709,7 +6226,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -6737,12 +6254,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -6785,7 +6296,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headMusicgenresByNameImagesByType(Async)");
@@ -6795,7 +6306,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headMusicgenresByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -6818,17 +6329,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headMusicgenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headMusicgenresByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -6845,9 +6353,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6855,8 +6360,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headMusicgenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headMusicgenresByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -6874,9 +6379,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6885,7 +6387,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6906,7 +6408,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -6924,9 +6426,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -6935,7 +6434,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -6964,12 +6463,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -7010,7 +6503,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headMusicgenresByNameImagesByTypeByIndex(Async)");
@@ -7024,7 +6517,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headMusicgenresByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -7048,16 +6541,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headMusicgenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headMusicgenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -7075,17 +6565,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -7104,9 +6591,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7114,7 +6598,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -7135,7 +6619,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -7152,9 +6636,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7164,7 +6645,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -7192,12 +6673,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -7240,7 +6715,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headPersonsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headPersonsByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headPersonsByNameImagesByType(Async)");
@@ -7250,7 +6725,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headPersonsByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -7273,17 +6748,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headPersonsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headPersonsByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -7300,9 +6772,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7310,8 +6779,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headPersonsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headPersonsByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -7329,9 +6798,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7340,7 +6806,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -7361,7 +6827,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -7379,9 +6845,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7390,7 +6853,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -7419,12 +6882,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -7465,7 +6922,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headPersonsByNameImagesByTypeByIndex(Async)");
@@ -7479,7 +6936,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headPersonsByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -7503,16 +6960,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headPersonsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headPersonsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -7530,17 +6984,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -7559,9 +7010,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7569,7 +7017,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -7590,7 +7038,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -7607,9 +7055,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7619,7 +7064,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -7647,12 +7092,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -7695,7 +7134,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headStudiosByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headStudiosByNameImagesByTypeValidateBeforeCall(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headStudiosByNameImagesByType(Async)");
@@ -7705,7 +7144,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headStudiosByNameImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -7728,17 +7167,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headStudiosByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headStudiosByNameImagesByType(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -7755,9 +7191,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7765,8 +7198,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headStudiosByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headStudiosByNameImagesByTypeWithHttpInfo(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -7784,9 +7217,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7795,7 +7225,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeAsync(String name, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -7816,7 +7246,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeValidateBeforeCall(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -7834,9 +7264,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -7845,7 +7272,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -7874,12 +7301,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -7920,7 +7341,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headStudiosByNameImagesByTypeByIndex(Async)");
@@ -7934,7 +7355,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headStudiosByNameImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -7958,16 +7379,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headStudiosByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headStudiosByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -7985,17 +7403,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -8014,9 +7429,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -8024,7 +7436,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -8045,7 +7457,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -8062,9 +7474,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -8074,7 +7483,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headUsersByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headUsersByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -8102,12 +7511,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -8150,7 +7553,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headUsersByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headUsersByIdImagesByTypeValidateBeforeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headUsersByIdImagesByType(Async)");
@@ -8160,7 +7563,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling headUsersByIdImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         return call;
 
         
@@ -8183,17 +7586,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headUsersByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        headUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+    public void headUsersByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        headUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
     }
 
     /**
@@ -8210,9 +7610,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -8220,8 +7617,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headUsersByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, null, null);
+    public ApiResponse<Void> headUsersByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index) throws ApiException {
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, null, null);
         return apiClient.execute(call);
     }
 
@@ -8239,9 +7636,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -8250,7 +7644,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headUsersByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headUsersByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Integer index, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -8271,7 +7665,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -8289,9 +7683,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -8300,7 +7691,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -8329,12 +7720,6 @@ public class ImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageEnhancers", enableImageEnhancers));
         if (format != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Format", format));
-        if (addPlayedIndicator != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("AddPlayedIndicator", addPlayedIndicator));
-        if (percentPlayed != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("PercentPlayed", percentPlayed));
-        if (unplayedCount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("UnplayedCount", unplayedCount));
         if (backgroundColor != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("BackgroundColor", backgroundColor));
         if (foregroundLayer != null)
@@ -8375,7 +7760,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headUsersByIdImagesByTypeByIndex(Async)");
@@ -8389,7 +7774,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headUsersByIdImagesByTypeByIndex(Async)");
         }
         
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -8413,16 +7798,13 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headUsersByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+    public void headUsersByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
@@ -8440,17 +7822,14 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headUsersByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headUsersByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
@@ -8469,9 +7848,6 @@ public class ImageServiceApi {
      * @param cropWhitespace Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      * @param enableImageEnhancers Enable or disable image enhancers such as cover art. (optional)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (optional)
-     * @param addPlayedIndicator Optional. Add a played indicator (optional)
-     * @param percentPlayed Optional percent to render for the percent played overlay (optional)
-     * @param unplayedCount Optional unplayed count overlay to render (optional)
      * @param backgroundColor Optional. Apply a background color for transparent images. (optional)
      * @param foregroundLayer Optional. Apply a foreground layer on top of the image. (optional)
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
@@ -8479,7 +7855,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, Boolean addPlayedIndicator, Double percentPlayed, Integer unplayedCount, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -8500,7 +7876,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

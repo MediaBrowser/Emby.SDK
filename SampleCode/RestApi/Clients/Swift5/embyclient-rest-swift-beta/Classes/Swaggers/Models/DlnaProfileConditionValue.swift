@@ -33,4 +33,5 @@ public enum DlnaProfileConditionValue: String, Codable {
     case audioSampleRate = "AudioSampleRate"
     case audioBitDepth = "AudioBitDepth"
     case videoRange = "VideoRange"
+    case videoRotation = "VideoRotation"
 }

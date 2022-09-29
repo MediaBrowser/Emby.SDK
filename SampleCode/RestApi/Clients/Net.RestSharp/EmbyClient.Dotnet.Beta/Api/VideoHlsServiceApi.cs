@@ -68,7 +68,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
@@ -107,7 +107,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
@@ -174,7 +174,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
@@ -213,7 +213,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
@@ -522,7 +522,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
@@ -561,7 +561,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
@@ -683,7 +683,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
@@ -723,7 +723,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
         /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
         /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>

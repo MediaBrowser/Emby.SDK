@@ -136,15 +136,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void GetArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void GetArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -164,15 +161,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -192,124 +186,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void GetGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <returns></returns>
-        void GetGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -330,14 +211,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -356,15 +234,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void GetGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void GetGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -384,15 +259,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -412,14 +284,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -440,14 +309,109 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <returns></returns>
+        void GetGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <returns></returns>
+        void GetGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// Gets information about an item&#x27;s images
         /// </summary>
@@ -487,15 +451,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void GetItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void GetItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -515,15 +476,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -543,14 +501,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -571,14 +526,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -591,8 +543,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -600,12 +550,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -619,8 +568,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -628,12 +575,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -652,15 +598,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void GetMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void GetMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -680,15 +623,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -708,14 +648,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -736,14 +673,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -762,15 +696,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void GetPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void GetPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -790,15 +721,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -818,14 +746,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -846,14 +771,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -872,15 +794,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void GetStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void GetStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -900,15 +819,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -928,14 +844,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -956,14 +869,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -982,15 +892,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void GetUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void GetUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1010,15 +917,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1038,14 +942,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1066,14 +967,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1092,15 +990,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1120,15 +1015,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1148,14 +1040,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1176,14 +1065,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1202,15 +1088,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1230,15 +1113,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1258,14 +1138,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1286,14 +1163,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1312,15 +1186,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1340,15 +1211,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1368,14 +1236,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1396,14 +1261,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1422,15 +1284,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1450,15 +1309,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1478,14 +1334,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1506,14 +1359,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1526,8 +1376,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -1535,12 +1383,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1554,8 +1401,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -1563,12 +1408,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1587,15 +1431,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1615,15 +1456,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1643,14 +1481,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1671,14 +1506,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1697,15 +1529,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1725,15 +1554,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1753,14 +1579,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1781,14 +1604,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1807,15 +1627,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1835,15 +1652,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1863,14 +1677,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1891,14 +1702,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1917,15 +1725,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void HeadUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        void HeadUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -1945,15 +1750,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -1973,14 +1775,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -2001,14 +1800,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -2391,15 +2187,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -2419,15 +2212,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -2447,124 +2237,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// No authentication required
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -2585,14 +2262,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -2611,15 +2285,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -2639,15 +2310,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -2667,14 +2335,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -2695,14 +2360,109 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="type">Image Type</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// Gets information about an item&#x27;s images
         /// </summary>
@@ -2742,15 +2502,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -2770,15 +2527,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -2798,14 +2552,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -2826,14 +2577,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -2846,8 +2594,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -2855,12 +2601,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -2874,8 +2619,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -2883,12 +2626,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -2907,15 +2649,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -2935,15 +2674,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -2963,14 +2699,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -2991,14 +2724,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3017,15 +2747,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3045,15 +2772,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3073,14 +2797,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3101,14 +2822,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3127,15 +2845,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3155,15 +2870,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3183,14 +2895,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3211,14 +2920,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3237,15 +2943,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3265,15 +2968,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3293,14 +2993,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3321,14 +3018,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3347,15 +3041,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3375,15 +3066,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3403,14 +3091,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3431,14 +3116,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3457,15 +3139,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3485,15 +3164,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3513,14 +3189,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3541,14 +3214,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3567,15 +3237,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3595,15 +3262,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3623,14 +3287,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3651,14 +3312,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3677,15 +3335,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3705,15 +3360,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3733,14 +3385,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3761,14 +3410,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3781,8 +3427,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -3790,12 +3434,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3809,8 +3452,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -3818,12 +3459,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3842,15 +3482,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3870,15 +3507,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -3898,14 +3532,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3926,14 +3557,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3952,15 +3580,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -3980,15 +3605,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -4008,14 +3630,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -4036,14 +3655,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -4062,15 +3678,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -4090,15 +3703,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -4118,14 +3728,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -4146,14 +3753,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -4172,15 +3776,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
 
         /// <summary>
         /// 
@@ -4200,15 +3801,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index);
         /// <summary>
         /// 
         /// </summary>
@@ -4228,14 +3826,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -4256,14 +3851,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -5332,17 +4924,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -5360,15 +4949,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5408,9 +4994,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -5449,17 +5032,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetArtistsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetArtistsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -5478,15 +5058,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5526,9 +5103,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -5568,16 +5142,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -5596,14 +5167,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5647,9 +5215,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -5688,16 +5253,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -5717,14 +5279,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5768,9 +5327,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -5808,17 +5364,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -5836,15 +5389,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5884,9 +5434,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -5925,17 +5472,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -5954,15 +5498,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6002,9 +5543,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -6044,16 +5582,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -6072,14 +5607,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6123,9 +5655,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -6164,16 +5693,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -6193,14 +5719,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6244,9 +5767,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -6284,17 +5804,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -6312,15 +5829,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6360,9 +5874,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -6401,17 +5912,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetGenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetGenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -6430,15 +5938,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6478,9 +5983,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -6520,16 +6022,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -6548,14 +6047,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6599,9 +6095,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -6640,16 +6133,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -6669,14 +6159,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6720,9 +6207,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -6915,17 +6399,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -6943,15 +6424,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6991,9 +6469,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7032,17 +6507,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetItemsByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetItemsByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -7061,15 +6533,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7109,9 +6578,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7151,16 +6617,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -7179,14 +6642,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7230,9 +6690,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7271,16 +6728,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -7300,14 +6754,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7351,9 +6802,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7385,8 +6833,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -7394,14 +6840,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient);
+             GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -7413,8 +6858,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -7422,12 +6865,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7444,12 +6886,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'percentPlayed' is set
-            if (percentPlayed == null)
-                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'unplayedCount' is set
-            if (unplayedCount == null)
-                throw new ApiException(400, "Missing required parameter 'unplayedCount' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -7482,8 +6918,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
-            if (unplayedCount != null) localVarPathParams.Add("UnplayedCount", this.Configuration.ApiClient.ParameterToString(unplayedCount)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -7491,7 +6925,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7523,8 +6956,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -7532,14 +6963,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient);
+             await GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -7552,8 +6982,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -7561,12 +6989,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7583,12 +7010,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'percentPlayed' is set
-            if (percentPlayed == null)
-                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'unplayedCount' is set
-            if (unplayedCount == null)
-                throw new ApiException(400, "Missing required parameter 'unplayedCount' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -7621,8 +7042,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
-            if (unplayedCount != null) localVarPathParams.Add("UnplayedCount", this.Configuration.ApiClient.ParameterToString(unplayedCount)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -7630,7 +7049,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7668,17 +7086,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -7696,15 +7111,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7744,9 +7156,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7785,17 +7194,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -7814,15 +7220,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7862,9 +7265,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -7904,16 +7304,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -7932,14 +7329,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7983,9 +7377,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8024,16 +7415,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -8053,14 +7441,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8104,9 +7489,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8144,17 +7526,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -8172,15 +7551,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8220,9 +7596,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8261,17 +7634,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetPersonsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetPersonsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -8290,15 +7660,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8338,9 +7705,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8380,16 +7744,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -8408,14 +7769,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8459,9 +7817,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8500,16 +7855,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -8529,14 +7881,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8580,9 +7929,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8620,17 +7966,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -8648,15 +7991,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8696,9 +8036,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8737,17 +8074,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetStudiosByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetStudiosByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -8766,15 +8100,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8814,9 +8145,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8856,16 +8184,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -8884,14 +8209,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8935,9 +8257,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -8976,16 +8295,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -9005,14 +8321,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9056,9 +8369,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9096,17 +8406,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void GetUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void GetUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             GetUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             GetUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -9124,15 +8431,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -9172,9 +8476,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9213,17 +8514,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await GetUsersByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await GetUsersByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -9242,15 +8540,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -9290,9 +8585,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9332,16 +8624,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             GetUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -9360,14 +8649,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -9411,9 +8697,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9452,16 +8735,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -9481,14 +8761,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -9532,9 +8809,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9572,17 +8846,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadArtistsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadArtistsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -9600,15 +8871,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9648,9 +8916,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9689,17 +8954,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadArtistsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadArtistsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -9718,15 +8980,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9766,9 +9025,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9808,16 +9064,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadArtistsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -9836,14 +9089,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9887,9 +9137,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -9928,16 +9175,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -9957,14 +9201,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10008,9 +9249,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10048,17 +9286,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadGamegenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadGamegenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -10076,15 +9311,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10124,9 +9356,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10165,17 +9394,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -10194,15 +9420,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10242,9 +9465,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10284,16 +9504,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadGamegenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -10312,14 +9529,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10363,9 +9577,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10404,16 +9615,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -10433,14 +9641,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10484,9 +9689,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10524,17 +9726,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadGenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadGenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -10552,15 +9751,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10600,9 +9796,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10641,17 +9834,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadGenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadGenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -10670,15 +9860,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10718,9 +9905,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10760,16 +9944,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadGenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -10788,14 +9969,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10839,9 +10017,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -10880,16 +10055,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -10909,14 +10081,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10960,9 +10129,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11000,17 +10166,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadItemsByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadItemsByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -11028,15 +10191,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11076,9 +10236,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11117,17 +10274,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadItemsByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadItemsByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -11146,15 +10300,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11194,9 +10345,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11236,16 +10384,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -11264,14 +10409,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11315,9 +10457,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11356,16 +10495,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -11385,14 +10521,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11436,9 +10569,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11470,8 +10600,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -11479,14 +10607,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient);
+             HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -11498,8 +10625,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -11507,12 +10632,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11529,12 +10653,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'percentPlayed' is set
-            if (percentPlayed == null)
-                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'unplayedCount' is set
-            if (unplayedCount == null)
-                throw new ApiException(400, "Missing required parameter 'unplayedCount' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -11567,8 +10685,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
-            if (unplayedCount != null) localVarPathParams.Add("UnplayedCount", this.Configuration.ApiClient.ParameterToString(unplayedCount)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -11576,7 +10692,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11608,8 +10723,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -11617,14 +10730,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient);
+             await HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -11637,8 +10749,6 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="maxHeight">The maximum image height to return.</param>
         /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render</param>
         /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
         /// <param name="width">The fixed image width to return. (optional)</param>
@@ -11646,12 +10756,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, double? percentPlayed, int? unplayedCount, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, bool? addPlayedIndicator, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11668,12 +10777,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'percentPlayed' is set
-            if (percentPlayed == null)
-                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'unplayedCount' is set
-            if (unplayedCount == null)
-                throw new ApiException(400, "Missing required parameter 'unplayedCount' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -11706,8 +10809,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
-            if (unplayedCount != null) localVarPathParams.Add("UnplayedCount", this.Configuration.ApiClient.ParameterToString(unplayedCount)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -11715,7 +10816,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11753,17 +10853,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadMusicgenresByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadMusicgenresByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -11781,15 +10878,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -11829,9 +10923,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11870,17 +10961,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -11899,15 +10987,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -11947,9 +11032,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -11989,16 +11071,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadMusicgenresByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -12017,14 +11096,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12068,9 +11144,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12109,16 +11182,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -12138,14 +11208,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12189,9 +11256,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12229,17 +11293,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadPersonsByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadPersonsByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -12257,15 +11318,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12305,9 +11363,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12346,17 +11401,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadPersonsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadPersonsByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -12375,15 +11427,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12423,9 +11472,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12465,16 +11511,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadPersonsByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -12493,14 +11536,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12544,9 +11584,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12585,16 +11622,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -12614,14 +11648,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12665,9 +11696,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12705,17 +11733,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadStudiosByNameImagesByType (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadStudiosByNameImagesByTypeWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -12733,15 +11758,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12781,9 +11803,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12822,17 +11841,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadStudiosByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadStudiosByNameImagesByTypeAsyncWithHttpInfo(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -12851,15 +11867,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12899,9 +11912,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -12941,16 +11951,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadStudiosByNameImagesByTypeByIndex (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -12969,14 +11976,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13020,9 +12024,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -13061,16 +12062,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -13090,14 +12088,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13141,9 +12136,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -13181,17 +12173,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void HeadUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public void HeadUsersByIdImagesByType (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             HeadUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             HeadUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
         }
 
         /// <summary>
@@ -13209,15 +12198,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -13257,9 +12243,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -13298,17 +12281,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
-             await HeadUsersByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index);
+             await HeadUsersByIdImagesByTypeAsyncWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
 
         }
 
@@ -13327,15 +12307,12 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, int? index)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -13375,9 +12352,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -13417,16 +12391,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             HeadUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
@@ -13445,14 +12416,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -13496,9 +12464,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter
@@ -13537,16 +12502,13 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient);
+             await HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -13566,14 +12528,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
         /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
         /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="addPlayedIndicator">Optional. Add a played indicator (optional)</param>
-        /// <param name="percentPlayed">Optional percent to render for the percent played overlay (optional)</param>
-        /// <param name="unplayedCount">Optional unplayed count overlay to render (optional)</param>
         /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, bool? addPlayedIndicator, double? percentPlayed, int? unplayedCount, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -13617,9 +12576,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (cropWhitespace != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CropWhitespace", cropWhitespace)); // query parameter
             if (enableImageEnhancers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageEnhancers", enableImageEnhancers)); // query parameter
             if (format != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Format", format)); // query parameter
-            if (addPlayedIndicator != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AddPlayedIndicator", addPlayedIndicator)); // query parameter
-            if (percentPlayed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PercentPlayed", percentPlayed)); // query parameter
-            if (unplayedCount != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UnplayedCount", unplayedCount)); // query parameter
             if (backgroundColor != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "BackgroundColor", backgroundColor)); // query parameter
             if (foregroundLayer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ForegroundLayer", foregroundLayer)); // query parameter
             if (autoOrient != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AutoOrient", autoOrient)); // query parameter

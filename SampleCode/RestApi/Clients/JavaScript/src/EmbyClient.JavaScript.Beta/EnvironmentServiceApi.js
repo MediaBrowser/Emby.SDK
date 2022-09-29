@@ -17,7 +17,7 @@ import ValidatePath from '../model/ValidatePath';
 /**
 * EnvironmentService service.
 * @module EmbyClient.JavaScript.Beta/EnvironmentServiceApi
-* @version 4.8.0.6
+* @version 4.8.0.10
 */
 export default class EnvironmentServiceApi {
 

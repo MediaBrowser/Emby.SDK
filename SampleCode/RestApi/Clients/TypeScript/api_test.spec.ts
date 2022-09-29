@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.6
+ * OpenAPI spec version: 4.8.0.10
  * 
  *
  * NOTE: This file is auto generated.
@@ -1092,6 +1092,23 @@ describe("GamesServiceApi", () => {
   })
 })
 
+describe("GenericUIApiServiceApi", () => {
+  let instance: api.GenericUIApiServiceApi
+  beforeEach(function() {
+    instance = new api.GenericUIApiServiceApi(config)
+  });
+
+  test("getUIView", () => {
+    const pageId: string = "pageId_example"
+    const clientLocale: string = "clientLocale_example"
+    return expect(instance.getUIView(pageId, clientLocale, {})).resolves.toBe(null)
+  })
+  test("postUICommand", () => {
+    const body: api.EmbyWebGenericUIApiEndpointsRunUICommand = undefined
+    return expect(instance.postUICommand(body, {})).resolves.toBe(null)
+  })
+})
+
 describe("GenresServiceApi", () => {
   let instance: api.GenresServiceApi
   beforeEach(function() {
@@ -1255,14 +1272,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getArtistsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1277,13 +1291,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getGamegenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1297,14 +1308,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getGamegenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1319,13 +1327,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getGenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1339,14 +1344,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getGenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1361,13 +1363,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getItemsByIdImages", () => {
     const id: string = "id_example"
@@ -1385,14 +1384,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getItemsByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1407,13 +1403,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", () => {
     const id: string = "id_example"
@@ -1421,8 +1414,6 @@ describe("ImageServiceApi", () => {
     const maxHeight: number = 56
     const tag: string = "tag_example"
     const format: string = "format_example"
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const type: ImageType = undefined
     const index: number = 56
     const width: number = 56
@@ -1430,11 +1421,10 @@ describe("ImageServiceApi", () => {
     const quality: number = 56
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
-    const addPlayedIndicator: boolean = true
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getMusicgenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1448,14 +1438,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getMusicgenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1470,13 +1457,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getPersonsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1490,14 +1474,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getPersonsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1512,13 +1493,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getStudiosByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1532,14 +1510,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getStudiosByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1554,13 +1529,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("getUsersByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1574,14 +1546,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.getUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("getUsersByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1596,13 +1565,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headArtistsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1616,14 +1582,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headArtistsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1638,13 +1601,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headGamegenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1658,14 +1618,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headGamegenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1680,13 +1637,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headGenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1700,14 +1654,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headGenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1722,13 +1673,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1742,14 +1690,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1764,13 +1709,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", () => {
     const id: string = "id_example"
@@ -1778,8 +1720,6 @@ describe("ImageServiceApi", () => {
     const maxHeight: number = 56
     const tag: string = "tag_example"
     const format: string = "format_example"
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const type: ImageType = undefined
     const index: number = 56
     const width: number = 56
@@ -1787,11 +1727,10 @@ describe("ImageServiceApi", () => {
     const quality: number = 56
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
-    const addPlayedIndicator: boolean = true
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headMusicgenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1805,14 +1744,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headMusicgenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1827,13 +1763,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headPersonsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1847,14 +1780,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headPersonsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1869,13 +1799,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headStudiosByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1889,14 +1816,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headStudiosByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1911,13 +1835,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("headUsersByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1931,14 +1852,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const index: number = 56
-    return expect(instance.headUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
   })
   test("headUsersByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1953,13 +1871,10 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    return expect(instance.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
   })
   test("postItemsByIdImagesByType", () => {
     const body: Object = undefined

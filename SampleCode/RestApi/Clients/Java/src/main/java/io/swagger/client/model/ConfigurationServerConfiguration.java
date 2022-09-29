@@ -168,6 +168,9 @@ public class ConfigurationServerConfiguration {
   @SerializedName("InheritedParentalRatingValueUpgraded")
   private Boolean inheritedParentalRatingValueUpgraded = null;
 
+  @SerializedName("ImageExtractorUpgraded")
+  private Boolean imageExtractorUpgraded = null;
+
   @SerializedName("EnablePeopleLetterSubFolders")
   private Boolean enablePeopleLetterSubFolders = null;
 
@@ -1113,6 +1116,24 @@ public class ConfigurationServerConfiguration {
     this.inheritedParentalRatingValueUpgraded = inheritedParentalRatingValueUpgraded;
   }
 
+  public ConfigurationServerConfiguration imageExtractorUpgraded(Boolean imageExtractorUpgraded) {
+    this.imageExtractorUpgraded = imageExtractorUpgraded;
+    return this;
+  }
+
+   /**
+   * Get imageExtractorUpgraded
+   * @return imageExtractorUpgraded
+  **/
+  @Schema(description = "")
+  public Boolean isImageExtractorUpgraded() {
+    return imageExtractorUpgraded;
+  }
+
+  public void setImageExtractorUpgraded(Boolean imageExtractorUpgraded) {
+    this.imageExtractorUpgraded = imageExtractorUpgraded;
+  }
+
   public ConfigurationServerConfiguration enablePeopleLetterSubFolders(Boolean enablePeopleLetterSubFolders) {
     this.enablePeopleLetterSubFolders = enablePeopleLetterSubFolders;
     return this;
@@ -1369,6 +1390,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.timerIdsUpgraded, configurationServerConfiguration.timerIdsUpgraded) &&
         Objects.equals(this.forcedSortNameUpgraded, configurationServerConfiguration.forcedSortNameUpgraded) &&
         Objects.equals(this.inheritedParentalRatingValueUpgraded, configurationServerConfiguration.inheritedParentalRatingValueUpgraded) &&
+        Objects.equals(this.imageExtractorUpgraded, configurationServerConfiguration.imageExtractorUpgraded) &&
         Objects.equals(this.enablePeopleLetterSubFolders, configurationServerConfiguration.enablePeopleLetterSubFolders) &&
         Objects.equals(this.optimizeDatabaseOnShutdown, configurationServerConfiguration.optimizeDatabaseOnShutdown) &&
         Objects.equals(this.databaseAnalysisLimit, configurationServerConfiguration.databaseAnalysisLimit) &&
@@ -1384,7 +1406,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, displaySpecialsWithinSeasons, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, displaySpecialsWithinSeasons, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1441,6 +1463,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    timerIdsUpgraded: ").append(toIndentedString(timerIdsUpgraded)).append("\n");
     sb.append("    forcedSortNameUpgraded: ").append(toIndentedString(forcedSortNameUpgraded)).append("\n");
     sb.append("    inheritedParentalRatingValueUpgraded: ").append(toIndentedString(inheritedParentalRatingValueUpgraded)).append("\n");
+    sb.append("    imageExtractorUpgraded: ").append(toIndentedString(imageExtractorUpgraded)).append("\n");
     sb.append("    enablePeopleLetterSubFolders: ").append(toIndentedString(enablePeopleLetterSubFolders)).append("\n");
     sb.append("    optimizeDatabaseOnShutdown: ").append(toIndentedString(optimizeDatabaseOnShutdown)).append("\n");
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");

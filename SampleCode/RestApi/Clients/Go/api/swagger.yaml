@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.6
+  version: 4.8.0.10
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -77,6 +77,7 @@ tags:
     url: https://github.com/MediaBrowser/Emby/wiki/Sync
 - name: ConfigurationService
 - name: SystemService
+- name: GenericUIApiService
 - name: UserService
 - name: VideosService
 - name: HlsSegmentService
@@ -14794,33 +14795,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: path
-        description: Optional percent to render for the percent played overlay
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: path
-        description: Optional unplayed count overlay to render
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -14968,33 +14942,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: path
-        description: Optional percent to render for the percent played overlay
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: path
-        description: Optional unplayed count overlay to render
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -25968,6 +25915,97 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /UI/View:
+    summary: Gets UI view data
+    get:
+      tags:
+      - GenericUIApiService
+      summary: Gets UI view data
+      description: Requires authentication as user
+      operationId: getUIView
+      parameters:
+      - name: PageId
+        in: query
+        description: Id of the page controller
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: ClientLocale
+        in: query
+        description: Locale identifier of the client
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Returning a UIViewInfo object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Emby.Web.GenericUI.Model.UIViewInfo'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Emby.Web.GenericUI.Model.UIViewInfo'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /UI/Command:
+    summary: Execute a command in the context of tv setup
+    post:
+      tags:
+      - GenericUIApiService
+      summary: Execute a command in the context of tv setup
+      description: Requires authentication as user
+      operationId: postUICommand
+      requestBody:
+        description: RunUICommand
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Emby.Web.GenericUI.Api.Endpoints.RunUICommand'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Emby.Web.GenericUI.Api.Endpoints.RunUICommand'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Returning a UIViewInfo object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Emby.Web.GenericUI.Model.UIViewInfo'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Emby.Web.GenericUI.Model.UIViewInfo'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/Public:
     summary: Gets a list of publicly visible users for display on a login screen.
     get:
@@ -26950,8 +26988,7 @@ paths:
           type: string
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -27009,8 +27046,7 @@ paths:
           type: string
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -27063,8 +27099,7 @@ paths:
           type: string
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -27115,8 +27150,7 @@ paths:
           type: string
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -27306,8 +27340,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -27617,8 +27650,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -27930,8 +27962,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -28241,8 +28272,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -28554,8 +28584,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -28865,8 +28894,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -29178,8 +29206,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -38600,8 +38627,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -38911,8 +38937,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -39224,8 +39249,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -39535,8 +39559,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -39848,8 +39871,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -40159,8 +40181,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -40472,8 +40493,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -40926,8 +40946,7 @@ paths:
           type: boolean
       - name: StartTimeTicks
         in: query
-        description: "Optional. Specify a starting offset, in ticks. 1 tick = 10000\
-          \ ms"
+        description: "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -41170,33 +41189,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -41344,33 +41336,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -41805,33 +41770,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -41979,33 +41917,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -42154,33 +42065,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -42328,33 +42212,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -42650,33 +42507,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -42929,33 +42759,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -43535,33 +43338,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -43709,33 +43485,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -43918,33 +43667,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -44092,33 +43814,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -44589,33 +44284,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -44763,33 +44431,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -46515,33 +46156,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -46794,33 +46408,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -47121,8 +46708,8 @@ paths:
           type: string
       - name: PositionTicks
         in: query
-        description: "Optional. The position, in ticks, where playback stopped. 1\
-          \ tick = 10000 ms"
+        description: "Optional. The position, in ticks, where playback stopped. 1ms\
+          \ = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -47425,33 +47012,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -47599,33 +47159,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -47863,33 +47396,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -48037,33 +47543,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -48212,33 +47691,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -48386,33 +47838,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -48745,33 +48170,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -49024,33 +48422,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -49350,33 +48721,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -49524,33 +48868,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -49699,33 +49016,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -49873,33 +49163,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -50090,33 +49353,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -50264,33 +49500,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -50856,33 +50065,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -51135,33 +50317,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: AddPlayedIndicator
-        in: query
-        description: Optional. Add a played indicator
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: boolean
-      - name: PercentPlayed
-        in: query
-        description: Optional percent to render for the percent played overlay
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: double
-          nullable: true
-      - name: UnplayedCount
-        in: query
-        description: Optional unplayed count overlay to render
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       - name: BackgroundColor
         in: query
         description: Optional. Apply a background color for transparent images.
@@ -51349,7 +50504,7 @@ paths:
           type: string
       - name: PositionTicks
         in: query
-        description: "Optional. The current position, in ticks. 1 tick = 10000 ms"
+        description: "Optional. The current position, in ticks. 1ms = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -51515,8 +50670,8 @@ paths:
           type: string
       - name: PositionTicks
         in: query
-        description: "Optional. The position, in ticks, where playback stopped. 1\
-          \ tick = 10000 ms"
+        description: "Optional. The position, in ticks, where playback stopped. 1ms\
+          \ = 10000 ticks."
         required: false
         style: form
         explode: false
@@ -57438,6 +56593,7 @@ components:
       - AudioSampleRate
       - AudioBitDepth
       - VideoRange
+      - VideoRotation
       x-internal-ref-name: MediaBrowser.Model.Dlna.ProfileConditionValue
     Dlna.CodecProfile:
       type: object
@@ -57857,8 +57013,8 @@ components:
       - LabelItem
       - ItemList
       - RadioGroup
-      - DataGrid
-      - PivotGrid
+      - DxDataGrid
+      - DxPivotGrid
       - SpacerItem
       x-internal-ref-name: Emby.Web.GenericEdit.Common.EditorTypes
     Emby.Web.GenericEdit.Editors.EditorBase:
@@ -65580,6 +64736,8 @@ components:
           type: boolean
         InheritedParentalRatingValueUpgraded:
           type: boolean
+        ImageExtractorUpgraded:
+          type: boolean
         EnablePeopleLetterSubFolders:
           type: boolean
         OptimizeDatabaseOnShutdown:
@@ -65626,6 +64784,7 @@ components:
         - LocalNetworkSubnets
         EnableDebugLevelLogging: true
         LogAllQueryTimes: true
+        ImageExtractorUpgraded: true
         RunAtStartup: true
         HttpServerPortNumber: 1
         RequireHttps: true
@@ -65877,6 +65036,184 @@ components:
         IsLocal: true
         IsInNetwork: true
       x-internal-ref-name: MediaBrowser.Model.Net.EndPointInfo
+    Emby.Web.GenericUI.Model.UIViewInfo:
+      type: object
+      properties:
+        ViewId:
+          type: string
+        PageId:
+          type: string
+        Caption:
+          type: string
+        SubCaption:
+          type: string
+        PluginId:
+          type: string
+        ViewType:
+          $ref: '#/components/schemas/Emby.Web.GenericUI.Model.Enums.UIViewType'
+        ShowDialogFullScreen:
+          type: boolean
+        IsInSequence:
+          type: boolean
+        RedirectViewUrl:
+          type: string
+        EditObjectContainer:
+          $ref: '#/components/schemas/GenericEdit.IEditObjectContainer'
+        Commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/Emby.Web.GenericUI.Model.UICommand'
+        TabPageInfos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Emby.Web.GenericUI.Model.UITabPageInfo'
+        IsPageChangeInfo:
+          type: boolean
+      example:
+        PageId: PageId
+        RedirectViewUrl: RedirectViewUrl
+        ShowDialogFullScreen: true
+        PluginId: PluginId
+        Caption: Caption
+        EditObjectContainer:
+          TypeName: TypeName
+          DefaultObject: {}
+          Object: {}
+        TabPageInfos:
+        - PageId: PageId
+          DisplayName: DisplayName
+          Href: Href
+          Index: 0
+          NavKey: NavKey
+          PluginId: PluginId
+        - PageId: PageId
+          DisplayName: DisplayName
+          Href: Href
+          Index: 0
+          NavKey: NavKey
+          PluginId: PluginId
+        SubCaption: SubCaption
+        ViewId: ViewId
+        IsInSequence: true
+        Commands:
+        - SetFocus: true
+          ConfirmationMessage: ConfirmationMessage
+          CommandType: Custom
+          IsEnabled: true
+          CommandId: CommandId
+          IsVisible: true
+          Caption: Caption
+        - SetFocus: true
+          ConfirmationMessage: ConfirmationMessage
+          CommandType: Custom
+          IsEnabled: true
+          CommandId: CommandId
+          IsVisible: true
+          Caption: Caption
+        IsPageChangeInfo: true
+        ViewType: RegularPage
+      x-internal-ref-name: Emby.Web.GenericUI.Model.UIViewInfo
+    Emby.Web.GenericUI.Model.Enums.UIViewType:
+      type: string
+      enum:
+      - RegularPage
+      - Dialog
+      - Wizard
+      x-internal-ref-name: Emby.Web.GenericUI.Model.Enums.UIViewType
+    GenericEdit.IEditObjectContainer:
+      type: object
+      properties:
+        Object:
+          type: object
+        DefaultObject:
+          type: object
+        TypeName:
+          type: string
+      example:
+        TypeName: TypeName
+        DefaultObject: {}
+        Object: {}
+      x-internal-ref-name: MediaBrowser.Model.GenericEdit.IEditObjectContainer
+    Emby.Web.GenericUI.Model.UICommand:
+      type: object
+      properties:
+        CommandType:
+          $ref: '#/components/schemas/Emby.Web.GenericUI.Model.Enums.UICommandType'
+        CommandId:
+          type: string
+        IsVisible:
+          type: boolean
+        IsEnabled:
+          type: boolean
+        Caption:
+          type: string
+        SetFocus:
+          type: boolean
+        ConfirmationMessage:
+          type: string
+      example:
+        SetFocus: true
+        ConfirmationMessage: ConfirmationMessage
+        CommandType: Custom
+        IsEnabled: true
+        CommandId: CommandId
+        IsVisible: true
+        Caption: Caption
+      x-internal-ref-name: Emby.Web.GenericUI.Model.UICommand
+    Emby.Web.GenericUI.Model.Enums.UICommandType:
+      type: string
+      enum:
+      - Custom
+      - WizardCancel
+      - WizardBack
+      - WizardNext
+      - WizardFinish
+      - DialogCancel
+      - DialogOk
+      - PageSave
+      - PageBack
+      - WizardButton1
+      - WizardButton2
+      - WizardButton3
+      x-internal-ref-name: Emby.Web.GenericUI.Model.Enums.UICommandType
+    Emby.Web.GenericUI.Model.UITabPageInfo:
+      type: object
+      properties:
+        PageId:
+          type: string
+        DisplayName:
+          type: string
+        PluginId:
+          type: string
+        Href:
+          type: string
+        NavKey:
+          type: string
+        Index:
+          type: integer
+          format: int32
+      example:
+        PageId: PageId
+        DisplayName: DisplayName
+        Href: Href
+        Index: 0
+        NavKey: NavKey
+        PluginId: PluginId
+      x-internal-ref-name: Emby.Web.GenericUI.Model.UITabPageInfo
+    Emby.Web.GenericUI.Api.Endpoints.RunUICommand:
+      type: object
+      properties:
+        PageId:
+          type: string
+        CommandId:
+          type: string
+        Data:
+          type: string
+        ItemId:
+          type: string
+        ClientLocale:
+          type: string
+      x-internal-ref-name: Emby.Web.GenericUI.Api.Endpoints.RunUICommand
     UserDto:
       type: object
       properties:
@@ -67374,6 +66711,10 @@ components:
           $ref: '#/components/schemas/Plugins.ConfigurationPageType'
         PluginId:
           type: string
+        Href:
+          type: string
+        NavMenuId:
+          type: string
         Plugin:
           $ref: '#/components/schemas/Common.Plugins.IPlugin'
         Translations:
@@ -67385,11 +66726,13 @@ components:
         EnableInMainMenu: true
         ConfigurationPageType: PluginConfiguration
         DisplayName: DisplayName
+        Href: Href
         MenuSection: MenuSection
         PluginId: PluginId
         Translations:
         - Translations
         - Translations
+        NavMenuId: NavMenuId
         Name: Name
         Plugin:
           Description: Description

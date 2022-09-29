@@ -109,15 +109,15 @@ namespace EmbyClient.Dotnet.Beta.Model
         [EnumMember(Value = "RadioGroup")]
         RadioGroup = 17,
         /// <summary>
-        /// Enum DataGrid for value: DataGrid
+        /// Enum DxDataGrid for value: DxDataGrid
         /// </summary>
-        [EnumMember(Value = "DataGrid")]
-        DataGrid = 18,
+        [EnumMember(Value = "DxDataGrid")]
+        DxDataGrid = 18,
         /// <summary>
-        /// Enum PivotGrid for value: PivotGrid
+        /// Enum DxPivotGrid for value: DxPivotGrid
         /// </summary>
-        [EnumMember(Value = "PivotGrid")]
-        PivotGrid = 19,
+        [EnumMember(Value = "DxPivotGrid")]
+        DxPivotGrid = 19,
         /// <summary>
         /// Enum SpacerItem for value: SpacerItem
         /// </summary>

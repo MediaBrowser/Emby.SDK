@@ -132,7 +132,7 @@ Requires authentication as user
  * @param mediaSourceId The id of the MediaSource
  * @param nextMediaType The next media type that will play
  * @param optional nil or *PlaystateServiceApiDeleteUsersByUseridPlayingitemsByIdOpts - Optional Parameters:
-     * @param "PositionTicks" (optional.Int64) -  Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms
+     * @param "PositionTicks" (optional.Int64) -  Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks.
      * @param "LiveStreamId" (optional.String) - 
      * @param "PlaySessionId" (optional.String) - 
 
@@ -990,7 +990,7 @@ Requires authentication as user
  * @param mediaSourceId The id of the MediaSource
  * @param nextMediaType The next media type that will play
  * @param optional nil or *PlaystateServiceApiPostUsersByUseridPlayingitemsByIdDeleteOpts - Optional Parameters:
-     * @param "PositionTicks" (optional.Int64) -  Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms
+     * @param "PositionTicks" (optional.Int64) -  Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks.
      * @param "LiveStreamId" (optional.String) - 
      * @param "PlaySessionId" (optional.String) - 
 
@@ -1097,7 +1097,7 @@ Requires authentication as user
  * @param userId User Id
  * @param id Item Id
  * @param optional nil or *PlaystateServiceApiPostUsersByUseridPlayingitemsByIdProgressOpts - Optional Parameters:
-     * @param "PositionTicks" (optional.Int64) -  Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms
+     * @param "PositionTicks" (optional.Int64) -  Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "IsPaused" (optional.Bool) -  Indicates if the player is paused.
      * @param "IsMuted" (optional.Bool) -  Indicates if the player is muted.
      * @param "AudioStreamIndex" (optional.Int32) - 

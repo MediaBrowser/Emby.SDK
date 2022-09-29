@@ -27,7 +27,7 @@ const (
 	LABEL_ITEM_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "LabelItem"
 	ITEM_LIST_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "ItemList"
 	RADIO_GROUP_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "RadioGroup"
-	DATA_GRID_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "DataGrid"
-	PIVOT_GRID_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "PivotGrid"
+	DX_DATA_GRID_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "DxDataGrid"
+	DX_PIVOT_GRID_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "DxPivotGrid"
 	SPACER_ITEM_EmbyWebGenericEditCommonEditorTypes EmbyWebGenericEditCommonEditorTypes = "SpacerItem"
 )

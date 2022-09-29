@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Features: Basic Input </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Features: Basic Input ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="stylesheet" href="../../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../../styles/header.css">
+    <link rel="stylesheet" href="../../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:uid" content="">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+    <script type="text/javascript" src="../../../../nav.js"></script>
+    <script type="text/javascript" src="../../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../../index.html">
+        		    <img id="logo" class="svg" src="../../../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="features-basic-input">Features: Basic Input</h1>
+
+<h2 id="element-names-and-descriptions">Element Names and Descriptions</h2>
+<p>Most items can have a display name and a description which can be both specified via attributes:</p>
+<ul>
+<li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.displaynameattribute">DisplayNameAttribute</a></li>
+<li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.descriptionattribute">DescriptionAttribute</a></li>
+</ul>
+<pre><code class="lang-csharp">[DisplayName(&quot;Name of the Demo&quot;)]
+[Description(&quot;Most items can have a display name and a description. This is the description text.&quot;)]
+public string DemoName { get; set; } = &quot;GenericEdit Demo&quot;;
+</code></pre>
+<p><img src="../../../../images/ui_feat1.png" alt="Ui Feat1"></p>
+<p>See also: <a href="../localization.html">Localization</a></p>
+<h4 id="automatic-display-name">Automatic Display Name</h4>
+<p>When no DisplayName atttribute is specified, a displayname will be generated from the property name by spliting the property name from capitalization.</p>
+<pre><code class="lang-csharp">public string TextNoDisplayName { get; set; }
+</code></pre>
+<p><img src="../../../../images/ui_feat1_text_no_displayname.png" alt="Ui Feat1 Text No Displayname"></p>
+<h4 id="hiding-the-display-name">Hiding the Display Name</h4>
+<p>To not show a display name, provide an empty string:</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;&quot;)]
+[Description(&quot;This property has an empty display name.&quot;)]
+public string TextWithEmptyDisplayName { get; set; }
+</code></pre>
+<p><img src="../../../../images/ui_feat1_text_empty_displayname.png" alt="Ui Feat1 Text Empty Displayname"></p>
+<h2 id="text-input">Text Input</h2>
+<h4 id="basic-text">Basic Text</h4>
+<p>A string property will cause a simple text input to be generated.</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;Name of the Demo&quot;)]
+public string DemoName { get; set; }
+</code></pre>
+<p><img src="../../../../images/ui_feat1_text_basic.png" alt="Ui Feat1 Text Basic"></p>
+<h4 id="password">Password</h4>
+<p>Adding the <a class="xref" href="../../../../reference/pluginapi/MediaBrowser.Model.Attributes.IsPasswordAttribute.html">IsPasswordAttribute</a> to a string property will create a password input:</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;Password Field&quot;)]
+[Description(&quot;Just requires adding the IsPasswordAttribute to a string property.&quot;)]
+[IsPassword]
+public string PasswordValue { get; set; }
+</code></pre>
+<p><img src="../../../../images/ui_feat1_text_password.png" alt="Ui Feat1 Text Password"></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>For security reasons, please avoid round-tripping passwords to the clients! Passwords should be replaced with something generic before transmitting the data to clients!</p>
+</div>
+<h4 id="multi-line-text">Multi-Line Text</h4>
+<p>Apply the <a class="xref" href="../../../../reference/pluginapi/MediaBrowser.Model.Attributes.EditMultilineAttribute.html">EditMultilineAttribute</a> to create multi-line text input:</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;Multiline Text&quot;)]
+[Description(&quot;Multiline text input can be enabled via attribute, which allows to specify the number of lines for the text area.&quot;)]
+[EditMultiline(4)]
+public string MultilineText { get; set; }
+</code></pre>
+<p><img src="../../../../images/ui_feat1_text_multiline.png" alt="Ui Feat1 Text Multiline"></p>
+<h2 id="number-input">Number Input</h2>
+<h4 id="integer">Integer</h4>
+<pre><code class="lang-csharp">[DisplayName(&quot;Integer Value&quot;)]
+[Description(&quot;This is a normal int32 value. It is not possible to submit an empty value&quot;)]
+[Required]
+public int IntValue { get; set; } = 100;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_numeric_int.png" alt="Ui Feat1 Numeric Int"></p>
+<h4 id="nullable-integer">Nullable Integer</h4>
+<pre><code class="lang-csharp">[DisplayName(&quot;Nullable Integer Value&quot;)]
+[Description(&quot;The value can be deleted and submitted empty&quot;)]
+public int? IntValue2 { get; set; } = 100;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_numeric_int_nullable.png" alt="Ui Feat1 Numeric Int Nullable"></p>
+<h4 id="double">Double</h4>
+<pre><code class="lang-csharp">[DisplayName(&quot;Double Value&quot;)]
+[Description(&quot;Float and double values are shown with 6 digits by default&quot;)]
+public double DoubleValue { get; set; } = 3.141592;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_numeric_double.png" alt="Ui Feat1 Numeric Double"></p>
+<h4 id="double-with-2-decimals">Double with 2 Decimals</h4>
+<p>With the <a class="xref" href="../../../../reference/pluginapi/MediaBrowser.Model.Attributes.DecimalsAttribute.html">DecimalsAttribute</a> it is possible to control the number of decimals to display:</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;Double Value with 2 Decimals&quot;)]
+[Decimals(2)]
+[Description(&quot;The number of decimals can be controlled through the DecimalsAttribute.&quot;)]
+public double DoubleValue2 { get; set; } = 3.1;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_numeric_double_2dec.png" alt="Ui Feat1 Numeric Double 2Dec"></p>
+<h2 id="boolean-input">Boolean Input</h2>
+<h4 id="boolean-value">Boolean Value</h4>
+<p>Boolean properties are rendered as checkboxes:</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;Boolean Value&quot;)]
+[Description(&quot;Boolean properties are rendered as checkboxes.&quot;)]
+public bool BooleanValue { get; set; } = true;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_boolean.png" alt="Ui Feat1 Boolean"></p>
+<h4 id="nullable-boolean-value">Nullable Boolean Value</h4>
+<p>Nullable boolean properties are rendered as dropdowns including an empty item:</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;Nullable Boolean Value&quot;)]
+[Description(&quot;Nullable boolean properties are rendered as dropdowns.&quot;)]
+public bool? NullableBooleanValue { get; set; } = true;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_boolean_nullable.png" alt="Ui Feat1 Boolean Nullable"></p>
+<h4 id="nullable-boolean-with-custom-text">Nullable Boolean with Custom Text</h4>
+<p>For nullable boolean properties, it is possible to control the display texts via attributes</p>
+<ul>
+<li><a class="xref" href="../../../../reference/pluginapi/MediaBrowser.Model.Attributes.TristateTrueTextAttribute.html">TristateTrueTextAttribute</a></li>
+<li><a class="xref" href="../../../../reference/pluginapi/MediaBrowser.Model.Attributes.TristateFalseTextAttribute.html">TristateFalseTextAttribute</a></li>
+</ul>
+<pre><code class="lang-csharp">[DisplayName(&quot;Another Nullable Boolean Value&quot;)]
+[Description(&quot;For nullable boolean properties, it is possible to control the display texts via attributes&quot;)]
+[TristateTrueText(&quot;Yes, do it&quot;), TristateFalseText(&quot;No, please don't&quot;)]
+public bool? NullableBooleanValue2 { get; set; } = true;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_boolean_nullable_custom.png" alt="Ui Feat1 Boolean Nullable Custom"></p>
+<h2 id="date-and-time-input">Date and Time Input</h2>
+<h4 id="date-value">Date Value</h4>
+<pre><code class="lang-csharp">[DisplayName(&quot;Date Value&quot;)]
+public DateTime DateValue { get; set; } = DateTime.Now;
+</code></pre>
+<p><img src="../../../../images/ui_feat1_date.png" alt="Ui Feat1 Date"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Support for input of time values or date+time values is planned to be added</p>
+</div>
+<h2 id="file-and-folder-picking">File and Folder Picking</h2>
+<h4 id="file-picker">File Picker</h4>
+<p>Add the <a class="xref" href="../../../../reference/pluginapi/MediaBrowser.Model.Attributes.EditFilePickerAttribute.html">EditFilePickerAttribute</a> attribute to a string property to create a text box with file picker functionality.</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;File Picker&quot;)]
+[Description(&quot;Just add the EditFilePicker attribute to a string property.&quot;)]
+[EditFilePicker]
+public string FileValue { get; set; }
+</code></pre>
+<p><img src="../../../../images/ui_feat1_file_picker.png" alt="Ui Feat1 File Picker"></p>
+<h4 id="folder-picker">Folder Picker</h4>
+<p>Add the <a class="xref" href="../../../../reference/pluginapi/MediaBrowser.Model.Attributes.EditFolderPickerAttribute.html">EditFolderPickerAttribute</a> attribute to a string property to create a text box with file picker functionality.</p>
+<pre><code class="lang-csharp">[DisplayName(&quot;Folder Picker&quot;)]
+[Description(&quot;Just add the EditFolderPicker attribute to a string property.&quot;)]
+[EditFolderPicker]
+public string FolderValue { get; set; }
+</code></pre>
+<p><img src="../../../../images/ui_feat1_folder_picker.png" alt="Ui Feat1 Folder Picker"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

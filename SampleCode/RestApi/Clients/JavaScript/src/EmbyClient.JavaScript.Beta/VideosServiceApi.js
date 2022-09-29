@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * VideosService service.
 * @module EmbyClient.JavaScript.Beta/VideosServiceApi
-* @version 4.8.0.6
+* @version 4.8.0.10
 */
 export default class VideosServiceApi {
 

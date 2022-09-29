@@ -16,7 +16,7 @@ import PluginsConfigurationPageType from './PluginsConfigurationPageType';
 /**
 * The EmbyWebApiConfigurationPageInfo model module.
 * @module model/EmbyWebApiConfigurationPageInfo
-* @version 4.8.0.6
+* @version 4.8.0.10
 */
 export default class EmbyWebApiConfigurationPageInfo {
     /**
@@ -64,6 +64,12 @@ export default class EmbyWebApiConfigurationPageInfo {
             if (data.hasOwnProperty('PluginId')) {
                 obj['PluginId'] = ApiClient.convertToType(data['PluginId'], 'String');
             }
+            if (data.hasOwnProperty('Href')) {
+                obj['Href'] = ApiClient.convertToType(data['Href'], 'String');
+            }
+            if (data.hasOwnProperty('NavMenuId')) {
+                obj['NavMenuId'] = ApiClient.convertToType(data['NavMenuId'], 'String');
+            }
             if (data.hasOwnProperty('Plugin')) {
                 obj['Plugin'] = CommonPluginsIPlugin.constructFromObject(data['Plugin']);
             }
@@ -102,6 +108,14 @@ export default class EmbyWebApiConfigurationPageInfo {
     * @member {String} PluginId
     */
     'PluginId' = undefined;
+    /**
+    * @member {String} Href
+    */
+    'Href' = undefined;
+    /**
+    * @member {String} NavMenuId
+    */
+    'NavMenuId' = undefined;
     /**
     * @member {module:model/CommonPluginsIPlugin} Plugin
     */

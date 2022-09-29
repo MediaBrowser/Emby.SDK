@@ -35,7 +35,7 @@ class UniversalAudioServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -59,7 +59,7 @@ class UniversalAudioServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -135,7 +135,7 @@ class UniversalAudioServiceApi(object):
         :param str id: Item Id (required)
         :param str container: (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -160,7 +160,7 @@ class UniversalAudioServiceApi(object):
         :param str id: Item Id (required)
         :param str container: (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -241,7 +241,7 @@ class UniversalAudioServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -265,7 +265,7 @@ class UniversalAudioServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -341,7 +341,7 @@ class UniversalAudioServiceApi(object):
         :param str id: Item Id (required)
         :param str container: (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -366,7 +366,7 @@ class UniversalAudioServiceApi(object):
         :param str id: Item Id (required)
         :param str container: (required)
         :param str device_id: The device id of the client requesting. Used to stop encoding processes when needed.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.

@@ -14,6 +14,8 @@ type EmbyWebApiConfigurationPageInfo struct {
 	DisplayName string `json:"DisplayName,omitempty"`
 	ConfigurationPageType *PluginsConfigurationPageType `json:"ConfigurationPageType,omitempty"`
 	PluginId string `json:"PluginId,omitempty"`
+	Href string `json:"Href,omitempty"`
+	NavMenuId string `json:"NavMenuId,omitempty"`
 	Plugin *CommonPluginsIPlugin `json:"Plugin,omitempty"`
 	Translations []string `json:"Translations,omitempty"`
 }

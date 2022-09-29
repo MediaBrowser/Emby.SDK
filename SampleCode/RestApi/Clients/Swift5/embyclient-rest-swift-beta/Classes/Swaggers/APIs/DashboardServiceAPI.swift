@@ -61,9 +61,11 @@ open class DashboardServiceAPI {
   "EnableInMainMenu" : true,
   "ConfigurationPageType" : "PluginConfiguration",
   "DisplayName" : "DisplayName",
+  "Href" : "Href",
   "MenuSection" : "MenuSection",
   "PluginId" : "PluginId",
   "Translations" : [ "Translations", "Translations" ],
+  "NavMenuId" : "NavMenuId",
   "Name" : "Name",
   "Plugin" : {
     "Description" : "Description",
@@ -85,9 +87,11 @@ open class DashboardServiceAPI {
   "EnableInMainMenu" : true,
   "ConfigurationPageType" : "PluginConfiguration",
   "DisplayName" : "DisplayName",
+  "Href" : "Href",
   "MenuSection" : "MenuSection",
   "PluginId" : "PluginId",
   "Translations" : [ "Translations", "Translations" ],
+  "NavMenuId" : "NavMenuId",
   "Name" : "Name",
   "Plugin" : {
     "Description" : "Description",

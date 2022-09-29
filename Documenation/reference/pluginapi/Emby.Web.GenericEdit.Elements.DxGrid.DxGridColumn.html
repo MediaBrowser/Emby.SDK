@@ -1,0 +1,1786 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DxGridColumn
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DxGridColumn
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn">
+<div class="refdoc">
+  
+  
+  <h1 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn" class="text-break">Class DxGridColumn
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DxGridColumn</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.html">Emby.Web.GenericEdit.Elements.DxGrid</a></h6>
+  <h6><strong>Assembly</strong>: Emby.Web.GenericEdit.dll</h6>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DxGridColumn</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_alignment_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.alignment*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_alignment" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.alignment">alignment</h4>
+  <div class="markdown level1 summary"><p>Aligns the content of the column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridColumn.Alignment? alignment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.Alignment.html">DxGridColumn.Alignment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowEditing_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowEditing*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowEditing" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowEditing">allowEditing</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can edit values in the column at runtime. By default, inherits the value of the
+editing.allowUpdating option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowEditing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowExporting_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowExporting*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowExporting" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowExporting">allowExporting</h4>
+  <div class="markdown level1 summary"><p>Specifies whether data from this column should be exported. Applies only if the column is visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowExporting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowFiltering_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowFiltering*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowFiltering" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowFiltering">allowFiltering</h4>
+  <div class="markdown level1 summary"><p>Specifies whether data can be filtered by this column. Applies only if filterRow.visible is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowFiltering { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowFixing_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowFixing*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowFixing" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowFixing">allowFixing</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can fix the column at runtime. Applies only if columnFixing.enabled is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowFixing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowGrouping_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowGrouping*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowGrouping" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowGrouping">allowGrouping</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the user can group data by values of this column. Applies only when grouping is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowGrouping { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowGrouping_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When grouping is enabled in the widget, the user can group data by values of any column. To prohibit a
+particular column from being used for grouping, set the allowGrouping option of this column to false.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowHeaderFiltering_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowHeaderFiltering*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowHeaderFiltering" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowHeaderFiltering">allowHeaderFiltering</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the header filter can be used to filter data by this column. Applies only if
+headerFilter.visible is true. By default, inherits the value of the allowFiltering option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowHeaderFiltering { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowHiding_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowHiding*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowHiding" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowHiding">allowHiding</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can hide the column using the column chooser at runtime. Applies only if
+columnChooser.enabled is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowHiding { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowReordering_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowReordering*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowReordering" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowReordering">allowReordering</h4>
+  <div class="markdown level1 summary"><p>Specifies whether this column can be used in column reordering at runtime. Applies only if
+allowColumnReordering is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowReordering { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowResizing_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowResizing*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowResizing" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowResizing">allowResizing</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can resize the column at runtime. Applies only if allowColumnResizing is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowResizing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowSearch_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowSearch*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowSearch" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowSearch">allowSearch</h4>
+  <div class="markdown level1 summary"><p>Specifies whether this column can be searched. Applies only if searchPanel.visible is true. Inherits the value
+of the allowFiltering option by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowSearch { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowSorting_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowSorting*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_allowSorting" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowSorting">allowSorting</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user can sort rows by this column at runtime. Applies only if sorting.mode differs from
+&quot;none&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? allowSorting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_autoExpandGroup_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.autoExpandGroup*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_autoExpandGroup" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.autoExpandGroup">autoExpandGroup</h4>
+  <div class="markdown level1 summary"><p>Specifies whether groups appear expanded or not when records are grouped by a specific column. Setting this
+option makes sense only when grouping is allowed for this column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? autoExpandGroup { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_buttons_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.buttons*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_buttons" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.buttons">buttons</h4>
+  <div class="markdown level1 summary"><p>Allows you to customize buttons in the editing column or create a custom command column. Applies only if the column's type is &quot;buttons&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridButton[] buttons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.html">DxGridButton</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_caption_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.caption*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_caption" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.caption">caption</h4>
+  <div class="markdown level1 summary"><p>Specifies a caption for the column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string caption { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_caption_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this option to display a descriptive or friendly name for the column. If this option is not set, the
+caption will be generated from the name of the dataField.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_cellTemplate_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.cellTemplate*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_cellTemplate" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.cellTemplate">cellTemplate</h4>
+  <div class="markdown level1 summary"><p>Specifies a custom template for data cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string cellTemplate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_columns_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.columns*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_columns" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.columns">columns</h4>
+  <div class="markdown level1 summary"><p>An array of grid columns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridColumn[] columns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.html">DxGridColumn</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_columns_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unlike normal columns, band columns do not hold data. Instead, they collect two or more columns under one
+column header. To set up this layout, declare the band column using a hierarchical structure. For this, assign the
+nested columns to the columns field of the band column. For example, the following code declares the &quot;Address&quot; band
+column and nests three columns within it.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_cssClass_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.cssClass*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_cssClass" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.cssClass">cssClass</h4>
+  <div class="markdown level1 summary"><p>Specifies a CSS class to be applied to the column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string cssClass { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_dataField_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.dataField*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_dataField" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.dataField">dataField</h4>
+  <div class="markdown level1 summary"><p>Binds the column to a field of the dataSource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string dataField { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_dataType_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.dataType*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_dataType" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.dataType">dataType</h4>
+  <div class="markdown level1 summary"><p>Casts column values to a specific data type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridColumn.ColumnDataType? dataType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.ColumnDataType.html">DxGridColumn.ColumnDataType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_dataType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If a data field provides values of one data type, but the widget should cast them to another, specify the
+proper type in this option.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_editCellTemplate_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.editCellTemplate*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_editCellTemplate" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.editCellTemplate">editCellTemplate</h4>
+  <div class="markdown level1 summary"><p>Specifies a custom template for data cells in editing state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string editCellTemplate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_editorOptions_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.editorOptions*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_editorOptions" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.editorOptions">editorOptions</h4>
+  <div class="markdown level1 summary"><p>Configures the default widget used for editing and filtering in the filter row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object editorOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_encodeHtml_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.encodeHtml*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_encodeHtml" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.encodeHtml">encodeHtml</h4>
+  <div class="markdown level1 summary"><p>Specifies whether HTML tags are displayed as plain text or applied to the values of the column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? encodeHtml { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_encodeHtml_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When true, HTML tags are displayed as plain text; when false, they are applied to the values of the column.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_falseText_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.falseText*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_falseText" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.falseText">falseText</h4>
+  <div class="markdown level1 summary"><p>In a boolean column, replaces all false items with a specified text. Applies only if showEditorAlways option
+is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string falseText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterOperations_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterOperations*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterOperations" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterOperations">filterOperations</h4>
+  <div class="markdown level1 summary"><p>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] filterOperations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterOperations_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The following table lists available filters by data types. The same filters are assigned to columns of a
+specific data type by default. dataType	filterOperations &quot;string&quot;	[ &quot;contains&quot;, &quot;notcontains&quot;, &quot;startswith&quot;,
+&quot;endswith&quot;, &quot;=&quot;, &quot;&lt;&gt;&quot; ] &quot;numeric&quot;	[ &quot;=&quot;, &quot;&lt;&gt;&quot;, &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;, &quot;between&quot; ] &quot;date&quot;	[
+&quot;=&quot;, &quot;&lt;&gt;&quot;, &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;, &quot;between&quot; ] The filterOperations option can also accept an empty
+array. In this case, the selected filter operation is &quot;=&quot; for all data types, and a user cannot change it.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterType_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterType*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterType" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterType">filterType</h4>
+  <div class="markdown level1 summary"><p>Specifies whether a user changes the current filter by including (selecting) or excluding (clearing the
+selection of) values. Applies only if headerFilter.visible and allowHeaderFiltering are true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridColumn.HeaderFilterType? filterType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.HeaderFilterType.html">DxGridColumn.HeaderFilterType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This option changes when the user clicks the Select All checkbox in the header filter:</p>
+<p>
+    Select All filterType / filterValues<br> filterType: &quot;include&quot;<br>filterValues: null<br> filterType:
+    &quot;exclude&quot;<br>filterValues: null
+</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterValue_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterValue*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterValue" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterValue">filterValue</h4>
+  <div class="markdown level1 summary"><p>Specifies the column's filter value displayed in the filter row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object filterValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterValues_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterValues*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_filterValues" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterValues">filterValues</h4>
+  <div class="markdown level1 summary"><p>Specifies values selected in the column's header filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object[] filterValues { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_fixed_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.fixed*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_fixed" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.fixed">fixed</h4>
+  <div class="markdown level1 summary"><p>Fixes the column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? fixed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_fixedPosition_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.fixedPosition*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_fixedPosition" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.fixedPosition">fixedPosition</h4>
+  <div class="markdown level1 summary"><p>Specifies the widget's edge to which the column is fixed. Applies only if columns[].fixed is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridColumn.FixedPositionType? fixedPosition { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.FixedPositionType.html">DxGridColumn.FixedPositionType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_format_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.format*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_format" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.format">format</h4>
+  <div class="markdown level1 summary"><p>Formats a value before it is displayed in a column cell.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridColumnFormat format { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFormat.html">DxGridColumnFormat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_groupCellTemplate_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.groupCellTemplate*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_groupCellTemplate" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.groupCellTemplate">groupCellTemplate</h4>
+  <div class="markdown level1 summary"><p>Specifies a custom template for group cells (group rows).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string groupCellTemplate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_groupIndex_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.groupIndex*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_groupIndex" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.groupIndex">groupIndex</h4>
+  <div class="markdown level1 summary"><p>Specifies the index of a column when grid records are grouped by the values of this column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? groupIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_groupIndex_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>At runtime, the user can group grid records using the context menu or the group panel. But there may be cases
+when grid records must be grouped initially. To do this, assign an integer value to the groupIndex option of those
+columns that should be used for grouping grid records. For example, consider the following data source.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_headerCellTemplate_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.headerCellTemplate*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_headerCellTemplate" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.headerCellTemplate">headerCellTemplate</h4>
+  <div class="markdown level1 summary"><p>Specifies a custom template for column headers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string headerCellTemplate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_headerFilter_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.headerFilter*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_headerFilter" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.headerFilter">headerFilter</h4>
+  <div class="markdown level1 summary"><p>Specifies data settings for the header filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object headerFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_hidingPriority_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.hidingPriority*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_hidingPriority" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.hidingPriority">hidingPriority</h4>
+  <div class="markdown level1 summary"><p>Specifies the order in which columns are hidden when the widget adapts to the screen or container size.
+Ignored if allowColumnResizing is true and columnResizingMode is &quot;widget&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? hidingPriority { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_hidingPriority_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The hidingPriority is a unique positive integer that ascends from right to left beginning with 0 by default.
+Columns with low hidingPriority are hidden first.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_isBand_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.isBand*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_isBand" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.isBand">isBand</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the column bands other columns or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? isBand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_isBand_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unlike normal columns, band columns do not hold data. Instead, they collect two or more columns under one
+column header. In most cases, to set up this layout, you can declare the band column using a hierarchical
+structure. For example, the following code bands three columns under the &quot;Address&quot; header.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_isSecondaryGridDataSource_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.isSecondaryGridDataSource*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_isSecondaryGridDataSource" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.isSecondaryGridDataSource">isSecondaryGridDataSource</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the column should be used as a data source for a secondary grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? isSecondaryGridDataSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_lookup_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.lookup*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_lookup" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.lookup">lookup</h4>
+  <div class="markdown level1 summary"><p>Specifies options of a lookup column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridLookup lookup { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.DxGridLookup.html">DxGridLookup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_lookup_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A lookup column restricts the set of values that can be chosen when a user edits or filters the column. In a
+lookup column, each cell is a drop-down menu. You can use a lookup column when you need to substitute displayed
+values with required values. For example, consider that you have two arrays of objects: drivers and buses.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_minWidth_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.minWidth*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_minWidth" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.minWidth">minWidth</h4>
+  <div class="markdown level1 summary"><p>Specifies the minimum width of the column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? minWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_name_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.name*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_name" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.name">name</h4>
+  <div class="markdown level1 summary"><p>Specifies the identifier of the column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_name_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Set this option if you need to refer to the column in your code afterwards, for example, when changing a
+column option.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_ownerBand_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.ownerBand*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_ownerBand" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.ownerBand">ownerBand</h4>
+  <div class="markdown level1 summary"><p>Specifies the band column that owns the current column. Accepts the index of the band column in the columns
+array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? ownerBand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_renderAsync_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.renderAsync*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_renderAsync" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.renderAsync">renderAsync</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to render the column after other columns and elements. Use if column cells have a complex
+template. Requires the width option specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? renderAsync { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_selectedFilterOperation_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.selectedFilterOperation*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_selectedFilterOperation" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.selectedFilterOperation">selectedFilterOperation</h4>
+  <div class="markdown level1 summary"><p>Specifies the column's filter operation displayed in the filter row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string selectedFilterOperation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_selectedFilterOperation_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><table>
+<thead>
+<tr>
+<th>Accepted Values: '&lt;'</th>
+<th>'&lt;='</th>
+<th>'&lt;&gt;'</th>
+<th>'='</th>
+<th>'&gt;'</th>
+<th>'&gt;='</th>
+<th>'between'</th>
+<th>'contains'</th>
+<th>'endswith'</th>
+</tr>
+</thead>
+</table>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showEditorAlways_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showEditorAlways*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showEditorAlways" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showEditorAlways">showEditorAlways</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the column displays its values using editors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? showEditorAlways { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showEditorAlways_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A column cell has normal and editing states. In a normal state, the cell value is text. In the editing state,
+the cell contains an editor that indicates the cell value and allows a user to edit it. In certain cases, a viewer
+reads the cell value easier if it is indicated by an editor even in the normal state. For example, boolean values
+are more comprehensible when they are indicated by check boxes. To display editors in cells permanently, set the
+showEditorAlways option to true.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showInColumnChooser_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showInColumnChooser*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showInColumnChooser" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showInColumnChooser">showInColumnChooser</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the column chooser can contain the column header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? showInColumnChooser { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showWhenGrouped_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showWhenGrouped*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showWhenGrouped" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showWhenGrouped">showWhenGrouped</h4>
+  <div class="markdown level1 summary"><p>Specifies whether or not to display the column when grid records are grouped by it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? showWhenGrouped { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_showWhenGrouped_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Displaying a grouping column may be useful if you calculate its grouping values. Consider that you need to
+group records by a column that contains dates. Grouping by full dates seems inconvenient. It would be smarter to
+group by months or years instead. For this purpose, you calculate grouping values within the calculateGroupValue
+function and leave the grouping column visible by setting the showWhenGrouped option to true so that the user can
+view the full dates.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_sortIndex_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.sortIndex*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_sortIndex" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.sortIndex">sortIndex</h4>
+  <div class="markdown level1 summary"><p>Specifies the index according to which columns participate in sorting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? sortIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_sortIndex_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This option accepts an integer specifying the index of the column in a collection of columns with applied
+sorting. For example, consider the following data source that can provide data for three columns.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_sortOrder_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.sortOrder*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_sortOrder" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.sortOrder">sortOrder</h4>
+  <div class="markdown level1 summary"><p>Specifies the sort order of column values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string sortOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_sortOrder_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Accepted Values: undefined | 'asc' | 'desc'</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_trueText_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.trueText*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_trueText" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.trueText">trueText</h4>
+  <div class="markdown level1 summary"><p>In a boolean column, replaces all true items with a specified text. Applies only if showEditorAlways option is
+false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string trueText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_type_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.type*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_type" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.type">type</h4>
+  <div class="markdown level1 summary"><p>Specifies the command column that this object customizes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_validationRules_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.validationRules*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_validationRules" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.validationRules">validationRules</h4>
+  <div class="markdown level1 summary"><p>Specifies validation rules to be checked when cell values are updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DxGridValidationRuleBase[] validationRules { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridValidationRuleBase.html">DxGridValidationRuleBase</a>[]</td>
+        <td><p>The validation rules.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_visible_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.visible*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_visible" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.visible">visible</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the column is visible, that is, occupies space in the table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? visible { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_visibleIndex_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.visibleIndex*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_visibleIndex" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.visibleIndex">visibleIndex</h4>
+  <div class="markdown level1 summary"><p>Specifies the position of the column regarding other columns in the resulting widget.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? visibleIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_width_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.width*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_width" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.width">width</h4>
+  <div class="markdown level1 summary"><p>Specifies the column's width in pixels or as a percentage. Ignored if it is less than minWidth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_AddValidationRule_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.AddValidationRule*"></a>
+  <h4 id="Emby_Web_GenericEdit_Elements_DxGrid_DxGridColumn_AddValidationRule_Emby_Web_GenericEdit_Elements_DxGrid_Validation_DxGridValidationRuleBase_" data-uid="Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.AddValidationRule(Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridValidationRuleBase)">AddValidationRule(DxGridValidationRuleBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddValidationRule(DxGridValidationRuleBase validationRule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridValidationRuleBase.html">DxGridValidationRuleBase</a></td>
+        <td><span class="parametername">validationRule</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

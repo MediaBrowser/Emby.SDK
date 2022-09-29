@@ -142,5 +142,10 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// Enum VideoRange for value: VideoRange
         /// </summary>
         [EnumMember(Value = "VideoRange")]
-        VideoRange = 24    }
+        VideoRange = 24,
+        /// <summary>
+        /// Enum VideoRotation for value: VideoRotation
+        /// </summary>
+        [EnumMember(Value = "VideoRotation")]
+        VideoRotation = 25    }
 }

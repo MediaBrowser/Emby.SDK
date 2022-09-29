@@ -33,9 +33,11 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="displayName">displayName.</param>
         /// <param name="configurationPageType">configurationPageType.</param>
         /// <param name="pluginId">pluginId.</param>
+        /// <param name="href">href.</param>
+        /// <param name="navMenuId">navMenuId.</param>
         /// <param name="plugin">plugin.</param>
         /// <param name="translations">translations.</param>
-        public EmbyWebApiConfigurationPageInfo(string name = default(string), bool? enableInMainMenu = default(bool?), string menuSection = default(string), string menuIcon = default(string), string displayName = default(string), PluginsConfigurationPageType configurationPageType = default(PluginsConfigurationPageType), string pluginId = default(string), CommonPluginsIPlugin plugin = default(CommonPluginsIPlugin), List<string> translations = default(List<string>))
+        public EmbyWebApiConfigurationPageInfo(string name = default(string), bool? enableInMainMenu = default(bool?), string menuSection = default(string), string menuIcon = default(string), string displayName = default(string), PluginsConfigurationPageType configurationPageType = default(PluginsConfigurationPageType), string pluginId = default(string), string href = default(string), string navMenuId = default(string), CommonPluginsIPlugin plugin = default(CommonPluginsIPlugin), List<string> translations = default(List<string>))
         {
             this.Name = name;
             this.EnableInMainMenu = enableInMainMenu;
@@ -44,6 +46,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.DisplayName = displayName;
             this.ConfigurationPageType = configurationPageType;
             this.PluginId = pluginId;
+            this.Href = href;
+            this.NavMenuId = navMenuId;
             this.Plugin = plugin;
             this.Translations = translations;
         }
@@ -91,6 +95,18 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string PluginId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Href
+        /// </summary>
+        [DataMember(Name="Href", EmitDefaultValue=false)]
+        public string Href { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NavMenuId
+        /// </summary>
+        [DataMember(Name="NavMenuId", EmitDefaultValue=false)]
+        public string NavMenuId { get; set; }
+
+        /// <summary>
         /// Gets or Sets Plugin
         /// </summary>
         [DataMember(Name="Plugin", EmitDefaultValue=false)]
@@ -117,6 +133,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  ConfigurationPageType: ").Append(ConfigurationPageType).Append("\n");
             sb.Append("  PluginId: ").Append(PluginId).Append("\n");
+            sb.Append("  Href: ").Append(Href).Append("\n");
+            sb.Append("  NavMenuId: ").Append(NavMenuId).Append("\n");
             sb.Append("  Plugin: ").Append(Plugin).Append("\n");
             sb.Append("  Translations: ").Append(Translations).Append("\n");
             sb.Append("}\n");
@@ -189,6 +207,16 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.PluginId.Equals(input.PluginId))
                 ) && 
                 (
+                    this.Href == input.Href ||
+                    (this.Href != null &&
+                    this.Href.Equals(input.Href))
+                ) && 
+                (
+                    this.NavMenuId == input.NavMenuId ||
+                    (this.NavMenuId != null &&
+                    this.NavMenuId.Equals(input.NavMenuId))
+                ) && 
+                (
                     this.Plugin == input.Plugin ||
                     (this.Plugin != null &&
                     this.Plugin.Equals(input.Plugin))
@@ -224,6 +252,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ConfigurationPageType.GetHashCode();
                 if (this.PluginId != null)
                     hashCode = hashCode * 59 + this.PluginId.GetHashCode();
+                if (this.Href != null)
+                    hashCode = hashCode * 59 + this.Href.GetHashCode();
+                if (this.NavMenuId != null)
+                    hashCode = hashCode * 59 + this.NavMenuId.GetHashCode();
                 if (this.Plugin != null)
                     hashCode = hashCode * 59 + this.Plugin.GetHashCode();
                 if (this.Translations != null)

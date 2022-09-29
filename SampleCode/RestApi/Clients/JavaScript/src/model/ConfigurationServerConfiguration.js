@@ -16,7 +16,7 @@ import ConfigurationPathSubstitution from './ConfigurationPathSubstitution';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.6
+* @version 4.8.0.10
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -186,6 +186,9 @@ export default class ConfigurationServerConfiguration {
             }
             if (data.hasOwnProperty('InheritedParentalRatingValueUpgraded')) {
                 obj['InheritedParentalRatingValueUpgraded'] = ApiClient.convertToType(data['InheritedParentalRatingValueUpgraded'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ImageExtractorUpgraded')) {
+                obj['ImageExtractorUpgraded'] = ApiClient.convertToType(data['ImageExtractorUpgraded'], 'Boolean');
             }
             if (data.hasOwnProperty('EnablePeopleLetterSubFolders')) {
                 obj['EnablePeopleLetterSubFolders'] = ApiClient.convertToType(data['EnablePeopleLetterSubFolders'], 'Boolean');
@@ -416,6 +419,10 @@ export default class ConfigurationServerConfiguration {
     * @member {Boolean} InheritedParentalRatingValueUpgraded
     */
     'InheritedParentalRatingValueUpgraded' = undefined;
+    /**
+    * @member {Boolean} ImageExtractorUpgraded
+    */
+    'ImageExtractorUpgraded' = undefined;
     /**
     * @member {Boolean} EnablePeopleLetterSubFolders
     */

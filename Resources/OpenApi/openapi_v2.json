@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.6"
+    "version": "4.8.0.10"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -11231,28 +11231,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "path",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "required": true,
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "path",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -11376,28 +11354,6 @@
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "required": true,
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "path",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "required": true,
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "path",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -22535,6 +22491,131 @@
       },
       "x-summary": "Gets information about the request endpoint"
     },
+    "/UI/View": {
+      "get": {
+        "tags": [
+          "GenericUIApiService"
+        ],
+        "summary": "Gets UI view data",
+        "description": "Requires authentication as user",
+        "operationId": "getUIView",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageId",
+            "description": "Id of the page controller",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ClientLocale",
+            "description": "Locale identifier of the client",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a UIViewInfo object.",
+            "schema": {
+              "$ref": "#/definitions/Emby.Web.GenericUI.Model.UIViewInfo"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets UI view data"
+    },
+    "/UI/Command": {
+      "post": {
+        "tags": [
+          "GenericUIApiService"
+        ],
+        "summary": "Execute a command in the context of tv setup",
+        "description": "Requires authentication as user",
+        "operationId": "postUICommand",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "RunUICommand",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Emby.Web.GenericUI.Api.Endpoints.RunUICommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a UIViewInfo object.",
+            "schema": {
+              "$ref": "#/definitions/Emby.Web.GenericUI.Model.UIViewInfo"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Execute a command in the context of tv setup"
+    },
     "/Users/Public": {
       "get": {
         "tags": [
@@ -23630,7 +23711,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           }
@@ -23695,7 +23776,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           }
@@ -23757,7 +23838,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           }
@@ -23816,7 +23897,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           }
@@ -23969,7 +24050,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -24200,7 +24281,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -24434,7 +24515,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -24665,7 +24746,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -24899,7 +24980,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -25130,7 +25211,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -25364,7 +25445,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -35637,7 +35718,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -35868,7 +35949,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -36102,7 +36183,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -36333,7 +36414,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -36567,7 +36648,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -36798,7 +36879,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -37032,7 +37113,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -37447,7 +37528,7 @@
           {
             "in": "query",
             "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -37640,26 +37721,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -37778,26 +37839,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -38304,26 +38345,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -38442,26 +38463,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -38588,26 +38589,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -38726,26 +38707,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -39066,26 +39027,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -39204,26 +39145,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -40078,26 +39999,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -40216,26 +40117,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -40411,26 +40292,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -40549,26 +40410,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -41132,26 +40973,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -41270,26 +41091,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -42979,26 +42780,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -43117,26 +42898,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -43586,7 +43347,7 @@
           {
             "in": "query",
             "name": "PositionTicks",
-            "description": "Optional. The position, in ticks, where playback stopped. 1 tick = 10000 ms",
+            "description": "Optional. The position, in ticks, where playback stopped. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -43933,26 +43694,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -44072,26 +43813,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -44317,26 +44038,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -44456,26 +44157,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -44603,26 +44284,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -44742,26 +44403,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -45104,26 +44745,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -45243,26 +44864,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -45718,26 +45319,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -45857,26 +45438,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -46004,26 +45565,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -46143,26 +45684,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -46346,26 +45867,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -46485,26 +45986,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -47149,26 +46630,6 @@
           },
           {
             "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
             "name": "BackgroundColor",
             "description": "Optional. Apply a background color for transparent images.",
             "type": "string"
@@ -47288,26 +46749,6 @@
             "name": "Format",
             "description": "Determines the output foramt of the image - original,gif,jpg,png",
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AddPlayedIndicator",
-            "description": "Optional. Add a played indicator",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "PercentPlayed",
-            "description": "Optional percent to render for the percent played overlay",
-            "type": "number",
-            "format": "double"
-          },
-          {
-            "in": "query",
-            "name": "UnplayedCount",
-            "description": "Optional unplayed count overlay to render",
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -47656,7 +47097,7 @@
           {
             "in": "query",
             "name": "PositionTicks",
-            "description": "Optional. The current position, in ticks. 1 tick = 10000 ms",
+            "description": "Optional. The current position, in ticks. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -47803,7 +47244,7 @@
           {
             "in": "query",
             "name": "PositionTicks",
-            "description": "Optional. The position, in ticks, where playback stopped. 1 tick = 10000 ms",
+            "description": "Optional. The position, in ticks, where playback stopped. 1ms = 10000 ticks.",
             "type": "integer",
             "format": "int64"
           },
@@ -51511,7 +50952,8 @@
         "IsInterlaced",
         "AudioSampleRate",
         "AudioBitDepth",
-        "VideoRange"
+        "VideoRange",
+        "VideoRotation"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Dlna.ProfileConditionValue"
@@ -51849,8 +51291,8 @@
         "LabelItem",
         "ItemList",
         "RadioGroup",
-        "DataGrid",
-        "PivotGrid",
+        "DxDataGrid",
+        "DxPivotGrid",
         "SpacerItem"
       ],
       "type": "string",
@@ -54256,6 +53698,9 @@
         "InheritedParentalRatingValueUpgraded": {
           "type": "boolean"
         },
+        "ImageExtractorUpgraded": {
+          "type": "boolean"
+        },
         "EnablePeopleLetterSubFolders": {
           "type": "boolean"
         },
@@ -54484,6 +53929,172 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Net.EndPointInfo"
+    },
+    "Emby.Web.GenericUI.Model.UIViewInfo": {
+      "type": "object",
+      "properties": {
+        "ViewId": {
+          "type": "string"
+        },
+        "PageId": {
+          "type": "string"
+        },
+        "Caption": {
+          "type": "string"
+        },
+        "SubCaption": {
+          "type": "string"
+        },
+        "PluginId": {
+          "type": "string"
+        },
+        "ViewType": {
+          "$ref": "#/definitions/Emby.Web.GenericUI.Model.Enums.UIViewType"
+        },
+        "ShowDialogFullScreen": {
+          "type": "boolean"
+        },
+        "IsInSequence": {
+          "type": "boolean"
+        },
+        "RedirectViewUrl": {
+          "type": "string"
+        },
+        "EditObjectContainer": {
+          "$ref": "#/definitions/GenericEdit.IEditObjectContainer"
+        },
+        "Commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Emby.Web.GenericUI.Model.UICommand"
+          }
+        },
+        "TabPageInfos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Emby.Web.GenericUI.Model.UITabPageInfo"
+          }
+        },
+        "IsPageChangeInfo": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.Web.GenericUI.Model.UIViewInfo"
+    },
+    "Emby.Web.GenericUI.Model.Enums.UIViewType": {
+      "enum": [
+        "RegularPage",
+        "Dialog",
+        "Wizard"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.Web.GenericUI.Model.Enums.UIViewType"
+    },
+    "GenericEdit.IEditObjectContainer": {
+      "type": "object",
+      "properties": {
+        "Object": {
+          "type": "object"
+        },
+        "DefaultObject": {
+          "type": "object"
+        },
+        "TypeName": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.GenericEdit.IEditObjectContainer"
+    },
+    "Emby.Web.GenericUI.Model.UICommand": {
+      "type": "object",
+      "properties": {
+        "CommandType": {
+          "$ref": "#/definitions/Emby.Web.GenericUI.Model.Enums.UICommandType"
+        },
+        "CommandId": {
+          "type": "string"
+        },
+        "IsVisible": {
+          "type": "boolean"
+        },
+        "IsEnabled": {
+          "type": "boolean"
+        },
+        "Caption": {
+          "type": "string"
+        },
+        "SetFocus": {
+          "type": "boolean"
+        },
+        "ConfirmationMessage": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.Web.GenericUI.Model.UICommand"
+    },
+    "Emby.Web.GenericUI.Model.Enums.UICommandType": {
+      "enum": [
+        "Custom",
+        "WizardCancel",
+        "WizardBack",
+        "WizardNext",
+        "WizardFinish",
+        "DialogCancel",
+        "DialogOk",
+        "PageSave",
+        "PageBack",
+        "WizardButton1",
+        "WizardButton2",
+        "WizardButton3"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.Web.GenericUI.Model.Enums.UICommandType"
+    },
+    "Emby.Web.GenericUI.Model.UITabPageInfo": {
+      "type": "object",
+      "properties": {
+        "PageId": {
+          "type": "string"
+        },
+        "DisplayName": {
+          "type": "string"
+        },
+        "PluginId": {
+          "type": "string"
+        },
+        "Href": {
+          "type": "string"
+        },
+        "NavKey": {
+          "type": "string"
+        },
+        "Index": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "Emby.Web.GenericUI.Model.UITabPageInfo"
+    },
+    "Emby.Web.GenericUI.Api.Endpoints.RunUICommand": {
+      "type": "object",
+      "properties": {
+        "PageId": {
+          "type": "string"
+        },
+        "CommandId": {
+          "type": "string"
+        },
+        "Data": {
+          "type": "string"
+        },
+        "ItemId": {
+          "type": "string"
+        },
+        "ClientLocale": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.Web.GenericUI.Api.Endpoints.RunUICommand"
     },
     "UserDto": {
       "type": "object",
@@ -54961,6 +54572,12 @@
           "$ref": "#/definitions/Plugins.ConfigurationPageType"
         },
         "PluginId": {
+          "type": "string"
+        },
+        "Href": {
+          "type": "string"
+        },
+        "NavMenuId": {
           "type": "string"
         },
         "Plugin": {
@@ -58002,6 +57619,9 @@
     },
     {
       "name": "SystemService"
+    },
+    {
+      "name": "GenericUIApiService"
     },
     {
       "name": "UserService"

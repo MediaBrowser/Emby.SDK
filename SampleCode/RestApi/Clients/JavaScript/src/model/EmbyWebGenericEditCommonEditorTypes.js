@@ -119,16 +119,16 @@ export default class EmbyWebGenericEditCommonEditorTypes {
         radioGroup = "RadioGroup";
 
         /**
-         * value: "DataGrid"
+         * value: "DxDataGrid"
          * @const
          */
-        dataGrid = "DataGrid";
+        dxDataGrid = "DxDataGrid";
 
         /**
-         * value: "PivotGrid"
+         * value: "DxPivotGrid"
          * @const
          */
-        pivotGrid = "PivotGrid";
+        dxPivotGrid = "DxPivotGrid";
 
         /**
          * value: "SpacerItem"

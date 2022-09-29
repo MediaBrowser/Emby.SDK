@@ -42,6 +42,7 @@ class DlnaProfileConditionValue(object):
     AUDIOSAMPLERATE = "AudioSampleRate"
     AUDIOBITDEPTH = "AudioBitDepth"
     VIDEORANGE = "VideoRange"
+    VIDEOROTATION = "VideoRotation"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

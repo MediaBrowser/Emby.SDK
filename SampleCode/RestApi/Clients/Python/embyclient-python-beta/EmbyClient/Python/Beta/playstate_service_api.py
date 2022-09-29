@@ -140,7 +140,7 @@ class PlaystateServiceApi(object):
         :param str id: Item Id (required)
         :param str media_source_id: The id of the MediaSource (required)
         :param str next_media_type: The next media type that will play (required)
-        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1 tick = 10000 ms
+        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1ms = 10000 ticks.
         :param str live_stream_id:
         :param str play_session_id:
         :return: None
@@ -168,7 +168,7 @@ class PlaystateServiceApi(object):
         :param str id: Item Id (required)
         :param str media_source_id: The id of the MediaSource (required)
         :param str next_media_type: The next media type that will play (required)
-        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1 tick = 10000 ms
+        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1ms = 10000 ticks.
         :param str live_stream_id:
         :param str play_session_id:
         :return: None
@@ -1091,7 +1091,7 @@ class PlaystateServiceApi(object):
         :param str id: Item Id (required)
         :param str media_source_id: The id of the MediaSource (required)
         :param str next_media_type: The next media type that will play (required)
-        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1 tick = 10000 ms
+        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1ms = 10000 ticks.
         :param str live_stream_id:
         :param str play_session_id:
         :return: None
@@ -1119,7 +1119,7 @@ class PlaystateServiceApi(object):
         :param str id: Item Id (required)
         :param str media_source_id: The id of the MediaSource (required)
         :param str next_media_type: The next media type that will play (required)
-        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1 tick = 10000 ms
+        :param int position_ticks: Optional. The position, in ticks, where playback stopped. 1ms = 10000 ticks.
         :param str live_stream_id:
         :param str play_session_id:
         :return: None
@@ -1218,7 +1218,7 @@ class PlaystateServiceApi(object):
         :param str media_source_id: The id of the MediaSource (required)
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
-        :param int position_ticks: Optional. The current position, in ticks. 1 tick = 10000 ms
+        :param int position_ticks: Optional. The current position, in ticks. 1ms = 10000 ticks.
         :param bool is_paused: Indicates if the player is paused.
         :param bool is_muted: Indicates if the player is muted.
         :param int audio_stream_index:
@@ -1255,7 +1255,7 @@ class PlaystateServiceApi(object):
         :param str media_source_id: The id of the MediaSource (required)
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
-        :param int position_ticks: Optional. The current position, in ticks. 1 tick = 10000 ms
+        :param int position_ticks: Optional. The current position, in ticks. 1ms = 10000 ticks.
         :param bool is_paused: Indicates if the player is paused.
         :param bool is_muted: Indicates if the player is muted.
         :param int audio_stream_index:

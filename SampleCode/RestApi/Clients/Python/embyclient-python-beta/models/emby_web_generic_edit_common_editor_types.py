@@ -35,8 +35,8 @@ class EmbyWebGenericEditCommonEditorTypes(object):
     LABELITEM = "LabelItem"
     ITEMLIST = "ItemList"
     RADIOGROUP = "RadioGroup"
-    DATAGRID = "DataGrid"
-    PIVOTGRID = "PivotGrid"
+    DXDATAGRID = "DxDataGrid"
+    DXPIVOTGRID = "DxPivotGrid"
     SPACERITEM = "SpacerItem"
     """
     Attributes:

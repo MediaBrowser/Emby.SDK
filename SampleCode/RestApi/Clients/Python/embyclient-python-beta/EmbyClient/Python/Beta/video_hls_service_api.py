@@ -164,7 +164,7 @@ class VideoHlsServiceApi(object):
         :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
         :param int height: Optional. The fixed vertical resolution of the encoded video.
         :param int max_width: Optional. The maximum horizontal resolution of the encoded video.
@@ -214,7 +214,7 @@ class VideoHlsServiceApi(object):
         :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
-        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms
+        :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
         :param int height: Optional. The fixed vertical resolution of the encoded video.
         :param int max_width: Optional. The maximum horizontal resolution of the encoded video.

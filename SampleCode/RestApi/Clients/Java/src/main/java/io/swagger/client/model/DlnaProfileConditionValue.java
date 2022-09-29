@@ -42,7 +42,8 @@ public enum DlnaProfileConditionValue {
   ISINTERLACED("IsInterlaced"),
   AUDIOSAMPLERATE("AudioSampleRate"),
   AUDIOBITDEPTH("AudioBitDepth"),
-  VIDEORANGE("VideoRange");
+  VIDEORANGE("VideoRange"),
+  VIDEOROTATION("VideoRotation");
 
   private String value;
 

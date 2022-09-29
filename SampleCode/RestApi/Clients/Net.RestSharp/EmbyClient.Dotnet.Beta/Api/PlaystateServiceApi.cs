@@ -52,7 +52,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -69,7 +69,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -279,7 +279,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -296,7 +296,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -312,7 +312,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -338,7 +338,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -388,7 +388,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -405,7 +405,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -615,7 +615,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -632,7 +632,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -648,7 +648,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -674,7 +674,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -974,7 +974,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -991,7 +991,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1075,7 +1075,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -1093,7 +1093,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2561,7 +2561,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -2578,7 +2578,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2662,7 +2662,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -2680,7 +2680,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2764,7 +2764,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -2790,7 +2790,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -2901,7 +2901,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -2928,7 +2928,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>

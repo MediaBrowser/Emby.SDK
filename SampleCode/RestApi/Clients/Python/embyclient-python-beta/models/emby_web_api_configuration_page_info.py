@@ -29,6 +29,8 @@ class EmbyWebApiConfigurationPageInfo(object):
         'display_name': 'str',
         'configuration_page_type': 'PluginsConfigurationPageType',
         'plugin_id': 'str',
+        'href': 'str',
+        'nav_menu_id': 'str',
         'plugin': 'CommonPluginsIPlugin',
         'translations': 'list[str]'
     }
@@ -41,11 +43,13 @@ class EmbyWebApiConfigurationPageInfo(object):
         'display_name': 'DisplayName',
         'configuration_page_type': 'ConfigurationPageType',
         'plugin_id': 'PluginId',
+        'href': 'Href',
+        'nav_menu_id': 'NavMenuId',
         'plugin': 'Plugin',
         'translations': 'Translations'
     }
 
-    def __init__(self, name=None, enable_in_main_menu=None, menu_section=None, menu_icon=None, display_name=None, configuration_page_type=None, plugin_id=None, plugin=None, translations=None):  # noqa: E501
+    def __init__(self, name=None, enable_in_main_menu=None, menu_section=None, menu_icon=None, display_name=None, configuration_page_type=None, plugin_id=None, href=None, nav_menu_id=None, plugin=None, translations=None):  # noqa: E501
         """EmbyWebApiConfigurationPageInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._enable_in_main_menu = None
@@ -54,6 +58,8 @@ class EmbyWebApiConfigurationPageInfo(object):
         self._display_name = None
         self._configuration_page_type = None
         self._plugin_id = None
+        self._href = None
+        self._nav_menu_id = None
         self._plugin = None
         self._translations = None
         self.discriminator = None
@@ -71,6 +77,10 @@ class EmbyWebApiConfigurationPageInfo(object):
             self.configuration_page_type = configuration_page_type
         if plugin_id is not None:
             self.plugin_id = plugin_id
+        if href is not None:
+            self.href = href
+        if nav_menu_id is not None:
+            self.nav_menu_id = nav_menu_id
         if plugin is not None:
             self.plugin = plugin
         if translations is not None:
@@ -222,6 +232,48 @@ class EmbyWebApiConfigurationPageInfo(object):
         """
 
         self._plugin_id = plugin_id
+
+    @property
+    def href(self):
+        """Gets the href of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+
+
+        :return: The href of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this EmbyWebApiConfigurationPageInfo.
+
+
+        :param href: The href of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._href = href
+
+    @property
+    def nav_menu_id(self):
+        """Gets the nav_menu_id of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+
+
+        :return: The nav_menu_id of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._nav_menu_id
+
+    @nav_menu_id.setter
+    def nav_menu_id(self, nav_menu_id):
+        """Sets the nav_menu_id of this EmbyWebApiConfigurationPageInfo.
+
+
+        :param nav_menu_id: The nav_menu_id of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._nav_menu_id = nav_menu_id
 
     @property
     def plugin(self):

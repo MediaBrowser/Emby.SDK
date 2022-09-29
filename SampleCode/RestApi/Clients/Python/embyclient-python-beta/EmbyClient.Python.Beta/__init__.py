@@ -24,6 +24,7 @@ from embyclient-python-beta.EmbyClient.Python.Beta.environment_service_api impor
 from embyclient-python-beta.EmbyClient.Python.Beta.ffmpeg_options_service_api import FfmpegOptionsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.game_genres_service_api import GameGenresServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.games_service_api import GamesServiceApi
+from embyclient-python-beta.EmbyClient.Python.Beta.generic_ui_api_service_api import GenericUIApiServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.genres_service_api import GenresServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.hls_segment_service_api import HlsSegmentServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.image_service_api import ImageServiceApi

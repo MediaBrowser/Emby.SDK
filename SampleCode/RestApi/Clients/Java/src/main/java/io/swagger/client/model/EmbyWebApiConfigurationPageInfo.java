@@ -45,6 +45,12 @@ public class EmbyWebApiConfigurationPageInfo {
   @SerializedName("PluginId")
   private String pluginId = null;
 
+  @SerializedName("Href")
+  private String href = null;
+
+  @SerializedName("NavMenuId")
+  private String navMenuId = null;
+
   @SerializedName("Plugin")
   private CommonPluginsIPlugin plugin = null;
 
@@ -177,6 +183,42 @@ public class EmbyWebApiConfigurationPageInfo {
     this.pluginId = pluginId;
   }
 
+  public EmbyWebApiConfigurationPageInfo href(String href) {
+    this.href = href;
+    return this;
+  }
+
+   /**
+   * Get href
+   * @return href
+  **/
+  @Schema(description = "")
+  public String getHref() {
+    return href;
+  }
+
+  public void setHref(String href) {
+    this.href = href;
+  }
+
+  public EmbyWebApiConfigurationPageInfo navMenuId(String navMenuId) {
+    this.navMenuId = navMenuId;
+    return this;
+  }
+
+   /**
+   * Get navMenuId
+   * @return navMenuId
+  **/
+  @Schema(description = "")
+  public String getNavMenuId() {
+    return navMenuId;
+  }
+
+  public void setNavMenuId(String navMenuId) {
+    this.navMenuId = navMenuId;
+  }
+
   public EmbyWebApiConfigurationPageInfo plugin(CommonPluginsIPlugin plugin) {
     this.plugin = plugin;
     return this;
@@ -238,13 +280,15 @@ public class EmbyWebApiConfigurationPageInfo {
         Objects.equals(this.displayName, embyWebApiConfigurationPageInfo.displayName) &&
         Objects.equals(this.configurationPageType, embyWebApiConfigurationPageInfo.configurationPageType) &&
         Objects.equals(this.pluginId, embyWebApiConfigurationPageInfo.pluginId) &&
+        Objects.equals(this.href, embyWebApiConfigurationPageInfo.href) &&
+        Objects.equals(this.navMenuId, embyWebApiConfigurationPageInfo.navMenuId) &&
         Objects.equals(this.plugin, embyWebApiConfigurationPageInfo.plugin) &&
         Objects.equals(this.translations, embyWebApiConfigurationPageInfo.translations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, enableInMainMenu, menuSection, menuIcon, displayName, configurationPageType, pluginId, plugin, translations);
+    return Objects.hash(name, enableInMainMenu, menuSection, menuIcon, displayName, configurationPageType, pluginId, href, navMenuId, plugin, translations);
   }
 
 
@@ -260,6 +304,8 @@ public class EmbyWebApiConfigurationPageInfo {
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
     sb.append("    configurationPageType: ").append(toIndentedString(configurationPageType)).append("\n");
     sb.append("    pluginId: ").append(toIndentedString(pluginId)).append("\n");
+    sb.append("    href: ").append(toIndentedString(href)).append("\n");
+    sb.append("    navMenuId: ").append(toIndentedString(navMenuId)).append("\n");
     sb.append("    plugin: ").append(toIndentedString(plugin)).append("\n");
     sb.append("    translations: ").append(toIndentedString(translations)).append("\n");
     sb.append("}");

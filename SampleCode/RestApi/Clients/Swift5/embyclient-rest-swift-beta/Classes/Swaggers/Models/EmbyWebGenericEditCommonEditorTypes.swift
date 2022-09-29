@@ -26,7 +26,7 @@ public enum EmbyWebGenericEditCommonEditorTypes: String, Codable {
     case labelItem = "LabelItem"
     case itemList = "ItemList"
     case radioGroup = "RadioGroup"
-    case dataGrid = "DataGrid"
-    case pivotGrid = "PivotGrid"
+    case dxDataGrid = "DxDataGrid"
+    case dxPivotGrid = "DxPivotGrid"
     case spacerItem = "SpacerItem"
 }

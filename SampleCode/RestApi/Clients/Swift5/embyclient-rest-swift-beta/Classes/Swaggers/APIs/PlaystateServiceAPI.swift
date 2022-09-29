@@ -80,7 +80,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -110,7 +110,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
 
@@ -582,7 +582,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -612,7 +612,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
 
@@ -649,7 +649,7 @@ open class PlaystateServiceAPI {
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
-     - parameter positionTicks: (query) Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter isPaused: (query) Indicates if the player is paused. (optional)
      - parameter isMuted: (query) Indicates if the player is muted. (optional)
      - parameter audioStreamIndex: (query)  (optional)
@@ -688,7 +688,7 @@ open class PlaystateServiceAPI {
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
-     - parameter positionTicks: (query) Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter isPaused: (query) Indicates if the player is paused. (optional)
      - parameter isMuted: (query) Indicates if the player is muted. (optional)
      - parameter audioStreamIndex: (query)  (optional)
