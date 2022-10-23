@@ -10,6 +10,7 @@ from __future__ import absolute_import
 # import models into model package
 from embyclient-python-beta.models.activity_log_entry import ActivityLogEntry
 from embyclient-python-beta.models.all_theme_media_result import AllThemeMediaResult
+from embyclient-python-beta.models.api_base_items_request import ApiBaseItemsRequest
 from embyclient-python-beta.models.attributes_simple_condition import AttributesSimpleCondition
 from embyclient-python-beta.models.attributes_value_condition import AttributesValueCondition
 from embyclient-python-beta.models.authenticate_user import AuthenticateUser
@@ -86,6 +87,8 @@ from embyclient-python-beta.models.emby_media_model_types_resolution_with_rate i
 from embyclient-python-beta.models.emby_notifications_api_notification import EmbyNotificationsApiNotification
 from embyclient-python-beta.models.emby_notifications_api_notification_result import EmbyNotificationsApiNotificationResult
 from embyclient-python-beta.models.emby_notifications_api_notifications_summary import EmbyNotificationsApiNotificationsSummary
+from embyclient-python-beta.models.emby_notifications_notification_category_info import EmbyNotificationsNotificationCategoryInfo
+from embyclient-python-beta.models.emby_notifications_notification_type_info import EmbyNotificationsNotificationTypeInfo
 from embyclient-python-beta.models.emby_web_api_configuration_page_info import EmbyWebApiConfigurationPageInfo
 from embyclient-python-beta.models.emby_web_generic_edit_actions_postback_action import EmbyWebGenericEditActionsPostbackAction
 from embyclient-python-beta.models.emby_web_generic_edit_common_editor_types import EmbyWebGenericEditCommonEditorTypes
@@ -105,7 +108,6 @@ from embyclient-python-beta.models.external_id_info import ExternalIdInfo
 from embyclient-python-beta.models.external_url import ExternalUrl
 from embyclient-python-beta.models.forgot_password import ForgotPassword
 from embyclient-python-beta.models.forgot_password_pin import ForgotPasswordPin
-from embyclient-python-beta.models.game_system_summary import GameSystemSummary
 from embyclient-python-beta.models.general_command import GeneralCommand
 from embyclient-python-beta.models.generic_edit_i_edit_object_container import GenericEditIEditObjectContainer
 from embyclient-python-beta.models.globalization_country_info import GlobalizationCountryInfo
@@ -120,6 +122,7 @@ from embyclient-python-beta.models.item_counts import ItemCounts
 from embyclient-python-beta.models.library_add_media_path import LibraryAddMediaPath
 from embyclient-python-beta.models.library_add_virtual_folder import LibraryAddVirtualFolder
 from embyclient-python-beta.models.library_delete_info import LibraryDeleteInfo
+from embyclient-python-beta.models.library_item_link_type import LibraryItemLinkType
 from embyclient-python-beta.models.library_library_option_info import LibraryLibraryOptionInfo
 from embyclient-python-beta.models.library_library_options_result import LibraryLibraryOptionsResult
 from embyclient-python-beta.models.library_library_type_options import LibraryLibraryTypeOptions
@@ -133,8 +136,8 @@ from embyclient-python-beta.models.library_rename_virtual_folder import LibraryR
 from embyclient-python-beta.models.library_sub_folder import LibrarySubFolder
 from embyclient-python-beta.models.library_update_library_options import LibraryUpdateLibraryOptions
 from embyclient-python-beta.models.library_update_media_path import LibraryUpdateMediaPath
+from embyclient-python-beta.models.library_user_copy_options import LibraryUserCopyOptions
 from embyclient-python-beta.models.live_tv_api_epg_row import LiveTVApiEpgRow
-from embyclient-python-beta.models.live_tv_api_get_programs import LiveTVApiGetPrograms
 from embyclient-python-beta.models.live_tv_api_listing_provider_type_info import LiveTVApiListingProviderTypeInfo
 from embyclient-python-beta.models.live_tv_api_set_channel_disabled import LiveTVApiSetChannelDisabled
 from embyclient-python-beta.models.live_tv_api_set_channel_mapping import LiveTVApiSetChannelMapping

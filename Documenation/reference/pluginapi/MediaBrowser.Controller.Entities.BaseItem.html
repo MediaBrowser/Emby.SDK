@@ -251,54 +251,6 @@
   </table>
   
   
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SlugChar" data-uid="MediaBrowser.Controller.Entities.BaseItem.SlugChar">SlugChar</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static char SlugChar</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SlugReplaceChars" data-uid="MediaBrowser.Controller.Entities.BaseItem.SlugReplaceChars">SlugReplaceChars</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly char[] SlugReplaceChars</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportedImageExtensions">SupportedImageExtensions</h4>
   <div class="markdown level1 summary"><p>The supported image extensions</p>
 </div>
@@ -5515,12 +5467,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetExtras_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtras*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetExtras_MediaBrowser_Model_Entities_ExtraType___" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtras(MediaBrowser.Model.Entities.ExtraType[])">GetExtras(ExtraType[])</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetExtras_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtras(MediaBrowser.Model.Entities.ExtraType[],MediaBrowser.Controller.Dto.DtoOptions)">GetExtras(ExtraType[], DtoOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseItem[] GetExtras(ExtraType[] extraTypes)</code></pre>
+    <pre><code class="lang-csharp hljs">public BaseItem[] GetExtras(ExtraType[] extraTypes, DtoOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5535,6 +5487,11 @@ public int Width { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>[]</td>
         <td><span class="parametername">extraTypes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
+        <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -6942,13 +6899,30 @@ This overload is for CoverArt</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetThemeSongs_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetThemeSongs*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetThemeSongs" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetThemeSongs">GetThemeSongs()</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetThemeSongs_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetThemeSongs(MediaBrowser.Controller.Dto.DtoOptions)">GetThemeSongs(DtoOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseItem[] GetThemeSongs()</code></pre>
+    <pre><code class="lang-csharp hljs">public BaseItem[] GetThemeSongs(DtoOptions options)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -6967,13 +6941,30 @@ This overload is for CoverArt</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetThemeVideos*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetThemeVideos">GetThemeVideos()</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetThemeVideos(MediaBrowser.Controller.Dto.DtoOptions)">GetThemeVideos(DtoOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseItem[] GetThemeVideos()</code></pre>
+    <pre><code class="lang-csharp hljs">public BaseItem[] GetThemeVideos(DtoOptions options)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>

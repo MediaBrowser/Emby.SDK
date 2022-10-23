@@ -34,4 +34,5 @@ const (
 	SUBTITLE_CODEC_NOT_SUPPORTED_TranscodeReason TranscodeReason = "SubtitleCodecNotSupported"
 	DIRECT_PLAY_ERROR_TranscodeReason TranscodeReason = "DirectPlayError"
 	VIDEO_RANGE_NOT_SUPPORTED_TranscodeReason TranscodeReason = "VideoRangeNotSupported"
+	SUBTITLE_CONTENT_OPTIONS_ENABLED_TranscodeReason TranscodeReason = "SubtitleContentOptionsEnabled"
 )

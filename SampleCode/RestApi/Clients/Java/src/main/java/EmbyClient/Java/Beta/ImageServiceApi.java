@@ -2400,6 +2400,8 @@ public class ImageServiceApi {
     }
     /**
      * Build call for getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -2420,11 +2422,13 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+            .replaceAll("\\{" + "PercentPlayed" + "\\}", apiClient.escapeString(percentPlayed.toString()))
+            .replaceAll("\\{" + "UnPlayedCount" + "\\}", apiClient.escapeString(unPlayedCount.toString()))
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
             .replaceAll("\\{" + "MaxWidth" + "\\}", apiClient.escapeString(maxWidth.toString()))
             .replaceAll("\\{" + "MaxHeight" + "\\}", apiClient.escapeString(maxHeight.toString()))
@@ -2485,7 +2489,15 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'percentPlayed' is set
+        if (percentPlayed == null) {
+            throw new ApiException("Missing the required parameter 'percentPlayed' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
+        }
+        // verify the required parameter 'unPlayedCount' is set
+        if (unPlayedCount == null) {
+            throw new ApiException("Missing the required parameter 'unPlayedCount' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
+        }
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -2515,7 +2527,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -2527,6 +2539,8 @@ public class ImageServiceApi {
     /**
      * 
      * No authentication required
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -2544,13 +2558,15 @@ public class ImageServiceApi {
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+    public void getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
      * 
      * No authentication required
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -2569,14 +2585,16 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
     /**
      *  (asynchronously)
      * No authentication required
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -2596,7 +2614,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2617,7 +2635,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5983,6 +6001,8 @@ public class ImageServiceApi {
     }
     /**
      * Build call for headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -6003,11 +6023,13 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+            .replaceAll("\\{" + "PercentPlayed" + "\\}", apiClient.escapeString(percentPlayed.toString()))
+            .replaceAll("\\{" + "UnPlayedCount" + "\\}", apiClient.escapeString(unPlayedCount.toString()))
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
             .replaceAll("\\{" + "MaxWidth" + "\\}", apiClient.escapeString(maxWidth.toString()))
             .replaceAll("\\{" + "MaxHeight" + "\\}", apiClient.escapeString(maxHeight.toString()))
@@ -6068,7 +6090,15 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'percentPlayed' is set
+        if (percentPlayed == null) {
+            throw new ApiException("Missing the required parameter 'percentPlayed' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
+        }
+        // verify the required parameter 'unPlayedCount' is set
+        if (unPlayedCount == null) {
+            throw new ApiException("Missing the required parameter 'unPlayedCount' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
+        }
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -6098,7 +6128,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'index' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
         
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         return call;
 
         
@@ -6110,6 +6140,8 @@ public class ImageServiceApi {
     /**
      * 
      * No authentication required
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -6127,13 +6159,15 @@ public class ImageServiceApi {
      * @param autoOrient Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+    public void headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
     }
 
     /**
      * 
      * No authentication required
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -6152,14 +6186,16 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, null, null);
+    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, null, null);
         return apiClient.execute(call);
     }
 
     /**
      *  (asynchronously)
      * No authentication required
+     * @param percentPlayed  (required)
+     * @param unPlayedCount  (required)
      * @param id Item Id (required)
      * @param maxWidth The maximum image width to return. (required)
      * @param maxHeight The maximum image height to return. (required)
@@ -6179,7 +6215,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6200,7 +6236,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

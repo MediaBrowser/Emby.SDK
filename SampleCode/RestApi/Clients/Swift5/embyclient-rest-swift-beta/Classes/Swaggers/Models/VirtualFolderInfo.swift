@@ -16,16 +16,18 @@ public struct VirtualFolderInfo: Codable {
     public var collectionType: String?
     public var libraryOptions: ConfigurationLibraryOptions?
     public var itemId: String?
+    public var guid: String?
     public var primaryImageItemId: String?
     public var refreshProgress: Double?
     public var refreshStatus: String?
 
-    public init(name: String? = nil, locations: [String]? = nil, collectionType: String? = nil, libraryOptions: ConfigurationLibraryOptions? = nil, itemId: String? = nil, primaryImageItemId: String? = nil, refreshProgress: Double? = nil, refreshStatus: String? = nil) {
+    public init(name: String? = nil, locations: [String]? = nil, collectionType: String? = nil, libraryOptions: ConfigurationLibraryOptions? = nil, itemId: String? = nil, guid: String? = nil, primaryImageItemId: String? = nil, refreshProgress: Double? = nil, refreshStatus: String? = nil) {
         self.name = name
         self.locations = locations
         self.collectionType = collectionType
         self.libraryOptions = libraryOptions
         self.itemId = itemId
+        self.guid = guid
         self.primaryImageItemId = primaryImageItemId
         self.refreshProgress = refreshProgress
         self.refreshStatus = refreshStatus
@@ -37,6 +39,7 @@ public struct VirtualFolderInfo: Codable {
         case collectionType = "CollectionType"
         case libraryOptions = "LibraryOptions"
         case itemId = "ItemId"
+        case guid = "Guid"
         case primaryImageItemId = "PrimaryImageItemId"
         case refreshProgress = "RefreshProgress"
         case refreshStatus = "RefreshStatus"

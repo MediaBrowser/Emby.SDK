@@ -33,6 +33,11 @@
             var applicationPaths = applicationHost.Resolve<IApplicationPaths>();
             this.pluginconfigPath = applicationPaths.PluginConfigurationsPath;
 
+            if (!this.fileSystem.DirectoryExists(this.pluginconfigPath))
+            {
+                this.fileSystem.CreateDirectory(this.pluginconfigPath);
+            }
+
             this.OptionsFileName = string.Format("{0}.json", pluginFullName);
         }
 

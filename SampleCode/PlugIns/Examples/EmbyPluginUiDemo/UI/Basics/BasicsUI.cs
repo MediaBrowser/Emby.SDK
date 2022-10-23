@@ -20,7 +20,9 @@ namespace EmbyPluginUiDemo.UI.Basics
         public override string EditorDescription => "This demonstrates the basic input elements. You don't choose controls "
                                                     + "directly. These are chosen based on the type of the properties you have in "
                                                     + "your options class. There are still many options for controlling the "
-                                                    + "presentation. Here we start with the most basic ones.";
+                                                    + "presentation. Here we start with the most basic ones.\n"
+                                                    + "This PageView also includes an example implementation for loading "
+                                                    + "and saving configuration data with the SimpleFileStore&lt;T&gt; base class.";
 
         public SpacerItem Spacer1 { get; set; } = new SpacerItem();
 

@@ -33,4 +33,5 @@ public enum TranscodeReason: String, Codable {
     case subtitleCodecNotSupported = "SubtitleCodecNotSupported"
     case directPlayError = "DirectPlayError"
     case videoRangeNotSupported = "VideoRangeNotSupported"
+    case subtitleContentOptionsEnabled = "SubtitleContentOptionsEnabled"
 }

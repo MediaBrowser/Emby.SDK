@@ -1589,6 +1589,8 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndex(ctx context.Con
 ImageServiceApiService
 No authentication required
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param percentPlayed
+ * @param unPlayedCount
  * @param id Item Id
  * @param maxWidth The maximum image width to return.
  * @param maxHeight The maximum image height to return.
@@ -1619,7 +1621,7 @@ type ImageServiceApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxh
     AutoOrient optional.Bool
 }
 
-func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, id string, maxWidth int32, maxHeight int32, tag string, format string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1630,6 +1632,8 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByM
 
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+	localVarPath = strings.Replace(localVarPath, "{"+"PercentPlayed"+"}", fmt.Sprintf("%v", percentPlayed), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"UnPlayedCount"+"}", fmt.Sprintf("%v", unPlayedCount), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"MaxWidth"+"}", fmt.Sprintf("%v", maxWidth), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"MaxHeight"+"}", fmt.Sprintf("%v", maxHeight), -1)
@@ -3930,6 +3934,8 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndex(ctx context.Co
 ImageServiceApiService
 No authentication required
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param percentPlayed
+ * @param unPlayedCount
  * @param id Item Id
  * @param maxWidth The maximum image width to return.
  * @param maxHeight The maximum image height to return.
@@ -3960,7 +3966,7 @@ type ImageServiceApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMax
     AutoOrient optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, id string, maxWidth int32, maxHeight int32, tag string, format string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -3971,6 +3977,8 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatBy
 
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+	localVarPath = strings.Replace(localVarPath, "{"+"PercentPlayed"+"}", fmt.Sprintf("%v", percentPlayed), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"UnPlayedCount"+"}", fmt.Sprintf("%v", unPlayedCount), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"MaxWidth"+"}", fmt.Sprintf("%v", maxWidth), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"MaxHeight"+"}", fmt.Sprintf("%v", maxHeight), -1)

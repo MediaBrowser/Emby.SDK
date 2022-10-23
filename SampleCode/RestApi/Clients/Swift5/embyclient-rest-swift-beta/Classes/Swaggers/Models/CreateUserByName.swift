@@ -12,13 +12,19 @@ import Foundation
 public struct CreateUserByName: Codable {
 
     public var name: String?
+    public var copyFromUserId: String?
+    public var userCopyOptions: [LibraryUserCopyOptions]?
 
-    public init(name: String? = nil) {
+    public init(name: String? = nil, copyFromUserId: String? = nil, userCopyOptions: [LibraryUserCopyOptions]? = nil) {
         self.name = name
+        self.copyFromUserId = copyFromUserId
+        self.userCopyOptions = userCopyOptions
     }
 
     public enum CodingKeys: String, CodingKey { 
         case name = "Name"
+        case copyFromUserId = "CopyFromUserId"
+        case userCopyOptions = "UserCopyOptions"
     }
 
 }

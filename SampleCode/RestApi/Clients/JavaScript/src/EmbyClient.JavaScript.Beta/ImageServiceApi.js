@@ -16,7 +16,7 @@ import ImageType from '../model/ImageType';
 /**
 * ImageService service.
 * @module EmbyClient.JavaScript.Beta/ImageServiceApi
-* @version 4.8.0.10
+* @version 4.8.0.13
 */
 export default class ImageServiceApi {
 
@@ -659,6 +659,8 @@ export default class ImageServiceApi {
       let postBody = null;
 
       let pathParams = {
+        'PercentPlayed': percentPlayed,
+        'UnPlayedCount': unPlayedCount,
         'Id': id,
         'MaxWidth': maxWidth,
         'MaxHeight': maxHeight,
@@ -1543,6 +1545,8 @@ export default class ImageServiceApi {
       let postBody = null;
 
       let pathParams = {
+        'PercentPlayed': percentPlayed,
+        'UnPlayedCount': unPlayedCount,
         'Id': id,
         'MaxWidth': maxWidth,
         'MaxHeight': maxHeight,

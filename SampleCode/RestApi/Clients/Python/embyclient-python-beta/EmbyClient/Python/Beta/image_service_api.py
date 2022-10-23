@@ -1762,16 +1762,18 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
@@ -1793,21 +1795,23 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
             return data
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
@@ -1828,7 +1832,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1843,6 +1847,14 @@ class ImageServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'percent_played' is set
+        if ('percent_played' not in params or
+                params['percent_played'] is None):
+            raise ValueError("Missing the required parameter `percent_played` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
+        # verify the required parameter 'un_played_count' is set
+        if ('un_played_count' not in params or
+                params['un_played_count'] is None):
+            raise ValueError("Missing the required parameter `un_played_count` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -1875,6 +1887,10 @@ class ImageServiceApi(object):
         collection_formats = {}
 
         path_params = {}
+        if 'percent_played' in params:
+            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
+        if 'un_played_count' in params:
+            path_params['UnPlayedCount'] = params['un_played_count']  # noqa: E501
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
         if 'max_width' in params:
@@ -4381,16 +4397,18 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
@@ -4412,21 +4430,23 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
             return data
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
@@ -4447,7 +4467,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4462,6 +4482,14 @@ class ImageServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'percent_played' is set
+        if ('percent_played' not in params or
+                params['percent_played'] is None):
+            raise ValueError("Missing the required parameter `percent_played` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
+        # verify the required parameter 'un_played_count' is set
+        if ('un_played_count' not in params or
+                params['un_played_count'] is None):
+            raise ValueError("Missing the required parameter `un_played_count` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4494,6 +4522,10 @@ class ImageServiceApi(object):
         collection_formats = {}
 
         path_params = {}
+        if 'percent_played' in params:
+            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
+        if 'un_played_count' in params:
+            path_params['UnPlayedCount'] = params['un_played_count']  # noqa: E501
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
         if 'max_width' in params:

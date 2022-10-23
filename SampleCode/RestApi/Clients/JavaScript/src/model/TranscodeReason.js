@@ -160,6 +160,12 @@ export default class TranscodeReason {
          */
         videoRangeNotSupported = "VideoRangeNotSupported";
 
+        /**
+         * value: "SubtitleContentOptionsEnabled"
+         * @const
+         */
+        subtitleContentOptionsEnabled = "SubtitleContentOptionsEnabled";
+
 
     /**
     * Returns a <code>TranscodeReason</code> enum value from a Javascript object name.

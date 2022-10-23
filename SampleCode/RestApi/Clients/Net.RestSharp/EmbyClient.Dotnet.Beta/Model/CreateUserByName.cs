@@ -27,9 +27,13 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// Initializes a new instance of the <see cref="CreateUserByName" /> class.
         /// </summary>
         /// <param name="name">name.</param>
-        public CreateUserByName(string name = default(string))
+        /// <param name="copyFromUserId">copyFromUserId.</param>
+        /// <param name="userCopyOptions">userCopyOptions.</param>
+        public CreateUserByName(string name = default(string), string copyFromUserId = default(string), List<LibraryUserCopyOptions> userCopyOptions = default(List<LibraryUserCopyOptions>))
         {
             this.Name = name;
+            this.CopyFromUserId = copyFromUserId;
+            this.UserCopyOptions = userCopyOptions;
         }
         
         /// <summary>
@@ -37,6 +41,18 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CopyFromUserId
+        /// </summary>
+        [DataMember(Name="CopyFromUserId", EmitDefaultValue=false)]
+        public string CopyFromUserId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UserCopyOptions
+        /// </summary>
+        [DataMember(Name="UserCopyOptions", EmitDefaultValue=false)]
+        public List<LibraryUserCopyOptions> UserCopyOptions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -47,6 +63,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             var sb = new StringBuilder();
             sb.Append("class CreateUserByName {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  CopyFromUserId: ").Append(CopyFromUserId).Append("\n");
+            sb.Append("  UserCopyOptions: ").Append(UserCopyOptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,6 +103,17 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.CopyFromUserId == input.CopyFromUserId ||
+                    (this.CopyFromUserId != null &&
+                    this.CopyFromUserId.Equals(input.CopyFromUserId))
+                ) && 
+                (
+                    this.UserCopyOptions == input.UserCopyOptions ||
+                    this.UserCopyOptions != null &&
+                    input.UserCopyOptions != null &&
+                    this.UserCopyOptions.SequenceEqual(input.UserCopyOptions)
                 );
         }
 
@@ -99,6 +128,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.CopyFromUserId != null)
+                    hashCode = hashCode * 59 + this.CopyFromUserId.GetHashCode();
+                if (this.UserCopyOptions != null)
+                    hashCode = hashCode * 59 + this.UserCopyOptions.GetHashCode();
                 return hashCode;
             }
         }

@@ -10,8 +10,8 @@
  */
 
 import ApiClient from "../ApiClient";
+import ApiBaseItemsRequest from '../model/ApiBaseItemsRequest';
 import BaseItemDto from '../model/BaseItemDto';
-import LiveTVApiGetPrograms from '../model/LiveTVApiGetPrograms';
 import LiveTVApiListingProviderTypeInfo from '../model/LiveTVApiListingProviderTypeInfo';
 import LiveTVApiSetChannelDisabled from '../model/LiveTVApiSetChannelDisabled';
 import LiveTVApiSetChannelMapping from '../model/LiveTVApiSetChannelMapping';
@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.10
+* @version 4.8.0.13
 */
 export default class LiveTvServiceApi {
 
@@ -1296,7 +1296,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvPrograms operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvProgramsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultBaseItemDto} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1305,7 +1305,6 @@ export default class LiveTvServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvProgramsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     getLivetvPrograms() {
       opts = opts || {};
@@ -1315,27 +1314,97 @@ export default class LiveTvServiceApi {
       };
       let queryParams = {
         'ChannelIds': opts['channelIds'],
-        'UserId': opts['userId'],
-        'HasAired': opts['hasAired'],
         'MinStartDate': opts['minStartDate'],
         'MaxStartDate': opts['maxStartDate'],
         'MinEndDate': opts['minEndDate'],
         'MaxEndDate': opts['maxEndDate'],
+        'ArtistType': opts['artistType'],
+        'MaxOfficialRating': opts['maxOfficialRating'],
+        'HasThemeSong': opts['hasThemeSong'],
+        'HasThemeVideo': opts['hasThemeVideo'],
+        'HasSubtitles': opts['hasSubtitles'],
+        'HasSpecialFeature': opts['hasSpecialFeature'],
+        'HasTrailer': opts['hasTrailer'],
+        'AdjacentTo': opts['adjacentTo'],
+        'MinIndexNumber': opts['minIndexNumber'],
+        'MinPlayers': opts['minPlayers'],
+        'MaxPlayers': opts['maxPlayers'],
+        'ParentIndexNumber': opts['parentIndexNumber'],
+        'HasParentalRating': opts['hasParentalRating'],
+        'IsHD': opts['isHD'],
+        'LocationTypes': opts['locationTypes'],
+        'ExcludeLocationTypes': opts['excludeLocationTypes'],
+        'IsMissing': opts['isMissing'],
+        'IsUnaired': opts['isUnaired'],
+        'MinCommunityRating': opts['minCommunityRating'],
+        'MinCriticRating': opts['minCriticRating'],
+        'AiredDuringSeason': opts['airedDuringSeason'],
+        'MinPremiereDate': opts['minPremiereDate'],
+        'MinDateLastSaved': opts['minDateLastSaved'],
+        'MinDateLastSavedForUser': opts['minDateLastSavedForUser'],
+        'MaxPremiereDate': opts['maxPremiereDate'],
+        'HasOverview': opts['hasOverview'],
+        'HasImdbId': opts['hasImdbId'],
+        'HasTmdbId': opts['hasTmdbId'],
+        'HasTvdbId': opts['hasTvdbId'],
+        'ExcludeItemIds': opts['excludeItemIds'],
+        'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'Recursive': opts['recursive'],
+        'SearchTerm': opts['searchTerm'],
+        'SortOrder': opts['sortOrder'],
+        'ParentId': opts['parentId'],
+        'Fields': opts['fields'],
+        'ExcludeItemTypes': opts['excludeItemTypes'],
+        'IncludeItemTypes': opts['includeItemTypes'],
+        'AnyProviderIdEquals': opts['anyProviderIdEquals'],
+        'Filters': opts['filters'],
+        'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
-        'StartIndex': opts['startIndex'],
-        'Limit': opts['limit'],
+        'MediaTypes': opts['mediaTypes'],
+        'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
-        'SortOrder': opts['sortOrder'],
-        'GenreIds': opts['genreIds'],
+        'IsPlayed': opts['isPlayed'],
+        'Genres': opts['genres'],
+        'OfficialRatings': opts['officialRatings'],
+        'Tags': opts['tags'],
+        'Years': opts['years'],
         'EnableImages': opts['enableImages'],
+        'EnableUserData': opts['enableUserData'],
         'ImageTypeLimit': opts['imageTypeLimit'],
         'EnableImageTypes': opts['enableImageTypes'],
-        'EnableUserData': opts['enableUserData'],
-        'Fields': opts['fields']
+        'Person': opts['person'],
+        'PersonIds': opts['personIds'],
+        'PersonTypes': opts['personTypes'],
+        'Studios': opts['studios'],
+        'StudioIds': opts['studioIds'],
+        'Artists': opts['artists'],
+        'ArtistIds': opts['artistIds'],
+        'Albums': opts['albums'],
+        'Ids': opts['ids'],
+        'VideoTypes': opts['videoTypes'],
+        'Containers': opts['containers'],
+        'AudioCodecs': opts['audioCodecs'],
+        'VideoCodecs': opts['videoCodecs'],
+        'SubtitleCodecs': opts['subtitleCodecs'],
+        'Path': opts['path'],
+        'UserId': opts['userId'],
+        'MinOfficialRating': opts['minOfficialRating'],
+        'IsLocked': opts['isLocked'],
+        'IsPlaceHolder': opts['isPlaceHolder'],
+        'HasOfficialRating': opts['hasOfficialRating'],
+        'GroupItemsIntoCollections': opts['groupItemsIntoCollections'],
+        'Is3D': opts['is3D'],
+        'SeriesStatus': opts['seriesStatus'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'ArtistStartsWithOrGreater': opts['artistStartsWithOrGreater'],
+        'AlbumArtistStartsWithOrGreater': opts['albumArtistStartsWithOrGreater'],
+        'NameStartsWith': opts['nameStartsWith'],
+        'NameLessThan': opts['nameLessThan']
       };
       let headerParams = {
       };
@@ -1344,8 +1413,8 @@ export default class LiveTvServiceApi {
 
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultBaseItemDto;
+      let accepts = [];
+      let returnType = null;
 
       return this.apiClient.callApi(
         '/LiveTv/Programs', 'GET',
@@ -2338,7 +2407,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the postLivetvPrograms operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvProgramsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultBaseItemDto} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2347,7 +2416,6 @@ export default class LiveTvServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvProgramsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     postLivetvPrograms() {
       opts = opts || {};
@@ -2357,27 +2425,97 @@ export default class LiveTvServiceApi {
       };
       let queryParams = {
         'ChannelIds': opts['channelIds'],
-        'UserId': opts['userId'],
-        'HasAired': opts['hasAired'],
         'MinStartDate': opts['minStartDate'],
         'MaxStartDate': opts['maxStartDate'],
         'MinEndDate': opts['minEndDate'],
         'MaxEndDate': opts['maxEndDate'],
+        'ArtistType': opts['artistType'],
+        'MaxOfficialRating': opts['maxOfficialRating'],
+        'HasThemeSong': opts['hasThemeSong'],
+        'HasThemeVideo': opts['hasThemeVideo'],
+        'HasSubtitles': opts['hasSubtitles'],
+        'HasSpecialFeature': opts['hasSpecialFeature'],
+        'HasTrailer': opts['hasTrailer'],
+        'AdjacentTo': opts['adjacentTo'],
+        'MinIndexNumber': opts['minIndexNumber'],
+        'MinPlayers': opts['minPlayers'],
+        'MaxPlayers': opts['maxPlayers'],
+        'ParentIndexNumber': opts['parentIndexNumber'],
+        'HasParentalRating': opts['hasParentalRating'],
+        'IsHD': opts['isHD'],
+        'LocationTypes': opts['locationTypes'],
+        'ExcludeLocationTypes': opts['excludeLocationTypes'],
+        'IsMissing': opts['isMissing'],
+        'IsUnaired': opts['isUnaired'],
+        'MinCommunityRating': opts['minCommunityRating'],
+        'MinCriticRating': opts['minCriticRating'],
+        'AiredDuringSeason': opts['airedDuringSeason'],
+        'MinPremiereDate': opts['minPremiereDate'],
+        'MinDateLastSaved': opts['minDateLastSaved'],
+        'MinDateLastSavedForUser': opts['minDateLastSavedForUser'],
+        'MaxPremiereDate': opts['maxPremiereDate'],
+        'HasOverview': opts['hasOverview'],
+        'HasImdbId': opts['hasImdbId'],
+        'HasTmdbId': opts['hasTmdbId'],
+        'HasTvdbId': opts['hasTvdbId'],
+        'ExcludeItemIds': opts['excludeItemIds'],
+        'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'Recursive': opts['recursive'],
+        'SearchTerm': opts['searchTerm'],
+        'SortOrder': opts['sortOrder'],
+        'ParentId': opts['parentId'],
+        'Fields': opts['fields'],
+        'ExcludeItemTypes': opts['excludeItemTypes'],
+        'IncludeItemTypes': opts['includeItemTypes'],
+        'AnyProviderIdEquals': opts['anyProviderIdEquals'],
+        'Filters': opts['filters'],
+        'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
-        'StartIndex': opts['startIndex'],
-        'Limit': opts['limit'],
+        'MediaTypes': opts['mediaTypes'],
+        'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
-        'SortOrder': opts['sortOrder'],
-        'GenreIds': opts['genreIds'],
+        'IsPlayed': opts['isPlayed'],
+        'Genres': opts['genres'],
+        'OfficialRatings': opts['officialRatings'],
+        'Tags': opts['tags'],
+        'Years': opts['years'],
         'EnableImages': opts['enableImages'],
+        'EnableUserData': opts['enableUserData'],
         'ImageTypeLimit': opts['imageTypeLimit'],
         'EnableImageTypes': opts['enableImageTypes'],
-        'EnableUserData': opts['enableUserData'],
-        'Fields': opts['fields']
+        'Person': opts['person'],
+        'PersonIds': opts['personIds'],
+        'PersonTypes': opts['personTypes'],
+        'Studios': opts['studios'],
+        'StudioIds': opts['studioIds'],
+        'Artists': opts['artists'],
+        'ArtistIds': opts['artistIds'],
+        'Albums': opts['albums'],
+        'Ids': opts['ids'],
+        'VideoTypes': opts['videoTypes'],
+        'Containers': opts['containers'],
+        'AudioCodecs': opts['audioCodecs'],
+        'VideoCodecs': opts['videoCodecs'],
+        'SubtitleCodecs': opts['subtitleCodecs'],
+        'Path': opts['path'],
+        'UserId': opts['userId'],
+        'MinOfficialRating': opts['minOfficialRating'],
+        'IsLocked': opts['isLocked'],
+        'IsPlaceHolder': opts['isPlaceHolder'],
+        'HasOfficialRating': opts['hasOfficialRating'],
+        'GroupItemsIntoCollections': opts['groupItemsIntoCollections'],
+        'Is3D': opts['is3D'],
+        'SeriesStatus': opts['seriesStatus'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'ArtistStartsWithOrGreater': opts['artistStartsWithOrGreater'],
+        'AlbumArtistStartsWithOrGreater': opts['albumArtistStartsWithOrGreater'],
+        'NameStartsWith': opts['nameStartsWith'],
+        'NameLessThan': opts['nameLessThan']
       };
       let headerParams = {
       };
@@ -2386,8 +2524,8 @@ export default class LiveTvServiceApi {
 
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultBaseItemDto;
+      let accepts = [];
+      let returnType = null;
 
       return this.apiClient.callApi(
         '/LiveTv/Programs', 'POST',

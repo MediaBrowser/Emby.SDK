@@ -15,7 +15,7 @@ import DisplayPreferences from '../model/DisplayPreferences';
 /**
 * DisplayPreferencesService service.
 * @module EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi
-* @version 4.8.0.10
+* @version 4.8.0.13
 */
 export default class DisplayPreferencesServiceApi {
 

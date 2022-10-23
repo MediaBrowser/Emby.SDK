@@ -34,7 +34,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
-// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.10
+// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.13
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -82,8 +82,6 @@ type APIClient struct {
 
 	GameGenresServiceApi *GameGenresServiceApiService
 
-	GamesServiceApi *GamesServiceApiService
-
 	GenericUIApiServiceApi *GenericUIApiServiceApiService
 
 	GenresServiceApi *GenresServiceApiService
@@ -115,6 +113,8 @@ type APIClient struct {
 	MoviesServiceApi *MoviesServiceApiService
 
 	MusicGenresServiceApi *MusicGenresServiceApiService
+
+	NotificationsApiApi *NotificationsApiApiService
 
 	NotificationsServiceApi *NotificationsServiceApiService
 
@@ -209,7 +209,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.EnvironmentServiceApi = (*EnvironmentServiceApiService)(&c.common)
 	c.FfmpegOptionsServiceApi = (*FfmpegOptionsServiceApiService)(&c.common)
 	c.GameGenresServiceApi = (*GameGenresServiceApiService)(&c.common)
-	c.GamesServiceApi = (*GamesServiceApiService)(&c.common)
 	c.GenericUIApiServiceApi = (*GenericUIApiServiceApiService)(&c.common)
 	c.GenresServiceApi = (*GenresServiceApiService)(&c.common)
 	c.HlsSegmentServiceApi = (*HlsSegmentServiceApiService)(&c.common)
@@ -226,6 +225,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.MediaInfoServiceApi = (*MediaInfoServiceApiService)(&c.common)
 	c.MoviesServiceApi = (*MoviesServiceApiService)(&c.common)
 	c.MusicGenresServiceApi = (*MusicGenresServiceApiService)(&c.common)
+	c.NotificationsApiApi = (*NotificationsApiApiService)(&c.common)
 	c.NotificationsServiceApi = (*NotificationsServiceApiService)(&c.common)
 	c.OfficialRatingServiceApi = (*OfficialRatingServiceApiService)(&c.common)
 	c.OpenApiServiceApi = (*OpenApiServiceApiService)(&c.common)

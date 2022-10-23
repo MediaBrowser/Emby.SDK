@@ -12,6 +12,7 @@
 import ApiClient from './ApiClient';
 import ActivityLogEntry from './model/ActivityLogEntry';
 import AllThemeMediaResult from './model/AllThemeMediaResult';
+import ApiBaseItemsRequest from './model/ApiBaseItemsRequest';
 import AttributesSimpleCondition from './model/AttributesSimpleCondition';
 import AttributesValueCondition from './model/AttributesValueCondition';
 import AuthenticateUser from './model/AuthenticateUser';
@@ -88,6 +89,8 @@ import EmbyMediaModelTypesResolutionWithRate from './model/EmbyMediaModelTypesRe
 import EmbyNotificationsApiNotification from './model/EmbyNotificationsApiNotification';
 import EmbyNotificationsApiNotificationResult from './model/EmbyNotificationsApiNotificationResult';
 import EmbyNotificationsApiNotificationsSummary from './model/EmbyNotificationsApiNotificationsSummary';
+import EmbyNotificationsNotificationCategoryInfo from './model/EmbyNotificationsNotificationCategoryInfo';
+import EmbyNotificationsNotificationTypeInfo from './model/EmbyNotificationsNotificationTypeInfo';
 import EmbyWebApiConfigurationPageInfo from './model/EmbyWebApiConfigurationPageInfo';
 import EmbyWebGenericEditActionsPostbackAction from './model/EmbyWebGenericEditActionsPostbackAction';
 import EmbyWebGenericEditCommonEditorTypes from './model/EmbyWebGenericEditCommonEditorTypes';
@@ -107,7 +110,6 @@ import ExternalIdInfo from './model/ExternalIdInfo';
 import ExternalUrl from './model/ExternalUrl';
 import ForgotPassword from './model/ForgotPassword';
 import ForgotPasswordPin from './model/ForgotPasswordPin';
-import GameSystemSummary from './model/GameSystemSummary';
 import GeneralCommand from './model/GeneralCommand';
 import GenericEditIEditObjectContainer from './model/GenericEditIEditObjectContainer';
 import GlobalizationCountryInfo from './model/GlobalizationCountryInfo';
@@ -122,6 +124,7 @@ import ItemCounts from './model/ItemCounts';
 import LibraryAddMediaPath from './model/LibraryAddMediaPath';
 import LibraryAddVirtualFolder from './model/LibraryAddVirtualFolder';
 import LibraryDeleteInfo from './model/LibraryDeleteInfo';
+import LibraryItemLinkType from './model/LibraryItemLinkType';
 import LibraryLibraryOptionInfo from './model/LibraryLibraryOptionInfo';
 import LibraryLibraryOptionsResult from './model/LibraryLibraryOptionsResult';
 import LibraryLibraryTypeOptions from './model/LibraryLibraryTypeOptions';
@@ -135,8 +138,8 @@ import LibraryRenameVirtualFolder from './model/LibraryRenameVirtualFolder';
 import LibrarySubFolder from './model/LibrarySubFolder';
 import LibraryUpdateLibraryOptions from './model/LibraryUpdateLibraryOptions';
 import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
+import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
 import LiveTVApiEpgRow from './model/LiveTVApiEpgRow';
-import LiveTVApiGetPrograms from './model/LiveTVApiGetPrograms';
 import LiveTVApiListingProviderTypeInfo from './model/LiveTVApiListingProviderTypeInfo';
 import LiveTVApiSetChannelDisabled from './model/LiveTVApiSetChannelDisabled';
 import LiveTVApiSetChannelMapping from './model/LiveTVApiSetChannelMapping';
@@ -332,7 +335,6 @@ import EncodingInfoServiceApi from './EmbyClient.JavaScript.Beta/EncodingInfoSer
 import EnvironmentServiceApi from './EmbyClient.JavaScript.Beta/EnvironmentServiceApi';
 import FfmpegOptionsServiceApi from './EmbyClient.JavaScript.Beta/FfmpegOptionsServiceApi';
 import GameGenresServiceApi from './EmbyClient.JavaScript.Beta/GameGenresServiceApi';
-import GamesServiceApi from './EmbyClient.JavaScript.Beta/GamesServiceApi';
 import GenericUIApiServiceApi from './EmbyClient.JavaScript.Beta/GenericUIApiServiceApi';
 import GenresServiceApi from './EmbyClient.JavaScript.Beta/GenresServiceApi';
 import HlsSegmentServiceApi from './EmbyClient.JavaScript.Beta/HlsSegmentServiceApi';
@@ -349,6 +351,7 @@ import LocalizationServiceApi from './EmbyClient.JavaScript.Beta/LocalizationSer
 import MediaInfoServiceApi from './EmbyClient.JavaScript.Beta/MediaInfoServiceApi';
 import MoviesServiceApi from './EmbyClient.JavaScript.Beta/MoviesServiceApi';
 import MusicGenresServiceApi from './EmbyClient.JavaScript.Beta/MusicGenresServiceApi';
+import NotificationsApiApi from './EmbyClient.JavaScript.Beta/NotificationsApiApi';
 import NotificationsServiceApi from './EmbyClient.JavaScript.Beta/NotificationsServiceApi';
 import OfficialRatingServiceApi from './EmbyClient.JavaScript.Beta/OfficialRatingServiceApi';
 import OpenApiServiceApi from './EmbyClient.JavaScript.Beta/OpenApiServiceApi';
@@ -407,7 +410,7 @@ import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.10
+* @version 4.8.0.13
 */
 export {
     /**
@@ -427,6 +430,12 @@ export {
      * @property {module:model/AllThemeMediaResult}
      */
     AllThemeMediaResult,
+
+    /**
+     * The ApiBaseItemsRequest model constructor.
+     * @property {module:model/ApiBaseItemsRequest}
+     */
+    ApiBaseItemsRequest,
 
     /**
      * The AttributesSimpleCondition model constructor.
@@ -885,6 +894,18 @@ export {
     EmbyNotificationsApiNotificationsSummary,
 
     /**
+     * The EmbyNotificationsNotificationCategoryInfo model constructor.
+     * @property {module:model/EmbyNotificationsNotificationCategoryInfo}
+     */
+    EmbyNotificationsNotificationCategoryInfo,
+
+    /**
+     * The EmbyNotificationsNotificationTypeInfo model constructor.
+     * @property {module:model/EmbyNotificationsNotificationTypeInfo}
+     */
+    EmbyNotificationsNotificationTypeInfo,
+
+    /**
      * The EmbyWebApiConfigurationPageInfo model constructor.
      * @property {module:model/EmbyWebApiConfigurationPageInfo}
      */
@@ -999,12 +1020,6 @@ export {
     ForgotPasswordPin,
 
     /**
-     * The GameSystemSummary model constructor.
-     * @property {module:model/GameSystemSummary}
-     */
-    GameSystemSummary,
-
-    /**
      * The GeneralCommand model constructor.
      * @property {module:model/GeneralCommand}
      */
@@ -1089,6 +1104,12 @@ export {
     LibraryDeleteInfo,
 
     /**
+     * The LibraryItemLinkType model constructor.
+     * @property {module:model/LibraryItemLinkType}
+     */
+    LibraryItemLinkType,
+
+    /**
      * The LibraryLibraryOptionInfo model constructor.
      * @property {module:model/LibraryLibraryOptionInfo}
      */
@@ -1167,16 +1188,16 @@ export {
     LibraryUpdateMediaPath,
 
     /**
+     * The LibraryUserCopyOptions model constructor.
+     * @property {module:model/LibraryUserCopyOptions}
+     */
+    LibraryUserCopyOptions,
+
+    /**
      * The LiveTVApiEpgRow model constructor.
      * @property {module:model/LiveTVApiEpgRow}
      */
     LiveTVApiEpgRow,
-
-    /**
-     * The LiveTVApiGetPrograms model constructor.
-     * @property {module:model/LiveTVApiGetPrograms}
-     */
-    LiveTVApiGetPrograms,
 
     /**
      * The LiveTVApiListingProviderTypeInfo model constructor.
@@ -2349,12 +2370,6 @@ export {
     GameGenresServiceApi,
 
     /**
-    * The GamesServiceApi service constructor.
-    * @property {module:EmbyClient.JavaScript.Beta/GamesServiceApi}
-    */
-    GamesServiceApi,
-
-    /**
     * The GenericUIApiServiceApi service constructor.
     * @property {module:EmbyClient.JavaScript.Beta/GenericUIApiServiceApi}
     */
@@ -2449,6 +2464,12 @@ export {
     * @property {module:EmbyClient.JavaScript.Beta/MusicGenresServiceApi}
     */
     MusicGenresServiceApi,
+
+    /**
+    * The NotificationsApiApi service constructor.
+    * @property {module:EmbyClient.JavaScript.Beta/NotificationsApiApi}
+    */
+    NotificationsApiApi,
 
     /**
     * The NotificationsServiceApi service constructor.

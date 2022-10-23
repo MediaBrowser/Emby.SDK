@@ -16,7 +16,7 @@ import ConfigurationSubtitlePlaybackMode from './ConfigurationSubtitlePlaybackMo
 /**
 * The ConfigurationUserConfiguration model module.
 * @module model/ConfigurationUserConfiguration
-* @version 4.8.0.10
+* @version 4.8.0.13
 */
 export default class ConfigurationUserConfiguration {
     /**

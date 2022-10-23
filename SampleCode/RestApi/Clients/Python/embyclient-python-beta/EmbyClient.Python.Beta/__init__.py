@@ -23,7 +23,6 @@ from embyclient-python-beta.EmbyClient.Python.Beta.encoding_info_service_api imp
 from embyclient-python-beta.EmbyClient.Python.Beta.environment_service_api import EnvironmentServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.ffmpeg_options_service_api import FfmpegOptionsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.game_genres_service_api import GameGenresServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.games_service_api import GamesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.generic_ui_api_service_api import GenericUIApiServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.genres_service_api import GenresServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.hls_segment_service_api import HlsSegmentServiceApi
@@ -40,6 +39,7 @@ from embyclient-python-beta.EmbyClient.Python.Beta.localization_service_api impo
 from embyclient-python-beta.EmbyClient.Python.Beta.media_info_service_api import MediaInfoServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.movies_service_api import MoviesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.music_genres_service_api import MusicGenresServiceApi
+from embyclient-python-beta.EmbyClient.Python.Beta.notifications_api_api import NotificationsApiApi
 from embyclient-python-beta.EmbyClient.Python.Beta.notifications_service_api import NotificationsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.official_rating_service_api import OfficialRatingServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.open_api_service_api import OpenApiServiceApi

@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
+    using EmbyPluginUiDemo.Storage;
     using EmbyPluginUiDemo.UI.Basics;
     using EmbyPluginUiDemo.UI.CalcDialog;
     using EmbyPluginUiDemo.UI.Conditions;
@@ -22,15 +23,18 @@
     internal class MainPageController : ControllerBase, IHasTabbedUIPages
     {
         private readonly PluginInfo pluginInfo;
+        private readonly BasicsOptionsStore basicsOptionsStore;
         private readonly List<IPluginUIPageController> tabPages = new List<IPluginUIPageController>();
 
         /// <summary>Initializes a new instance of the <see cref="ControllerBase" /> class.</summary>
         /// <param name="pluginInfo">The plugin information.</param>
         /// <param name="applicationHost"></param>
-        public MainPageController(PluginInfo pluginInfo, IServerApplicationHost applicationHost)
+        /// <param name="basicsOptionsStore"></param>
+        public MainPageController(PluginInfo pluginInfo, IServerApplicationHost applicationHost, BasicsOptionsStore basicsOptionsStore)
             : base(pluginInfo.Id)
         {
             this.pluginInfo = pluginInfo;
+            this.basicsOptionsStore = basicsOptionsStore;
             this.PageInfo = new PluginPageInfo
                             {
                                 Name = "PluginUiDemo",
@@ -54,7 +58,7 @@
 
         public override Task<IPluginUIView> CreateDefaultPageView()
         {
-            IPluginUIView view = new BasicsPageView(this.pluginInfo);
+            IPluginUIView view = new BasicsPageView(this.pluginInfo, this.basicsOptionsStore);
             return Task.FromResult(view);
         }
 

@@ -142,5 +142,10 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// Enum VideoRangeNotSupported for value: VideoRangeNotSupported
         /// </summary>
         [EnumMember(Value = "VideoRangeNotSupported")]
-        VideoRangeNotSupported = 24    }
+        VideoRangeNotSupported = 24,
+        /// <summary>
+        /// Enum SubtitleContentOptionsEnabled for value: SubtitleContentOptionsEnabled
+        /// </summary>
+        [EnumMember(Value = "SubtitleContentOptionsEnabled")]
+        SubtitleContentOptionsEnabled = 25    }
 }

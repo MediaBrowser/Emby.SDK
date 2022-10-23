@@ -954,6 +954,8 @@ open class ImageServiceAPI {
     }
     /**
 
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
@@ -971,8 +973,8 @@ open class ImageServiceAPI {
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -985,6 +987,8 @@ open class ImageServiceAPI {
     /**
      - GET /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
 
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
@@ -1003,8 +1007,14 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        let percentPlayedPreEscape = "\(percentPlayed)"
+        let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)
+        let unPlayedCountPreEscape = "\(unPlayedCount)"
+        let unPlayedCountPostEscape = unPlayedCountPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UnPlayedCount}", with: unPlayedCountPostEscape, options: .literal, range: nil)
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
@@ -2395,6 +2405,8 @@ open class ImageServiceAPI {
     }
     /**
 
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
@@ -2412,8 +2424,8 @@ open class ImageServiceAPI {
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2426,6 +2438,8 @@ open class ImageServiceAPI {
     /**
      - HEAD /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
 
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
@@ -2444,8 +2458,14 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        let percentPlayedPreEscape = "\(percentPlayed)"
+        let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)
+        let unPlayedCountPreEscape = "\(unPlayedCount)"
+        let unPlayedCountPostEscape = unPlayedCountPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UnPlayedCount}", with: unPlayedCountPostEscape, options: .literal, range: nil)
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)

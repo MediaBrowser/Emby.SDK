@@ -350,6 +350,8 @@ public class ImageServiceApiTest {
      */
     @Test
     public void getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountTest() throws Exception {
+        Integer percentPlayed = null;
+        Integer unPlayedCount = null;
         String id = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
@@ -365,7 +367,7 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+        api.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
 
         // TODO: test validations
     }
@@ -843,6 +845,8 @@ public class ImageServiceApiTest {
      */
     @Test
     public void headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountTest() throws Exception {
+        Integer percentPlayed = null;
+        Integer unPlayedCount = null;
         String id = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
@@ -858,7 +862,7 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+        api.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
 
         // TODO: test validations
     }

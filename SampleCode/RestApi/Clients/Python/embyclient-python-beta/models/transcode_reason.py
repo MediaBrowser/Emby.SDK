@@ -42,6 +42,7 @@ class TranscodeReason(object):
     SUBTITLECODECNOTSUPPORTED = "SubtitleCodecNotSupported"
     DIRECTPLAYERROR = "DirectPlayError"
     VIDEORANGENOTSUPPORTED = "VideoRangeNotSupported"
+    SUBTITLECONTENTOPTIONSENABLED = "SubtitleContentOptionsEnabled"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

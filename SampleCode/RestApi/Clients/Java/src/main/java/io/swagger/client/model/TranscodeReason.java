@@ -42,7 +42,8 @@ public enum TranscodeReason {
   AUDIOBITDEPTHNOTSUPPORTED("AudioBitDepthNotSupported"),
   SUBTITLECODECNOTSUPPORTED("SubtitleCodecNotSupported"),
   DIRECTPLAYERROR("DirectPlayError"),
-  VIDEORANGENOTSUPPORTED("VideoRangeNotSupported");
+  VIDEORANGENOTSUPPORTED("VideoRangeNotSupported"),
+  SUBTITLECONTENTOPTIONSENABLED("SubtitleContentOptionsEnabled");
 
   private String value;
 

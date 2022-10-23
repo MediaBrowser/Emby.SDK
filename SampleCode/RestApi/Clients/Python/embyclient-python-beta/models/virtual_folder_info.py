@@ -27,6 +27,7 @@ class VirtualFolderInfo(object):
         'collection_type': 'str',
         'library_options': 'ConfigurationLibraryOptions',
         'item_id': 'str',
+        'guid': 'str',
         'primary_image_item_id': 'str',
         'refresh_progress': 'float',
         'refresh_status': 'str'
@@ -38,18 +39,20 @@ class VirtualFolderInfo(object):
         'collection_type': 'CollectionType',
         'library_options': 'LibraryOptions',
         'item_id': 'ItemId',
+        'guid': 'Guid',
         'primary_image_item_id': 'PrimaryImageItemId',
         'refresh_progress': 'RefreshProgress',
         'refresh_status': 'RefreshStatus'
     }
 
-    def __init__(self, name=None, locations=None, collection_type=None, library_options=None, item_id=None, primary_image_item_id=None, refresh_progress=None, refresh_status=None):  # noqa: E501
+    def __init__(self, name=None, locations=None, collection_type=None, library_options=None, item_id=None, guid=None, primary_image_item_id=None, refresh_progress=None, refresh_status=None):  # noqa: E501
         """VirtualFolderInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._locations = None
         self._collection_type = None
         self._library_options = None
         self._item_id = None
+        self._guid = None
         self._primary_image_item_id = None
         self._refresh_progress = None
         self._refresh_status = None
@@ -64,6 +67,8 @@ class VirtualFolderInfo(object):
             self.library_options = library_options
         if item_id is not None:
             self.item_id = item_id
+        if guid is not None:
+            self.guid = guid
         if primary_image_item_id is not None:
             self.primary_image_item_id = primary_image_item_id
         if refresh_progress is not None:
@@ -175,6 +180,27 @@ class VirtualFolderInfo(object):
         """
 
         self._item_id = item_id
+
+    @property
+    def guid(self):
+        """Gets the guid of this VirtualFolderInfo.  # noqa: E501
+
+
+        :return: The guid of this VirtualFolderInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._guid
+
+    @guid.setter
+    def guid(self, guid):
+        """Sets the guid of this VirtualFolderInfo.
+
+
+        :param guid: The guid of this VirtualFolderInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._guid = guid
 
     @property
     def primary_image_item_id(self):

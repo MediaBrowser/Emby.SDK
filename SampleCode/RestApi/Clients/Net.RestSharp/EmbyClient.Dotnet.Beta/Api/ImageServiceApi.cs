@@ -538,6 +538,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -554,7 +556,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -563,6 +565,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -579,7 +583,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -1371,6 +1375,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -1387,7 +1393,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -1396,6 +1402,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -1412,7 +1420,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -2589,6 +2597,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -2605,7 +2615,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -2614,6 +2624,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -2630,7 +2642,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -3422,6 +3434,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -3438,7 +3452,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
 
         /// <summary>
         /// 
@@ -3447,6 +3461,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -3463,7 +3479,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient);
         /// <summary>
         /// 
         /// </summary>
@@ -6828,6 +6844,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -6844,15 +6862,17 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+             GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -6869,8 +6889,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
+            // verify the required parameter 'percentPlayed' is set
+            if (percentPlayed == null)
+                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'unPlayedCount' is set
+            if (unPlayedCount == null)
+                throw new ApiException(400, "Missing required parameter 'unPlayedCount' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -6913,6 +6939,8 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
+            if (unPlayedCount != null) localVarPathParams.Add("UnPlayedCount", this.Configuration.ApiClient.ParameterToString(unPlayedCount)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (maxWidth != null) localVarPathParams.Add("MaxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // path parameter
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
@@ -6951,6 +6979,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -6967,9 +6997,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+             await GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -6977,6 +7007,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -6993,8 +7025,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
+            // verify the required parameter 'percentPlayed' is set
+            if (percentPlayed == null)
+                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'unPlayedCount' is set
+            if (unPlayedCount == null)
+                throw new ApiException(400, "Missing required parameter 'unPlayedCount' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -7037,6 +7075,8 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
+            if (unPlayedCount != null) localVarPathParams.Add("UnPlayedCount", this.Configuration.ApiClient.ParameterToString(unPlayedCount)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (maxWidth != null) localVarPathParams.Add("MaxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // path parameter
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
@@ -10595,6 +10635,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -10611,15 +10653,17 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns></returns>
-        public void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+             HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
         }
 
         /// <summary>
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -10636,8 +10680,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
+            // verify the required parameter 'percentPlayed' is set
+            if (percentPlayed == null)
+                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'unPlayedCount' is set
+            if (unPlayedCount == null)
+                throw new ApiException(400, "Missing required parameter 'unPlayedCount' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -10680,6 +10730,8 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
+            if (unPlayedCount != null) localVarPathParams.Add("UnPlayedCount", this.Configuration.ApiClient.ParameterToString(unPlayedCount)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (maxWidth != null) localVarPathParams.Add("MaxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // path parameter
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
@@ -10718,6 +10770,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -10734,9 +10788,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
-             await HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+             await HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
 
         }
 
@@ -10744,6 +10798,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         ///  No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
         /// <param name="id">Item Id</param>
         /// <param name="maxWidth">The maximum image width to return.</param>
         /// <param name="maxHeight">The maximum image height to return.</param>
@@ -10760,8 +10816,14 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, string tag, string format, ImageType type, int? index, int? width, int? height, int? quality, bool? cropWhitespace, bool? enableImageEnhancers, string backgroundColor, string foregroundLayer, bool? autoOrient)
         {
+            // verify the required parameter 'percentPlayed' is set
+            if (percentPlayed == null)
+                throw new ApiException(400, "Missing required parameter 'percentPlayed' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'unPlayedCount' is set
+            if (unPlayedCount == null)
+                throw new ApiException(400, "Missing required parameter 'unPlayedCount' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
@@ -10804,6 +10866,8 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (percentPlayed != null) localVarPathParams.Add("PercentPlayed", this.Configuration.ApiClient.ParameterToString(percentPlayed)); // path parameter
+            if (unPlayedCount != null) localVarPathParams.Add("UnPlayedCount", this.Configuration.ApiClient.ParameterToString(unPlayedCount)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (maxWidth != null) localVarPathParams.Add("MaxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // path parameter
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter

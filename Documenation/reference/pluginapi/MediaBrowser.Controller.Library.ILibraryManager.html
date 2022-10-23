@@ -585,13 +585,13 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_CreateItems_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItems*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_CreateItems_System_Collections_Generic_List_MediaBrowser_Controller_Entities_BaseItem__MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItems(System.Collections.Generic.List{MediaBrowser.Controller.Entities.BaseItem},MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Threading.CancellationToken)">CreateItems(List&lt;BaseItem&gt;, BaseItem, MetadataRefreshOptions, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_CreateItems_System_Collections_Generic_List_MediaBrowser_Controller_Entities_BaseItem__MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItems(System.Collections.Generic.List{MediaBrowser.Controller.Entities.BaseItem},MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Boolean,System.Threading.CancellationToken)">CreateItems(List&lt;BaseItem&gt;, BaseItem, MetadataRefreshOptions, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates the items.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CreateItems(List&lt;BaseItem&gt; items, BaseItem parent, MetadataRefreshOptions metadataRefreshOptions, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">void CreateItems(List&lt;BaseItem&gt; items, BaseItem parent, MetadataRefreshOptions metadataRefreshOptions, bool triggerItemAdded, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -616,6 +616,11 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>
         <td><span class="parametername">metadataRefreshOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">triggerItemAdded</span></td>
         <td></td>
       </tr>
       <tr>
@@ -2568,6 +2573,31 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetNamingOptions_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamingOptions*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNamingOptions" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamingOptions">GetNamingOptions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NamingOptions GetNamingOptions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Emby.Naming.Common.NamingOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetNewItemId_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNewItemId*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNewItemId_System_String_System_Type_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNewItemId(System.String,System.Type)">GetNewItemId(String, Type)</h4>
   <div class="markdown level1 summary"><p>Gets the new item identifier.</p>
@@ -3463,6 +3493,53 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_IsAudioFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsAudioFile_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile(MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Model.Configuration.LibraryOptions)">IsAudioFile(FileSystemMetadata, LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAudioFile(FileSystemMetadata file, LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">file</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_IsAudioFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsAudioFile_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile(System.ReadOnlySpan{System.Char})">IsAudioFile(ReadOnlySpan&lt;Char&gt;)</h4>
   <div class="markdown level1 summary"><p>Determines whether [is audio file] [the specified path].</p>
 </div>
@@ -3555,12 +3632,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_IsLyricsFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsLyricsFile*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsLyricsFile_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsLyricsFile(System.ReadOnlySpan{System.Char})">IsLyricsFile(ReadOnlySpan&lt;Char&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsLyricsFile_MediaBrowser_Model_IO_FileSystemMetadata_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsLyricsFile(MediaBrowser.Model.IO.FileSystemMetadata)">IsLyricsFile(FileSystemMetadata)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsLyricsFile(ReadOnlySpan&lt;char&gt; path)</code></pre>
+    <pre><code class="lang-csharp hljs">bool IsLyricsFile(FileSystemMetadata file)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3573,8 +3650,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
-        <td><span class="parametername">path</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">file</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3639,12 +3716,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_IsSubtitleFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsSubtitleFile*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsSubtitleFile_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsSubtitleFile(System.ReadOnlySpan{System.Char})">IsSubtitleFile(ReadOnlySpan&lt;Char&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsSubtitleFile_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsSubtitleFile(System.String)">IsSubtitleFile(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsSubtitleFile(ReadOnlySpan&lt;char&gt; path)</code></pre>
+    <pre><code class="lang-csharp hljs">bool IsSubtitleFile(string path)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3657,8 +3734,97 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_IsTVSpecialsFolder_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsTVSpecialsFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsTVSpecialsFolder_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsTVSpecialsFolder(System.String)">IsTVSpecialsFolder(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsTVSpecialsFolder(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_IsVideoFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsVideoFile*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsVideoFile_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsVideoFile(MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Model.Configuration.LibraryOptions)">IsVideoFile(FileSystemMetadata, LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsVideoFile(FileSystemMetadata file, LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">file</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3920,6 +4086,48 @@
         <td><a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a></td>
         <td><p>ItemInfo.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_ParseName_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ParseName*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_ParseName_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ParseName(System.String)">ParseName(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ItemLookupInfo ParseName(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -4442,6 +4650,38 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_TriggerItemAdded_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.TriggerItemAdded*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_TriggerItemAdded_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.TriggerItemAdded(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.BaseItem)">TriggerItemAdded(BaseItem, BaseItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TriggerItemAdded(BaseItem item, BaseItem parent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_UpdateImages_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.UpdateImages*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_UpdateImages_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.UpdateImages(MediaBrowser.Controller.Entities.BaseItem)">UpdateImages(BaseItem)</h4>
   <div class="markdown level1 summary"></div>
@@ -4867,6 +5107,30 @@ The items are stored in the db but not loaded into memory until actually request
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">event EventHandler&lt;ItemChangeEventArgs&gt; ItemAdded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_ItemAdding" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ItemAdding">ItemAdding</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;ItemChangeEventArgs&gt; ItemAdding</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">

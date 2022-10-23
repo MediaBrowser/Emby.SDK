@@ -11,7 +11,7 @@
     <EmbeddedResource Include="ThumbImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.10-beta" />
+    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.13-beta" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(SOFTWORKZ)' == '1'">
     <Exec Command="copy $(TargetPath) ..\..\..\..\..\programdata\plugins\" />

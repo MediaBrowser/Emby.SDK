@@ -38,6 +38,9 @@ public class VirtualFolderInfo {
   @SerializedName("ItemId")
   private String itemId = null;
 
+  @SerializedName("Guid")
+  private String guid = null;
+
   @SerializedName("PrimaryImageItemId")
   private String primaryImageItemId = null;
 
@@ -145,6 +148,24 @@ public class VirtualFolderInfo {
     this.itemId = itemId;
   }
 
+  public VirtualFolderInfo guid(String guid) {
+    this.guid = guid;
+    return this;
+  }
+
+   /**
+   * Get guid
+   * @return guid
+  **/
+  @Schema(description = "")
+  public String getGuid() {
+    return guid;
+  }
+
+  public void setGuid(String guid) {
+    this.guid = guid;
+  }
+
   public VirtualFolderInfo primaryImageItemId(String primaryImageItemId) {
     this.primaryImageItemId = primaryImageItemId;
     return this;
@@ -214,6 +235,7 @@ public class VirtualFolderInfo {
         Objects.equals(this.collectionType, virtualFolderInfo.collectionType) &&
         Objects.equals(this.libraryOptions, virtualFolderInfo.libraryOptions) &&
         Objects.equals(this.itemId, virtualFolderInfo.itemId) &&
+        Objects.equals(this.guid, virtualFolderInfo.guid) &&
         Objects.equals(this.primaryImageItemId, virtualFolderInfo.primaryImageItemId) &&
         Objects.equals(this.refreshProgress, virtualFolderInfo.refreshProgress) &&
         Objects.equals(this.refreshStatus, virtualFolderInfo.refreshStatus);
@@ -221,7 +243,7 @@ public class VirtualFolderInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, locations, collectionType, libraryOptions, itemId, primaryImageItemId, refreshProgress, refreshStatus);
+    return Objects.hash(name, locations, collectionType, libraryOptions, itemId, guid, primaryImageItemId, refreshProgress, refreshStatus);
   }
 
 
@@ -235,6 +257,7 @@ public class VirtualFolderInfo {
     sb.append("    collectionType: ").append(toIndentedString(collectionType)).append("\n");
     sb.append("    libraryOptions: ").append(toIndentedString(libraryOptions)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
+    sb.append("    guid: ").append(toIndentedString(guid)).append("\n");
     sb.append("    primaryImageItemId: ").append(toIndentedString(primaryImageItemId)).append("\n");
     sb.append("    refreshProgress: ").append(toIndentedString(refreshProgress)).append("\n");
     sb.append("    refreshStatus: ").append(toIndentedString(refreshStatus)).append("\n");
