@@ -13,4 +13,7 @@
   <ItemGroup>
     <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.13-beta" />
   </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath) %AppData%\Emby-Server\programdata\plugins\" />
+  </Target>
 </Project>

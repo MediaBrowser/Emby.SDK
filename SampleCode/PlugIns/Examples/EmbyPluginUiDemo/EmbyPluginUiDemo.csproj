@@ -31,6 +31,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(TargetPath) ..\..\..\..\..\programdata\plugins\" />
+    <Exec Command="copy $(TargetPath) %AppData%\Emby-Server\programdata\plugins\" />
   </Target>
 </Project>

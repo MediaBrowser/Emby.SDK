@@ -166,8 +166,11 @@ This will also change the file name</li>
 <li>Adjust the namespaces in the plugin classes accordingly</li>
 </ul>
 <h2 id="create-a-post-build-event">Create a Post-Build Event</h2>
-<p>Right click the project -&gt; Properties. Create a post-build event that will copy the assembly to the server's plugins directory. For example:</p>
-<p><code>xcopy &quot;$(TargetPath)&quot; &quot;%AppData%\Emby-Server\Plugins\&quot; /y</code></p>
+<p>Right click the project -&gt; Edit Project. At the bottom before the Project closing tag, add a copy command to copy your plugin to the server's plugin folder. For example:</p>
+<pre><code class="lang-xml">  &lt;Target Name=&quot;PostBuild&quot; AfterTargets=&quot;PostBuildEvent&quot;&gt;
+    &lt;Exec Command=&quot;copy $(TargetPath) %AppData%\Emby-Server\programdata\plugins\&quot; /&gt;
+  &lt;/Target&gt;
+</code></pre>
 <h2 id="test-the-plugin">Test the Plugin</h2>
 <p>Shutdown the server, rebuild your solution, and restart the server. At this point you should see your plugin in the Dashboard's Plugins menu.</p>
 <h2 id="add-functionality">Add Functionality</h2>
@@ -185,7 +188,23 @@ See also: <a href="Dependency-Injection.html">Dependency Injection</a>.</p>
 <li><a class="xref" href="../../../reference/pluginapi/MediaBrowser.Model.IO.IZipClient.html">IZipClient</a></li>
 </ul>
 <h2 id="debugging">Debugging</h2>
-<p>The quickest way to test code changes is to work without the debugger. If you do this, you can leave the server running at all times. Simply use the Rebuild command on your plugin project, and right click the server tray -&gt; Restart Server. If that option is not visible you'll need to enable developer tools in the Dashboard under Advanced.</p>
+<h3 id="setup">Setup</h3>
+<p>For debugging your plugin running in Emby Server, you need to create a launch target in Visual Studio. Start by opening &quot;Debug Properties&quot;:</p>
+<p><img src="../../../images/debug1.png" alt="Debug1"></p>
+<p>Create a new profile of type &quot;Executable&quot;:</p>
+<p><img src="../../../images/debug2.png" alt="Debug2"></p>
+<p>and rename it to &quot;Emby Sever&quot;.</p>
+<p>Next, enter the path to Emby Server and its containing folder as &quot;Working Directory&quot;:</p>
+<p><img src="../../../images/debug3.png" alt="Debug3"></p>
+<p>The command line argument <code>-nointerface</code> disables the Emby tray icon.</p>
+<h3 id="running">Running</h3>
+<p>To run Emby Server and debug your plugin, you need to select the newly created target:</p>
+<p><img src="../../../images/debug4.png" alt="Debug4"></p>
+<p>Now you're ready to run!</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Create a breakpoint in the constructor of your plugin to be sure that it's all set up and working.</p>
+</div>
 </article>
           </div>
           
