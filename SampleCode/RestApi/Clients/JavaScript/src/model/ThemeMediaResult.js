@@ -15,7 +15,7 @@ import BaseItemDto from './BaseItemDto';
 /**
 * The ThemeMediaResult model module.
 * @module model/ThemeMediaResult
-* @version 4.8.0.14
+* @version 4.8.0.15
 */
 export default class ThemeMediaResult {
     /**
