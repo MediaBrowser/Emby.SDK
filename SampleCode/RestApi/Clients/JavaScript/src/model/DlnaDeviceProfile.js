@@ -20,7 +20,7 @@ import DlnaTranscodingProfile from './DlnaTranscodingProfile';
 /**
 * The DlnaDeviceProfile model module.
 * @module model/DlnaDeviceProfile
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class DlnaDeviceProfile {
     /**

@@ -15,7 +15,7 @@ import EmbyWebApiConfigurationPageInfo from '../model/EmbyWebApiConfigurationPag
 /**
 * DashboardService service.
 * @module EmbyClient.JavaScript.Beta/DashboardServiceApi
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class DashboardServiceApi {
 

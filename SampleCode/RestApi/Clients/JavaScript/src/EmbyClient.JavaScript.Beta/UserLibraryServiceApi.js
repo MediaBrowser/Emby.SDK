@@ -17,7 +17,7 @@ import UserItemDataDto from '../model/UserItemDataDto';
 /**
 * UserLibraryService service.
 * @module EmbyClient.JavaScript.Beta/UserLibraryServiceApi
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class UserLibraryServiceApi {
 

@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * SuggestionsService service.
 * @module EmbyClient.JavaScript.Beta/SuggestionsServiceApi
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class SuggestionsServiceApi {
 

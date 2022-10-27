@@ -115,6 +115,11 @@
                 }
             }
 
+            lock (this.lockObj)
+            {
+                this.options = newOptions;
+            }
+
             var savedArgs = new FileSavedEventArgs(newOptions);
             this.FileSaved?.Invoke(this, savedArgs);
         }

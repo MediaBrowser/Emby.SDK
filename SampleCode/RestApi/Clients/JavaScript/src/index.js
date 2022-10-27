@@ -410,7 +410,7 @@ import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export {
     /**

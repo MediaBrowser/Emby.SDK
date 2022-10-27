@@ -15,7 +15,7 @@ import MediaSourceInfo from './MediaSourceInfo';
 /**
 * The MediaInfoLiveStreamResponse model module.
 * @module model/MediaInfoLiveStreamResponse
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class MediaInfoLiveStreamResponse {
     /**

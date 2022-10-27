@@ -16,7 +16,7 @@ import DlnaProfileCondition from './DlnaProfileCondition';
 /**
 * The DlnaContainerProfile model module.
 * @module model/DlnaContainerProfile
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class DlnaContainerProfile {
     /**

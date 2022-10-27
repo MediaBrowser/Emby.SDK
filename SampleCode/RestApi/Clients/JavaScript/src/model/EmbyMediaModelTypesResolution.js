@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EmbyMediaModelTypesResolution model module.
 * @module model/EmbyMediaModelTypesResolution
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class EmbyMediaModelTypesResolution {
     /**

@@ -15,7 +15,7 @@ import EmbyWebGenericUIModelEnumsUICommandType from './EmbyWebGenericUIModelEnum
 /**
 * The EmbyWebGenericUIModelUICommand model module.
 * @module model/EmbyWebGenericUIModelUICommand
-* @version 4.8.0.13
+* @version 4.8.0.14
 */
 export default class EmbyWebGenericUIModelUICommand {
     /**
