@@ -36,8 +36,7 @@ class SyncModelSyncJobItem(object):
         'primary_image_item_id': 'str',
         'primary_image_tag': 'str',
         'temporary_path': 'str',
-        'additional_files': 'list[SyncModelItemFileInfo]',
-        'item_date_modified_ticks': 'int'
+        'additional_files': 'list[SyncModelItemFileInfo]'
     }
 
     attribute_map = {
@@ -55,11 +54,10 @@ class SyncModelSyncJobItem(object):
         'primary_image_item_id': 'PrimaryImageItemId',
         'primary_image_tag': 'PrimaryImageTag',
         'temporary_path': 'TemporaryPath',
-        'additional_files': 'AdditionalFiles',
-        'item_date_modified_ticks': 'ItemDateModifiedTicks'
+        'additional_files': 'AdditionalFiles'
     }
 
-    def __init__(self, id=None, job_id=None, item_id=None, item_name=None, media_source_id=None, media_source=None, target_id=None, output_path=None, status=None, progress=None, date_created=None, primary_image_item_id=None, primary_image_tag=None, temporary_path=None, additional_files=None, item_date_modified_ticks=None):  # noqa: E501
+    def __init__(self, id=None, job_id=None, item_id=None, item_name=None, media_source_id=None, media_source=None, target_id=None, output_path=None, status=None, progress=None, date_created=None, primary_image_item_id=None, primary_image_tag=None, temporary_path=None, additional_files=None):  # noqa: E501
         """SyncModelSyncJobItem - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._job_id = None
@@ -76,7 +74,6 @@ class SyncModelSyncJobItem(object):
         self._primary_image_tag = None
         self._temporary_path = None
         self._additional_files = None
-        self._item_date_modified_ticks = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -108,8 +105,6 @@ class SyncModelSyncJobItem(object):
             self.temporary_path = temporary_path
         if additional_files is not None:
             self.additional_files = additional_files
-        if item_date_modified_ticks is not None:
-            self.item_date_modified_ticks = item_date_modified_ticks
 
     @property
     def id(self):
@@ -425,27 +420,6 @@ class SyncModelSyncJobItem(object):
         """
 
         self._additional_files = additional_files
-
-    @property
-    def item_date_modified_ticks(self):
-        """Gets the item_date_modified_ticks of this SyncModelSyncJobItem.  # noqa: E501
-
-
-        :return: The item_date_modified_ticks of this SyncModelSyncJobItem.  # noqa: E501
-        :rtype: int
-        """
-        return self._item_date_modified_ticks
-
-    @item_date_modified_ticks.setter
-    def item_date_modified_ticks(self, item_date_modified_ticks):
-        """Sets the item_date_modified_ticks of this SyncModelSyncJobItem.
-
-
-        :param item_date_modified_ticks: The item_date_modified_ticks of this SyncModelSyncJobItem.  # noqa: E501
-        :type: int
-        """
-
-        self._item_date_modified_ticks = item_date_modified_ticks
 
     def to_dict(self):
         """Returns the model properties as a dict"""

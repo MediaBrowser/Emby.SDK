@@ -48,6 +48,7 @@ open class ConfigurationServiceAPI {
   "LocalNetworkSubnets" : [ "LocalNetworkSubnets", "LocalNetworkSubnets" ],
   "EnableDebugLevelLogging" : true,
   "LogAllQueryTimes" : true,
+  "PlaylistsUpgradedToM3U" : true,
   "ImageExtractorUpgraded" : true,
   "RunAtStartup" : true,
   "HttpServerPortNumber" : 1,

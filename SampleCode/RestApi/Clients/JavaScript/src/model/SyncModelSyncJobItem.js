@@ -17,7 +17,7 @@ import SyncModelSyncJobItemStatus from './SyncModelSyncJobItemStatus';
 /**
 * The SyncModelSyncJobItem model module.
 * @module model/SyncModelSyncJobItem
-* @version 4.8.0.15
+* @version 4.8.0.16
 */
 export default class SyncModelSyncJobItem {
     /**
@@ -89,9 +89,6 @@ export default class SyncModelSyncJobItem {
             if (data.hasOwnProperty('AdditionalFiles')) {
                 obj['AdditionalFiles'] = ApiClient.convertToType(data['AdditionalFiles'], [SyncModelItemFileInfo]);
             }
-            if (data.hasOwnProperty('ItemDateModifiedTicks')) {
-                obj['ItemDateModifiedTicks'] = ApiClient.convertToType(data['ItemDateModifiedTicks'], 'Number');
-            }
         }
         return obj;
     }
@@ -156,10 +153,6 @@ export default class SyncModelSyncJobItem {
     * @member {Array.<module:model/SyncModelItemFileInfo>} AdditionalFiles
     */
     'AdditionalFiles' = undefined;
-    /**
-    * @member {Number} ItemDateModifiedTicks
-    */
-    'ItemDateModifiedTicks' = undefined;
 
 
 

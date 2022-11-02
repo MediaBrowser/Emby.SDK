@@ -342,6 +342,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsInMixedFolder">BaseItem.IsInMixedFolder</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OwnsFolder">BaseItem.OwnsFolder</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayOrderIntValue">BaseItem.GetDisplayOrderIntValue()</a>
     </div>
     <div>
@@ -835,9 +838,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_System_DateTimeOffset__System_Boolean_">BaseItem.MarkPlayed(User, Nullable&lt;DateTimeOffset&gt;, Boolean)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateHideFromResume_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_UserItemData_System_Boolean_">BaseItem.UpdateHideFromResume(User, UserItemData, Boolean)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkUnplayed_MediaBrowser_Controller_Entities_User_">BaseItem.MarkUnplayed(User)</a>
@@ -1819,6 +1819,45 @@ public override bool SupportsStudios { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.SupportsPlayedStatus(LibraryOptions)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Audio_Audio_UpdateHideFromResume_" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.UpdateHideFromResume*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_Audio_UpdateHideFromResume_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_UserItemData_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.UpdateHideFromResume(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.UserItemData,System.Boolean)">UpdateHideFromResume(User, UserItemData, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateHideFromResume(User user, UserItemData userData, bool hide)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.UserItemData.html">UserItemData</a></td>
+        <td><span class="parametername">userData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">hide</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateHideFromResume_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_UserItemData_System_Boolean_">BaseItem.UpdateHideFromResume(User, UserItemData, Boolean)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>

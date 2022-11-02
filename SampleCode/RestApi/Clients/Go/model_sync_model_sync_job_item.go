@@ -25,5 +25,4 @@ type SyncModelSyncJobItem struct {
 	PrimaryImageTag string `json:"PrimaryImageTag,omitempty"`
 	TemporaryPath string `json:"TemporaryPath,omitempty"`
 	AdditionalFiles []SyncModelItemFileInfo `json:"AdditionalFiles,omitempty"`
-	ItemDateModifiedTicks int64 `json:"ItemDateModifiedTicks,omitempty"`
 }

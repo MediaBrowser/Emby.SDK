@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.15"
+    "version": "4.8.0.16"
   },
   "servers": [
     {
@@ -72323,10 +72323,6 @@
             "items": {
               "$ref": "#/components/schemas/Sync.Model.ItemFileInfo"
             }
-          },
-          "ItemDateModifiedTicks": {
-            "type": "integer",
-            "format": "int64"
           }
         },
         "x-internal-ref-name": "Emby.Server.Sync.Model.SyncJobItem"
@@ -72761,6 +72757,9 @@
             "type": "boolean"
           },
           "ChannelOptionsUpgraded": {
+            "type": "boolean"
+          },
+          "PlaylistsUpgradedToM3U": {
             "type": "boolean"
           },
           "TimerIdsUpgraded": {

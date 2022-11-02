@@ -71,6 +71,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="databaseCacheSizeMB">databaseCacheSizeMB.</param>
         /// <param name="enableSqLiteMmio">enableSqLiteMmio.</param>
         /// <param name="channelOptionsUpgraded">channelOptionsUpgraded.</param>
+        /// <param name="playlistsUpgradedToM3U">playlistsUpgradedToM3U.</param>
         /// <param name="timerIdsUpgraded">timerIdsUpgraded.</param>
         /// <param name="forcedSortNameUpgraded">forcedSortNameUpgraded.</param>
         /// <param name="inheritedParentalRatingValueUpgraded">inheritedParentalRatingValueUpgraded.</param>
@@ -86,7 +87,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="runAtStartup">runAtStartup.</param>
         /// <param name="isStartupWizardCompleted">isStartupWizardCompleted.</param>
         /// <param name="cachePath">cachePath.</param>
-        public ConfigurationServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ConfigurationImageSavingConvention imageSavingConvention = default(ConfigurationImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), bool? displaySpecialsWithinSeasons = default(bool?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<ConfigurationPathSubstitution> pathSubstitutions = default(List<ConfigurationPathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? channelOptionsUpgraded = default(bool?), bool? timerIdsUpgraded = default(bool?), bool? forcedSortNameUpgraded = default(bool?), bool? inheritedParentalRatingValueUpgraded = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ConfigurationServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ConfigurationImageSavingConvention imageSavingConvention = default(ConfigurationImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), bool? displaySpecialsWithinSeasons = default(bool?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<ConfigurationPathSubstitution> pathSubstitutions = default(List<ConfigurationPathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? channelOptionsUpgraded = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? timerIdsUpgraded = default(bool?), bool? forcedSortNameUpgraded = default(bool?), bool? inheritedParentalRatingValueUpgraded = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             this.EnableUPnP = enableUPnP;
             this.PublicPort = publicPort;
@@ -133,6 +134,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.DatabaseCacheSizeMB = databaseCacheSizeMB;
             this.EnableSqLiteMmio = enableSqLiteMmio;
             this.ChannelOptionsUpgraded = channelOptionsUpgraded;
+            this.PlaylistsUpgradedToM3U = playlistsUpgradedToM3U;
             this.TimerIdsUpgraded = timerIdsUpgraded;
             this.ForcedSortNameUpgraded = forcedSortNameUpgraded;
             this.InheritedParentalRatingValueUpgraded = inheritedParentalRatingValueUpgraded;
@@ -421,6 +423,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? ChannelOptionsUpgraded { get; set; }
 
         /// <summary>
+        /// Gets or Sets PlaylistsUpgradedToM3U
+        /// </summary>
+        [DataMember(Name="PlaylistsUpgradedToM3U", EmitDefaultValue=false)]
+        public bool? PlaylistsUpgradedToM3U { get; set; }
+
+        /// <summary>
         /// Gets or Sets TimerIdsUpgraded
         /// </summary>
         [DataMember(Name="TimerIdsUpgraded", EmitDefaultValue=false)]
@@ -563,6 +571,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  DatabaseCacheSizeMB: ").Append(DatabaseCacheSizeMB).Append("\n");
             sb.Append("  EnableSqLiteMmio: ").Append(EnableSqLiteMmio).Append("\n");
             sb.Append("  ChannelOptionsUpgraded: ").Append(ChannelOptionsUpgraded).Append("\n");
+            sb.Append("  PlaylistsUpgradedToM3U: ").Append(PlaylistsUpgradedToM3U).Append("\n");
             sb.Append("  TimerIdsUpgraded: ").Append(TimerIdsUpgraded).Append("\n");
             sb.Append("  ForcedSortNameUpgraded: ").Append(ForcedSortNameUpgraded).Append("\n");
             sb.Append("  InheritedParentalRatingValueUpgraded: ").Append(InheritedParentalRatingValueUpgraded).Append("\n");
@@ -844,6 +853,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.ChannelOptionsUpgraded.Equals(input.ChannelOptionsUpgraded))
                 ) && 
                 (
+                    this.PlaylistsUpgradedToM3U == input.PlaylistsUpgradedToM3U ||
+                    (this.PlaylistsUpgradedToM3U != null &&
+                    this.PlaylistsUpgradedToM3U.Equals(input.PlaylistsUpgradedToM3U))
+                ) && 
+                (
                     this.TimerIdsUpgraded == input.TimerIdsUpgraded ||
                     (this.TimerIdsUpgraded != null &&
                     this.TimerIdsUpgraded.Equals(input.TimerIdsUpgraded))
@@ -1019,6 +1033,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.EnableSqLiteMmio.GetHashCode();
                 if (this.ChannelOptionsUpgraded != null)
                     hashCode = hashCode * 59 + this.ChannelOptionsUpgraded.GetHashCode();
+                if (this.PlaylistsUpgradedToM3U != null)
+                    hashCode = hashCode * 59 + this.PlaylistsUpgradedToM3U.GetHashCode();
                 if (this.TimerIdsUpgraded != null)
                     hashCode = hashCode * 59 + this.TimerIdsUpgraded.GetHashCode();
                 if (this.ForcedSortNameUpgraded != null)

@@ -54235,10 +54235,6 @@
           "items": {
             "$ref": "#/definitions/Sync.Model.ItemFileInfo"
           }
-        },
-        "ItemDateModifiedTicks": {
-          "format": "int64",
-          "type": "integer"
         }
       },
       "x-internal-ref-name": "Emby.Server.Sync.Model.SyncJobItem"
@@ -54670,6 +54666,9 @@
           "type": "boolean"
         },
         "ChannelOptionsUpgraded": {
+          "type": "boolean"
+        },
+        "PlaylistsUpgradedToM3U": {
           "type": "boolean"
         },
         "TimerIdsUpgraded": {

@@ -71,9 +71,6 @@ public class SyncModelSyncJobItem {
   @SerializedName("AdditionalFiles")
   private List<SyncModelItemFileInfo> additionalFiles = null;
 
-  @SerializedName("ItemDateModifiedTicks")
-  private Long itemDateModifiedTicks = null;
-
   public SyncModelSyncJobItem id(Long id) {
     this.id = id;
     return this;
@@ -352,24 +349,6 @@ public class SyncModelSyncJobItem {
     this.additionalFiles = additionalFiles;
   }
 
-  public SyncModelSyncJobItem itemDateModifiedTicks(Long itemDateModifiedTicks) {
-    this.itemDateModifiedTicks = itemDateModifiedTicks;
-    return this;
-  }
-
-   /**
-   * Get itemDateModifiedTicks
-   * @return itemDateModifiedTicks
-  **/
-  @Schema(description = "")
-  public Long getItemDateModifiedTicks() {
-    return itemDateModifiedTicks;
-  }
-
-  public void setItemDateModifiedTicks(Long itemDateModifiedTicks) {
-    this.itemDateModifiedTicks = itemDateModifiedTicks;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -394,13 +373,12 @@ public class SyncModelSyncJobItem {
         Objects.equals(this.primaryImageItemId, syncModelSyncJobItem.primaryImageItemId) &&
         Objects.equals(this.primaryImageTag, syncModelSyncJobItem.primaryImageTag) &&
         Objects.equals(this.temporaryPath, syncModelSyncJobItem.temporaryPath) &&
-        Objects.equals(this.additionalFiles, syncModelSyncJobItem.additionalFiles) &&
-        Objects.equals(this.itemDateModifiedTicks, syncModelSyncJobItem.itemDateModifiedTicks);
+        Objects.equals(this.additionalFiles, syncModelSyncJobItem.additionalFiles);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, jobId, itemId, itemName, mediaSourceId, mediaSource, targetId, outputPath, status, progress, dateCreated, primaryImageItemId, primaryImageTag, temporaryPath, additionalFiles, itemDateModifiedTicks);
+    return Objects.hash(id, jobId, itemId, itemName, mediaSourceId, mediaSource, targetId, outputPath, status, progress, dateCreated, primaryImageItemId, primaryImageTag, temporaryPath, additionalFiles);
   }
 
 
@@ -424,7 +402,6 @@ public class SyncModelSyncJobItem {
     sb.append("    primaryImageTag: ").append(toIndentedString(primaryImageTag)).append("\n");
     sb.append("    temporaryPath: ").append(toIndentedString(temporaryPath)).append("\n");
     sb.append("    additionalFiles: ").append(toIndentedString(additionalFiles)).append("\n");
-    sb.append("    itemDateModifiedTicks: ").append(toIndentedString(itemDateModifiedTicks)).append("\n");
     sb.append("}");
     return sb.toString();
   }

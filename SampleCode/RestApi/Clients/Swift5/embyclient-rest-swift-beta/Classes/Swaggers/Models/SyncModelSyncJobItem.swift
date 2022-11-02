@@ -26,9 +26,8 @@ public struct SyncModelSyncJobItem: Codable {
     public var primaryImageTag: String?
     public var temporaryPath: String?
     public var additionalFiles: [SyncModelItemFileInfo]?
-    public var itemDateModifiedTicks: Int64?
 
-    public init(_id: Int64? = nil, jobId: Int64? = nil, itemId: Int64? = nil, itemName: String? = nil, mediaSourceId: String? = nil, mediaSource: MediaSourceInfo? = nil, targetId: String? = nil, outputPath: String? = nil, status: SyncModelSyncJobItemStatus? = nil, progress: Double? = nil, dateCreated: Date? = nil, primaryImageItemId: String? = nil, primaryImageTag: String? = nil, temporaryPath: String? = nil, additionalFiles: [SyncModelItemFileInfo]? = nil, itemDateModifiedTicks: Int64? = nil) {
+    public init(_id: Int64? = nil, jobId: Int64? = nil, itemId: Int64? = nil, itemName: String? = nil, mediaSourceId: String? = nil, mediaSource: MediaSourceInfo? = nil, targetId: String? = nil, outputPath: String? = nil, status: SyncModelSyncJobItemStatus? = nil, progress: Double? = nil, dateCreated: Date? = nil, primaryImageItemId: String? = nil, primaryImageTag: String? = nil, temporaryPath: String? = nil, additionalFiles: [SyncModelItemFileInfo]? = nil) {
         self._id = _id
         self.jobId = jobId
         self.itemId = itemId
@@ -44,7 +43,6 @@ public struct SyncModelSyncJobItem: Codable {
         self.primaryImageTag = primaryImageTag
         self.temporaryPath = temporaryPath
         self.additionalFiles = additionalFiles
-        self.itemDateModifiedTicks = itemDateModifiedTicks
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -63,7 +61,6 @@ public struct SyncModelSyncJobItem: Codable {
         case primaryImageTag = "PrimaryImageTag"
         case temporaryPath = "TemporaryPath"
         case additionalFiles = "AdditionalFiles"
-        case itemDateModifiedTicks = "ItemDateModifiedTicks"
     }
 
 }

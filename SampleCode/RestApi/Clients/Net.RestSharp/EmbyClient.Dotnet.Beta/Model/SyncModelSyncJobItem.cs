@@ -41,8 +41,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="primaryImageTag">primaryImageTag.</param>
         /// <param name="temporaryPath">temporaryPath.</param>
         /// <param name="additionalFiles">additionalFiles.</param>
-        /// <param name="itemDateModifiedTicks">itemDateModifiedTicks.</param>
-        public SyncModelSyncJobItem(long? id = default(long?), long? jobId = default(long?), long? itemId = default(long?), string itemName = default(string), string mediaSourceId = default(string), MediaSourceInfo mediaSource = default(MediaSourceInfo), string targetId = default(string), string outputPath = default(string), SyncModelSyncJobItemStatus status = default(SyncModelSyncJobItemStatus), double? progress = default(double?), DateTimeOffset? dateCreated = default(DateTimeOffset?), string primaryImageItemId = default(string), string primaryImageTag = default(string), string temporaryPath = default(string), List<SyncModelItemFileInfo> additionalFiles = default(List<SyncModelItemFileInfo>), long? itemDateModifiedTicks = default(long?))
+        public SyncModelSyncJobItem(long? id = default(long?), long? jobId = default(long?), long? itemId = default(long?), string itemName = default(string), string mediaSourceId = default(string), MediaSourceInfo mediaSource = default(MediaSourceInfo), string targetId = default(string), string outputPath = default(string), SyncModelSyncJobItemStatus status = default(SyncModelSyncJobItemStatus), double? progress = default(double?), DateTimeOffset? dateCreated = default(DateTimeOffset?), string primaryImageItemId = default(string), string primaryImageTag = default(string), string temporaryPath = default(string), List<SyncModelItemFileInfo> additionalFiles = default(List<SyncModelItemFileInfo>))
         {
             this.Id = id;
             this.JobId = jobId;
@@ -59,7 +58,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.PrimaryImageTag = primaryImageTag;
             this.TemporaryPath = temporaryPath;
             this.AdditionalFiles = additionalFiles;
-            this.ItemDateModifiedTicks = itemDateModifiedTicks;
         }
         
         /// <summary>
@@ -153,12 +151,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         public List<SyncModelItemFileInfo> AdditionalFiles { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemDateModifiedTicks
-        /// </summary>
-        [DataMember(Name="ItemDateModifiedTicks", EmitDefaultValue=false)]
-        public long? ItemDateModifiedTicks { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -181,7 +173,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  PrimaryImageTag: ").Append(PrimaryImageTag).Append("\n");
             sb.Append("  TemporaryPath: ").Append(TemporaryPath).Append("\n");
             sb.Append("  AdditionalFiles: ").Append(AdditionalFiles).Append("\n");
-            sb.Append("  ItemDateModifiedTicks: ").Append(ItemDateModifiedTicks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -291,11 +282,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.AdditionalFiles != null &&
                     input.AdditionalFiles != null &&
                     this.AdditionalFiles.SequenceEqual(input.AdditionalFiles)
-                ) && 
-                (
-                    this.ItemDateModifiedTicks == input.ItemDateModifiedTicks ||
-                    (this.ItemDateModifiedTicks != null &&
-                    this.ItemDateModifiedTicks.Equals(input.ItemDateModifiedTicks))
                 );
         }
 
@@ -338,8 +324,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.TemporaryPath.GetHashCode();
                 if (this.AdditionalFiles != null)
                     hashCode = hashCode * 59 + this.AdditionalFiles.GetHashCode();
-                if (this.ItemDateModifiedTicks != null)
-                    hashCode = hashCode * 59 + this.ItemDateModifiedTicks.GetHashCode();
                 return hashCode;
             }
         }

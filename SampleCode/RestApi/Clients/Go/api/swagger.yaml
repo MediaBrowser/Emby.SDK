@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.15
+  version: 4.8.0.16
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -64776,7 +64776,6 @@ components:
         - Status: Queued
           Progress: 5.962133916683182
           OutputPath: OutputPath
-          ItemDateModifiedTicks: 2
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
           PrimaryImageTag: PrimaryImageTag
@@ -64949,7 +64948,6 @@ components:
         - Status: Queued
           Progress: 5.962133916683182
           OutputPath: OutputPath
-          ItemDateModifiedTicks: 2
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
           PrimaryImageTag: PrimaryImageTag
@@ -65160,14 +65158,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Sync.Model.ItemFileInfo'
-        ItemDateModifiedTicks:
-          type: integer
-          format: int64
       example:
         Status: Queued
         Progress: 5.962133916683182
         OutputPath: OutputPath
-        ItemDateModifiedTicks: 2
         MediaSourceId: MediaSourceId
         DateCreated: 2000-01-23T04:56:07.000+00:00
         PrimaryImageTag: PrimaryImageTag
@@ -65432,7 +65426,6 @@ components:
         - Status: Queued
           Progress: 5.962133916683182
           OutputPath: OutputPath
-          ItemDateModifiedTicks: 2
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
           PrimaryImageTag: PrimaryImageTag
@@ -65605,7 +65598,6 @@ components:
         - Status: Queued
           Progress: 5.962133916683182
           OutputPath: OutputPath
-          ItemDateModifiedTicks: 2
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
           PrimaryImageTag: PrimaryImageTag
@@ -66067,6 +66059,8 @@ components:
           type: boolean
         ChannelOptionsUpgraded:
           type: boolean
+        PlaylistsUpgradedToM3U:
+          type: boolean
         TimerIdsUpgraded:
           type: boolean
         ForcedSortNameUpgraded:
@@ -66121,6 +66115,7 @@ components:
         - LocalNetworkSubnets
         EnableDebugLevelLogging: true
         LogAllQueryTimes: true
+        PlaylistsUpgradedToM3U: true
         ImageExtractorUpgraded: true
         RunAtStartup: true
         HttpServerPortNumber: 1

@@ -15,7 +15,7 @@ import NotificationsNotificationLevel from './NotificationsNotificationLevel';
 /**
 * The EmbyNotificationsApiNotification model module.
 * @module model/EmbyNotificationsApiNotification
-* @version 4.8.0.15
+* @version 4.8.0.16
 */
 export default class EmbyNotificationsApiNotification {
     /**

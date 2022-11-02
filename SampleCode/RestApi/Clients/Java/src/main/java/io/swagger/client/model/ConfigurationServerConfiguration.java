@@ -159,6 +159,9 @@ public class ConfigurationServerConfiguration {
   @SerializedName("ChannelOptionsUpgraded")
   private Boolean channelOptionsUpgraded = null;
 
+  @SerializedName("PlaylistsUpgradedToM3U")
+  private Boolean playlistsUpgradedToM3U = null;
+
   @SerializedName("TimerIdsUpgraded")
   private Boolean timerIdsUpgraded = null;
 
@@ -1062,6 +1065,24 @@ public class ConfigurationServerConfiguration {
     this.channelOptionsUpgraded = channelOptionsUpgraded;
   }
 
+  public ConfigurationServerConfiguration playlistsUpgradedToM3U(Boolean playlistsUpgradedToM3U) {
+    this.playlistsUpgradedToM3U = playlistsUpgradedToM3U;
+    return this;
+  }
+
+   /**
+   * Get playlistsUpgradedToM3U
+   * @return playlistsUpgradedToM3U
+  **/
+  @Schema(description = "")
+  public Boolean isPlaylistsUpgradedToM3U() {
+    return playlistsUpgradedToM3U;
+  }
+
+  public void setPlaylistsUpgradedToM3U(Boolean playlistsUpgradedToM3U) {
+    this.playlistsUpgradedToM3U = playlistsUpgradedToM3U;
+  }
+
   public ConfigurationServerConfiguration timerIdsUpgraded(Boolean timerIdsUpgraded) {
     this.timerIdsUpgraded = timerIdsUpgraded;
     return this;
@@ -1387,6 +1408,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.databaseCacheSizeMB, configurationServerConfiguration.databaseCacheSizeMB) &&
         Objects.equals(this.enableSqLiteMmio, configurationServerConfiguration.enableSqLiteMmio) &&
         Objects.equals(this.channelOptionsUpgraded, configurationServerConfiguration.channelOptionsUpgraded) &&
+        Objects.equals(this.playlistsUpgradedToM3U, configurationServerConfiguration.playlistsUpgradedToM3U) &&
         Objects.equals(this.timerIdsUpgraded, configurationServerConfiguration.timerIdsUpgraded) &&
         Objects.equals(this.forcedSortNameUpgraded, configurationServerConfiguration.forcedSortNameUpgraded) &&
         Objects.equals(this.inheritedParentalRatingValueUpgraded, configurationServerConfiguration.inheritedParentalRatingValueUpgraded) &&
@@ -1406,7 +1428,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, displaySpecialsWithinSeasons, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, displaySpecialsWithinSeasons, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1460,6 +1482,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    databaseCacheSizeMB: ").append(toIndentedString(databaseCacheSizeMB)).append("\n");
     sb.append("    enableSqLiteMmio: ").append(toIndentedString(enableSqLiteMmio)).append("\n");
     sb.append("    channelOptionsUpgraded: ").append(toIndentedString(channelOptionsUpgraded)).append("\n");
+    sb.append("    playlistsUpgradedToM3U: ").append(toIndentedString(playlistsUpgradedToM3U)).append("\n");
     sb.append("    timerIdsUpgraded: ").append(toIndentedString(timerIdsUpgraded)).append("\n");
     sb.append("    forcedSortNameUpgraded: ").append(toIndentedString(forcedSortNameUpgraded)).append("\n");
     sb.append("    inheritedParentalRatingValueUpgraded: ").append(toIndentedString(inheritedParentalRatingValueUpgraded)).append("\n");
