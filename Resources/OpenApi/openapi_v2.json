@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.16"
+    "version": "4.8.0.17"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -53074,7 +53074,16 @@
         "ImportFavoritesOnly": {
           "type": "boolean"
         },
+        "PreferEpgChannelImages": {
+          "type": "boolean"
+        },
+        "PreferEpgChannelNumbers": {
+          "type": "boolean"
+        },
         "AllowHWTranscoding": {
+          "type": "boolean"
+        },
+        "AllowMappingByNumber": {
           "type": "boolean"
         },
         "Source": {
@@ -55255,6 +55264,9 @@
         "MaxParentalRating": {
           "format": "int32",
           "type": "integer"
+        },
+        "AllowTagOrRating": {
+          "type": "boolean"
         },
         "BlockedTags": {
           "type": "array",

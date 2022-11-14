@@ -28,6 +28,7 @@ class UsersUserPolicy(object):
         'is_hidden_from_unused_devices': 'bool',
         'is_disabled': 'bool',
         'max_parental_rating': 'int',
+        'allow_tag_or_rating': 'bool',
         'blocked_tags': 'list[str]',
         'is_tag_blocking_mode_inclusive': 'bool',
         'include_tags': 'list[str]',
@@ -72,6 +73,7 @@ class UsersUserPolicy(object):
         'is_hidden_from_unused_devices': 'IsHiddenFromUnusedDevices',
         'is_disabled': 'IsDisabled',
         'max_parental_rating': 'MaxParentalRating',
+        'allow_tag_or_rating': 'AllowTagOrRating',
         'blocked_tags': 'BlockedTags',
         'is_tag_blocking_mode_inclusive': 'IsTagBlockingModeInclusive',
         'include_tags': 'IncludeTags',
@@ -109,7 +111,7 @@ class UsersUserPolicy(object):
         'enable_all_devices': 'EnableAllDevices'
     }
 
-    def __init__(self, is_administrator=None, is_hidden=None, is_hidden_remotely=None, is_hidden_from_unused_devices=None, is_disabled=None, max_parental_rating=None, blocked_tags=None, is_tag_blocking_mode_inclusive=None, include_tags=None, enable_user_preference_access=None, access_schedules=None, block_unrated_items=None, enable_remote_control_of_other_users=None, enable_shared_device_control=None, enable_remote_access=None, enable_live_tv_management=None, enable_live_tv_access=None, enable_media_playback=None, enable_audio_playback_transcoding=None, enable_video_playback_transcoding=None, enable_playback_remuxing=None, enable_content_deletion=None, enable_content_deletion_from_folders=None, enable_content_downloading=None, enable_subtitle_downloading=None, enable_subtitle_management=None, enable_sync_transcoding=None, enable_media_conversion=None, enabled_channels=None, enable_all_channels=None, enabled_folders=None, enable_all_folders=None, invalid_login_attempt_count=None, enable_public_sharing=None, blocked_media_folders=None, remote_client_bitrate_limit=None, authentication_provider_id=None, excluded_sub_folders=None, simultaneous_stream_limit=None, enabled_devices=None, enable_all_devices=None):  # noqa: E501
+    def __init__(self, is_administrator=None, is_hidden=None, is_hidden_remotely=None, is_hidden_from_unused_devices=None, is_disabled=None, max_parental_rating=None, allow_tag_or_rating=None, blocked_tags=None, is_tag_blocking_mode_inclusive=None, include_tags=None, enable_user_preference_access=None, access_schedules=None, block_unrated_items=None, enable_remote_control_of_other_users=None, enable_shared_device_control=None, enable_remote_access=None, enable_live_tv_management=None, enable_live_tv_access=None, enable_media_playback=None, enable_audio_playback_transcoding=None, enable_video_playback_transcoding=None, enable_playback_remuxing=None, enable_content_deletion=None, enable_content_deletion_from_folders=None, enable_content_downloading=None, enable_subtitle_downloading=None, enable_subtitle_management=None, enable_sync_transcoding=None, enable_media_conversion=None, enabled_channels=None, enable_all_channels=None, enabled_folders=None, enable_all_folders=None, invalid_login_attempt_count=None, enable_public_sharing=None, blocked_media_folders=None, remote_client_bitrate_limit=None, authentication_provider_id=None, excluded_sub_folders=None, simultaneous_stream_limit=None, enabled_devices=None, enable_all_devices=None):  # noqa: E501
         """UsersUserPolicy - a model defined in Swagger"""  # noqa: E501
         self._is_administrator = None
         self._is_hidden = None
@@ -117,6 +119,7 @@ class UsersUserPolicy(object):
         self._is_hidden_from_unused_devices = None
         self._is_disabled = None
         self._max_parental_rating = None
+        self._allow_tag_or_rating = None
         self._blocked_tags = None
         self._is_tag_blocking_mode_inclusive = None
         self._include_tags = None
@@ -165,6 +168,8 @@ class UsersUserPolicy(object):
             self.is_disabled = is_disabled
         if max_parental_rating is not None:
             self.max_parental_rating = max_parental_rating
+        if allow_tag_or_rating is not None:
+            self.allow_tag_or_rating = allow_tag_or_rating
         if blocked_tags is not None:
             self.blocked_tags = blocked_tags
         if is_tag_blocking_mode_inclusive is not None:
@@ -361,6 +366,27 @@ class UsersUserPolicy(object):
         """
 
         self._max_parental_rating = max_parental_rating
+
+    @property
+    def allow_tag_or_rating(self):
+        """Gets the allow_tag_or_rating of this UsersUserPolicy.  # noqa: E501
+
+
+        :return: The allow_tag_or_rating of this UsersUserPolicy.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allow_tag_or_rating
+
+    @allow_tag_or_rating.setter
+    def allow_tag_or_rating(self, allow_tag_or_rating):
+        """Sets the allow_tag_or_rating of this UsersUserPolicy.
+
+
+        :param allow_tag_or_rating: The allow_tag_or_rating of this UsersUserPolicy.  # noqa: E501
+        :type: bool
+        """
+
+        self._allow_tag_or_rating = allow_tag_or_rating
 
     @property
     def blocked_tags(self):

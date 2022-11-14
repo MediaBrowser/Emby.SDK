@@ -29,7 +29,10 @@ class LiveTvTunerHostInfo(object):
         'friendly_name': 'str',
         'setup_url': 'str',
         'import_favorites_only': 'bool',
+        'prefer_epg_channel_images': 'bool',
+        'prefer_epg_channel_numbers': 'bool',
         'allow_hw_transcoding': 'bool',
+        'allow_mapping_by_number': 'bool',
         'source': 'str',
         'tuner_count': 'int',
         'user_agent': 'str',
@@ -46,7 +49,10 @@ class LiveTvTunerHostInfo(object):
         'friendly_name': 'FriendlyName',
         'setup_url': 'SetupUrl',
         'import_favorites_only': 'ImportFavoritesOnly',
+        'prefer_epg_channel_images': 'PreferEpgChannelImages',
+        'prefer_epg_channel_numbers': 'PreferEpgChannelNumbers',
         'allow_hw_transcoding': 'AllowHWTranscoding',
+        'allow_mapping_by_number': 'AllowMappingByNumber',
         'source': 'Source',
         'tuner_count': 'TunerCount',
         'user_agent': 'UserAgent',
@@ -55,7 +61,7 @@ class LiveTvTunerHostInfo(object):
         'data_version': 'DataVersion'
     }
 
-    def __init__(self, id=None, url=None, type=None, device_id=None, friendly_name=None, setup_url=None, import_favorites_only=None, allow_hw_transcoding=None, source=None, tuner_count=None, user_agent=None, referrer=None, provider_options=None, data_version=None):  # noqa: E501
+    def __init__(self, id=None, url=None, type=None, device_id=None, friendly_name=None, setup_url=None, import_favorites_only=None, prefer_epg_channel_images=None, prefer_epg_channel_numbers=None, allow_hw_transcoding=None, allow_mapping_by_number=None, source=None, tuner_count=None, user_agent=None, referrer=None, provider_options=None, data_version=None):  # noqa: E501
         """LiveTvTunerHostInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._url = None
@@ -64,7 +70,10 @@ class LiveTvTunerHostInfo(object):
         self._friendly_name = None
         self._setup_url = None
         self._import_favorites_only = None
+        self._prefer_epg_channel_images = None
+        self._prefer_epg_channel_numbers = None
         self._allow_hw_transcoding = None
+        self._allow_mapping_by_number = None
         self._source = None
         self._tuner_count = None
         self._user_agent = None
@@ -86,8 +95,14 @@ class LiveTvTunerHostInfo(object):
             self.setup_url = setup_url
         if import_favorites_only is not None:
             self.import_favorites_only = import_favorites_only
+        if prefer_epg_channel_images is not None:
+            self.prefer_epg_channel_images = prefer_epg_channel_images
+        if prefer_epg_channel_numbers is not None:
+            self.prefer_epg_channel_numbers = prefer_epg_channel_numbers
         if allow_hw_transcoding is not None:
             self.allow_hw_transcoding = allow_hw_transcoding
+        if allow_mapping_by_number is not None:
+            self.allow_mapping_by_number = allow_mapping_by_number
         if source is not None:
             self.source = source
         if tuner_count is not None:
@@ -249,6 +264,48 @@ class LiveTvTunerHostInfo(object):
         self._import_favorites_only = import_favorites_only
 
     @property
+    def prefer_epg_channel_images(self):
+        """Gets the prefer_epg_channel_images of this LiveTvTunerHostInfo.  # noqa: E501
+
+
+        :return: The prefer_epg_channel_images of this LiveTvTunerHostInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prefer_epg_channel_images
+
+    @prefer_epg_channel_images.setter
+    def prefer_epg_channel_images(self, prefer_epg_channel_images):
+        """Sets the prefer_epg_channel_images of this LiveTvTunerHostInfo.
+
+
+        :param prefer_epg_channel_images: The prefer_epg_channel_images of this LiveTvTunerHostInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._prefer_epg_channel_images = prefer_epg_channel_images
+
+    @property
+    def prefer_epg_channel_numbers(self):
+        """Gets the prefer_epg_channel_numbers of this LiveTvTunerHostInfo.  # noqa: E501
+
+
+        :return: The prefer_epg_channel_numbers of this LiveTvTunerHostInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prefer_epg_channel_numbers
+
+    @prefer_epg_channel_numbers.setter
+    def prefer_epg_channel_numbers(self, prefer_epg_channel_numbers):
+        """Sets the prefer_epg_channel_numbers of this LiveTvTunerHostInfo.
+
+
+        :param prefer_epg_channel_numbers: The prefer_epg_channel_numbers of this LiveTvTunerHostInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._prefer_epg_channel_numbers = prefer_epg_channel_numbers
+
+    @property
     def allow_hw_transcoding(self):
         """Gets the allow_hw_transcoding of this LiveTvTunerHostInfo.  # noqa: E501
 
@@ -268,6 +325,27 @@ class LiveTvTunerHostInfo(object):
         """
 
         self._allow_hw_transcoding = allow_hw_transcoding
+
+    @property
+    def allow_mapping_by_number(self):
+        """Gets the allow_mapping_by_number of this LiveTvTunerHostInfo.  # noqa: E501
+
+
+        :return: The allow_mapping_by_number of this LiveTvTunerHostInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allow_mapping_by_number
+
+    @allow_mapping_by_number.setter
+    def allow_mapping_by_number(self, allow_mapping_by_number):
+        """Sets the allow_mapping_by_number of this LiveTvTunerHostInfo.
+
+
+        :param allow_mapping_by_number: The allow_mapping_by_number of this LiveTvTunerHostInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._allow_mapping_by_number = allow_mapping_by_number
 
     @property
     def source(self):

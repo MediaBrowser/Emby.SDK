@@ -14,7 +14,10 @@ type LiveTvTunerHostInfo struct {
 	FriendlyName string `json:"FriendlyName,omitempty"`
 	SetupUrl string `json:"SetupUrl,omitempty"`
 	ImportFavoritesOnly bool `json:"ImportFavoritesOnly,omitempty"`
+	PreferEpgChannelImages bool `json:"PreferEpgChannelImages,omitempty"`
+	PreferEpgChannelNumbers bool `json:"PreferEpgChannelNumbers,omitempty"`
 	AllowHWTranscoding bool `json:"AllowHWTranscoding,omitempty"`
+	AllowMappingByNumber bool `json:"AllowMappingByNumber,omitempty"`
 	Source string `json:"Source,omitempty"`
 	TunerCount int32 `json:"TunerCount,omitempty"`
 	UserAgent string `json:"UserAgent,omitempty"`

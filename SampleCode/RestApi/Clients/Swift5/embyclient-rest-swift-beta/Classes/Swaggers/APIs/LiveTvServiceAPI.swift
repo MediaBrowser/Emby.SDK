@@ -14068,10 +14068,13 @@ open class LiveTvServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
+  "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
   "FriendlyName" : "FriendlyName",
   "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
   "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
   "Url" : "Url",
   "Source" : "Source",
   "Type" : "Type",
@@ -14083,10 +14086,13 @@ open class LiveTvServiceAPI {
   "DataVersion" : 6,
   "SetupUrl" : "SetupUrl"
 }, {
+  "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
   "FriendlyName" : "FriendlyName",
   "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
   "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
   "Url" : "Url",
   "Source" : "Source",
   "Type" : "Type",
@@ -14136,10 +14142,13 @@ open class LiveTvServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
+  "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
   "FriendlyName" : "FriendlyName",
   "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
   "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
   "Url" : "Url",
   "Source" : "Source",
   "Type" : "Type",
@@ -14231,10 +14240,13 @@ open class LiveTvServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
+  "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
   "FriendlyName" : "FriendlyName",
   "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
   "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
   "Url" : "Url",
   "Source" : "Source",
   "Type" : "Type",
@@ -14246,10 +14258,13 @@ open class LiveTvServiceAPI {
   "DataVersion" : 6,
   "SetupUrl" : "SetupUrl"
 }, {
+  "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
   "FriendlyName" : "FriendlyName",
   "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
   "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
   "Url" : "Url",
   "Source" : "Source",
   "Type" : "Type",
@@ -15324,10 +15339,13 @@ open class LiveTvServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
+  "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
   "FriendlyName" : "FriendlyName",
   "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
   "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
   "Url" : "Url",
   "Source" : "Source",
   "Type" : "Type",

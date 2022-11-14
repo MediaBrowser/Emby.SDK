@@ -33,14 +33,17 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="friendlyName">friendlyName.</param>
         /// <param name="setupUrl">setupUrl.</param>
         /// <param name="importFavoritesOnly">importFavoritesOnly.</param>
+        /// <param name="preferEpgChannelImages">preferEpgChannelImages.</param>
+        /// <param name="preferEpgChannelNumbers">preferEpgChannelNumbers.</param>
         /// <param name="allowHWTranscoding">allowHWTranscoding.</param>
+        /// <param name="allowMappingByNumber">allowMappingByNumber.</param>
         /// <param name="source">source.</param>
         /// <param name="tunerCount">tunerCount.</param>
         /// <param name="userAgent">userAgent.</param>
         /// <param name="referrer">referrer.</param>
         /// <param name="providerOptions">providerOptions.</param>
         /// <param name="dataVersion">dataVersion.</param>
-        public LiveTvTunerHostInfo(string id = default(string), string url = default(string), string type = default(string), string deviceId = default(string), string friendlyName = default(string), string setupUrl = default(string), bool? importFavoritesOnly = default(bool?), bool? allowHWTranscoding = default(bool?), string source = default(string), int? tunerCount = default(int?), string userAgent = default(string), string referrer = default(string), string providerOptions = default(string), int? dataVersion = default(int?))
+        public LiveTvTunerHostInfo(string id = default(string), string url = default(string), string type = default(string), string deviceId = default(string), string friendlyName = default(string), string setupUrl = default(string), bool? importFavoritesOnly = default(bool?), bool? preferEpgChannelImages = default(bool?), bool? preferEpgChannelNumbers = default(bool?), bool? allowHWTranscoding = default(bool?), bool? allowMappingByNumber = default(bool?), string source = default(string), int? tunerCount = default(int?), string userAgent = default(string), string referrer = default(string), string providerOptions = default(string), int? dataVersion = default(int?))
         {
             this.Id = id;
             this.Url = url;
@@ -49,7 +52,10 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.FriendlyName = friendlyName;
             this.SetupUrl = setupUrl;
             this.ImportFavoritesOnly = importFavoritesOnly;
+            this.PreferEpgChannelImages = preferEpgChannelImages;
+            this.PreferEpgChannelNumbers = preferEpgChannelNumbers;
             this.AllowHWTranscoding = allowHWTranscoding;
+            this.AllowMappingByNumber = allowMappingByNumber;
             this.Source = source;
             this.TunerCount = tunerCount;
             this.UserAgent = userAgent;
@@ -101,10 +107,28 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? ImportFavoritesOnly { get; set; }
 
         /// <summary>
+        /// Gets or Sets PreferEpgChannelImages
+        /// </summary>
+        [DataMember(Name="PreferEpgChannelImages", EmitDefaultValue=false)]
+        public bool? PreferEpgChannelImages { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PreferEpgChannelNumbers
+        /// </summary>
+        [DataMember(Name="PreferEpgChannelNumbers", EmitDefaultValue=false)]
+        public bool? PreferEpgChannelNumbers { get; set; }
+
+        /// <summary>
         /// Gets or Sets AllowHWTranscoding
         /// </summary>
         [DataMember(Name="AllowHWTranscoding", EmitDefaultValue=false)]
         public bool? AllowHWTranscoding { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AllowMappingByNumber
+        /// </summary>
+        [DataMember(Name="AllowMappingByNumber", EmitDefaultValue=false)]
+        public bool? AllowMappingByNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Source
@@ -157,7 +181,10 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
             sb.Append("  SetupUrl: ").Append(SetupUrl).Append("\n");
             sb.Append("  ImportFavoritesOnly: ").Append(ImportFavoritesOnly).Append("\n");
+            sb.Append("  PreferEpgChannelImages: ").Append(PreferEpgChannelImages).Append("\n");
+            sb.Append("  PreferEpgChannelNumbers: ").Append(PreferEpgChannelNumbers).Append("\n");
             sb.Append("  AllowHWTranscoding: ").Append(AllowHWTranscoding).Append("\n");
+            sb.Append("  AllowMappingByNumber: ").Append(AllowMappingByNumber).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  TunerCount: ").Append(TunerCount).Append("\n");
             sb.Append("  UserAgent: ").Append(UserAgent).Append("\n");
@@ -234,9 +261,24 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.ImportFavoritesOnly.Equals(input.ImportFavoritesOnly))
                 ) && 
                 (
+                    this.PreferEpgChannelImages == input.PreferEpgChannelImages ||
+                    (this.PreferEpgChannelImages != null &&
+                    this.PreferEpgChannelImages.Equals(input.PreferEpgChannelImages))
+                ) && 
+                (
+                    this.PreferEpgChannelNumbers == input.PreferEpgChannelNumbers ||
+                    (this.PreferEpgChannelNumbers != null &&
+                    this.PreferEpgChannelNumbers.Equals(input.PreferEpgChannelNumbers))
+                ) && 
+                (
                     this.AllowHWTranscoding == input.AllowHWTranscoding ||
                     (this.AllowHWTranscoding != null &&
                     this.AllowHWTranscoding.Equals(input.AllowHWTranscoding))
+                ) && 
+                (
+                    this.AllowMappingByNumber == input.AllowMappingByNumber ||
+                    (this.AllowMappingByNumber != null &&
+                    this.AllowMappingByNumber.Equals(input.AllowMappingByNumber))
                 ) && 
                 (
                     this.Source == input.Source ||
@@ -293,8 +335,14 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.SetupUrl.GetHashCode();
                 if (this.ImportFavoritesOnly != null)
                     hashCode = hashCode * 59 + this.ImportFavoritesOnly.GetHashCode();
+                if (this.PreferEpgChannelImages != null)
+                    hashCode = hashCode * 59 + this.PreferEpgChannelImages.GetHashCode();
+                if (this.PreferEpgChannelNumbers != null)
+                    hashCode = hashCode * 59 + this.PreferEpgChannelNumbers.GetHashCode();
                 if (this.AllowHWTranscoding != null)
                     hashCode = hashCode * 59 + this.AllowHWTranscoding.GetHashCode();
+                if (this.AllowMappingByNumber != null)
+                    hashCode = hashCode * 59 + this.AllowMappingByNumber.GetHashCode();
                 if (this.Source != null)
                     hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.TunerCount != null)

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.16
+  version: 4.8.0.17
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -59352,7 +59352,13 @@ components:
           type: string
         ImportFavoritesOnly:
           type: boolean
+        PreferEpgChannelImages:
+          type: boolean
+        PreferEpgChannelNumbers:
+          type: boolean
         AllowHWTranscoding:
+          type: boolean
+        AllowMappingByNumber:
           type: boolean
         Source:
           type: string
@@ -59369,10 +59375,13 @@ components:
           type: integer
           format: int32
       example:
+        PreferEpgChannelImages: true
         ProviderOptions: ProviderOptions
         FriendlyName: FriendlyName
         DeviceId: DeviceId
+        PreferEpgChannelNumbers: true
         ImportFavoritesOnly: true
+        AllowMappingByNumber: true
         Url: Url
         Source: Source
         Type: Type
@@ -66597,6 +66606,7 @@ components:
           nullable: true
       example:
         Policy:
+          AllowTagOrRating: true
           EnableContentDeletion: true
           EnableContentDeletionFromFolders:
           - EnableContentDeletionFromFolders
@@ -66803,6 +66813,8 @@ components:
           type: integer
           format: int32
           nullable: true
+        AllowTagOrRating:
+          type: boolean
         BlockedTags:
           type: array
           items:
@@ -66897,6 +66909,7 @@ components:
         EnableAllDevices:
           type: boolean
       example:
+        AllowTagOrRating: true
         EnableContentDeletion: true
         EnableContentDeletionFromFolders:
         - EnableContentDeletionFromFolders
@@ -67021,6 +67034,7 @@ components:
         TotalRecordCount: 0
         Items:
         - Policy:
+            AllowTagOrRating: true
             EnableContentDeletion: true
             EnableContentDeletionFromFolders:
             - EnableContentDeletionFromFolders
@@ -67125,6 +67139,7 @@ components:
           Id: Id
           HasPassword: true
         - Policy:
+            AllowTagOrRating: true
             EnableContentDeletion: true
             EnableContentDeletionFromFolders:
             - EnableContentDeletionFromFolders
@@ -67250,6 +67265,7 @@ components:
       example:
         User:
           Policy:
+            AllowTagOrRating: true
             EnableContentDeletion: true
             EnableContentDeletionFromFolders:
             - EnableContentDeletionFromFolders

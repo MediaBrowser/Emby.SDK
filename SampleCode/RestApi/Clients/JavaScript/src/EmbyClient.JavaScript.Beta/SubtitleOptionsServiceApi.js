@@ -15,7 +15,7 @@ import EmbyWebGenericEditEditObjectContainer from '../model/EmbyWebGenericEditEd
 /**
 * SubtitleOptionsService service.
 * @module EmbyClient.JavaScript.Beta/SubtitleOptionsServiceApi
-* @version 4.8.0.16
+* @version 4.8.0.17
 */
 export default class SubtitleOptionsServiceApi {
 

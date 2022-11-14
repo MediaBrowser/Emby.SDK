@@ -53072,7 +53072,16 @@
         "ImportFavoritesOnly": {
           "type": "boolean"
         },
+        "PreferEpgChannelImages": {
+          "type": "boolean"
+        },
+        "PreferEpgChannelNumbers": {
+          "type": "boolean"
+        },
         "AllowHWTranscoding": {
+          "type": "boolean"
+        },
+        "AllowMappingByNumber": {
           "type": "boolean"
         },
         "Source": {
@@ -55253,6 +55262,9 @@
         "MaxParentalRating": {
           "format": "int32",
           "type": "integer"
+        },
+        "AllowTagOrRating": {
+          "type": "boolean"
         },
         "BlockedTags": {
           "type": "array",

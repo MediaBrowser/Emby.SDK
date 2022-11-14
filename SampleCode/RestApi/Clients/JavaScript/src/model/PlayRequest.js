@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PlayRequest model module.
 * @module model/PlayRequest
-* @version 4.8.0.16
+* @version 4.8.0.17
 */
 export default class PlayRequest {
     /**

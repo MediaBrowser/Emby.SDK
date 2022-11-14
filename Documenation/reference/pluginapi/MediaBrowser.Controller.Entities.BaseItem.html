@@ -2335,32 +2335,6 @@ public string Overview { get; set; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_BaseItem_OwnerId_" data-uid="MediaBrowser.Controller.Entities.BaseItem.OwnerId*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_OwnerId" data-uid="MediaBrowser.Controller.Entities.BaseItem.OwnerId">OwnerId</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public long OwnerId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_BaseItem_OwnsFolder_" data-uid="MediaBrowser.Controller.Entities.BaseItem.OwnsFolder*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_OwnsFolder" data-uid="MediaBrowser.Controller.Entities.BaseItem.OwnsFolder">OwnsFolder</h4>
   <div class="markdown level1 summary"><p>Internal use only</p>
@@ -3760,6 +3734,32 @@ public bool UserDataSet { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_UserRating_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UserRating*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UserRating" data-uid="MediaBrowser.Controller.Entities.BaseItem.UserRating">UserRating</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public double? UserRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_Width_" data-uid="MediaBrowser.Controller.Entities.BaseItem.Width*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_Width" data-uid="MediaBrowser.Controller.Entities.BaseItem.Width">Width</h4>
   <div class="markdown level1 summary"></div>
@@ -4836,7 +4836,7 @@ public int Width { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T FindParent&lt;T&gt;()
-    where T : Folder</code></pre>
+    where T : BaseItem</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6444,31 +6444,6 @@ This overload is for CoverArt</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetOwner_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetOwner*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetOwner" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetOwner">GetOwner()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseItem GetOwner()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -8713,12 +8688,12 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_SetParent_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetParent*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_Folder_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetParent(MediaBrowser.Controller.Entities.Folder)">SetParent(Folder)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetParent(MediaBrowser.Controller.Entities.BaseItem)">SetParent(BaseItem)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetParent(Folder parent)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetParent(BaseItem parent)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -8731,7 +8706,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">parent</span></td>
         <td></td>
       </tr>

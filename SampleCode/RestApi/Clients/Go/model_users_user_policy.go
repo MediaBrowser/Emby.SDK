@@ -13,6 +13,7 @@ type UsersUserPolicy struct {
 	IsHiddenFromUnusedDevices bool `json:"IsHiddenFromUnusedDevices,omitempty"`
 	IsDisabled bool `json:"IsDisabled,omitempty"`
 	MaxParentalRating int32 `json:"MaxParentalRating,omitempty"`
+	AllowTagOrRating bool `json:"AllowTagOrRating,omitempty"`
 	BlockedTags []string `json:"BlockedTags,omitempty"`
 	IsTagBlockingModeInclusive bool `json:"IsTagBlockingModeInclusive,omitempty"`
 	IncludeTags []string `json:"IncludeTags,omitempty"`

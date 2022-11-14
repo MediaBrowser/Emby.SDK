@@ -124,6 +124,7 @@ open class UserServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
@@ -304,6 +305,7 @@ open class UserServiceAPI {
 
      - examples: [{contentType=application/json, example=[ {
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
@@ -389,6 +391,7 @@ open class UserServiceAPI {
   "HasPassword" : true
 }, {
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
@@ -522,6 +525,7 @@ open class UserServiceAPI {
   "TotalRecordCount" : 0,
   "Items" : [ {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
@@ -607,6 +611,7 @@ open class UserServiceAPI {
     "HasPassword" : true
   }, {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
@@ -739,6 +744,7 @@ open class UserServiceAPI {
      - examples: [{contentType=application/json, example={
   "User" : {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
@@ -1532,6 +1538,7 @@ open class UserServiceAPI {
      - examples: [{contentType=application/json, example={
   "User" : {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
@@ -2632,6 +2639,7 @@ open class UserServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
