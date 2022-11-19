@@ -271,6 +271,8 @@ from embyclient-python-beta.models.playstate_command import PlaystateCommand
 from embyclient-python-beta.models.playstate_request import PlaystateRequest
 from embyclient-python-beta.models.plugins_configuration_page_type import PluginsConfigurationPageType
 from embyclient-python-beta.models.plugins_plugin_info import PluginsPluginInfo
+from embyclient-python-beta.models.process_run_metrics_process_metric_point import ProcessRunMetricsProcessMetricPoint
+from embyclient-python-beta.models.process_run_metrics_process_statistics import ProcessRunMetricsProcessStatistics
 from embyclient-python-beta.models.progress_event import ProgressEvent
 from embyclient-python-beta.models.provider_id_dictionary import ProviderIdDictionary
 from embyclient-python-beta.models.providers_album_info import ProvidersAlbumInfo
@@ -355,6 +357,7 @@ from embyclient-python-beta.models.tasks_task_result import TasksTaskResult
 from embyclient-python-beta.models.tasks_task_state import TasksTaskState
 from embyclient-python-beta.models.tasks_task_trigger_info import TasksTaskTriggerInfo
 from embyclient-python-beta.models.theme_media_result import ThemeMediaResult
+from embyclient-python-beta.models.time_span import TimeSpan
 from embyclient-python-beta.models.transcode_reason import TranscodeReason
 from embyclient-python-beta.models.transcoding_info import TranscodingInfo
 from embyclient-python-beta.models.transcoding_vp_step_info import TranscodingVpStepInfo

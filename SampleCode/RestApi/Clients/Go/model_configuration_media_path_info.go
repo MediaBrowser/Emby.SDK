@@ -9,4 +9,6 @@ package embyclient-rest-go
 type ConfigurationMediaPathInfo struct {
 	Path string `json:"Path,omitempty"`
 	NetworkPath string `json:"NetworkPath,omitempty"`
+	Username string `json:"Username,omitempty"`
+	Password string `json:"Password,omitempty"`
 }

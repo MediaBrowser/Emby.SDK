@@ -46,6 +46,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="currentCpuUsage">currentCpuUsage.</param>
         /// <param name="averageCpuUsage">averageCpuUsage.</param>
         /// <param name="cpuHistory">cpuHistory.</param>
+        /// <param name="processStatistics">processStatistics.</param>
         /// <param name="currentThrottle">currentThrottle.</param>
         /// <param name="videoDecoder">videoDecoder.</param>
         /// <param name="videoDecoderIsHardware">videoDecoderIsHardware.</param>
@@ -57,7 +58,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="videoEncoderHwAccel">videoEncoderHwAccel.</param>
         /// <param name="videoPipelineInfo">videoPipelineInfo.</param>
         /// <param name="subtitlePipelineInfos">subtitlePipelineInfos.</param>
-        public TranscodingInfo(string audioCodec = default(string), string videoCodec = default(string), string subProtocol = default(string), string container = default(string), bool? isVideoDirect = default(bool?), bool? isAudioDirect = default(bool?), int? bitrate = default(int?), int? audioBitrate = default(int?), int? videoBitrate = default(int?), float? framerate = default(float?), double? completionPercentage = default(double?), double? transcodingPositionTicks = default(double?), double? transcodingStartPositionTicks = default(double?), int? width = default(int?), int? height = default(int?), int? audioChannels = default(int?), List<TranscodeReason> transcodeReasons = default(List<TranscodeReason>), double? currentCpuUsage = default(double?), double? averageCpuUsage = default(double?), List<TupleDoubleDouble> cpuHistory = default(List<TupleDoubleDouble>), int? currentThrottle = default(int?), string videoDecoder = default(string), bool? videoDecoderIsHardware = default(bool?), string videoDecoderMediaType = default(string), string videoDecoderHwAccel = default(string), string videoEncoder = default(string), bool? videoEncoderIsHardware = default(bool?), string videoEncoderMediaType = default(string), string videoEncoderHwAccel = default(string), List<TranscodingVpStepInfo> videoPipelineInfo = default(List<TranscodingVpStepInfo>), List<List<TranscodingVpStepInfo>> subtitlePipelineInfos = default(List<List<TranscodingVpStepInfo>>))
+        public TranscodingInfo(string audioCodec = default(string), string videoCodec = default(string), string subProtocol = default(string), string container = default(string), bool? isVideoDirect = default(bool?), bool? isAudioDirect = default(bool?), int? bitrate = default(int?), int? audioBitrate = default(int?), int? videoBitrate = default(int?), float? framerate = default(float?), double? completionPercentage = default(double?), double? transcodingPositionTicks = default(double?), double? transcodingStartPositionTicks = default(double?), int? width = default(int?), int? height = default(int?), int? audioChannels = default(int?), List<TranscodeReason> transcodeReasons = default(List<TranscodeReason>), double? currentCpuUsage = default(double?), double? averageCpuUsage = default(double?), List<TupleDoubleDouble> cpuHistory = default(List<TupleDoubleDouble>), ProcessRunMetricsProcessStatistics processStatistics = default(ProcessRunMetricsProcessStatistics), int? currentThrottle = default(int?), string videoDecoder = default(string), bool? videoDecoderIsHardware = default(bool?), string videoDecoderMediaType = default(string), string videoDecoderHwAccel = default(string), string videoEncoder = default(string), bool? videoEncoderIsHardware = default(bool?), string videoEncoderMediaType = default(string), string videoEncoderHwAccel = default(string), List<TranscodingVpStepInfo> videoPipelineInfo = default(List<TranscodingVpStepInfo>), List<List<TranscodingVpStepInfo>> subtitlePipelineInfos = default(List<List<TranscodingVpStepInfo>>))
         {
             this.AudioCodec = audioCodec;
             this.VideoCodec = videoCodec;
@@ -79,6 +80,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.CurrentCpuUsage = currentCpuUsage;
             this.AverageCpuUsage = averageCpuUsage;
             this.CpuHistory = cpuHistory;
+            this.ProcessStatistics = processStatistics;
             this.CurrentThrottle = currentThrottle;
             this.VideoDecoder = videoDecoder;
             this.VideoDecoderIsHardware = videoDecoderIsHardware;
@@ -213,6 +215,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public List<TupleDoubleDouble> CpuHistory { get; set; }
 
         /// <summary>
+        /// Gets or Sets ProcessStatistics
+        /// </summary>
+        [DataMember(Name="ProcessStatistics", EmitDefaultValue=false)]
+        public ProcessRunMetricsProcessStatistics ProcessStatistics { get; set; }
+
+        /// <summary>
         /// Gets or Sets CurrentThrottle
         /// </summary>
         [DataMember(Name="CurrentThrottle", EmitDefaultValue=false)]
@@ -306,6 +314,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  CurrentCpuUsage: ").Append(CurrentCpuUsage).Append("\n");
             sb.Append("  AverageCpuUsage: ").Append(AverageCpuUsage).Append("\n");
             sb.Append("  CpuHistory: ").Append(CpuHistory).Append("\n");
+            sb.Append("  ProcessStatistics: ").Append(ProcessStatistics).Append("\n");
             sb.Append("  CurrentThrottle: ").Append(CurrentThrottle).Append("\n");
             sb.Append("  VideoDecoder: ").Append(VideoDecoder).Append("\n");
             sb.Append("  VideoDecoderIsHardware: ").Append(VideoDecoderIsHardware).Append("\n");
@@ -454,6 +463,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.CpuHistory.SequenceEqual(input.CpuHistory)
                 ) && 
                 (
+                    this.ProcessStatistics == input.ProcessStatistics ||
+                    (this.ProcessStatistics != null &&
+                    this.ProcessStatistics.Equals(input.ProcessStatistics))
+                ) && 
+                (
                     this.CurrentThrottle == input.CurrentThrottle ||
                     (this.CurrentThrottle != null &&
                     this.CurrentThrottle.Equals(input.CurrentThrottle))
@@ -561,6 +575,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.AverageCpuUsage.GetHashCode();
                 if (this.CpuHistory != null)
                     hashCode = hashCode * 59 + this.CpuHistory.GetHashCode();
+                if (this.ProcessStatistics != null)
+                    hashCode = hashCode * 59 + this.ProcessStatistics.GetHashCode();
                 if (this.CurrentThrottle != null)
                     hashCode = hashCode * 59 + this.CurrentThrottle.GetHashCode();
                 if (this.VideoDecoder != null)

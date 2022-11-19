@@ -1356,6 +1356,47 @@ open class UserServiceAPI {
     },
     "TranscodingInfo" : {
       "IsAudioDirect" : true,
+      "ProcessStatistics" : {
+        "Metrics" : [ {
+          "Time" : {
+            "TotalMilliseconds" : 7.143538047012306,
+            "TotalMinutes" : 0.8851374739011653,
+            "Hours" : 6,
+            "Ticks" : 1,
+            "TotalSeconds" : 7.058770351582356,
+            "Days" : 2,
+            "TotalDays" : 3.353193347011243,
+            "Seconds" : 6,
+            "TotalHours" : 3.0937452626664474,
+            "Milliseconds" : 6,
+            "Minutes" : 5
+          },
+          "WorkingSet" : 4.652396432933246,
+          "VirtualMemory" : 0.10263654006109402,
+          "CpuPercent" : 6.519180951018382
+        }, {
+          "Time" : {
+            "TotalMilliseconds" : 7.143538047012306,
+            "TotalMinutes" : 0.8851374739011653,
+            "Hours" : 6,
+            "Ticks" : 1,
+            "TotalSeconds" : 7.058770351582356,
+            "Days" : 2,
+            "TotalDays" : 3.353193347011243,
+            "Seconds" : 6,
+            "TotalHours" : 3.0937452626664474,
+            "Milliseconds" : 6,
+            "Minutes" : 5
+          },
+          "WorkingSet" : 4.652396432933246,
+          "VirtualMemory" : 0.10263654006109402,
+          "CpuPercent" : 6.519180951018382
+        } ],
+        "AverageCpu" : 6.438423552598547,
+        "CurrentCpu" : 9.018348186070783,
+        "CurrentWorkingSet" : 6.965117697638846,
+        "CurrentVirtualMemory" : 3.5571952270680973
+      },
       "TranscodeReasons" : [ "ContainerNotSupported", "ContainerNotSupported" ],
       "VideoEncoderHwAccel" : "VideoEncoderHwAccel",
       "Framerate" : 1.0246457,
@@ -1405,7 +1446,7 @@ open class UserServiceAPI {
         "Item1" : 6.683562403749608,
         "Item2" : 8.762042012749001
       } ],
-      "CurrentThrottle" : 9,
+      "CurrentThrottle" : 8,
       "VideoCodec" : "VideoCodec",
       "Bitrate" : 4,
       "VideoDecoderHwAccel" : "VideoDecoderHwAccel",
@@ -2150,6 +2191,47 @@ open class UserServiceAPI {
     },
     "TranscodingInfo" : {
       "IsAudioDirect" : true,
+      "ProcessStatistics" : {
+        "Metrics" : [ {
+          "Time" : {
+            "TotalMilliseconds" : 7.143538047012306,
+            "TotalMinutes" : 0.8851374739011653,
+            "Hours" : 6,
+            "Ticks" : 1,
+            "TotalSeconds" : 7.058770351582356,
+            "Days" : 2,
+            "TotalDays" : 3.353193347011243,
+            "Seconds" : 6,
+            "TotalHours" : 3.0937452626664474,
+            "Milliseconds" : 6,
+            "Minutes" : 5
+          },
+          "WorkingSet" : 4.652396432933246,
+          "VirtualMemory" : 0.10263654006109402,
+          "CpuPercent" : 6.519180951018382
+        }, {
+          "Time" : {
+            "TotalMilliseconds" : 7.143538047012306,
+            "TotalMinutes" : 0.8851374739011653,
+            "Hours" : 6,
+            "Ticks" : 1,
+            "TotalSeconds" : 7.058770351582356,
+            "Days" : 2,
+            "TotalDays" : 3.353193347011243,
+            "Seconds" : 6,
+            "TotalHours" : 3.0937452626664474,
+            "Milliseconds" : 6,
+            "Minutes" : 5
+          },
+          "WorkingSet" : 4.652396432933246,
+          "VirtualMemory" : 0.10263654006109402,
+          "CpuPercent" : 6.519180951018382
+        } ],
+        "AverageCpu" : 6.438423552598547,
+        "CurrentCpu" : 9.018348186070783,
+        "CurrentWorkingSet" : 6.965117697638846,
+        "CurrentVirtualMemory" : 3.5571952270680973
+      },
       "TranscodeReasons" : [ "ContainerNotSupported", "ContainerNotSupported" ],
       "VideoEncoderHwAccel" : "VideoEncoderHwAccel",
       "Framerate" : 1.0246457,
@@ -2199,7 +2281,7 @@ open class UserServiceAPI {
         "Item1" : 6.683562403749608,
         "Item2" : 8.762042012749001
       } ],
-      "CurrentThrottle" : 9,
+      "CurrentThrottle" : 8,
       "VideoCodec" : "VideoCodec",
       "Bitrate" : 4,
       "VideoDecoderHwAccel" : "VideoDecoderHwAccel",

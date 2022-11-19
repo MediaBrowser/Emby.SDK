@@ -374,6 +374,69 @@
   </table>
   
   
+  <a id="Emby_Media_Common_Extensions_EnumExtensions_EnumListFromStringOrAlias_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.EnumListFromStringOrAlias*"></a>
+  <h4 id="Emby_Media_Common_Extensions_EnumExtensions_EnumListFromStringOrAlias__1_System_String_System_Char___" data-uid="Emby.Media.Common.Extensions.EnumExtensions.EnumListFromStringOrAlias``1(System.String,System.Char[])">EnumListFromStringOrAlias&lt;T&gt;(String, Char[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;T&gt; EnumListFromStringOrAlias&lt;T&gt;(string value, params char[] splitChars)
+    where T : struct, Enum</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>[]</td>
+        <td><span class="parametername">splitChars</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Emby_Media_Common_Extensions_EnumExtensions_FindByMimeType_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.FindByMimeType*"></a>
   <h4 id="Emby_Media_Common_Extensions_EnumExtensions_FindByMimeType__1___0_System_String_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.FindByMimeType``1(``0,System.String)">FindByMimeType&lt;T&gt;(T, String)</h4>
   <div class="markdown level1 summary"><p>Finds members of a specified enum that are having the specified mime type defined in by a <a class="xref" href="Emby.Media.Model.Attributes.MimeTypesAttribute.html">MimeTypesAttribute</a>.</p>
@@ -900,6 +963,51 @@
   </table>
   
   
+  <a id="Emby_Media_Common_Extensions_EnumExtensions_GetFirstAliasOrName_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.GetFirstAliasOrName*"></a>
+  <h4 id="Emby_Media_Common_Extensions_EnumExtensions_GetFirstAliasOrName_System_Enum_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.GetFirstAliasOrName(System.Enum)">GetFirstAliasOrName(Enum)</h4>
+  <div class="markdown level1 summary"><p>Gets the first alias or otherwise the name of the enum entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetFirstAliasOrName(this Enum enumValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a></td>
+        <td><span class="parametername">enumValue</span></td>
+        <td><p>The enum value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Emby_Media_Common_Extensions_EnumExtensions_GetFirstRelatedGuid_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.GetFirstRelatedGuid*"></a>
   <h4 id="Emby_Media_Common_Extensions_EnumExtensions_GetFirstRelatedGuid_System_Enum_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.GetFirstRelatedGuid(System.Enum)">GetFirstRelatedGuid(Enum)</h4>
   <div class="markdown level1 summary"><p>Gets the first guid of an enum member's <a class="xref" href="MediaBrowser.Model.Attributes.RelatedGuidAttribute.html">RelatedGuidAttribute</a>, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid.empty">Empty</a> in case there is none.</p>
@@ -1330,6 +1438,69 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Media_Common_Extensions_EnumExtensions_IsAnyOf_" data-uid="Emby.Media.Common.Extensions.EnumExtensions.IsAnyOf*"></a>
+  <h4 id="Emby_Media_Common_Extensions_EnumExtensions_IsAnyOf__1_System_Nullable___0____0___" data-uid="Emby.Media.Common.Extensions.EnumExtensions.IsAnyOf``1(System.Nullable{``0},``0[])">IsAnyOf&lt;T&gt;(Nullable&lt;T&gt;, T[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAnyOf&lt;T&gt;(this T? value, params T[] list)
+    where T : struct, Enum</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;T&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">list</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>

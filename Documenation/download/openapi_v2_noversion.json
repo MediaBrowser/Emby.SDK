@@ -51124,6 +51124,9 @@
             "$ref": "#/definitions/Tuple_Double-Double"
           }
         },
+        "ProcessStatistics": {
+          "$ref": "#/definitions/ProcessRun.Metrics.ProcessStatistics"
+        },
         "CurrentThrottle": {
           "format": "int32",
           "type": "integer"
@@ -51213,6 +51216,105 @@
           "type": "number"
         }
       }
+    },
+    "ProcessRun.Metrics.ProcessStatistics": {
+      "type": "object",
+      "properties": {
+        "CurrentCpu": {
+          "format": "double",
+          "type": "number"
+        },
+        "AverageCpu": {
+          "format": "double",
+          "type": "number"
+        },
+        "CurrentVirtualMemory": {
+          "format": "double",
+          "type": "number"
+        },
+        "CurrentWorkingSet": {
+          "format": "double",
+          "type": "number"
+        },
+        "Metrics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProcessRun.Metrics.ProcessMetricPoint"
+          }
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.ProcessRun.Metrics.ProcessStatistics"
+    },
+    "ProcessRun.Metrics.ProcessMetricPoint": {
+      "type": "object",
+      "properties": {
+        "Time": {
+          "$ref": "#/definitions/TimeSpan"
+        },
+        "CpuPercent": {
+          "format": "double",
+          "type": "number"
+        },
+        "VirtualMemory": {
+          "format": "double",
+          "type": "number"
+        },
+        "WorkingSet": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.ProcessRun.Metrics.ProcessMetricPoint"
+    },
+    "TimeSpan": {
+      "type": "object",
+      "properties": {
+        "Ticks": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "Days": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Hours": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Milliseconds": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Minutes": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Seconds": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "TotalDays": {
+          "format": "double",
+          "type": "number"
+        },
+        "TotalHours": {
+          "format": "double",
+          "type": "number"
+        },
+        "TotalMilliseconds": {
+          "format": "double",
+          "type": "number"
+        },
+        "TotalMinutes": {
+          "format": "double",
+          "type": "number"
+        },
+        "TotalSeconds": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "x-internal-ref-name": "System.TimeSpan"
     },
     "Transcoding.VpStepInfo": {
       "type": "object",
@@ -52767,6 +52869,12 @@
           "type": "string"
         },
         "NetworkPath": {
+          "type": "string"
+        },
+        "Username": {
+          "type": "string"
+        },
+        "Password": {
           "type": "string"
         }
       },

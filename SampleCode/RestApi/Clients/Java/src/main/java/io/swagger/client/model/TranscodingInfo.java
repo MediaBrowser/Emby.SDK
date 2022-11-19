@@ -12,6 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.ProcessRunMetricsProcessStatistics;
 import io.swagger.client.model.TranscodeReason;
 import io.swagger.client.model.TranscodingVpStepInfo;
 import io.swagger.client.model.TupleDoubleDouble;
@@ -84,6 +85,9 @@ public class TranscodingInfo {
 
   @SerializedName("CpuHistory")
   private List<TupleDoubleDouble> cpuHistory = null;
+
+  @SerializedName("ProcessStatistics")
+  private ProcessRunMetricsProcessStatistics processStatistics = null;
 
   @SerializedName("CurrentThrottle")
   private Integer currentThrottle = null;
@@ -494,6 +498,24 @@ public class TranscodingInfo {
     this.cpuHistory = cpuHistory;
   }
 
+  public TranscodingInfo processStatistics(ProcessRunMetricsProcessStatistics processStatistics) {
+    this.processStatistics = processStatistics;
+    return this;
+  }
+
+   /**
+   * Get processStatistics
+   * @return processStatistics
+  **/
+  @Schema(description = "")
+  public ProcessRunMetricsProcessStatistics getProcessStatistics() {
+    return processStatistics;
+  }
+
+  public void setProcessStatistics(ProcessRunMetricsProcessStatistics processStatistics) {
+    this.processStatistics = processStatistics;
+  }
+
   public TranscodingInfo currentThrottle(Integer currentThrottle) {
     this.currentThrottle = currentThrottle;
     return this;
@@ -738,6 +760,7 @@ public class TranscodingInfo {
         Objects.equals(this.currentCpuUsage, transcodingInfo.currentCpuUsage) &&
         Objects.equals(this.averageCpuUsage, transcodingInfo.averageCpuUsage) &&
         Objects.equals(this.cpuHistory, transcodingInfo.cpuHistory) &&
+        Objects.equals(this.processStatistics, transcodingInfo.processStatistics) &&
         Objects.equals(this.currentThrottle, transcodingInfo.currentThrottle) &&
         Objects.equals(this.videoDecoder, transcodingInfo.videoDecoder) &&
         Objects.equals(this.videoDecoderIsHardware, transcodingInfo.videoDecoderIsHardware) &&
@@ -753,7 +776,7 @@ public class TranscodingInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(audioCodec, videoCodec, subProtocol, container, isVideoDirect, isAudioDirect, bitrate, audioBitrate, videoBitrate, framerate, completionPercentage, transcodingPositionTicks, transcodingStartPositionTicks, width, height, audioChannels, transcodeReasons, currentCpuUsage, averageCpuUsage, cpuHistory, currentThrottle, videoDecoder, videoDecoderIsHardware, videoDecoderMediaType, videoDecoderHwAccel, videoEncoder, videoEncoderIsHardware, videoEncoderMediaType, videoEncoderHwAccel, videoPipelineInfo, subtitlePipelineInfos);
+    return Objects.hash(audioCodec, videoCodec, subProtocol, container, isVideoDirect, isAudioDirect, bitrate, audioBitrate, videoBitrate, framerate, completionPercentage, transcodingPositionTicks, transcodingStartPositionTicks, width, height, audioChannels, transcodeReasons, currentCpuUsage, averageCpuUsage, cpuHistory, processStatistics, currentThrottle, videoDecoder, videoDecoderIsHardware, videoDecoderMediaType, videoDecoderHwAccel, videoEncoder, videoEncoderIsHardware, videoEncoderMediaType, videoEncoderHwAccel, videoPipelineInfo, subtitlePipelineInfos);
   }
 
 
@@ -782,6 +805,7 @@ public class TranscodingInfo {
     sb.append("    currentCpuUsage: ").append(toIndentedString(currentCpuUsage)).append("\n");
     sb.append("    averageCpuUsage: ").append(toIndentedString(averageCpuUsage)).append("\n");
     sb.append("    cpuHistory: ").append(toIndentedString(cpuHistory)).append("\n");
+    sb.append("    processStatistics: ").append(toIndentedString(processStatistics)).append("\n");
     sb.append("    currentThrottle: ").append(toIndentedString(currentThrottle)).append("\n");
     sb.append("    videoDecoder: ").append(toIndentedString(videoDecoder)).append("\n");
     sb.append("    videoDecoderIsHardware: ").append(toIndentedString(videoDecoderIsHardware)).append("\n");

@@ -203,6 +203,8 @@ import PlaystateCommand from './model/PlaystateCommand';
 import PlaystateRequest from './model/PlaystateRequest';
 import PluginsConfigurationPageType from './model/PluginsConfigurationPageType';
 import PluginsPluginInfo from './model/PluginsPluginInfo';
+import ProcessRunMetricsProcessMetricPoint from './model/ProcessRunMetricsProcessMetricPoint';
+import ProcessRunMetricsProcessStatistics from './model/ProcessRunMetricsProcessStatistics';
 import ProgressEvent from './model/ProgressEvent';
 import ProviderIdDictionary from './model/ProviderIdDictionary';
 import ProvidersAlbumInfo from './model/ProvidersAlbumInfo';
@@ -287,6 +289,7 @@ import TasksTaskResult from './model/TasksTaskResult';
 import TasksTaskState from './model/TasksTaskState';
 import TasksTaskTriggerInfo from './model/TasksTaskTriggerInfo';
 import ThemeMediaResult from './model/ThemeMediaResult';
+import TimeSpan from './model/TimeSpan';
 import TranscodeReason from './model/TranscodeReason';
 import TranscodingInfo from './model/TranscodingInfo';
 import TranscodingVpStepInfo from './model/TranscodingVpStepInfo';
@@ -410,7 +413,7 @@ import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.17
+* @version 4.8.0.18
 */
 export {
     /**
@@ -1578,6 +1581,18 @@ export {
     PluginsPluginInfo,
 
     /**
+     * The ProcessRunMetricsProcessMetricPoint model constructor.
+     * @property {module:model/ProcessRunMetricsProcessMetricPoint}
+     */
+    ProcessRunMetricsProcessMetricPoint,
+
+    /**
+     * The ProcessRunMetricsProcessStatistics model constructor.
+     * @property {module:model/ProcessRunMetricsProcessStatistics}
+     */
+    ProcessRunMetricsProcessStatistics,
+
+    /**
      * The ProgressEvent model constructor.
      * @property {module:model/ProgressEvent}
      */
@@ -2080,6 +2095,12 @@ export {
      * @property {module:model/ThemeMediaResult}
      */
     ThemeMediaResult,
+
+    /**
+     * The TimeSpan model constructor.
+     * @property {module:model/TimeSpan}
+     */
+    TimeSpan,
 
     /**
      * The TranscodeReason model constructor.

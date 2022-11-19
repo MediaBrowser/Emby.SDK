@@ -27,6 +27,7 @@ type TranscodingInfo struct {
 	CurrentCpuUsage float64 `json:"CurrentCpuUsage,omitempty"`
 	AverageCpuUsage float64 `json:"AverageCpuUsage,omitempty"`
 	CpuHistory []TupleDoubleDouble `json:"CpuHistory,omitempty"`
+	ProcessStatistics *ProcessRunMetricsProcessStatistics `json:"ProcessStatistics,omitempty"`
 	CurrentThrottle int32 `json:"CurrentThrottle,omitempty"`
 	VideoDecoder string `json:"VideoDecoder,omitempty"`
 	VideoDecoderIsHardware bool `json:"VideoDecoderIsHardware,omitempty"`

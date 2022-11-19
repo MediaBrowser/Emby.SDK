@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.17"
+    "version": "4.8.0.18"
   },
   "servers": [
     {
@@ -69179,6 +69179,9 @@
               "$ref": "#/components/schemas/Tuple_Double-Double"
             }
           },
+          "ProcessStatistics": {
+            "$ref": "#/components/schemas/ProcessRun.Metrics.ProcessStatistics"
+          },
           "CurrentThrottle": {
             "type": "integer",
             "format": "int32",
@@ -69269,6 +69272,105 @@
             "format": "double"
           }
         }
+      },
+      "ProcessRun.Metrics.ProcessStatistics": {
+        "type": "object",
+        "properties": {
+          "CurrentCpu": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageCpu": {
+            "type": "number",
+            "format": "double"
+          },
+          "CurrentVirtualMemory": {
+            "type": "number",
+            "format": "double"
+          },
+          "CurrentWorkingSet": {
+            "type": "number",
+            "format": "double"
+          },
+          "Metrics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProcessRun.Metrics.ProcessMetricPoint"
+            }
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.ProcessRun.Metrics.ProcessStatistics"
+      },
+      "ProcessRun.Metrics.ProcessMetricPoint": {
+        "type": "object",
+        "properties": {
+          "Time": {
+            "$ref": "#/components/schemas/TimeSpan"
+          },
+          "CpuPercent": {
+            "type": "number",
+            "format": "double"
+          },
+          "VirtualMemory": {
+            "type": "number",
+            "format": "double"
+          },
+          "WorkingSet": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.ProcessRun.Metrics.ProcessMetricPoint"
+      },
+      "TimeSpan": {
+        "type": "object",
+        "properties": {
+          "Ticks": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Days": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Hours": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Milliseconds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Minutes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Seconds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TotalDays": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalHours": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalMilliseconds": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalMinutes": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalSeconds": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "x-internal-ref-name": "System.TimeSpan"
       },
       "Transcoding.VpStepInfo": {
         "type": "object",
@@ -70829,6 +70931,12 @@
             "type": "string"
           },
           "NetworkPath": {
+            "type": "string"
+          },
+          "Username": {
+            "type": "string"
+          },
+          "Password": {
             "type": "string"
           }
         },

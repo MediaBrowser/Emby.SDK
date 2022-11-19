@@ -192,13 +192,14 @@
   
   
   <a id="Emby_Model_ProcessRun_IProcessManager_RegisterProcess_" data-uid="Emby.Model.ProcessRun.IProcessManager.RegisterProcess*"></a>
-  <h4 id="Emby_Model_ProcessRun_IProcessManager_RegisterProcess_Emby_Model_ProcessRun_IProcessRunner_System_Boolean_" data-uid="Emby.Model.ProcessRun.IProcessManager.RegisterProcess(Emby.Model.ProcessRun.IProcessRunner,System.Boolean)">RegisterProcess(IProcessRunner, Boolean)</h4>
+  <h4 id="Emby_Model_ProcessRun_IProcessManager_RegisterProcess_Emby_Model_ProcessRun_IProcessRunner_" data-uid="Emby.Model.ProcessRun.IProcessManager.RegisterProcess(Emby.Model.ProcessRun.IProcessRunner)">RegisterProcess(IProcessRunner)</h4>
   <div class="markdown level1 summary"><p>Registers a process.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool RegisterProcess(IProcessRunner processRunner, bool autoUnregister = false)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Do not use. Process registration is done automatcially now.&quot;)]
+bool RegisterProcess(IProcessRunner processRunner)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,12 +215,6 @@
         <td><a class="xref" href="Emby.Model.ProcessRun.IProcessRunner.html">IProcessRunner</a></td>
         <td><span class="parametername">processRunner</span></td>
         <td><p>The process runner.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">autoUnregister</span></td>
-        <td><p>if set to <code>true</code> [automatic unregister].</p>
 </td>
       </tr>
     </tbody>
@@ -276,7 +271,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool UnregisterProcess(IProcessRunner processRunner)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Do not use. Process registration is done automatcially now.&quot;)]
+bool UnregisterProcess(IProcessRunner processRunner)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

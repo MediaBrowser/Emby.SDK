@@ -42,6 +42,7 @@ class TranscodingInfo(object):
         'current_cpu_usage': 'float',
         'average_cpu_usage': 'float',
         'cpu_history': 'list[TupleDoubleDouble]',
+        'process_statistics': 'ProcessRunMetricsProcessStatistics',
         'current_throttle': 'int',
         'video_decoder': 'str',
         'video_decoder_is_hardware': 'bool',
@@ -76,6 +77,7 @@ class TranscodingInfo(object):
         'current_cpu_usage': 'CurrentCpuUsage',
         'average_cpu_usage': 'AverageCpuUsage',
         'cpu_history': 'CpuHistory',
+        'process_statistics': 'ProcessStatistics',
         'current_throttle': 'CurrentThrottle',
         'video_decoder': 'VideoDecoder',
         'video_decoder_is_hardware': 'VideoDecoderIsHardware',
@@ -89,7 +91,7 @@ class TranscodingInfo(object):
         'subtitle_pipeline_infos': 'SubtitlePipelineInfos'
     }
 
-    def __init__(self, audio_codec=None, video_codec=None, sub_protocol=None, container=None, is_video_direct=None, is_audio_direct=None, bitrate=None, audio_bitrate=None, video_bitrate=None, framerate=None, completion_percentage=None, transcoding_position_ticks=None, transcoding_start_position_ticks=None, width=None, height=None, audio_channels=None, transcode_reasons=None, current_cpu_usage=None, average_cpu_usage=None, cpu_history=None, current_throttle=None, video_decoder=None, video_decoder_is_hardware=None, video_decoder_media_type=None, video_decoder_hw_accel=None, video_encoder=None, video_encoder_is_hardware=None, video_encoder_media_type=None, video_encoder_hw_accel=None, video_pipeline_info=None, subtitle_pipeline_infos=None):  # noqa: E501
+    def __init__(self, audio_codec=None, video_codec=None, sub_protocol=None, container=None, is_video_direct=None, is_audio_direct=None, bitrate=None, audio_bitrate=None, video_bitrate=None, framerate=None, completion_percentage=None, transcoding_position_ticks=None, transcoding_start_position_ticks=None, width=None, height=None, audio_channels=None, transcode_reasons=None, current_cpu_usage=None, average_cpu_usage=None, cpu_history=None, process_statistics=None, current_throttle=None, video_decoder=None, video_decoder_is_hardware=None, video_decoder_media_type=None, video_decoder_hw_accel=None, video_encoder=None, video_encoder_is_hardware=None, video_encoder_media_type=None, video_encoder_hw_accel=None, video_pipeline_info=None, subtitle_pipeline_infos=None):  # noqa: E501
         """TranscodingInfo - a model defined in Swagger"""  # noqa: E501
         self._audio_codec = None
         self._video_codec = None
@@ -111,6 +113,7 @@ class TranscodingInfo(object):
         self._current_cpu_usage = None
         self._average_cpu_usage = None
         self._cpu_history = None
+        self._process_statistics = None
         self._current_throttle = None
         self._video_decoder = None
         self._video_decoder_is_hardware = None
@@ -163,6 +166,8 @@ class TranscodingInfo(object):
             self.average_cpu_usage = average_cpu_usage
         if cpu_history is not None:
             self.cpu_history = cpu_history
+        if process_statistics is not None:
+            self.process_statistics = process_statistics
         if current_throttle is not None:
             self.current_throttle = current_throttle
         if video_decoder is not None:
@@ -605,6 +610,27 @@ class TranscodingInfo(object):
         """
 
         self._cpu_history = cpu_history
+
+    @property
+    def process_statistics(self):
+        """Gets the process_statistics of this TranscodingInfo.  # noqa: E501
+
+
+        :return: The process_statistics of this TranscodingInfo.  # noqa: E501
+        :rtype: ProcessRunMetricsProcessStatistics
+        """
+        return self._process_statistics
+
+    @process_statistics.setter
+    def process_statistics(self, process_statistics):
+        """Sets the process_statistics of this TranscodingInfo.
+
+
+        :param process_statistics: The process_statistics of this TranscodingInfo.  # noqa: E501
+        :type: ProcessRunMetricsProcessStatistics
+        """
+
+        self._process_statistics = process_statistics
 
     @property
     def current_throttle(self):

@@ -23,23 +23,33 @@ class ConfigurationMediaPathInfo(object):
     """
     swagger_types = {
         'path': 'str',
-        'network_path': 'str'
+        'network_path': 'str',
+        'username': 'str',
+        'password': 'str'
     }
 
     attribute_map = {
         'path': 'Path',
-        'network_path': 'NetworkPath'
+        'network_path': 'NetworkPath',
+        'username': 'Username',
+        'password': 'Password'
     }
 
-    def __init__(self, path=None, network_path=None):  # noqa: E501
+    def __init__(self, path=None, network_path=None, username=None, password=None):  # noqa: E501
         """ConfigurationMediaPathInfo - a model defined in Swagger"""  # noqa: E501
         self._path = None
         self._network_path = None
+        self._username = None
+        self._password = None
         self.discriminator = None
         if path is not None:
             self.path = path
         if network_path is not None:
             self.network_path = network_path
+        if username is not None:
+            self.username = username
+        if password is not None:
+            self.password = password
 
     @property
     def path(self):
@@ -82,6 +92,48 @@ class ConfigurationMediaPathInfo(object):
         """
 
         self._network_path = network_path
+
+    @property
+    def username(self):
+        """Gets the username of this ConfigurationMediaPathInfo.  # noqa: E501
+
+
+        :return: The username of this ConfigurationMediaPathInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._username
+
+    @username.setter
+    def username(self, username):
+        """Sets the username of this ConfigurationMediaPathInfo.
+
+
+        :param username: The username of this ConfigurationMediaPathInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._username = username
+
+    @property
+    def password(self):
+        """Gets the password of this ConfigurationMediaPathInfo.  # noqa: E501
+
+
+        :return: The password of this ConfigurationMediaPathInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this ConfigurationMediaPathInfo.
+
+
+        :param password: The password of this ConfigurationMediaPathInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

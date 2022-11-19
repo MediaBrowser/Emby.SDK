@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ConfigurationMediaPathInfo model module.
 * @module model/ConfigurationMediaPathInfo
-* @version 4.8.0.17
+* @version 4.8.0.18
 */
 export default class ConfigurationMediaPathInfo {
     /**
@@ -47,6 +47,12 @@ export default class ConfigurationMediaPathInfo {
             if (data.hasOwnProperty('NetworkPath')) {
                 obj['NetworkPath'] = ApiClient.convertToType(data['NetworkPath'], 'String');
             }
+            if (data.hasOwnProperty('Username')) {
+                obj['Username'] = ApiClient.convertToType(data['Username'], 'String');
+            }
+            if (data.hasOwnProperty('Password')) {
+                obj['Password'] = ApiClient.convertToType(data['Password'], 'String');
+            }
         }
         return obj;
     }
@@ -59,6 +65,14 @@ export default class ConfigurationMediaPathInfo {
     * @member {String} NetworkPath
     */
     'NetworkPath' = undefined;
+    /**
+    * @member {String} Username
+    */
+    'Username' = undefined;
+    /**
+    * @member {String} Password
+    */
+    'Password' = undefined;
 
 
 

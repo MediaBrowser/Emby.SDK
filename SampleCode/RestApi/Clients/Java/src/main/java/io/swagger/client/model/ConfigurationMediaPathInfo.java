@@ -26,6 +26,12 @@ public class ConfigurationMediaPathInfo {
   @SerializedName("NetworkPath")
   private String networkPath = null;
 
+  @SerializedName("Username")
+  private String username = null;
+
+  @SerializedName("Password")
+  private String password = null;
+
   public ConfigurationMediaPathInfo path(String path) {
     this.path = path;
     return this;
@@ -62,6 +68,42 @@ public class ConfigurationMediaPathInfo {
     this.networkPath = networkPath;
   }
 
+  public ConfigurationMediaPathInfo username(String username) {
+    this.username = username;
+    return this;
+  }
+
+   /**
+   * Get username
+   * @return username
+  **/
+  @Schema(description = "")
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public ConfigurationMediaPathInfo password(String password) {
+    this.password = password;
+    return this;
+  }
+
+   /**
+   * Get password
+   * @return password
+  **/
+  @Schema(description = "")
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,12 +115,14 @@ public class ConfigurationMediaPathInfo {
     }
     ConfigurationMediaPathInfo configurationMediaPathInfo = (ConfigurationMediaPathInfo) o;
     return Objects.equals(this.path, configurationMediaPathInfo.path) &&
-        Objects.equals(this.networkPath, configurationMediaPathInfo.networkPath);
+        Objects.equals(this.networkPath, configurationMediaPathInfo.networkPath) &&
+        Objects.equals(this.username, configurationMediaPathInfo.username) &&
+        Objects.equals(this.password, configurationMediaPathInfo.password);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(path, networkPath);
+    return Objects.hash(path, networkPath, username, password);
   }
 
 
@@ -89,6 +133,8 @@ public class ConfigurationMediaPathInfo {
     
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    networkPath: ").append(toIndentedString(networkPath)).append("\n");
+    sb.append("    username: ").append(toIndentedString(username)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("}");
     return sb.toString();
   }

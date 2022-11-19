@@ -159,7 +159,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
   <h5 id="MediaBrowser_Model_Diagnostics_IProcessFactory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IProcessFactory</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Please use Emby.Model.ProcessRun.IProcessManager instead.&quot;)]
+public interface IProcessFactory</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -171,7 +172,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IProcess Create(ProcessOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Please use Emby.Model.ProcessRun.IProcessManager instead.&quot;)]
+IProcess Create(ProcessOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EmbyMediaModelTypesBitRate model module.
 * @module model/EmbyMediaModelTypesBitRate
-* @version 4.8.0.17
+* @version 4.8.0.18
 */
 export default class EmbyMediaModelTypesBitRate {
     /**

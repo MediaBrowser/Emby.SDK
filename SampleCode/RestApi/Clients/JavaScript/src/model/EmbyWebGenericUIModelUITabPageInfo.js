@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EmbyWebGenericUIModelUITabPageInfo model module.
 * @module model/EmbyWebGenericUIModelUITabPageInfo
-* @version 4.8.0.17
+* @version 4.8.0.18
 */
 export default class EmbyWebGenericUIModelUITabPageInfo {
     /**

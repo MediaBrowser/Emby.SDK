@@ -4759,6 +4759,15 @@ Please consult the documentation for further details.</p>
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">ProcessStatistics</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_ProcessRun_Metrics_ProcessStatistics" class="typelink">ProcessStatistics[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">CurrentThrottle</span></td>
               <td>
                     integer
@@ -4892,6 +4901,255 @@ Please consult the documentation for further details.</p>
           </tr>
           <tr>
               <td><span class="parametername">Item2</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_ProcessRun_Metrics_ProcessStatistics" class="text-capitalize">ProcessStatistics</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.ProcessRun.Metrics.ProcessStatistics.html">MediaBrowser.Model.ProcessRun.Metrics.ProcessStatistics</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">CurrentCpu</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AverageCpu</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CurrentVirtualMemory</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CurrentWorkingSet</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Metrics</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_ProcessRun_Metrics_ProcessMetricPoint" class="typelink">ProcessMetricPoint[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_ProcessRun_Metrics_ProcessMetricPoint" class="text-capitalize">ProcessMetricPoint</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.ProcessRun.Metrics.ProcessMetricPoint.html">MediaBrowser.Model.ProcessRun.Metrics.ProcessMetricPoint</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Time</span></td>
+              <td>
+  
+                      <a href="#System_TimeSpan" class="typelink">TimeSpan[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CpuPercent</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">VirtualMemory</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">WorkingSet</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="System_TimeSpan" class="text-capitalize">TimeSpan</h3>
+  <div>
+      <p>see also <a href="https://learn.microsoft.com/dotnet/api/system.timespan">System.TimeSpan</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Ticks</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Days</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Hours</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Milliseconds</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Minutes</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Seconds</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TotalDays</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TotalHours</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TotalMilliseconds</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TotalMinutes</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TotalSeconds</span></td>
               <td>
                     number
                       (double)

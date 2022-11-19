@@ -196,10 +196,14 @@ open class LibraryStructureServiceAPI {
       "SkipSubtitlesIfEmbeddedSubtitlesPresent" : true,
       "PathInfos" : [ {
         "Path" : "Path",
-        "NetworkPath" : "NetworkPath"
+        "Username" : "Username",
+        "NetworkPath" : "NetworkPath",
+        "Password" : "Password"
       }, {
         "Path" : "Path",
-        "NetworkPath" : "NetworkPath"
+        "Username" : "Username",
+        "NetworkPath" : "NetworkPath",
+        "Password" : "Password"
       } ],
       "SampleIgnoreSize" : 2,
       "MinCollectionItems" : 5
@@ -294,10 +298,14 @@ open class LibraryStructureServiceAPI {
       "SkipSubtitlesIfEmbeddedSubtitlesPresent" : true,
       "PathInfos" : [ {
         "Path" : "Path",
-        "NetworkPath" : "NetworkPath"
+        "Username" : "Username",
+        "NetworkPath" : "NetworkPath",
+        "Password" : "Password"
       }, {
         "Path" : "Path",
-        "NetworkPath" : "NetworkPath"
+        "Username" : "Username",
+        "NetworkPath" : "NetworkPath",
+        "Password" : "Password"
       } ],
       "SampleIgnoreSize" : 2,
       "MinCollectionItems" : 5
