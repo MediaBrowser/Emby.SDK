@@ -15,7 +15,7 @@ import EmbyNotificationsNotificationCategoryInfo from '../model/EmbyNotification
 /**
 * NotificationsApi service.
 * @module EmbyClient.JavaScript.Beta/NotificationsApiApi
-* @version 4.8.0.18
+* @version 4.8.0.19
 */
 export default class NotificationsApiApi {
 

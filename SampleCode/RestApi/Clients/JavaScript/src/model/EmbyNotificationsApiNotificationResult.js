@@ -15,7 +15,7 @@ import EmbyNotificationsApiNotification from './EmbyNotificationsApiNotification
 /**
 * The EmbyNotificationsApiNotificationResult model module.
 * @module model/EmbyNotificationsApiNotificationResult
-* @version 4.8.0.18
+* @version 4.8.0.19
 */
 export default class EmbyNotificationsApiNotificationResult {
     /**

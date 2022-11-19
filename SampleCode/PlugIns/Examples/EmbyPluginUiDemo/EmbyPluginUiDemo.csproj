@@ -15,7 +15,7 @@
     <EmbeddedResource Include="PluginUiThumb.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.18-beta" />
+    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.19-beta" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

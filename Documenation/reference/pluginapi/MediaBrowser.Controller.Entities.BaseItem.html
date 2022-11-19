@@ -4834,12 +4834,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions)">FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void FillUserDataDtoValues(UserItemDataDto dto, BaseItemDto itemDto, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void FillUserDataDtoValues(UserItemDataDto dto, BaseItemDto itemDto, User user, DtoOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4869,11 +4869,6 @@ public int Width { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -8891,30 +8886,13 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsPlayedStatus*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsPlayedStatus(MediaBrowser.Model.Configuration.LibraryOptions)">SupportsPlayedStatus(LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsPlayedStatus">SupportsPlayedStatus()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool SupportsPlayedStatus(LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsPlayedStatus()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>

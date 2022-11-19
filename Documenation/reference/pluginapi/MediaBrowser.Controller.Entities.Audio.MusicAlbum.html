@@ -263,7 +263,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AllowRecursiveCounts">Folder.AllowRecursiveCounts</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_">Folder.FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlayCount">BaseItem.PlayCount</a>
@@ -1602,12 +1602,12 @@ public override bool SupportsStudios { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_FillPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.FillPlayedStatus*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.FillPlayedStatus(MediaBrowser.Model.Dto.UserItemDataDto,System.Nullable{System.Int32},MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions, LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.FillPlayedStatus(MediaBrowser.Model.Dto.UserItemDataDto,System.Nullable{System.Int32},MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions)">FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void FillPlayedStatus(UserItemDataDto dto, int? recursiveItemCount, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void FillPlayedStatus(UserItemDataDto dto, int? recursiveItemCount, User user, DtoOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1639,15 +1639,10 @@ public override bool SupportsStudios { get; }</code></pre>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions, LibraryOptions)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_">Folder.FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetAlbumFolderFromMediaPath_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetAlbumFolderFromMediaPath*"></a>
@@ -2336,30 +2331,13 @@ public override bool SupportsStudios { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsPlayedStatus*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsPlayedStatus(MediaBrowser.Model.Configuration.LibraryOptions)">SupportsPlayedStatus(LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsPlayedStatus">SupportsPlayedStatus()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus(LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -2376,7 +2354,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.SupportsPlayedStatus(LibraryOptions)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus">BaseItem.SupportsPlayedStatus()</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_ValidateChildrenInternal_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.ValidateChildrenInternal*"></a>

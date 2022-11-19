@@ -19,7 +19,7 @@ import NotificationsNotificationTypeInfo from '../model/NotificationsNotificatio
 /**
 * NotificationsService service.
 * @module EmbyClient.JavaScript.Beta/NotificationsServiceApi
-* @version 4.8.0.18
+* @version 4.8.0.19
 */
 export default class NotificationsServiceApi {
 
