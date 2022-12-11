@@ -11,7 +11,7 @@
     <EmbeddedResource Include="ThumbImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.19-beta" />
+    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.20-beta" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="copy $(TargetPath) %AppData%\Emby-Server\programdata\plugins\" />

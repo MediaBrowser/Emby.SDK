@@ -15,7 +15,7 @@ import UpdatesPackageVersionClass from './UpdatesPackageVersionClass';
 /**
 * The UpdatesPackageVersionInfo model module.
 * @module model/UpdatesPackageVersionInfo
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class UpdatesPackageVersionInfo {
     /**
@@ -75,6 +75,9 @@ export default class UpdatesPackageVersionInfo {
             if (data.hasOwnProperty('runtimes')) {
                 obj['runtimes'] = ApiClient.convertToType(data['runtimes'], 'String');
             }
+            if (data.hasOwnProperty('timestamp')) {
+                obj['timestamp'] = ApiClient.convertToType(data['timestamp'], 'Date');
+            }
         }
         return obj;
     }
@@ -123,6 +126,10 @@ export default class UpdatesPackageVersionInfo {
     * @member {String} runtimes
     */
     'runtimes' = undefined;
+    /**
+    * @member {Date} timestamp
+    */
+    'timestamp' = undefined;
 
 
 

@@ -21,9 +21,7 @@
 
         public override string EditorDescription =>
             "By applying the AutoPostBack attribute to one or more properties, the specified command will be "
-            + "sent to the server each time when the input value is changed at the client. \n"
-            + "For some elements like a select box, this happens instantly while for other controls like "
-            + "text or number input, the postback will happen only on leaving the element.";
+            + "sent to the server each time when the input value is changed at the client.";
 
         [Browsable(false)]
         public string ErrorText { get; set; }

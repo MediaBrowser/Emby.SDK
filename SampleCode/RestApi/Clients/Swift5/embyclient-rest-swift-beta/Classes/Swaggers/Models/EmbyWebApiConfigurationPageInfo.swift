@@ -13,6 +13,8 @@ public struct EmbyWebApiConfigurationPageInfo: Codable {
 
     public var name: String?
     public var enableInMainMenu: Bool?
+    public var enableInUserMenu: Bool?
+    public var featureId: String?
     public var menuSection: String?
     public var menuIcon: String?
     public var displayName: String?
@@ -23,9 +25,11 @@ public struct EmbyWebApiConfigurationPageInfo: Codable {
     public var plugin: CommonPluginsIPlugin?
     public var translations: [String]?
 
-    public init(name: String? = nil, enableInMainMenu: Bool? = nil, menuSection: String? = nil, menuIcon: String? = nil, displayName: String? = nil, configurationPageType: PluginsConfigurationPageType? = nil, pluginId: String? = nil, href: String? = nil, navMenuId: String? = nil, plugin: CommonPluginsIPlugin? = nil, translations: [String]? = nil) {
+    public init(name: String? = nil, enableInMainMenu: Bool? = nil, enableInUserMenu: Bool? = nil, featureId: String? = nil, menuSection: String? = nil, menuIcon: String? = nil, displayName: String? = nil, configurationPageType: PluginsConfigurationPageType? = nil, pluginId: String? = nil, href: String? = nil, navMenuId: String? = nil, plugin: CommonPluginsIPlugin? = nil, translations: [String]? = nil) {
         self.name = name
         self.enableInMainMenu = enableInMainMenu
+        self.enableInUserMenu = enableInUserMenu
+        self.featureId = featureId
         self.menuSection = menuSection
         self.menuIcon = menuIcon
         self.displayName = displayName
@@ -40,6 +44,8 @@ public struct EmbyWebApiConfigurationPageInfo: Codable {
     public enum CodingKeys: String, CodingKey { 
         case name = "Name"
         case enableInMainMenu = "EnableInMainMenu"
+        case enableInUserMenu = "EnableInUserMenu"
+        case featureId = "FeatureId"
         case menuSection = "MenuSection"
         case menuIcon = "MenuIcon"
         case displayName = "DisplayName"

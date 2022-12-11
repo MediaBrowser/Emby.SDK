@@ -15,6 +15,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.UpdatesPackageVersionClass;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * UpdatesPackageVersionInfo
  */
@@ -53,6 +54,9 @@ public class UpdatesPackageVersionInfo {
 
   @SerializedName("runtimes")
   private String runtimes = null;
+
+  @SerializedName("timestamp")
+  private OffsetDateTime timestamp = null;
 
   public UpdatesPackageVersionInfo name(String name) {
     this.name = name;
@@ -252,6 +256,24 @@ public class UpdatesPackageVersionInfo {
     this.runtimes = runtimes;
   }
 
+  public UpdatesPackageVersionInfo timestamp(OffsetDateTime timestamp) {
+    this.timestamp = timestamp;
+    return this;
+  }
+
+   /**
+   * Get timestamp
+   * @return timestamp
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getTimestamp() {
+    return timestamp;
+  }
+
+  public void setTimestamp(OffsetDateTime timestamp) {
+    this.timestamp = timestamp;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -272,12 +294,13 @@ public class UpdatesPackageVersionInfo {
         Objects.equals(this.checksum, updatesPackageVersionInfo.checksum) &&
         Objects.equals(this.targetFilename, updatesPackageVersionInfo.targetFilename) &&
         Objects.equals(this.infoUrl, updatesPackageVersionInfo.infoUrl) &&
-        Objects.equals(this.runtimes, updatesPackageVersionInfo.runtimes);
+        Objects.equals(this.runtimes, updatesPackageVersionInfo.runtimes) &&
+        Objects.equals(this.timestamp, updatesPackageVersionInfo.timestamp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, guid, versionStr, classification, description, requiredVersionStr, sourceUrl, checksum, targetFilename, infoUrl, runtimes);
+    return Objects.hash(name, guid, versionStr, classification, description, requiredVersionStr, sourceUrl, checksum, targetFilename, infoUrl, runtimes, timestamp);
   }
 
 
@@ -297,6 +320,7 @@ public class UpdatesPackageVersionInfo {
     sb.append("    targetFilename: ").append(toIndentedString(targetFilename)).append("\n");
     sb.append("    infoUrl: ").append(toIndentedString(infoUrl)).append("\n");
     sb.append("    runtimes: ").append(toIndentedString(runtimes)).append("\n");
+    sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,5 +13,5 @@ type EmbyWebGenericUiModelUiCommand struct {
 	IsEnabled bool `json:"IsEnabled,omitempty"`
 	Caption string `json:"Caption,omitempty"`
 	SetFocus bool `json:"SetFocus,omitempty"`
-	ConfirmationMessage string `json:"ConfirmationMessage,omitempty"`
+	ConfirmationPrompt string `json:"ConfirmationPrompt,omitempty"`
 }

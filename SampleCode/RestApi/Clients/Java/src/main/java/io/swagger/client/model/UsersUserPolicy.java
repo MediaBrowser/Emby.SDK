@@ -93,6 +93,9 @@ public class UsersUserPolicy {
   @SerializedName("EnableContentDeletion")
   private Boolean enableContentDeletion = null;
 
+  @SerializedName("RestrictedFeatures")
+  private List<String> restrictedFeatures = null;
+
   @SerializedName("EnableContentDeletionFromFolders")
   private List<String> enableContentDeletionFromFolders = null;
 
@@ -596,6 +599,32 @@ public class UsersUserPolicy {
     this.enableContentDeletion = enableContentDeletion;
   }
 
+  public UsersUserPolicy restrictedFeatures(List<String> restrictedFeatures) {
+    this.restrictedFeatures = restrictedFeatures;
+    return this;
+  }
+
+  public UsersUserPolicy addRestrictedFeaturesItem(String restrictedFeaturesItem) {
+    if (this.restrictedFeatures == null) {
+      this.restrictedFeatures = new ArrayList<String>();
+    }
+    this.restrictedFeatures.add(restrictedFeaturesItem);
+    return this;
+  }
+
+   /**
+   * Get restrictedFeatures
+   * @return restrictedFeatures
+  **/
+  @Schema(description = "")
+  public List<String> getRestrictedFeatures() {
+    return restrictedFeatures;
+  }
+
+  public void setRestrictedFeatures(List<String> restrictedFeatures) {
+    this.restrictedFeatures = restrictedFeatures;
+  }
+
   public UsersUserPolicy enableContentDeletionFromFolders(List<String> enableContentDeletionFromFolders) {
     this.enableContentDeletionFromFolders = enableContentDeletionFromFolders;
     return this;
@@ -1019,6 +1048,7 @@ public class UsersUserPolicy {
         Objects.equals(this.enableVideoPlaybackTranscoding, usersUserPolicy.enableVideoPlaybackTranscoding) &&
         Objects.equals(this.enablePlaybackRemuxing, usersUserPolicy.enablePlaybackRemuxing) &&
         Objects.equals(this.enableContentDeletion, usersUserPolicy.enableContentDeletion) &&
+        Objects.equals(this.restrictedFeatures, usersUserPolicy.restrictedFeatures) &&
         Objects.equals(this.enableContentDeletionFromFolders, usersUserPolicy.enableContentDeletionFromFolders) &&
         Objects.equals(this.enableContentDownloading, usersUserPolicy.enableContentDownloading) &&
         Objects.equals(this.enableSubtitleDownloading, usersUserPolicy.enableSubtitleDownloading) &&
@@ -1042,7 +1072,7 @@ public class UsersUserPolicy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices);
+    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices);
   }
 
 
@@ -1074,6 +1104,7 @@ public class UsersUserPolicy {
     sb.append("    enableVideoPlaybackTranscoding: ").append(toIndentedString(enableVideoPlaybackTranscoding)).append("\n");
     sb.append("    enablePlaybackRemuxing: ").append(toIndentedString(enablePlaybackRemuxing)).append("\n");
     sb.append("    enableContentDeletion: ").append(toIndentedString(enableContentDeletion)).append("\n");
+    sb.append("    restrictedFeatures: ").append(toIndentedString(restrictedFeatures)).append("\n");
     sb.append("    enableContentDeletionFromFolders: ").append(toIndentedString(enableContentDeletionFromFolders)).append("\n");
     sb.append("    enableContentDownloading: ").append(toIndentedString(enableContentDownloading)).append("\n");
     sb.append("    enableSubtitleDownloading: ").append(toIndentedString(enableSubtitleDownloading)).append("\n");

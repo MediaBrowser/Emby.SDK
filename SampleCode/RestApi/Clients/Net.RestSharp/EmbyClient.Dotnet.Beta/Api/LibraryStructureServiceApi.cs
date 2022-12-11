@@ -60,7 +60,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Requires authentication as administrator
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
@@ -72,7 +72,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Requires authentication as administrator
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
@@ -270,7 +270,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Requires authentication as administrator
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
@@ -282,7 +282,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Requires authentication as administrator
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
@@ -822,7 +822,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  Requires authentication as administrator
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
@@ -835,7 +835,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  Requires authentication as administrator
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
@@ -899,7 +899,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  Requires authentication as administrator
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
@@ -913,7 +913,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  Requires authentication as administrator
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>

@@ -16,7 +16,7 @@ import DlnaProfileCondition from './DlnaProfileCondition';
 /**
 * The DlnaCodecProfile model module.
 * @module model/DlnaCodecProfile
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class DlnaCodecProfile {
     /**

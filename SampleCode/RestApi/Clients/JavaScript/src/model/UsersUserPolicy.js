@@ -16,7 +16,7 @@ import ConfigurationUnratedItem from './ConfigurationUnratedItem';
 /**
 * The UsersUserPolicy model module.
 * @module model/UsersUserPolicy
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class UsersUserPolicy {
     /**
@@ -111,6 +111,9 @@ export default class UsersUserPolicy {
             }
             if (data.hasOwnProperty('EnableContentDeletion')) {
                 obj['EnableContentDeletion'] = ApiClient.convertToType(data['EnableContentDeletion'], 'Boolean');
+            }
+            if (data.hasOwnProperty('RestrictedFeatures')) {
+                obj['RestrictedFeatures'] = ApiClient.convertToType(data['RestrictedFeatures'], ['String']);
             }
             if (data.hasOwnProperty('EnableContentDeletionFromFolders')) {
                 obj['EnableContentDeletionFromFolders'] = ApiClient.convertToType(data['EnableContentDeletionFromFolders'], ['String']);
@@ -265,6 +268,10 @@ export default class UsersUserPolicy {
     * @member {Boolean} EnableContentDeletion
     */
     'EnableContentDeletion' = undefined;
+    /**
+    * @member {Array.<String>} RestrictedFeatures
+    */
+    'RestrictedFeatures' = undefined;
     /**
     * @member {Array.<String>} EnableContentDeletionFromFolders
     */

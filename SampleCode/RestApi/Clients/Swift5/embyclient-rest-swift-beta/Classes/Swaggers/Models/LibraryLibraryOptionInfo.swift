@@ -12,17 +12,20 @@ import Foundation
 public struct LibraryLibraryOptionInfo: Codable {
 
     public var name: String?
+    public var setupUrl: String?
     public var defaultEnabled: Bool?
     public var features: [ConfigurationMetadataFeatures]?
 
-    public init(name: String? = nil, defaultEnabled: Bool? = nil, features: [ConfigurationMetadataFeatures]? = nil) {
+    public init(name: String? = nil, setupUrl: String? = nil, defaultEnabled: Bool? = nil, features: [ConfigurationMetadataFeatures]? = nil) {
         self.name = name
+        self.setupUrl = setupUrl
         self.defaultEnabled = defaultEnabled
         self.features = features
     }
 
     public enum CodingKeys: String, CodingKey { 
         case name = "Name"
+        case setupUrl = "SetupUrl"
         case defaultEnabled = "DefaultEnabled"
         case features = "Features"
     }

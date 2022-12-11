@@ -49,6 +49,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="enableVideoPlaybackTranscoding">enableVideoPlaybackTranscoding.</param>
         /// <param name="enablePlaybackRemuxing">enablePlaybackRemuxing.</param>
         /// <param name="enableContentDeletion">enableContentDeletion.</param>
+        /// <param name="restrictedFeatures">restrictedFeatures.</param>
         /// <param name="enableContentDeletionFromFolders">enableContentDeletionFromFolders.</param>
         /// <param name="enableContentDownloading">enableContentDownloading.</param>
         /// <param name="enableSubtitleDownloading">enableSubtitleDownloading.</param>
@@ -68,7 +69,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="simultaneousStreamLimit">simultaneousStreamLimit.</param>
         /// <param name="enabledDevices">enabledDevices.</param>
         /// <param name="enableAllDevices">enableAllDevices.</param>
-        public UsersUserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<ConfigurationAccessSchedule> accessSchedules = default(List<ConfigurationAccessSchedule>), List<ConfigurationUnratedItem> blockUnratedItems = default(List<ConfigurationUnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), List<string> blockedMediaFolders = default(List<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?))
+        public UsersUserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<ConfigurationAccessSchedule> accessSchedules = default(List<ConfigurationAccessSchedule>), List<ConfigurationUnratedItem> blockUnratedItems = default(List<ConfigurationUnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), List<string> blockedMediaFolders = default(List<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?))
         {
             this.IsAdministrator = isAdministrator;
             this.IsHidden = isHidden;
@@ -93,6 +94,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.EnableVideoPlaybackTranscoding = enableVideoPlaybackTranscoding;
             this.EnablePlaybackRemuxing = enablePlaybackRemuxing;
             this.EnableContentDeletion = enableContentDeletion;
+            this.RestrictedFeatures = restrictedFeatures;
             this.EnableContentDeletionFromFolders = enableContentDeletionFromFolders;
             this.EnableContentDownloading = enableContentDownloading;
             this.EnableSubtitleDownloading = enableSubtitleDownloading;
@@ -253,6 +255,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? EnableContentDeletion { get; set; }
 
         /// <summary>
+        /// Gets or Sets RestrictedFeatures
+        /// </summary>
+        [DataMember(Name="RestrictedFeatures", EmitDefaultValue=false)]
+        public List<string> RestrictedFeatures { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnableContentDeletionFromFolders
         /// </summary>
         [DataMember(Name="EnableContentDeletionFromFolders", EmitDefaultValue=false)]
@@ -397,6 +405,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  EnableVideoPlaybackTranscoding: ").Append(EnableVideoPlaybackTranscoding).Append("\n");
             sb.Append("  EnablePlaybackRemuxing: ").Append(EnablePlaybackRemuxing).Append("\n");
             sb.Append("  EnableContentDeletion: ").Append(EnableContentDeletion).Append("\n");
+            sb.Append("  RestrictedFeatures: ").Append(RestrictedFeatures).Append("\n");
             sb.Append("  EnableContentDeletionFromFolders: ").Append(EnableContentDeletionFromFolders).Append("\n");
             sb.Append("  EnableContentDownloading: ").Append(EnableContentDownloading).Append("\n");
             sb.Append("  EnableSubtitleDownloading: ").Append(EnableSubtitleDownloading).Append("\n");
@@ -570,6 +579,12 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.EnableContentDeletion.Equals(input.EnableContentDeletion))
                 ) && 
                 (
+                    this.RestrictedFeatures == input.RestrictedFeatures ||
+                    this.RestrictedFeatures != null &&
+                    input.RestrictedFeatures != null &&
+                    this.RestrictedFeatures.SequenceEqual(input.RestrictedFeatures)
+                ) && 
+                (
                     this.EnableContentDeletionFromFolders == input.EnableContentDeletionFromFolders ||
                     this.EnableContentDeletionFromFolders != null &&
                     input.EnableContentDeletionFromFolders != null &&
@@ -727,6 +742,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.EnablePlaybackRemuxing.GetHashCode();
                 if (this.EnableContentDeletion != null)
                     hashCode = hashCode * 59 + this.EnableContentDeletion.GetHashCode();
+                if (this.RestrictedFeatures != null)
+                    hashCode = hashCode * 59 + this.RestrictedFeatures.GetHashCode();
                 if (this.EnableContentDeletionFromFolders != null)
                     hashCode = hashCode * 59 + this.EnableContentDeletionFromFolders.GetHashCode();
                 if (this.EnableContentDownloading != null)

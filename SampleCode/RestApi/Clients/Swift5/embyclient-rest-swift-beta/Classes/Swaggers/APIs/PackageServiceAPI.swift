@@ -82,23 +82,17 @@ open class PackageServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
-  "type" : "type",
-  "regInfo" : "regInfo",
-  "richDescUrl" : "richDescUrl",
-  "expDate" : "2000-01-23T04:56:07.000+00:00",
-  "thumbImage" : "thumbImage",
-  "price" : 0.8008282,
-  "avgRating" : 1.4658129,
-  "id" : "id",
-  "featureId" : "featureId",
   "owner" : "owner",
   "overview" : "overview",
-  "totalRatings" : 6,
   "tileColor" : "tileColor",
   "shortDescription" : "shortDescription",
+  "type" : "type",
+  "richDescUrl" : "richDescUrl",
   "targetSystem" : "Server",
-  "installs" : 5,
+  "expDate" : "2000-01-23T04:56:07.000+00:00",
+  "installs" : 6,
   "enableInAppStore" : true,
+  "thumbImage" : "thumbImage",
   "versions" : [ {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -110,7 +104,8 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -122,34 +117,32 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
+  "price" : 0.8008282,
   "targetFilename" : "targetFilename",
   "name" : "name",
   "guid" : "guid",
   "isRegistered" : true,
+  "id" : "id",
   "isPremium" : true,
   "adult" : true,
   "category" : "category",
-  "previewImage" : "previewImage"
+  "previewImage" : "previewImage",
+  "featureId" : "featureId"
 }, {
-  "type" : "type",
-  "regInfo" : "regInfo",
-  "richDescUrl" : "richDescUrl",
-  "expDate" : "2000-01-23T04:56:07.000+00:00",
-  "thumbImage" : "thumbImage",
-  "price" : 0.8008282,
-  "avgRating" : 1.4658129,
-  "id" : "id",
-  "featureId" : "featureId",
   "owner" : "owner",
   "overview" : "overview",
-  "totalRatings" : 6,
   "tileColor" : "tileColor",
   "shortDescription" : "shortDescription",
+  "type" : "type",
+  "richDescUrl" : "richDescUrl",
   "targetSystem" : "Server",
-  "installs" : 5,
+  "expDate" : "2000-01-23T04:56:07.000+00:00",
+  "installs" : 6,
   "enableInAppStore" : true,
+  "thumbImage" : "thumbImage",
   "versions" : [ {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -161,7 +154,8 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -173,16 +167,20 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
+  "price" : 0.8008282,
   "targetFilename" : "targetFilename",
   "name" : "name",
   "guid" : "guid",
   "isRegistered" : true,
+  "id" : "id",
   "isPremium" : true,
   "adult" : true,
   "category" : "category",
-  "previewImage" : "previewImage"
+  "previewImage" : "previewImage",
+  "featureId" : "featureId"
 } ]}]
      - parameter packageType: (query) Optional package type filter (System/UserInstalled) (optional)
      - parameter targetSystems: (query) Optional. Filter by target system type. Allows multiple, comma delimited. (optional)
@@ -233,23 +231,17 @@ open class PackageServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "type" : "type",
-  "regInfo" : "regInfo",
-  "richDescUrl" : "richDescUrl",
-  "expDate" : "2000-01-23T04:56:07.000+00:00",
-  "thumbImage" : "thumbImage",
-  "price" : 0.8008282,
-  "avgRating" : 1.4658129,
-  "id" : "id",
-  "featureId" : "featureId",
   "owner" : "owner",
   "overview" : "overview",
-  "totalRatings" : 6,
   "tileColor" : "tileColor",
   "shortDescription" : "shortDescription",
+  "type" : "type",
+  "richDescUrl" : "richDescUrl",
   "targetSystem" : "Server",
-  "installs" : 5,
+  "expDate" : "2000-01-23T04:56:07.000+00:00",
+  "installs" : 6,
   "enableInAppStore" : true,
+  "thumbImage" : "thumbImage",
   "versions" : [ {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -261,7 +253,8 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -273,16 +266,20 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
+  "price" : 0.8008282,
   "targetFilename" : "targetFilename",
   "name" : "name",
   "guid" : "guid",
   "isRegistered" : true,
+  "id" : "id",
   "isPremium" : true,
   "adult" : true,
   "category" : "category",
-  "previewImage" : "previewImage"
+  "previewImage" : "previewImage",
+  "featureId" : "featureId"
 }}]
      - parameter name: (path) The name of the package 
      - parameter assemblyGuid: (query) The guid of the associated assembly (optional)
@@ -340,7 +337,8 @@ open class PackageServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 }, {
   "sourceUrl" : "sourceUrl",
   "versionStr" : "versionStr",
@@ -352,7 +350,8 @@ open class PackageServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 } ]}]
      - parameter packageType: (query) Package type filter (System/UserInstalled) 
 

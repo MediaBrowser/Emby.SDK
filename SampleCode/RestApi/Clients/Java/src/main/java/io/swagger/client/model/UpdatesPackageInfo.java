@@ -70,9 +70,6 @@ public class UpdatesPackageInfo {
   @SerializedName("featureId")
   private String featureId = null;
 
-  @SerializedName("regInfo")
-  private String regInfo = null;
-
   @SerializedName("price")
   private Float price = null;
 
@@ -81,12 +78,6 @@ public class UpdatesPackageInfo {
 
   @SerializedName("guid")
   private String guid = null;
-
-  @SerializedName("totalRatings")
-  private Integer totalRatings = null;
-
-  @SerializedName("avgRating")
-  private Float avgRating = null;
 
   @SerializedName("isRegistered")
   private Boolean isRegistered = null;
@@ -373,24 +364,6 @@ public class UpdatesPackageInfo {
     this.featureId = featureId;
   }
 
-  public UpdatesPackageInfo regInfo(String regInfo) {
-    this.regInfo = regInfo;
-    return this;
-  }
-
-   /**
-   * Get regInfo
-   * @return regInfo
-  **/
-  @Schema(description = "")
-  public String getRegInfo() {
-    return regInfo;
-  }
-
-  public void setRegInfo(String regInfo) {
-    this.regInfo = regInfo;
-  }
-
   public UpdatesPackageInfo price(Float price) {
     this.price = price;
     return this;
@@ -443,42 +416,6 @@ public class UpdatesPackageInfo {
 
   public void setGuid(String guid) {
     this.guid = guid;
-  }
-
-  public UpdatesPackageInfo totalRatings(Integer totalRatings) {
-    this.totalRatings = totalRatings;
-    return this;
-  }
-
-   /**
-   * Get totalRatings
-   * @return totalRatings
-  **/
-  @Schema(description = "")
-  public Integer getTotalRatings() {
-    return totalRatings;
-  }
-
-  public void setTotalRatings(Integer totalRatings) {
-    this.totalRatings = totalRatings;
-  }
-
-  public UpdatesPackageInfo avgRating(Float avgRating) {
-    this.avgRating = avgRating;
-    return this;
-  }
-
-   /**
-   * Get avgRating
-   * @return avgRating
-  **/
-  @Schema(description = "")
-  public Float getAvgRating() {
-    return avgRating;
-  }
-
-  public void setAvgRating(Float avgRating) {
-    this.avgRating = avgRating;
   }
 
   public UpdatesPackageInfo isRegistered(Boolean isRegistered) {
@@ -604,12 +541,9 @@ public class UpdatesPackageInfo {
         Objects.equals(this.category, updatesPackageInfo.category) &&
         Objects.equals(this.tileColor, updatesPackageInfo.tileColor) &&
         Objects.equals(this.featureId, updatesPackageInfo.featureId) &&
-        Objects.equals(this.regInfo, updatesPackageInfo.regInfo) &&
         Objects.equals(this.price, updatesPackageInfo.price) &&
         Objects.equals(this.targetSystem, updatesPackageInfo.targetSystem) &&
         Objects.equals(this.guid, updatesPackageInfo.guid) &&
-        Objects.equals(this.totalRatings, updatesPackageInfo.totalRatings) &&
-        Objects.equals(this.avgRating, updatesPackageInfo.avgRating) &&
         Objects.equals(this.isRegistered, updatesPackageInfo.isRegistered) &&
         Objects.equals(this.expDate, updatesPackageInfo.expDate) &&
         Objects.equals(this.versions, updatesPackageInfo.versions) &&
@@ -619,7 +553,7 @@ public class UpdatesPackageInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, shortDescription, overview, isPremium, adult, richDescUrl, thumbImage, previewImage, type, targetFilename, owner, category, tileColor, featureId, regInfo, price, targetSystem, guid, totalRatings, avgRating, isRegistered, expDate, versions, enableInAppStore, installs);
+    return Objects.hash(id, name, shortDescription, overview, isPremium, adult, richDescUrl, thumbImage, previewImage, type, targetFilename, owner, category, tileColor, featureId, price, targetSystem, guid, isRegistered, expDate, versions, enableInAppStore, installs);
   }
 
 
@@ -643,12 +577,9 @@ public class UpdatesPackageInfo {
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    tileColor: ").append(toIndentedString(tileColor)).append("\n");
     sb.append("    featureId: ").append(toIndentedString(featureId)).append("\n");
-    sb.append("    regInfo: ").append(toIndentedString(regInfo)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("    targetSystem: ").append(toIndentedString(targetSystem)).append("\n");
     sb.append("    guid: ").append(toIndentedString(guid)).append("\n");
-    sb.append("    totalRatings: ").append(toIndentedString(totalRatings)).append("\n");
-    sb.append("    avgRating: ").append(toIndentedString(avgRating)).append("\n");
     sb.append("    isRegistered: ").append(toIndentedString(isRegistered)).append("\n");
     sb.append("    expDate: ").append(toIndentedString(expDate)).append("\n");
     sb.append("    versions: ").append(toIndentedString(versions)).append("\n");

@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class LiveTvServiceApi {
 
@@ -456,6 +456,7 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
@@ -623,6 +624,7 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
@@ -749,6 +751,7 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
@@ -1362,6 +1365,7 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
@@ -1545,6 +1549,7 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
@@ -2473,6 +2478,7 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],

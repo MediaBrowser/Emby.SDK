@@ -16,7 +16,7 @@ import PluginsConfigurationPageType from './PluginsConfigurationPageType';
 /**
 * The EmbyWebApiConfigurationPageInfo model module.
 * @module model/EmbyWebApiConfigurationPageInfo
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class EmbyWebApiConfigurationPageInfo {
     /**
@@ -48,6 +48,12 @@ export default class EmbyWebApiConfigurationPageInfo {
             }
             if (data.hasOwnProperty('EnableInMainMenu')) {
                 obj['EnableInMainMenu'] = ApiClient.convertToType(data['EnableInMainMenu'], 'Boolean');
+            }
+            if (data.hasOwnProperty('EnableInUserMenu')) {
+                obj['EnableInUserMenu'] = ApiClient.convertToType(data['EnableInUserMenu'], 'Boolean');
+            }
+            if (data.hasOwnProperty('FeatureId')) {
+                obj['FeatureId'] = ApiClient.convertToType(data['FeatureId'], 'String');
             }
             if (data.hasOwnProperty('MenuSection')) {
                 obj['MenuSection'] = ApiClient.convertToType(data['MenuSection'], 'String');
@@ -88,6 +94,14 @@ export default class EmbyWebApiConfigurationPageInfo {
     * @member {Boolean} EnableInMainMenu
     */
     'EnableInMainMenu' = undefined;
+    /**
+    * @member {Boolean} EnableInUserMenu
+    */
+    'EnableInUserMenu' = undefined;
+    /**
+    * @member {String} FeatureId
+    */
+    'FeatureId' = undefined;
     /**
     * @member {String} MenuSection
     */

@@ -154,6 +154,7 @@ open class UserServiceAPI {
     "EnableMediaConversion" : true,
     "InvalidLoginAttemptCount" : 5,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,
@@ -224,6 +225,56 @@ open class UserServiceAPI {
 
 
         let requestBuilder: RequestBuilder<UserDto>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a typed user setting
+
+     - parameter key: (path) Key 
+     - parameter userId: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersByUseridTypedsettingsByKey(key: String, userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getUsersByUseridTypedsettingsByKeyWithRequestBuilder(key: key, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a typed user setting
+     - GET /Users/{UserId}/TypedSettings/{Key}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter key: (path) Key 
+     - parameter userId: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getUsersByUseridTypedsettingsByKeyWithRequestBuilder(key: String, userId: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/TypedSettings/{Key}"
+        let keyPreEscape = "\(key)"
+        let keyPostEscape = keyPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Key}", with: keyPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -335,6 +386,7 @@ open class UserServiceAPI {
     "EnableMediaConversion" : true,
     "InvalidLoginAttemptCount" : 5,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,
@@ -421,6 +473,7 @@ open class UserServiceAPI {
     "EnableMediaConversion" : true,
     "InvalidLoginAttemptCount" : 5,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,
@@ -555,6 +608,7 @@ open class UserServiceAPI {
       "EnableMediaConversion" : true,
       "InvalidLoginAttemptCount" : 5,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -641,6 +695,7 @@ open class UserServiceAPI {
       "EnableMediaConversion" : true,
       "InvalidLoginAttemptCount" : 5,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -774,6 +829,7 @@ open class UserServiceAPI {
       "EnableMediaConversion" : true,
       "InvalidLoginAttemptCount" : 5,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -1609,6 +1665,7 @@ open class UserServiceAPI {
       "EnableMediaConversion" : true,
       "InvalidLoginAttemptCount" : 5,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -2624,6 +2681,58 @@ open class UserServiceAPI {
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Updates a typed user setting
+
+     - parameter body: (body) Binary stream 
+     - parameter userId: (path)  
+     - parameter key: (path) Key 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByUseridTypedsettingsByKey(body: Object, userId: String, key: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByUseridTypedsettingsByKeyWithRequestBuilder(body: body, userId: userId, key: key).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates a typed user setting
+     - POST /Users/{UserId}/TypedSettings/{Key}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) Binary stream 
+     - parameter userId: (path)  
+     - parameter key: (path) Key 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByUseridTypedsettingsByKeyWithRequestBuilder(body: Object, userId: String, key: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/TypedSettings/{Key}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let keyPreEscape = "\(key)"
+        let keyPostEscape = keyPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Key}", with: keyPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
      Initiates the forgot password process for a local user
 
      - parameter body: (body) ForgotPassword 
@@ -2751,6 +2860,7 @@ open class UserServiceAPI {
     "EnableMediaConversion" : true,
     "InvalidLoginAttemptCount" : 5,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,

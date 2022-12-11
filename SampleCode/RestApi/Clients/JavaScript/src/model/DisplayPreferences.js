@@ -10,13 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ScrollDirection from './ScrollDirection';
 import SortOrder from './SortOrder';
 
 /**
 * The DisplayPreferences model module.
 * @module model/DisplayPreferences
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class DisplayPreferences {
     /**
@@ -46,35 +45,11 @@ export default class DisplayPreferences {
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
-            if (data.hasOwnProperty('ViewType')) {
-                obj['ViewType'] = ApiClient.convertToType(data['ViewType'], 'String');
-            }
             if (data.hasOwnProperty('SortBy')) {
                 obj['SortBy'] = ApiClient.convertToType(data['SortBy'], 'String');
             }
-            if (data.hasOwnProperty('IndexBy')) {
-                obj['IndexBy'] = ApiClient.convertToType(data['IndexBy'], 'String');
-            }
-            if (data.hasOwnProperty('RememberIndexing')) {
-                obj['RememberIndexing'] = ApiClient.convertToType(data['RememberIndexing'], 'Boolean');
-            }
-            if (data.hasOwnProperty('PrimaryImageHeight')) {
-                obj['PrimaryImageHeight'] = ApiClient.convertToType(data['PrimaryImageHeight'], 'Number');
-            }
-            if (data.hasOwnProperty('PrimaryImageWidth')) {
-                obj['PrimaryImageWidth'] = ApiClient.convertToType(data['PrimaryImageWidth'], 'Number');
-            }
             if (data.hasOwnProperty('CustomPrefs')) {
                 obj['CustomPrefs'] = ApiClient.convertToType(data['CustomPrefs'], {'String': 'String'});
-            }
-            if (data.hasOwnProperty('ScrollDirection')) {
-                obj['ScrollDirection'] = ScrollDirection.constructFromObject(data['ScrollDirection']);
-            }
-            if (data.hasOwnProperty('ShowBackdrop')) {
-                obj['ShowBackdrop'] = ApiClient.convertToType(data['ShowBackdrop'], 'Boolean');
-            }
-            if (data.hasOwnProperty('RememberSorting')) {
-                obj['RememberSorting'] = ApiClient.convertToType(data['RememberSorting'], 'Boolean');
             }
             if (data.hasOwnProperty('SortOrder')) {
                 obj['SortOrder'] = SortOrder.constructFromObject(data['SortOrder']);
@@ -91,45 +66,13 @@ export default class DisplayPreferences {
     */
     'Id' = undefined;
     /**
-    * @member {String} ViewType
-    */
-    'ViewType' = undefined;
-    /**
     * @member {String} SortBy
     */
     'SortBy' = undefined;
     /**
-    * @member {String} IndexBy
-    */
-    'IndexBy' = undefined;
-    /**
-    * @member {Boolean} RememberIndexing
-    */
-    'RememberIndexing' = undefined;
-    /**
-    * @member {Number} PrimaryImageHeight
-    */
-    'PrimaryImageHeight' = undefined;
-    /**
-    * @member {Number} PrimaryImageWidth
-    */
-    'PrimaryImageWidth' = undefined;
-    /**
     * @member {Object.<String, String>} CustomPrefs
     */
     'CustomPrefs' = undefined;
-    /**
-    * @member {module:model/ScrollDirection} ScrollDirection
-    */
-    'ScrollDirection' = undefined;
-    /**
-    * @member {Boolean} ShowBackdrop
-    */
-    'ShowBackdrop' = undefined;
-    /**
-    * @member {Boolean} RememberSorting
-    */
-    'RememberSorting' = undefined;
     /**
     * @member {module:model/SortOrder} SortOrder
     */

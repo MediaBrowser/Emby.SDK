@@ -32,7 +32,8 @@ class UpdatesPackageVersionInfo(object):
         'checksum': 'str',
         'target_filename': 'str',
         'info_url': 'str',
-        'runtimes': 'str'
+        'runtimes': 'str',
+        'timestamp': 'datetime'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class UpdatesPackageVersionInfo(object):
         'checksum': 'checksum',
         'target_filename': 'targetFilename',
         'info_url': 'infoUrl',
-        'runtimes': 'runtimes'
+        'runtimes': 'runtimes',
+        'timestamp': 'timestamp'
     }
 
-    def __init__(self, name=None, guid=None, version_str=None, classification=None, description=None, required_version_str=None, source_url=None, checksum=None, target_filename=None, info_url=None, runtimes=None):  # noqa: E501
+    def __init__(self, name=None, guid=None, version_str=None, classification=None, description=None, required_version_str=None, source_url=None, checksum=None, target_filename=None, info_url=None, runtimes=None, timestamp=None):  # noqa: E501
         """UpdatesPackageVersionInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._guid = None
@@ -62,6 +64,7 @@ class UpdatesPackageVersionInfo(object):
         self._target_filename = None
         self._info_url = None
         self._runtimes = None
+        self._timestamp = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -85,6 +88,8 @@ class UpdatesPackageVersionInfo(object):
             self.info_url = info_url
         if runtimes is not None:
             self.runtimes = runtimes
+        if timestamp is not None:
+            self.timestamp = timestamp
 
     @property
     def name(self):
@@ -316,6 +321,27 @@ class UpdatesPackageVersionInfo(object):
         """
 
         self._runtimes = runtimes
+
+    @property
+    def timestamp(self):
+        """Gets the timestamp of this UpdatesPackageVersionInfo.  # noqa: E501
+
+
+        :return: The timestamp of this UpdatesPackageVersionInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._timestamp
+
+    @timestamp.setter
+    def timestamp(self, timestamp):
+        """Sets the timestamp of this UpdatesPackageVersionInfo.
+
+
+        :param timestamp: The timestamp of this UpdatesPackageVersionInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._timestamp = timestamp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

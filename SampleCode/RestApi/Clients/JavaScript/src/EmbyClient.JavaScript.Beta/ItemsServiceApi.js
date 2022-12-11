@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ItemsService service.
 * @module EmbyClient.JavaScript.Beta/ItemsServiceApi
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class ItemsServiceApi {
 
@@ -96,6 +96,7 @@ export default class ItemsServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
@@ -223,6 +224,7 @@ export default class ItemsServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
@@ -349,6 +351,7 @@ export default class ItemsServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],

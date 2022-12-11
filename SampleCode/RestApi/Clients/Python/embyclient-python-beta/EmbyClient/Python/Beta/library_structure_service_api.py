@@ -192,7 +192,7 @@ class LibraryStructureServiceApi(object):
     def get_library_virtualfolders_query(self, **kwargs):  # noqa: E501
         """get_library_virtualfolders_query  # noqa: E501
 
-        Requires authentication as administrator  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_library_virtualfolders_query(async_req=True)
@@ -215,7 +215,7 @@ class LibraryStructureServiceApi(object):
     def get_library_virtualfolders_query_with_http_info(self, **kwargs):  # noqa: E501
         """get_library_virtualfolders_query  # noqa: E501
 
-        Requires authentication as administrator  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_library_virtualfolders_query_with_http_info(async_req=True)

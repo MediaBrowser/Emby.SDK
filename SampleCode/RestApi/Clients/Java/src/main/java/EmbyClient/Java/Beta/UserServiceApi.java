@@ -437,6 +437,136 @@ public class UserServiceApi {
         return call;
     }
     /**
+     * Build call for getUsersByUseridTypedsettingsByKey
+     * @param key Key (required)
+     * @param userId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getUsersByUseridTypedsettingsByKeyCall(String key, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Users/{UserId}/TypedSettings/{Key}"
+            .replaceAll("\\{" + "Key" + "\\}", apiClient.escapeString(key.toString()))
+            .replaceAll("\\{" + "UserId" + "\\}", apiClient.escapeString(userId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getUsersByUseridTypedsettingsByKeyValidateBeforeCall(String key, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'key' is set
+        if (key == null) {
+            throw new ApiException("Missing the required parameter 'key' when calling getUsersByUseridTypedsettingsByKey(Async)");
+        }
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling getUsersByUseridTypedsettingsByKey(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = getUsersByUseridTypedsettingsByKeyCall(key, userId, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets a typed user setting
+     * Requires authentication as user
+     * @param key Key (required)
+     * @param userId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void getUsersByUseridTypedsettingsByKey(String key, String userId) throws ApiException {
+        getUsersByUseridTypedsettingsByKeyWithHttpInfo(key, userId);
+    }
+
+    /**
+     * Gets a typed user setting
+     * Requires authentication as user
+     * @param key Key (required)
+     * @param userId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> getUsersByUseridTypedsettingsByKeyWithHttpInfo(String key, String userId) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByUseridTypedsettingsByKeyValidateBeforeCall(key, userId, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Gets a typed user setting (asynchronously)
+     * Requires authentication as user
+     * @param key Key (required)
+     * @param userId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getUsersByUseridTypedsettingsByKeyAsync(String key, String userId, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getUsersByUseridTypedsettingsByKeyValidateBeforeCall(key, userId, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
      * Build call for getUsersPrefixes
      * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
      * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
@@ -2028,6 +2158,144 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersByIdTrackselectionsByTracktypeDeleteValidateBeforeCall(id, trackType, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for postUsersByUseridTypedsettingsByKey
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call postUsersByUseridTypedsettingsByKeyCall(Object body, String userId, String key, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+        
+        // create path and map variables
+        String localVarPath = "/Users/{UserId}/TypedSettings/{Key}"
+            .replaceAll("\\{" + "UserId" + "\\}", apiClient.escapeString(userId.toString()))
+            .replaceAll("\\{" + "Key" + "\\}", apiClient.escapeString(key.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/octet-stream"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call postUsersByUseridTypedsettingsByKeyValidateBeforeCall(Object body, String userId, String key, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling postUsersByUseridTypedsettingsByKey(Async)");
+        }
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling postUsersByUseridTypedsettingsByKey(Async)");
+        }
+        // verify the required parameter 'key' is set
+        if (key == null) {
+            throw new ApiException("Missing the required parameter 'key' when calling postUsersByUseridTypedsettingsByKey(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = postUsersByUseridTypedsettingsByKeyCall(body, userId, key, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Updates a typed user setting
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void postUsersByUseridTypedsettingsByKey(Object body, String userId, String key) throws ApiException {
+        postUsersByUseridTypedsettingsByKeyWithHttpInfo(body, userId, key);
+    }
+
+    /**
+     * Updates a typed user setting
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> postUsersByUseridTypedsettingsByKeyWithHttpInfo(Object body, String userId, String key) throws ApiException {
+        com.squareup.okhttp.Call call = postUsersByUseridTypedsettingsByKeyValidateBeforeCall(body, userId, key, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Updates a typed user setting (asynchronously)
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call postUsersByUseridTypedsettingsByKeyAsync(Object body, String userId, String key, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = postUsersByUseridTypedsettingsByKeyValidateBeforeCall(body, userId, key, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

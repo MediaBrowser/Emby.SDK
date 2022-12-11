@@ -15,7 +15,7 @@ import OperatingSystem from './OperatingSystem';
 /**
 * The MediaEncodingConfigurationToneMappingToneMapOptionsVisibility model module.
 * @module model/MediaEncodingConfigurationToneMappingToneMapOptionsVisibility
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class MediaEncodingConfigurationToneMappingToneMapOptionsVisibility {
     /**

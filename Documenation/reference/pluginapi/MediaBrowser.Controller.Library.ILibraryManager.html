@@ -821,6 +821,53 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_FilterItemsToIdsForUser_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FilterItemsToIdsForUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FilterItemsToIdsForUser_System_Collections_Generic_List_MediaBrowser_Controller_Entities_BaseItem__MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FilterItemsToIdsForUser(System.Collections.Generic.List{MediaBrowser.Controller.Entities.BaseItem},MediaBrowser.Controller.Entities.User)">FilterItemsToIdsForUser(List&lt;BaseItem&gt;, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long[] FilterItemsToIdsForUser(List&lt;BaseItem&gt; items, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_FindByPath_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FindByPath*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FindByPath_System_String_System_Nullable_System_Boolean__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FindByPath(System.String,System.Nullable{System.Boolean})">FindByPath(String, Nullable&lt;Boolean&gt;)</h4>
   <div class="markdown level1 summary"><p>Finds the by path.</p>
@@ -1504,6 +1551,53 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetIdsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetIdsForAncestorIdsQuery*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetIdsForAncestorIdsQuery(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">GetIdsForAncestorIdsQuery(BaseItem, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long[] GetIdsForAncestorIdsQuery(BaseItem item, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetImageInfo_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetImageInfo*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetImageInfo_System_Int64_MediaBrowser_Model_Entities_ImageType_System_Int32_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetImageInfo(System.Int64,MediaBrowser.Model.Entities.ImageType,System.Int32)">GetImageInfo(Int64, ImageType, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -2035,101 +2129,6 @@
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
         <td><p>QueryResult&lt;BaseItem&gt;.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Controller.Entities.BaseItem[])">GetItemList(InternalItemsQuery, BaseItem[])</h4>
-  <div class="markdown level1 summary"><p>Gets the items.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">BaseItem[] GetItemList(InternalItemsQuery query, BaseItem[] parents)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
-        <td><span class="parametername">parents</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Boolean)">GetItemList(InternalItemsQuery, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">BaseItem[] GetItemList(InternalItemsQuery query, bool allowExternalContent)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">allowExternalContent</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -3166,53 +3165,6 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetTopParentIdsForQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTopParentIdsForQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetTopParentIdsForQuery_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTopParentIdsForQuery(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">GetTopParentIdsForQuery(BaseItem, User)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long[] GetTopParentIdsForQuery(BaseItem item, User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetUserRootFolder_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetUserRootFolder*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetUserRootFolder" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetUserRootFolder">GetUserRootFolder()</h4>
   <div class="markdown level1 summary"><p>Gets the user root folder.</p>
@@ -3309,12 +3261,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetVirtualFolders_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetVirtualFolders_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders(System.Boolean)">GetVirtualFolders(Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetVirtualFolders_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders(MediaBrowser.Controller.Entities.User,System.Boolean)">GetVirtualFolders(User, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;VirtualFolderInfo&gt; GetVirtualFolders(bool includeRefreshState)</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;VirtualFolderInfo&gt; GetVirtualFolders(User user, bool includeRefreshState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3326,6 +3278,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">includeRefreshState</span></td>

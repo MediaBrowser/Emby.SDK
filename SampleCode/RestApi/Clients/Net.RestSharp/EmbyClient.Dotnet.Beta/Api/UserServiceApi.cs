@@ -84,6 +84,29 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <returns>ApiResponse of UserDto</returns>
         ApiResponse<UserDto> GetUsersByIdWithHttpInfo (string id);
         /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        void GetUsersByUseridTypedsettingsByKey (string key, string userId);
+
+        /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetUsersByUseridTypedsettingsByKeyWithHttpInfo (string key, string userId);
+        /// <summary>
         /// Gets a list of users
         /// </summary>
         /// <remarks>
@@ -366,6 +389,31 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostUsersByIdTrackselectionsByTracktypeDeleteWithHttpInfo (string id, string trackType);
         /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns></returns>
+        void PostUsersByUseridTypedsettingsByKey (Object body, string userId, string key);
+
+        /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByUseridTypedsettingsByKeyWithHttpInfo (Object body, string userId, string key);
+        /// <summary>
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
@@ -495,6 +543,29 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (UserDto)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserDto>> GetUsersByIdAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetUsersByUseridTypedsettingsByKeyAsync (string key, string userId);
+
+        /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (string key, string userId);
         /// <summary>
         /// Gets a list of users
         /// </summary>
@@ -777,6 +848,31 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="trackType"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdTrackselectionsByTracktypeDeleteAsyncWithHttpInfo (string id, string trackType);
+        /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByUseridTypedsettingsByKeyAsync (Object body, string userId, string key);
+
+        /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (Object body, string userId, string key);
         /// <summary>
         /// Initiates the forgot password process for a local user
         /// </summary>
@@ -1392,6 +1488,167 @@ namespace EmbyClient.Dotnet.Beta.Api
             return new ApiResponse<UserDto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (UserDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserDto)));
+        }
+
+        /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public void GetUsersByUseridTypedsettingsByKey (string key, string userId)
+        {
+             GetUsersByUseridTypedsettingsByKeyWithHttpInfo(key, userId);
+        }
+
+        /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetUsersByUseridTypedsettingsByKeyWithHttpInfo (string key, string userId)
+        {
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersByUseridTypedsettingsByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetUsersByUseridTypedsettingsByKeyAsync (string key, string userId)
+        {
+             await GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo(key, userId);
+
+        }
+
+        /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (string key, string userId)
+        {
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersByUseridTypedsettingsByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
         }
 
         /// <summary>
@@ -3362,6 +3619,195 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PostUsersByIdTrackselectionsByTracktypeDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns></returns>
+        public void PostUsersByUseridTypedsettingsByKey (Object body, string userId, string key)
+        {
+             PostUsersByUseridTypedsettingsByKeyWithHttpInfo(body, userId, key);
+        }
+
+        /// <summary>
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByUseridTypedsettingsByKeyWithHttpInfo (Object body, string userId, string key)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridTypedsettingsByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByUseridTypedsettingsByKeyAsync (Object body, string userId, string key)
+        {
+             await PostUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo(body, userId, key);
+
+        }
+
+        /// <summary>
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (Object body, string userId, string key)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridTypedsettingsByKey", localVarResponse);
                 if (exception != null) throw exception;
             }
 

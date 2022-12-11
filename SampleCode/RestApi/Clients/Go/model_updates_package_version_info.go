@@ -5,6 +5,9 @@
  *
  */
 package embyclient-rest-go
+import (
+	"time"
+)
 
 type UpdatesPackageVersionInfo struct {
 	Name string `json:"name,omitempty"`
@@ -18,4 +21,5 @@ type UpdatesPackageVersionInfo struct {
 	TargetFilename string `json:"targetFilename,omitempty"`
 	InfoUrl string `json:"infoUrl,omitempty"`
 	Runtimes string `json:"runtimes,omitempty"`
+	Timestamp time.Time `json:"timestamp,omitempty"`
 }

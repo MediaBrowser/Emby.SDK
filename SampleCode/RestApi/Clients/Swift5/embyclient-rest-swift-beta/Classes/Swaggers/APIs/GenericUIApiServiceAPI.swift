@@ -65,17 +65,17 @@ open class GenericUIApiServiceAPI {
   "IsInSequence" : true,
   "Commands" : [ {
     "SetFocus" : true,
-    "ConfirmationMessage" : "ConfirmationMessage",
     "CommandType" : "Custom",
     "IsEnabled" : true,
+    "ConfirmationPrompt" : "ConfirmationPrompt",
     "CommandId" : "CommandId",
     "IsVisible" : true,
     "Caption" : "Caption"
   }, {
     "SetFocus" : true,
-    "ConfirmationMessage" : "ConfirmationMessage",
     "CommandType" : "Custom",
     "IsEnabled" : true,
+    "ConfirmationPrompt" : "ConfirmationPrompt",
     "CommandId" : "CommandId",
     "IsVisible" : true,
     "Caption" : "Caption"
@@ -157,17 +157,17 @@ open class GenericUIApiServiceAPI {
   "IsInSequence" : true,
   "Commands" : [ {
     "SetFocus" : true,
-    "ConfirmationMessage" : "ConfirmationMessage",
     "CommandType" : "Custom",
     "IsEnabled" : true,
+    "ConfirmationPrompt" : "ConfirmationPrompt",
     "CommandId" : "CommandId",
     "IsVisible" : true,
     "Caption" : "Caption"
   }, {
     "SetFocus" : true,
-    "ConfirmationMessage" : "ConfirmationMessage",
     "CommandType" : "Custom",
     "IsEnabled" : true,
+    "ConfirmationPrompt" : "ConfirmationPrompt",
     "CommandId" : "CommandId",
     "IsVisible" : true,
     "Caption" : "Caption"

@@ -19,7 +19,6 @@ from embyclient-python-beta.EmbyClient.Python.Beta.codec_parameter_service_api i
 from embyclient-python-beta.EmbyClient.Python.Beta.collection_service_api import CollectionServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.configuration_service_api import ConfigurationServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.connect_service_api import ConnectServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.dashboard_service_api import DashboardServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.device_service_api import DeviceServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.display_preferences_service_api import DisplayPreferencesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.dlna_server_service_api import DlnaServerServiceApi
@@ -27,6 +26,7 @@ from embyclient-python-beta.EmbyClient.Python.Beta.dlna_service_api import DlnaS
 from embyclient-python-beta.EmbyClient.Python.Beta.dynamic_hls_service_api import DynamicHlsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.encoding_info_service_api import EncodingInfoServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.environment_service_api import EnvironmentServiceApi
+from embyclient-python-beta.EmbyClient.Python.Beta.feature_service_api import FeatureServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.ffmpeg_options_service_api import FfmpegOptionsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.game_genres_service_api import GameGenresServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.generic_ui_api_service_api import GenericUIApiServiceApi
@@ -45,7 +45,6 @@ from embyclient-python-beta.EmbyClient.Python.Beta.localization_service_api impo
 from embyclient-python-beta.EmbyClient.Python.Beta.media_info_service_api import MediaInfoServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.movies_service_api import MoviesServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.music_genres_service_api import MusicGenresServiceApi
-from embyclient-python-beta.EmbyClient.Python.Beta.notifications_api_api import NotificationsApiApi
 from embyclient-python-beta.EmbyClient.Python.Beta.notifications_service_api import NotificationsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.official_rating_service_api import OfficialRatingServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.open_api_service_api import OpenApiServiceApi
@@ -69,11 +68,13 @@ from embyclient-python-beta.EmbyClient.Python.Beta.trailers_service_api import T
 from embyclient-python-beta.EmbyClient.Python.Beta.tv_shows_service_api import TvShowsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.universal_audio_service_api import UniversalAudioServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.user_library_service_api import UserLibraryServiceApi
+from embyclient-python-beta.EmbyClient.Python.Beta.user_notifications_service_api import UserNotificationsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.user_service_api import UserServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.user_views_service_api import UserViewsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.video_hls_service_api import VideoHlsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.video_service_api import VideoServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.videos_service_api import VideosServiceApi
+from embyclient-python-beta.EmbyClient.Python.Beta.web_app_service_api import WebAppServiceApi
 # import ApiClient
 from embyclient-python-beta.api_client import ApiClient
 from embyclient-python-beta.configuration import Configuration
@@ -142,6 +143,8 @@ from embyclient-python-beta.models.emby_dlna_profiles_dlna_profile import EmbyDl
 from embyclient-python-beta.models.emby_dlna_profiles_header_match_type import EmbyDlnaProfilesHeaderMatchType
 from embyclient-python-beta.models.emby_dlna_profiles_http_header_info import EmbyDlnaProfilesHttpHeaderInfo
 from embyclient-python-beta.models.emby_dlna_profiles_protocol_info_detection import EmbyDlnaProfilesProtocolInfoDetection
+from embyclient-python-beta.models.emby_features_feature_info import EmbyFeaturesFeatureInfo
+from embyclient-python-beta.models.emby_features_feature_type import EmbyFeaturesFeatureType
 from embyclient-python-beta.models.emby_live_tv_channel_management_info import EmbyLiveTVChannelManagementInfo
 from embyclient-python-beta.models.emby_media_model_enums_codec_directions import EmbyMediaModelEnumsCodecDirections
 from embyclient-python-beta.models.emby_media_model_enums_codec_kinds import EmbyMediaModelEnumsCodecKinds
@@ -154,11 +157,9 @@ from embyclient-python-beta.models.emby_media_model_types_profile_information im
 from embyclient-python-beta.models.emby_media_model_types_profile_level_information import EmbyMediaModelTypesProfileLevelInformation
 from embyclient-python-beta.models.emby_media_model_types_resolution import EmbyMediaModelTypesResolution
 from embyclient-python-beta.models.emby_media_model_types_resolution_with_rate import EmbyMediaModelTypesResolutionWithRate
-from embyclient-python-beta.models.emby_notifications_api_notification import EmbyNotificationsApiNotification
-from embyclient-python-beta.models.emby_notifications_api_notification_result import EmbyNotificationsApiNotificationResult
-from embyclient-python-beta.models.emby_notifications_api_notifications_summary import EmbyNotificationsApiNotificationsSummary
 from embyclient-python-beta.models.emby_notifications_notification_category_info import EmbyNotificationsNotificationCategoryInfo
 from embyclient-python-beta.models.emby_notifications_notification_type_info import EmbyNotificationsNotificationTypeInfo
+from embyclient-python-beta.models.emby_notifications_user_notification_info import EmbyNotificationsUserNotificationInfo
 from embyclient-python-beta.models.emby_web_api_configuration_page_info import EmbyWebApiConfigurationPageInfo
 from embyclient-python-beta.models.emby_web_generic_edit_actions_postback_action import EmbyWebGenericEditActionsPostbackAction
 from embyclient-python-beta.models.emby_web_generic_edit_common_editor_types import EmbyWebGenericEditCommonEditorTypes
@@ -253,8 +254,6 @@ from embyclient-python-beta.models.name_id_pair import NameIdPair
 from embyclient-python-beta.models.name_long_id_pair import NameLongIdPair
 from embyclient-python-beta.models.name_value_pair import NameValuePair
 from embyclient-python-beta.models.net_end_point_info import NetEndPointInfo
-from embyclient-python-beta.models.notifications_notification_level import NotificationsNotificationLevel
-from embyclient-python-beta.models.notifications_notification_type_info import NotificationsNotificationTypeInfo
 from embyclient-python-beta.models.operating_system import OperatingSystem
 from embyclient-python-beta.models.parental_rating import ParentalRating
 from embyclient-python-beta.models.persistence_intro_debug_info import PersistenceIntroDebugInfo
@@ -324,7 +323,6 @@ from embyclient-python-beta.models.remote_subtitle_info import RemoteSubtitleInf
 from embyclient-python-beta.models.repeat_mode import RepeatMode
 from embyclient-python-beta.models.roku_metadata_api_thumbnail_info import RokuMetadataApiThumbnailInfo
 from embyclient-python-beta.models.roku_metadata_api_thumbnail_set_info import RokuMetadataApiThumbnailSetInfo
-from embyclient-python-beta.models.scroll_direction import ScrollDirection
 from embyclient-python-beta.models.series_display_order import SeriesDisplayOrder
 from embyclient-python-beta.models.session_session_info import SessionSessionInfo
 from embyclient-python-beta.models.session_user_info import SessionUserInfo

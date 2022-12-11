@@ -15,7 +15,7 @@ import SyncSyncCategory from './SyncSyncCategory';
 /**
 * The SyncModelSyncJobRequest model module.
 * @module model/SyncModelSyncJobRequest
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class SyncModelSyncJobRequest {
     /**

@@ -182,7 +182,7 @@ func (a *LibraryStructureServiceApiService) DeleteLibraryVirtualfoldersPaths(ctx
 }
 /*
 LibraryStructureServiceApiService
-Requires authentication as administrator
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *LibraryStructureServiceApiGetLibraryVirtualfoldersQueryOpts - Optional Parameters:
      * @param "StartIndex" (optional.Int32) -  Optional. The record index to start at. All items with a lower index will be dropped from the results.

@@ -37,12 +37,9 @@ class UpdatesPackageInfo(object):
         'category': 'str',
         'tile_color': 'str',
         'feature_id': 'str',
-        'reg_info': 'str',
         'price': 'float',
         'target_system': 'UpdatesPackageTargetSystem',
         'guid': 'str',
-        'total_ratings': 'int',
-        'avg_rating': 'float',
         'is_registered': 'bool',
         'exp_date': 'datetime',
         'versions': 'list[UpdatesPackageVersionInfo]',
@@ -66,12 +63,9 @@ class UpdatesPackageInfo(object):
         'category': 'category',
         'tile_color': 'tileColor',
         'feature_id': 'featureId',
-        'reg_info': 'regInfo',
         'price': 'price',
         'target_system': 'targetSystem',
         'guid': 'guid',
-        'total_ratings': 'totalRatings',
-        'avg_rating': 'avgRating',
         'is_registered': 'isRegistered',
         'exp_date': 'expDate',
         'versions': 'versions',
@@ -79,7 +73,7 @@ class UpdatesPackageInfo(object):
         'installs': 'installs'
     }
 
-    def __init__(self, id=None, name=None, short_description=None, overview=None, is_premium=None, adult=None, rich_desc_url=None, thumb_image=None, preview_image=None, type=None, target_filename=None, owner=None, category=None, tile_color=None, feature_id=None, reg_info=None, price=None, target_system=None, guid=None, total_ratings=None, avg_rating=None, is_registered=None, exp_date=None, versions=None, enable_in_app_store=None, installs=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_description=None, overview=None, is_premium=None, adult=None, rich_desc_url=None, thumb_image=None, preview_image=None, type=None, target_filename=None, owner=None, category=None, tile_color=None, feature_id=None, price=None, target_system=None, guid=None, is_registered=None, exp_date=None, versions=None, enable_in_app_store=None, installs=None):  # noqa: E501
         """UpdatesPackageInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
@@ -96,12 +90,9 @@ class UpdatesPackageInfo(object):
         self._category = None
         self._tile_color = None
         self._feature_id = None
-        self._reg_info = None
         self._price = None
         self._target_system = None
         self._guid = None
-        self._total_ratings = None
-        self._avg_rating = None
         self._is_registered = None
         self._exp_date = None
         self._versions = None
@@ -138,18 +129,12 @@ class UpdatesPackageInfo(object):
             self.tile_color = tile_color
         if feature_id is not None:
             self.feature_id = feature_id
-        if reg_info is not None:
-            self.reg_info = reg_info
         if price is not None:
             self.price = price
         if target_system is not None:
             self.target_system = target_system
         if guid is not None:
             self.guid = guid
-        if total_ratings is not None:
-            self.total_ratings = total_ratings
-        if avg_rating is not None:
-            self.avg_rating = avg_rating
         if is_registered is not None:
             self.is_registered = is_registered
         if exp_date is not None:
@@ -477,27 +462,6 @@ class UpdatesPackageInfo(object):
         self._feature_id = feature_id
 
     @property
-    def reg_info(self):
-        """Gets the reg_info of this UpdatesPackageInfo.  # noqa: E501
-
-
-        :return: The reg_info of this UpdatesPackageInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._reg_info
-
-    @reg_info.setter
-    def reg_info(self, reg_info):
-        """Sets the reg_info of this UpdatesPackageInfo.
-
-
-        :param reg_info: The reg_info of this UpdatesPackageInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._reg_info = reg_info
-
-    @property
     def price(self):
         """Gets the price of this UpdatesPackageInfo.  # noqa: E501
 
@@ -559,48 +523,6 @@ class UpdatesPackageInfo(object):
         """
 
         self._guid = guid
-
-    @property
-    def total_ratings(self):
-        """Gets the total_ratings of this UpdatesPackageInfo.  # noqa: E501
-
-
-        :return: The total_ratings of this UpdatesPackageInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._total_ratings
-
-    @total_ratings.setter
-    def total_ratings(self, total_ratings):
-        """Sets the total_ratings of this UpdatesPackageInfo.
-
-
-        :param total_ratings: The total_ratings of this UpdatesPackageInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._total_ratings = total_ratings
-
-    @property
-    def avg_rating(self):
-        """Gets the avg_rating of this UpdatesPackageInfo.  # noqa: E501
-
-
-        :return: The avg_rating of this UpdatesPackageInfo.  # noqa: E501
-        :rtype: float
-        """
-        return self._avg_rating
-
-    @avg_rating.setter
-    def avg_rating(self, avg_rating):
-        """Sets the avg_rating of this UpdatesPackageInfo.
-
-
-        :param avg_rating: The avg_rating of this UpdatesPackageInfo.  # noqa: E501
-        :type: float
-        """
-
-        self._avg_rating = avg_rating
 
     @property
     def is_registered(self):

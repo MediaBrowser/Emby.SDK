@@ -345,7 +345,7 @@ public class LibraryStructureServiceApi {
 
     /**
      * 
-     * Requires authentication as administrator
+     * Requires authentication as user
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @return QueryResultVirtualFolderInfo
@@ -358,7 +358,7 @@ public class LibraryStructureServiceApi {
 
     /**
      * 
-     * Requires authentication as administrator
+     * Requires authentication as user
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @return ApiResponse&lt;QueryResultVirtualFolderInfo&gt;
@@ -372,7 +372,7 @@ public class LibraryStructureServiceApi {
 
     /**
      *  (asynchronously)
-     * Requires authentication as administrator
+     * Requires authentication as user
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param callback The callback to be executed when the API call finishes

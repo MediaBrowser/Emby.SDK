@@ -28,6 +28,8 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="enableInMainMenu">enableInMainMenu.</param>
+        /// <param name="enableInUserMenu">enableInUserMenu.</param>
+        /// <param name="featureId">featureId.</param>
         /// <param name="menuSection">menuSection.</param>
         /// <param name="menuIcon">menuIcon.</param>
         /// <param name="displayName">displayName.</param>
@@ -37,10 +39,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="navMenuId">navMenuId.</param>
         /// <param name="plugin">plugin.</param>
         /// <param name="translations">translations.</param>
-        public EmbyWebApiConfigurationPageInfo(string name = default(string), bool? enableInMainMenu = default(bool?), string menuSection = default(string), string menuIcon = default(string), string displayName = default(string), PluginsConfigurationPageType configurationPageType = default(PluginsConfigurationPageType), string pluginId = default(string), string href = default(string), string navMenuId = default(string), CommonPluginsIPlugin plugin = default(CommonPluginsIPlugin), List<string> translations = default(List<string>))
+        public EmbyWebApiConfigurationPageInfo(string name = default(string), bool? enableInMainMenu = default(bool?), bool? enableInUserMenu = default(bool?), string featureId = default(string), string menuSection = default(string), string menuIcon = default(string), string displayName = default(string), PluginsConfigurationPageType configurationPageType = default(PluginsConfigurationPageType), string pluginId = default(string), string href = default(string), string navMenuId = default(string), CommonPluginsIPlugin plugin = default(CommonPluginsIPlugin), List<string> translations = default(List<string>))
         {
             this.Name = name;
             this.EnableInMainMenu = enableInMainMenu;
+            this.EnableInUserMenu = enableInUserMenu;
+            this.FeatureId = featureId;
             this.MenuSection = menuSection;
             this.MenuIcon = menuIcon;
             this.DisplayName = displayName;
@@ -63,6 +67,18 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="EnableInMainMenu", EmitDefaultValue=false)]
         public bool? EnableInMainMenu { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableInUserMenu
+        /// </summary>
+        [DataMember(Name="EnableInUserMenu", EmitDefaultValue=false)]
+        public bool? EnableInUserMenu { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeatureId
+        /// </summary>
+        [DataMember(Name="FeatureId", EmitDefaultValue=false)]
+        public string FeatureId { get; set; }
 
         /// <summary>
         /// Gets or Sets MenuSection
@@ -128,6 +144,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("class EmbyWebApiConfigurationPageInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EnableInMainMenu: ").Append(EnableInMainMenu).Append("\n");
+            sb.Append("  EnableInUserMenu: ").Append(EnableInUserMenu).Append("\n");
+            sb.Append("  FeatureId: ").Append(FeatureId).Append("\n");
             sb.Append("  MenuSection: ").Append(MenuSection).Append("\n");
             sb.Append("  MenuIcon: ").Append(MenuIcon).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
@@ -180,6 +198,16 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.EnableInMainMenu == input.EnableInMainMenu ||
                     (this.EnableInMainMenu != null &&
                     this.EnableInMainMenu.Equals(input.EnableInMainMenu))
+                ) && 
+                (
+                    this.EnableInUserMenu == input.EnableInUserMenu ||
+                    (this.EnableInUserMenu != null &&
+                    this.EnableInUserMenu.Equals(input.EnableInUserMenu))
+                ) && 
+                (
+                    this.FeatureId == input.FeatureId ||
+                    (this.FeatureId != null &&
+                    this.FeatureId.Equals(input.FeatureId))
                 ) && 
                 (
                     this.MenuSection == input.MenuSection ||
@@ -242,6 +270,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.EnableInMainMenu != null)
                     hashCode = hashCode * 59 + this.EnableInMainMenu.GetHashCode();
+                if (this.EnableInUserMenu != null)
+                    hashCode = hashCode * 59 + this.EnableInUserMenu.GetHashCode();
+                if (this.FeatureId != null)
+                    hashCode = hashCode * 59 + this.FeatureId.GetHashCode();
                 if (this.MenuSection != null)
                     hashCode = hashCode * 59 + this.MenuSection.GetHashCode();
                 if (this.MenuIcon != null)

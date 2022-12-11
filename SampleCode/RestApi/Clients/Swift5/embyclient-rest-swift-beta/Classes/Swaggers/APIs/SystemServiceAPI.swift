@@ -390,7 +390,8 @@ open class SystemServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 }}]
 
      - returns: RequestBuilder<UpdatesPackageVersionInfo> 
@@ -439,7 +440,8 @@ open class SystemServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 }, {
   "sourceUrl" : "sourceUrl",
   "versionStr" : "versionStr",
@@ -451,7 +453,8 @@ open class SystemServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 } ]}]
 
      - returns: RequestBuilder<[UpdatesPackageVersionInfo]> 

@@ -10053,10 +10053,12 @@ open class LibraryServiceAPI {
   "MetadataSavers" : [ {
     "DefaultEnabled" : true,
     "Features" : [ "Collections", "Collections" ],
+    "SetupUrl" : "SetupUrl",
     "Name" : "Name"
   }, {
     "DefaultEnabled" : true,
     "Features" : [ "Collections", "Collections" ],
+    "SetupUrl" : "SetupUrl",
     "Name" : "Name"
   } ]
 }}]

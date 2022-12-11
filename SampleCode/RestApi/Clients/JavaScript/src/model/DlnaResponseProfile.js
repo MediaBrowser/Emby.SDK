@@ -16,7 +16,7 @@ import DlnaProfileCondition from './DlnaProfileCondition';
 /**
 * The DlnaResponseProfile model module.
 * @module model/DlnaResponseProfile
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class DlnaResponseProfile {
     /**

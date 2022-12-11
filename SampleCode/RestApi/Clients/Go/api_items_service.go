@@ -72,6 +72,7 @@ Requires authentication as user
      * @param "IsFavorite" (optional.Bool) -  Optional filter by items that are marked as favorite, or not.
      * @param "IsMovie" (optional.Bool) -  Optional filter for movies.
      * @param "IsSeries" (optional.Bool) -  Optional filter for series.
+     * @param "IsFolder" (optional.Bool) -  Optional filter for folders.
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
@@ -163,6 +164,7 @@ type ItemsServiceApiGetItemsOpts struct {
     IsFavorite optional.Bool
     IsMovie optional.Bool
     IsSeries optional.Bool
+    IsFolder optional.Bool
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
@@ -355,6 +357,9 @@ func (a *ItemsServiceApiService) GetItems(ctx context.Context, localVarOptionals
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSeries.IsSet() {
 		localVarQueryParams.Add("IsSeries", parameterToString(localVarOptionals.IsSeries.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsFolder.IsSet() {
+		localVarQueryParams.Add("IsFolder", parameterToString(localVarOptionals.IsFolder.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsNews.IsSet() {
 		localVarQueryParams.Add("IsNews", parameterToString(localVarOptionals.IsNews.Value(), ""))
@@ -609,6 +614,7 @@ Requires authentication as user
      * @param "IsFavorite" (optional.Bool) -  Optional filter by items that are marked as favorite, or not.
      * @param "IsMovie" (optional.Bool) -  Optional filter for movies.
      * @param "IsSeries" (optional.Bool) -  Optional filter for series.
+     * @param "IsFolder" (optional.Bool) -  Optional filter for folders.
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
@@ -699,6 +705,7 @@ type ItemsServiceApiGetUsersByUseridItemsOpts struct {
     IsFavorite optional.Bool
     IsMovie optional.Bool
     IsSeries optional.Bool
+    IsFolder optional.Bool
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
@@ -891,6 +898,9 @@ func (a *ItemsServiceApiService) GetUsersByUseridItems(ctx context.Context, user
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSeries.IsSet() {
 		localVarQueryParams.Add("IsSeries", parameterToString(localVarOptionals.IsSeries.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsFolder.IsSet() {
+		localVarQueryParams.Add("IsFolder", parameterToString(localVarOptionals.IsFolder.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsNews.IsSet() {
 		localVarQueryParams.Add("IsNews", parameterToString(localVarOptionals.IsNews.Value(), ""))
@@ -1142,6 +1152,7 @@ Requires authentication as user
      * @param "IsFavorite" (optional.Bool) -  Optional filter by items that are marked as favorite, or not.
      * @param "IsMovie" (optional.Bool) -  Optional filter for movies.
      * @param "IsSeries" (optional.Bool) -  Optional filter for series.
+     * @param "IsFolder" (optional.Bool) -  Optional filter for folders.
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
@@ -1232,6 +1243,7 @@ type ItemsServiceApiGetUsersByUseridItemsResumeOpts struct {
     IsFavorite optional.Bool
     IsMovie optional.Bool
     IsSeries optional.Bool
+    IsFolder optional.Bool
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
@@ -1424,6 +1436,9 @@ func (a *ItemsServiceApiService) GetUsersByUseridItemsResume(ctx context.Context
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSeries.IsSet() {
 		localVarQueryParams.Add("IsSeries", parameterToString(localVarOptionals.IsSeries.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsFolder.IsSet() {
+		localVarQueryParams.Add("IsFolder", parameterToString(localVarOptionals.IsFolder.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsNews.IsSet() {
 		localVarQueryParams.Add("IsNews", parameterToString(localVarOptionals.IsNews.Value(), ""))

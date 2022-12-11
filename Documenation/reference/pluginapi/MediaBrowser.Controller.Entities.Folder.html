@@ -507,6 +507,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LibraryManager">BaseItem.LibraryManager</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FeatureManager">BaseItem.FeatureManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserManager">BaseItem.UserManager</a>
     </div>
     <div>
@@ -936,7 +939,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemLookupInfo__1_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetItemLookupInfo&lt;T&gt;(LibraryOptions)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParentIdsForQuery_MediaBrowser_Controller_Entities_User_">BaseItem.GetTopParentIdsForQuery(User)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_">BaseItem.GetIdsForAncestorIdsQuery(User)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetNameForMetadataLookup">BaseItem.GetNameForMetadataLookup()</a>
@@ -963,13 +966,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParentId">BaseItem.GetTopParentId()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery">BaseItem.GetIdsForAncestorQuery()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a>
@@ -1348,30 +1345,13 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_Folder_CanDelete_" data-uid="MediaBrowser.Controller.Entities.Folder.CanDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Folder_CanDelete_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.Folder.CanDelete(MediaBrowser.Controller.Entities.Folder[])">CanDelete(Folder[])</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Folder_CanDelete" data-uid="MediaBrowser.Controller.Entities.Folder.CanDelete">CanDelete()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool CanDelete(Folder[] collectionFolders)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool CanDelete()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>[]</td>
-        <td><span class="parametername">collectionFolders</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -1388,7 +1368,7 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(Folder[])</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete">BaseItem.CanDelete()</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Folder_FillPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Folder.FillPlayedStatus*"></a>
@@ -2463,13 +2443,13 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildrenInternal*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildrenInternal(System.IProgress{System.Double},System.Threading.CancellationToken,System.Boolean,System.Boolean,MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Providers.IDirectoryService)">ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, MetadataRefreshOptions, IDirectoryService)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_System_Collections_Generic_Dictionary_System_Int64_System_Boolean__MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildrenInternal(System.IProgress{System.Double},System.Threading.CancellationToken,System.Boolean,System.Boolean,System.Collections.Generic.Dictionary{System.Int64,System.Boolean},MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Providers.IDirectoryService)">ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, Dictionary&lt;Int64, Boolean&gt;, MetadataRefreshOptions, IDirectoryService)</h4>
   <div class="markdown level1 summary"><p>Validates the children internal.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual async Task ValidateChildrenInternal(IProgress&lt;double&gt; progress, CancellationToken cancellationToken, bool recursive, bool refreshChildMetadata, MetadataRefreshOptions refreshOptions, IDirectoryService directoryService)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual async Task ValidateChildrenInternal(IProgress&lt;double&gt; progress, CancellationToken cancellationToken, bool recursive, bool refreshChildMetadata, Dictionary&lt;long, bool&gt; newItemIds, MetadataRefreshOptions refreshOptions, IDirectoryService directoryService)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2504,6 +2484,11 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
         <td><span class="parametername">refreshChildMetadata</span></td>
         <td><p>if set to <code>true</code> [refresh child metadata].</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">newItemIds</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>

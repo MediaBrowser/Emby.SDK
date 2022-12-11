@@ -30,6 +30,12 @@ public class EmbyWebApiConfigurationPageInfo {
   @SerializedName("EnableInMainMenu")
   private Boolean enableInMainMenu = null;
 
+  @SerializedName("EnableInUserMenu")
+  private Boolean enableInUserMenu = null;
+
+  @SerializedName("FeatureId")
+  private String featureId = null;
+
   @SerializedName("MenuSection")
   private String menuSection = null;
 
@@ -91,6 +97,42 @@ public class EmbyWebApiConfigurationPageInfo {
 
   public void setEnableInMainMenu(Boolean enableInMainMenu) {
     this.enableInMainMenu = enableInMainMenu;
+  }
+
+  public EmbyWebApiConfigurationPageInfo enableInUserMenu(Boolean enableInUserMenu) {
+    this.enableInUserMenu = enableInUserMenu;
+    return this;
+  }
+
+   /**
+   * Get enableInUserMenu
+   * @return enableInUserMenu
+  **/
+  @Schema(description = "")
+  public Boolean isEnableInUserMenu() {
+    return enableInUserMenu;
+  }
+
+  public void setEnableInUserMenu(Boolean enableInUserMenu) {
+    this.enableInUserMenu = enableInUserMenu;
+  }
+
+  public EmbyWebApiConfigurationPageInfo featureId(String featureId) {
+    this.featureId = featureId;
+    return this;
+  }
+
+   /**
+   * Get featureId
+   * @return featureId
+  **/
+  @Schema(description = "")
+  public String getFeatureId() {
+    return featureId;
+  }
+
+  public void setFeatureId(String featureId) {
+    this.featureId = featureId;
   }
 
   public EmbyWebApiConfigurationPageInfo menuSection(String menuSection) {
@@ -275,6 +317,8 @@ public class EmbyWebApiConfigurationPageInfo {
     EmbyWebApiConfigurationPageInfo embyWebApiConfigurationPageInfo = (EmbyWebApiConfigurationPageInfo) o;
     return Objects.equals(this.name, embyWebApiConfigurationPageInfo.name) &&
         Objects.equals(this.enableInMainMenu, embyWebApiConfigurationPageInfo.enableInMainMenu) &&
+        Objects.equals(this.enableInUserMenu, embyWebApiConfigurationPageInfo.enableInUserMenu) &&
+        Objects.equals(this.featureId, embyWebApiConfigurationPageInfo.featureId) &&
         Objects.equals(this.menuSection, embyWebApiConfigurationPageInfo.menuSection) &&
         Objects.equals(this.menuIcon, embyWebApiConfigurationPageInfo.menuIcon) &&
         Objects.equals(this.displayName, embyWebApiConfigurationPageInfo.displayName) &&
@@ -288,7 +332,7 @@ public class EmbyWebApiConfigurationPageInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, enableInMainMenu, menuSection, menuIcon, displayName, configurationPageType, pluginId, href, navMenuId, plugin, translations);
+    return Objects.hash(name, enableInMainMenu, enableInUserMenu, featureId, menuSection, menuIcon, displayName, configurationPageType, pluginId, href, navMenuId, plugin, translations);
   }
 
 
@@ -299,6 +343,8 @@ public class EmbyWebApiConfigurationPageInfo {
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    enableInMainMenu: ").append(toIndentedString(enableInMainMenu)).append("\n");
+    sb.append("    enableInUserMenu: ").append(toIndentedString(enableInUserMenu)).append("\n");
+    sb.append("    featureId: ").append(toIndentedString(featureId)).append("\n");
     sb.append("    menuSection: ").append(toIndentedString(menuSection)).append("\n");
     sb.append("    menuIcon: ").append(toIndentedString(menuIcon)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");

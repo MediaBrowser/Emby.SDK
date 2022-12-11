@@ -41,18 +41,15 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="category">category.</param>
         /// <param name="tileColor">tileColor.</param>
         /// <param name="featureId">featureId.</param>
-        /// <param name="regInfo">regInfo.</param>
         /// <param name="price">price.</param>
         /// <param name="targetSystem">targetSystem.</param>
         /// <param name="guid">guid.</param>
-        /// <param name="totalRatings">totalRatings.</param>
-        /// <param name="avgRating">avgRating.</param>
         /// <param name="isRegistered">isRegistered.</param>
         /// <param name="expDate">expDate.</param>
         /// <param name="versions">versions.</param>
         /// <param name="enableInAppStore">enableInAppStore.</param>
         /// <param name="installs">installs.</param>
-        public UpdatesPackageInfo(string id = default(string), string name = default(string), string shortDescription = default(string), string overview = default(string), bool? isPremium = default(bool?), bool? adult = default(bool?), string richDescUrl = default(string), string thumbImage = default(string), string previewImage = default(string), string type = default(string), string targetFilename = default(string), string owner = default(string), string category = default(string), string tileColor = default(string), string featureId = default(string), string regInfo = default(string), float? price = default(float?), UpdatesPackageTargetSystem targetSystem = default(UpdatesPackageTargetSystem), string guid = default(string), int? totalRatings = default(int?), float? avgRating = default(float?), bool? isRegistered = default(bool?), DateTimeOffset? expDate = default(DateTimeOffset?), List<UpdatesPackageVersionInfo> versions = default(List<UpdatesPackageVersionInfo>), bool? enableInAppStore = default(bool?), int? installs = default(int?))
+        public UpdatesPackageInfo(string id = default(string), string name = default(string), string shortDescription = default(string), string overview = default(string), bool? isPremium = default(bool?), bool? adult = default(bool?), string richDescUrl = default(string), string thumbImage = default(string), string previewImage = default(string), string type = default(string), string targetFilename = default(string), string owner = default(string), string category = default(string), string tileColor = default(string), string featureId = default(string), float? price = default(float?), UpdatesPackageTargetSystem targetSystem = default(UpdatesPackageTargetSystem), string guid = default(string), bool? isRegistered = default(bool?), DateTimeOffset? expDate = default(DateTimeOffset?), List<UpdatesPackageVersionInfo> versions = default(List<UpdatesPackageVersionInfo>), bool? enableInAppStore = default(bool?), int? installs = default(int?))
         {
             this.Id = id;
             this.Name = name;
@@ -69,12 +66,9 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.Category = category;
             this.TileColor = tileColor;
             this.FeatureId = featureId;
-            this.RegInfo = regInfo;
             this.Price = price;
             this.TargetSystem = targetSystem;
             this.Guid = guid;
-            this.TotalRatings = totalRatings;
-            this.AvgRating = avgRating;
             this.IsRegistered = isRegistered;
             this.ExpDate = expDate;
             this.Versions = versions;
@@ -173,12 +167,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string FeatureId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RegInfo
-        /// </summary>
-        [DataMember(Name="regInfo", EmitDefaultValue=false)]
-        public string RegInfo { get; set; }
-
-        /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
@@ -195,18 +183,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="guid", EmitDefaultValue=false)]
         public string Guid { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TotalRatings
-        /// </summary>
-        [DataMember(Name="totalRatings", EmitDefaultValue=false)]
-        public int? TotalRatings { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AvgRating
-        /// </summary>
-        [DataMember(Name="avgRating", EmitDefaultValue=false)]
-        public float? AvgRating { get; set; }
 
         /// <summary>
         /// Gets or Sets IsRegistered
@@ -261,12 +237,9 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  TileColor: ").Append(TileColor).Append("\n");
             sb.Append("  FeatureId: ").Append(FeatureId).Append("\n");
-            sb.Append("  RegInfo: ").Append(RegInfo).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  TargetSystem: ").Append(TargetSystem).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
-            sb.Append("  TotalRatings: ").Append(TotalRatings).Append("\n");
-            sb.Append("  AvgRating: ").Append(AvgRating).Append("\n");
             sb.Append("  IsRegistered: ").Append(IsRegistered).Append("\n");
             sb.Append("  ExpDate: ").Append(ExpDate).Append("\n");
             sb.Append("  Versions: ").Append(Versions).Append("\n");
@@ -382,11 +355,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.FeatureId.Equals(input.FeatureId))
                 ) && 
                 (
-                    this.RegInfo == input.RegInfo ||
-                    (this.RegInfo != null &&
-                    this.RegInfo.Equals(input.RegInfo))
-                ) && 
-                (
                     this.Price == input.Price ||
                     (this.Price != null &&
                     this.Price.Equals(input.Price))
@@ -400,16 +368,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.Guid == input.Guid ||
                     (this.Guid != null &&
                     this.Guid.Equals(input.Guid))
-                ) && 
-                (
-                    this.TotalRatings == input.TotalRatings ||
-                    (this.TotalRatings != null &&
-                    this.TotalRatings.Equals(input.TotalRatings))
-                ) && 
-                (
-                    this.AvgRating == input.AvgRating ||
-                    (this.AvgRating != null &&
-                    this.AvgRating.Equals(input.AvgRating))
                 ) && 
                 (
                     this.IsRegistered == input.IsRegistered ||
@@ -478,18 +436,12 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.TileColor.GetHashCode();
                 if (this.FeatureId != null)
                     hashCode = hashCode * 59 + this.FeatureId.GetHashCode();
-                if (this.RegInfo != null)
-                    hashCode = hashCode * 59 + this.RegInfo.GetHashCode();
                 if (this.Price != null)
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
                 if (this.TargetSystem != null)
                     hashCode = hashCode * 59 + this.TargetSystem.GetHashCode();
                 if (this.Guid != null)
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
-                if (this.TotalRatings != null)
-                    hashCode = hashCode * 59 + this.TotalRatings.GetHashCode();
-                if (this.AvgRating != null)
-                    hashCode = hashCode * 59 + this.AvgRating.GetHashCode();
                 if (this.IsRegistered != null)
                     hashCode = hashCode * 59 + this.IsRegistered.GetHashCode();
                 if (this.ExpDate != null)

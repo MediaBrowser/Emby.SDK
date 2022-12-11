@@ -34,6 +34,7 @@ public struct UsersUserPolicy: Codable {
     public var enableVideoPlaybackTranscoding: Bool?
     public var enablePlaybackRemuxing: Bool?
     public var enableContentDeletion: Bool?
+    public var restrictedFeatures: [String]?
     public var enableContentDeletionFromFolders: [String]?
     public var enableContentDownloading: Bool?
     public var enableSubtitleDownloading: Bool?
@@ -54,7 +55,7 @@ public struct UsersUserPolicy: Codable {
     public var enabledDevices: [String]?
     public var enableAllDevices: Bool?
 
-    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [ConfigurationAccessSchedule]? = nil, blockUnratedItems: [ConfigurationUnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil) {
+    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [ConfigurationAccessSchedule]? = nil, blockUnratedItems: [ConfigurationUnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, restrictedFeatures: [String]? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil) {
         self.isAdministrator = isAdministrator
         self.isHidden = isHidden
         self.isHiddenRemotely = isHiddenRemotely
@@ -78,6 +79,7 @@ public struct UsersUserPolicy: Codable {
         self.enableVideoPlaybackTranscoding = enableVideoPlaybackTranscoding
         self.enablePlaybackRemuxing = enablePlaybackRemuxing
         self.enableContentDeletion = enableContentDeletion
+        self.restrictedFeatures = restrictedFeatures
         self.enableContentDeletionFromFolders = enableContentDeletionFromFolders
         self.enableContentDownloading = enableContentDownloading
         self.enableSubtitleDownloading = enableSubtitleDownloading
@@ -123,6 +125,7 @@ public struct UsersUserPolicy: Codable {
         case enableVideoPlaybackTranscoding = "EnableVideoPlaybackTranscoding"
         case enablePlaybackRemuxing = "EnablePlaybackRemuxing"
         case enableContentDeletion = "EnableContentDeletion"
+        case restrictedFeatures = "RestrictedFeatures"
         case enableContentDeletionFromFolders = "EnableContentDeletionFromFolders"
         case enableContentDownloading = "EnableContentDownloading"
         case enableSubtitleDownloading = "EnableSubtitleDownloading"

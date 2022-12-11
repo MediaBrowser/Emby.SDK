@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.19"
+    "version": "4.8.0.20"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -312,6 +312,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -922,6 +928,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -1683,6 +1695,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -2090,6 +2108,56 @@
       },
       "x-summary": "Gets all devices"
     },
+    "/Features": {
+      "get": {
+        "tags": [
+          "FeatureService"
+        ],
+        "summary": "Gets a list of installed features",
+        "description": "Requires authentication as administrator",
+        "operationId": "getFeatures",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a FeatureInfo[] object.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Emby.Features.FeatureInfo"
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Gets a list of installed features"
+    },
     "/GameGenres": {
       "get": {
         "tags": [
@@ -2386,6 +2454,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -3004,6 +3078,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -3614,6 +3694,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -4274,6 +4360,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -4888,6 +4980,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -5494,6 +5592,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -6237,6 +6341,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -7103,6 +7213,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -7717,6 +7833,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -8323,6 +8445,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -9003,6 +9131,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -9617,6 +9751,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -10227,6 +10367,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -10833,6 +10979,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -11800,6 +11952,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -12406,6 +12564,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -15365,6 +15529,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -16679,6 +16849,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -18410,6 +18586,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -19042,6 +19224,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -19680,6 +19868,12 @@
           },
           {
             "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "IsNews",
             "description": "Optional filter for news.",
             "type": "boolean"
@@ -20311,6 +20505,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -21389,56 +21589,6 @@
       },
       "x-summary": "Creates an instant playlist based on a music genre"
     },
-    "/Notifications/All": {
-      "get": {
-        "tags": [
-          "NotificationsApi"
-        ],
-        "summary": "Gets notification types",
-        "description": "Requires authentication as user",
-        "operationId": "getNotificationsAll",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a NotificationCategoryInfo[] object.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Emby.Notifications.NotificationCategoryInfo"
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Gets notification types"
-    },
     "/Notifications/Types": {
       "get": {
         "tags": [
@@ -21453,61 +21603,11 @@
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a List<NotificationTypeInfo> object.",
+            "description": "Operation successful. Returning a NotificationCategoryInfo[] object.",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Notifications.NotificationTypeInfo"
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Gets notification types"
-    },
-    "/Notifications/Services": {
-      "get": {
-        "tags": [
-          "NotificationsService"
-        ],
-        "summary": "Gets notification types",
-        "description": "Requires authentication as user",
-        "operationId": "getNotificationsServices",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a List<NameIdPair> object.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/NameIdPair"
+                "$ref": "#/definitions/Emby.Notifications.NotificationCategoryInfo"
               }
             }
           },
@@ -21577,7 +21677,8 @@
           {
             "in": "query",
             "name": "Level",
-            "description": "The notification level"
+            "description": "The notification level",
+            "type": "string"
           }
         ],
         "responses": {
@@ -21611,82 +21712,6 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Sends a notification to all admin users"
-    },
-    "/Notifications/{UserId}": {
-      "get": {
-        "tags": [
-          "NotificationsService"
-        ],
-        "summary": "Gets notifications",
-        "description": "Requires authentication as user",
-        "operationId": "getNotificationsByUserid",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "UserId",
-            "description": "User Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsRead",
-            "description": "An optional filter by IsRead",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "StartIndex",
-            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "Limit",
-            "description": "Optional. The maximum number of records to return",
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a NotificationResult object.",
-            "schema": {
-              "$ref": "#/definitions/Emby.Notifications.Api.NotificationResult"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Gets notifications"
     },
     "/Packages/Updates": {
       "get": {
@@ -24165,7 +24190,7 @@
     "/web/ConfigurationPage": {
       "get": {
         "tags": [
-          "DashboardService"
+          "WebAppService"
         ],
         "description": "No authentication required",
         "operationId": "getWebConfigurationpage",
@@ -24189,7 +24214,7 @@
     "/web/ConfigurationPages": {
       "get": {
         "tags": [
-          "DashboardService"
+          "WebAppService"
         ],
         "description": "No authentication required",
         "operationId": "getWebConfigurationpages",
@@ -24223,7 +24248,7 @@
     "/web/strings": {
       "get": {
         "tags": [
-          "DashboardService"
+          "WebAppService"
         ],
         "description": "No authentication required",
         "operationId": "getWebStrings",
@@ -29363,7 +29388,7 @@
         "tags": [
           "LibraryStructureService"
         ],
-        "description": "Requires authentication as administrator",
+        "description": "Requires authentication as user",
         "operationId": "getLibraryVirtualfoldersQuery",
         "produces": [
           "application/json",
@@ -29416,7 +29441,7 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Library/VirtualFolders/LibraryOptions": {
@@ -30143,6 +30168,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -31858,32 +31889,78 @@
       },
       "x-summary": "Creates an instant playlist based on a music genre"
     },
-    "/Notifications/{UserId}/Summary": {
-      "get": {
+    "/Notifications/Services/Test": {
+      "post": {
         "tags": [
-          "NotificationsService"
+          "UserNotificationsService"
         ],
-        "summary": "Gets a notification summary for a user",
+        "summary": "Sends a test notification",
         "description": "Requires authentication as user",
-        "operationId": "getNotificationsByUseridSummary",
-        "produces": [
+        "operationId": "postNotificationsServicesTest",
+        "consumes": [
           "application/json",
           "application/xml"
         ],
         "parameters": [
           {
-            "in": "path",
-            "name": "UserId",
-            "description": "User Id",
+            "in": "body",
+            "name": "body",
+            "description": "UserNotificationInfo: ",
             "required": true,
-            "type": "string"
+            "schema": {
+              "$ref": "#/definitions/Emby.Notifications.UserNotificationInfo"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a NotificationsSummary object.",
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Sends a test notification"
+    },
+    "/Notifications/Services/Defaults": {
+      "get": {
+        "tags": [
+          "UserNotificationsService"
+        ],
+        "summary": "Gets default notification info",
+        "description": "Requires authentication as user",
+        "operationId": "getNotificationsServicesDefaults",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a UserNotificationInfo object.",
             "schema": {
-              "$ref": "#/definitions/Emby.Notifications.Api.NotificationsSummary"
+              "$ref": "#/definitions/Emby.Notifications.UserNotificationInfo"
             }
           },
           "400": {
@@ -31912,121 +31989,7 @@
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
       },
-      "x-summary": "Gets a notification summary for a user"
-    },
-    "/Notifications/{UserId}/Read": {
-      "post": {
-        "tags": [
-          "NotificationsService"
-        ],
-        "summary": "Marks notifications as read",
-        "description": "Requires authentication as user",
-        "operationId": "postNotificationsByUseridRead",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "UserId",
-            "description": "User Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Ids",
-            "description": "A list of notification ids, comma delimited",
-            "required": true,
-            "type": "string",
-            "collectionFormat": "multi"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Marks notifications as read"
-    },
-    "/Notifications/{UserId}/Unread": {
-      "post": {
-        "tags": [
-          "NotificationsService"
-        ],
-        "summary": "Marks notifications as unread",
-        "description": "Requires authentication as user",
-        "operationId": "postNotificationsByUseridUnread",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "UserId",
-            "description": "User Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Ids",
-            "description": "A list of notification ids, comma delimited",
-            "required": true,
-            "type": "string",
-            "collectionFormat": "multi"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "x-summary": "Marks notifications as unread"
+      "x-summary": "Gets default notification info"
     },
     "/Packages/Installed/{Name}": {
       "post": {
@@ -33775,6 +33738,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -35979,6 +35948,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -42594,6 +42569,126 @@
       },
       "x-summary": "Clears audio or subtitle track selections for a user"
     },
+    "/Users/{UserId}/TypedSettings/{Key}": {
+      "get": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Gets a typed user setting",
+        "description": "Requires authentication as user",
+        "operationId": "getUsersByUseridTypedsettingsByKey",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Key",
+            "description": "Key",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "UserId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Updates a typed user setting",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridTypedsettingsByKey",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Key",
+            "description": "Key",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a typed user setting"
+    },
     "/Users/{UserId}/Items/Resume": {
       "get": {
         "tags": [
@@ -42890,6 +42985,12 @@
             "in": "query",
             "name": "IsSeries",
             "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
             "type": "boolean"
           },
           {
@@ -50532,6 +50633,29 @@
       },
       "x-internal-ref-name": "MediaBrowser.Model.Devices.DeviceInfo"
     },
+    "Emby.Features.FeatureInfo": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        },
+        "FeatureType": {
+          "$ref": "#/definitions/Emby.Features.FeatureType"
+        }
+      },
+      "x-internal-ref-name": "Emby.Features.FeatureInfo"
+    },
+    "Emby.Features.FeatureType": {
+      "enum": [
+        "System",
+        "User"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.Features.FeatureType"
+    },
     "QueryResult_UserLibrary.OfficialRatingItem": {
       "type": "object",
       "properties": {
@@ -50604,9 +50728,6 @@
         "featureId": {
           "type": "string"
         },
-        "regInfo": {
-          "type": "string"
-        },
         "price": {
           "format": "float",
           "type": "number"
@@ -50616,14 +50737,6 @@
         },
         "guid": {
           "type": "string"
-        },
-        "totalRatings": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "avgRating": {
-          "format": "float",
-          "type": "number"
         },
         "isRegistered": {
           "type": "boolean"
@@ -50692,6 +50805,10 @@
           "type": "string"
         },
         "runtimes": {
+          "type": "string"
+        },
+        "timestamp": {
+          "format": "date-time",
           "type": "string"
         }
       },
@@ -51488,40 +51605,14 @@
         "Id": {
           "type": "string"
         },
-        "ViewType": {
-          "type": "string"
-        },
         "SortBy": {
           "type": "string"
-        },
-        "IndexBy": {
-          "type": "string"
-        },
-        "RememberIndexing": {
-          "type": "boolean"
-        },
-        "PrimaryImageHeight": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "PrimaryImageWidth": {
-          "format": "int32",
-          "type": "integer"
         },
         "CustomPrefs": {
           "type": "object",
           "additionalProperties": {
             "type": "string"
           }
-        },
-        "ScrollDirection": {
-          "$ref": "#/definitions/ScrollDirection"
-        },
-        "ShowBackdrop": {
-          "type": "boolean"
-        },
-        "RememberSorting": {
-          "type": "boolean"
         },
         "SortOrder": {
           "$ref": "#/definitions/SortOrder"
@@ -51531,14 +51622,6 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Entities.DisplayPreferences"
-    },
-    "ScrollDirection": {
-      "enum": [
-        "Horizontal",
-        "Vertical"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Entities.ScrollDirection"
     },
     "SortOrder": {
       "enum": [
@@ -52514,6 +52597,9 @@
       "type": "object",
       "properties": {
         "Name": {
+          "type": "string"
+        },
+        "SetupUrl": {
           "type": "string"
         },
         "DefaultEnabled": {
@@ -53927,83 +54013,6 @@
       },
       "x-internal-ref-name": "Emby.Notifications.NotificationTypeInfo"
     },
-    "Notifications.NotificationTypeInfo": {
-      "type": "object",
-      "properties": {
-        "Type": {
-          "type": "string"
-        },
-        "Name": {
-          "type": "string"
-        },
-        "Enabled": {
-          "type": "boolean"
-        },
-        "Category": {
-          "type": "string"
-        },
-        "IsBasedOnUserEvent": {
-          "type": "boolean"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Notifications.NotificationTypeInfo"
-    },
-    "Notifications.NotificationLevel": {
-      "enum": [
-        "Normal",
-        "Warning",
-        "Error"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Notifications.NotificationLevel"
-    },
-    "Emby.Notifications.Api.NotificationResult": {
-      "type": "object",
-      "properties": {
-        "Notifications": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Emby.Notifications.Api.Notification"
-          }
-        },
-        "TotalRecordCount": {
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "Emby.Notifications.Api.NotificationResult"
-    },
-    "Emby.Notifications.Api.Notification": {
-      "type": "object",
-      "properties": {
-        "Id": {
-          "type": "string"
-        },
-        "UserId": {
-          "type": "string"
-        },
-        "Date": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "IsRead": {
-          "type": "boolean"
-        },
-        "Name": {
-          "type": "string"
-        },
-        "Description": {
-          "type": "string"
-        },
-        "Url": {
-          "type": "string"
-        },
-        "Level": {
-          "$ref": "#/definitions/Notifications.NotificationLevel"
-        }
-      },
-      "x-internal-ref-name": "Emby.Notifications.Api.Notification"
-    },
     "PlaybackStartInfo": {
       "type": "object",
       "properties": {
@@ -55127,7 +55136,7 @@
         "SetFocus": {
           "type": "boolean"
         },
-        "ConfirmationMessage": {
+        "ConfirmationPrompt": {
           "type": "string"
         }
       },
@@ -55436,6 +55445,12 @@
         "EnableContentDeletion": {
           "type": "boolean"
         },
+        "RestrictedFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "EnableContentDeletionFromFolders": {
           "type": "array",
           "items": {
@@ -55679,6 +55694,12 @@
         },
         "EnableInMainMenu": {
           "type": "boolean"
+        },
+        "EnableInUserMenu": {
+          "type": "boolean"
+        },
+        "FeatureId": {
+          "type": "string"
         },
         "MenuSection": {
           "type": "string"
@@ -57822,18 +57843,56 @@
       },
       "x-internal-ref-name": "MediaBrowser.LiveTV.Api.ListingProviderTypeInfo"
     },
-    "Emby.Notifications.Api.NotificationsSummary": {
+    "Emby.Notifications.UserNotificationInfo": {
       "type": "object",
       "properties": {
-        "UnreadCount": {
-          "format": "int32",
-          "type": "integer"
+        "NotifierKey": {
+          "type": "string"
         },
-        "MaxUnreadNotificationLevel": {
-          "$ref": "#/definitions/Notifications.NotificationLevel"
+        "SetupModuleUrl": {
+          "type": "string"
+        },
+        "ServiceName": {
+          "type": "string"
+        },
+        "FriendlyName": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        },
+        "Enabled": {
+          "type": "boolean"
+        },
+        "UserIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "LibraryIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EventIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "UserId": {
+          "type": "string"
+        },
+        "Options": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
         }
       },
-      "x-internal-ref-name": "Emby.Notifications.Api.NotificationsSummary"
+      "x-internal-ref-name": "Emby.Notifications.UserNotificationInfo"
     },
     "PlayCommand": {
       "enum": [
@@ -58598,6 +58657,9 @@
       "name": "DeviceService"
     },
     {
+      "name": "FeatureService"
+    },
+    {
       "name": "GameGenresService"
     },
     {
@@ -58720,9 +58782,6 @@
       "name": "MoviesService"
     },
     {
-      "name": "NotificationsApi"
-    },
-    {
       "name": "NotificationsService"
     },
     {
@@ -58757,7 +58816,7 @@
       "name": "HlsSegmentService"
     },
     {
-      "name": "DashboardService"
+      "name": "WebAppService"
     },
     {
       "name": "UniversalAudioService",
@@ -58798,6 +58857,9 @@
         "description": "API Documentation: Browsing the Library",
         "url": "https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library"
       }
+    },
+    {
+      "name": "UserNotificationsService"
     },
     {
       "name": "ActivityLogService"

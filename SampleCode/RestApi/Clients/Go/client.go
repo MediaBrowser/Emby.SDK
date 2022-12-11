@@ -34,7 +34,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
-// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.19
+// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.20
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -62,8 +62,6 @@ type APIClient struct {
 
 	ConnectServiceApi *ConnectServiceApiService
 
-	DashboardServiceApi *DashboardServiceApiService
-
 	DeviceServiceApi *DeviceServiceApiService
 
 	DisplayPreferencesServiceApi *DisplayPreferencesServiceApiService
@@ -77,6 +75,8 @@ type APIClient struct {
 	EncodingInfoServiceApi *EncodingInfoServiceApiService
 
 	EnvironmentServiceApi *EnvironmentServiceApiService
+
+	FeatureServiceApi *FeatureServiceApiService
 
 	FfmpegOptionsServiceApi *FfmpegOptionsServiceApiService
 
@@ -113,8 +113,6 @@ type APIClient struct {
 	MoviesServiceApi *MoviesServiceApiService
 
 	MusicGenresServiceApi *MusicGenresServiceApiService
-
-	NotificationsApiApi *NotificationsApiApiService
 
 	NotificationsServiceApi *NotificationsServiceApiService
 
@@ -162,6 +160,8 @@ type APIClient struct {
 
 	UserLibraryServiceApi *UserLibraryServiceApiService
 
+	UserNotificationsServiceApi *UserNotificationsServiceApiService
+
 	UserServiceApi *UserServiceApiService
 
 	UserViewsServiceApi *UserViewsServiceApiService
@@ -171,6 +171,8 @@ type APIClient struct {
 	VideoServiceApi *VideoServiceApiService
 
 	VideosServiceApi *VideosServiceApiService
+
+	WebAppServiceApi *WebAppServiceApiService
 }
 
 type service struct {
@@ -199,7 +201,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.CollectionServiceApi = (*CollectionServiceApiService)(&c.common)
 	c.ConfigurationServiceApi = (*ConfigurationServiceApiService)(&c.common)
 	c.ConnectServiceApi = (*ConnectServiceApiService)(&c.common)
-	c.DashboardServiceApi = (*DashboardServiceApiService)(&c.common)
 	c.DeviceServiceApi = (*DeviceServiceApiService)(&c.common)
 	c.DisplayPreferencesServiceApi = (*DisplayPreferencesServiceApiService)(&c.common)
 	c.DlnaServerServiceApi = (*DlnaServerServiceApiService)(&c.common)
@@ -207,6 +208,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.DynamicHlsServiceApi = (*DynamicHlsServiceApiService)(&c.common)
 	c.EncodingInfoServiceApi = (*EncodingInfoServiceApiService)(&c.common)
 	c.EnvironmentServiceApi = (*EnvironmentServiceApiService)(&c.common)
+	c.FeatureServiceApi = (*FeatureServiceApiService)(&c.common)
 	c.FfmpegOptionsServiceApi = (*FfmpegOptionsServiceApiService)(&c.common)
 	c.GameGenresServiceApi = (*GameGenresServiceApiService)(&c.common)
 	c.GenericUIApiServiceApi = (*GenericUIApiServiceApiService)(&c.common)
@@ -225,7 +227,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.MediaInfoServiceApi = (*MediaInfoServiceApiService)(&c.common)
 	c.MoviesServiceApi = (*MoviesServiceApiService)(&c.common)
 	c.MusicGenresServiceApi = (*MusicGenresServiceApiService)(&c.common)
-	c.NotificationsApiApi = (*NotificationsApiApiService)(&c.common)
 	c.NotificationsServiceApi = (*NotificationsServiceApiService)(&c.common)
 	c.OfficialRatingServiceApi = (*OfficialRatingServiceApiService)(&c.common)
 	c.OpenApiServiceApi = (*OpenApiServiceApiService)(&c.common)
@@ -249,11 +250,13 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.TvShowsServiceApi = (*TvShowsServiceApiService)(&c.common)
 	c.UniversalAudioServiceApi = (*UniversalAudioServiceApiService)(&c.common)
 	c.UserLibraryServiceApi = (*UserLibraryServiceApiService)(&c.common)
+	c.UserNotificationsServiceApi = (*UserNotificationsServiceApiService)(&c.common)
 	c.UserServiceApi = (*UserServiceApiService)(&c.common)
 	c.UserViewsServiceApi = (*UserViewsServiceApiService)(&c.common)
 	c.VideoHlsServiceApi = (*VideoHlsServiceApiService)(&c.common)
 	c.VideoServiceApi = (*VideoServiceApiService)(&c.common)
 	c.VideosServiceApi = (*VideosServiceApiService)(&c.common)
+	c.WebAppServiceApi = (*WebAppServiceApiService)(&c.common)
 
 	return c
 }

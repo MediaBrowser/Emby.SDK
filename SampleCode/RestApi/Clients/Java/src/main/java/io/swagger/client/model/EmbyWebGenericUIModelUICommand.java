@@ -39,8 +39,8 @@ public class EmbyWebGenericUIModelUICommand {
   @SerializedName("SetFocus")
   private Boolean setFocus = null;
 
-  @SerializedName("ConfirmationMessage")
-  private String confirmationMessage = null;
+  @SerializedName("ConfirmationPrompt")
+  private String confirmationPrompt = null;
 
   public EmbyWebGenericUIModelUICommand commandType(EmbyWebGenericUIModelEnumsUICommandType commandType) {
     this.commandType = commandType;
@@ -150,22 +150,22 @@ public class EmbyWebGenericUIModelUICommand {
     this.setFocus = setFocus;
   }
 
-  public EmbyWebGenericUIModelUICommand confirmationMessage(String confirmationMessage) {
-    this.confirmationMessage = confirmationMessage;
+  public EmbyWebGenericUIModelUICommand confirmationPrompt(String confirmationPrompt) {
+    this.confirmationPrompt = confirmationPrompt;
     return this;
   }
 
    /**
-   * Get confirmationMessage
-   * @return confirmationMessage
+   * Get confirmationPrompt
+   * @return confirmationPrompt
   **/
   @Schema(description = "")
-  public String getConfirmationMessage() {
-    return confirmationMessage;
+  public String getConfirmationPrompt() {
+    return confirmationPrompt;
   }
 
-  public void setConfirmationMessage(String confirmationMessage) {
-    this.confirmationMessage = confirmationMessage;
+  public void setConfirmationPrompt(String confirmationPrompt) {
+    this.confirmationPrompt = confirmationPrompt;
   }
 
 
@@ -184,12 +184,12 @@ public class EmbyWebGenericUIModelUICommand {
         Objects.equals(this.isEnabled, embyWebGenericUIModelUICommand.isEnabled) &&
         Objects.equals(this.caption, embyWebGenericUIModelUICommand.caption) &&
         Objects.equals(this.setFocus, embyWebGenericUIModelUICommand.setFocus) &&
-        Objects.equals(this.confirmationMessage, embyWebGenericUIModelUICommand.confirmationMessage);
+        Objects.equals(this.confirmationPrompt, embyWebGenericUIModelUICommand.confirmationPrompt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(commandType, commandId, isVisible, isEnabled, caption, setFocus, confirmationMessage);
+    return Objects.hash(commandType, commandId, isVisible, isEnabled, caption, setFocus, confirmationPrompt);
   }
 
 
@@ -204,7 +204,7 @@ public class EmbyWebGenericUIModelUICommand {
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    setFocus: ").append(toIndentedString(setFocus)).append("\n");
-    sb.append("    confirmationMessage: ").append(toIndentedString(confirmationMessage)).append("\n");
+    sb.append("    confirmationPrompt: ").append(toIndentedString(confirmationPrompt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,7 +15,7 @@ import ConfigurationMetadataFeatures from './ConfigurationMetadataFeatures';
 /**
 * The LibraryLibraryOptionInfo model module.
 * @module model/LibraryLibraryOptionInfo
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class LibraryLibraryOptionInfo {
     /**
@@ -45,6 +45,9 @@ export default class LibraryLibraryOptionInfo {
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
+            if (data.hasOwnProperty('SetupUrl')) {
+                obj['SetupUrl'] = ApiClient.convertToType(data['SetupUrl'], 'String');
+            }
             if (data.hasOwnProperty('DefaultEnabled')) {
                 obj['DefaultEnabled'] = ApiClient.convertToType(data['DefaultEnabled'], 'Boolean');
             }
@@ -59,6 +62,10 @@ export default class LibraryLibraryOptionInfo {
     * @member {String} Name
     */
     'Name' = undefined;
+    /**
+    * @member {String} SetupUrl
+    */
+    'SetupUrl' = undefined;
     /**
     * @member {Boolean} DefaultEnabled
     */

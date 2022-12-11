@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTVApiSetChannelDisabled model module.
 * @module model/LiveTVApiSetChannelDisabled
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class LiveTVApiSetChannelDisabled {
     /**

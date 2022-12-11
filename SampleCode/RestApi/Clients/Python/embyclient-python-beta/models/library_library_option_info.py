@@ -23,24 +23,29 @@ class LibraryLibraryOptionInfo(object):
     """
     swagger_types = {
         'name': 'str',
+        'setup_url': 'str',
         'default_enabled': 'bool',
         'features': 'list[ConfigurationMetadataFeatures]'
     }
 
     attribute_map = {
         'name': 'Name',
+        'setup_url': 'SetupUrl',
         'default_enabled': 'DefaultEnabled',
         'features': 'Features'
     }
 
-    def __init__(self, name=None, default_enabled=None, features=None):  # noqa: E501
+    def __init__(self, name=None, setup_url=None, default_enabled=None, features=None):  # noqa: E501
         """LibraryLibraryOptionInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
+        self._setup_url = None
         self._default_enabled = None
         self._features = None
         self.discriminator = None
         if name is not None:
             self.name = name
+        if setup_url is not None:
+            self.setup_url = setup_url
         if default_enabled is not None:
             self.default_enabled = default_enabled
         if features is not None:
@@ -66,6 +71,27 @@ class LibraryLibraryOptionInfo(object):
         """
 
         self._name = name
+
+    @property
+    def setup_url(self):
+        """Gets the setup_url of this LibraryLibraryOptionInfo.  # noqa: E501
+
+
+        :return: The setup_url of this LibraryLibraryOptionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._setup_url
+
+    @setup_url.setter
+    def setup_url(self, setup_url):
+        """Sets the setup_url of this LibraryLibraryOptionInfo.
+
+
+        :param setup_url: The setup_url of this LibraryLibraryOptionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._setup_url = setup_url
 
     @property
     def default_enabled(self):

@@ -440,7 +440,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsImageFetcherEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsImageFetcherEnabled(LibraryOptions, String)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(Folder[])</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete">BaseItem.CanDelete()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, Folder[])</a>
@@ -489,6 +489,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LibraryManager">BaseItem.LibraryManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FeatureManager">BaseItem.FeatureManager</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserManager">BaseItem.UserManager</a>
@@ -941,7 +944,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemLookupInfo__1_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetItemLookupInfo&lt;T&gt;(LibraryOptions)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParentIdsForQuery_MediaBrowser_Controller_Entities_User_">BaseItem.GetTopParentIdsForQuery(User)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_">BaseItem.GetIdsForAncestorIdsQuery(User)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetNameForMetadataLookup">BaseItem.GetNameForMetadataLookup()</a>
@@ -971,16 +974,10 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParentId">BaseItem.GetTopParentId()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsTopParent">BaseItem.IsTopParent</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery">BaseItem.GetIdsForAncestorQuery()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a>
@@ -1545,6 +1542,90 @@ This is for backwards compatibility.</p>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPrimaryImageAspectRatio">BaseItem.GetDefaultPrimaryImageAspectRatio()</a></div>
   
   
+  <a id="MediaBrowser_Controller_Entities_User_GetTypedSetting_" data-uid="MediaBrowser.Controller.Entities.User.GetTypedSetting*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_User_GetTypedSetting_System_String_" data-uid="MediaBrowser.Controller.Entities.User.GetTypedSetting(System.String)">GetTypedSetting(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object GetTypedSetting(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_User_IsGrantedAccessToFeature_" data-uid="MediaBrowser.Controller.Entities.User.IsGrantedAccessToFeature*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_User_IsGrantedAccessToFeature_System_String_" data-uid="MediaBrowser.Controller.Entities.User.IsGrantedAccessToFeature(System.String)">IsGrantedAccessToFeature(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGrantedAccessToFeature(string featureId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">featureId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_User_IsParentalScheduleAllowed_" data-uid="MediaBrowser.Controller.Entities.User.IsParentalScheduleAllowed*"></a>
   <h4 id="MediaBrowser_Controller_Entities_User_IsParentalScheduleAllowed" data-uid="MediaBrowser.Controller.Entities.User.IsParentalScheduleAllowed">IsParentalScheduleAllowed()</h4>
   <div class="markdown level1 summary"></div>
@@ -1704,6 +1785,38 @@ This is for backwards compatibility.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Providers_MetadataRefreshOptions_">BaseItem.UpdateToRepository(ItemUpdateType, MetadataRefreshOptions)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_User_UpdateTypedSetting_" data-uid="MediaBrowser.Controller.Entities.User.UpdateTypedSetting*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_User_UpdateTypedSetting_System_String_System_Object_" data-uid="MediaBrowser.Controller.Entities.User.UpdateTypedSetting(System.String,System.Object)">UpdateTypedSetting(String, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateTypedSetting(string key, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>

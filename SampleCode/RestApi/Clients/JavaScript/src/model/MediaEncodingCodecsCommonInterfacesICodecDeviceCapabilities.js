@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities model module.
 * @module model/MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities {
     /**

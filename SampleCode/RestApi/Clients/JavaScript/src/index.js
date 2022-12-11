@@ -74,6 +74,8 @@ import EmbyDlnaProfilesDlnaProfile from './model/EmbyDlnaProfilesDlnaProfile';
 import EmbyDlnaProfilesHeaderMatchType from './model/EmbyDlnaProfilesHeaderMatchType';
 import EmbyDlnaProfilesHttpHeaderInfo from './model/EmbyDlnaProfilesHttpHeaderInfo';
 import EmbyDlnaProfilesProtocolInfoDetection from './model/EmbyDlnaProfilesProtocolInfoDetection';
+import EmbyFeaturesFeatureInfo from './model/EmbyFeaturesFeatureInfo';
+import EmbyFeaturesFeatureType from './model/EmbyFeaturesFeatureType';
 import EmbyLiveTVChannelManagementInfo from './model/EmbyLiveTVChannelManagementInfo';
 import EmbyMediaModelEnumsCodecDirections from './model/EmbyMediaModelEnumsCodecDirections';
 import EmbyMediaModelEnumsCodecKinds from './model/EmbyMediaModelEnumsCodecKinds';
@@ -86,11 +88,9 @@ import EmbyMediaModelTypesProfileInformation from './model/EmbyMediaModelTypesPr
 import EmbyMediaModelTypesProfileLevelInformation from './model/EmbyMediaModelTypesProfileLevelInformation';
 import EmbyMediaModelTypesResolution from './model/EmbyMediaModelTypesResolution';
 import EmbyMediaModelTypesResolutionWithRate from './model/EmbyMediaModelTypesResolutionWithRate';
-import EmbyNotificationsApiNotification from './model/EmbyNotificationsApiNotification';
-import EmbyNotificationsApiNotificationResult from './model/EmbyNotificationsApiNotificationResult';
-import EmbyNotificationsApiNotificationsSummary from './model/EmbyNotificationsApiNotificationsSummary';
 import EmbyNotificationsNotificationCategoryInfo from './model/EmbyNotificationsNotificationCategoryInfo';
 import EmbyNotificationsNotificationTypeInfo from './model/EmbyNotificationsNotificationTypeInfo';
+import EmbyNotificationsUserNotificationInfo from './model/EmbyNotificationsUserNotificationInfo';
 import EmbyWebApiConfigurationPageInfo from './model/EmbyWebApiConfigurationPageInfo';
 import EmbyWebGenericEditActionsPostbackAction from './model/EmbyWebGenericEditActionsPostbackAction';
 import EmbyWebGenericEditCommonEditorTypes from './model/EmbyWebGenericEditCommonEditorTypes';
@@ -185,8 +185,6 @@ import NameIdPair from './model/NameIdPair';
 import NameLongIdPair from './model/NameLongIdPair';
 import NameValuePair from './model/NameValuePair';
 import NetEndPointInfo from './model/NetEndPointInfo';
-import NotificationsNotificationLevel from './model/NotificationsNotificationLevel';
-import NotificationsNotificationTypeInfo from './model/NotificationsNotificationTypeInfo';
 import OperatingSystem from './model/OperatingSystem';
 import ParentalRating from './model/ParentalRating';
 import PersistenceIntroDebugInfo from './model/PersistenceIntroDebugInfo';
@@ -256,7 +254,6 @@ import RemoteSubtitleInfo from './model/RemoteSubtitleInfo';
 import RepeatMode from './model/RepeatMode';
 import RokuMetadataApiThumbnailInfo from './model/RokuMetadataApiThumbnailInfo';
 import RokuMetadataApiThumbnailSetInfo from './model/RokuMetadataApiThumbnailSetInfo';
-import ScrollDirection from './model/ScrollDirection';
 import SeriesDisplayOrder from './model/SeriesDisplayOrder';
 import SessionSessionInfo from './model/SessionSessionInfo';
 import SessionUserInfo from './model/SessionUserInfo';
@@ -328,7 +325,6 @@ import CodecParameterServiceApi from './EmbyClient.JavaScript.Beta/CodecParamete
 import CollectionServiceApi from './EmbyClient.JavaScript.Beta/CollectionServiceApi';
 import ConfigurationServiceApi from './EmbyClient.JavaScript.Beta/ConfigurationServiceApi';
 import ConnectServiceApi from './EmbyClient.JavaScript.Beta/ConnectServiceApi';
-import DashboardServiceApi from './EmbyClient.JavaScript.Beta/DashboardServiceApi';
 import DeviceServiceApi from './EmbyClient.JavaScript.Beta/DeviceServiceApi';
 import DisplayPreferencesServiceApi from './EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi';
 import DlnaServerServiceApi from './EmbyClient.JavaScript.Beta/DlnaServerServiceApi';
@@ -336,6 +332,7 @@ import DlnaServiceApi from './EmbyClient.JavaScript.Beta/DlnaServiceApi';
 import DynamicHlsServiceApi from './EmbyClient.JavaScript.Beta/DynamicHlsServiceApi';
 import EncodingInfoServiceApi from './EmbyClient.JavaScript.Beta/EncodingInfoServiceApi';
 import EnvironmentServiceApi from './EmbyClient.JavaScript.Beta/EnvironmentServiceApi';
+import FeatureServiceApi from './EmbyClient.JavaScript.Beta/FeatureServiceApi';
 import FfmpegOptionsServiceApi from './EmbyClient.JavaScript.Beta/FfmpegOptionsServiceApi';
 import GameGenresServiceApi from './EmbyClient.JavaScript.Beta/GameGenresServiceApi';
 import GenericUIApiServiceApi from './EmbyClient.JavaScript.Beta/GenericUIApiServiceApi';
@@ -354,7 +351,6 @@ import LocalizationServiceApi from './EmbyClient.JavaScript.Beta/LocalizationSer
 import MediaInfoServiceApi from './EmbyClient.JavaScript.Beta/MediaInfoServiceApi';
 import MoviesServiceApi from './EmbyClient.JavaScript.Beta/MoviesServiceApi';
 import MusicGenresServiceApi from './EmbyClient.JavaScript.Beta/MusicGenresServiceApi';
-import NotificationsApiApi from './EmbyClient.JavaScript.Beta/NotificationsApiApi';
 import NotificationsServiceApi from './EmbyClient.JavaScript.Beta/NotificationsServiceApi';
 import OfficialRatingServiceApi from './EmbyClient.JavaScript.Beta/OfficialRatingServiceApi';
 import OpenApiServiceApi from './EmbyClient.JavaScript.Beta/OpenApiServiceApi';
@@ -378,11 +374,13 @@ import TrailersServiceApi from './EmbyClient.JavaScript.Beta/TrailersServiceApi'
 import TvShowsServiceApi from './EmbyClient.JavaScript.Beta/TvShowsServiceApi';
 import UniversalAudioServiceApi from './EmbyClient.JavaScript.Beta/UniversalAudioServiceApi';
 import UserLibraryServiceApi from './EmbyClient.JavaScript.Beta/UserLibraryServiceApi';
+import UserNotificationsServiceApi from './EmbyClient.JavaScript.Beta/UserNotificationsServiceApi';
 import UserServiceApi from './EmbyClient.JavaScript.Beta/UserServiceApi';
 import UserViewsServiceApi from './EmbyClient.JavaScript.Beta/UserViewsServiceApi';
 import VideoHlsServiceApi from './EmbyClient.JavaScript.Beta/VideoHlsServiceApi';
 import VideoServiceApi from './EmbyClient.JavaScript.Beta/VideoServiceApi';
 import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
+import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 
 /**
 * A client library for accessing Emby Server via REST API.<br>
@@ -413,7 +411,7 @@ import VideosServiceApi from './EmbyClient.JavaScript.Beta/VideosServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export {
     /**
@@ -807,6 +805,18 @@ export {
     EmbyDlnaProfilesProtocolInfoDetection,
 
     /**
+     * The EmbyFeaturesFeatureInfo model constructor.
+     * @property {module:model/EmbyFeaturesFeatureInfo}
+     */
+    EmbyFeaturesFeatureInfo,
+
+    /**
+     * The EmbyFeaturesFeatureType model constructor.
+     * @property {module:model/EmbyFeaturesFeatureType}
+     */
+    EmbyFeaturesFeatureType,
+
+    /**
      * The EmbyLiveTVChannelManagementInfo model constructor.
      * @property {module:model/EmbyLiveTVChannelManagementInfo}
      */
@@ -879,24 +889,6 @@ export {
     EmbyMediaModelTypesResolutionWithRate,
 
     /**
-     * The EmbyNotificationsApiNotification model constructor.
-     * @property {module:model/EmbyNotificationsApiNotification}
-     */
-    EmbyNotificationsApiNotification,
-
-    /**
-     * The EmbyNotificationsApiNotificationResult model constructor.
-     * @property {module:model/EmbyNotificationsApiNotificationResult}
-     */
-    EmbyNotificationsApiNotificationResult,
-
-    /**
-     * The EmbyNotificationsApiNotificationsSummary model constructor.
-     * @property {module:model/EmbyNotificationsApiNotificationsSummary}
-     */
-    EmbyNotificationsApiNotificationsSummary,
-
-    /**
      * The EmbyNotificationsNotificationCategoryInfo model constructor.
      * @property {module:model/EmbyNotificationsNotificationCategoryInfo}
      */
@@ -907,6 +899,12 @@ export {
      * @property {module:model/EmbyNotificationsNotificationTypeInfo}
      */
     EmbyNotificationsNotificationTypeInfo,
+
+    /**
+     * The EmbyNotificationsUserNotificationInfo model constructor.
+     * @property {module:model/EmbyNotificationsUserNotificationInfo}
+     */
+    EmbyNotificationsUserNotificationInfo,
 
     /**
      * The EmbyWebApiConfigurationPageInfo model constructor.
@@ -1473,18 +1471,6 @@ export {
     NetEndPointInfo,
 
     /**
-     * The NotificationsNotificationLevel model constructor.
-     * @property {module:model/NotificationsNotificationLevel}
-     */
-    NotificationsNotificationLevel,
-
-    /**
-     * The NotificationsNotificationTypeInfo model constructor.
-     * @property {module:model/NotificationsNotificationTypeInfo}
-     */
-    NotificationsNotificationTypeInfo,
-
-    /**
      * The OperatingSystem model constructor.
      * @property {module:model/OperatingSystem}
      */
@@ -1897,12 +1883,6 @@ export {
      * @property {module:model/RokuMetadataApiThumbnailSetInfo}
      */
     RokuMetadataApiThumbnailSetInfo,
-
-    /**
-     * The ScrollDirection model constructor.
-     * @property {module:model/ScrollDirection}
-     */
-    ScrollDirection,
 
     /**
      * The SeriesDisplayOrder model constructor.
@@ -2331,12 +2311,6 @@ export {
     ConnectServiceApi,
 
     /**
-    * The DashboardServiceApi service constructor.
-    * @property {module:EmbyClient.JavaScript.Beta/DashboardServiceApi}
-    */
-    DashboardServiceApi,
-
-    /**
     * The DeviceServiceApi service constructor.
     * @property {module:EmbyClient.JavaScript.Beta/DeviceServiceApi}
     */
@@ -2377,6 +2351,12 @@ export {
     * @property {module:EmbyClient.JavaScript.Beta/EnvironmentServiceApi}
     */
     EnvironmentServiceApi,
+
+    /**
+    * The FeatureServiceApi service constructor.
+    * @property {module:EmbyClient.JavaScript.Beta/FeatureServiceApi}
+    */
+    FeatureServiceApi,
 
     /**
     * The FfmpegOptionsServiceApi service constructor.
@@ -2485,12 +2465,6 @@ export {
     * @property {module:EmbyClient.JavaScript.Beta/MusicGenresServiceApi}
     */
     MusicGenresServiceApi,
-
-    /**
-    * The NotificationsApiApi service constructor.
-    * @property {module:EmbyClient.JavaScript.Beta/NotificationsApiApi}
-    */
-    NotificationsApiApi,
 
     /**
     * The NotificationsServiceApi service constructor.
@@ -2631,6 +2605,12 @@ export {
     UserLibraryServiceApi,
 
     /**
+    * The UserNotificationsServiceApi service constructor.
+    * @property {module:EmbyClient.JavaScript.Beta/UserNotificationsServiceApi}
+    */
+    UserNotificationsServiceApi,
+
+    /**
     * The UserServiceApi service constructor.
     * @property {module:EmbyClient.JavaScript.Beta/UserServiceApi}
     */
@@ -2658,5 +2638,11 @@ export {
     * The VideosServiceApi service constructor.
     * @property {module:EmbyClient.JavaScript.Beta/VideosServiceApi}
     */
-    VideosServiceApi
+    VideosServiceApi,
+
+    /**
+    * The WebAppServiceApi service constructor.
+    * @property {module:EmbyClient.JavaScript.Beta/WebAppServiceApi}
+    */
+    WebAppServiceApi
 };

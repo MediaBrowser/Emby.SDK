@@ -26,19 +26,16 @@ public struct UpdatesPackageInfo: Codable {
     public var category: String?
     public var tileColor: String?
     public var featureId: String?
-    public var regInfo: String?
     public var price: Float?
     public var targetSystem: UpdatesPackageTargetSystem?
     public var guid: String?
-    public var totalRatings: Int?
-    public var avgRating: Float?
     public var isRegistered: Bool?
     public var expDate: Date?
     public var versions: [UpdatesPackageVersionInfo]?
     public var enableInAppStore: Bool?
     public var installs: Int?
 
-    public init(_id: String? = nil, name: String? = nil, shortDescription: String? = nil, overview: String? = nil, isPremium: Bool? = nil, adult: Bool? = nil, richDescUrl: String? = nil, thumbImage: String? = nil, previewImage: String? = nil, type: String? = nil, targetFilename: String? = nil, owner: String? = nil, category: String? = nil, tileColor: String? = nil, featureId: String? = nil, regInfo: String? = nil, price: Float? = nil, targetSystem: UpdatesPackageTargetSystem? = nil, guid: String? = nil, totalRatings: Int? = nil, avgRating: Float? = nil, isRegistered: Bool? = nil, expDate: Date? = nil, versions: [UpdatesPackageVersionInfo]? = nil, enableInAppStore: Bool? = nil, installs: Int? = nil) {
+    public init(_id: String? = nil, name: String? = nil, shortDescription: String? = nil, overview: String? = nil, isPremium: Bool? = nil, adult: Bool? = nil, richDescUrl: String? = nil, thumbImage: String? = nil, previewImage: String? = nil, type: String? = nil, targetFilename: String? = nil, owner: String? = nil, category: String? = nil, tileColor: String? = nil, featureId: String? = nil, price: Float? = nil, targetSystem: UpdatesPackageTargetSystem? = nil, guid: String? = nil, isRegistered: Bool? = nil, expDate: Date? = nil, versions: [UpdatesPackageVersionInfo]? = nil, enableInAppStore: Bool? = nil, installs: Int? = nil) {
         self._id = _id
         self.name = name
         self.shortDescription = shortDescription
@@ -54,12 +51,9 @@ public struct UpdatesPackageInfo: Codable {
         self.category = category
         self.tileColor = tileColor
         self.featureId = featureId
-        self.regInfo = regInfo
         self.price = price
         self.targetSystem = targetSystem
         self.guid = guid
-        self.totalRatings = totalRatings
-        self.avgRating = avgRating
         self.isRegistered = isRegistered
         self.expDate = expDate
         self.versions = versions
@@ -83,12 +77,9 @@ public struct UpdatesPackageInfo: Codable {
         case category
         case tileColor
         case featureId
-        case regInfo
         case price
         case targetSystem
         case guid
-        case totalRatings
-        case avgRating
         case isRegistered
         case expDate
         case versions

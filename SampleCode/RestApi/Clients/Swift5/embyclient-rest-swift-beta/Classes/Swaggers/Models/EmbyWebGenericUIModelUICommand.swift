@@ -17,16 +17,16 @@ public struct EmbyWebGenericUIModelUICommand: Codable {
     public var isEnabled: Bool?
     public var caption: String?
     public var setFocus: Bool?
-    public var confirmationMessage: String?
+    public var confirmationPrompt: String?
 
-    public init(commandType: EmbyWebGenericUIModelEnumsUICommandType? = nil, commandId: String? = nil, isVisible: Bool? = nil, isEnabled: Bool? = nil, caption: String? = nil, setFocus: Bool? = nil, confirmationMessage: String? = nil) {
+    public init(commandType: EmbyWebGenericUIModelEnumsUICommandType? = nil, commandId: String? = nil, isVisible: Bool? = nil, isEnabled: Bool? = nil, caption: String? = nil, setFocus: Bool? = nil, confirmationPrompt: String? = nil) {
         self.commandType = commandType
         self.commandId = commandId
         self.isVisible = isVisible
         self.isEnabled = isEnabled
         self.caption = caption
         self.setFocus = setFocus
-        self.confirmationMessage = confirmationMessage
+        self.confirmationPrompt = confirmationPrompt
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -36,7 +36,7 @@ public struct EmbyWebGenericUIModelUICommand: Codable {
         case isEnabled = "IsEnabled"
         case caption = "Caption"
         case setFocus = "SetFocus"
-        case confirmationMessage = "ConfirmationMessage"
+        case confirmationPrompt = "ConfirmationPrompt"
     }
 
 }

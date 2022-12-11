@@ -16,7 +16,7 @@ import UpdatesPackageVersionInfo from './UpdatesPackageVersionInfo';
 /**
 * The UpdatesPackageInfo model module.
 * @module model/UpdatesPackageInfo
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class UpdatesPackageInfo {
     /**
@@ -88,9 +88,6 @@ export default class UpdatesPackageInfo {
             if (data.hasOwnProperty('featureId')) {
                 obj['featureId'] = ApiClient.convertToType(data['featureId'], 'String');
             }
-            if (data.hasOwnProperty('regInfo')) {
-                obj['regInfo'] = ApiClient.convertToType(data['regInfo'], 'String');
-            }
             if (data.hasOwnProperty('price')) {
                 obj['price'] = ApiClient.convertToType(data['price'], 'Number');
             }
@@ -99,12 +96,6 @@ export default class UpdatesPackageInfo {
             }
             if (data.hasOwnProperty('guid')) {
                 obj['guid'] = ApiClient.convertToType(data['guid'], 'String');
-            }
-            if (data.hasOwnProperty('totalRatings')) {
-                obj['totalRatings'] = ApiClient.convertToType(data['totalRatings'], 'Number');
-            }
-            if (data.hasOwnProperty('avgRating')) {
-                obj['avgRating'] = ApiClient.convertToType(data['avgRating'], 'Number');
             }
             if (data.hasOwnProperty('isRegistered')) {
                 obj['isRegistered'] = ApiClient.convertToType(data['isRegistered'], 'Boolean');
@@ -186,10 +177,6 @@ export default class UpdatesPackageInfo {
     */
     'featureId' = undefined;
     /**
-    * @member {String} regInfo
-    */
-    'regInfo' = undefined;
-    /**
     * @member {Number} price
     */
     'price' = undefined;
@@ -201,14 +188,6 @@ export default class UpdatesPackageInfo {
     * @member {String} guid
     */
     'guid' = undefined;
-    /**
-    * @member {Number} totalRatings
-    */
-    'totalRatings' = undefined;
-    /**
-    * @member {Number} avgRating
-    */
-    'avgRating' = undefined;
     /**
     * @member {Boolean} isRegistered
     */

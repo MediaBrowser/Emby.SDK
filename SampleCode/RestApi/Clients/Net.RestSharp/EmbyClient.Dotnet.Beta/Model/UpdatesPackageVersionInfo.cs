@@ -37,7 +37,8 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="targetFilename">targetFilename.</param>
         /// <param name="infoUrl">infoUrl.</param>
         /// <param name="runtimes">runtimes.</param>
-        public UpdatesPackageVersionInfo(string name = default(string), string guid = default(string), string versionStr = default(string), UpdatesPackageVersionClass classification = default(UpdatesPackageVersionClass), string description = default(string), string requiredVersionStr = default(string), string sourceUrl = default(string), string checksum = default(string), string targetFilename = default(string), string infoUrl = default(string), string runtimes = default(string))
+        /// <param name="timestamp">timestamp.</param>
+        public UpdatesPackageVersionInfo(string name = default(string), string guid = default(string), string versionStr = default(string), UpdatesPackageVersionClass classification = default(UpdatesPackageVersionClass), string description = default(string), string requiredVersionStr = default(string), string sourceUrl = default(string), string checksum = default(string), string targetFilename = default(string), string infoUrl = default(string), string runtimes = default(string), DateTimeOffset? timestamp = default(DateTimeOffset?))
         {
             this.Name = name;
             this.Guid = guid;
@@ -50,6 +51,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.TargetFilename = targetFilename;
             this.InfoUrl = infoUrl;
             this.Runtimes = runtimes;
+            this.Timestamp = timestamp;
         }
         
         /// <summary>
@@ -119,6 +121,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string Runtimes { get; set; }
 
         /// <summary>
+        /// Gets or Sets Timestamp
+        /// </summary>
+        [DataMember(Name="timestamp", EmitDefaultValue=false)]
+        public DateTimeOffset? Timestamp { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -137,6 +145,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  TargetFilename: ").Append(TargetFilename).Append("\n");
             sb.Append("  InfoUrl: ").Append(InfoUrl).Append("\n");
             sb.Append("  Runtimes: ").Append(Runtimes).Append("\n");
+            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -225,6 +234,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.Runtimes == input.Runtimes ||
                     (this.Runtimes != null &&
                     this.Runtimes.Equals(input.Runtimes))
+                ) && 
+                (
+                    this.Timestamp == input.Timestamp ||
+                    (this.Timestamp != null &&
+                    this.Timestamp.Equals(input.Timestamp))
                 );
         }
 
@@ -259,6 +273,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.InfoUrl.GetHashCode();
                 if (this.Runtimes != null)
                     hashCode = hashCode * 59 + this.Runtimes.GetHashCode();
+                if (this.Timestamp != null)
+                    hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
                 return hashCode;
             }
         }

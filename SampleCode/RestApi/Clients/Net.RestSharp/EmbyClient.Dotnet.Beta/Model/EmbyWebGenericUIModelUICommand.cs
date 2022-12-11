@@ -32,8 +32,8 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="isEnabled">isEnabled.</param>
         /// <param name="caption">caption.</param>
         /// <param name="setFocus">setFocus.</param>
-        /// <param name="confirmationMessage">confirmationMessage.</param>
-        public EmbyWebGenericUIModelUICommand(EmbyWebGenericUIModelEnumsUICommandType commandType = default(EmbyWebGenericUIModelEnumsUICommandType), string commandId = default(string), bool? isVisible = default(bool?), bool? isEnabled = default(bool?), string caption = default(string), bool? setFocus = default(bool?), string confirmationMessage = default(string))
+        /// <param name="confirmationPrompt">confirmationPrompt.</param>
+        public EmbyWebGenericUIModelUICommand(EmbyWebGenericUIModelEnumsUICommandType commandType = default(EmbyWebGenericUIModelEnumsUICommandType), string commandId = default(string), bool? isVisible = default(bool?), bool? isEnabled = default(bool?), string caption = default(string), bool? setFocus = default(bool?), string confirmationPrompt = default(string))
         {
             this.CommandType = commandType;
             this.CommandId = commandId;
@@ -41,7 +41,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.IsEnabled = isEnabled;
             this.Caption = caption;
             this.SetFocus = setFocus;
-            this.ConfirmationMessage = confirmationMessage;
+            this.ConfirmationPrompt = confirmationPrompt;
         }
         
         /// <summary>
@@ -81,10 +81,10 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? SetFocus { get; set; }
 
         /// <summary>
-        /// Gets or Sets ConfirmationMessage
+        /// Gets or Sets ConfirmationPrompt
         /// </summary>
-        [DataMember(Name="ConfirmationMessage", EmitDefaultValue=false)]
-        public string ConfirmationMessage { get; set; }
+        [DataMember(Name="ConfirmationPrompt", EmitDefaultValue=false)]
+        public string ConfirmationPrompt { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -100,7 +100,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  Caption: ").Append(Caption).Append("\n");
             sb.Append("  SetFocus: ").Append(SetFocus).Append("\n");
-            sb.Append("  ConfirmationMessage: ").Append(ConfirmationMessage).Append("\n");
+            sb.Append("  ConfirmationPrompt: ").Append(ConfirmationPrompt).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,9 +166,9 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.SetFocus.Equals(input.SetFocus))
                 ) && 
                 (
-                    this.ConfirmationMessage == input.ConfirmationMessage ||
-                    (this.ConfirmationMessage != null &&
-                    this.ConfirmationMessage.Equals(input.ConfirmationMessage))
+                    this.ConfirmationPrompt == input.ConfirmationPrompt ||
+                    (this.ConfirmationPrompt != null &&
+                    this.ConfirmationPrompt.Equals(input.ConfirmationPrompt))
                 );
         }
 
@@ -193,8 +193,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.Caption.GetHashCode();
                 if (this.SetFocus != null)
                     hashCode = hashCode * 59 + this.SetFocus.GetHashCode();
-                if (this.ConfirmationMessage != null)
-                    hashCode = hashCode * 59 + this.ConfirmationMessage.GetHashCode();
+                if (this.ConfirmationPrompt != null)
+                    hashCode = hashCode * 59 + this.ConfirmationPrompt.GetHashCode();
                 return hashCode;
             }
         }

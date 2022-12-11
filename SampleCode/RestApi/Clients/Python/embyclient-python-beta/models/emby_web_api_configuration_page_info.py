@@ -24,6 +24,8 @@ class EmbyWebApiConfigurationPageInfo(object):
     swagger_types = {
         'name': 'str',
         'enable_in_main_menu': 'bool',
+        'enable_in_user_menu': 'bool',
+        'feature_id': 'str',
         'menu_section': 'str',
         'menu_icon': 'str',
         'display_name': 'str',
@@ -38,6 +40,8 @@ class EmbyWebApiConfigurationPageInfo(object):
     attribute_map = {
         'name': 'Name',
         'enable_in_main_menu': 'EnableInMainMenu',
+        'enable_in_user_menu': 'EnableInUserMenu',
+        'feature_id': 'FeatureId',
         'menu_section': 'MenuSection',
         'menu_icon': 'MenuIcon',
         'display_name': 'DisplayName',
@@ -49,10 +53,12 @@ class EmbyWebApiConfigurationPageInfo(object):
         'translations': 'Translations'
     }
 
-    def __init__(self, name=None, enable_in_main_menu=None, menu_section=None, menu_icon=None, display_name=None, configuration_page_type=None, plugin_id=None, href=None, nav_menu_id=None, plugin=None, translations=None):  # noqa: E501
+    def __init__(self, name=None, enable_in_main_menu=None, enable_in_user_menu=None, feature_id=None, menu_section=None, menu_icon=None, display_name=None, configuration_page_type=None, plugin_id=None, href=None, nav_menu_id=None, plugin=None, translations=None):  # noqa: E501
         """EmbyWebApiConfigurationPageInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._enable_in_main_menu = None
+        self._enable_in_user_menu = None
+        self._feature_id = None
         self._menu_section = None
         self._menu_icon = None
         self._display_name = None
@@ -67,6 +73,10 @@ class EmbyWebApiConfigurationPageInfo(object):
             self.name = name
         if enable_in_main_menu is not None:
             self.enable_in_main_menu = enable_in_main_menu
+        if enable_in_user_menu is not None:
+            self.enable_in_user_menu = enable_in_user_menu
+        if feature_id is not None:
+            self.feature_id = feature_id
         if menu_section is not None:
             self.menu_section = menu_section
         if menu_icon is not None:
@@ -127,6 +137,48 @@ class EmbyWebApiConfigurationPageInfo(object):
         """
 
         self._enable_in_main_menu = enable_in_main_menu
+
+    @property
+    def enable_in_user_menu(self):
+        """Gets the enable_in_user_menu of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+
+
+        :return: The enable_in_user_menu of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_in_user_menu
+
+    @enable_in_user_menu.setter
+    def enable_in_user_menu(self, enable_in_user_menu):
+        """Sets the enable_in_user_menu of this EmbyWebApiConfigurationPageInfo.
+
+
+        :param enable_in_user_menu: The enable_in_user_menu of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_in_user_menu = enable_in_user_menu
+
+    @property
+    def feature_id(self):
+        """Gets the feature_id of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+
+
+        :return: The feature_id of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._feature_id
+
+    @feature_id.setter
+    def feature_id(self, feature_id):
+        """Sets the feature_id of this EmbyWebApiConfigurationPageInfo.
+
+
+        :param feature_id: The feature_id of this EmbyWebApiConfigurationPageInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._feature_id = feature_id
 
     @property
     def menu_section(self):

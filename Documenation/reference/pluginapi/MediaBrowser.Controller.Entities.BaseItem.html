@@ -1069,6 +1069,31 @@ public ExtraType? ExtraType { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_FeatureManager_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FeatureManager*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FeatureManager" data-uid="MediaBrowser.Controller.Entities.BaseItem.FeatureManager">FeatureManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFeatureManager FeatureManager { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Features.IFeatureManager.html">IFeatureManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_FileName_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FileName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_FileName" data-uid="MediaBrowser.Controller.Entities.BaseItem.FileName">FileName</h4>
   <div class="markdown level1 summary"></div>
@@ -4378,30 +4403,13 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_CanDelete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete(MediaBrowser.Controller.Entities.Folder[])">CanDelete(Folder[])</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanDelete" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete">CanDelete()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool CanDelete(Folder[] collectionFolders)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool CanDelete()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>[]</td>
-        <td><span class="parametername">collectionFolders</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -5780,14 +5788,31 @@ public int Width { get; set; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetIdsForAncestorQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetIdsForAncestorQuery">GetIdsForAncestorQuery()</h4>
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetIdsForAncestorIdsQuery*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetIdsForAncestorIdsQuery(MediaBrowser.Controller.Entities.User)">GetIdsForAncestorIdsQuery(User)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;long&gt; GetIdsForAncestorQuery()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long[] GetIdsForAncestorIdsQuery(User user = null)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -5798,7 +5823,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -7092,73 +7117,6 @@ This overload is for CoverArt</p>
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetTopParentId_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetTopParentId*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetTopParentId" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetTopParentId">GetTopParentId()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long GetTopParentId()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetTopParentIdsForQuery_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetTopParentIdsForQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetTopParentIdsForQuery_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetTopParentIdsForQuery(MediaBrowser.Controller.Entities.User)">GetTopParentIdsForQuery(User)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long[] GetTopParentIdsForQuery(User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>

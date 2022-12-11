@@ -22,8 +22,9 @@ public struct UpdatesPackageVersionInfo: Codable {
     public var targetFilename: String?
     public var infoUrl: String?
     public var runtimes: String?
+    public var timestamp: Date?
 
-    public init(name: String? = nil, guid: String? = nil, versionStr: String? = nil, classification: UpdatesPackageVersionClass? = nil, _description: String? = nil, requiredVersionStr: String? = nil, sourceUrl: String? = nil, checksum: String? = nil, targetFilename: String? = nil, infoUrl: String? = nil, runtimes: String? = nil) {
+    public init(name: String? = nil, guid: String? = nil, versionStr: String? = nil, classification: UpdatesPackageVersionClass? = nil, _description: String? = nil, requiredVersionStr: String? = nil, sourceUrl: String? = nil, checksum: String? = nil, targetFilename: String? = nil, infoUrl: String? = nil, runtimes: String? = nil, timestamp: Date? = nil) {
         self.name = name
         self.guid = guid
         self.versionStr = versionStr
@@ -35,6 +36,7 @@ public struct UpdatesPackageVersionInfo: Codable {
         self.targetFilename = targetFilename
         self.infoUrl = infoUrl
         self.runtimes = runtimes
+        self.timestamp = timestamp
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -49,6 +51,7 @@ public struct UpdatesPackageVersionInfo: Codable {
         case targetFilename
         case infoUrl
         case runtimes
+        case timestamp
     }
 
 }

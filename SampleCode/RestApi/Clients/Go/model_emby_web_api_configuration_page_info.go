@@ -9,6 +9,8 @@ package embyclient-rest-go
 type EmbyWebApiConfigurationPageInfo struct {
 	Name string `json:"Name,omitempty"`
 	EnableInMainMenu bool `json:"EnableInMainMenu,omitempty"`
+	EnableInUserMenu bool `json:"EnableInUserMenu,omitempty"`
+	FeatureId string `json:"FeatureId,omitempty"`
 	MenuSection string `json:"MenuSection,omitempty"`
 	MenuIcon string `json:"MenuIcon,omitempty"`
 	DisplayName string `json:"DisplayName,omitempty"`

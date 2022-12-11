@@ -28,7 +28,7 @@ class EmbyWebGenericUIModelUICommand(object):
         'is_enabled': 'bool',
         'caption': 'str',
         'set_focus': 'bool',
-        'confirmation_message': 'str'
+        'confirmation_prompt': 'str'
     }
 
     attribute_map = {
@@ -38,10 +38,10 @@ class EmbyWebGenericUIModelUICommand(object):
         'is_enabled': 'IsEnabled',
         'caption': 'Caption',
         'set_focus': 'SetFocus',
-        'confirmation_message': 'ConfirmationMessage'
+        'confirmation_prompt': 'ConfirmationPrompt'
     }
 
-    def __init__(self, command_type=None, command_id=None, is_visible=None, is_enabled=None, caption=None, set_focus=None, confirmation_message=None):  # noqa: E501
+    def __init__(self, command_type=None, command_id=None, is_visible=None, is_enabled=None, caption=None, set_focus=None, confirmation_prompt=None):  # noqa: E501
         """EmbyWebGenericUIModelUICommand - a model defined in Swagger"""  # noqa: E501
         self._command_type = None
         self._command_id = None
@@ -49,7 +49,7 @@ class EmbyWebGenericUIModelUICommand(object):
         self._is_enabled = None
         self._caption = None
         self._set_focus = None
-        self._confirmation_message = None
+        self._confirmation_prompt = None
         self.discriminator = None
         if command_type is not None:
             self.command_type = command_type
@@ -63,8 +63,8 @@ class EmbyWebGenericUIModelUICommand(object):
             self.caption = caption
         if set_focus is not None:
             self.set_focus = set_focus
-        if confirmation_message is not None:
-            self.confirmation_message = confirmation_message
+        if confirmation_prompt is not None:
+            self.confirmation_prompt = confirmation_prompt
 
     @property
     def command_type(self):
@@ -193,25 +193,25 @@ class EmbyWebGenericUIModelUICommand(object):
         self._set_focus = set_focus
 
     @property
-    def confirmation_message(self):
-        """Gets the confirmation_message of this EmbyWebGenericUIModelUICommand.  # noqa: E501
+    def confirmation_prompt(self):
+        """Gets the confirmation_prompt of this EmbyWebGenericUIModelUICommand.  # noqa: E501
 
 
-        :return: The confirmation_message of this EmbyWebGenericUIModelUICommand.  # noqa: E501
+        :return: The confirmation_prompt of this EmbyWebGenericUIModelUICommand.  # noqa: E501
         :rtype: str
         """
-        return self._confirmation_message
+        return self._confirmation_prompt
 
-    @confirmation_message.setter
-    def confirmation_message(self, confirmation_message):
-        """Sets the confirmation_message of this EmbyWebGenericUIModelUICommand.
+    @confirmation_prompt.setter
+    def confirmation_prompt(self, confirmation_prompt):
+        """Sets the confirmation_prompt of this EmbyWebGenericUIModelUICommand.
 
 
-        :param confirmation_message: The confirmation_message of this EmbyWebGenericUIModelUICommand.  # noqa: E501
+        :param confirmation_prompt: The confirmation_prompt of this EmbyWebGenericUIModelUICommand.  # noqa: E501
         :type: str
         """
 
-        self._confirmation_message = confirmation_message
+        self._confirmation_prompt = confirmation_prompt
 
     def to_dict(self):
         """Returns the model properties as a dict"""

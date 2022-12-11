@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * StudiosService service.
 * @module EmbyClient.JavaScript.Beta/StudiosServiceApi
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class StudiosServiceApi {
 
@@ -97,6 +97,7 @@ export default class StudiosServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],

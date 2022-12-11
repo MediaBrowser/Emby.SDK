@@ -85,6 +85,22 @@ public class UserServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets a typed user setting
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUsersByUseridTypedsettingsByKeyTest() throws Exception {
+        String key = null;
+        String userId = null;
+        api.getUsersByUseridTypedsettingsByKey(key, userId);
+
+        // TODO: test validations
+    }
+    /**
      * Gets a list of users
      *
      * Requires authentication as administrator
@@ -276,6 +292,23 @@ public class UserServiceApiTest {
         String id = null;
         String trackType = null;
         api.postUsersByIdTrackselectionsByTracktypeDelete(id, trackType);
+
+        // TODO: test validations
+    }
+    /**
+     * Updates a typed user setting
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridTypedsettingsByKeyTest() throws Exception {
+        Object body = null;
+        String userId = null;
+        String key = null;
+        api.postUsersByUseridTypedsettingsByKey(body, userId, key);
 
         // TODO: test validations
     }

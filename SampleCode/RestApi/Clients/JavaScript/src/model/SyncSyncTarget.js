@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SyncSyncTarget model module.
 * @module model/SyncSyncTarget
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class SyncSyncTarget {
     /**

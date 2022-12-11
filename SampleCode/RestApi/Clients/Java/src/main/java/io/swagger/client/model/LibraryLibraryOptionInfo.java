@@ -26,6 +26,9 @@ public class LibraryLibraryOptionInfo {
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("SetupUrl")
+  private String setupUrl = null;
+
   @SerializedName("DefaultEnabled")
   private Boolean defaultEnabled = null;
 
@@ -48,6 +51,24 @@ public class LibraryLibraryOptionInfo {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public LibraryLibraryOptionInfo setupUrl(String setupUrl) {
+    this.setupUrl = setupUrl;
+    return this;
+  }
+
+   /**
+   * Get setupUrl
+   * @return setupUrl
+  **/
+  @Schema(description = "")
+  public String getSetupUrl() {
+    return setupUrl;
+  }
+
+  public void setSetupUrl(String setupUrl) {
+    this.setupUrl = setupUrl;
   }
 
   public LibraryLibraryOptionInfo defaultEnabled(Boolean defaultEnabled) {
@@ -105,13 +126,14 @@ public class LibraryLibraryOptionInfo {
     }
     LibraryLibraryOptionInfo libraryLibraryOptionInfo = (LibraryLibraryOptionInfo) o;
     return Objects.equals(this.name, libraryLibraryOptionInfo.name) &&
+        Objects.equals(this.setupUrl, libraryLibraryOptionInfo.setupUrl) &&
         Objects.equals(this.defaultEnabled, libraryLibraryOptionInfo.defaultEnabled) &&
         Objects.equals(this.features, libraryLibraryOptionInfo.features);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, defaultEnabled, features);
+    return Objects.hash(name, setupUrl, defaultEnabled, features);
   }
 
 
@@ -121,6 +143,7 @@ public class LibraryLibraryOptionInfo {
     sb.append("class LibraryLibraryOptionInfo {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    setupUrl: ").append(toIndentedString(setupUrl)).append("\n");
     sb.append("    defaultEnabled: ").append(toIndentedString(defaultEnabled)).append("\n");
     sb.append("    features: ").append(toIndentedString(features)).append("\n");
     sb.append("}");

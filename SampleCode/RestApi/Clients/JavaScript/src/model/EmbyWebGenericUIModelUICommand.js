@@ -15,7 +15,7 @@ import EmbyWebGenericUIModelEnumsUICommandType from './EmbyWebGenericUIModelEnum
 /**
 * The EmbyWebGenericUIModelUICommand model module.
 * @module model/EmbyWebGenericUIModelUICommand
-* @version 4.8.0.19
+* @version 4.8.0.20
 */
 export default class EmbyWebGenericUIModelUICommand {
     /**
@@ -60,8 +60,8 @@ export default class EmbyWebGenericUIModelUICommand {
             if (data.hasOwnProperty('SetFocus')) {
                 obj['SetFocus'] = ApiClient.convertToType(data['SetFocus'], 'Boolean');
             }
-            if (data.hasOwnProperty('ConfirmationMessage')) {
-                obj['ConfirmationMessage'] = ApiClient.convertToType(data['ConfirmationMessage'], 'String');
+            if (data.hasOwnProperty('ConfirmationPrompt')) {
+                obj['ConfirmationPrompt'] = ApiClient.convertToType(data['ConfirmationPrompt'], 'String');
             }
         }
         return obj;
@@ -92,9 +92,9 @@ export default class EmbyWebGenericUIModelUICommand {
     */
     'SetFocus' = undefined;
     /**
-    * @member {String} ConfirmationMessage
+    * @member {String} ConfirmationPrompt
     */
-    'ConfirmationMessage' = undefined;
+    'ConfirmationPrompt' = undefined;
 
 
 
