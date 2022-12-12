@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The TimeSpan model module.
 * @module model/TimeSpan
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class TimeSpan {
     /**

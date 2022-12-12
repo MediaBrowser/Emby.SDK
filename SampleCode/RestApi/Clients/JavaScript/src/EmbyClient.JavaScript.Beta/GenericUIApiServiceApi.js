@@ -16,7 +16,7 @@ import EmbyWebGenericUIModelUIViewInfo from '../model/EmbyWebGenericUIModelUIVie
 /**
 * GenericUIApiService service.
 * @module EmbyClient.JavaScript.Beta/GenericUIApiServiceApi
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class GenericUIApiServiceApi {
 

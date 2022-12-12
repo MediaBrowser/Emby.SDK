@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * UniversalAudioService service.
 * @module EmbyClient.JavaScript.Beta/UniversalAudioServiceApi
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class UniversalAudioServiceApi {
 

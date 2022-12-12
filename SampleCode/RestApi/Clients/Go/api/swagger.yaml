@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.20
+  version: 4.8.0.21
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki

@@ -15,7 +15,7 @@ import DlnaSubtitleDeliveryMethod from '../model/DlnaSubtitleDeliveryMethod';
 /**
 * VideoHlsService service.
 * @module EmbyClient.JavaScript.Beta/VideoHlsServiceApi
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class VideoHlsServiceApi {
 

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ConfigurationPathSubstitution model module.
 * @module model/ConfigurationPathSubstitution
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class ConfigurationPathSubstitution {
     /**

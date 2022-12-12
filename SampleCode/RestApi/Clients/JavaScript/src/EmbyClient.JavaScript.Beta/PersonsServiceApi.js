@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * PersonsService service.
 * @module EmbyClient.JavaScript.Beta/PersonsServiceApi
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class PersonsServiceApi {
 

@@ -16,7 +16,7 @@ import ProvidersSongInfo from './ProvidersSongInfo';
 /**
 * The ProvidersAlbumInfo model module.
 * @module model/ProvidersAlbumInfo
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class ProvidersAlbumInfo {
     /**

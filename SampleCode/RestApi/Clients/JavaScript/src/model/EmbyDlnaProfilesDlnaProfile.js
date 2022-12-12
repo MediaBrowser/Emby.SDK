@@ -23,7 +23,7 @@ import EmbyDlnaProfilesProtocolInfoDetection from './EmbyDlnaProfilesProtocolInf
 /**
 * The EmbyDlnaProfilesDlnaProfile model module.
 * @module model/EmbyDlnaProfilesDlnaProfile
-* @version 4.8.0.20
+* @version 4.8.0.21
 */
 export default class EmbyDlnaProfilesDlnaProfile {
     /**
