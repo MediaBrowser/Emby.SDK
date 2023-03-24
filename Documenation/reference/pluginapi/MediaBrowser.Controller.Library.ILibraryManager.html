@@ -366,13 +366,13 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPath_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPath*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPath_System_Int64_MediaBrowser_Model_Configuration_MediaPathInfo_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPath(System.Int64,MediaBrowser.Model.Configuration.MediaPathInfo)">AddMediaPath(Int64, MediaPathInfo)</h4>
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPaths_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPaths*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPaths_MediaBrowser_Controller_Entities_CollectionFolder_MediaBrowser_Model_Configuration_MediaPathInfo___System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPaths(MediaBrowser.Controller.Entities.CollectionFolder,MediaBrowser.Model.Configuration.MediaPathInfo[],System.Boolean)">AddMediaPaths(CollectionFolder, MediaPathInfo[], Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddMediaPath(long virtualFolderId, MediaPathInfo path)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AddMediaPaths(CollectionFolder item, MediaPathInfo[] pathInfos, bool refreshLibrary)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -385,13 +385,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">virtualFolderId</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.CollectionFolder.html">CollectionFolder</a></td>
+        <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.MediaPathInfo.html">MediaPathInfo</a></td>
-        <td><span class="parametername">path</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.MediaPathInfo.html">MediaPathInfo</a>[]</td>
+        <td><span class="parametername">pathInfos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">refreshLibrary</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1213,6 +1233,48 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetAudioLayouts_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetAudioLayouts*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetAudioLayouts_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetAudioLayouts(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetAudioLayouts(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;string&gt; GetAudioLayouts(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetCollectionFolders_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCollectionFolders*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetCollectionFolders_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCollectionFolders(MediaBrowser.Controller.Entities.BaseItem)">GetCollectionFolders(BaseItem)</h4>
   <div class="markdown level1 summary"><p>Gets the collection folders.</p>
@@ -1419,48 +1481,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetGuid_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetGuid*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetGuid_System_Int64_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetGuid(System.Int64)">GetGuid(Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Guid GetGuid(long id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2481,13 +2501,13 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetNamedView_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamedView*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNamedView_System_String_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamedView(System.String,System.String)">GetNamedView(String, String)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNamedView_System_String_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamedView(System.String,System.String,System.Boolean)">GetNamedView(String, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Gets the named view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Folder GetNamedView(string name, string viewType)</code></pre>
+    <pre><code class="lang-csharp hljs">Folder GetNamedView(string name, string viewType, bool createIfNotFound)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2510,6 +2530,11 @@
         <td><span class="parametername">viewType</span></td>
         <td><p>Type of the view.</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">createIfNotFound</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2945,6 +2970,48 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><p>System.Nullable&lt;System.Int32&gt;.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetShareLevels_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetShareLevels*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetShareLevels_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetShareLevels(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetShareLevels(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;UserItemShareLevel?&gt; GetShareLevels(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.UserItemShareLevel.html">UserItemShareLevel</a>&gt;&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -3895,6 +3962,70 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_MakePrivate_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePrivate*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_MakePrivate_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePrivate(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">MakePrivate(BaseItem, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MakePrivate(BaseItem item, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_MakePublic_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePublic*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_MakePublic_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePublic(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">MakePublic(BaseItem, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MakePublic(BaseItem item, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_MergeItems_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MergeItems*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_MergeItems_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MergeItems(MediaBrowser.Controller.Entities.BaseItem[])">MergeItems(BaseItem[])</h4>
   <div class="markdown level1 summary"></div>
@@ -4490,6 +4621,33 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_SaveUserItemShares_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.SaveUserItemShares*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_SaveUserItemShares_MediaBrowser_Controller_Library_UserItemShare___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.SaveUserItemShares(MediaBrowser.Controller.Library.UserItemShare[])">SaveUserItemShares(UserItemShare[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SaveUserItemShares(UserItemShare[] shares)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShare.html">UserItemShare</a>[]</td>
+        <td><span class="parametername">shares</span></td>
         <td></td>
       </tr>
     </tbody>

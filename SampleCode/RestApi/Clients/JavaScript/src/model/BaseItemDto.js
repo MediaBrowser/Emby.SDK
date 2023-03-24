@@ -15,7 +15,6 @@ import ChapterInfo from './ChapterInfo';
 import DayOfWeek from './DayOfWeek';
 import DrawingImageOrientation from './DrawingImageOrientation';
 import ExternalUrl from './ExternalUrl';
-import LibraryPlayAccess from './LibraryPlayAccess';
 import LiveTvTimerType from './LiveTvTimerType';
 import LocationType from './LocationType';
 import MediaSourceInfo from './MediaSourceInfo';
@@ -31,7 +30,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class BaseItemDto {
     /**
@@ -94,15 +93,6 @@ export default class BaseItemDto {
             if (data.hasOwnProperty('SortParentIndexNumber')) {
                 obj['SortParentIndexNumber'] = ApiClient.convertToType(data['SortParentIndexNumber'], 'Number');
             }
-            if (data.hasOwnProperty('AirsBeforeSeasonNumber')) {
-                obj['AirsBeforeSeasonNumber'] = ApiClient.convertToType(data['AirsBeforeSeasonNumber'], 'Number');
-            }
-            if (data.hasOwnProperty('AirsAfterSeasonNumber')) {
-                obj['AirsAfterSeasonNumber'] = ApiClient.convertToType(data['AirsAfterSeasonNumber'], 'Number');
-            }
-            if (data.hasOwnProperty('AirsBeforeEpisodeNumber')) {
-                obj['AirsBeforeEpisodeNumber'] = ApiClient.convertToType(data['AirsBeforeEpisodeNumber'], 'Number');
-            }
             if (data.hasOwnProperty('CanDelete')) {
                 obj['CanDelete'] = ApiClient.convertToType(data['CanDelete'], 'Boolean');
             }
@@ -123,6 +113,15 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('SupportsSync')) {
                 obj['SupportsSync'] = ApiClient.convertToType(data['SupportsSync'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CanManageAccess')) {
+                obj['CanManageAccess'] = ApiClient.convertToType(data['CanManageAccess'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CanMakePrivate')) {
+                obj['CanMakePrivate'] = ApiClient.convertToType(data['CanMakePrivate'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CanMakePublic')) {
+                obj['CanMakePublic'] = ApiClient.convertToType(data['CanMakePublic'], 'Boolean');
             }
             if (data.hasOwnProperty('Container')) {
                 obj['Container'] = ApiClient.convertToType(data['Container'], 'String');
@@ -198,9 +197,6 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('Bitrate')) {
                 obj['Bitrate'] = ApiClient.convertToType(data['Bitrate'], 'Number');
-            }
-            if (data.hasOwnProperty('PlayAccess')) {
-                obj['PlayAccess'] = LibraryPlayAccess.constructFromObject(data['PlayAccess']);
             }
             if (data.hasOwnProperty('ProductionYear')) {
                 obj['ProductionYear'] = ApiClient.convertToType(data['ProductionYear'], 'Number');
@@ -564,18 +560,6 @@ export default class BaseItemDto {
     */
     'SortParentIndexNumber' = undefined;
     /**
-    * @member {Number} AirsBeforeSeasonNumber
-    */
-    'AirsBeforeSeasonNumber' = undefined;
-    /**
-    * @member {Number} AirsAfterSeasonNumber
-    */
-    'AirsAfterSeasonNumber' = undefined;
-    /**
-    * @member {Number} AirsBeforeEpisodeNumber
-    */
-    'AirsBeforeEpisodeNumber' = undefined;
-    /**
     * @member {Boolean} CanDelete
     */
     'CanDelete' = undefined;
@@ -603,6 +587,18 @@ export default class BaseItemDto {
     * @member {Boolean} SupportsSync
     */
     'SupportsSync' = undefined;
+    /**
+    * @member {Boolean} CanManageAccess
+    */
+    'CanManageAccess' = undefined;
+    /**
+    * @member {Boolean} CanMakePrivate
+    */
+    'CanMakePrivate' = undefined;
+    /**
+    * @member {Boolean} CanMakePublic
+    */
+    'CanMakePublic' = undefined;
     /**
     * @member {String} Container
     */
@@ -703,10 +699,6 @@ export default class BaseItemDto {
     * @member {Number} Bitrate
     */
     'Bitrate' = undefined;
-    /**
-    * @member {module:model/LibraryPlayAccess} PlayAccess
-    */
-    'PlayAccess' = undefined;
     /**
     * @member {Number} ProductionYear
     */

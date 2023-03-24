@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * TrailersService service.
 * @module EmbyClient.JavaScript.Beta/TrailersServiceApi
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class TrailersServiceApi {
 
@@ -124,6 +124,7 @@ export default class TrailersServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],

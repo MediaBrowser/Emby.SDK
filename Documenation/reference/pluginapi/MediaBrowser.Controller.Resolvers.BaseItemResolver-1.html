@@ -400,13 +400,13 @@
   
   
   <a id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_CreateItem_" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.CreateItem*"></a>
-  <h4 id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_CreateItem__1" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.CreateItem``1">CreateItem&lt;T&gt;()</h4>
+  <h4 id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_CreateItem__1" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.CreateItem``1">CreateItem&lt;TItem&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected T CreateItem&lt;T&gt;()
-    where T : BaseItem, new()</code></pre>
+    <pre><code class="lang-csharp hljs">protected TItem CreateItem&lt;TItem&gt;()
+    where TItem : BaseItem, new()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,7 +418,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">TItem</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -433,7 +433,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">TItem</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -775,13 +775,13 @@
   
   
   <a id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_OnItemFound_" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.OnItemFound*"></a>
-  <h4 id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_OnItemFound__1___0_MediaBrowser_Controller_Entities_Folder_" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.OnItemFound``1(``0,MediaBrowser.Controller.Entities.Folder)">OnItemFound&lt;T&gt;(T, Folder)</h4>
+  <h4 id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_OnItemFound__1___0_MediaBrowser_Controller_Entities_Folder_" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.OnItemFound``1(``0,MediaBrowser.Controller.Entities.Folder)">OnItemFound&lt;TItem&gt;(TItem, Folder)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnItemFound&lt;T&gt;(T item, Folder parent)
-    where T : BaseItem</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnItemFound&lt;TItem&gt;(TItem item, Folder parent)
+    where TItem : BaseItem</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -794,7 +794,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">TItem</span></td>
         <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
@@ -815,7 +815,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">TItem</span></td>
         <td></td>
       </tr>
     </tbody>

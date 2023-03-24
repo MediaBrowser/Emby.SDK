@@ -167,12 +167,12 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ApplyHwAccelerationCodecs_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ApplyHwAccelerationCodecs*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ApplyHwAccelerationCodecs_Emby_Media_Model_Enums_VideoMediaTypes_MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_System_String__" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ApplyHwAccelerationCodecs(Emby.Media.Model.Enums.VideoMediaTypes,MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels,MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels,System.String@)">ApplyHwAccelerationCodecs(VideoMediaTypes, TestHwaccels, TestHwaccels, out String)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ApplyHwAccelerationCodecs_Emby_Media_Model_Enums_VideoMediaTypes_MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_System_String_MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_System_String_System_String__" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ApplyHwAccelerationCodecs(Emby.Media.Model.Enums.VideoMediaTypes,MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels,System.String,MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels,System.String,System.String@)">ApplyHwAccelerationCodecs(VideoMediaTypes, TestHwaccels, String, TestHwaccels, String, out String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool ApplyHwAccelerationCodecs(VideoMediaTypes sourceCodec, TestHwaccels decoderHwaccel, TestHwaccels encoderHwaccel, out string statusMessage)</code></pre>
+    <pre><code class="lang-csharp hljs">bool ApplyHwAccelerationCodecs(VideoMediaTypes sourceCodec, TestHwaccels decoderHwaccel, string decoderDeviceId, TestHwaccels encoderHwaccel, string encoderDeviceId, out string statusMessage)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,8 +195,18 @@
         <td></td>
       </tr>
       <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">decoderDeviceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels.html">TestHwaccels</a></td>
         <td><span class="parametername">encoderHwaccel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encoderDeviceId</span></td>
         <td></td>
       </tr>
       <tr>
@@ -217,6 +227,48 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetDevicesForFramework_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetDevicesForFramework*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetDevicesForFramework_Emby_Media_Model_Enums_SecondaryFrameworks_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetDevicesForFramework(Emby.Media.Model.Enums.SecondaryFrameworks)">GetDevicesForFramework(SecondaryFrameworks)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TestCodecDevice&gt; GetDevicesForFramework(SecondaryFrameworks secondaryFramework)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.SecondaryFrameworks.html">SecondaryFrameworks</a></td>
+        <td><span class="parametername">secondaryFramework</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.TestCodecDevice.html">TestCodecDevice</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -511,12 +563,12 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ValidateHwAccelCore_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ValidateHwAccelCore*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ValidateHwAccelCore_MediaBrowser_Controller_MediaEncoding_Tests_ITestEncodingJobInfo_Emby_Media_Model_Enums_SecondaryFrameworks_Emby_Media_Model_Enums_SecondaryFrameworks_System_Text_StringBuilder_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ValidateHwAccelCore(MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo,Emby.Media.Model.Enums.SecondaryFrameworks,Emby.Media.Model.Enums.SecondaryFrameworks,System.Text.StringBuilder)">ValidateHwAccelCore(ITestEncodingJobInfo, SecondaryFrameworks, SecondaryFrameworks, StringBuilder)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ValidateHwAccelCore_MediaBrowser_Controller_MediaEncoding_Tests_ITestEncodingJobInfo_Emby_Media_Model_Enums_SecondaryFrameworks_System_String_Emby_Media_Model_Enums_SecondaryFrameworks_System_String_System_Text_StringBuilder_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ValidateHwAccelCore(MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo,Emby.Media.Model.Enums.SecondaryFrameworks,System.String,Emby.Media.Model.Enums.SecondaryFrameworks,System.String,System.Text.StringBuilder)">ValidateHwAccelCore(ITestEncodingJobInfo, SecondaryFrameworks, String, SecondaryFrameworks, String, StringBuilder)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ValidateHwAccelCore(ITestEncodingJobInfo job, SecondaryFrameworks decoderFramework, SecondaryFrameworks encoderFramework, StringBuilder sb)</code></pre>
+    <pre><code class="lang-csharp hljs">void ValidateHwAccelCore(ITestEncodingJobInfo jobInfo, SecondaryFrameworks decoderFramework, string decoderDeviceId, SecondaryFrameworks encoderFramework, string encoderDeviceId, StringBuilder sb)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,7 +582,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo.html">ITestEncodingJobInfo</a></td>
-        <td><span class="parametername">job</span></td>
+        <td><span class="parametername">jobInfo</span></td>
         <td></td>
       </tr>
       <tr>
@@ -539,8 +591,18 @@
         <td></td>
       </tr>
       <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">decoderDeviceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="Emby.Media.Model.Enums.SecondaryFrameworks.html">SecondaryFrameworks</a></td>
         <td><span class="parametername">encoderFramework</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encoderDeviceId</span></td>
         <td></td>
       </tr>
       <tr>

@@ -31,6 +31,8 @@ class MetadataFields(object):
     CHANNELNUMBER = "ChannelNumber"
     SORTNAME = "SortName"
     ORIGINALTITLE = "OriginalTitle"
+    SORTINDEXNUMBER = "SortIndexNumber"
+    SORTPARENTINDEXNUMBER = "SortParentIndexNumber"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

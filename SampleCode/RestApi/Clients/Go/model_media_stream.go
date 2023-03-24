@@ -16,7 +16,6 @@ type MediaStream struct {
 	Comment string `json:"Comment,omitempty"`
 	StreamStartTimeTicks int64 `json:"StreamStartTimeTicks,omitempty"`
 	TimeBase string `json:"TimeBase,omitempty"`
-	CodecTimeBase string `json:"CodecTimeBase,omitempty"`
 	Title string `json:"Title,omitempty"`
 	Extradata string `json:"Extradata,omitempty"`
 	VideoRange string `json:"VideoRange,omitempty"`
@@ -53,10 +52,11 @@ type MediaStream struct {
 	PixelFormat string `json:"PixelFormat,omitempty"`
 	Level float64 `json:"Level,omitempty"`
 	IsAnamorphic bool `json:"IsAnamorphic,omitempty"`
+	ExtendedVideoType *ExtendedVideoTypes `json:"ExtendedVideoType,omitempty"`
+	ExtendedVideoSubtype *ExtendedVideoSubTypes `json:"ExtendedVideoSubtype,omitempty"`
 	ItemId string `json:"ItemId,omitempty"`
 	ServerId string `json:"ServerId,omitempty"`
 	AttachmentSize int32 `json:"AttachmentSize,omitempty"`
 	MimeType string `json:"MimeType,omitempty"`
-	IsClosedCaptions bool `json:"IsClosedCaptions,omitempty"`
 	SubtitleLocationType *SubtitleLocationType `json:"SubtitleLocationType,omitempty"`
 }

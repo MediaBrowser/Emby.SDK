@@ -36,8 +36,9 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="libraryIds">libraryIds.</param>
         /// <param name="eventIds">eventIds.</param>
         /// <param name="userId">userId.</param>
+        /// <param name="isSelfNotification">isSelfNotification.</param>
         /// <param name="options">options.</param>
-        public EmbyNotificationsUserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), Dictionary<string, string> options = default(Dictionary<string, string>))
+        public EmbyNotificationsUserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), bool? isSelfNotification = default(bool?), Dictionary<string, string> options = default(Dictionary<string, string>))
         {
             this.NotifierKey = notifierKey;
             this.SetupModuleUrl = setupModuleUrl;
@@ -49,6 +50,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.LibraryIds = libraryIds;
             this.EventIds = eventIds;
             this.UserId = userId;
+            this.IsSelfNotification = isSelfNotification;
             this.Options = options;
         }
         
@@ -113,6 +115,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string UserId { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsSelfNotification
+        /// </summary>
+        [DataMember(Name="IsSelfNotification", EmitDefaultValue=false)]
+        public bool? IsSelfNotification { get; set; }
+
+        /// <summary>
         /// Gets or Sets Options
         /// </summary>
         [DataMember(Name="Options", EmitDefaultValue=false)]
@@ -136,6 +144,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  LibraryIds: ").Append(LibraryIds).Append("\n");
             sb.Append("  EventIds: ").Append(EventIds).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  IsSelfNotification: ").Append(IsSelfNotification).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -225,6 +234,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.UserId.Equals(input.UserId))
                 ) && 
                 (
+                    this.IsSelfNotification == input.IsSelfNotification ||
+                    (this.IsSelfNotification != null &&
+                    this.IsSelfNotification.Equals(input.IsSelfNotification))
+                ) && 
+                (
                     this.Options == input.Options ||
                     this.Options != null &&
                     input.Options != null &&
@@ -261,6 +275,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.EventIds.GetHashCode();
                 if (this.UserId != null)
                     hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                if (this.IsSelfNotification != null)
+                    hashCode = hashCode * 59 + this.IsSelfNotification.GetHashCode();
                 if (this.Options != null)
                     hashCode = hashCode * 59 + this.Options.GetHashCode();
                 return hashCode;

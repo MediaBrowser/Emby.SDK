@@ -15,7 +15,7 @@ import DlnaSubtitleDeliveryMethod from '../model/DlnaSubtitleDeliveryMethod';
 /**
 * AudioService service.
 * @module EmbyClient.JavaScript.Beta/AudioServiceApi
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class AudioServiceApi {
 

@@ -31,7 +31,9 @@ public enum MetadataFields {
   COLLECTIONS("Collections"),
   CHANNELNUMBER("ChannelNumber"),
   SORTNAME("SortName"),
-  ORIGINALTITLE("OriginalTitle");
+  ORIGINALTITLE("OriginalTitle"),
+  SORTINDEXNUMBER("SortIndexNumber"),
+  SORTPARENTINDEXNUMBER("SortParentIndexNumber");
 
   private String value;
 

@@ -87,5 +87,15 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// Enum OriginalTitle for value: OriginalTitle
         /// </summary>
         [EnumMember(Value = "OriginalTitle")]
-        OriginalTitle = 13    }
+        OriginalTitle = 13,
+        /// <summary>
+        /// Enum SortIndexNumber for value: SortIndexNumber
+        /// </summary>
+        [EnumMember(Value = "SortIndexNumber")]
+        SortIndexNumber = 14,
+        /// <summary>
+        /// Enum SortParentIndexNumber for value: SortParentIndexNumber
+        /// </summary>
+        [EnumMember(Value = "SortParentIndexNumber")]
+        SortParentIndexNumber = 15    }
 }

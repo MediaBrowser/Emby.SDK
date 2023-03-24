@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EmbyNotificationsUserNotificationInfo model module.
 * @module model/EmbyNotificationsUserNotificationInfo
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class EmbyNotificationsUserNotificationInfo {
     /**
@@ -71,6 +71,9 @@ export default class EmbyNotificationsUserNotificationInfo {
             if (data.hasOwnProperty('UserId')) {
                 obj['UserId'] = ApiClient.convertToType(data['UserId'], 'String');
             }
+            if (data.hasOwnProperty('IsSelfNotification')) {
+                obj['IsSelfNotification'] = ApiClient.convertToType(data['IsSelfNotification'], 'Boolean');
+            }
             if (data.hasOwnProperty('Options')) {
                 obj['Options'] = ApiClient.convertToType(data['Options'], {'String': 'String'});
             }
@@ -118,6 +121,10 @@ export default class EmbyNotificationsUserNotificationInfo {
     * @member {String} UserId
     */
     'UserId' = undefined;
+    /**
+    * @member {Boolean} IsSelfNotification
+    */
+    'IsSelfNotification' = undefined;
     /**
     * @member {Object.<String, String>} Options
     */

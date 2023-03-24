@@ -38,9 +38,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="extraType">extraType.</param>
         /// <param name="sortIndexNumber">sortIndexNumber.</param>
         /// <param name="sortParentIndexNumber">sortParentIndexNumber.</param>
-        /// <param name="airsBeforeSeasonNumber">airsBeforeSeasonNumber.</param>
-        /// <param name="airsAfterSeasonNumber">airsAfterSeasonNumber.</param>
-        /// <param name="airsBeforeEpisodeNumber">airsBeforeEpisodeNumber.</param>
         /// <param name="canDelete">canDelete.</param>
         /// <param name="canDownload">canDownload.</param>
         /// <param name="supportsResume">supportsResume.</param>
@@ -48,6 +45,9 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="preferredMetadataLanguage">preferredMetadataLanguage.</param>
         /// <param name="preferredMetadataCountryCode">preferredMetadataCountryCode.</param>
         /// <param name="supportsSync">supportsSync.</param>
+        /// <param name="canManageAccess">canManageAccess.</param>
+        /// <param name="canMakePrivate">canMakePrivate.</param>
+        /// <param name="canMakePublic">canMakePublic.</param>
         /// <param name="container">container.</param>
         /// <param name="sortName">sortName.</param>
         /// <param name="forcedSortName">forcedSortName.</param>
@@ -73,7 +73,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="size">size.</param>
         /// <param name="fileName">fileName.</param>
         /// <param name="bitrate">bitrate.</param>
-        /// <param name="playAccess">playAccess.</param>
         /// <param name="productionYear">productionYear.</param>
         /// <param name="number">number.</param>
         /// <param name="channelNumber">channelNumber.</param>
@@ -177,7 +176,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="listingsChannelName">listingsChannelName.</param>
         /// <param name="listingsChannelNumber">listingsChannelNumber.</param>
         /// <param name="affiliateCallSign">affiliateCallSign.</param>
-        public BaseItemDto(string name = default(string), string originalTitle = default(string), string serverId = default(string), string id = default(string), string guid = default(string), string etag = default(string), string prefix = default(string), string playlistItemId = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), string extraType = default(string), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), int? airsBeforeSeasonNumber = default(int?), int? airsAfterSeasonNumber = default(int?), int? airsBeforeEpisodeNumber = default(int?), bool? canDelete = default(bool?), bool? canDownload = default(bool?), bool? supportsResume = default(bool?), string presentationUniqueKey = default(string), string preferredMetadataLanguage = default(string), string preferredMetadataCountryCode = default(string), bool? supportsSync = default(bool?), string container = default(string), string sortName = default(string), string forcedSortName = default(string), Video3DFormat video3DFormat = default(Video3DFormat), DateTimeOffset? premiereDate = default(DateTimeOffset?), List<ExternalUrl> externalUrls = default(List<ExternalUrl>), List<MediaSourceInfo> mediaSources = default(List<MediaSourceInfo>), float? criticRating = default(float?), long? gameSystemId = default(long?), bool? asSeries = default(bool?), string gameSystem = default(string), List<string> productionLocations = default(List<string>), string path = default(string), string officialRating = default(string), string customRating = default(string), string channelId = default(string), string channelName = default(string), string overview = default(string), List<string> taglines = default(List<string>), List<string> genres = default(List<string>), float? communityRating = default(float?), long? runTimeTicks = default(long?), long? size = default(long?), string fileName = default(string), int? bitrate = default(int?), LibraryPlayAccess playAccess = default(LibraryPlayAccess), int? productionYear = default(int?), string number = default(string), string channelNumber = default(string), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), List<MediaUrl> remoteTrailers = default(List<MediaUrl>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), bool? isFolder = default(bool?), string parentId = default(string), string type = default(string), List<BaseItemPerson> people = default(List<BaseItemPerson>), List<NameLongIdPair> studios = default(List<NameLongIdPair>), List<NameLongIdPair> genreItems = default(List<NameLongIdPair>), List<NameLongIdPair> tagItems = default(List<NameLongIdPair>), string parentLogoItemId = default(string), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), int? localTrailerCount = default(int?), UserItemDataDto userData = default(UserItemDataDto), int? recursiveItemCount = default(int?), int? childCount = default(int?), string seriesName = default(string), string seriesId = default(string), string seasonId = default(string), int? specialFeatureCount = default(int?), string displayPreferencesId = default(string), string status = default(string), List<DayOfWeek> airDays = default(List<DayOfWeek>), List<string> tags = default(List<string>), double? primaryImageAspectRatio = default(double?), List<string> artists = default(List<string>), List<NameIdPair> artistItems = default(List<NameIdPair>), List<NameIdPair> composers = default(List<NameIdPair>), string album = default(string), string collectionType = default(string), string displayOrder = default(string), string albumId = default(string), string albumPrimaryImageTag = default(string), string seriesPrimaryImageTag = default(string), string albumArtist = default(string), List<NameIdPair> albumArtists = default(List<NameIdPair>), string seasonName = default(string), List<MediaStream> mediaStreams = default(List<MediaStream>), int? partCount = default(int?), Dictionary<string, string> imageTags = default(Dictionary<string, string>), List<string> backdropImageTags = default(List<string>), string parentLogoImageTag = default(string), string seriesStudio = default(string), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), List<ChapterInfo> chapters = default(List<ChapterInfo>), LocationType locationType = default(LocationType), string mediaType = default(string), DateTimeOffset? endDate = default(DateTimeOffset?), List<MetadataFields> lockedFields = default(List<MetadataFields>), bool? lockData = default(bool?), int? width = default(int?), int? height = default(int?), string cameraMake = default(string), string cameraModel = default(string), string software = default(string), double? exposureTime = default(double?), double? focalLength = default(double?), DrawingImageOrientation imageOrientation = default(DrawingImageOrientation), double? aperture = default(double?), double? shutterSpeed = default(double?), double? latitude = default(double?), double? longitude = default(double?), double? altitude = default(double?), int? isoSpeedRating = default(int?), string seriesTimerId = default(string), string channelPrimaryImageTag = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), double? completionPercentage = default(double?), bool? isRepeat = default(bool?), bool? isNew = default(bool?), string episodeTitle = default(string), bool? isMovie = default(bool?), bool? isSports = default(bool?), bool? isSeries = default(bool?), bool? isLive = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isPremiere = default(bool?), LiveTvTimerType timerType = default(LiveTvTimerType), bool? disabled = default(bool?), string managementId = default(string), string timerId = default(string), BaseItemDto currentProgram = default(BaseItemDto), int? movieCount = default(int?), int? seriesCount = default(int?), int? albumCount = default(int?), int? songCount = default(int?), int? musicVideoCount = default(int?), List<string> subviews = default(List<string>), string listingsProviderId = default(string), string listingsChannelId = default(string), string listingsPath = default(string), string listingsId = default(string), string listingsChannelName = default(string), string listingsChannelNumber = default(string), string affiliateCallSign = default(string))
+        public BaseItemDto(string name = default(string), string originalTitle = default(string), string serverId = default(string), string id = default(string), string guid = default(string), string etag = default(string), string prefix = default(string), string playlistItemId = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), string extraType = default(string), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), bool? canDelete = default(bool?), bool? canDownload = default(bool?), bool? supportsResume = default(bool?), string presentationUniqueKey = default(string), string preferredMetadataLanguage = default(string), string preferredMetadataCountryCode = default(string), bool? supportsSync = default(bool?), bool? canManageAccess = default(bool?), bool? canMakePrivate = default(bool?), bool? canMakePublic = default(bool?), string container = default(string), string sortName = default(string), string forcedSortName = default(string), Video3DFormat video3DFormat = default(Video3DFormat), DateTimeOffset? premiereDate = default(DateTimeOffset?), List<ExternalUrl> externalUrls = default(List<ExternalUrl>), List<MediaSourceInfo> mediaSources = default(List<MediaSourceInfo>), float? criticRating = default(float?), long? gameSystemId = default(long?), bool? asSeries = default(bool?), string gameSystem = default(string), List<string> productionLocations = default(List<string>), string path = default(string), string officialRating = default(string), string customRating = default(string), string channelId = default(string), string channelName = default(string), string overview = default(string), List<string> taglines = default(List<string>), List<string> genres = default(List<string>), float? communityRating = default(float?), long? runTimeTicks = default(long?), long? size = default(long?), string fileName = default(string), int? bitrate = default(int?), int? productionYear = default(int?), string number = default(string), string channelNumber = default(string), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), List<MediaUrl> remoteTrailers = default(List<MediaUrl>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), bool? isFolder = default(bool?), string parentId = default(string), string type = default(string), List<BaseItemPerson> people = default(List<BaseItemPerson>), List<NameLongIdPair> studios = default(List<NameLongIdPair>), List<NameLongIdPair> genreItems = default(List<NameLongIdPair>), List<NameLongIdPair> tagItems = default(List<NameLongIdPair>), string parentLogoItemId = default(string), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), int? localTrailerCount = default(int?), UserItemDataDto userData = default(UserItemDataDto), int? recursiveItemCount = default(int?), int? childCount = default(int?), string seriesName = default(string), string seriesId = default(string), string seasonId = default(string), int? specialFeatureCount = default(int?), string displayPreferencesId = default(string), string status = default(string), List<DayOfWeek> airDays = default(List<DayOfWeek>), List<string> tags = default(List<string>), double? primaryImageAspectRatio = default(double?), List<string> artists = default(List<string>), List<NameIdPair> artistItems = default(List<NameIdPair>), List<NameIdPair> composers = default(List<NameIdPair>), string album = default(string), string collectionType = default(string), string displayOrder = default(string), string albumId = default(string), string albumPrimaryImageTag = default(string), string seriesPrimaryImageTag = default(string), string albumArtist = default(string), List<NameIdPair> albumArtists = default(List<NameIdPair>), string seasonName = default(string), List<MediaStream> mediaStreams = default(List<MediaStream>), int? partCount = default(int?), Dictionary<string, string> imageTags = default(Dictionary<string, string>), List<string> backdropImageTags = default(List<string>), string parentLogoImageTag = default(string), string seriesStudio = default(string), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), List<ChapterInfo> chapters = default(List<ChapterInfo>), LocationType locationType = default(LocationType), string mediaType = default(string), DateTimeOffset? endDate = default(DateTimeOffset?), List<MetadataFields> lockedFields = default(List<MetadataFields>), bool? lockData = default(bool?), int? width = default(int?), int? height = default(int?), string cameraMake = default(string), string cameraModel = default(string), string software = default(string), double? exposureTime = default(double?), double? focalLength = default(double?), DrawingImageOrientation imageOrientation = default(DrawingImageOrientation), double? aperture = default(double?), double? shutterSpeed = default(double?), double? latitude = default(double?), double? longitude = default(double?), double? altitude = default(double?), int? isoSpeedRating = default(int?), string seriesTimerId = default(string), string channelPrimaryImageTag = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), double? completionPercentage = default(double?), bool? isRepeat = default(bool?), bool? isNew = default(bool?), string episodeTitle = default(string), bool? isMovie = default(bool?), bool? isSports = default(bool?), bool? isSeries = default(bool?), bool? isLive = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isPremiere = default(bool?), LiveTvTimerType timerType = default(LiveTvTimerType), bool? disabled = default(bool?), string managementId = default(string), string timerId = default(string), BaseItemDto currentProgram = default(BaseItemDto), int? movieCount = default(int?), int? seriesCount = default(int?), int? albumCount = default(int?), int? songCount = default(int?), int? musicVideoCount = default(int?), List<string> subviews = default(List<string>), string listingsProviderId = default(string), string listingsChannelId = default(string), string listingsPath = default(string), string listingsId = default(string), string listingsChannelName = default(string), string listingsChannelNumber = default(string), string affiliateCallSign = default(string))
         {
             this.Name = name;
             this.OriginalTitle = originalTitle;
@@ -191,9 +190,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.ExtraType = extraType;
             this.SortIndexNumber = sortIndexNumber;
             this.SortParentIndexNumber = sortParentIndexNumber;
-            this.AirsBeforeSeasonNumber = airsBeforeSeasonNumber;
-            this.AirsAfterSeasonNumber = airsAfterSeasonNumber;
-            this.AirsBeforeEpisodeNumber = airsBeforeEpisodeNumber;
             this.CanDelete = canDelete;
             this.CanDownload = canDownload;
             this.SupportsResume = supportsResume;
@@ -201,6 +197,9 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.PreferredMetadataLanguage = preferredMetadataLanguage;
             this.PreferredMetadataCountryCode = preferredMetadataCountryCode;
             this.SupportsSync = supportsSync;
+            this.CanManageAccess = canManageAccess;
+            this.CanMakePrivate = canMakePrivate;
+            this.CanMakePublic = canMakePublic;
             this.Container = container;
             this.SortName = sortName;
             this.ForcedSortName = forcedSortName;
@@ -226,7 +225,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.Size = size;
             this.FileName = fileName;
             this.Bitrate = bitrate;
-            this.PlayAccess = playAccess;
             this.ProductionYear = productionYear;
             this.Number = number;
             this.ChannelNumber = channelNumber;
@@ -405,24 +403,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         public int? SortParentIndexNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets AirsBeforeSeasonNumber
-        /// </summary>
-        [DataMember(Name="AirsBeforeSeasonNumber", EmitDefaultValue=false)]
-        public int? AirsBeforeSeasonNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AirsAfterSeasonNumber
-        /// </summary>
-        [DataMember(Name="AirsAfterSeasonNumber", EmitDefaultValue=false)]
-        public int? AirsAfterSeasonNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AirsBeforeEpisodeNumber
-        /// </summary>
-        [DataMember(Name="AirsBeforeEpisodeNumber", EmitDefaultValue=false)]
-        public int? AirsBeforeEpisodeNumber { get; set; }
-
-        /// <summary>
         /// Gets or Sets CanDelete
         /// </summary>
         [DataMember(Name="CanDelete", EmitDefaultValue=false)]
@@ -463,6 +443,24 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="SupportsSync", EmitDefaultValue=false)]
         public bool? SupportsSync { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CanManageAccess
+        /// </summary>
+        [DataMember(Name="CanManageAccess", EmitDefaultValue=false)]
+        public bool? CanManageAccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CanMakePrivate
+        /// </summary>
+        [DataMember(Name="CanMakePrivate", EmitDefaultValue=false)]
+        public bool? CanMakePrivate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CanMakePublic
+        /// </summary>
+        [DataMember(Name="CanMakePublic", EmitDefaultValue=false)]
+        public bool? CanMakePublic { get; set; }
 
         /// <summary>
         /// Gets or Sets Container
@@ -613,12 +611,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="Bitrate", EmitDefaultValue=false)]
         public int? Bitrate { get; set; }
-
-        /// <summary>
-        /// Gets or Sets PlayAccess
-        /// </summary>
-        [DataMember(Name="PlayAccess", EmitDefaultValue=false)]
-        public LibraryPlayAccess PlayAccess { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductionYear
@@ -1258,9 +1250,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  ExtraType: ").Append(ExtraType).Append("\n");
             sb.Append("  SortIndexNumber: ").Append(SortIndexNumber).Append("\n");
             sb.Append("  SortParentIndexNumber: ").Append(SortParentIndexNumber).Append("\n");
-            sb.Append("  AirsBeforeSeasonNumber: ").Append(AirsBeforeSeasonNumber).Append("\n");
-            sb.Append("  AirsAfterSeasonNumber: ").Append(AirsAfterSeasonNumber).Append("\n");
-            sb.Append("  AirsBeforeEpisodeNumber: ").Append(AirsBeforeEpisodeNumber).Append("\n");
             sb.Append("  CanDelete: ").Append(CanDelete).Append("\n");
             sb.Append("  CanDownload: ").Append(CanDownload).Append("\n");
             sb.Append("  SupportsResume: ").Append(SupportsResume).Append("\n");
@@ -1268,6 +1257,9 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  PreferredMetadataLanguage: ").Append(PreferredMetadataLanguage).Append("\n");
             sb.Append("  PreferredMetadataCountryCode: ").Append(PreferredMetadataCountryCode).Append("\n");
             sb.Append("  SupportsSync: ").Append(SupportsSync).Append("\n");
+            sb.Append("  CanManageAccess: ").Append(CanManageAccess).Append("\n");
+            sb.Append("  CanMakePrivate: ").Append(CanMakePrivate).Append("\n");
+            sb.Append("  CanMakePublic: ").Append(CanMakePublic).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
             sb.Append("  SortName: ").Append(SortName).Append("\n");
             sb.Append("  ForcedSortName: ").Append(ForcedSortName).Append("\n");
@@ -1293,7 +1285,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  Bitrate: ").Append(Bitrate).Append("\n");
-            sb.Append("  PlayAccess: ").Append(PlayAccess).Append("\n");
             sb.Append("  ProductionYear: ").Append(ProductionYear).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  ChannelNumber: ").Append(ChannelNumber).Append("\n");
@@ -1492,21 +1483,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.SortParentIndexNumber.Equals(input.SortParentIndexNumber))
                 ) && 
                 (
-                    this.AirsBeforeSeasonNumber == input.AirsBeforeSeasonNumber ||
-                    (this.AirsBeforeSeasonNumber != null &&
-                    this.AirsBeforeSeasonNumber.Equals(input.AirsBeforeSeasonNumber))
-                ) && 
-                (
-                    this.AirsAfterSeasonNumber == input.AirsAfterSeasonNumber ||
-                    (this.AirsAfterSeasonNumber != null &&
-                    this.AirsAfterSeasonNumber.Equals(input.AirsAfterSeasonNumber))
-                ) && 
-                (
-                    this.AirsBeforeEpisodeNumber == input.AirsBeforeEpisodeNumber ||
-                    (this.AirsBeforeEpisodeNumber != null &&
-                    this.AirsBeforeEpisodeNumber.Equals(input.AirsBeforeEpisodeNumber))
-                ) && 
-                (
                     this.CanDelete == input.CanDelete ||
                     (this.CanDelete != null &&
                     this.CanDelete.Equals(input.CanDelete))
@@ -1540,6 +1516,21 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.SupportsSync == input.SupportsSync ||
                     (this.SupportsSync != null &&
                     this.SupportsSync.Equals(input.SupportsSync))
+                ) && 
+                (
+                    this.CanManageAccess == input.CanManageAccess ||
+                    (this.CanManageAccess != null &&
+                    this.CanManageAccess.Equals(input.CanManageAccess))
+                ) && 
+                (
+                    this.CanMakePrivate == input.CanMakePrivate ||
+                    (this.CanMakePrivate != null &&
+                    this.CanMakePrivate.Equals(input.CanMakePrivate))
+                ) && 
+                (
+                    this.CanMakePublic == input.CanMakePublic ||
+                    (this.CanMakePublic != null &&
+                    this.CanMakePublic.Equals(input.CanMakePublic))
                 ) && 
                 (
                     this.Container == input.Container ||
@@ -1670,11 +1661,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.Bitrate == input.Bitrate ||
                     (this.Bitrate != null &&
                     this.Bitrate.Equals(input.Bitrate))
-                ) && 
-                (
-                    this.PlayAccess == input.PlayAccess ||
-                    (this.PlayAccess != null &&
-                    this.PlayAccess.Equals(input.PlayAccess))
                 ) && 
                 (
                     this.ProductionYear == input.ProductionYear ||
@@ -2244,12 +2230,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.SortIndexNumber.GetHashCode();
                 if (this.SortParentIndexNumber != null)
                     hashCode = hashCode * 59 + this.SortParentIndexNumber.GetHashCode();
-                if (this.AirsBeforeSeasonNumber != null)
-                    hashCode = hashCode * 59 + this.AirsBeforeSeasonNumber.GetHashCode();
-                if (this.AirsAfterSeasonNumber != null)
-                    hashCode = hashCode * 59 + this.AirsAfterSeasonNumber.GetHashCode();
-                if (this.AirsBeforeEpisodeNumber != null)
-                    hashCode = hashCode * 59 + this.AirsBeforeEpisodeNumber.GetHashCode();
                 if (this.CanDelete != null)
                     hashCode = hashCode * 59 + this.CanDelete.GetHashCode();
                 if (this.CanDownload != null)
@@ -2264,6 +2244,12 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.PreferredMetadataCountryCode.GetHashCode();
                 if (this.SupportsSync != null)
                     hashCode = hashCode * 59 + this.SupportsSync.GetHashCode();
+                if (this.CanManageAccess != null)
+                    hashCode = hashCode * 59 + this.CanManageAccess.GetHashCode();
+                if (this.CanMakePrivate != null)
+                    hashCode = hashCode * 59 + this.CanMakePrivate.GetHashCode();
+                if (this.CanMakePublic != null)
+                    hashCode = hashCode * 59 + this.CanMakePublic.GetHashCode();
                 if (this.Container != null)
                     hashCode = hashCode * 59 + this.Container.GetHashCode();
                 if (this.SortName != null)
@@ -2314,8 +2300,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.FileName.GetHashCode();
                 if (this.Bitrate != null)
                     hashCode = hashCode * 59 + this.Bitrate.GetHashCode();
-                if (this.PlayAccess != null)
-                    hashCode = hashCode * 59 + this.PlayAccess.GetHashCode();
                 if (this.ProductionYear != null)
                     hashCode = hashCode * 59 + this.ProductionYear.GetHashCode();
                 if (this.Number != null)

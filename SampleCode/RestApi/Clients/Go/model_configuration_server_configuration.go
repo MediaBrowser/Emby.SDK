@@ -34,7 +34,6 @@ type ConfigurationServerConfiguration struct {
 	WanDdns string `json:"WanDdns,omitempty"`
 	UICulture string `json:"UICulture,omitempty"`
 	RemoteClientBitrateLimit int32 `json:"RemoteClientBitrateLimit,omitempty"`
-	DisplaySpecialsWithinSeasons bool `json:"DisplaySpecialsWithinSeasons,omitempty"`
 	LocalNetworkSubnets []string `json:"LocalNetworkSubnets,omitempty"`
 	LocalNetworkAddresses []string `json:"LocalNetworkAddresses,omitempty"`
 	EnableExternalContentInSuggestions bool `json:"EnableExternalContentInSuggestions,omitempty"`
@@ -61,6 +60,7 @@ type ConfigurationServerConfiguration struct {
 	OptimizeDatabaseOnShutdown bool `json:"OptimizeDatabaseOnShutdown,omitempty"`
 	DatabaseAnalysisLimit int32 `json:"DatabaseAnalysisLimit,omitempty"`
 	DisableAsyncIO bool `json:"DisableAsyncIO,omitempty"`
+	MigratedToUserItemShares bool `json:"MigratedToUserItemShares,omitempty"`
 	EnableDebugLevelLogging bool `json:"EnableDebugLevelLogging,omitempty"`
 	RevertDebugLogging string `json:"RevertDebugLogging,omitempty"`
 	EnableAutoUpdate bool `json:"EnableAutoUpdate,omitempty"`

@@ -47,6 +47,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="serverId">serverId.</param>
         /// <param name="channelId">channelId.</param>
         /// <param name="channelName">channelName.</param>
+        /// <param name="channelNumber">channelNumber.</param>
         /// <param name="channelPrimaryImageTag">channelPrimaryImageTag.</param>
         /// <param name="programId">programId.</param>
         /// <param name="name">name.</param>
@@ -61,7 +62,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="parentBackdropImageTags">parentBackdropImageTags.</param>
         /// <param name="isPostPaddingRequired">isPostPaddingRequired.</param>
         /// <param name="keepUntil">keepUntil.</param>
-        public LiveTvSeriesTimerInfoDto(bool? recordAnyTime = default(bool?), bool? skipEpisodesInLibrary = default(bool?), bool? recordAnyChannel = default(bool?), int? keepUpTo = default(int?), int? maxRecordingSeconds = default(int?), bool? recordNewOnly = default(bool?), List<string> channelIds = default(List<string>), List<DayOfWeek> days = default(List<DayOfWeek>), Dictionary<string, string> imageTags = default(Dictionary<string, string>), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), string parentPrimaryImageItemId = default(string), string parentPrimaryImageTag = default(string), string seriesId = default(string), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType), string id = default(string), string type = default(string), string serverId = default(string), string channelId = default(string), string channelName = default(string), string channelPrimaryImageTag = default(string), string programId = default(string), string name = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), bool? isPostPaddingRequired = default(bool?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil))
+        public LiveTvSeriesTimerInfoDto(bool? recordAnyTime = default(bool?), bool? skipEpisodesInLibrary = default(bool?), bool? recordAnyChannel = default(bool?), int? keepUpTo = default(int?), int? maxRecordingSeconds = default(int?), bool? recordNewOnly = default(bool?), List<string> channelIds = default(List<string>), List<DayOfWeek> days = default(List<DayOfWeek>), Dictionary<string, string> imageTags = default(Dictionary<string, string>), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), string parentPrimaryImageItemId = default(string), string parentPrimaryImageTag = default(string), string seriesId = default(string), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType), string id = default(string), string type = default(string), string serverId = default(string), string channelId = default(string), string channelName = default(string), string channelNumber = default(string), string channelPrimaryImageTag = default(string), string programId = default(string), string name = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), bool? isPostPaddingRequired = default(bool?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil))
         {
             this.RecordAnyTime = recordAnyTime;
             this.SkipEpisodesInLibrary = skipEpisodesInLibrary;
@@ -84,6 +85,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.ServerId = serverId;
             this.ChannelId = channelId;
             this.ChannelName = channelName;
+            this.ChannelNumber = channelNumber;
             this.ChannelPrimaryImageTag = channelPrimaryImageTag;
             this.ProgramId = programId;
             this.Name = name;
@@ -227,6 +229,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string ChannelName { get; set; }
 
         /// <summary>
+        /// Gets or Sets ChannelNumber
+        /// </summary>
+        [DataMember(Name="ChannelNumber", EmitDefaultValue=false)]
+        public string ChannelNumber { get; set; }
+
+        /// <summary>
         /// Gets or Sets ChannelPrimaryImageTag
         /// </summary>
         [DataMember(Name="ChannelPrimaryImageTag", EmitDefaultValue=false)]
@@ -339,6 +347,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  ChannelName: ").Append(ChannelName).Append("\n");
+            sb.Append("  ChannelNumber: ").Append(ChannelNumber).Append("\n");
             sb.Append("  ChannelPrimaryImageTag: ").Append(ChannelPrimaryImageTag).Append("\n");
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -497,6 +506,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.ChannelName.Equals(input.ChannelName))
                 ) && 
                 (
+                    this.ChannelNumber == input.ChannelNumber ||
+                    (this.ChannelNumber != null &&
+                    this.ChannelNumber.Equals(input.ChannelNumber))
+                ) && 
+                (
                     this.ChannelPrimaryImageTag == input.ChannelPrimaryImageTag ||
                     (this.ChannelPrimaryImageTag != null &&
                     this.ChannelPrimaryImageTag.Equals(input.ChannelPrimaryImageTag))
@@ -620,6 +634,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ChannelId.GetHashCode();
                 if (this.ChannelName != null)
                     hashCode = hashCode * 59 + this.ChannelName.GetHashCode();
+                if (this.ChannelNumber != null)
+                    hashCode = hashCode * 59 + this.ChannelNumber.GetHashCode();
                 if (this.ChannelPrimaryImageTag != null)
                     hashCode = hashCode * 59 + this.ChannelPrimaryImageTag.GetHashCode();
                 if (this.ProgramId != null)

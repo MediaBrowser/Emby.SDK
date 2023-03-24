@@ -117,8 +117,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -147,7 +148,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -175,8 +177,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -205,7 +208,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -233,8 +237,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -263,7 +268,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -306,8 +312,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -336,7 +343,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -367,7 +375,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -395,8 +404,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -425,7 +435,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -453,8 +464,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -483,7 +495,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -511,8 +524,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -541,7 +555,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -569,8 +584,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.getUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.getUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -599,7 +615,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -627,8 +644,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -657,7 +675,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -685,8 +704,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -715,7 +735,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -743,8 +764,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -773,7 +795,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -801,8 +824,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -831,7 +855,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -862,7 +887,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -890,8 +916,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -920,7 +947,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -948,8 +976,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -978,7 +1007,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -1006,8 +1036,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -1036,7 +1067,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -1064,8 +1096,9 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
+        Boolean keepAnimation = null;
         Integer index = null;
-        api.headUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, index);
+        api.headUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
 
         // TODO: test validations
     }
@@ -1094,7 +1127,8 @@ public class ImageServiceApiTest {
         String backgroundColor = null;
         String foregroundLayer = null;
         Boolean autoOrient = null;
-        api.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient);
+        Boolean keepAnimation = null;
+        api.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }

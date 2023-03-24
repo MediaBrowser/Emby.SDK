@@ -160,6 +160,11 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ProbeSideData</span></div>
+      <div class="level2"><a class="xref" href="Emby.Media.Model.ProbeModel.SideData.ProbeSideDataContentLightLevel.html">ProbeSideDataContentLightLevel</a></div>
+      <div class="level2"><a class="xref" href="Emby.Media.Model.ProbeModel.SideData.ProbeSideDataDisplayMatrix.html">ProbeSideDataDisplayMatrix</a></div>
+      <div class="level2"><a class="xref" href="Emby.Media.Model.ProbeModel.SideData.ProbeSideDataDovi.html">ProbeSideDataDovi</a></div>
+      <div class="level2"><a class="xref" href="Emby.Media.Model.ProbeModel.SideData.ProbeSideDataMateringDisplay.html">ProbeSideDataMateringDisplay</a></div>
+      <div class="level2"><a class="xref" href="Emby.Media.Model.ProbeModel.SideData.ProbeSideDataUnknown.html">ProbeSideDataUnknown</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Media.Model.ProbeModel.html">Emby.Media.Model.ProbeModel</a></h6>
   <h6><strong>Assembly</strong>: Emby.Media.Model.dll</h6>
@@ -173,56 +178,6 @@ public class ProbeSideData</code></pre>
 </div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Emby_Media_Model_ProbeModel_ProbeSideData_rotation_" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.rotation*"></a>
-  <h4 id="Emby_Media_Model_ProbeModel_ProbeSideData_rotation" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.rotation">rotation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double? rotation { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Emby_Media_Model_ProbeModel_ProbeSideData_side_data_size_" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.side_data_size*"></a>
-  <h4 id="Emby_Media_Model_ProbeModel_ProbeSideData_side_data_size" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.side_data_size">side_data_size</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int side_data_size { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Emby_Media_Model_ProbeModel_ProbeSideData_side_data_type_" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.side_data_type*"></a>
@@ -248,17 +203,41 @@ public class ProbeSideData</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <a id="Emby_Media_Model_ProbeModel_ProbeSideData_timecode_" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.timecode*"></a>
-  <h4 id="Emby_Media_Model_ProbeModel_ProbeSideData_timecode" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.timecode">timecode</h4>
+  <a id="Emby_Media_Model_ProbeModel_ProbeSideData_DeserializeRaw_" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.DeserializeRaw*"></a>
+  <h4 id="Emby_Media_Model_ProbeModel_ProbeSideData_DeserializeRaw_System_String_MediaBrowser_Model_Serialization_IJsonSerializer_" data-uid="Emby.Media.Model.ProbeModel.ProbeSideData.DeserializeRaw(System.String,MediaBrowser.Model.Serialization.IJsonSerializer)">DeserializeRaw(String, IJsonSerializer)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string timecode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static ProbeSideData DeserializeRaw(string s, IJsonSerializer jsonSerializer)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Serialization.IJsonSerializer.html">IJsonSerializer</a></td>
+        <td><span class="parametername">jsonSerializer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -268,7 +247,7 @@ public class ProbeSideData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="Emby.Media.Model.ProbeModel.ProbeSideData.html">ProbeSideData</a></td>
         <td></td>
       </tr>
     </tbody>

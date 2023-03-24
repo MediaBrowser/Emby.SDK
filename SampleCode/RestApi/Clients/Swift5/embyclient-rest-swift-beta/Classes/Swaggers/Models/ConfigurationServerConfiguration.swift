@@ -38,7 +38,6 @@ public struct ConfigurationServerConfiguration: Codable {
     public var wanDdns: String?
     public var uICulture: String?
     public var remoteClientBitrateLimit: Int?
-    public var displaySpecialsWithinSeasons: Bool?
     public var localNetworkSubnets: [String]?
     public var localNetworkAddresses: [String]?
     public var enableExternalContentInSuggestions: Bool?
@@ -65,6 +64,7 @@ public struct ConfigurationServerConfiguration: Codable {
     public var optimizeDatabaseOnShutdown: Bool?
     public var databaseAnalysisLimit: Int?
     public var disableAsyncIO: Bool?
+    public var migratedToUserItemShares: Bool?
     public var enableDebugLevelLogging: Bool?
     public var revertDebugLogging: String?
     public var enableAutoUpdate: Bool?
@@ -73,7 +73,7 @@ public struct ConfigurationServerConfiguration: Codable {
     public var isStartupWizardCompleted: Bool?
     public var cachePath: String?
 
-    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelay: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ConfigurationImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, displaySpecialsWithinSeasons: Bool? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [ConfigurationPathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, channelOptionsUpgraded: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, timerIdsUpgraded: Bool? = nil, forcedSortNameUpgraded: Bool? = nil, inheritedParentalRatingValueUpgraded: Bool? = nil, imageExtractorUpgraded: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
+    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelay: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ConfigurationImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [ConfigurationPathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, channelOptionsUpgraded: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, timerIdsUpgraded: Bool? = nil, forcedSortNameUpgraded: Bool? = nil, inheritedParentalRatingValueUpgraded: Bool? = nil, imageExtractorUpgraded: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares: Bool? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
         self.enableUPnP = enableUPnP
         self.publicPort = publicPort
         self.publicHttpsPort = publicHttpsPort
@@ -101,7 +101,6 @@ public struct ConfigurationServerConfiguration: Codable {
         self.wanDdns = wanDdns
         self.uICulture = uICulture
         self.remoteClientBitrateLimit = remoteClientBitrateLimit
-        self.displaySpecialsWithinSeasons = displaySpecialsWithinSeasons
         self.localNetworkSubnets = localNetworkSubnets
         self.localNetworkAddresses = localNetworkAddresses
         self.enableExternalContentInSuggestions = enableExternalContentInSuggestions
@@ -128,6 +127,7 @@ public struct ConfigurationServerConfiguration: Codable {
         self.optimizeDatabaseOnShutdown = optimizeDatabaseOnShutdown
         self.databaseAnalysisLimit = databaseAnalysisLimit
         self.disableAsyncIO = disableAsyncIO
+        self.migratedToUserItemShares = migratedToUserItemShares
         self.enableDebugLevelLogging = enableDebugLevelLogging
         self.revertDebugLogging = revertDebugLogging
         self.enableAutoUpdate = enableAutoUpdate
@@ -165,7 +165,6 @@ public struct ConfigurationServerConfiguration: Codable {
         case wanDdns = "WanDdns"
         case uICulture = "UICulture"
         case remoteClientBitrateLimit = "RemoteClientBitrateLimit"
-        case displaySpecialsWithinSeasons = "DisplaySpecialsWithinSeasons"
         case localNetworkSubnets = "LocalNetworkSubnets"
         case localNetworkAddresses = "LocalNetworkAddresses"
         case enableExternalContentInSuggestions = "EnableExternalContentInSuggestions"
@@ -192,6 +191,7 @@ public struct ConfigurationServerConfiguration: Codable {
         case optimizeDatabaseOnShutdown = "OptimizeDatabaseOnShutdown"
         case databaseAnalysisLimit = "DatabaseAnalysisLimit"
         case disableAsyncIO = "DisableAsyncIO"
+        case migratedToUserItemShares = "MigratedToUserItemShares"
         case enableDebugLevelLogging = "EnableDebugLevelLogging"
         case revertDebugLogging = "RevertDebugLogging"
         case enableAutoUpdate = "EnableAutoUpdate"

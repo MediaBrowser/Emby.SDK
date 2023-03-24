@@ -22,9 +22,6 @@ type BaseItemDto struct {
 	ExtraType string `json:"ExtraType,omitempty"`
 	SortIndexNumber int32 `json:"SortIndexNumber,omitempty"`
 	SortParentIndexNumber int32 `json:"SortParentIndexNumber,omitempty"`
-	AirsBeforeSeasonNumber int32 `json:"AirsBeforeSeasonNumber,omitempty"`
-	AirsAfterSeasonNumber int32 `json:"AirsAfterSeasonNumber,omitempty"`
-	AirsBeforeEpisodeNumber int32 `json:"AirsBeforeEpisodeNumber,omitempty"`
 	CanDelete bool `json:"CanDelete,omitempty"`
 	CanDownload bool `json:"CanDownload,omitempty"`
 	SupportsResume bool `json:"SupportsResume,omitempty"`
@@ -32,6 +29,9 @@ type BaseItemDto struct {
 	PreferredMetadataLanguage string `json:"PreferredMetadataLanguage,omitempty"`
 	PreferredMetadataCountryCode string `json:"PreferredMetadataCountryCode,omitempty"`
 	SupportsSync bool `json:"SupportsSync,omitempty"`
+	CanManageAccess bool `json:"CanManageAccess,omitempty"`
+	CanMakePrivate bool `json:"CanMakePrivate,omitempty"`
+	CanMakePublic bool `json:"CanMakePublic,omitempty"`
 	Container string `json:"Container,omitempty"`
 	SortName string `json:"SortName,omitempty"`
 	ForcedSortName string `json:"ForcedSortName,omitempty"`
@@ -57,7 +57,6 @@ type BaseItemDto struct {
 	Size int64 `json:"Size,omitempty"`
 	FileName string `json:"FileName,omitempty"`
 	Bitrate int32 `json:"Bitrate,omitempty"`
-	PlayAccess *LibraryPlayAccess `json:"PlayAccess,omitempty"`
 	ProductionYear int32 `json:"ProductionYear,omitempty"`
 	Number string `json:"Number,omitempty"`
 	ChannelNumber string `json:"ChannelNumber,omitempty"`

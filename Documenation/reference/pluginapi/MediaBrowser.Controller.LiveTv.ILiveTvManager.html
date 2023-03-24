@@ -931,14 +931,31 @@
   
   
   <a id="MediaBrowser_Controller_LiveTv_ILiveTvManager_GetInternalLiveTvFolder_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.GetInternalLiveTvFolder*"></a>
-  <h4 id="MediaBrowser_Controller_LiveTv_ILiveTvManager_GetInternalLiveTvFolder" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.GetInternalLiveTvFolder">GetInternalLiveTvFolder()</h4>
+  <h4 id="MediaBrowser_Controller_LiveTv_ILiveTvManager_GetInternalLiveTvFolder_System_Boolean_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.GetInternalLiveTvFolder(System.Boolean)">GetInternalLiveTvFolder(Boolean)</h4>
   <div class="markdown level1 summary"><p>Gets the live tv folder.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Folder GetInternalLiveTvFolder()</code></pre>
+    <pre><code class="lang-csharp hljs">Folder GetInternalLiveTvFolder(bool createIfNotFound)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">createIfNotFound</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -950,6 +967,48 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ILiveTvManager_GetInternalLiveTvFolderId_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.GetInternalLiveTvFolderId*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ILiveTvManager_GetInternalLiveTvFolderId_System_Boolean_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.GetInternalLiveTvFolderId(System.Boolean)">GetInternalLiveTvFolderId(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long GetInternalLiveTvFolderId(bool createIfNotFound)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">createIfNotFound</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -105,9 +105,6 @@ public class ConfigurationServerConfiguration {
   @SerializedName("RemoteClientBitrateLimit")
   private Integer remoteClientBitrateLimit = null;
 
-  @SerializedName("DisplaySpecialsWithinSeasons")
-  private Boolean displaySpecialsWithinSeasons = null;
-
   @SerializedName("LocalNetworkSubnets")
   private List<String> localNetworkSubnets = null;
 
@@ -185,6 +182,9 @@ public class ConfigurationServerConfiguration {
 
   @SerializedName("DisableAsyncIO")
   private Boolean disableAsyncIO = null;
+
+  @SerializedName("MigratedToUserItemShares")
+  private Boolean migratedToUserItemShares = null;
 
   @SerializedName("EnableDebugLevelLogging")
   private Boolean enableDebugLevelLogging = null;
@@ -701,24 +701,6 @@ public class ConfigurationServerConfiguration {
     this.remoteClientBitrateLimit = remoteClientBitrateLimit;
   }
 
-  public ConfigurationServerConfiguration displaySpecialsWithinSeasons(Boolean displaySpecialsWithinSeasons) {
-    this.displaySpecialsWithinSeasons = displaySpecialsWithinSeasons;
-    return this;
-  }
-
-   /**
-   * Get displaySpecialsWithinSeasons
-   * @return displaySpecialsWithinSeasons
-  **/
-  @Schema(description = "")
-  public Boolean isDisplaySpecialsWithinSeasons() {
-    return displaySpecialsWithinSeasons;
-  }
-
-  public void setDisplaySpecialsWithinSeasons(Boolean displaySpecialsWithinSeasons) {
-    this.displaySpecialsWithinSeasons = displaySpecialsWithinSeasons;
-  }
-
   public ConfigurationServerConfiguration localNetworkSubnets(List<String> localNetworkSubnets) {
     this.localNetworkSubnets = localNetworkSubnets;
     return this;
@@ -1227,6 +1209,24 @@ public class ConfigurationServerConfiguration {
     this.disableAsyncIO = disableAsyncIO;
   }
 
+  public ConfigurationServerConfiguration migratedToUserItemShares(Boolean migratedToUserItemShares) {
+    this.migratedToUserItemShares = migratedToUserItemShares;
+    return this;
+  }
+
+   /**
+   * Get migratedToUserItemShares
+   * @return migratedToUserItemShares
+  **/
+  @Schema(description = "")
+  public Boolean isMigratedToUserItemShares() {
+    return migratedToUserItemShares;
+  }
+
+  public void setMigratedToUserItemShares(Boolean migratedToUserItemShares) {
+    this.migratedToUserItemShares = migratedToUserItemShares;
+  }
+
   public ConfigurationServerConfiguration enableDebugLevelLogging(Boolean enableDebugLevelLogging) {
     this.enableDebugLevelLogging = enableDebugLevelLogging;
     return this;
@@ -1390,7 +1390,6 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.wanDdns, configurationServerConfiguration.wanDdns) &&
         Objects.equals(this.uiCulture, configurationServerConfiguration.uiCulture) &&
         Objects.equals(this.remoteClientBitrateLimit, configurationServerConfiguration.remoteClientBitrateLimit) &&
-        Objects.equals(this.displaySpecialsWithinSeasons, configurationServerConfiguration.displaySpecialsWithinSeasons) &&
         Objects.equals(this.localNetworkSubnets, configurationServerConfiguration.localNetworkSubnets) &&
         Objects.equals(this.localNetworkAddresses, configurationServerConfiguration.localNetworkAddresses) &&
         Objects.equals(this.enableExternalContentInSuggestions, configurationServerConfiguration.enableExternalContentInSuggestions) &&
@@ -1417,6 +1416,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.optimizeDatabaseOnShutdown, configurationServerConfiguration.optimizeDatabaseOnShutdown) &&
         Objects.equals(this.databaseAnalysisLimit, configurationServerConfiguration.databaseAnalysisLimit) &&
         Objects.equals(this.disableAsyncIO, configurationServerConfiguration.disableAsyncIO) &&
+        Objects.equals(this.migratedToUserItemShares, configurationServerConfiguration.migratedToUserItemShares) &&
         Objects.equals(this.enableDebugLevelLogging, configurationServerConfiguration.enableDebugLevelLogging) &&
         Objects.equals(this.revertDebugLogging, configurationServerConfiguration.revertDebugLogging) &&
         Objects.equals(this.enableAutoUpdate, configurationServerConfiguration.enableAutoUpdate) &&
@@ -1428,7 +1428,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, displaySpecialsWithinSeasons, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1464,7 +1464,6 @@ public class ConfigurationServerConfiguration {
     sb.append("    wanDdns: ").append(toIndentedString(wanDdns)).append("\n");
     sb.append("    uiCulture: ").append(toIndentedString(uiCulture)).append("\n");
     sb.append("    remoteClientBitrateLimit: ").append(toIndentedString(remoteClientBitrateLimit)).append("\n");
-    sb.append("    displaySpecialsWithinSeasons: ").append(toIndentedString(displaySpecialsWithinSeasons)).append("\n");
     sb.append("    localNetworkSubnets: ").append(toIndentedString(localNetworkSubnets)).append("\n");
     sb.append("    localNetworkAddresses: ").append(toIndentedString(localNetworkAddresses)).append("\n");
     sb.append("    enableExternalContentInSuggestions: ").append(toIndentedString(enableExternalContentInSuggestions)).append("\n");
@@ -1491,6 +1490,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    optimizeDatabaseOnShutdown: ").append(toIndentedString(optimizeDatabaseOnShutdown)).append("\n");
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
+    sb.append("    migratedToUserItemShares: ").append(toIndentedString(migratedToUserItemShares)).append("\n");
     sb.append("    enableDebugLevelLogging: ").append(toIndentedString(enableDebugLevelLogging)).append("\n");
     sb.append("    revertDebugLogging: ").append(toIndentedString(revertDebugLogging)).append("\n");
     sb.append("    enableAutoUpdate: ").append(toIndentedString(enableAutoUpdate)).append("\n");

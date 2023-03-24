@@ -921,6 +921,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -1035,6 +1036,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -1056,7 +1058,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['type', 'is_liked', 'is_disliked', 'enable_favorite_sorting', 'add_current_program', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['type', 'is_liked', 'is_disliked', 'enable_favorite_sorting', 'add_current_program', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1231,6 +1233,8 @@ class LiveTvServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
         if 'subtitle_codecs' in params:
@@ -1474,6 +1478,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -1583,6 +1588,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -1604,7 +1610,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1769,6 +1775,8 @@ class LiveTvServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
         if 'subtitle_codecs' in params:
@@ -1913,6 +1921,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -2022,6 +2031,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -2043,7 +2053,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2208,6 +2218,8 @@ class LiveTvServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
         if 'subtitle_codecs' in params:
@@ -3553,6 +3565,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -3667,6 +3680,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -3688,7 +3702,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['channel_ids', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['channel_ids', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3863,6 +3877,8 @@ class LiveTvServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
         if 'subtitle_codecs' in params:
@@ -4154,6 +4170,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -4267,6 +4284,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -4288,7 +4306,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['channel_id', 'status', 'is_in_progress', 'series_timer_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['channel_id', 'status', 'is_in_progress', 'series_timer_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4461,6 +4479,8 @@ class LiveTvServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
         if 'subtitle_codecs' in params:
@@ -6582,6 +6602,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -6697,6 +6718,7 @@ class LiveTvServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
@@ -6718,7 +6740,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'channel_ids', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['body', 'channel_ids', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6897,6 +6919,8 @@ class LiveTvServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
         if 'subtitle_codecs' in params:

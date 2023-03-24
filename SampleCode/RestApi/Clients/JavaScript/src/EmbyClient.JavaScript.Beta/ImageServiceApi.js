@@ -16,7 +16,7 @@ import ImageType from '../model/ImageType';
 /**
 * ImageService service.
 * @module EmbyClient.JavaScript.Beta/ImageServiceApi
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class ImageServiceApi {
 
@@ -221,6 +221,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -273,7 +274,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -325,6 +327,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -377,7 +380,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -429,6 +433,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -481,7 +486,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -571,6 +577,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -623,7 +630,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -677,7 +685,8 @@ export default class ImageServiceApi {
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -729,6 +738,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -781,7 +791,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -833,6 +844,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -885,7 +897,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -937,6 +950,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -989,7 +1003,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1041,6 +1056,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1093,7 +1109,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1145,6 +1162,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1197,7 +1215,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1249,6 +1268,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1301,7 +1321,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1353,6 +1374,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1405,7 +1427,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1457,6 +1480,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1509,7 +1533,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1563,7 +1588,8 @@ export default class ImageServiceApi {
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1615,6 +1641,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1667,7 +1694,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1719,6 +1747,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1771,7 +1800,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1823,6 +1853,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1875,7 +1906,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
@@ -1927,6 +1959,7 @@ export default class ImageServiceApi {
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1979,7 +2012,8 @@ export default class ImageServiceApi {
         'Format': opts['format'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };

@@ -467,6 +467,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -503,13 +504,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -566,6 +568,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -619,6 +623,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -655,12 +660,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -723,6 +729,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -773,6 +781,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -809,13 +818,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -872,6 +882,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -925,6 +937,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -961,12 +974,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1029,6 +1043,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -1079,6 +1095,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -1115,13 +1132,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1178,6 +1196,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -1231,6 +1251,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1267,12 +1288,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1335,6 +1357,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -1480,6 +1504,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -1516,13 +1541,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1579,6 +1605,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -1632,6 +1660,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1668,12 +1697,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1736,6 +1766,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -1789,6 +1821,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1827,12 +1860,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1923,6 +1957,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -1973,6 +2009,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -2009,13 +2046,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2072,6 +2110,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -2125,6 +2165,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2161,12 +2202,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2229,6 +2271,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -2279,6 +2323,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -2315,13 +2360,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2378,6 +2424,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -2431,6 +2479,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2467,12 +2516,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2535,6 +2585,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -2585,6 +2637,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -2621,13 +2674,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2684,6 +2738,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -2737,6 +2793,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2773,12 +2830,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2841,6 +2899,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -2891,6 +2951,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -2927,13 +2988,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2990,6 +3052,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -3043,6 +3107,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3079,12 +3144,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3147,6 +3213,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -3197,6 +3265,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -3233,13 +3302,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3296,6 +3366,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -3349,6 +3421,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3385,12 +3458,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3453,6 +3527,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -3503,6 +3579,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -3539,13 +3616,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3602,6 +3680,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -3655,6 +3735,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3691,12 +3772,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3759,6 +3841,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -3809,6 +3893,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -3845,13 +3930,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3908,6 +3994,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -3961,6 +4049,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3997,12 +4086,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4065,6 +4155,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4115,6 +4207,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -4151,13 +4244,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4214,6 +4308,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -4267,6 +4363,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4303,12 +4400,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4371,6 +4469,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4424,6 +4524,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4462,12 +4563,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4558,6 +4660,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4608,6 +4712,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -4644,13 +4749,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4707,6 +4813,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -4760,6 +4868,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4796,12 +4905,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4864,6 +4974,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4914,6 +5026,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -4950,13 +5063,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5013,6 +5127,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -5066,6 +5182,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5102,12 +5219,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5170,6 +5288,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -5220,6 +5340,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -5256,13 +5377,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5319,6 +5441,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -5372,6 +5496,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5408,12 +5533,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5476,6 +5602,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -5526,6 +5654,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -5562,13 +5691,14 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5625,6 +5755,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -5678,6 +5810,7 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5714,12 +5847,13 @@ class ImageServiceApi(object):
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5782,6 +5916,8 @@ class ImageServiceApi(object):
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 

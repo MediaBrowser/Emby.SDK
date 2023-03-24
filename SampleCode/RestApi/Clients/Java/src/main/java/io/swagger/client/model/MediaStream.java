@@ -13,6 +13,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.DlnaSubtitleDeliveryMethod;
+import io.swagger.client.model.ExtendedVideoSubTypes;
+import io.swagger.client.model.ExtendedVideoTypes;
 import io.swagger.client.model.MediaInfoMediaProtocol;
 import io.swagger.client.model.MediaStreamType;
 import io.swagger.client.model.SubtitleLocationType;
@@ -50,9 +52,6 @@ public class MediaStream {
 
   @SerializedName("TimeBase")
   private String timeBase = null;
-
-  @SerializedName("CodecTimeBase")
-  private String codecTimeBase = null;
 
   @SerializedName("Title")
   private String title = null;
@@ -162,6 +161,12 @@ public class MediaStream {
   @SerializedName("IsAnamorphic")
   private Boolean isAnamorphic = null;
 
+  @SerializedName("ExtendedVideoType")
+  private ExtendedVideoTypes extendedVideoType = null;
+
+  @SerializedName("ExtendedVideoSubtype")
+  private ExtendedVideoSubTypes extendedVideoSubtype = null;
+
   @SerializedName("ItemId")
   private String itemId = null;
 
@@ -173,9 +178,6 @@ public class MediaStream {
 
   @SerializedName("MimeType")
   private String mimeType = null;
-
-  @SerializedName("IsClosedCaptions")
-  private Boolean isClosedCaptions = null;
 
   @SerializedName("SubtitleLocationType")
   private SubtitleLocationType subtitleLocationType = null;
@@ -340,24 +342,6 @@ public class MediaStream {
 
   public void setTimeBase(String timeBase) {
     this.timeBase = timeBase;
-  }
-
-  public MediaStream codecTimeBase(String codecTimeBase) {
-    this.codecTimeBase = codecTimeBase;
-    return this;
-  }
-
-   /**
-   * Get codecTimeBase
-   * @return codecTimeBase
-  **/
-  @Schema(description = "")
-  public String getCodecTimeBase() {
-    return codecTimeBase;
-  }
-
-  public void setCodecTimeBase(String codecTimeBase) {
-    this.codecTimeBase = codecTimeBase;
   }
 
   public MediaStream title(String title) {
@@ -1008,6 +992,42 @@ public class MediaStream {
     this.isAnamorphic = isAnamorphic;
   }
 
+  public MediaStream extendedVideoType(ExtendedVideoTypes extendedVideoType) {
+    this.extendedVideoType = extendedVideoType;
+    return this;
+  }
+
+   /**
+   * Get extendedVideoType
+   * @return extendedVideoType
+  **/
+  @Schema(description = "")
+  public ExtendedVideoTypes getExtendedVideoType() {
+    return extendedVideoType;
+  }
+
+  public void setExtendedVideoType(ExtendedVideoTypes extendedVideoType) {
+    this.extendedVideoType = extendedVideoType;
+  }
+
+  public MediaStream extendedVideoSubtype(ExtendedVideoSubTypes extendedVideoSubtype) {
+    this.extendedVideoSubtype = extendedVideoSubtype;
+    return this;
+  }
+
+   /**
+   * Get extendedVideoSubtype
+   * @return extendedVideoSubtype
+  **/
+  @Schema(description = "")
+  public ExtendedVideoSubTypes getExtendedVideoSubtype() {
+    return extendedVideoSubtype;
+  }
+
+  public void setExtendedVideoSubtype(ExtendedVideoSubTypes extendedVideoSubtype) {
+    this.extendedVideoSubtype = extendedVideoSubtype;
+  }
+
   public MediaStream itemId(String itemId) {
     this.itemId = itemId;
     return this;
@@ -1080,24 +1100,6 @@ public class MediaStream {
     this.mimeType = mimeType;
   }
 
-  public MediaStream isClosedCaptions(Boolean isClosedCaptions) {
-    this.isClosedCaptions = isClosedCaptions;
-    return this;
-  }
-
-   /**
-   * Get isClosedCaptions
-   * @return isClosedCaptions
-  **/
-  @Schema(description = "")
-  public Boolean isIsClosedCaptions() {
-    return isClosedCaptions;
-  }
-
-  public void setIsClosedCaptions(Boolean isClosedCaptions) {
-    this.isClosedCaptions = isClosedCaptions;
-  }
-
   public MediaStream subtitleLocationType(SubtitleLocationType subtitleLocationType) {
     this.subtitleLocationType = subtitleLocationType;
     return this;
@@ -1135,7 +1137,6 @@ public class MediaStream {
         Objects.equals(this.comment, mediaStream.comment) &&
         Objects.equals(this.streamStartTimeTicks, mediaStream.streamStartTimeTicks) &&
         Objects.equals(this.timeBase, mediaStream.timeBase) &&
-        Objects.equals(this.codecTimeBase, mediaStream.codecTimeBase) &&
         Objects.equals(this.title, mediaStream.title) &&
         Objects.equals(this.extradata, mediaStream.extradata) &&
         Objects.equals(this.videoRange, mediaStream.videoRange) &&
@@ -1172,17 +1173,18 @@ public class MediaStream {
         Objects.equals(this.pixelFormat, mediaStream.pixelFormat) &&
         Objects.equals(this.level, mediaStream.level) &&
         Objects.equals(this.isAnamorphic, mediaStream.isAnamorphic) &&
+        Objects.equals(this.extendedVideoType, mediaStream.extendedVideoType) &&
+        Objects.equals(this.extendedVideoSubtype, mediaStream.extendedVideoSubtype) &&
         Objects.equals(this.itemId, mediaStream.itemId) &&
         Objects.equals(this.serverId, mediaStream.serverId) &&
         Objects.equals(this.attachmentSize, mediaStream.attachmentSize) &&
         Objects.equals(this.mimeType, mediaStream.mimeType) &&
-        Objects.equals(this.isClosedCaptions, mediaStream.isClosedCaptions) &&
         Objects.equals(this.subtitleLocationType, mediaStream.subtitleLocationType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, codecTimeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, itemId, serverId, attachmentSize, mimeType, isClosedCaptions, subtitleLocationType);
+    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubtype, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
   }
 
 
@@ -1200,7 +1202,6 @@ public class MediaStream {
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("    streamStartTimeTicks: ").append(toIndentedString(streamStartTimeTicks)).append("\n");
     sb.append("    timeBase: ").append(toIndentedString(timeBase)).append("\n");
-    sb.append("    codecTimeBase: ").append(toIndentedString(codecTimeBase)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    extradata: ").append(toIndentedString(extradata)).append("\n");
     sb.append("    videoRange: ").append(toIndentedString(videoRange)).append("\n");
@@ -1237,11 +1238,12 @@ public class MediaStream {
     sb.append("    pixelFormat: ").append(toIndentedString(pixelFormat)).append("\n");
     sb.append("    level: ").append(toIndentedString(level)).append("\n");
     sb.append("    isAnamorphic: ").append(toIndentedString(isAnamorphic)).append("\n");
+    sb.append("    extendedVideoType: ").append(toIndentedString(extendedVideoType)).append("\n");
+    sb.append("    extendedVideoSubtype: ").append(toIndentedString(extendedVideoSubtype)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
     sb.append("    attachmentSize: ").append(toIndentedString(attachmentSize)).append("\n");
     sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
-    sb.append("    isClosedCaptions: ").append(toIndentedString(isClosedCaptions)).append("\n");
     sb.append("    subtitleLocationType: ").append(toIndentedString(subtitleLocationType)).append("\n");
     sb.append("}");
     return sb.toString();

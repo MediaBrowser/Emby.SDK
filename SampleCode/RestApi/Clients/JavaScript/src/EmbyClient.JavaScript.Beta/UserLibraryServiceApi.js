@@ -17,7 +17,7 @@ import UserItemDataDto from '../model/UserItemDataDto';
 /**
 * UserLibraryService service.
 * @module EmbyClient.JavaScript.Beta/UserLibraryServiceApi
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class UserLibraryServiceApi {
 
@@ -431,6 +431,80 @@ export default class UserLibraryServiceApi {
 
       return this.apiClient.callApi(
         '/Videos/{Id}/AdditionalParts', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsByIdMakeprivate operation.
+     * @callback module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~postItemsByIdMakeprivateCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Makes an item private
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~postItemsByIdMakeprivateCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsByIdMakeprivate() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/MakePrivate', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsByIdMakepublic operation.
+     * @callback module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~postItemsByIdMakepublicCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Makes an item public to all users
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~postItemsByIdMakepublicCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsByIdMakepublic() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/MakePublic', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -54,6 +54,9 @@ public class EmbyNotificationsUserNotificationInfo {
   @SerializedName("UserId")
   private String userId = null;
 
+  @SerializedName("IsSelfNotification")
+  private Boolean isSelfNotification = null;
+
   @SerializedName("Options")
   private Map<String, String> options = null;
 
@@ -261,6 +264,24 @@ public class EmbyNotificationsUserNotificationInfo {
     this.userId = userId;
   }
 
+  public EmbyNotificationsUserNotificationInfo isSelfNotification(Boolean isSelfNotification) {
+    this.isSelfNotification = isSelfNotification;
+    return this;
+  }
+
+   /**
+   * Get isSelfNotification
+   * @return isSelfNotification
+  **/
+  @Schema(description = "")
+  public Boolean isIsSelfNotification() {
+    return isSelfNotification;
+  }
+
+  public void setIsSelfNotification(Boolean isSelfNotification) {
+    this.isSelfNotification = isSelfNotification;
+  }
+
   public EmbyNotificationsUserNotificationInfo options(Map<String, String> options) {
     this.options = options;
     return this;
@@ -307,12 +328,13 @@ public class EmbyNotificationsUserNotificationInfo {
         Objects.equals(this.libraryIds, embyNotificationsUserNotificationInfo.libraryIds) &&
         Objects.equals(this.eventIds, embyNotificationsUserNotificationInfo.eventIds) &&
         Objects.equals(this.userId, embyNotificationsUserNotificationInfo.userId) &&
+        Objects.equals(this.isSelfNotification, embyNotificationsUserNotificationInfo.isSelfNotification) &&
         Objects.equals(this.options, embyNotificationsUserNotificationInfo.options);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(notifierKey, setupModuleUrl, serviceName, friendlyName, id, enabled, userIds, libraryIds, eventIds, userId, options);
+    return Objects.hash(notifierKey, setupModuleUrl, serviceName, friendlyName, id, enabled, userIds, libraryIds, eventIds, userId, isSelfNotification, options);
   }
 
 
@@ -331,6 +353,7 @@ public class EmbyNotificationsUserNotificationInfo {
     sb.append("    libraryIds: ").append(toIndentedString(libraryIds)).append("\n");
     sb.append("    eventIds: ").append(toIndentedString(eventIds)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    isSelfNotification: ").append(toIndentedString(isSelfNotification)).append("\n");
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();

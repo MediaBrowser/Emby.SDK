@@ -806,6 +806,78 @@
   
   
   <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetPlayackMediaSources_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetPlayackMediaSources*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetPlayackMediaSources_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_System_Boolean_System_String_System_Boolean_MediaBrowser_Model_Dlna_DeviceProfile_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetPlayackMediaSources(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User,System.Boolean,System.String,System.Boolean,MediaBrowser.Model.Dlna.DeviceProfile,System.Threading.CancellationToken)">GetPlayackMediaSources(BaseItem, User, Boolean, String, Boolean, DeviceProfile, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;MediaSourceInfo&gt;&gt; GetPlayackMediaSources(BaseItem item, User user, bool allowMediaProbe, string probeMediaSourceId, bool enablePathSubstitution, DeviceProfile deviceProfile, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowMediaProbe</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">probeMediaSourceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enablePathSubstitution</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">deviceProfile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetPlayackMediaSources_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetPlayackMediaSources*"></a>
   <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetPlayackMediaSources_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_System_Boolean_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetPlayackMediaSources(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User,System.Boolean,System.String,System.Boolean,System.Threading.CancellationToken)">GetPlayackMediaSources(BaseItem, User, Boolean, String, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -873,13 +945,13 @@
   
   
   <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, User)</h4>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,MediaBrowser.Model.Dlna.DeviceProfile,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, DeviceProfile, User)</h4>
   <div class="markdown level1 summary"><p>Gets the static media sources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enablePathSubstitution, User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enablePathSubstitution, DeviceProfile deviceProfile, User user = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -899,6 +971,11 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enablePathSubstitution</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">deviceProfile</span></td>
         <td></td>
       </tr>
       <tr>
@@ -926,12 +1003,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, Boolean, LibraryOptions, User)</h4>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Model.Dlna.DeviceProfile,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, Boolean, LibraryOptions, DeviceProfile, User)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enableAlternateMediaSources, bool enablePathSubstitution, LibraryOptions libraryOptions, User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enableAlternateMediaSources, bool enablePathSubstitution, LibraryOptions libraryOptions, DeviceProfile deviceProfile, User user = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -961,6 +1038,11 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
         <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">deviceProfile</span></td>
         <td></td>
       </tr>
       <tr>

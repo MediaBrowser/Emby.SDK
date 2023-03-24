@@ -92,6 +92,9 @@ public class LiveTvSeriesTimerInfoDto {
   @SerializedName("ChannelName")
   private String channelName = null;
 
+  @SerializedName("ChannelNumber")
+  private String channelNumber = null;
+
   @SerializedName("ChannelPrimaryImageTag")
   private String channelPrimaryImageTag = null;
 
@@ -544,6 +547,24 @@ public class LiveTvSeriesTimerInfoDto {
     this.channelName = channelName;
   }
 
+  public LiveTvSeriesTimerInfoDto channelNumber(String channelNumber) {
+    this.channelNumber = channelNumber;
+    return this;
+  }
+
+   /**
+   * Get channelNumber
+   * @return channelNumber
+  **/
+  @Schema(description = "")
+  public String getChannelNumber() {
+    return channelNumber;
+  }
+
+  public void setChannelNumber(String channelNumber) {
+    this.channelNumber = channelNumber;
+  }
+
   public LiveTvSeriesTimerInfoDto channelPrimaryImageTag(String channelPrimaryImageTag) {
     this.channelPrimaryImageTag = channelPrimaryImageTag;
     return this;
@@ -835,6 +856,7 @@ public class LiveTvSeriesTimerInfoDto {
         Objects.equals(this.serverId, liveTvSeriesTimerInfoDto.serverId) &&
         Objects.equals(this.channelId, liveTvSeriesTimerInfoDto.channelId) &&
         Objects.equals(this.channelName, liveTvSeriesTimerInfoDto.channelName) &&
+        Objects.equals(this.channelNumber, liveTvSeriesTimerInfoDto.channelNumber) &&
         Objects.equals(this.channelPrimaryImageTag, liveTvSeriesTimerInfoDto.channelPrimaryImageTag) &&
         Objects.equals(this.programId, liveTvSeriesTimerInfoDto.programId) &&
         Objects.equals(this.name, liveTvSeriesTimerInfoDto.name) &&
@@ -853,7 +875,7 @@ public class LiveTvSeriesTimerInfoDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(recordAnyTime, skipEpisodesInLibrary, recordAnyChannel, keepUpTo, maxRecordingSeconds, recordNewOnly, channelIds, days, imageTags, parentThumbItemId, parentThumbImageTag, parentPrimaryImageItemId, parentPrimaryImageTag, seriesId, keywords, timerType, id, type, serverId, channelId, channelName, channelPrimaryImageTag, programId, name, overview, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
+    return Objects.hash(recordAnyTime, skipEpisodesInLibrary, recordAnyChannel, keepUpTo, maxRecordingSeconds, recordNewOnly, channelIds, days, imageTags, parentThumbItemId, parentThumbImageTag, parentPrimaryImageItemId, parentPrimaryImageTag, seriesId, keywords, timerType, id, type, serverId, channelId, channelName, channelNumber, channelPrimaryImageTag, programId, name, overview, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
   }
 
 
@@ -883,6 +905,7 @@ public class LiveTvSeriesTimerInfoDto {
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
     sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
     sb.append("    channelName: ").append(toIndentedString(channelName)).append("\n");
+    sb.append("    channelNumber: ").append(toIndentedString(channelNumber)).append("\n");
     sb.append("    channelPrimaryImageTag: ").append(toIndentedString(channelPrimaryImageTag)).append("\n");
     sb.append("    programId: ").append(toIndentedString(programId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

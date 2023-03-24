@@ -15,7 +15,7 @@ import UserLibraryOfficialRatingItem from './UserLibraryOfficialRatingItem';
 /**
 * The QueryResultUserLibraryOfficialRatingItem model module.
 * @module model/QueryResultUserLibraryOfficialRatingItem
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class QueryResultUserLibraryOfficialRatingItem {
     /**

@@ -175,6 +175,8 @@ from embyclient-python-beta.models.emby_web_generic_ui_model_enums_ui_view_type 
 from embyclient-python-beta.models.emby_web_generic_ui_model_ui_command import EmbyWebGenericUIModelUICommand
 from embyclient-python-beta.models.emby_web_generic_ui_model_ui_tab_page_info import EmbyWebGenericUIModelUITabPageInfo
 from embyclient-python-beta.models.emby_web_generic_ui_model_ui_view_info import EmbyWebGenericUIModelUIViewInfo
+from embyclient-python-beta.models.extended_video_sub_types import ExtendedVideoSubTypes
+from embyclient-python-beta.models.extended_video_types import ExtendedVideoTypes
 from embyclient-python-beta.models.external_id_info import ExternalIdInfo
 from embyclient-python-beta.models.external_url import ExternalUrl
 from embyclient-python-beta.models.forgot_password import ForgotPassword
@@ -199,7 +201,6 @@ from embyclient-python-beta.models.library_library_options_result import Library
 from embyclient-python-beta.models.library_library_type_options import LibraryLibraryTypeOptions
 from embyclient-python-beta.models.library_media_folder import LibraryMediaFolder
 from embyclient-python-beta.models.library_media_update_info import LibraryMediaUpdateInfo
-from embyclient-python-beta.models.library_play_access import LibraryPlayAccess
 from embyclient-python-beta.models.library_post_updated_media import LibraryPostUpdatedMedia
 from embyclient-python-beta.models.library_remove_media_path import LibraryRemoveMediaPath
 from embyclient-python-beta.models.library_remove_virtual_folder import LibraryRemoveVirtualFolder

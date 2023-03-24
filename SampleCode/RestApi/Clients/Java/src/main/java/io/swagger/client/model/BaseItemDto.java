@@ -18,7 +18,6 @@ import io.swagger.client.model.ChapterInfo;
 import io.swagger.client.model.DayOfWeek;
 import io.swagger.client.model.DrawingImageOrientation;
 import io.swagger.client.model.ExternalUrl;
-import io.swagger.client.model.LibraryPlayAccess;
 import io.swagger.client.model.LiveTvTimerType;
 import io.swagger.client.model.LocationType;
 import io.swagger.client.model.MediaSourceInfo;
@@ -79,15 +78,6 @@ public class BaseItemDto {
   @SerializedName("SortParentIndexNumber")
   private Integer sortParentIndexNumber = null;
 
-  @SerializedName("AirsBeforeSeasonNumber")
-  private Integer airsBeforeSeasonNumber = null;
-
-  @SerializedName("AirsAfterSeasonNumber")
-  private Integer airsAfterSeasonNumber = null;
-
-  @SerializedName("AirsBeforeEpisodeNumber")
-  private Integer airsBeforeEpisodeNumber = null;
-
   @SerializedName("CanDelete")
   private Boolean canDelete = null;
 
@@ -108,6 +98,15 @@ public class BaseItemDto {
 
   @SerializedName("SupportsSync")
   private Boolean supportsSync = null;
+
+  @SerializedName("CanManageAccess")
+  private Boolean canManageAccess = null;
+
+  @SerializedName("CanMakePrivate")
+  private Boolean canMakePrivate = null;
+
+  @SerializedName("CanMakePublic")
+  private Boolean canMakePublic = null;
 
   @SerializedName("Container")
   private String container = null;
@@ -183,9 +182,6 @@ public class BaseItemDto {
 
   @SerializedName("Bitrate")
   private Integer bitrate = null;
-
-  @SerializedName("PlayAccess")
-  private LibraryPlayAccess playAccess = null;
 
   @SerializedName("ProductionYear")
   private Integer productionYear = null;
@@ -712,60 +708,6 @@ public class BaseItemDto {
     this.sortParentIndexNumber = sortParentIndexNumber;
   }
 
-  public BaseItemDto airsBeforeSeasonNumber(Integer airsBeforeSeasonNumber) {
-    this.airsBeforeSeasonNumber = airsBeforeSeasonNumber;
-    return this;
-  }
-
-   /**
-   * Get airsBeforeSeasonNumber
-   * @return airsBeforeSeasonNumber
-  **/
-  @Schema(description = "")
-  public Integer getAirsBeforeSeasonNumber() {
-    return airsBeforeSeasonNumber;
-  }
-
-  public void setAirsBeforeSeasonNumber(Integer airsBeforeSeasonNumber) {
-    this.airsBeforeSeasonNumber = airsBeforeSeasonNumber;
-  }
-
-  public BaseItemDto airsAfterSeasonNumber(Integer airsAfterSeasonNumber) {
-    this.airsAfterSeasonNumber = airsAfterSeasonNumber;
-    return this;
-  }
-
-   /**
-   * Get airsAfterSeasonNumber
-   * @return airsAfterSeasonNumber
-  **/
-  @Schema(description = "")
-  public Integer getAirsAfterSeasonNumber() {
-    return airsAfterSeasonNumber;
-  }
-
-  public void setAirsAfterSeasonNumber(Integer airsAfterSeasonNumber) {
-    this.airsAfterSeasonNumber = airsAfterSeasonNumber;
-  }
-
-  public BaseItemDto airsBeforeEpisodeNumber(Integer airsBeforeEpisodeNumber) {
-    this.airsBeforeEpisodeNumber = airsBeforeEpisodeNumber;
-    return this;
-  }
-
-   /**
-   * Get airsBeforeEpisodeNumber
-   * @return airsBeforeEpisodeNumber
-  **/
-  @Schema(description = "")
-  public Integer getAirsBeforeEpisodeNumber() {
-    return airsBeforeEpisodeNumber;
-  }
-
-  public void setAirsBeforeEpisodeNumber(Integer airsBeforeEpisodeNumber) {
-    this.airsBeforeEpisodeNumber = airsBeforeEpisodeNumber;
-  }
-
   public BaseItemDto canDelete(Boolean canDelete) {
     this.canDelete = canDelete;
     return this;
@@ -890,6 +832,60 @@ public class BaseItemDto {
 
   public void setSupportsSync(Boolean supportsSync) {
     this.supportsSync = supportsSync;
+  }
+
+  public BaseItemDto canManageAccess(Boolean canManageAccess) {
+    this.canManageAccess = canManageAccess;
+    return this;
+  }
+
+   /**
+   * Get canManageAccess
+   * @return canManageAccess
+  **/
+  @Schema(description = "")
+  public Boolean isCanManageAccess() {
+    return canManageAccess;
+  }
+
+  public void setCanManageAccess(Boolean canManageAccess) {
+    this.canManageAccess = canManageAccess;
+  }
+
+  public BaseItemDto canMakePrivate(Boolean canMakePrivate) {
+    this.canMakePrivate = canMakePrivate;
+    return this;
+  }
+
+   /**
+   * Get canMakePrivate
+   * @return canMakePrivate
+  **/
+  @Schema(description = "")
+  public Boolean isCanMakePrivate() {
+    return canMakePrivate;
+  }
+
+  public void setCanMakePrivate(Boolean canMakePrivate) {
+    this.canMakePrivate = canMakePrivate;
+  }
+
+  public BaseItemDto canMakePublic(Boolean canMakePublic) {
+    this.canMakePublic = canMakePublic;
+    return this;
+  }
+
+   /**
+   * Get canMakePublic
+   * @return canMakePublic
+  **/
+  @Schema(description = "")
+  public Boolean isCanMakePublic() {
+    return canMakePublic;
+  }
+
+  public void setCanMakePublic(Boolean canMakePublic) {
+    this.canMakePublic = canMakePublic;
   }
 
   public BaseItemDto container(String container) {
@@ -1380,24 +1376,6 @@ public class BaseItemDto {
 
   public void setBitrate(Integer bitrate) {
     this.bitrate = bitrate;
-  }
-
-  public BaseItemDto playAccess(LibraryPlayAccess playAccess) {
-    this.playAccess = playAccess;
-    return this;
-  }
-
-   /**
-   * Get playAccess
-   * @return playAccess
-  **/
-  @Schema(description = "")
-  public LibraryPlayAccess getPlayAccess() {
-    return playAccess;
-  }
-
-  public void setPlayAccess(LibraryPlayAccess playAccess) {
-    this.playAccess = playAccess;
   }
 
   public BaseItemDto productionYear(Integer productionYear) {
@@ -3420,9 +3398,6 @@ public class BaseItemDto {
         Objects.equals(this.extraType, baseItemDto.extraType) &&
         Objects.equals(this.sortIndexNumber, baseItemDto.sortIndexNumber) &&
         Objects.equals(this.sortParentIndexNumber, baseItemDto.sortParentIndexNumber) &&
-        Objects.equals(this.airsBeforeSeasonNumber, baseItemDto.airsBeforeSeasonNumber) &&
-        Objects.equals(this.airsAfterSeasonNumber, baseItemDto.airsAfterSeasonNumber) &&
-        Objects.equals(this.airsBeforeEpisodeNumber, baseItemDto.airsBeforeEpisodeNumber) &&
         Objects.equals(this.canDelete, baseItemDto.canDelete) &&
         Objects.equals(this.canDownload, baseItemDto.canDownload) &&
         Objects.equals(this.supportsResume, baseItemDto.supportsResume) &&
@@ -3430,6 +3405,9 @@ public class BaseItemDto {
         Objects.equals(this.preferredMetadataLanguage, baseItemDto.preferredMetadataLanguage) &&
         Objects.equals(this.preferredMetadataCountryCode, baseItemDto.preferredMetadataCountryCode) &&
         Objects.equals(this.supportsSync, baseItemDto.supportsSync) &&
+        Objects.equals(this.canManageAccess, baseItemDto.canManageAccess) &&
+        Objects.equals(this.canMakePrivate, baseItemDto.canMakePrivate) &&
+        Objects.equals(this.canMakePublic, baseItemDto.canMakePublic) &&
         Objects.equals(this.container, baseItemDto.container) &&
         Objects.equals(this.sortName, baseItemDto.sortName) &&
         Objects.equals(this.forcedSortName, baseItemDto.forcedSortName) &&
@@ -3455,7 +3433,6 @@ public class BaseItemDto {
         Objects.equals(this.size, baseItemDto.size) &&
         Objects.equals(this.fileName, baseItemDto.fileName) &&
         Objects.equals(this.bitrate, baseItemDto.bitrate) &&
-        Objects.equals(this.playAccess, baseItemDto.playAccess) &&
         Objects.equals(this.productionYear, baseItemDto.productionYear) &&
         Objects.equals(this.number, baseItemDto.number) &&
         Objects.equals(this.channelNumber, baseItemDto.channelNumber) &&
@@ -3563,7 +3540,7 @@ public class BaseItemDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, airsBeforeSeasonNumber, airsAfterSeasonNumber, airsBeforeEpisodeNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, playAccess, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
+    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, canManageAccess, canMakePrivate, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
   }
 
 
@@ -3584,9 +3561,6 @@ public class BaseItemDto {
     sb.append("    extraType: ").append(toIndentedString(extraType)).append("\n");
     sb.append("    sortIndexNumber: ").append(toIndentedString(sortIndexNumber)).append("\n");
     sb.append("    sortParentIndexNumber: ").append(toIndentedString(sortParentIndexNumber)).append("\n");
-    sb.append("    airsBeforeSeasonNumber: ").append(toIndentedString(airsBeforeSeasonNumber)).append("\n");
-    sb.append("    airsAfterSeasonNumber: ").append(toIndentedString(airsAfterSeasonNumber)).append("\n");
-    sb.append("    airsBeforeEpisodeNumber: ").append(toIndentedString(airsBeforeEpisodeNumber)).append("\n");
     sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
     sb.append("    canDownload: ").append(toIndentedString(canDownload)).append("\n");
     sb.append("    supportsResume: ").append(toIndentedString(supportsResume)).append("\n");
@@ -3594,6 +3568,9 @@ public class BaseItemDto {
     sb.append("    preferredMetadataLanguage: ").append(toIndentedString(preferredMetadataLanguage)).append("\n");
     sb.append("    preferredMetadataCountryCode: ").append(toIndentedString(preferredMetadataCountryCode)).append("\n");
     sb.append("    supportsSync: ").append(toIndentedString(supportsSync)).append("\n");
+    sb.append("    canManageAccess: ").append(toIndentedString(canManageAccess)).append("\n");
+    sb.append("    canMakePrivate: ").append(toIndentedString(canMakePrivate)).append("\n");
+    sb.append("    canMakePublic: ").append(toIndentedString(canMakePublic)).append("\n");
     sb.append("    container: ").append(toIndentedString(container)).append("\n");
     sb.append("    sortName: ").append(toIndentedString(sortName)).append("\n");
     sb.append("    forcedSortName: ").append(toIndentedString(forcedSortName)).append("\n");
@@ -3619,7 +3596,6 @@ public class BaseItemDto {
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
     sb.append("    bitrate: ").append(toIndentedString(bitrate)).append("\n");
-    sb.append("    playAccess: ").append(toIndentedString(playAccess)).append("\n");
     sb.append("    productionYear: ").append(toIndentedString(productionYear)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("    channelNumber: ").append(toIndentedString(channelNumber)).append("\n");

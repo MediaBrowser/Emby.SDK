@@ -43,6 +43,7 @@ class LiveTvSeriesTimerInfoDto(object):
         'server_id': 'str',
         'channel_id': 'str',
         'channel_name': 'str',
+        'channel_number': 'str',
         'channel_primary_image_tag': 'str',
         'program_id': 'str',
         'name': 'str',
@@ -81,6 +82,7 @@ class LiveTvSeriesTimerInfoDto(object):
         'server_id': 'ServerId',
         'channel_id': 'ChannelId',
         'channel_name': 'ChannelName',
+        'channel_number': 'ChannelNumber',
         'channel_primary_image_tag': 'ChannelPrimaryImageTag',
         'program_id': 'ProgramId',
         'name': 'Name',
@@ -97,7 +99,7 @@ class LiveTvSeriesTimerInfoDto(object):
         'keep_until': 'KeepUntil'
     }
 
-    def __init__(self, record_any_time=None, skip_episodes_in_library=None, record_any_channel=None, keep_up_to=None, max_recording_seconds=None, record_new_only=None, channel_ids=None, days=None, image_tags=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, parent_primary_image_item_id=None, parent_primary_image_tag=None, series_id=None, keywords=None, timer_type=None, id=None, type=None, server_id=None, channel_id=None, channel_name=None, channel_primary_image_tag=None, program_id=None, name=None, overview=None, start_date=None, end_date=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, is_post_padding_required=None, keep_until=None):  # noqa: E501
+    def __init__(self, record_any_time=None, skip_episodes_in_library=None, record_any_channel=None, keep_up_to=None, max_recording_seconds=None, record_new_only=None, channel_ids=None, days=None, image_tags=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, parent_primary_image_item_id=None, parent_primary_image_tag=None, series_id=None, keywords=None, timer_type=None, id=None, type=None, server_id=None, channel_id=None, channel_name=None, channel_number=None, channel_primary_image_tag=None, program_id=None, name=None, overview=None, start_date=None, end_date=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, is_post_padding_required=None, keep_until=None):  # noqa: E501
         """LiveTvSeriesTimerInfoDto - a model defined in Swagger"""  # noqa: E501
         self._record_any_time = None
         self._skip_episodes_in_library = None
@@ -120,6 +122,7 @@ class LiveTvSeriesTimerInfoDto(object):
         self._server_id = None
         self._channel_id = None
         self._channel_name = None
+        self._channel_number = None
         self._channel_primary_image_tag = None
         self._program_id = None
         self._name = None
@@ -177,6 +180,8 @@ class LiveTvSeriesTimerInfoDto(object):
             self.channel_id = channel_id
         if channel_name is not None:
             self.channel_name = channel_name
+        if channel_number is not None:
+            self.channel_number = channel_number
         if channel_primary_image_tag is not None:
             self.channel_primary_image_tag = channel_primary_image_tag
         if program_id is not None:
@@ -646,6 +651,27 @@ class LiveTvSeriesTimerInfoDto(object):
         """
 
         self._channel_name = channel_name
+
+    @property
+    def channel_number(self):
+        """Gets the channel_number of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+
+
+        :return: The channel_number of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._channel_number
+
+    @channel_number.setter
+    def channel_number(self, channel_number):
+        """Sets the channel_number of this LiveTvSeriesTimerInfoDto.
+
+
+        :param channel_number: The channel_number of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+        :type: str
+        """
+
+        self._channel_number = channel_number
 
     @property
     def channel_primary_image_tag(self):

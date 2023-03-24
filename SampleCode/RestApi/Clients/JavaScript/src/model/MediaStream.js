@@ -11,6 +11,8 @@
 
 import ApiClient from '../ApiClient';
 import DlnaSubtitleDeliveryMethod from './DlnaSubtitleDeliveryMethod';
+import ExtendedVideoSubTypes from './ExtendedVideoSubTypes';
+import ExtendedVideoTypes from './ExtendedVideoTypes';
 import MediaInfoMediaProtocol from './MediaInfoMediaProtocol';
 import MediaStreamType from './MediaStreamType';
 import SubtitleLocationType from './SubtitleLocationType';
@@ -18,7 +20,7 @@ import SubtitleLocationType from './SubtitleLocationType';
 /**
 * The MediaStream model module.
 * @module model/MediaStream
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class MediaStream {
     /**
@@ -71,9 +73,6 @@ export default class MediaStream {
             }
             if (data.hasOwnProperty('TimeBase')) {
                 obj['TimeBase'] = ApiClient.convertToType(data['TimeBase'], 'String');
-            }
-            if (data.hasOwnProperty('CodecTimeBase')) {
-                obj['CodecTimeBase'] = ApiClient.convertToType(data['CodecTimeBase'], 'String');
             }
             if (data.hasOwnProperty('Title')) {
                 obj['Title'] = ApiClient.convertToType(data['Title'], 'String');
@@ -183,6 +182,12 @@ export default class MediaStream {
             if (data.hasOwnProperty('IsAnamorphic')) {
                 obj['IsAnamorphic'] = ApiClient.convertToType(data['IsAnamorphic'], 'Boolean');
             }
+            if (data.hasOwnProperty('ExtendedVideoType')) {
+                obj['ExtendedVideoType'] = ExtendedVideoTypes.constructFromObject(data['ExtendedVideoType']);
+            }
+            if (data.hasOwnProperty('ExtendedVideoSubtype')) {
+                obj['ExtendedVideoSubtype'] = ExtendedVideoSubTypes.constructFromObject(data['ExtendedVideoSubtype']);
+            }
             if (data.hasOwnProperty('ItemId')) {
                 obj['ItemId'] = ApiClient.convertToType(data['ItemId'], 'String');
             }
@@ -194,9 +199,6 @@ export default class MediaStream {
             }
             if (data.hasOwnProperty('MimeType')) {
                 obj['MimeType'] = ApiClient.convertToType(data['MimeType'], 'String');
-            }
-            if (data.hasOwnProperty('IsClosedCaptions')) {
-                obj['IsClosedCaptions'] = ApiClient.convertToType(data['IsClosedCaptions'], 'Boolean');
             }
             if (data.hasOwnProperty('SubtitleLocationType')) {
                 obj['SubtitleLocationType'] = SubtitleLocationType.constructFromObject(data['SubtitleLocationType']);
@@ -241,10 +243,6 @@ export default class MediaStream {
     * @member {String} TimeBase
     */
     'TimeBase' = undefined;
-    /**
-    * @member {String} CodecTimeBase
-    */
-    'CodecTimeBase' = undefined;
     /**
     * @member {String} Title
     */
@@ -390,6 +388,14 @@ export default class MediaStream {
     */
     'IsAnamorphic' = undefined;
     /**
+    * @member {module:model/ExtendedVideoTypes} ExtendedVideoType
+    */
+    'ExtendedVideoType' = undefined;
+    /**
+    * @member {module:model/ExtendedVideoSubTypes} ExtendedVideoSubtype
+    */
+    'ExtendedVideoSubtype' = undefined;
+    /**
     * @member {String} ItemId
     */
     'ItemId' = undefined;
@@ -405,10 +411,6 @@ export default class MediaStream {
     * @member {String} MimeType
     */
     'MimeType' = undefined;
-    /**
-    * @member {Boolean} IsClosedCaptions
-    */
-    'IsClosedCaptions' = undefined;
     /**
     * @member {module:model/SubtitleLocationType} SubtitleLocationType
     */

@@ -16,7 +16,7 @@ import ConfigurationPathSubstitution from './ConfigurationPathSubstitution';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -124,9 +124,6 @@ export default class ConfigurationServerConfiguration {
             if (data.hasOwnProperty('RemoteClientBitrateLimit')) {
                 obj['RemoteClientBitrateLimit'] = ApiClient.convertToType(data['RemoteClientBitrateLimit'], 'Number');
             }
-            if (data.hasOwnProperty('DisplaySpecialsWithinSeasons')) {
-                obj['DisplaySpecialsWithinSeasons'] = ApiClient.convertToType(data['DisplaySpecialsWithinSeasons'], 'Boolean');
-            }
             if (data.hasOwnProperty('LocalNetworkSubnets')) {
                 obj['LocalNetworkSubnets'] = ApiClient.convertToType(data['LocalNetworkSubnets'], ['String']);
             }
@@ -204,6 +201,9 @@ export default class ConfigurationServerConfiguration {
             }
             if (data.hasOwnProperty('DisableAsyncIO')) {
                 obj['DisableAsyncIO'] = ApiClient.convertToType(data['DisableAsyncIO'], 'Boolean');
+            }
+            if (data.hasOwnProperty('MigratedToUserItemShares')) {
+                obj['MigratedToUserItemShares'] = ApiClient.convertToType(data['MigratedToUserItemShares'], 'Boolean');
             }
             if (data.hasOwnProperty('EnableDebugLevelLogging')) {
                 obj['EnableDebugLevelLogging'] = ApiClient.convertToType(data['EnableDebugLevelLogging'], 'Boolean');
@@ -339,10 +339,6 @@ export default class ConfigurationServerConfiguration {
     */
     'RemoteClientBitrateLimit' = undefined;
     /**
-    * @member {Boolean} DisplaySpecialsWithinSeasons
-    */
-    'DisplaySpecialsWithinSeasons' = undefined;
-    /**
     * @member {Array.<String>} LocalNetworkSubnets
     */
     'LocalNetworkSubnets' = undefined;
@@ -446,6 +442,10 @@ export default class ConfigurationServerConfiguration {
     * @member {Boolean} DisableAsyncIO
     */
     'DisableAsyncIO' = undefined;
+    /**
+    * @member {Boolean} MigratedToUserItemShares
+    */
+    'MigratedToUserItemShares' = undefined;
     /**
     * @member {Boolean} EnableDebugLevelLogging
     */

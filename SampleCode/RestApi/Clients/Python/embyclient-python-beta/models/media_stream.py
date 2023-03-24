@@ -31,7 +31,6 @@ class MediaStream(object):
         'comment': 'str',
         'stream_start_time_ticks': 'int',
         'time_base': 'str',
-        'codec_time_base': 'str',
         'title': 'str',
         'extradata': 'str',
         'video_range': 'str',
@@ -68,11 +67,12 @@ class MediaStream(object):
         'pixel_format': 'str',
         'level': 'float',
         'is_anamorphic': 'bool',
+        'extended_video_type': 'ExtendedVideoTypes',
+        'extended_video_subtype': 'ExtendedVideoSubTypes',
         'item_id': 'str',
         'server_id': 'str',
         'attachment_size': 'int',
         'mime_type': 'str',
-        'is_closed_captions': 'bool',
         'subtitle_location_type': 'SubtitleLocationType'
     }
 
@@ -86,7 +86,6 @@ class MediaStream(object):
         'comment': 'Comment',
         'stream_start_time_ticks': 'StreamStartTimeTicks',
         'time_base': 'TimeBase',
-        'codec_time_base': 'CodecTimeBase',
         'title': 'Title',
         'extradata': 'Extradata',
         'video_range': 'VideoRange',
@@ -123,15 +122,16 @@ class MediaStream(object):
         'pixel_format': 'PixelFormat',
         'level': 'Level',
         'is_anamorphic': 'IsAnamorphic',
+        'extended_video_type': 'ExtendedVideoType',
+        'extended_video_subtype': 'ExtendedVideoSubtype',
         'item_id': 'ItemId',
         'server_id': 'ServerId',
         'attachment_size': 'AttachmentSize',
         'mime_type': 'MimeType',
-        'is_closed_captions': 'IsClosedCaptions',
         'subtitle_location_type': 'SubtitleLocationType'
     }
 
-    def __init__(self, codec=None, codec_tag=None, language=None, color_transfer=None, color_primaries=None, color_space=None, comment=None, stream_start_time_ticks=None, time_base=None, codec_time_base=None, title=None, extradata=None, video_range=None, display_title=None, display_language=None, nal_length_size=None, is_interlaced=None, is_avc=None, channel_layout=None, bit_rate=None, bit_depth=None, ref_frames=None, rotation=None, channels=None, sample_rate=None, is_default=None, is_forced=None, height=None, width=None, average_frame_rate=None, real_frame_rate=None, profile=None, type=None, aspect_ratio=None, index=None, is_external=None, delivery_method=None, delivery_url=None, is_external_url=None, is_text_subtitle_stream=None, supports_external_stream=None, path=None, protocol=None, pixel_format=None, level=None, is_anamorphic=None, item_id=None, server_id=None, attachment_size=None, mime_type=None, is_closed_captions=None, subtitle_location_type=None):  # noqa: E501
+    def __init__(self, codec=None, codec_tag=None, language=None, color_transfer=None, color_primaries=None, color_space=None, comment=None, stream_start_time_ticks=None, time_base=None, title=None, extradata=None, video_range=None, display_title=None, display_language=None, nal_length_size=None, is_interlaced=None, is_avc=None, channel_layout=None, bit_rate=None, bit_depth=None, ref_frames=None, rotation=None, channels=None, sample_rate=None, is_default=None, is_forced=None, height=None, width=None, average_frame_rate=None, real_frame_rate=None, profile=None, type=None, aspect_ratio=None, index=None, is_external=None, delivery_method=None, delivery_url=None, is_external_url=None, is_text_subtitle_stream=None, supports_external_stream=None, path=None, protocol=None, pixel_format=None, level=None, is_anamorphic=None, extended_video_type=None, extended_video_subtype=None, item_id=None, server_id=None, attachment_size=None, mime_type=None, subtitle_location_type=None):  # noqa: E501
         """MediaStream - a model defined in Swagger"""  # noqa: E501
         self._codec = None
         self._codec_tag = None
@@ -142,7 +142,6 @@ class MediaStream(object):
         self._comment = None
         self._stream_start_time_ticks = None
         self._time_base = None
-        self._codec_time_base = None
         self._title = None
         self._extradata = None
         self._video_range = None
@@ -179,11 +178,12 @@ class MediaStream(object):
         self._pixel_format = None
         self._level = None
         self._is_anamorphic = None
+        self._extended_video_type = None
+        self._extended_video_subtype = None
         self._item_id = None
         self._server_id = None
         self._attachment_size = None
         self._mime_type = None
-        self._is_closed_captions = None
         self._subtitle_location_type = None
         self.discriminator = None
         if codec is not None:
@@ -204,8 +204,6 @@ class MediaStream(object):
             self.stream_start_time_ticks = stream_start_time_ticks
         if time_base is not None:
             self.time_base = time_base
-        if codec_time_base is not None:
-            self.codec_time_base = codec_time_base
         if title is not None:
             self.title = title
         if extradata is not None:
@@ -278,6 +276,10 @@ class MediaStream(object):
             self.level = level
         if is_anamorphic is not None:
             self.is_anamorphic = is_anamorphic
+        if extended_video_type is not None:
+            self.extended_video_type = extended_video_type
+        if extended_video_subtype is not None:
+            self.extended_video_subtype = extended_video_subtype
         if item_id is not None:
             self.item_id = item_id
         if server_id is not None:
@@ -286,8 +288,6 @@ class MediaStream(object):
             self.attachment_size = attachment_size
         if mime_type is not None:
             self.mime_type = mime_type
-        if is_closed_captions is not None:
-            self.is_closed_captions = is_closed_captions
         if subtitle_location_type is not None:
             self.subtitle_location_type = subtitle_location_type
 
@@ -479,27 +479,6 @@ class MediaStream(object):
         """
 
         self._time_base = time_base
-
-    @property
-    def codec_time_base(self):
-        """Gets the codec_time_base of this MediaStream.  # noqa: E501
-
-
-        :return: The codec_time_base of this MediaStream.  # noqa: E501
-        :rtype: str
-        """
-        return self._codec_time_base
-
-    @codec_time_base.setter
-    def codec_time_base(self, codec_time_base):
-        """Sets the codec_time_base of this MediaStream.
-
-
-        :param codec_time_base: The codec_time_base of this MediaStream.  # noqa: E501
-        :type: str
-        """
-
-        self._codec_time_base = codec_time_base
 
     @property
     def title(self):
@@ -1258,6 +1237,48 @@ class MediaStream(object):
         self._is_anamorphic = is_anamorphic
 
     @property
+    def extended_video_type(self):
+        """Gets the extended_video_type of this MediaStream.  # noqa: E501
+
+
+        :return: The extended_video_type of this MediaStream.  # noqa: E501
+        :rtype: ExtendedVideoTypes
+        """
+        return self._extended_video_type
+
+    @extended_video_type.setter
+    def extended_video_type(self, extended_video_type):
+        """Sets the extended_video_type of this MediaStream.
+
+
+        :param extended_video_type: The extended_video_type of this MediaStream.  # noqa: E501
+        :type: ExtendedVideoTypes
+        """
+
+        self._extended_video_type = extended_video_type
+
+    @property
+    def extended_video_subtype(self):
+        """Gets the extended_video_subtype of this MediaStream.  # noqa: E501
+
+
+        :return: The extended_video_subtype of this MediaStream.  # noqa: E501
+        :rtype: ExtendedVideoSubTypes
+        """
+        return self._extended_video_subtype
+
+    @extended_video_subtype.setter
+    def extended_video_subtype(self, extended_video_subtype):
+        """Sets the extended_video_subtype of this MediaStream.
+
+
+        :param extended_video_subtype: The extended_video_subtype of this MediaStream.  # noqa: E501
+        :type: ExtendedVideoSubTypes
+        """
+
+        self._extended_video_subtype = extended_video_subtype
+
+    @property
     def item_id(self):
         """Gets the item_id of this MediaStream.  # noqa: E501
 
@@ -1340,27 +1361,6 @@ class MediaStream(object):
         """
 
         self._mime_type = mime_type
-
-    @property
-    def is_closed_captions(self):
-        """Gets the is_closed_captions of this MediaStream.  # noqa: E501
-
-
-        :return: The is_closed_captions of this MediaStream.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_closed_captions
-
-    @is_closed_captions.setter
-    def is_closed_captions(self, is_closed_captions):
-        """Sets the is_closed_captions of this MediaStream.
-
-
-        :param is_closed_captions: The is_closed_captions of this MediaStream.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_closed_captions = is_closed_captions
 
     @property
     def subtitle_location_type(self):

@@ -16,7 +16,7 @@ import ConfigurationTypeOptions from './ConfigurationTypeOptions';
 /**
 * The ConfigurationLibraryOptions model module.
 * @module model/ConfigurationLibraryOptions
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class ConfigurationLibraryOptions {
     /**

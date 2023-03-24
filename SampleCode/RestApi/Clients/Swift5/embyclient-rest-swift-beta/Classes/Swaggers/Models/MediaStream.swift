@@ -20,7 +20,6 @@ public struct MediaStream: Codable {
     public var comment: String?
     public var streamStartTimeTicks: Int64?
     public var timeBase: String?
-    public var codecTimeBase: String?
     public var title: String?
     public var extradata: String?
     public var videoRange: String?
@@ -57,14 +56,15 @@ public struct MediaStream: Codable {
     public var pixelFormat: String?
     public var level: Double?
     public var isAnamorphic: Bool?
+    public var extendedVideoType: ExtendedVideoTypes?
+    public var extendedVideoSubtype: ExtendedVideoSubTypes?
     public var itemId: String?
     public var serverId: String?
     public var attachmentSize: Int?
     public var mimeType: String?
-    public var isClosedCaptions: Bool?
     public var subtitleLocationType: SubtitleLocationType?
 
-    public init(codec: String? = nil, codecTag: String? = nil, language: String? = nil, colorTransfer: String? = nil, colorPrimaries: String? = nil, colorSpace: String? = nil, comment: String? = nil, streamStartTimeTicks: Int64? = nil, timeBase: String? = nil, codecTimeBase: String? = nil, title: String? = nil, extradata: String? = nil, videoRange: String? = nil, displayTitle: String? = nil, displayLanguage: String? = nil, nalLengthSize: String? = nil, isInterlaced: Bool? = nil, isAVC: Bool? = nil, channelLayout: String? = nil, bitRate: Int? = nil, bitDepth: Int? = nil, refFrames: Int? = nil, rotation: Int? = nil, channels: Int? = nil, sampleRate: Int? = nil, isDefault: Bool? = nil, isForced: Bool? = nil, height: Int? = nil, width: Int? = nil, averageFrameRate: Float? = nil, realFrameRate: Float? = nil, profile: String? = nil, type: MediaStreamType? = nil, aspectRatio: String? = nil, index: Int? = nil, isExternal: Bool? = nil, deliveryMethod: DlnaSubtitleDeliveryMethod? = nil, deliveryUrl: String? = nil, isExternalUrl: Bool? = nil, isTextSubtitleStream: Bool? = nil, supportsExternalStream: Bool? = nil, path: String? = nil, _protocol: MediaInfoMediaProtocol? = nil, pixelFormat: String? = nil, level: Double? = nil, isAnamorphic: Bool? = nil, itemId: String? = nil, serverId: String? = nil, attachmentSize: Int? = nil, mimeType: String? = nil, isClosedCaptions: Bool? = nil, subtitleLocationType: SubtitleLocationType? = nil) {
+    public init(codec: String? = nil, codecTag: String? = nil, language: String? = nil, colorTransfer: String? = nil, colorPrimaries: String? = nil, colorSpace: String? = nil, comment: String? = nil, streamStartTimeTicks: Int64? = nil, timeBase: String? = nil, title: String? = nil, extradata: String? = nil, videoRange: String? = nil, displayTitle: String? = nil, displayLanguage: String? = nil, nalLengthSize: String? = nil, isInterlaced: Bool? = nil, isAVC: Bool? = nil, channelLayout: String? = nil, bitRate: Int? = nil, bitDepth: Int? = nil, refFrames: Int? = nil, rotation: Int? = nil, channels: Int? = nil, sampleRate: Int? = nil, isDefault: Bool? = nil, isForced: Bool? = nil, height: Int? = nil, width: Int? = nil, averageFrameRate: Float? = nil, realFrameRate: Float? = nil, profile: String? = nil, type: MediaStreamType? = nil, aspectRatio: String? = nil, index: Int? = nil, isExternal: Bool? = nil, deliveryMethod: DlnaSubtitleDeliveryMethod? = nil, deliveryUrl: String? = nil, isExternalUrl: Bool? = nil, isTextSubtitleStream: Bool? = nil, supportsExternalStream: Bool? = nil, path: String? = nil, _protocol: MediaInfoMediaProtocol? = nil, pixelFormat: String? = nil, level: Double? = nil, isAnamorphic: Bool? = nil, extendedVideoType: ExtendedVideoTypes? = nil, extendedVideoSubtype: ExtendedVideoSubTypes? = nil, itemId: String? = nil, serverId: String? = nil, attachmentSize: Int? = nil, mimeType: String? = nil, subtitleLocationType: SubtitleLocationType? = nil) {
         self.codec = codec
         self.codecTag = codecTag
         self.language = language
@@ -74,7 +74,6 @@ public struct MediaStream: Codable {
         self.comment = comment
         self.streamStartTimeTicks = streamStartTimeTicks
         self.timeBase = timeBase
-        self.codecTimeBase = codecTimeBase
         self.title = title
         self.extradata = extradata
         self.videoRange = videoRange
@@ -111,11 +110,12 @@ public struct MediaStream: Codable {
         self.pixelFormat = pixelFormat
         self.level = level
         self.isAnamorphic = isAnamorphic
+        self.extendedVideoType = extendedVideoType
+        self.extendedVideoSubtype = extendedVideoSubtype
         self.itemId = itemId
         self.serverId = serverId
         self.attachmentSize = attachmentSize
         self.mimeType = mimeType
-        self.isClosedCaptions = isClosedCaptions
         self.subtitleLocationType = subtitleLocationType
     }
 
@@ -129,7 +129,6 @@ public struct MediaStream: Codable {
         case comment = "Comment"
         case streamStartTimeTicks = "StreamStartTimeTicks"
         case timeBase = "TimeBase"
-        case codecTimeBase = "CodecTimeBase"
         case title = "Title"
         case extradata = "Extradata"
         case videoRange = "VideoRange"
@@ -166,11 +165,12 @@ public struct MediaStream: Codable {
         case pixelFormat = "PixelFormat"
         case level = "Level"
         case isAnamorphic = "IsAnamorphic"
+        case extendedVideoType = "ExtendedVideoType"
+        case extendedVideoSubtype = "ExtendedVideoSubtype"
         case itemId = "ItemId"
         case serverId = "ServerId"
         case attachmentSize = "AttachmentSize"
         case mimeType = "MimeType"
-        case isClosedCaptions = "IsClosedCaptions"
         case subtitleLocationType = "SubtitleLocationType"
     }
 

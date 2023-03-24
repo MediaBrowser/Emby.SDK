@@ -35,7 +35,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="comment">comment.</param>
         /// <param name="streamStartTimeTicks">streamStartTimeTicks.</param>
         /// <param name="timeBase">timeBase.</param>
-        /// <param name="codecTimeBase">codecTimeBase.</param>
         /// <param name="title">title.</param>
         /// <param name="extradata">extradata.</param>
         /// <param name="videoRange">videoRange.</param>
@@ -72,13 +71,14 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="pixelFormat">pixelFormat.</param>
         /// <param name="level">level.</param>
         /// <param name="isAnamorphic">isAnamorphic.</param>
+        /// <param name="extendedVideoType">extendedVideoType.</param>
+        /// <param name="extendedVideoSubtype">extendedVideoSubtype.</param>
         /// <param name="itemId">itemId.</param>
         /// <param name="serverId">serverId.</param>
         /// <param name="attachmentSize">attachmentSize.</param>
         /// <param name="mimeType">mimeType.</param>
-        /// <param name="isClosedCaptions">isClosedCaptions.</param>
         /// <param name="subtitleLocationType">subtitleLocationType.</param>
-        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string codecTimeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), DlnaSubtitleDeliveryMethod deliveryMethod = default(DlnaSubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaInfoMediaProtocol protocol = default(MediaInfoMediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), bool? isClosedCaptions = default(bool?), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
+        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), DlnaSubtitleDeliveryMethod deliveryMethod = default(DlnaSubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaInfoMediaProtocol protocol = default(MediaInfoMediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), ExtendedVideoTypes extendedVideoType = default(ExtendedVideoTypes), ExtendedVideoSubTypes extendedVideoSubtype = default(ExtendedVideoSubTypes), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
         {
             this.Codec = codec;
             this.CodecTag = codecTag;
@@ -89,7 +89,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.Comment = comment;
             this.StreamStartTimeTicks = streamStartTimeTicks;
             this.TimeBase = timeBase;
-            this.CodecTimeBase = codecTimeBase;
             this.Title = title;
             this.Extradata = extradata;
             this.VideoRange = videoRange;
@@ -126,11 +125,12 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.PixelFormat = pixelFormat;
             this.Level = level;
             this.IsAnamorphic = isAnamorphic;
+            this.ExtendedVideoType = extendedVideoType;
+            this.ExtendedVideoSubtype = extendedVideoSubtype;
             this.ItemId = itemId;
             this.ServerId = serverId;
             this.AttachmentSize = attachmentSize;
             this.MimeType = mimeType;
-            this.IsClosedCaptions = isClosedCaptions;
             this.SubtitleLocationType = subtitleLocationType;
         }
         
@@ -187,12 +187,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="TimeBase", EmitDefaultValue=false)]
         public string TimeBase { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CodecTimeBase
-        /// </summary>
-        [DataMember(Name="CodecTimeBase", EmitDefaultValue=false)]
-        public string CodecTimeBase { get; set; }
 
         /// <summary>
         /// Gets or Sets Title
@@ -411,6 +405,18 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? IsAnamorphic { get; set; }
 
         /// <summary>
+        /// Gets or Sets ExtendedVideoType
+        /// </summary>
+        [DataMember(Name="ExtendedVideoType", EmitDefaultValue=false)]
+        public ExtendedVideoTypes ExtendedVideoType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ExtendedVideoSubtype
+        /// </summary>
+        [DataMember(Name="ExtendedVideoSubtype", EmitDefaultValue=false)]
+        public ExtendedVideoSubTypes ExtendedVideoSubtype { get; set; }
+
+        /// <summary>
         /// Gets or Sets ItemId
         /// </summary>
         [DataMember(Name="ItemId", EmitDefaultValue=false)]
@@ -435,12 +441,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string MimeType { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsClosedCaptions
-        /// </summary>
-        [DataMember(Name="IsClosedCaptions", EmitDefaultValue=false)]
-        public bool? IsClosedCaptions { get; set; }
-
-        /// <summary>
         /// Gets or Sets SubtitleLocationType
         /// </summary>
         [DataMember(Name="SubtitleLocationType", EmitDefaultValue=false)]
@@ -463,7 +463,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  Comment: ").Append(Comment).Append("\n");
             sb.Append("  StreamStartTimeTicks: ").Append(StreamStartTimeTicks).Append("\n");
             sb.Append("  TimeBase: ").Append(TimeBase).Append("\n");
-            sb.Append("  CodecTimeBase: ").Append(CodecTimeBase).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Extradata: ").Append(Extradata).Append("\n");
             sb.Append("  VideoRange: ").Append(VideoRange).Append("\n");
@@ -500,11 +499,12 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  PixelFormat: ").Append(PixelFormat).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("  IsAnamorphic: ").Append(IsAnamorphic).Append("\n");
+            sb.Append("  ExtendedVideoType: ").Append(ExtendedVideoType).Append("\n");
+            sb.Append("  ExtendedVideoSubtype: ").Append(ExtendedVideoSubtype).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
             sb.Append("  AttachmentSize: ").Append(AttachmentSize).Append("\n");
             sb.Append("  MimeType: ").Append(MimeType).Append("\n");
-            sb.Append("  IsClosedCaptions: ").Append(IsClosedCaptions).Append("\n");
             sb.Append("  SubtitleLocationType: ").Append(SubtitleLocationType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -584,11 +584,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.TimeBase == input.TimeBase ||
                     (this.TimeBase != null &&
                     this.TimeBase.Equals(input.TimeBase))
-                ) && 
-                (
-                    this.CodecTimeBase == input.CodecTimeBase ||
-                    (this.CodecTimeBase != null &&
-                    this.CodecTimeBase.Equals(input.CodecTimeBase))
                 ) && 
                 (
                     this.Title == input.Title ||
@@ -771,6 +766,16 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.IsAnamorphic.Equals(input.IsAnamorphic))
                 ) && 
                 (
+                    this.ExtendedVideoType == input.ExtendedVideoType ||
+                    (this.ExtendedVideoType != null &&
+                    this.ExtendedVideoType.Equals(input.ExtendedVideoType))
+                ) && 
+                (
+                    this.ExtendedVideoSubtype == input.ExtendedVideoSubtype ||
+                    (this.ExtendedVideoSubtype != null &&
+                    this.ExtendedVideoSubtype.Equals(input.ExtendedVideoSubtype))
+                ) && 
+                (
                     this.ItemId == input.ItemId ||
                     (this.ItemId != null &&
                     this.ItemId.Equals(input.ItemId))
@@ -789,11 +794,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.MimeType == input.MimeType ||
                     (this.MimeType != null &&
                     this.MimeType.Equals(input.MimeType))
-                ) && 
-                (
-                    this.IsClosedCaptions == input.IsClosedCaptions ||
-                    (this.IsClosedCaptions != null &&
-                    this.IsClosedCaptions.Equals(input.IsClosedCaptions))
                 ) && 
                 (
                     this.SubtitleLocationType == input.SubtitleLocationType ||
@@ -829,8 +829,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.StreamStartTimeTicks.GetHashCode();
                 if (this.TimeBase != null)
                     hashCode = hashCode * 59 + this.TimeBase.GetHashCode();
-                if (this.CodecTimeBase != null)
-                    hashCode = hashCode * 59 + this.CodecTimeBase.GetHashCode();
                 if (this.Title != null)
                     hashCode = hashCode * 59 + this.Title.GetHashCode();
                 if (this.Extradata != null)
@@ -903,6 +901,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.Level.GetHashCode();
                 if (this.IsAnamorphic != null)
                     hashCode = hashCode * 59 + this.IsAnamorphic.GetHashCode();
+                if (this.ExtendedVideoType != null)
+                    hashCode = hashCode * 59 + this.ExtendedVideoType.GetHashCode();
+                if (this.ExtendedVideoSubtype != null)
+                    hashCode = hashCode * 59 + this.ExtendedVideoSubtype.GetHashCode();
                 if (this.ItemId != null)
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.ServerId != null)
@@ -911,8 +913,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.AttachmentSize.GetHashCode();
                 if (this.MimeType != null)
                     hashCode = hashCode * 59 + this.MimeType.GetHashCode();
-                if (this.IsClosedCaptions != null)
-                    hashCode = hashCode * 59 + this.IsClosedCaptions.GetHashCode();
                 if (this.SubtitleLocationType != null)
                     hashCode = hashCode * 59 + this.SubtitleLocationType.GetHashCode();
                 return hashCode;

@@ -22,4 +22,6 @@ public enum MetadataFields: String, Codable {
     case channelNumber = "ChannelNumber"
     case sortName = "SortName"
     case originalTitle = "OriginalTitle"
+    case sortIndexNumber = "SortIndexNumber"
+    case sortParentIndexNumber = "SortParentIndexNumber"
 }

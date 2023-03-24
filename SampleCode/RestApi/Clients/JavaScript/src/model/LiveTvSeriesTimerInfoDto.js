@@ -18,7 +18,7 @@ import LiveTvTimerType from './LiveTvTimerType';
 /**
 * The LiveTvSeriesTimerInfoDto model module.
 * @module model/LiveTvSeriesTimerInfoDto
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class LiveTvSeriesTimerInfoDto {
     /**
@@ -107,6 +107,9 @@ export default class LiveTvSeriesTimerInfoDto {
             }
             if (data.hasOwnProperty('ChannelName')) {
                 obj['ChannelName'] = ApiClient.convertToType(data['ChannelName'], 'String');
+            }
+            if (data.hasOwnProperty('ChannelNumber')) {
+                obj['ChannelNumber'] = ApiClient.convertToType(data['ChannelNumber'], 'String');
             }
             if (data.hasOwnProperty('ChannelPrimaryImageTag')) {
                 obj['ChannelPrimaryImageTag'] = ApiClient.convertToType(data['ChannelPrimaryImageTag'], 'String');
@@ -238,6 +241,10 @@ export default class LiveTvSeriesTimerInfoDto {
     * @member {String} ChannelName
     */
     'ChannelName' = undefined;
+    /**
+    * @member {String} ChannelNumber
+    */
+    'ChannelNumber' = undefined;
     /**
     * @member {String} ChannelPrimaryImageTag
     */

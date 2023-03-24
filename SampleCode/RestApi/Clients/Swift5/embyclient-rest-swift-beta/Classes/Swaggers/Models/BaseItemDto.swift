@@ -23,9 +23,6 @@ public struct BaseItemDto: Codable {
     public var extraType: String?
     public var sortIndexNumber: Int?
     public var sortParentIndexNumber: Int?
-    public var airsBeforeSeasonNumber: Int?
-    public var airsAfterSeasonNumber: Int?
-    public var airsBeforeEpisodeNumber: Int?
     public var canDelete: Bool?
     public var canDownload: Bool?
     public var supportsResume: Bool?
@@ -33,6 +30,9 @@ public struct BaseItemDto: Codable {
     public var preferredMetadataLanguage: String?
     public var preferredMetadataCountryCode: String?
     public var supportsSync: Bool?
+    public var canManageAccess: Bool?
+    public var canMakePrivate: Bool?
+    public var canMakePublic: Bool?
     public var container: String?
     public var sortName: String?
     public var forcedSortName: String?
@@ -58,7 +58,6 @@ public struct BaseItemDto: Codable {
     public var size: Int64?
     public var fileName: String?
     public var bitrate: Int?
-    public var playAccess: LibraryPlayAccess?
     public var productionYear: Int?
     public var number: String?
     public var channelNumber: String?
@@ -163,7 +162,7 @@ public struct BaseItemDto: Codable {
     public var listingsChannelNumber: String?
     public var affiliateCallSign: String?
 
-    public init(name: String? = nil, originalTitle: String? = nil, serverId: String? = nil, _id: String? = nil, guid: String? = nil, etag: String? = nil, _prefix: String? = nil, playlistItemId: String? = nil, dateCreated: Date? = nil, extraType: String? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, airsBeforeSeasonNumber: Int? = nil, airsAfterSeasonNumber: Int? = nil, airsBeforeEpisodeNumber: Int? = nil, canDelete: Bool? = nil, canDownload: Bool? = nil, supportsResume: Bool? = nil, presentationUniqueKey: String? = nil, preferredMetadataLanguage: String? = nil, preferredMetadataCountryCode: String? = nil, supportsSync: Bool? = nil, container: String? = nil, sortName: String? = nil, forcedSortName: String? = nil, video3DFormat: Video3DFormat? = nil, premiereDate: Date? = nil, externalUrls: [ExternalUrl]? = nil, mediaSources: [MediaSourceInfo]? = nil, criticRating: Float? = nil, gameSystemId: Int64? = nil, asSeries: Bool? = nil, gameSystem: String? = nil, productionLocations: [String]? = nil, path: String? = nil, officialRating: String? = nil, customRating: String? = nil, channelId: String? = nil, channelName: String? = nil, overview: String? = nil, taglines: [String]? = nil, genres: [String]? = nil, communityRating: Float? = nil, runTimeTicks: Int64? = nil, size: Int64? = nil, fileName: String? = nil, bitrate: Int? = nil, playAccess: LibraryPlayAccess? = nil, productionYear: Int? = nil, number: String? = nil, channelNumber: String? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, remoteTrailers: [MediaUrl]? = nil, providerIds: ProviderIdDictionary? = nil, isFolder: Bool? = nil, parentId: String? = nil, type: String? = nil, people: [BaseItemPerson]? = nil, studios: [NameLongIdPair]? = nil, genreItems: [NameLongIdPair]? = nil, tagItems: [NameLongIdPair]? = nil, parentLogoItemId: String? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, localTrailerCount: Int? = nil, userData: UserItemDataDto? = nil, recursiveItemCount: Int? = nil, childCount: Int? = nil, seriesName: String? = nil, seriesId: String? = nil, seasonId: String? = nil, specialFeatureCount: Int? = nil, displayPreferencesId: String? = nil, status: String? = nil, airDays: [DayOfWeek]? = nil, tags: [String]? = nil, primaryImageAspectRatio: Double? = nil, artists: [String]? = nil, artistItems: [NameIdPair]? = nil, composers: [NameIdPair]? = nil, album: String? = nil, collectionType: String? = nil, displayOrder: String? = nil, albumId: String? = nil, albumPrimaryImageTag: String? = nil, seriesPrimaryImageTag: String? = nil, albumArtist: String? = nil, albumArtists: [NameIdPair]? = nil, seasonName: String? = nil, mediaStreams: [MediaStream]? = nil, partCount: Int? = nil, imageTags: [String:String]? = nil, backdropImageTags: [String]? = nil, parentLogoImageTag: String? = nil, seriesStudio: String? = nil, parentThumbItemId: String? = nil, parentThumbImageTag: String? = nil, chapters: [ChapterInfo]? = nil, locationType: LocationType? = nil, mediaType: String? = nil, endDate: Date? = nil, lockedFields: [MetadataFields]? = nil, lockData: Bool? = nil, width: Int? = nil, height: Int? = nil, cameraMake: String? = nil, cameraModel: String? = nil, software: String? = nil, exposureTime: Double? = nil, focalLength: Double? = nil, imageOrientation: DrawingImageOrientation? = nil, aperture: Double? = nil, shutterSpeed: Double? = nil, latitude: Double? = nil, longitude: Double? = nil, altitude: Double? = nil, isoSpeedRating: Int? = nil, seriesTimerId: String? = nil, channelPrimaryImageTag: String? = nil, startDate: Date? = nil, completionPercentage: Double? = nil, isRepeat: Bool? = nil, isNew: Bool? = nil, episodeTitle: String? = nil, isMovie: Bool? = nil, isSports: Bool? = nil, isSeries: Bool? = nil, isLive: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isPremiere: Bool? = nil, timerType: LiveTvTimerType? = nil, disabled: Bool? = nil, managementId: String? = nil, timerId: String? = nil, currentProgram: BaseItemDto? = nil, movieCount: Int? = nil, seriesCount: Int? = nil, albumCount: Int? = nil, songCount: Int? = nil, musicVideoCount: Int? = nil, subviews: [String]? = nil, listingsProviderId: String? = nil, listingsChannelId: String? = nil, listingsPath: String? = nil, listingsId: String? = nil, listingsChannelName: String? = nil, listingsChannelNumber: String? = nil, affiliateCallSign: String? = nil) {
+    public init(name: String? = nil, originalTitle: String? = nil, serverId: String? = nil, _id: String? = nil, guid: String? = nil, etag: String? = nil, _prefix: String? = nil, playlistItemId: String? = nil, dateCreated: Date? = nil, extraType: String? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, canDelete: Bool? = nil, canDownload: Bool? = nil, supportsResume: Bool? = nil, presentationUniqueKey: String? = nil, preferredMetadataLanguage: String? = nil, preferredMetadataCountryCode: String? = nil, supportsSync: Bool? = nil, canManageAccess: Bool? = nil, canMakePrivate: Bool? = nil, canMakePublic: Bool? = nil, container: String? = nil, sortName: String? = nil, forcedSortName: String? = nil, video3DFormat: Video3DFormat? = nil, premiereDate: Date? = nil, externalUrls: [ExternalUrl]? = nil, mediaSources: [MediaSourceInfo]? = nil, criticRating: Float? = nil, gameSystemId: Int64? = nil, asSeries: Bool? = nil, gameSystem: String? = nil, productionLocations: [String]? = nil, path: String? = nil, officialRating: String? = nil, customRating: String? = nil, channelId: String? = nil, channelName: String? = nil, overview: String? = nil, taglines: [String]? = nil, genres: [String]? = nil, communityRating: Float? = nil, runTimeTicks: Int64? = nil, size: Int64? = nil, fileName: String? = nil, bitrate: Int? = nil, productionYear: Int? = nil, number: String? = nil, channelNumber: String? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, remoteTrailers: [MediaUrl]? = nil, providerIds: ProviderIdDictionary? = nil, isFolder: Bool? = nil, parentId: String? = nil, type: String? = nil, people: [BaseItemPerson]? = nil, studios: [NameLongIdPair]? = nil, genreItems: [NameLongIdPair]? = nil, tagItems: [NameLongIdPair]? = nil, parentLogoItemId: String? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, localTrailerCount: Int? = nil, userData: UserItemDataDto? = nil, recursiveItemCount: Int? = nil, childCount: Int? = nil, seriesName: String? = nil, seriesId: String? = nil, seasonId: String? = nil, specialFeatureCount: Int? = nil, displayPreferencesId: String? = nil, status: String? = nil, airDays: [DayOfWeek]? = nil, tags: [String]? = nil, primaryImageAspectRatio: Double? = nil, artists: [String]? = nil, artistItems: [NameIdPair]? = nil, composers: [NameIdPair]? = nil, album: String? = nil, collectionType: String? = nil, displayOrder: String? = nil, albumId: String? = nil, albumPrimaryImageTag: String? = nil, seriesPrimaryImageTag: String? = nil, albumArtist: String? = nil, albumArtists: [NameIdPair]? = nil, seasonName: String? = nil, mediaStreams: [MediaStream]? = nil, partCount: Int? = nil, imageTags: [String:String]? = nil, backdropImageTags: [String]? = nil, parentLogoImageTag: String? = nil, seriesStudio: String? = nil, parentThumbItemId: String? = nil, parentThumbImageTag: String? = nil, chapters: [ChapterInfo]? = nil, locationType: LocationType? = nil, mediaType: String? = nil, endDate: Date? = nil, lockedFields: [MetadataFields]? = nil, lockData: Bool? = nil, width: Int? = nil, height: Int? = nil, cameraMake: String? = nil, cameraModel: String? = nil, software: String? = nil, exposureTime: Double? = nil, focalLength: Double? = nil, imageOrientation: DrawingImageOrientation? = nil, aperture: Double? = nil, shutterSpeed: Double? = nil, latitude: Double? = nil, longitude: Double? = nil, altitude: Double? = nil, isoSpeedRating: Int? = nil, seriesTimerId: String? = nil, channelPrimaryImageTag: String? = nil, startDate: Date? = nil, completionPercentage: Double? = nil, isRepeat: Bool? = nil, isNew: Bool? = nil, episodeTitle: String? = nil, isMovie: Bool? = nil, isSports: Bool? = nil, isSeries: Bool? = nil, isLive: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isPremiere: Bool? = nil, timerType: LiveTvTimerType? = nil, disabled: Bool? = nil, managementId: String? = nil, timerId: String? = nil, currentProgram: BaseItemDto? = nil, movieCount: Int? = nil, seriesCount: Int? = nil, albumCount: Int? = nil, songCount: Int? = nil, musicVideoCount: Int? = nil, subviews: [String]? = nil, listingsProviderId: String? = nil, listingsChannelId: String? = nil, listingsPath: String? = nil, listingsId: String? = nil, listingsChannelName: String? = nil, listingsChannelNumber: String? = nil, affiliateCallSign: String? = nil) {
         self.name = name
         self.originalTitle = originalTitle
         self.serverId = serverId
@@ -176,9 +175,6 @@ public struct BaseItemDto: Codable {
         self.extraType = extraType
         self.sortIndexNumber = sortIndexNumber
         self.sortParentIndexNumber = sortParentIndexNumber
-        self.airsBeforeSeasonNumber = airsBeforeSeasonNumber
-        self.airsAfterSeasonNumber = airsAfterSeasonNumber
-        self.airsBeforeEpisodeNumber = airsBeforeEpisodeNumber
         self.canDelete = canDelete
         self.canDownload = canDownload
         self.supportsResume = supportsResume
@@ -186,6 +182,9 @@ public struct BaseItemDto: Codable {
         self.preferredMetadataLanguage = preferredMetadataLanguage
         self.preferredMetadataCountryCode = preferredMetadataCountryCode
         self.supportsSync = supportsSync
+        self.canManageAccess = canManageAccess
+        self.canMakePrivate = canMakePrivate
+        self.canMakePublic = canMakePublic
         self.container = container
         self.sortName = sortName
         self.forcedSortName = forcedSortName
@@ -211,7 +210,6 @@ public struct BaseItemDto: Codable {
         self.size = size
         self.fileName = fileName
         self.bitrate = bitrate
-        self.playAccess = playAccess
         self.productionYear = productionYear
         self.number = number
         self.channelNumber = channelNumber
@@ -330,9 +328,6 @@ public struct BaseItemDto: Codable {
         case extraType = "ExtraType"
         case sortIndexNumber = "SortIndexNumber"
         case sortParentIndexNumber = "SortParentIndexNumber"
-        case airsBeforeSeasonNumber = "AirsBeforeSeasonNumber"
-        case airsAfterSeasonNumber = "AirsAfterSeasonNumber"
-        case airsBeforeEpisodeNumber = "AirsBeforeEpisodeNumber"
         case canDelete = "CanDelete"
         case canDownload = "CanDownload"
         case supportsResume = "SupportsResume"
@@ -340,6 +335,9 @@ public struct BaseItemDto: Codable {
         case preferredMetadataLanguage = "PreferredMetadataLanguage"
         case preferredMetadataCountryCode = "PreferredMetadataCountryCode"
         case supportsSync = "SupportsSync"
+        case canManageAccess = "CanManageAccess"
+        case canMakePrivate = "CanMakePrivate"
+        case canMakePublic = "CanMakePublic"
         case container = "Container"
         case sortName = "SortName"
         case forcedSortName = "ForcedSortName"
@@ -365,7 +363,6 @@ public struct BaseItemDto: Codable {
         case size = "Size"
         case fileName = "FileName"
         case bitrate = "Bitrate"
-        case playAccess = "PlayAccess"
         case productionYear = "ProductionYear"
         case number = "Number"
         case channelNumber = "ChannelNumber"

@@ -1727,6 +1727,32 @@ public bool IsPlaceHolder { get; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_IsPublic_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsPublic*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsPublic" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsPublic">IsPublic</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public bool IsPublic { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_IsResolvedToFolder_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsResolvedToFolder*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsResolvedToFolder" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsResolvedToFolder">IsResolvedToFolder</h4>
   <div class="markdown level1 summary"></div>
@@ -3021,6 +3047,32 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_ShareLevel_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ShareLevel*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_ShareLevel" data-uid="MediaBrowser.Controller.Entities.BaseItem.ShareLevel">ShareLevel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public UserItemShareLevel? ShareLevel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.UserItemShareLevel.html">UserItemShareLevel</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4591,6 +4643,216 @@ public int Width { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CanMakePrivate_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePrivate*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanMakePrivate_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePrivate(MediaBrowser.Controller.Entities.User)">CanMakePrivate(User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanMakePrivate(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CanMakePrivate_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePrivate*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanMakePrivate_MediaBrowser_Controller_Library_UserItemShareLevel_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePrivate(MediaBrowser.Controller.Library.UserItemShareLevel)">CanMakePrivate(UserItemShareLevel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanMakePrivate(UserItemShareLevel shareLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePublic*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePublic(MediaBrowser.Controller.Entities.User)">CanMakePublic(User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanMakePublic(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePublic*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_MediaBrowser_Controller_Library_UserItemShareLevel_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanMakePublic(MediaBrowser.Controller.Library.UserItemShareLevel)">CanMakePublic(UserItemShareLevel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanMakePublic(UserItemShareLevel shareLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CanManageAccess_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanManageAccess*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanManageAccess_MediaBrowser_Controller_Library_UserItemShareLevel_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanManageAccess(MediaBrowser.Controller.Library.UserItemShareLevel)">CanManageAccess(UserItemShareLevel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanManageAccess(UserItemShareLevel shareLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_ContainsTag_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ContainsTag*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_ContainsTag_System_String_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ContainsTag(System.String)">ContainsTag(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -4927,30 +5189,13 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetAdditionalPartIds_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetAdditionalPartIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetAdditionalPartIds_System_Int64_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetAdditionalPartIds(System.Int64)">GetAdditionalPartIds(Int64)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetAdditionalPartIds" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetAdditionalPartIds">GetAdditionalPartIds()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long[] GetAdditionalPartIds(long internalId)</code></pre>
+    <pre><code class="lang-csharp hljs">public long[] GetAdditionalPartIds()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">internalId</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -4969,12 +5214,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetAdditionalParts_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetAdditionalParts*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetAdditionalParts_System_Int64_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetAdditionalParts(System.Int64,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Controller.Entities.User)">GetAdditionalParts(Int64, DtoOptions, User)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetAdditionalParts_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetAdditionalParts(MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Controller.Entities.User)">GetAdditionalParts(DtoOptions, User)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BaseItem[] GetAdditionalParts(long internalId, DtoOptions options, User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public BaseItem[] GetAdditionalParts(DtoOptions options, User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4986,11 +5231,6 @@ public int Width { get; set; }</code></pre>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">internalId</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
         <td><span class="parametername">options</span></td>
@@ -5087,76 +5327,6 @@ public int Width { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.LinkedItemInfo.html">LinkedItemInfo</a>&gt;</td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedType_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetBlockUnratedType*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedType" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetBlockUnratedType">GetBlockUnratedType()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual UnratedItem GetBlockUnratedType()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.UnratedItem.html">UnratedItem</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedValue_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetBlockUnratedValue*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedValue_MediaBrowser_Model_Users_UserPolicy_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetBlockUnratedValue(MediaBrowser.Model.Users.UserPolicy)">GetBlockUnratedValue(UserPolicy)</h4>
-  <div class="markdown level1 summary"><p>Gets the block unrated value.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual bool GetBlockUnratedValue(UserPolicy config)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Users.UserPolicy.html">UserPolicy</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>The configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if XXXX, <code>false</code> otherwise.</p>
-</td>
       </tr>
     </tbody>
   </table>
@@ -6051,7 +6221,7 @@ public int Width { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual List&lt;long&gt; GetInternalAncestorIds()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;long&gt; GetInternalAncestorIds()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6597,51 +6767,6 @@ This overload is for CoverArt</p>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetPlayAccess_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPlayAccess*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetPlayAccess_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPlayAccess(MediaBrowser.Controller.Entities.User)">GetPlayAccess(User)</h4>
-  <div class="markdown level1 summary"><p>Gets the play access.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlayAccess GetPlayAccess(User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Library.PlayAccess.html">PlayAccess</a></td>
-        <td><p>PlayAccess.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetPreferredImageLanguage_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPreferredImageLanguage*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetPreferredImageLanguage_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPreferredImageLanguage(MediaBrowser.Model.Configuration.LibraryOptions)">GetPreferredImageLanguage(LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
@@ -7092,31 +7217,6 @@ This overload is for CoverArt</p>
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetTopParent_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetTopParent*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetTopParent" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetTopParent">GetTopParent()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseItem GetTopParent()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -7616,67 +7716,6 @@ This overload is for CoverArt</p>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_BaseItem_IsParentalAllowed_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsParentalAllowed*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsParentalAllowed_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsParentalAllowed(MediaBrowser.Controller.Entities.User)">IsParentalAllowed(User)</h4>
-  <div class="markdown level1 summary"><p>Determines if a given user has access to this item</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsParentalAllowed(User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if [is parental allowed] [the specified user]; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>user</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsPathProtocol*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_MediaBrowser_Model_MediaInfo_MediaProtocol_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsPathProtocol(MediaBrowser.Model.MediaInfo.MediaProtocol)">IsPathProtocol(MediaProtocol)</h4>
   <div class="markdown level1 summary"></div>
@@ -7913,91 +7952,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool IsVisibleStandalone(User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandaloneInternal_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsVisibleStandaloneInternal*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandaloneInternal_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsVisibleStandaloneInternal(MediaBrowser.Controller.Entities.User)">IsVisibleStandaloneInternal(User)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool IsVisibleStandaloneInternal(User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_IsVisibleViaTags_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsVisibleViaTags*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsVisibleViaTags_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsVisibleViaTags(MediaBrowser.Controller.Entities.User)">IsVisibleViaTags(User)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual bool IsVisibleViaTags(User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsVisibleStandalone(User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -8273,6 +8228,53 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td><p>true if a provider reports we changed</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(MediaBrowser.Model.Configuration.LibraryOptions,System.Threading.CancellationToken)">RefreshMetadata(LibraryOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RefreshMetadata(LibraryOptions libraryOptions, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -8843,6 +8845,56 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_SupportsMakePublicOrPrivate_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsMakePublicOrPrivate*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SupportsMakePublicOrPrivate" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsMakePublicOrPrivate">SupportsMakePublicOrPrivate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsMakePublicOrPrivate()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_SupportsManageAccess_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsManageAccess*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SupportsManageAccess" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsManageAccess">SupportsManageAccess()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsManageAccess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsPlayedStatus*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportsPlayedStatus">SupportsPlayedStatus()</h4>
   <div class="markdown level1 summary"></div>
@@ -9018,6 +9070,75 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a></td>
         <td><span class="parametername">updateReason</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository(MediaBrowser.Controller.Library.ItemUpdateType,MediaBrowser.Controller.Entities.BaseItem)">UpdateToRepository(ItemUpdateType, BaseItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateToRepository(ItemUpdateType updateReason, BaseItem parent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a></td>
+        <td><span class="parametername">updateReason</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository(MediaBrowser.Controller.Library.ItemUpdateType,MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Providers.MetadataRefreshOptions)">UpdateToRepository(ItemUpdateType, BaseItem, MetadataRefreshOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateToRepository(ItemUpdateType updateReason, BaseItem parent, MetadataRefreshOptions metadataRefreshOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a></td>
+        <td><span class="parametername">updateReason</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>
+        <td><span class="parametername">metadataRefreshOptions</span></td>
         <td></td>
       </tr>
     </tbody>

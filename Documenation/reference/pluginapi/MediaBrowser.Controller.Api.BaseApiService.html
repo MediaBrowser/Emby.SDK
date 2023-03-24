@@ -214,6 +214,31 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Api_BaseApiService_LibraryManager_" data-uid="MediaBrowser.Controller.Api.BaseApiService.LibraryManager*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_LibraryManager" data-uid="MediaBrowser.Controller.Api.BaseApiService.LibraryManager">LibraryManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILibraryManager LibraryManager { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Api_BaseApiService_Logger_" data-uid="MediaBrowser.Controller.Api.BaseApiService.Logger*"></a>
   <h4 id="MediaBrowser_Controller_Api_BaseApiService_Logger" data-uid="MediaBrowser.Controller.Api.BaseApiService.Logger">Logger</h4>
   <div class="markdown level1 summary"><p>Gets or sets the logger.</p>
@@ -972,6 +997,100 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.Person.html">Person</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseApiService_GetQueryParent_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetQueryParent*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_GetQueryParent_System_String_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetQueryParent(System.String,MediaBrowser.Controller.Entities.User)">GetQueryParent(String, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseItem GetQueryParent(string parentId, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">parentId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseApiService_GetQueryParentFolder_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetQueryParentFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_GetQueryParentFolder_System_String_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetQueryParentFolder(System.String,MediaBrowser.Controller.Entities.User)">GetQueryParentFolder(String, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Folder GetQueryParentFolder(string parentId, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">parentId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -21,6 +21,7 @@ public struct LiveTvTimerInfoDto: Codable {
     public var serverId: String?
     public var channelId: String?
     public var channelName: String?
+    public var channelNumber: String?
     public var channelPrimaryImageTag: String?
     public var programId: String?
     public var name: String?
@@ -36,7 +37,7 @@ public struct LiveTvTimerInfoDto: Codable {
     public var isPostPaddingRequired: Bool?
     public var keepUntil: LiveTvKeepUntil?
 
-    public init(status: LiveTvRecordingStatus? = nil, seriesTimerId: String? = nil, runTimeTicks: Int64? = nil, programInfo: BaseItemDto? = nil, timerType: LiveTvTimerType? = nil, _id: String? = nil, type: String? = nil, serverId: String? = nil, channelId: String? = nil, channelName: String? = nil, channelPrimaryImageTag: String? = nil, programId: String? = nil, name: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, isPostPaddingRequired: Bool? = nil, keepUntil: LiveTvKeepUntil? = nil) {
+    public init(status: LiveTvRecordingStatus? = nil, seriesTimerId: String? = nil, runTimeTicks: Int64? = nil, programInfo: BaseItemDto? = nil, timerType: LiveTvTimerType? = nil, _id: String? = nil, type: String? = nil, serverId: String? = nil, channelId: String? = nil, channelName: String? = nil, channelNumber: String? = nil, channelPrimaryImageTag: String? = nil, programId: String? = nil, name: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, isPostPaddingRequired: Bool? = nil, keepUntil: LiveTvKeepUntil? = nil) {
         self.status = status
         self.seriesTimerId = seriesTimerId
         self.runTimeTicks = runTimeTicks
@@ -47,6 +48,7 @@ public struct LiveTvTimerInfoDto: Codable {
         self.serverId = serverId
         self.channelId = channelId
         self.channelName = channelName
+        self.channelNumber = channelNumber
         self.channelPrimaryImageTag = channelPrimaryImageTag
         self.programId = programId
         self.name = name
@@ -74,6 +76,7 @@ public struct LiveTvTimerInfoDto: Codable {
         case serverId = "ServerId"
         case channelId = "ChannelId"
         case channelName = "ChannelName"
+        case channelNumber = "ChannelNumber"
         case channelPrimaryImageTag = "ChannelPrimaryImageTag"
         case programId = "ProgramId"
         case name = "Name"

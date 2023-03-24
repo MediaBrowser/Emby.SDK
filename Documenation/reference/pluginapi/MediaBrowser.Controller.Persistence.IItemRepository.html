@@ -405,6 +405,38 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_DeleteUserItemShares_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.DeleteUserItemShares*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_DeleteUserItemShares_System_Int64_System_Nullable_MediaBrowser_Controller_Library_UserItemShareLevel__" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.DeleteUserItemShares(System.Int64,System.Nullable{MediaBrowser.Controller.Library.UserItemShareLevel})">DeleteUserItemShares(Int64, Nullable&lt;UserItemShareLevel&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteUserItemShares(long itemId, UserItemShareLevel? maxShareLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.UserItemShareLevel.html">UserItemShareLevel</a>&gt;</td>
+        <td><span class="parametername">maxShareLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetArtistPrefixes_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetArtistPrefixes*"></a>
   <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetArtistPrefixes_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Controller_Library_ItemLinkType___" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetArtistPrefixes(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Controller.Library.ItemLinkType[])">GetArtistPrefixes(InternalItemsQuery, ItemLinkType[])</h4>
   <div class="markdown level1 summary"></div>
@@ -506,6 +538,48 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">QueryResult&lt;string&gt; GetAudioCodecs(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetAudioLayouts_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetAudioLayouts*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetAudioLayouts_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetAudioLayouts(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetAudioLayouts(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;string&gt; GetAudioLayouts(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -933,48 +1007,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetGuid_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetGuid*"></a>
-  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetGuid_System_Int64_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetGuid(System.Int64)">GetGuid(Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Guid GetGuid(long id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2043,6 +2075,48 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetShareLevels_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetShareLevels*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetShareLevels_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetShareLevels(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetShareLevels(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;UserItemShareLevel?&gt; GetShareLevels(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.UserItemShareLevel.html">UserItemShareLevel</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetStreamLanguages_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetStreamLanguages*"></a>
   <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetStreamLanguages_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Entities_MediaStreamType_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetStreamLanguages(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Entities.MediaStreamType)">GetStreamLanguages(InternalItemsQuery, MediaStreamType)</h4>
   <div class="markdown level1 summary"></div>
@@ -2347,6 +2421,48 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetUserItemShares_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetUserItemShares*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetUserItemShares_MediaBrowser_Controller_Library_UserItemShareQuery_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetUserItemShares(MediaBrowser.Controller.Library.UserItemShareQuery)">GetUserItemShares(UserItemShareQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UserItemShare[] GetUserItemShares(UserItemShareQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShareQuery.html">UserItemShareQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShare.html">UserItemShare</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetVideoCodecs_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetVideoCodecs*"></a>
   <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetVideoCodecs_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetVideoCodecs(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetVideoCodecs(InternalItemsQuery)</h4>
   <div class="markdown level1 summary"></div>
@@ -2526,6 +2642,33 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">newIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_OnUserDeleted_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.OnUserDeleted*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_OnUserDeleted_System_Int64_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.OnUserDeleted(System.Int64)">OnUserDeleted(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnUserDeleted(long userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">userId</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2839,6 +2982,33 @@
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_SaveUserItemShares_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.SaveUserItemShares*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_SaveUserItemShares_MediaBrowser_Controller_Library_UserItemShare___" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.SaveUserItemShares(MediaBrowser.Controller.Library.UserItemShare[])">SaveUserItemShares(UserItemShare[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SaveUserItemShares(UserItemShare[] shares)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShare.html">UserItemShare</a>[]</td>
+        <td><span class="parametername">shares</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

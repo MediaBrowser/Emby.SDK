@@ -20,6 +20,7 @@ type LiveTvTimerInfoDto struct {
 	ServerId string `json:"ServerId,omitempty"`
 	ChannelId string `json:"ChannelId,omitempty"`
 	ChannelName string `json:"ChannelName,omitempty"`
+	ChannelNumber string `json:"ChannelNumber,omitempty"`
 	ChannelPrimaryImageTag string `json:"ChannelPrimaryImageTag,omitempty"`
 	ProgramId string `json:"ProgramId,omitempty"`
 	Name string `json:"Name,omitempty"`

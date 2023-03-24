@@ -23,4 +23,6 @@ const (
 	CHANNEL_NUMBER_MetadataFields MetadataFields = "ChannelNumber"
 	SORT_NAME_MetadataFields MetadataFields = "SortName"
 	ORIGINAL_TITLE_MetadataFields MetadataFields = "OriginalTitle"
+	SORT_INDEX_NUMBER_MetadataFields MetadataFields = "SortIndexNumber"
+	SORT_PARENT_INDEX_NUMBER_MetadataFields MetadataFields = "SortParentIndexNumber"
 )

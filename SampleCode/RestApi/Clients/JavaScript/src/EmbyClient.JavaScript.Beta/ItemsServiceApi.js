@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ItemsService service.
 * @module EmbyClient.JavaScript.Beta/ItemsServiceApi
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export default class ItemsServiceApi {
 
@@ -124,6 +124,7 @@ export default class ItemsServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
@@ -252,6 +253,7 @@ export default class ItemsServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
@@ -379,6 +381,7 @@ export default class ItemsServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],

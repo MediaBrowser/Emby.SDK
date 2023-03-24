@@ -196,6 +196,36 @@ public class UserLibraryServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Makes an item private
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postItemsByIdMakeprivateTest() throws Exception {
+        String id = null;
+        api.postItemsByIdMakeprivate(id);
+
+        // TODO: test validations
+    }
+    /**
+     * Makes an item public to all users
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postItemsByIdMakepublicTest() throws Exception {
+        String id = null;
+        api.postItemsByIdMakepublic(id);
+
+        // TODO: test validations
+    }
+    /**
      * Marks an item as a favorite
      *
      * Requires authentication as user

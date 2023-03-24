@@ -106,6 +106,8 @@ import EmbyWebGenericUIModelEnumsUIViewType from './model/EmbyWebGenericUIModelE
 import EmbyWebGenericUIModelUICommand from './model/EmbyWebGenericUIModelUICommand';
 import EmbyWebGenericUIModelUITabPageInfo from './model/EmbyWebGenericUIModelUITabPageInfo';
 import EmbyWebGenericUIModelUIViewInfo from './model/EmbyWebGenericUIModelUIViewInfo';
+import ExtendedVideoSubTypes from './model/ExtendedVideoSubTypes';
+import ExtendedVideoTypes from './model/ExtendedVideoTypes';
 import ExternalIdInfo from './model/ExternalIdInfo';
 import ExternalUrl from './model/ExternalUrl';
 import ForgotPassword from './model/ForgotPassword';
@@ -130,7 +132,6 @@ import LibraryLibraryOptionsResult from './model/LibraryLibraryOptionsResult';
 import LibraryLibraryTypeOptions from './model/LibraryLibraryTypeOptions';
 import LibraryMediaFolder from './model/LibraryMediaFolder';
 import LibraryMediaUpdateInfo from './model/LibraryMediaUpdateInfo';
-import LibraryPlayAccess from './model/LibraryPlayAccess';
 import LibraryPostUpdatedMedia from './model/LibraryPostUpdatedMedia';
 import LibraryRemoveMediaPath from './model/LibraryRemoveMediaPath';
 import LibraryRemoveVirtualFolder from './model/LibraryRemoveVirtualFolder';
@@ -411,7 +412,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.21
+* @version 4.8.0.25
 */
 export {
     /**
@@ -997,6 +998,18 @@ export {
     EmbyWebGenericUIModelUIViewInfo,
 
     /**
+     * The ExtendedVideoSubTypes model constructor.
+     * @property {module:model/ExtendedVideoSubTypes}
+     */
+    ExtendedVideoSubTypes,
+
+    /**
+     * The ExtendedVideoTypes model constructor.
+     * @property {module:model/ExtendedVideoTypes}
+     */
+    ExtendedVideoTypes,
+
+    /**
      * The ExternalIdInfo model constructor.
      * @property {module:model/ExternalIdInfo}
      */
@@ -1139,12 +1152,6 @@ export {
      * @property {module:model/LibraryMediaUpdateInfo}
      */
     LibraryMediaUpdateInfo,
-
-    /**
-     * The LibraryPlayAccess model constructor.
-     * @property {module:model/LibraryPlayAccess}
-     */
-    LibraryPlayAccess,
 
     /**
      * The LibraryPostUpdatedMedia model constructor.

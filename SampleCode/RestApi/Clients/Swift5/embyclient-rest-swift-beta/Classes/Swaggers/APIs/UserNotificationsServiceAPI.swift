@@ -45,7 +45,8 @@ open class UserNotificationsServiceAPI {
   "SetupModuleUrl" : "SetupModuleUrl",
   "Enabled" : true,
   "Id" : "Id",
-  "UserIds" : [ "UserIds", "UserIds" ]
+  "UserIds" : [ "UserIds", "UserIds" ],
+  "IsSelfNotification" : true
 }}]
 
      - returns: RequestBuilder<EmbyNotificationsUserNotificationInfo> 

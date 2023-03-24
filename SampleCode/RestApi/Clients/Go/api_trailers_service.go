@@ -99,6 +99,7 @@ Requires authentication as user
      * @param "VideoTypes" (optional.String) -  Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
      * @param "Containers" (optional.String) -  Optional filter by Container. Allows multiple, comma delimeted.
      * @param "AudioCodecs" (optional.String) -  Optional filter by AudioCodec. Allows multiple, comma delimeted.
+     * @param "AudioLayouts" (optional.String) -  Optional filter by AudioLayout. Allows multiple, comma delimeted.
      * @param "VideoCodecs" (optional.String) -  Optional filter by VideoCodec. Allows multiple, comma delimeted.
      * @param "SubtitleCodecs" (optional.String) -  Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
      * @param "Path" (optional.String) -  Optional filter by Path.
@@ -191,6 +192,7 @@ type TrailersServiceApiGetTrailersOpts struct {
     VideoTypes optional.String
     Containers optional.String
     AudioCodecs optional.String
+    AudioLayouts optional.String
     VideoCodecs optional.String
     SubtitleCodecs optional.String
     Path optional.String
@@ -440,6 +442,9 @@ func (a *TrailersServiceApiService) GetTrailers(ctx context.Context, localVarOpt
 	}
 	if localVarOptionals != nil && localVarOptionals.AudioCodecs.IsSet() {
 		localVarQueryParams.Add("AudioCodecs", parameterToString(localVarOptionals.AudioCodecs.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.AudioLayouts.IsSet() {
+		localVarQueryParams.Add("AudioLayouts", parameterToString(localVarOptionals.AudioLayouts.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.VideoCodecs.IsSet() {
 		localVarQueryParams.Add("VideoCodecs", parameterToString(localVarOptionals.VideoCodecs.Value(), ""))
