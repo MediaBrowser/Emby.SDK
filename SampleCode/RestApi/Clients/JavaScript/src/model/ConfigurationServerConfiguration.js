@@ -16,7 +16,7 @@ import ConfigurationPathSubstitution from './ConfigurationPathSubstitution';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.25
+* @version 4.8.0.26
 */
 export default class ConfigurationServerConfiguration {
     /**

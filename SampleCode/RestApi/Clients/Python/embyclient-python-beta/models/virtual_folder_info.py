@@ -27,6 +27,7 @@ class VirtualFolderInfo(object):
         'collection_type': 'str',
         'library_options': 'ConfigurationLibraryOptions',
         'item_id': 'str',
+        'id': 'str',
         'guid': 'str',
         'primary_image_item_id': 'str',
         'refresh_progress': 'float',
@@ -39,19 +40,21 @@ class VirtualFolderInfo(object):
         'collection_type': 'CollectionType',
         'library_options': 'LibraryOptions',
         'item_id': 'ItemId',
+        'id': 'Id',
         'guid': 'Guid',
         'primary_image_item_id': 'PrimaryImageItemId',
         'refresh_progress': 'RefreshProgress',
         'refresh_status': 'RefreshStatus'
     }
 
-    def __init__(self, name=None, locations=None, collection_type=None, library_options=None, item_id=None, guid=None, primary_image_item_id=None, refresh_progress=None, refresh_status=None):  # noqa: E501
+    def __init__(self, name=None, locations=None, collection_type=None, library_options=None, item_id=None, id=None, guid=None, primary_image_item_id=None, refresh_progress=None, refresh_status=None):  # noqa: E501
         """VirtualFolderInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._locations = None
         self._collection_type = None
         self._library_options = None
         self._item_id = None
+        self._id = None
         self._guid = None
         self._primary_image_item_id = None
         self._refresh_progress = None
@@ -67,6 +70,8 @@ class VirtualFolderInfo(object):
             self.library_options = library_options
         if item_id is not None:
             self.item_id = item_id
+        if id is not None:
+            self.id = id
         if guid is not None:
             self.guid = guid
         if primary_image_item_id is not None:
@@ -180,6 +185,27 @@ class VirtualFolderInfo(object):
         """
 
         self._item_id = item_id
+
+    @property
+    def id(self):
+        """Gets the id of this VirtualFolderInfo.  # noqa: E501
+
+
+        :return: The id of this VirtualFolderInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this VirtualFolderInfo.
+
+
+        :param id: The id of this VirtualFolderInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def guid(self):

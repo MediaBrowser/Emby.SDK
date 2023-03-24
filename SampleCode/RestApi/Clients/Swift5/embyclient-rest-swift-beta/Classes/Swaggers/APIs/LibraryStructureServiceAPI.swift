@@ -208,6 +208,7 @@ open class LibraryStructureServiceAPI {
       "SampleIgnoreSize" : 2,
       "MinCollectionItems" : 5
     },
+    "Id" : "Id",
     "Guid" : "Guid",
     "ItemId" : "ItemId",
     "RefreshStatus" : "RefreshStatus",
@@ -310,6 +311,7 @@ open class LibraryStructureServiceAPI {
       "SampleIgnoreSize" : 2,
       "MinCollectionItems" : 5
     },
+    "Id" : "Id",
     "Guid" : "Guid",
     "ItemId" : "ItemId",
     "RefreshStatus" : "RefreshStatus",

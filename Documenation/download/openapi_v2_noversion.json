@@ -57948,6 +57948,9 @@
         "ItemId": {
           "type": "string"
         },
+        "Id": {
+          "type": "string"
+        },
         "Guid": {
           "type": "string"
         },

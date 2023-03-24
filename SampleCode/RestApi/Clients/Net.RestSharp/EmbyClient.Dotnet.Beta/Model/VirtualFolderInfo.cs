@@ -31,17 +31,19 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="collectionType">collectionType.</param>
         /// <param name="libraryOptions">libraryOptions.</param>
         /// <param name="itemId">itemId.</param>
+        /// <param name="id">id.</param>
         /// <param name="guid">guid.</param>
         /// <param name="primaryImageItemId">primaryImageItemId.</param>
         /// <param name="refreshProgress">refreshProgress.</param>
         /// <param name="refreshStatus">refreshStatus.</param>
-        public VirtualFolderInfo(string name = default(string), List<string> locations = default(List<string>), string collectionType = default(string), ConfigurationLibraryOptions libraryOptions = default(ConfigurationLibraryOptions), string itemId = default(string), string guid = default(string), string primaryImageItemId = default(string), double? refreshProgress = default(double?), string refreshStatus = default(string))
+        public VirtualFolderInfo(string name = default(string), List<string> locations = default(List<string>), string collectionType = default(string), ConfigurationLibraryOptions libraryOptions = default(ConfigurationLibraryOptions), string itemId = default(string), string id = default(string), string guid = default(string), string primaryImageItemId = default(string), double? refreshProgress = default(double?), string refreshStatus = default(string))
         {
             this.Name = name;
             this.Locations = locations;
             this.CollectionType = collectionType;
             this.LibraryOptions = libraryOptions;
             this.ItemId = itemId;
+            this.Id = id;
             this.Guid = guid;
             this.PrimaryImageItemId = primaryImageItemId;
             this.RefreshProgress = refreshProgress;
@@ -77,6 +79,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="ItemId", EmitDefaultValue=false)]
         public string ItemId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="Id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
@@ -115,6 +123,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  CollectionType: ").Append(CollectionType).Append("\n");
             sb.Append("  LibraryOptions: ").Append(LibraryOptions).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  PrimaryImageItemId: ").Append(PrimaryImageItemId).Append("\n");
             sb.Append("  RefreshProgress: ").Append(RefreshProgress).Append("\n");
@@ -180,6 +189,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.ItemId.Equals(input.ItemId))
                 ) && 
                 (
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
+                ) && 
+                (
                     this.Guid == input.Guid ||
                     (this.Guid != null &&
                     this.Guid.Equals(input.Guid))
@@ -220,6 +234,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.LibraryOptions.GetHashCode();
                 if (this.ItemId != null)
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Guid != null)
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.PrimaryImageItemId != null)

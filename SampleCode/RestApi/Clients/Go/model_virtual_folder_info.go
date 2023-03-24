@@ -12,6 +12,7 @@ type VirtualFolderInfo struct {
 	CollectionType string `json:"CollectionType,omitempty"`
 	LibraryOptions *ConfigurationLibraryOptions `json:"LibraryOptions,omitempty"`
 	ItemId string `json:"ItemId,omitempty"`
+	Id string `json:"Id,omitempty"`
 	Guid string `json:"Guid,omitempty"`
 	PrimaryImageItemId string `json:"PrimaryImageItemId,omitempty"`
 	RefreshProgress float64 `json:"RefreshProgress,omitempty"`

@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.25"
+    "version": "4.8.0.26"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -57948,6 +57948,9 @@
           "$ref": "#/definitions/Configuration.LibraryOptions"
         },
         "ItemId": {
+          "type": "string"
+        },
+        "Id": {
           "type": "string"
         },
         "Guid": {

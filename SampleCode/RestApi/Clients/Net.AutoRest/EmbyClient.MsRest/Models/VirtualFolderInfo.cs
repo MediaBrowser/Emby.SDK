@@ -24,13 +24,14 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the VirtualFolderInfo class.
         /// </summary>
-        public VirtualFolderInfo(string name = default(string), IList<string> locations = default(IList<string>), string collectionType = default(string), ConfigurationLibraryOptions libraryOptions = default(ConfigurationLibraryOptions), string itemId = default(string), string guid = default(string), string primaryImageItemId = default(string), double? refreshProgress = default(double?), string refreshStatus = default(string))
+        public VirtualFolderInfo(string name = default(string), IList<string> locations = default(IList<string>), string collectionType = default(string), ConfigurationLibraryOptions libraryOptions = default(ConfigurationLibraryOptions), string itemId = default(string), string id = default(string), string guid = default(string), string primaryImageItemId = default(string), double? refreshProgress = default(double?), string refreshStatus = default(string))
         {
             Name = name;
             Locations = locations;
             CollectionType = collectionType;
             LibraryOptions = libraryOptions;
             ItemId = itemId;
+            Id = id;
             Guid = guid;
             PrimaryImageItemId = primaryImageItemId;
             RefreshProgress = refreshProgress;
@@ -67,6 +68,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "ItemId")]
         public string ItemId { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "Id")]
+        public string Id { get; set; }
 
         /// <summary>
         /// </summary>

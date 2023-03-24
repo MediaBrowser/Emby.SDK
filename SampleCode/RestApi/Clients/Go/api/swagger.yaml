@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.25
+  version: 4.8.0.26
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -74356,6 +74356,7 @@ components:
               Password: Password
             SampleIgnoreSize: 2
             MinCollectionItems: 5
+          Id: Id
           Guid: Guid
           ItemId: ItemId
           RefreshStatus: RefreshStatus
@@ -74490,6 +74491,7 @@ components:
               Password: Password
             SampleIgnoreSize: 2
             MinCollectionItems: 5
+          Id: Id
           Guid: Guid
           ItemId: ItemId
           RefreshStatus: RefreshStatus
@@ -74508,6 +74510,8 @@ components:
         LibraryOptions:
           $ref: '#/components/schemas/Configuration.LibraryOptions'
         ItemId:
+          type: string
+        Id:
           type: string
         Guid:
           type: string
@@ -74650,6 +74654,7 @@ components:
             Password: Password
           SampleIgnoreSize: 2
           MinCollectionItems: 5
+        Id: Id
         Guid: Guid
         ItemId: ItemId
         RefreshStatus: RefreshStatus

@@ -15,7 +15,7 @@ import ConfigurationLibraryOptions from './ConfigurationLibraryOptions';
 /**
 * The VirtualFolderInfo model module.
 * @module model/VirtualFolderInfo
-* @version 4.8.0.25
+* @version 4.8.0.26
 */
 export default class VirtualFolderInfo {
     /**
@@ -57,6 +57,9 @@ export default class VirtualFolderInfo {
             if (data.hasOwnProperty('ItemId')) {
                 obj['ItemId'] = ApiClient.convertToType(data['ItemId'], 'String');
             }
+            if (data.hasOwnProperty('Id')) {
+                obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
+            }
             if (data.hasOwnProperty('Guid')) {
                 obj['Guid'] = ApiClient.convertToType(data['Guid'], 'String');
             }
@@ -93,6 +96,10 @@ export default class VirtualFolderInfo {
     * @member {String} ItemId
     */
     'ItemId' = undefined;
+    /**
+    * @member {String} Id
+    */
+    'Id' = undefined;
     /**
     * @member {String} Guid
     */
