@@ -35,7 +35,12 @@ class ChannelServiceApi(object):
         :param async_req bool
         :param str user_id: User Id
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :param int limit: Optional. The maximum number of records to return
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -59,13 +64,18 @@ class ChannelServiceApi(object):
         :param async_req bool
         :param str user_id: User Id
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :param int limit: Optional. The maximum number of records to return
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'start_index', 'limit']  # noqa: E501
+        all_params = ['user_id', 'start_index', 'fields', 'limit', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -90,8 +100,18 @@ class ChannelServiceApi(object):
             query_params.append(('UserId', params['user_id']))  # noqa: E501
         if 'start_index' in params:
             query_params.append(('StartIndex', params['start_index']))  # noqa: E501
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('Limit', params['limit']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 

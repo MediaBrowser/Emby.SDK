@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ChannelService service.
 * @module EmbyClient.JavaScript.Beta/ChannelServiceApi
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class ChannelServiceApi {
 
@@ -54,7 +54,12 @@ export default class ChannelServiceApi {
       let queryParams = {
         'UserId': opts['userId'],
         'StartIndex': opts['startIndex'],
-        'Limit': opts['limit']
+        'Fields': opts['fields'],
+        'Limit': opts['limit'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };

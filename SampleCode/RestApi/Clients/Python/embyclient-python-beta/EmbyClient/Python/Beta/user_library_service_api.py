@@ -439,6 +439,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -462,12 +467,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'id']  # noqa: E501
+        all_params = ['user_id', 'id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -500,6 +510,16 @@ class UserLibraryServiceApi(object):
             path_params['Id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -542,6 +562,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -565,12 +590,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'id']  # noqa: E501
+        all_params = ['user_id', 'id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -603,6 +633,16 @@ class UserLibraryServiceApi(object):
             path_params['Id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -645,6 +685,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Movie Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -668,12 +713,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Movie Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'id']  # noqa: E501
+        all_params = ['user_id', 'id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -706,6 +756,16 @@ class UserLibraryServiceApi(object):
             path_params['Id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -986,6 +1046,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1009,12 +1074,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'user_id']  # noqa: E501
+        all_params = ['id', 'user_id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1043,6 +1113,16 @@ class UserLibraryServiceApi(object):
         query_params = []
         if 'user_id' in params:
             query_params.append(('UserId', params['user_id']))  # noqa: E501
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 

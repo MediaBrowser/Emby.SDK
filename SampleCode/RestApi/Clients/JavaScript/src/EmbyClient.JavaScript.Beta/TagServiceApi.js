@@ -17,7 +17,7 @@ import UserLibraryAddTags from '../model/UserLibraryAddTags';
 /**
 * TagService service.
 * @module EmbyClient.JavaScript.Beta/TagServiceApi
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class TagServiceApi {
 
@@ -102,6 +102,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -230,6 +231,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -358,6 +360,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -486,6 +489,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -614,6 +618,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -742,6 +747,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -870,6 +876,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -998,6 +1005,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -1126,6 +1134,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -1254,6 +1263,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -1382,6 +1392,7 @@ export default class TagServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],

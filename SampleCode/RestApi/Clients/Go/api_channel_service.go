@@ -29,14 +29,24 @@ Requires authentication as user
  * @param optional nil or *ChannelServiceApiGetChannelsOpts - Optional Parameters:
      * @param "UserId" (optional.String) -  User Id
      * @param "StartIndex" (optional.Int32) -  Optional. The record index to start at. All items with a lower index will be dropped from the results.
+     * @param "Fields" (optional.String) -  Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
      * @param "Limit" (optional.Int32) -  Optional. The maximum number of records to return
+     * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
+     * @param "ImageTypeLimit" (optional.Int32) -  Optional, the max number of images to return, per image type
+     * @param "EnableImageTypes" (optional.String) -  Optional. The image types to include in the output.
+     * @param "EnableUserData" (optional.Bool) -  Optional, include user data
 @return QueryResultBaseItemDto
 */
 
 type ChannelServiceApiGetChannelsOpts struct {
     UserId optional.String
     StartIndex optional.Int32
+    Fields optional.String
     Limit optional.Int32
+    EnableImages optional.Bool
+    ImageTypeLimit optional.Int32
+    EnableImageTypes optional.String
+    EnableUserData optional.Bool
 }
 
 func (a *ChannelServiceApiService) GetChannels(ctx context.Context, localVarOptionals *ChannelServiceApiGetChannelsOpts) (QueryResultBaseItemDto, *http.Response, error) {
@@ -61,8 +71,23 @@ func (a *ChannelServiceApiService) GetChannels(ctx context.Context, localVarOpti
 	if localVarOptionals != nil && localVarOptionals.StartIndex.IsSet() {
 		localVarQueryParams.Add("StartIndex", parameterToString(localVarOptionals.StartIndex.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.Fields.IsSet() {
+		localVarQueryParams.Add("Fields", parameterToString(localVarOptionals.Fields.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.Limit.IsSet() {
 		localVarQueryParams.Add("Limit", parameterToString(localVarOptionals.Limit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImages.IsSet() {
+		localVarQueryParams.Add("EnableImages", parameterToString(localVarOptionals.EnableImages.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ImageTypeLimit.IsSet() {
+		localVarQueryParams.Add("ImageTypeLimit", parameterToString(localVarOptionals.ImageTypeLimit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImageTypes.IsSet() {
+		localVarQueryParams.Add("EnableImageTypes", parameterToString(localVarOptionals.EnableImageTypes.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableUserData.IsSet() {
+		localVarQueryParams.Add("EnableUserData", parameterToString(localVarOptionals.EnableUserData.Value(), ""))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}

@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ArtistsService service.
 * @module EmbyClient.JavaScript.Beta/ArtistsServiceApi
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class ArtistsServiceApi {
 
@@ -101,6 +101,7 @@ export default class ArtistsServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -229,6 +230,7 @@ export default class ArtistsServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],

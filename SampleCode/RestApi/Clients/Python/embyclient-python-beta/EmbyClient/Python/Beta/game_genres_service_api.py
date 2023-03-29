@@ -81,6 +81,7 @@ class GameGenresServiceApi(object):
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -191,6 +192,7 @@ class GameGenresServiceApi(object):
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -237,7 +239,7 @@ class GameGenresServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -354,6 +356,8 @@ class GameGenresServiceApi(object):
             query_params.append(('IsKids', params['is_kids']))  # noqa: E501
         if 'is_sports' in params:
             query_params.append(('IsSports', params['is_sports']))  # noqa: E501
+        if 'project_to_media' in params:
+            query_params.append(('ProjectToMedia', params['project_to_media']))  # noqa: E501
         if 'media_types' in params:
             query_params.append(('MediaTypes', params['media_types']))  # noqa: E501
         if 'image_types' in params:

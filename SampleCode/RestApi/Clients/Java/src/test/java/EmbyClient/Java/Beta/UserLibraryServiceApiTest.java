@@ -101,7 +101,12 @@ public class UserLibraryServiceApiTest {
     public void getUsersByUseridItemsByIdIntrosTest() throws Exception {
         String userId = null;
         String id = null;
-        QueryResultBaseItemDto response = api.getUsersByUseridItemsByIdIntros(userId, id);
+        String fields = null;
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        QueryResultBaseItemDto response = api.getUsersByUseridItemsByIdIntros(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }
@@ -117,7 +122,12 @@ public class UserLibraryServiceApiTest {
     public void getUsersByUseridItemsByIdLocaltrailersTest() throws Exception {
         String userId = null;
         String id = null;
-        List<BaseItemDto> response = api.getUsersByUseridItemsByIdLocaltrailers(userId, id);
+        String fields = null;
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        List<BaseItemDto> response = api.getUsersByUseridItemsByIdLocaltrailers(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }
@@ -133,7 +143,12 @@ public class UserLibraryServiceApiTest {
     public void getUsersByUseridItemsByIdSpecialfeaturesTest() throws Exception {
         String userId = null;
         String id = null;
-        List<BaseItemDto> response = api.getUsersByUseridItemsByIdSpecialfeatures(userId, id);
+        String fields = null;
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        List<BaseItemDto> response = api.getUsersByUseridItemsByIdSpecialfeatures(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }
@@ -191,7 +206,12 @@ public class UserLibraryServiceApiTest {
     public void getVideosByIdAdditionalpartsTest() throws Exception {
         String id = null;
         String userId = null;
-        QueryResultBaseItemDto response = api.getVideosByIdAdditionalparts(id, userId);
+        String fields = null;
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        QueryResultBaseItemDto response = api.getVideosByIdAdditionalparts(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }

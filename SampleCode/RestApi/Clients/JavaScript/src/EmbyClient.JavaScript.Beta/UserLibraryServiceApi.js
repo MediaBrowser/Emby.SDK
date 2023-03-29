@@ -17,7 +17,7 @@ import UserItemDataDto from '../model/UserItemDataDto';
 /**
 * UserLibraryService service.
 * @module EmbyClient.JavaScript.Beta/UserLibraryServiceApi
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class UserLibraryServiceApi {
 
@@ -198,10 +198,12 @@ export default class UserLibraryServiceApi {
     /**
      * Gets intros to play before the main media item plays
      * Requires authentication as user
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~getUsersByUseridItemsByIdIntrosCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     getUsersByUseridItemsByIdIntros() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -209,6 +211,11 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -237,10 +244,12 @@ export default class UserLibraryServiceApi {
     /**
      * Gets local trailers for an item
      * Requires authentication as user
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~getUsersByUseridItemsByIdLocaltrailersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/BaseItemDto>}
      */
     getUsersByUseridItemsByIdLocaltrailers() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -248,6 +257,11 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -276,10 +290,12 @@ export default class UserLibraryServiceApi {
     /**
      * Gets special features for an item
      * Requires authentication as user
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~getUsersByUseridItemsByIdSpecialfeaturesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/BaseItemDto>}
      */
     getUsersByUseridItemsByIdSpecialfeatures() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -287,6 +303,11 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -417,7 +438,12 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
-        'UserId': opts['userId']
+        'UserId': opts['userId'],
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };

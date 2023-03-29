@@ -15,7 +15,7 @@ import EmbyFeaturesFeatureType from './EmbyFeaturesFeatureType';
 /**
 * The EmbyFeaturesFeatureInfo model module.
 * @module model/EmbyFeaturesFeatureInfo
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class EmbyFeaturesFeatureInfo {
     /**

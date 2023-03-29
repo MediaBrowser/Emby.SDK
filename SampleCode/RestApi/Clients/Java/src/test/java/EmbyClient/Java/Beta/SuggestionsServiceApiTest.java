@@ -35,7 +35,12 @@ public class SuggestionsServiceApiTest {
     @Test
     public void getUsersByUseridSuggestionsTest() throws Exception {
         String userId = null;
-        QueryResultBaseItemDto response = api.getUsersByUseridSuggestions(userId);
+        String fields = null;
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        QueryResultBaseItemDto response = api.getUsersByUseridSuggestions(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }

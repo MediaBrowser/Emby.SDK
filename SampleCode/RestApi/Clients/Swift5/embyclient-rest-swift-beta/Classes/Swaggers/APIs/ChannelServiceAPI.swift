@@ -15,11 +15,16 @@ open class ChannelServiceAPI {
 
      - parameter userId: (query) User Id (optional)
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getChannels(userId: String? = nil, startIndex: Int? = nil, limit: Int? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getChannelsWithRequestBuilder(userId: userId, startIndex: startIndex, limit: limit).execute { (response, error) -> Void in
+    open class func getChannels(userId: String? = nil, startIndex: Int? = nil, fields: String? = nil, limit: Int? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
+        getChannelsWithRequestBuilder(userId: userId, startIndex: startIndex, fields: fields, limit: limit, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -1053,11 +1058,16 @@ open class ChannelServiceAPI {
 }
      - parameter userId: (query) User Id (optional)
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
      */
-    open class func getChannelsWithRequestBuilder(userId: String? = nil, startIndex: Int? = nil, limit: Int? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getChannelsWithRequestBuilder(userId: String? = nil, startIndex: Int? = nil, fields: String? = nil, limit: Int? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
         let path = "/Channels"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -1065,7 +1075,12 @@ open class ChannelServiceAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "UserId": userId, 
                         "StartIndex": startIndex?.encodeToJSON(), 
-                        "Limit": limit?.encodeToJSON()
+                        "Fields": fields, 
+                        "Limit": limit?.encodeToJSON(), 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData
         ])
 
 

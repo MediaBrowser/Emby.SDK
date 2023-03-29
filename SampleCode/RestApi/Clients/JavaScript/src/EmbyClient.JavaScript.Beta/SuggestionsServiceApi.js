@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * SuggestionsService service.
 * @module EmbyClient.JavaScript.Beta/SuggestionsServiceApi
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class SuggestionsServiceApi {
 
@@ -41,16 +41,23 @@ export default class SuggestionsServiceApi {
     /**
      * Gets items based on a query.
      * No authentication required
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/SuggestionsServiceApi~getUsersByUseridSuggestionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     getUsersByUseridSuggestions() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
         'UserId': userId
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };

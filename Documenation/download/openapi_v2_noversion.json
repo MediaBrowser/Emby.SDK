@@ -330,6 +330,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -920,6 +926,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -1518,6 +1530,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -1832,10 +1850,41 @@
           },
           {
             "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Limit",
             "description": "Optional. The maximum number of records to return",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -2254,6 +2303,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -2999,6 +3054,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -3597,6 +3658,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -4191,6 +4258,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -4835,6 +4908,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -5433,6 +5512,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -6023,6 +6108,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -6749,6 +6840,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -7598,6 +7695,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -8196,6 +8299,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -8786,6 +8895,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -9450,6 +9565,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -10048,6 +10169,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -10642,6 +10769,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -11232,6 +11365,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -12195,6 +12334,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -12785,6 +12930,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -15725,6 +15876,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -17022,6 +17179,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -18736,6 +18899,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -19352,6 +19521,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -19974,6 +20149,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -20589,6 +20770,12 @@
             "in": "query",
             "name": "IsSports",
             "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
             "type": "boolean"
           },
           {
@@ -30309,6 +30496,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -30603,6 +30796,37 @@
             "description": "Optional filter by user and attach user data.",
             "type": "string",
             "format": "guid"
+          },
+          {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -33848,6 +34072,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -35293,6 +35523,37 @@
             "name": "UserId",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -36030,6 +36291,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -36438,11 +36705,42 @@
             "format": "guid"
           },
           {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
+          },
+          {
             "in": "path",
             "name": "Id",
             "description": "Item Id",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -43129,6 +43427,12 @@
           },
           {
             "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "MediaTypes",
             "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
             "type": "string"
@@ -47300,11 +47604,42 @@
             "format": "guid"
           },
           {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
+          },
+          {
             "in": "path",
             "name": "Id",
             "description": "Movie Id",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -47371,11 +47706,42 @@
             "format": "guid"
           },
           {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
+          },
+          {
             "in": "path",
             "name": "Id",
             "description": "Item Id",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -47442,11 +47808,42 @@
             "format": "guid"
           },
           {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
+          },
+          {
             "in": "path",
             "name": "Id",
             "description": "Item Id",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
           }
         ],
         "responses": {

@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class LiveTvServiceApi {
 
@@ -460,6 +460,7 @@ export default class LiveTvServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -629,6 +630,7 @@ export default class LiveTvServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -757,6 +759,7 @@ export default class LiveTvServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -1372,6 +1375,7 @@ export default class LiveTvServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -1557,6 +1561,7 @@ export default class LiveTvServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -1678,7 +1683,12 @@ export default class LiveTvServiceApi {
       let pathParams = {
       };
       let queryParams = {
-        'UserId': opts['userId']
+        'UserId': opts['userId'],
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -2487,6 +2497,7 @@ export default class LiveTvServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],

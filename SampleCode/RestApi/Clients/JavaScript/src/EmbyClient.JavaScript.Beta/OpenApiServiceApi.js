@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * OpenApiService service.
 * @module EmbyClient.JavaScript.Beta/OpenApiServiceApi
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class OpenApiServiceApi {
 

@@ -1238,10 +1238,15 @@ open class UserLibraryServiceAPI {
 
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersByUseridItemsByIdIntros(userId: String, _id: String, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getUsersByUseridItemsByIdIntrosWithRequestBuilder(userId: userId, _id: _id).execute { (response, error) -> Void in
+    open class func getUsersByUseridItemsByIdIntros(userId: String, _id: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
+        getUsersByUseridItemsByIdIntrosWithRequestBuilder(userId: userId, _id: _id, fields: fields, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -2275,10 +2280,15 @@ open class UserLibraryServiceAPI {
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
      */
-    open class func getUsersByUseridItemsByIdIntrosWithRequestBuilder(userId: String, _id: String) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getUsersByUseridItemsByIdIntrosWithRequestBuilder(userId: String, _id: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
         var path = "/Users/{UserId}/Items/{Id}/Intros"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2288,7 +2298,14 @@ open class UserLibraryServiceAPI {
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "Fields": fields, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData
+        ])
 
 
         let requestBuilder: RequestBuilder<QueryResultBaseItemDto>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
@@ -2300,10 +2317,15 @@ open class UserLibraryServiceAPI {
 
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersByUseridItemsByIdLocaltrailers(userId: String, _id: String, completion: @escaping ((_ data: [BaseItemDto]?,_ error: Error?) -> Void)) {
-        getUsersByUseridItemsByIdLocaltrailersWithRequestBuilder(userId: userId, _id: _id).execute { (response, error) -> Void in
+    open class func getUsersByUseridItemsByIdLocaltrailers(userId: String, _id: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: [BaseItemDto]?,_ error: Error?) -> Void)) {
+        getUsersByUseridItemsByIdLocaltrailersWithRequestBuilder(userId: userId, _id: _id, fields: fields, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -3334,10 +3356,15 @@ open class UserLibraryServiceAPI {
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
 
      - returns: RequestBuilder<[BaseItemDto]> 
      */
-    open class func getUsersByUseridItemsByIdLocaltrailersWithRequestBuilder(userId: String, _id: String) -> RequestBuilder<[BaseItemDto]> {
+    open class func getUsersByUseridItemsByIdLocaltrailersWithRequestBuilder(userId: String, _id: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<[BaseItemDto]> {
         var path = "/Users/{UserId}/Items/{Id}/LocalTrailers"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3347,7 +3374,14 @@ open class UserLibraryServiceAPI {
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "Fields": fields, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData
+        ])
 
 
         let requestBuilder: RequestBuilder<[BaseItemDto]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
@@ -3359,10 +3393,15 @@ open class UserLibraryServiceAPI {
 
      - parameter userId: (path) User Id 
      - parameter _id: (path) Movie Id 
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersByUseridItemsByIdSpecialfeatures(userId: String, _id: String, completion: @escaping ((_ data: [BaseItemDto]?,_ error: Error?) -> Void)) {
-        getUsersByUseridItemsByIdSpecialfeaturesWithRequestBuilder(userId: userId, _id: _id).execute { (response, error) -> Void in
+    open class func getUsersByUseridItemsByIdSpecialfeatures(userId: String, _id: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: [BaseItemDto]?,_ error: Error?) -> Void)) {
+        getUsersByUseridItemsByIdSpecialfeaturesWithRequestBuilder(userId: userId, _id: _id, fields: fields, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -4393,10 +4432,15 @@ open class UserLibraryServiceAPI {
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Movie Id 
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
 
      - returns: RequestBuilder<[BaseItemDto]> 
      */
-    open class func getUsersByUseridItemsByIdSpecialfeaturesWithRequestBuilder(userId: String, _id: String) -> RequestBuilder<[BaseItemDto]> {
+    open class func getUsersByUseridItemsByIdSpecialfeaturesWithRequestBuilder(userId: String, _id: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<[BaseItemDto]> {
         var path = "/Users/{UserId}/Items/{Id}/SpecialFeatures"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4406,7 +4450,14 @@ open class UserLibraryServiceAPI {
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "Fields": fields, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData
+        ])
 
 
         let requestBuilder: RequestBuilder<[BaseItemDto]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
@@ -6060,10 +6111,15 @@ open class UserLibraryServiceAPI {
 
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getVideosByIdAdditionalparts(_id: String, userId: String? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getVideosByIdAdditionalpartsWithRequestBuilder(_id: _id, userId: userId).execute { (response, error) -> Void in
+    open class func getVideosByIdAdditionalparts(_id: String, userId: String? = nil, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
+        getVideosByIdAdditionalpartsWithRequestBuilder(_id: _id, userId: userId, fields: fields, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -7097,10 +7153,15 @@ open class UserLibraryServiceAPI {
 }
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
      */
-    open class func getVideosByIdAdditionalpartsWithRequestBuilder(_id: String, userId: String? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getVideosByIdAdditionalpartsWithRequestBuilder(_id: String, userId: String? = nil, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
         var path = "/Videos/{Id}/AdditionalParts"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7109,7 +7170,12 @@ open class UserLibraryServiceAPI {
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-                        "UserId": userId
+                        "UserId": userId, 
+                        "Fields": fields, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData
         ])
 
 

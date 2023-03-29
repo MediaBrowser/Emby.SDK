@@ -76,6 +76,7 @@ Requires authentication as user
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
+     * @param "ProjectToMedia" (optional.Bool) -  ProjectToMedia
      * @param "MediaTypes" (optional.String) -  Optional filter by MediaType. Allows multiple, comma delimited.
      * @param "ImageTypes" (optional.String) -  Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
      * @param "SortBy" (optional.String) -  Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -169,6 +170,7 @@ type ArtistsServiceApiGetArtistsOpts struct {
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
+    ProjectToMedia optional.Bool
     MediaTypes optional.String
     ImageTypes optional.String
     SortBy optional.String
@@ -371,6 +373,9 @@ func (a *ArtistsServiceApiService) GetArtists(ctx context.Context, localVarOptio
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSports.IsSet() {
 		localVarQueryParams.Add("IsSports", parameterToString(localVarOptionals.IsSports.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ProjectToMedia.IsSet() {
+		localVarQueryParams.Add("ProjectToMedia", parameterToString(localVarOptionals.ProjectToMedia.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MediaTypes.IsSet() {
 		localVarQueryParams.Add("MediaTypes", parameterToString(localVarOptionals.MediaTypes.Value(), ""))
@@ -622,6 +627,7 @@ Requires authentication as user
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
+     * @param "ProjectToMedia" (optional.Bool) -  ProjectToMedia
      * @param "MediaTypes" (optional.String) -  Optional filter by MediaType. Allows multiple, comma delimited.
      * @param "ImageTypes" (optional.String) -  Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
      * @param "SortBy" (optional.String) -  Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -715,6 +721,7 @@ type ArtistsServiceApiGetArtistsAlbumartistsOpts struct {
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
+    ProjectToMedia optional.Bool
     MediaTypes optional.String
     ImageTypes optional.String
     SortBy optional.String
@@ -917,6 +924,9 @@ func (a *ArtistsServiceApiService) GetArtistsAlbumartists(ctx context.Context, l
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSports.IsSet() {
 		localVarQueryParams.Add("IsSports", parameterToString(localVarOptionals.IsSports.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ProjectToMedia.IsSet() {
+		localVarQueryParams.Add("ProjectToMedia", parameterToString(localVarOptionals.ProjectToMedia.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MediaTypes.IsSet() {
 		localVarQueryParams.Add("MediaTypes", parameterToString(localVarOptionals.MediaTypes.Value(), ""))

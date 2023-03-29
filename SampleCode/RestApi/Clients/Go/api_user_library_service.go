@@ -427,9 +427,24 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId User Id
  * @param id Item Id
+ * @param optional nil or *UserLibraryServiceApiGetUsersByUseridItemsByIdIntrosOpts - Optional Parameters:
+     * @param "Fields" (optional.String) -  Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+     * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
+     * @param "ImageTypeLimit" (optional.Int32) -  Optional, the max number of images to return, per image type
+     * @param "EnableImageTypes" (optional.String) -  Optional. The image types to include in the output.
+     * @param "EnableUserData" (optional.Bool) -  Optional, include user data
 @return QueryResultBaseItemDto
 */
-func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdIntros(ctx context.Context, userId string, id string) (QueryResultBaseItemDto, *http.Response, error) {
+
+type UserLibraryServiceApiGetUsersByUseridItemsByIdIntrosOpts struct {
+    Fields optional.String
+    EnableImages optional.Bool
+    ImageTypeLimit optional.Int32
+    EnableImageTypes optional.String
+    EnableUserData optional.Bool
+}
+
+func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdIntros(ctx context.Context, userId string, id string, localVarOptionals *UserLibraryServiceApiGetUsersByUseridItemsByIdIntrosOpts) (QueryResultBaseItemDto, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -447,6 +462,21 @@ func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdIntros(ctx conte
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.Fields.IsSet() {
+		localVarQueryParams.Add("Fields", parameterToString(localVarOptionals.Fields.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImages.IsSet() {
+		localVarQueryParams.Add("EnableImages", parameterToString(localVarOptionals.EnableImages.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ImageTypeLimit.IsSet() {
+		localVarQueryParams.Add("ImageTypeLimit", parameterToString(localVarOptionals.ImageTypeLimit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImageTypes.IsSet() {
+		localVarQueryParams.Add("EnableImageTypes", parameterToString(localVarOptionals.EnableImageTypes.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableUserData.IsSet() {
+		localVarQueryParams.Add("EnableUserData", parameterToString(localVarOptionals.EnableUserData.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 
@@ -527,9 +557,24 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId User Id
  * @param id Item Id
+ * @param optional nil or *UserLibraryServiceApiGetUsersByUseridItemsByIdLocaltrailersOpts - Optional Parameters:
+     * @param "Fields" (optional.String) -  Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+     * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
+     * @param "ImageTypeLimit" (optional.Int32) -  Optional, the max number of images to return, per image type
+     * @param "EnableImageTypes" (optional.String) -  Optional. The image types to include in the output.
+     * @param "EnableUserData" (optional.Bool) -  Optional, include user data
 @return []BaseItemDto
 */
-func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdLocaltrailers(ctx context.Context, userId string, id string) ([]BaseItemDto, *http.Response, error) {
+
+type UserLibraryServiceApiGetUsersByUseridItemsByIdLocaltrailersOpts struct {
+    Fields optional.String
+    EnableImages optional.Bool
+    ImageTypeLimit optional.Int32
+    EnableImageTypes optional.String
+    EnableUserData optional.Bool
+}
+
+func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdLocaltrailers(ctx context.Context, userId string, id string, localVarOptionals *UserLibraryServiceApiGetUsersByUseridItemsByIdLocaltrailersOpts) ([]BaseItemDto, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -547,6 +592,21 @@ func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdLocaltrailers(ct
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.Fields.IsSet() {
+		localVarQueryParams.Add("Fields", parameterToString(localVarOptionals.Fields.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImages.IsSet() {
+		localVarQueryParams.Add("EnableImages", parameterToString(localVarOptionals.EnableImages.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ImageTypeLimit.IsSet() {
+		localVarQueryParams.Add("ImageTypeLimit", parameterToString(localVarOptionals.ImageTypeLimit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImageTypes.IsSet() {
+		localVarQueryParams.Add("EnableImageTypes", parameterToString(localVarOptionals.EnableImageTypes.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableUserData.IsSet() {
+		localVarQueryParams.Add("EnableUserData", parameterToString(localVarOptionals.EnableUserData.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 
@@ -627,9 +687,24 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId User Id
  * @param id Movie Id
+ * @param optional nil or *UserLibraryServiceApiGetUsersByUseridItemsByIdSpecialfeaturesOpts - Optional Parameters:
+     * @param "Fields" (optional.String) -  Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+     * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
+     * @param "ImageTypeLimit" (optional.Int32) -  Optional, the max number of images to return, per image type
+     * @param "EnableImageTypes" (optional.String) -  Optional. The image types to include in the output.
+     * @param "EnableUserData" (optional.Bool) -  Optional, include user data
 @return []BaseItemDto
 */
-func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdSpecialfeatures(ctx context.Context, userId string, id string) ([]BaseItemDto, *http.Response, error) {
+
+type UserLibraryServiceApiGetUsersByUseridItemsByIdSpecialfeaturesOpts struct {
+    Fields optional.String
+    EnableImages optional.Bool
+    ImageTypeLimit optional.Int32
+    EnableImageTypes optional.String
+    EnableUserData optional.Bool
+}
+
+func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdSpecialfeatures(ctx context.Context, userId string, id string, localVarOptionals *UserLibraryServiceApiGetUsersByUseridItemsByIdSpecialfeaturesOpts) ([]BaseItemDto, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -647,6 +722,21 @@ func (a *UserLibraryServiceApiService) GetUsersByUseridItemsByIdSpecialfeatures(
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.Fields.IsSet() {
+		localVarQueryParams.Add("Fields", parameterToString(localVarOptionals.Fields.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImages.IsSet() {
+		localVarQueryParams.Add("EnableImages", parameterToString(localVarOptionals.EnableImages.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ImageTypeLimit.IsSet() {
+		localVarQueryParams.Add("ImageTypeLimit", parameterToString(localVarOptionals.ImageTypeLimit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImageTypes.IsSet() {
+		localVarQueryParams.Add("EnableImageTypes", parameterToString(localVarOptionals.EnableImageTypes.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableUserData.IsSet() {
+		localVarQueryParams.Add("EnableUserData", parameterToString(localVarOptionals.EnableUserData.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 
@@ -989,11 +1079,21 @@ Requires authentication as user
  * @param id Item Id
  * @param optional nil or *UserLibraryServiceApiGetVideosByIdAdditionalpartsOpts - Optional Parameters:
      * @param "UserId" (optional.String) -  Optional. Filter by user id, and attach user data
+     * @param "Fields" (optional.String) -  Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+     * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
+     * @param "ImageTypeLimit" (optional.Int32) -  Optional, the max number of images to return, per image type
+     * @param "EnableImageTypes" (optional.String) -  Optional. The image types to include in the output.
+     * @param "EnableUserData" (optional.Bool) -  Optional, include user data
 @return QueryResultBaseItemDto
 */
 
 type UserLibraryServiceApiGetVideosByIdAdditionalpartsOpts struct {
     UserId optional.String
+    Fields optional.String
+    EnableImages optional.Bool
+    ImageTypeLimit optional.Int32
+    EnableImageTypes optional.String
+    EnableUserData optional.Bool
 }
 
 func (a *UserLibraryServiceApiService) GetVideosByIdAdditionalparts(ctx context.Context, id string, localVarOptionals *UserLibraryServiceApiGetVideosByIdAdditionalpartsOpts) (QueryResultBaseItemDto, *http.Response, error) {
@@ -1015,6 +1115,21 @@ func (a *UserLibraryServiceApiService) GetVideosByIdAdditionalparts(ctx context.
 
 	if localVarOptionals != nil && localVarOptionals.UserId.IsSet() {
 		localVarQueryParams.Add("UserId", parameterToString(localVarOptionals.UserId.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.Fields.IsSet() {
+		localVarQueryParams.Add("Fields", parameterToString(localVarOptionals.Fields.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImages.IsSet() {
+		localVarQueryParams.Add("EnableImages", parameterToString(localVarOptionals.EnableImages.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ImageTypeLimit.IsSet() {
+		localVarQueryParams.Add("ImageTypeLimit", parameterToString(localVarOptionals.ImageTypeLimit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImageTypes.IsSet() {
+		localVarQueryParams.Add("EnableImageTypes", parameterToString(localVarOptionals.EnableImageTypes.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableUserData.IsSet() {
+		localVarQueryParams.Add("EnableUserData", parameterToString(localVarOptionals.EnableUserData.Value(), ""))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}

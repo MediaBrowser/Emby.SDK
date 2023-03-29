@@ -14,6 +14,7 @@ import (
 	"net/url"
 	"strings"
 	"fmt"
+	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -27,9 +28,24 @@ SuggestionsServiceApiService Gets items based on a query.
 No authentication required
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId
+ * @param optional nil or *SuggestionsServiceApiGetUsersByUseridSuggestionsOpts - Optional Parameters:
+     * @param "Fields" (optional.String) -  Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+     * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
+     * @param "ImageTypeLimit" (optional.Int32) -  Optional, the max number of images to return, per image type
+     * @param "EnableImageTypes" (optional.String) -  Optional. The image types to include in the output.
+     * @param "EnableUserData" (optional.Bool) -  Optional, include user data
 @return QueryResultBaseItemDto
 */
-func (a *SuggestionsServiceApiService) GetUsersByUseridSuggestions(ctx context.Context, userId string) (QueryResultBaseItemDto, *http.Response, error) {
+
+type SuggestionsServiceApiGetUsersByUseridSuggestionsOpts struct {
+    Fields optional.String
+    EnableImages optional.Bool
+    ImageTypeLimit optional.Int32
+    EnableImageTypes optional.String
+    EnableUserData optional.Bool
+}
+
+func (a *SuggestionsServiceApiService) GetUsersByUseridSuggestions(ctx context.Context, userId string, localVarOptionals *SuggestionsServiceApiGetUsersByUseridSuggestionsOpts) (QueryResultBaseItemDto, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -46,6 +62,21 @@ func (a *SuggestionsServiceApiService) GetUsersByUseridSuggestions(ctx context.C
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.Fields.IsSet() {
+		localVarQueryParams.Add("Fields", parameterToString(localVarOptionals.Fields.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImages.IsSet() {
+		localVarQueryParams.Add("EnableImages", parameterToString(localVarOptionals.EnableImages.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ImageTypeLimit.IsSet() {
+		localVarQueryParams.Add("ImageTypeLimit", parameterToString(localVarOptionals.ImageTypeLimit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableImageTypes.IsSet() {
+		localVarQueryParams.Add("EnableImageTypes", parameterToString(localVarOptionals.EnableImageTypes.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableUserData.IsSet() {
+		localVarQueryParams.Add("EnableUserData", parameterToString(localVarOptionals.EnableUserData.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 

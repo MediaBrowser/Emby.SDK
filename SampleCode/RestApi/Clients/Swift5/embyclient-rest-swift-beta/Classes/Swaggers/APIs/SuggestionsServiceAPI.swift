@@ -14,10 +14,15 @@ open class SuggestionsServiceAPI {
      Gets items based on a query.
 
      - parameter userId: (path)  
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersByUseridSuggestions(userId: String, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getUsersByUseridSuggestionsWithRequestBuilder(userId: userId).execute { (response, error) -> Void in
+    open class func getUsersByUseridSuggestions(userId: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
+        getUsersByUseridSuggestionsWithRequestBuilder(userId: userId, fields: fields, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -1044,17 +1049,29 @@ open class SuggestionsServiceAPI {
     url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
 }
      - parameter userId: (path)  
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
      */
-    open class func getUsersByUseridSuggestionsWithRequestBuilder(userId: String) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getUsersByUseridSuggestionsWithRequestBuilder(userId: String, fields: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
         var path = "/Users/{UserId}/Suggestions"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "Fields": fields, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData
+        ])
 
 
         let requestBuilder: RequestBuilder<QueryResultBaseItemDto>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.26
+  version: 4.8.0.27
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -569,6 +569,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -1407,6 +1415,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -2244,6 +2260,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -2662,6 +2686,18 @@ paths:
           type: integer
           format: int32
           nullable: true
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Limit
         in: query
         description: Optional. The maximum number of records to return
@@ -2671,6 +2707,42 @@ paths:
         schema:
           type: integer
           format: int32
+          nullable: true
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
           nullable: true
       responses:
         "200":
@@ -3213,6 +3285,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -4154,6 +4234,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -4995,6 +5083,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -5836,6 +5932,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -6706,6 +6810,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -7546,6 +7658,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -8384,6 +8504,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -9343,6 +9471,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -10394,6 +10530,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -11234,6 +11378,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -12072,6 +12224,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -12961,6 +13121,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -13801,6 +13969,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -14639,6 +14815,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -15476,6 +15660,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -16716,6 +16908,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -17554,6 +17754,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -20174,6 +20382,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -21512,6 +21728,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -23269,6 +23493,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -24147,6 +24379,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -25015,6 +25255,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -25888,6 +26136,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -34958,6 +35214,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -35364,6 +35628,54 @@ paths:
         schema:
           type: string
           format: guid
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
       responses:
         "200":
           description: "Operation successful. Returning a BaseItemDto[] object."
@@ -38268,6 +38580,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -39638,6 +39958,54 @@ paths:
         explode: false
         schema:
           type: string
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
       responses:
         "200":
           description: Operation successful. Returning a QueryResult<BaseItemDto>
@@ -40395,6 +40763,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -40884,6 +41260,18 @@ paths:
         schema:
           type: string
           format: guid
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Id
         in: path
         description: Item Id
@@ -40892,6 +41280,42 @@ paths:
         explode: false
         schema:
           type: string
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
       responses:
         "200":
           description: Operation successful. Returning a QueryResult<BaseItemDto>
@@ -48020,6 +48444,14 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       - name: MediaTypes
         in: query
         description: "Optional filter by MediaType. Allows multiple, comma delimited."
@@ -52437,6 +52869,18 @@ paths:
         schema:
           type: string
           format: guid
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Id
         in: path
         description: Movie Id
@@ -52445,6 +52889,42 @@ paths:
         explode: false
         schema:
           type: string
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
       responses:
         "200":
           description: "Operation successful. Returning a BaseItemDto[] object."
@@ -52495,6 +52975,18 @@ paths:
         schema:
           type: string
           format: guid
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Id
         in: path
         description: Item Id
@@ -52503,6 +52995,42 @@ paths:
         explode: false
         schema:
           type: string
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
       responses:
         "200":
           description: "Operation successful. Returning a BaseItemDto[] object."
@@ -52553,6 +53081,18 @@ paths:
         schema:
           type: string
           format: guid
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Id
         in: path
         description: Item Id
@@ -52561,6 +53101,42 @@ paths:
         explode: false
         schema:
           type: string
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
       responses:
         "200":
           description: Operation successful. Returning a QueryResult<BaseItemDto>

@@ -242,9 +242,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_SupportsThumbnails">Video.SupportsThumbnails</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_EnableAlternateVersions">Video.EnableAlternateVersions</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_GetMetadataFolderThumbnailSetInfos_System_String_System_Guid_MediaBrowser_Controller_Providers_IDirectoryService_">Video.GetMetadataFolderThumbnailSetInfos(String, Guid, IDirectoryService)</a>
     </div>
     <div>
@@ -836,9 +833,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, LibraryOptions, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsOwnedItems">BaseItem.SupportsOwnedItems</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsTags">BaseItem.SupportsTags</a>
     </div>
     <div>
@@ -1055,6 +1049,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalAncestorIds">BaseItem.GetInternalAncestorIds()</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsTopParent">BaseItem.IsTopParent</a>
     </div>
     <div>
@@ -1134,6 +1131,34 @@ public override bool SupportsAdditionalParts { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_SupportsAdditionalParts">Video.SupportsAdditionalParts</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Trailer_SupportsAlternateVersions_" data-uid="MediaBrowser.Controller.Entities.Trailer.SupportsAlternateVersions*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Trailer_SupportsAlternateVersions" data-uid="MediaBrowser.Controller.Entities.Trailer.SupportsAlternateVersions">SupportsAlternateVersions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+protected override bool SupportsAlternateVersions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_SupportsAlternateVersions">Video.SupportsAlternateVersions</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Trailer_SupportsExtras_" data-uid="MediaBrowser.Controller.Entities.Trailer.SupportsExtras*"></a>
@@ -1218,6 +1243,34 @@ public override bool SupportsLocalTrailers { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_SupportsLocalTrailers">Video.SupportsLocalTrailers</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Trailer_SupportsOwnedItems_" data-uid="MediaBrowser.Controller.Entities.Trailer.SupportsOwnedItems*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Trailer_SupportsOwnedItems" data-uid="MediaBrowser.Controller.Entities.Trailer.SupportsOwnedItems">SupportsOwnedItems</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsOwnedItems { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsOwnedItems">BaseItem.SupportsOwnedItems</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Trailer_SupportsStudios_" data-uid="MediaBrowser.Controller.Entities.Trailer.SupportsStudios*"></a>

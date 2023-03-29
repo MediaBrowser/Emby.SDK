@@ -16,7 +16,7 @@ import MediaSourceInfo from './MediaSourceInfo';
 /**
 * The MediaInfoPlaybackInfoResponse model module.
 * @module model/MediaInfoPlaybackInfoResponse
-* @version 4.8.0.26
+* @version 4.8.0.27
 */
 export default class MediaInfoPlaybackInfoResponse {
     /**

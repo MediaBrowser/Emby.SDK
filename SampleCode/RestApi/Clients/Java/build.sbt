@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "media.emby",
     name := "embyclient-rest-java-beta",
-    version := "4.8.0.26",
+    version := "4.8.0.27",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

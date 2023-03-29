@@ -595,6 +595,11 @@ public class UserLibraryServiceApi {
      * Build call for getUsersByUseridItemsByIdIntros
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -602,7 +607,7 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -612,6 +617,16 @@ public class UserLibraryServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (fields != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Fields", fields));
+        if (enableImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImages", enableImages));
+        if (imageTypeLimit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ImageTypeLimit", imageTypeLimit));
+        if (enableImageTypes != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageTypes", enableImageTypes));
+        if (enableUserData != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableUserData", enableUserData));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -646,7 +661,7 @@ public class UserLibraryServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosValidateBeforeCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosValidateBeforeCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'userId' is set
         if (userId == null) {
             throw new ApiException("Missing the required parameter 'userId' when calling getUsersByUseridItemsByIdIntros(Async)");
@@ -656,7 +671,7 @@ public class UserLibraryServiceApi {
             throw new ApiException("Missing the required parameter 'id' when calling getUsersByUseridItemsByIdIntros(Async)");
         }
         
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosCall(userId, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         return call;
 
         
@@ -670,13 +685,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
      */
-    public QueryResultBaseItemDto getUsersByUseridItemsByIdIntros(String userId, String id) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridItemsByIdIntrosWithHttpInfo(userId, id);
+    public QueryResultBaseItemDto getUsersByUseridItemsByIdIntros(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridItemsByIdIntrosWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -685,13 +705,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getUsersByUseridItemsByIdIntrosWithHttpInfo(String userId, String id) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosValidateBeforeCall(userId, id, null, null);
+    public ApiResponse<QueryResultBaseItemDto> getUsersByUseridItemsByIdIntrosWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
         Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -701,13 +726,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosAsync(String userId, String id, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -728,7 +758,7 @@ public class UserLibraryServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosValidateBeforeCall(userId, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -737,6 +767,11 @@ public class UserLibraryServiceApi {
      * Build call for getUsersByUseridItemsByIdLocaltrailers
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -744,7 +779,7 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -754,6 +789,16 @@ public class UserLibraryServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (fields != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Fields", fields));
+        if (enableImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImages", enableImages));
+        if (imageTypeLimit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ImageTypeLimit", imageTypeLimit));
+        if (enableImageTypes != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageTypes", enableImageTypes));
+        if (enableUserData != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableUserData", enableUserData));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -788,7 +833,7 @@ public class UserLibraryServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersValidateBeforeCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersValidateBeforeCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'userId' is set
         if (userId == null) {
             throw new ApiException("Missing the required parameter 'userId' when calling getUsersByUseridItemsByIdLocaltrailers(Async)");
@@ -798,7 +843,7 @@ public class UserLibraryServiceApi {
             throw new ApiException("Missing the required parameter 'id' when calling getUsersByUseridItemsByIdLocaltrailers(Async)");
         }
         
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdLocaltrailersCall(userId, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdLocaltrailersCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         return call;
 
         
@@ -812,13 +857,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return List&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
      */
-    public List<BaseItemDto> getUsersByUseridItemsByIdLocaltrailers(String userId, String id) throws ApiException {
-        ApiResponse<List<BaseItemDto>> resp = getUsersByUseridItemsByIdLocaltrailersWithHttpInfo(userId, id);
+    public List<BaseItemDto> getUsersByUseridItemsByIdLocaltrailers(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<List<BaseItemDto>> resp = getUsersByUseridItemsByIdLocaltrailersWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -827,13 +877,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return ApiResponse&lt;List&lt;BaseItemDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
      */
-    public ApiResponse<List<BaseItemDto>> getUsersByUseridItemsByIdLocaltrailersWithHttpInfo(String userId, String id) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdLocaltrailersValidateBeforeCall(userId, id, null, null);
+    public ApiResponse<List<BaseItemDto>> getUsersByUseridItemsByIdLocaltrailersWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdLocaltrailersValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
         Type localVarReturnType = new TypeToken<List<BaseItemDto>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -843,13 +898,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Item Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersAsync(String userId, String id, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -870,7 +930,7 @@ public class UserLibraryServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdLocaltrailersValidateBeforeCall(userId, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdLocaltrailersValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<BaseItemDto>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -879,6 +939,11 @@ public class UserLibraryServiceApi {
      * Build call for getUsersByUseridItemsByIdSpecialfeatures
      * @param userId User Id (required)
      * @param id Movie Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -886,7 +951,7 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -896,6 +961,16 @@ public class UserLibraryServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (fields != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Fields", fields));
+        if (enableImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImages", enableImages));
+        if (imageTypeLimit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ImageTypeLimit", imageTypeLimit));
+        if (enableImageTypes != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageTypes", enableImageTypes));
+        if (enableUserData != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableUserData", enableUserData));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -930,7 +1005,7 @@ public class UserLibraryServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesValidateBeforeCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesValidateBeforeCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'userId' is set
         if (userId == null) {
             throw new ApiException("Missing the required parameter 'userId' when calling getUsersByUseridItemsByIdSpecialfeatures(Async)");
@@ -940,7 +1015,7 @@ public class UserLibraryServiceApi {
             throw new ApiException("Missing the required parameter 'id' when calling getUsersByUseridItemsByIdSpecialfeatures(Async)");
         }
         
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdSpecialfeaturesCall(userId, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdSpecialfeaturesCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         return call;
 
         
@@ -954,13 +1029,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Movie Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return List&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
      */
-    public List<BaseItemDto> getUsersByUseridItemsByIdSpecialfeatures(String userId, String id) throws ApiException {
-        ApiResponse<List<BaseItemDto>> resp = getUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(userId, id);
+    public List<BaseItemDto> getUsersByUseridItemsByIdSpecialfeatures(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<List<BaseItemDto>> resp = getUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -969,13 +1049,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Movie Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return ApiResponse&lt;List&lt;BaseItemDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
      */
-    public ApiResponse<List<BaseItemDto>> getUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(String userId, String id) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdSpecialfeaturesValidateBeforeCall(userId, id, null, null);
+    public ApiResponse<List<BaseItemDto>> getUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdSpecialfeaturesValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
         Type localVarReturnType = new TypeToken<List<BaseItemDto>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -985,13 +1070,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param userId User Id (required)
      * @param id Movie Id (required)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesAsync(String userId, String id, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1012,7 +1102,7 @@ public class UserLibraryServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdSpecialfeaturesValidateBeforeCall(userId, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByUseridItemsByIdSpecialfeaturesValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<BaseItemDto>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1359,6 +1449,11 @@ public class UserLibraryServiceApi {
      * Build call for getVideosByIdAdditionalparts
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1366,7 +1461,7 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
      */
-    public com.squareup.okhttp.Call getVideosByIdAdditionalpartsCall(String id, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getVideosByIdAdditionalpartsCall(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1377,6 +1472,16 @@ public class UserLibraryServiceApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("UserId", userId));
+        if (fields != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Fields", fields));
+        if (enableImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImages", enableImages));
+        if (imageTypeLimit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ImageTypeLimit", imageTypeLimit));
+        if (enableImageTypes != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageTypes", enableImageTypes));
+        if (enableUserData != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableUserData", enableUserData));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1411,13 +1516,13 @@ public class UserLibraryServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getVideosByIdAdditionalpartsValidateBeforeCall(String id, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getVideosByIdAdditionalpartsValidateBeforeCall(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getVideosByIdAdditionalparts(Async)");
         }
         
-        com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsCall(id, userId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsCall(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         return call;
 
         
@@ -1431,13 +1536,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
      */
-    public QueryResultBaseItemDto getVideosByIdAdditionalparts(String id, String userId) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getVideosByIdAdditionalpartsWithHttpInfo(id, userId);
+    public QueryResultBaseItemDto getVideosByIdAdditionalparts(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemDto> resp = getVideosByIdAdditionalpartsWithHttpInfo(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -1446,13 +1556,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getVideosByIdAdditionalpartsWithHttpInfo(String id, String userId) throws ApiException {
-        com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsValidateBeforeCall(id, userId, null, null);
+    public ApiResponse<QueryResultBaseItemDto> getVideosByIdAdditionalpartsWithHttpInfo(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsValidateBeforeCall(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
         Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1462,13 +1577,18 @@ public class UserLibraryServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
      * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
      */
-    public com.squareup.okhttp.Call getVideosByIdAdditionalpartsAsync(String id, String userId, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getVideosByIdAdditionalpartsAsync(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1489,7 +1609,7 @@ public class UserLibraryServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsValidateBeforeCall(id, userId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsValidateBeforeCall(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
