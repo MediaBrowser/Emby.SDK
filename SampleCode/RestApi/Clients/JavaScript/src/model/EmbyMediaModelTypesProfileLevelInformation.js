@@ -16,7 +16,7 @@ import EmbyMediaModelTypesProfileInformation from './EmbyMediaModelTypesProfileI
 /**
 * The EmbyMediaModelTypesProfileLevelInformation model module.
 * @module model/EmbyMediaModelTypesProfileLevelInformation
-* @version 4.8.0.27
+* @version 4.8.0.28
 */
 export default class EmbyMediaModelTypesProfileLevelInformation {
     /**
