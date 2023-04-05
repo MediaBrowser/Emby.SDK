@@ -24,7 +24,7 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the ProvidersSongInfo class.
         /// </summary>
-        public ProvidersSongInfo(IList<string> albumArtists = default(IList<string>), string album = default(string), IList<string> artists = default(IList<string>), IList<string> composers = default(IList<string>), string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), IDictionary<string, string> providerIds = default(IDictionary<string, string>), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), System.DateTime? premiereDate = default(System.DateTime?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
+        public ProvidersSongInfo(IList<string> albumArtists = default(IList<string>), string album = default(string), IList<string> artists = default(IList<string>), IList<string> composers = default(IList<string>), string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), IList<GlobalizationCultureDto> metadataLanguages = default(IList<GlobalizationCultureDto>), IDictionary<string, string> providerIds = default(IDictionary<string, string>), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), System.DateTime? premiereDate = default(System.DateTime?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
         {
             AlbumArtists = albumArtists;
             Album = album;
@@ -33,6 +33,7 @@ namespace EmbyClient.MsRest.Models
             Name = name;
             MetadataLanguage = metadataLanguage;
             MetadataCountryCode = metadataCountryCode;
+            MetadataLanguages = metadataLanguages;
             ProviderIds = providerIds;
             Year = year;
             IndexNumber = indexNumber;
@@ -82,6 +83,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "MetadataCountryCode")]
         public string MetadataCountryCode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "MetadataLanguages")]
+        public IList<GlobalizationCultureDto> MetadataLanguages { get; set; }
 
         /// <summary>
         /// </summary>

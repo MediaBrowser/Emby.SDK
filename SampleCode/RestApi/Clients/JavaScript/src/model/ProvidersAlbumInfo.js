@@ -10,13 +10,14 @@
  */
 
 import ApiClient from '../ApiClient';
+import GlobalizationCultureDto from './GlobalizationCultureDto';
 import ProviderIdDictionary from './ProviderIdDictionary';
 import ProvidersSongInfo from './ProvidersSongInfo';
 
 /**
 * The ProvidersAlbumInfo model module.
 * @module model/ProvidersAlbumInfo
-* @version 4.8.0.28
+* @version 4.8.0.29
 */
 export default class ProvidersAlbumInfo {
     /**
@@ -57,6 +58,9 @@ export default class ProvidersAlbumInfo {
             }
             if (data.hasOwnProperty('MetadataCountryCode')) {
                 obj['MetadataCountryCode'] = ApiClient.convertToType(data['MetadataCountryCode'], 'String');
+            }
+            if (data.hasOwnProperty('MetadataLanguages')) {
+                obj['MetadataLanguages'] = ApiClient.convertToType(data['MetadataLanguages'], [GlobalizationCultureDto]);
             }
             if (data.hasOwnProperty('ProviderIds')) {
                 obj['ProviderIds'] = ProviderIdDictionary.constructFromObject(data['ProviderIds']);
@@ -103,6 +107,10 @@ export default class ProvidersAlbumInfo {
     * @member {String} MetadataCountryCode
     */
     'MetadataCountryCode' = undefined;
+    /**
+    * @member {Array.<module:model/GlobalizationCultureDto>} MetadataLanguages
+    */
+    'MetadataLanguages' = undefined;
     /**
     * @member {module:model/ProviderIdDictionary} ProviderIds
     */

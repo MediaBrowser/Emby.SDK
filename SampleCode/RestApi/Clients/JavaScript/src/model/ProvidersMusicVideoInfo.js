@@ -10,12 +10,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import GlobalizationCultureDto from './GlobalizationCultureDto';
 import ProviderIdDictionary from './ProviderIdDictionary';
 
 /**
 * The ProvidersMusicVideoInfo model module.
 * @module model/ProvidersMusicVideoInfo
-* @version 4.8.0.28
+* @version 4.8.0.29
 */
 export default class ProvidersMusicVideoInfo {
     /**
@@ -53,6 +54,9 @@ export default class ProvidersMusicVideoInfo {
             }
             if (data.hasOwnProperty('MetadataCountryCode')) {
                 obj['MetadataCountryCode'] = ApiClient.convertToType(data['MetadataCountryCode'], 'String');
+            }
+            if (data.hasOwnProperty('MetadataLanguages')) {
+                obj['MetadataLanguages'] = ApiClient.convertToType(data['MetadataLanguages'], [GlobalizationCultureDto]);
             }
             if (data.hasOwnProperty('ProviderIds')) {
                 obj['ProviderIds'] = ProviderIdDictionary.constructFromObject(data['ProviderIds']);
@@ -95,6 +99,10 @@ export default class ProvidersMusicVideoInfo {
     * @member {String} MetadataCountryCode
     */
     'MetadataCountryCode' = undefined;
+    /**
+    * @member {Array.<module:model/GlobalizationCultureDto>} MetadataLanguages
+    */
+    'MetadataLanguages' = undefined;
     /**
     * @member {module:model/ProviderIdDictionary} ProviderIds
     */

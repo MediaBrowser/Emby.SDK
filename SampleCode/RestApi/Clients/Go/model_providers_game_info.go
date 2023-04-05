@@ -13,6 +13,7 @@ type ProvidersGameInfo struct {
 	Name string `json:"Name,omitempty"`
 	MetadataLanguage string `json:"MetadataLanguage,omitempty"`
 	MetadataCountryCode string `json:"MetadataCountryCode,omitempty"`
+	MetadataLanguages []GlobalizationCultureDto `json:"MetadataLanguages,omitempty"`
 	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
 	Year int32 `json:"Year,omitempty"`
 	IndexNumber int32 `json:"IndexNumber,omitempty"`

@@ -15,7 +15,7 @@ import ProvidersMusicVideoInfo from './ProvidersMusicVideoInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersMusicVideoInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersMusicVideoInfo
-* @version 4.8.0.28
+* @version 4.8.0.29
 */
 export default class ProvidersRemoteSearchQueryProvidersMusicVideoInfo {
     /**

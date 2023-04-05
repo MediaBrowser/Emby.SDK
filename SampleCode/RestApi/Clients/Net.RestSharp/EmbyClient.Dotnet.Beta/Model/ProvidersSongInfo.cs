@@ -33,6 +33,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="name">name.</param>
         /// <param name="metadataLanguage">metadataLanguage.</param>
         /// <param name="metadataCountryCode">metadataCountryCode.</param>
+        /// <param name="metadataLanguages">metadataLanguages.</param>
         /// <param name="providerIds">providerIds.</param>
         /// <param name="year">year.</param>
         /// <param name="indexNumber">indexNumber.</param>
@@ -40,7 +41,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="premiereDate">premiereDate.</param>
         /// <param name="isAutomated">isAutomated.</param>
         /// <param name="enableAdultMetadata">enableAdultMetadata.</param>
-        public ProvidersSongInfo(List<string> albumArtists = default(List<string>), string album = default(string), List<string> artists = default(List<string>), List<string> composers = default(List<string>), string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
+        public ProvidersSongInfo(List<string> albumArtists = default(List<string>), string album = default(string), List<string> artists = default(List<string>), List<string> composers = default(List<string>), string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), List<GlobalizationCultureDto> metadataLanguages = default(List<GlobalizationCultureDto>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
         {
             this.AlbumArtists = albumArtists;
             this.Album = album;
@@ -49,6 +50,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.Name = name;
             this.MetadataLanguage = metadataLanguage;
             this.MetadataCountryCode = metadataCountryCode;
+            this.MetadataLanguages = metadataLanguages;
             this.ProviderIds = providerIds;
             this.Year = year;
             this.IndexNumber = indexNumber;
@@ -99,6 +101,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="MetadataCountryCode", EmitDefaultValue=false)]
         public string MetadataCountryCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MetadataLanguages
+        /// </summary>
+        [DataMember(Name="MetadataLanguages", EmitDefaultValue=false)]
+        public List<GlobalizationCultureDto> MetadataLanguages { get; set; }
 
         /// <summary>
         /// Gets or Sets ProviderIds
@@ -157,6 +165,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MetadataLanguage: ").Append(MetadataLanguage).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
+            sb.Append("  MetadataLanguages: ").Append(MetadataLanguages).Append("\n");
             sb.Append("  ProviderIds: ").Append(ProviderIds).Append("\n");
             sb.Append("  Year: ").Append(Year).Append("\n");
             sb.Append("  IndexNumber: ").Append(IndexNumber).Append("\n");
@@ -237,6 +246,12 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.MetadataCountryCode.Equals(input.MetadataCountryCode))
                 ) && 
                 (
+                    this.MetadataLanguages == input.MetadataLanguages ||
+                    this.MetadataLanguages != null &&
+                    input.MetadataLanguages != null &&
+                    this.MetadataLanguages.SequenceEqual(input.MetadataLanguages)
+                ) && 
+                (
                     this.ProviderIds == input.ProviderIds ||
                     (this.ProviderIds != null &&
                     this.ProviderIds.Equals(input.ProviderIds))
@@ -296,6 +311,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.MetadataLanguage.GetHashCode();
                 if (this.MetadataCountryCode != null)
                     hashCode = hashCode * 59 + this.MetadataCountryCode.GetHashCode();
+                if (this.MetadataLanguages != null)
+                    hashCode = hashCode * 59 + this.MetadataLanguages.GetHashCode();
                 if (this.ProviderIds != null)
                     hashCode = hashCode * 59 + this.ProviderIds.GetHashCode();
                 if (this.Year != null)

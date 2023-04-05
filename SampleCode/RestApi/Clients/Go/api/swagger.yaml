@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.28
+  version: 4.8.0.29
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -71438,6 +71438,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71550,6 +71554,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71598,6 +71606,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71652,6 +71664,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71707,6 +71723,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71755,6 +71775,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71807,6 +71831,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71855,6 +71883,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71911,6 +71943,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -71957,6 +71993,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:
@@ -72005,6 +72045,10 @@ components:
           type: string
         MetadataCountryCode:
           type: string
+        MetadataLanguages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Globalization.CultureDto'
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         Year:

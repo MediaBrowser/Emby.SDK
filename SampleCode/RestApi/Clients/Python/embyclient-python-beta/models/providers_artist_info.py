@@ -25,6 +25,7 @@ class ProvidersArtistInfo(object):
         'name': 'str',
         'metadata_language': 'str',
         'metadata_country_code': 'str',
+        'metadata_languages': 'list[GlobalizationCultureDto]',
         'provider_ids': 'ProviderIdDictionary',
         'year': 'int',
         'index_number': 'int',
@@ -38,6 +39,7 @@ class ProvidersArtistInfo(object):
         'name': 'Name',
         'metadata_language': 'MetadataLanguage',
         'metadata_country_code': 'MetadataCountryCode',
+        'metadata_languages': 'MetadataLanguages',
         'provider_ids': 'ProviderIds',
         'year': 'Year',
         'index_number': 'IndexNumber',
@@ -47,11 +49,12 @@ class ProvidersArtistInfo(object):
         'enable_adult_metadata': 'EnableAdultMetadata'
     }
 
-    def __init__(self, name=None, metadata_language=None, metadata_country_code=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
+    def __init__(self, name=None, metadata_language=None, metadata_country_code=None, metadata_languages=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
         """ProvidersArtistInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._metadata_language = None
         self._metadata_country_code = None
+        self._metadata_languages = None
         self._provider_ids = None
         self._year = None
         self._index_number = None
@@ -66,6 +69,8 @@ class ProvidersArtistInfo(object):
             self.metadata_language = metadata_language
         if metadata_country_code is not None:
             self.metadata_country_code = metadata_country_code
+        if metadata_languages is not None:
+            self.metadata_languages = metadata_languages
         if provider_ids is not None:
             self.provider_ids = provider_ids
         if year is not None:
@@ -143,6 +148,27 @@ class ProvidersArtistInfo(object):
         """
 
         self._metadata_country_code = metadata_country_code
+
+    @property
+    def metadata_languages(self):
+        """Gets the metadata_languages of this ProvidersArtistInfo.  # noqa: E501
+
+
+        :return: The metadata_languages of this ProvidersArtistInfo.  # noqa: E501
+        :rtype: list[GlobalizationCultureDto]
+        """
+        return self._metadata_languages
+
+    @metadata_languages.setter
+    def metadata_languages(self, metadata_languages):
+        """Sets the metadata_languages of this ProvidersArtistInfo.
+
+
+        :param metadata_languages: The metadata_languages of this ProvidersArtistInfo.  # noqa: E501
+        :type: list[GlobalizationCultureDto]
+        """
+
+        self._metadata_languages = metadata_languages
 
     @property
     def provider_ids(self):

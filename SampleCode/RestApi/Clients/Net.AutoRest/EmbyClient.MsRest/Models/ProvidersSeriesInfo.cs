@@ -26,13 +26,14 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         /// <param name="displayOrder">Possible values include: 'Aired', 'Dvd',
         /// 'Absolute'</param>
-        public ProvidersSeriesInfo(System.DateTime? episodeAirDate = default(System.DateTime?), string displayOrder = default(string), string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), IDictionary<string, string> providerIds = default(IDictionary<string, string>), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), System.DateTime? premiereDate = default(System.DateTime?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
+        public ProvidersSeriesInfo(System.DateTime? episodeAirDate = default(System.DateTime?), string displayOrder = default(string), string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), IList<GlobalizationCultureDto> metadataLanguages = default(IList<GlobalizationCultureDto>), IDictionary<string, string> providerIds = default(IDictionary<string, string>), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), System.DateTime? premiereDate = default(System.DateTime?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
         {
             EpisodeAirDate = episodeAirDate;
             DisplayOrder = displayOrder;
             Name = name;
             MetadataLanguage = metadataLanguage;
             MetadataCountryCode = metadataCountryCode;
+            MetadataLanguages = metadataLanguages;
             ProviderIds = providerIds;
             Year = year;
             IndexNumber = indexNumber;
@@ -73,6 +74,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "MetadataCountryCode")]
         public string MetadataCountryCode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "MetadataLanguages")]
+        public IList<GlobalizationCultureDto> MetadataLanguages { get; set; }
 
         /// <summary>
         /// </summary>

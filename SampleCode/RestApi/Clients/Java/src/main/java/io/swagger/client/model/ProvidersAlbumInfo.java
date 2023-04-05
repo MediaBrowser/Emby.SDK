@@ -12,6 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.GlobalizationCultureDto;
 import io.swagger.client.model.ProviderIdDictionary;
 import io.swagger.client.model.ProvidersSongInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -39,6 +40,9 @@ public class ProvidersAlbumInfo {
 
   @SerializedName("MetadataCountryCode")
   private String metadataCountryCode = null;
+
+  @SerializedName("MetadataLanguages")
+  private List<GlobalizationCultureDto> metadataLanguages = null;
 
   @SerializedName("ProviderIds")
   private ProviderIdDictionary providerIds = null;
@@ -165,6 +169,32 @@ public class ProvidersAlbumInfo {
 
   public void setMetadataCountryCode(String metadataCountryCode) {
     this.metadataCountryCode = metadataCountryCode;
+  }
+
+  public ProvidersAlbumInfo metadataLanguages(List<GlobalizationCultureDto> metadataLanguages) {
+    this.metadataLanguages = metadataLanguages;
+    return this;
+  }
+
+  public ProvidersAlbumInfo addMetadataLanguagesItem(GlobalizationCultureDto metadataLanguagesItem) {
+    if (this.metadataLanguages == null) {
+      this.metadataLanguages = new ArrayList<GlobalizationCultureDto>();
+    }
+    this.metadataLanguages.add(metadataLanguagesItem);
+    return this;
+  }
+
+   /**
+   * Get metadataLanguages
+   * @return metadataLanguages
+  **/
+  @Schema(description = "")
+  public List<GlobalizationCultureDto> getMetadataLanguages() {
+    return metadataLanguages;
+  }
+
+  public void setMetadataLanguages(List<GlobalizationCultureDto> metadataLanguages) {
+    this.metadataLanguages = metadataLanguages;
   }
 
   public ProvidersAlbumInfo providerIds(ProviderIdDictionary providerIds) {
@@ -308,6 +338,7 @@ public class ProvidersAlbumInfo {
         Objects.equals(this.name, providersAlbumInfo.name) &&
         Objects.equals(this.metadataLanguage, providersAlbumInfo.metadataLanguage) &&
         Objects.equals(this.metadataCountryCode, providersAlbumInfo.metadataCountryCode) &&
+        Objects.equals(this.metadataLanguages, providersAlbumInfo.metadataLanguages) &&
         Objects.equals(this.providerIds, providersAlbumInfo.providerIds) &&
         Objects.equals(this.year, providersAlbumInfo.year) &&
         Objects.equals(this.indexNumber, providersAlbumInfo.indexNumber) &&
@@ -319,7 +350,7 @@ public class ProvidersAlbumInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(albumArtists, songInfos, name, metadataLanguage, metadataCountryCode, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
+    return Objects.hash(albumArtists, songInfos, name, metadataLanguage, metadataCountryCode, metadataLanguages, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
   }
 
 
@@ -333,6 +364,7 @@ public class ProvidersAlbumInfo {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    metadataLanguage: ").append(toIndentedString(metadataLanguage)).append("\n");
     sb.append("    metadataCountryCode: ").append(toIndentedString(metadataCountryCode)).append("\n");
+    sb.append("    metadataLanguages: ").append(toIndentedString(metadataLanguages)).append("\n");
     sb.append("    providerIds: ").append(toIndentedString(providerIds)).append("\n");
     sb.append("    year: ").append(toIndentedString(year)).append("\n");
     sb.append("    indexNumber: ").append(toIndentedString(indexNumber)).append("\n");

@@ -15,7 +15,7 @@ import ProvidersItemLookupInfo from './ProvidersItemLookupInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersItemLookupInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersItemLookupInfo
-* @version 4.8.0.28
+* @version 4.8.0.29
 */
 export default class ProvidersRemoteSearchQueryProvidersItemLookupInfo {
     /**

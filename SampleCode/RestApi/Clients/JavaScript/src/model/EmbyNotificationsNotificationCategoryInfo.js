@@ -15,7 +15,7 @@ import EmbyNotificationsNotificationTypeInfo from './EmbyNotificationsNotificati
 /**
 * The EmbyNotificationsNotificationCategoryInfo model module.
 * @module model/EmbyNotificationsNotificationCategoryInfo
-* @version 4.8.0.28
+* @version 4.8.0.29
 */
 export default class EmbyNotificationsNotificationCategoryInfo {
     /**

@@ -57207,6 +57207,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57330,6 +57336,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57393,6 +57405,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57464,6 +57482,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57538,6 +57562,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57601,6 +57631,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57672,6 +57708,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57735,6 +57777,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57812,6 +57860,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57872,6 +57926,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57936,6 +57996,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"

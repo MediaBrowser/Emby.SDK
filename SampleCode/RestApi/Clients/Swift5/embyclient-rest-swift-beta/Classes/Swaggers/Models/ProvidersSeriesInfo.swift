@@ -16,6 +16,7 @@ public struct ProvidersSeriesInfo: Codable {
     public var name: String?
     public var metadataLanguage: String?
     public var metadataCountryCode: String?
+    public var metadataLanguages: [GlobalizationCultureDto]?
     public var providerIds: ProviderIdDictionary?
     public var year: Int?
     public var indexNumber: Int?
@@ -24,12 +25,13 @@ public struct ProvidersSeriesInfo: Codable {
     public var isAutomated: Bool?
     public var enableAdultMetadata: Bool?
 
-    public init(episodeAirDate: Date? = nil, displayOrder: SeriesDisplayOrder? = nil, name: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
+    public init(episodeAirDate: Date? = nil, displayOrder: SeriesDisplayOrder? = nil, name: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
         self.episodeAirDate = episodeAirDate
         self.displayOrder = displayOrder
         self.name = name
         self.metadataLanguage = metadataLanguage
         self.metadataCountryCode = metadataCountryCode
+        self.metadataLanguages = metadataLanguages
         self.providerIds = providerIds
         self.year = year
         self.indexNumber = indexNumber
@@ -45,6 +47,7 @@ public struct ProvidersSeriesInfo: Codable {
         case name = "Name"
         case metadataLanguage = "MetadataLanguage"
         case metadataCountryCode = "MetadataCountryCode"
+        case metadataLanguages = "MetadataLanguages"
         case providerIds = "ProviderIds"
         case year = "Year"
         case indexNumber = "IndexNumber"

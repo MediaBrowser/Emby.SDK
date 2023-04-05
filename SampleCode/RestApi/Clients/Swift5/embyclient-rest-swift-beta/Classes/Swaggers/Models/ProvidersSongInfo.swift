@@ -18,6 +18,7 @@ public struct ProvidersSongInfo: Codable {
     public var name: String?
     public var metadataLanguage: String?
     public var metadataCountryCode: String?
+    public var metadataLanguages: [GlobalizationCultureDto]?
     public var providerIds: ProviderIdDictionary?
     public var year: Int?
     public var indexNumber: Int?
@@ -26,7 +27,7 @@ public struct ProvidersSongInfo: Codable {
     public var isAutomated: Bool?
     public var enableAdultMetadata: Bool?
 
-    public init(albumArtists: [String]? = nil, album: String? = nil, artists: [String]? = nil, composers: [String]? = nil, name: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
+    public init(albumArtists: [String]? = nil, album: String? = nil, artists: [String]? = nil, composers: [String]? = nil, name: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
         self.albumArtists = albumArtists
         self.album = album
         self.artists = artists
@@ -34,6 +35,7 @@ public struct ProvidersSongInfo: Codable {
         self.name = name
         self.metadataLanguage = metadataLanguage
         self.metadataCountryCode = metadataCountryCode
+        self.metadataLanguages = metadataLanguages
         self.providerIds = providerIds
         self.year = year
         self.indexNumber = indexNumber
@@ -51,6 +53,7 @@ public struct ProvidersSongInfo: Codable {
         case name = "Name"
         case metadataLanguage = "MetadataLanguage"
         case metadataCountryCode = "MetadataCountryCode"
+        case metadataLanguages = "MetadataLanguages"
         case providerIds = "ProviderIds"
         case year = "Year"
         case indexNumber = "IndexNumber"

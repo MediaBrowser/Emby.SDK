@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.28"
+    "version": "4.8.0.29"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -57209,6 +57209,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57332,6 +57338,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57395,6 +57407,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57466,6 +57484,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57540,6 +57564,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57603,6 +57633,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57674,6 +57710,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57737,6 +57779,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57814,6 +57862,12 @@
         "MetadataCountryCode": {
           "type": "string"
         },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },
@@ -57874,6 +57928,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
@@ -57938,6 +57998,12 @@
         },
         "MetadataCountryCode": {
           "type": "string"
+        },
+        "MetadataLanguages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Globalization.CultureDto"
+          }
         },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"

@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * UserViewsService service.
 * @module EmbyClient.JavaScript.Beta/UserViewsServiceApi
-* @version 4.8.0.28
+* @version 4.8.0.29
 */
 export default class UserViewsServiceApi {
 
