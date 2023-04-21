@@ -24,4 +24,7 @@ public enum MetadataFields: String, Codable {
     case originalTitle = "OriginalTitle"
     case sortIndexNumber = "SortIndexNumber"
     case sortParentIndexNumber = "SortParentIndexNumber"
+    case communityRating = "CommunityRating"
+    case criticRating = "CriticRating"
+    case tagline = "Tagline"
 }

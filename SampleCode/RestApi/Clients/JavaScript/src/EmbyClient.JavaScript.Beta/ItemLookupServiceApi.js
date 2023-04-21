@@ -26,7 +26,7 @@ import RemoteSearchResult from '../model/RemoteSearchResult';
 /**
 * ItemLookupService service.
 * @module EmbyClient.JavaScript.Beta/ItemLookupServiceApi
-* @version 4.8.0.29
+* @version 4.8.0.30
 */
 export default class ItemLookupServiceApi {
 
@@ -113,6 +113,43 @@ export default class ItemLookupServiceApi {
 
       return this.apiClient.callApi(
         '/Items/RemoteSearch/Image', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsMetadataReset operation.
+     * @callback module:EmbyClient.JavaScript.Beta/ItemLookupServiceApi~postItemsMetadataResetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Resets metadata for one or more items
+     * Requires authentication as administrator
+     * @param {module:EmbyClient.JavaScript.Beta/ItemLookupServiceApi~postItemsMetadataResetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsMetadataReset() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'ItemIds': itemIds
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/Metadata/Reset', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -111,6 +111,51 @@ open class ItemLookupServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Resets metadata for one or more items
+
+     - parameter itemIds: (query) The item ids 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postItemsMetadataReset(itemIds: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsMetadataResetWithRequestBuilder(itemIds: itemIds).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Resets metadata for one or more items
+     - POST /Items/Metadata/Reset
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter itemIds: (query) The item ids 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postItemsMetadataResetWithRequestBuilder(itemIds: String) -> RequestBuilder<Void> {
+        let path = "/Items/Metadata/Reset"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "ItemIds": itemIds
+        ])
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Applies search criteria to an item and refreshes metadata
 
      - parameter body: (body) RemoteSearchResult:  

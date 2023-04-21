@@ -106,6 +106,24 @@ export default class MetadataFields {
          */
         sortParentIndexNumber = "SortParentIndexNumber";
 
+        /**
+         * value: "CommunityRating"
+         * @const
+         */
+        communityRating = "CommunityRating";
+
+        /**
+         * value: "CriticRating"
+         * @const
+         */
+        criticRating = "CriticRating";
+
+        /**
+         * value: "Tagline"
+         * @const
+         */
+        tagline = "Tagline";
+
 
     /**
     * Returns a <code>MetadataFields</code> enum value from a Javascript object name.

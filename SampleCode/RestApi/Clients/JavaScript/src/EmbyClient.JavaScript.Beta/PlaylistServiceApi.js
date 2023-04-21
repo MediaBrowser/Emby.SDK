@@ -10,13 +10,14 @@
  */
 
 import ApiClient from "../ApiClient";
+import PlaylistsAddToPlaylistResult from '../model/PlaylistsAddToPlaylistResult';
 import PlaylistsPlaylistCreationResult from '../model/PlaylistsPlaylistCreationResult';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 
 /**
 * PlaylistService service.
 * @module EmbyClient.JavaScript.Beta/PlaylistServiceApi
-* @version 4.8.0.29
+* @version 4.8.0.30
 */
 export default class PlaylistServiceApi {
 
@@ -65,6 +66,48 @@ export default class PlaylistServiceApi {
 
       return this.apiClient.callApi(
         '/Playlists/{Id}/Items', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getPlaylistsByIdAddtoplaylistinfo operation.
+     * @callback module:EmbyClient.JavaScript.Beta/PlaylistServiceApi~getPlaylistsByIdAddtoplaylistinfoCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets add to playlist info
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript.Beta/PlaylistServiceApi~getPlaylistsByIdAddtoplaylistinfoCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    getPlaylistsByIdAddtoplaylistinfo() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+        'UserId': opts['userId'],
+        'Ids': ids
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = Object;
+
+      return this.apiClient.callApi(
+        '/Playlists/{Id}/AddToPlaylistInfo', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -163,7 +206,7 @@ export default class PlaylistServiceApi {
      * Callback function to receive the result of the postPlaylistsByIdItems operation.
      * @callback module:EmbyClient.JavaScript.Beta/PlaylistServiceApi~postPlaylistsByIdItemsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/PlaylistsAddToPlaylistResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -172,6 +215,7 @@ export default class PlaylistServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/PlaylistServiceApi~postPlaylistsByIdItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PlaylistsAddToPlaylistResult}
      */
     postPlaylistsByIdItems() {
       opts = opts || {};
@@ -191,8 +235,8 @@ export default class PlaylistServiceApi {
 
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = PlaylistsAddToPlaylistResult;
 
       return this.apiClient.callApi(
         '/Playlists/{Id}/Items', 'POST',

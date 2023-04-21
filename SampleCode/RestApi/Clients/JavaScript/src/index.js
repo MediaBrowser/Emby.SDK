@@ -197,6 +197,7 @@ import PlaybackProgressInfo from './model/PlaybackProgressInfo';
 import PlaybackStartInfo from './model/PlaybackStartInfo';
 import PlaybackStopInfo from './model/PlaybackStopInfo';
 import PlayerStateInfo from './model/PlayerStateInfo';
+import PlaylistsAddToPlaylistResult from './model/PlaylistsAddToPlaylistResult';
 import PlaylistsPlaylistCreationResult from './model/PlaylistsPlaylistCreationResult';
 import PlaystateCommand from './model/PlaystateCommand';
 import PlaystateRequest from './model/PlaystateRequest';
@@ -412,7 +413,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.29
+* @version 4.8.0.30
 */
 export {
     /**
@@ -1542,6 +1543,12 @@ export {
      * @property {module:model/PlayerStateInfo}
      */
     PlayerStateInfo,
+
+    /**
+     * The PlaylistsAddToPlaylistResult model constructor.
+     * @property {module:model/PlaylistsAddToPlaylistResult}
+     */
+    PlaylistsAddToPlaylistResult,
 
     /**
      * The PlaylistsPlaylistCreationResult model constructor.

@@ -156,99 +156,34 @@
   <div class="markdown level0 summary"><p>Marker interface</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html#MediaBrowser_Controller_Entities_IHasFolderGrouping_IsPreSorted">IHasFolderGrouping.IsPreSorted</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html#MediaBrowser_Controller_Entities_IHasFolderGrouping_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_">IHasFolderGrouping.GetItems(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html#MediaBrowser_Controller_Entities_IHasFolderGrouping_GetItemIdList_MediaBrowser_Controller_Entities_InternalItemsQuery_">IHasFolderGrouping.GetItemIdList(InternalItemsQuery)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_IItemByName_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IItemByName</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IItemByName : IHasFolderGrouping</code></pre>
   </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_IItemByName_GetTaggedItems_" data-uid="MediaBrowser.Controller.Entities.IItemByName.GetTaggedItems*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_IItemByName_GetTaggedItems_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.IItemByName.GetTaggedItems(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTaggedItems(InternalItemsQuery)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long[] GetTaggedItems(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_IItemByName_GetTaggedItemsResult_" data-uid="MediaBrowser.Controller.Entities.IItemByName.GetTaggedItemsResult*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_IItemByName_GetTaggedItemsResult_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.IItemByName.GetTaggedItemsResult(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTaggedItemsResult(InternalItemsQuery)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;BaseItem&gt; GetTaggedItemsResult(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetTaggedItems_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetTaggedItems(IItemByName, InternalItemsQuery)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetTaggedItemsResult_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetTaggedItemsResult(IItemByName, InternalItemsQuery)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetItemList_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetItemList(IItemByName, InternalItemsQuery)</a>
+  </div>
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
   </div>

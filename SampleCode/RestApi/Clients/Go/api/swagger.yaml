@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.29
+  version: 4.8.0.30
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -22768,7 +22768,6 @@ paths:
         explode: false
         schema:
           type: string
-          format: guid
       - name: GenreIds
         in: query
         description: The genres to return guide information for.
@@ -33129,6 +33128,40 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+  /Items/Metadata/Reset:
+    summary: Resets metadata for one or more items
+    post:
+      tags:
+      - ItemLookupService
+      summary: Resets metadata for one or more items
+      description: Requires authentication as administrator
+      operationId: postItemsMetadataReset
+      parameters:
+      - name: ItemIds
+        in: query
+        description: The item ids
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
   /Items/{Id}/Refresh:
     summary: Refreshes metadata for an item
     post:
@@ -35627,7 +35660,6 @@ paths:
         explode: false
         schema:
           type: string
-          format: guid
       - name: Fields
         in: query
         description: "Optional. Specify additional fields of information to return\
@@ -37002,6 +37034,61 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+  /Playlists/{Id}/AddToPlaylistInfo:
+    summary: Gets add to playlist info
+    get:
+      tags:
+      - PlaylistService
+      summary: Gets add to playlist info
+      description: Requires authentication as user
+      operationId: getPlaylistsByIdAddtoplaylistinfo
+      parameters:
+      - name: UserId
+        in: query
+        description: User Id
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: Ids
+        in: query
+        description: "Item id, comma delimited"
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Returning a GetAddToPlaylistInfo object.
+          content:
+            application/json:
+              schema:
+                x-content-type: application/json
+            application/xml:
+              schema: {}
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Playlists/{Id}/Items:
     summary: Adds items to a playlist
     get:
@@ -37156,7 +37243,14 @@ paths:
           type: string
       responses:
         "200":
-          description: Operation successful. Empty response.
+          description: Operation successful. Returning a AddToPlaylistResult object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Playlists.AddToPlaylistResult'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Playlists.AddToPlaylistResult'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -57795,6 +57889,9 @@ components:
       - OriginalTitle
       - SortIndexNumber
       - SortParentIndexNumber
+      - CommunityRating
+      - CriticRating
+      - Tagline
       x-internal-ref-name: MediaBrowser.Model.Entities.MetadataFields
     Drawing.ImageOrientation:
       type: string
@@ -61076,6 +61173,9 @@ components:
         AutomaticRefreshIntervalDays:
           type: integer
           format: int32
+        PlaceholderMetadataRefreshIntervalDays:
+          type: integer
+          format: int32
         PreferredMetadataLanguage:
           type: string
         PreferredImageLanguage:
@@ -61173,7 +61273,7 @@ components:
           type: integer
           format: int32
       example:
-        LyricsDownloadMaxAgeDays: 1
+        LyricsDownloadMaxAgeDays: 5
         SaveLyricsWithMedia: true
         EnableMarkerDetection: true
         ContentType: ContentType
@@ -61188,9 +61288,9 @@ components:
         Name: Name
         PreferredImageLanguage: PreferredImageLanguage
         DownloadImagesInAdvance: true
-        ThumbnailImagesIntervalSeconds: 3
-        MaxResumePct: 7
-        MinResumeDurationSeconds: 9
+        ThumbnailImagesIntervalSeconds: 2
+        MaxResumePct: 9
+        MinResumeDurationSeconds: 3
         EnableAudioResume: true
         MusicFolderStructure: MusicFolderStructure
         IgnoreHiddenFiles: true
@@ -61249,7 +61349,7 @@ components:
         SubtitleDownloadLanguages:
         - SubtitleDownloadLanguages
         - SubtitleDownloadLanguages
-        MinResumePct: 2
+        MinResumePct: 7
         SaveLocalThumbnailSets: true
         SubtitleDownloadMaxAgeDays: 5
         EnableAdultMetadata: true
@@ -61271,6 +61371,7 @@ components:
         CollapseSingleItemFolders: true
         EnableMarkerDetectionDuringLibraryScan: true
         EnableEmbeddedTitles: true
+        PlaceholderMetadataRefreshIntervalDays: 1
         EnableChapterImageExtraction: true
         AutomaticRefreshIntervalDays: 6
         SubtitleFetcherOrder:
@@ -61294,8 +61395,8 @@ components:
           Username: Username
           NetworkPath: NetworkPath
           Password: Password
-        SampleIgnoreSize: 2
-        MinCollectionItems: 5
+        SampleIgnoreSize: 4
+        MinCollectionItems: 2
       x-internal-ref-name: MediaBrowser.Model.Configuration.LibraryOptions
     Configuration.MediaPathInfo:
       type: object
@@ -74844,16 +74945,16 @@ components:
           type: integer
           format: int32
       example:
-        TotalRecordCount: 7
+        TotalRecordCount: 1
         Items:
-        - RefreshProgress: 4.145608029883936
+        - RefreshProgress: 7.386281948385884
           PrimaryImageItemId: PrimaryImageItemId
           CollectionType: CollectionType
           Locations:
           - Locations
           - Locations
           LibraryOptions:
-            LyricsDownloadMaxAgeDays: 1
+            LyricsDownloadMaxAgeDays: 5
             SaveLyricsWithMedia: true
             EnableMarkerDetection: true
             ContentType: ContentType
@@ -74868,9 +74969,9 @@ components:
             Name: Name
             PreferredImageLanguage: PreferredImageLanguage
             DownloadImagesInAdvance: true
-            ThumbnailImagesIntervalSeconds: 3
-            MaxResumePct: 7
-            MinResumeDurationSeconds: 9
+            ThumbnailImagesIntervalSeconds: 2
+            MaxResumePct: 9
+            MinResumeDurationSeconds: 3
             EnableAudioResume: true
             MusicFolderStructure: MusicFolderStructure
             IgnoreHiddenFiles: true
@@ -74929,7 +75030,7 @@ components:
             SubtitleDownloadLanguages:
             - SubtitleDownloadLanguages
             - SubtitleDownloadLanguages
-            MinResumePct: 2
+            MinResumePct: 7
             SaveLocalThumbnailSets: true
             SubtitleDownloadMaxAgeDays: 5
             EnableAdultMetadata: true
@@ -74951,6 +75052,7 @@ components:
             CollapseSingleItemFolders: true
             EnableMarkerDetectionDuringLibraryScan: true
             EnableEmbeddedTitles: true
+            PlaceholderMetadataRefreshIntervalDays: 1
             EnableChapterImageExtraction: true
             AutomaticRefreshIntervalDays: 6
             SubtitleFetcherOrder:
@@ -74974,21 +75076,21 @@ components:
               Username: Username
               NetworkPath: NetworkPath
               Password: Password
-            SampleIgnoreSize: 2
-            MinCollectionItems: 5
+            SampleIgnoreSize: 4
+            MinCollectionItems: 2
           Id: Id
           Guid: Guid
           ItemId: ItemId
           RefreshStatus: RefreshStatus
           Name: Name
-        - RefreshProgress: 4.145608029883936
+        - RefreshProgress: 7.386281948385884
           PrimaryImageItemId: PrimaryImageItemId
           CollectionType: CollectionType
           Locations:
           - Locations
           - Locations
           LibraryOptions:
-            LyricsDownloadMaxAgeDays: 1
+            LyricsDownloadMaxAgeDays: 5
             SaveLyricsWithMedia: true
             EnableMarkerDetection: true
             ContentType: ContentType
@@ -75003,9 +75105,9 @@ components:
             Name: Name
             PreferredImageLanguage: PreferredImageLanguage
             DownloadImagesInAdvance: true
-            ThumbnailImagesIntervalSeconds: 3
-            MaxResumePct: 7
-            MinResumeDurationSeconds: 9
+            ThumbnailImagesIntervalSeconds: 2
+            MaxResumePct: 9
+            MinResumeDurationSeconds: 3
             EnableAudioResume: true
             MusicFolderStructure: MusicFolderStructure
             IgnoreHiddenFiles: true
@@ -75064,7 +75166,7 @@ components:
             SubtitleDownloadLanguages:
             - SubtitleDownloadLanguages
             - SubtitleDownloadLanguages
-            MinResumePct: 2
+            MinResumePct: 7
             SaveLocalThumbnailSets: true
             SubtitleDownloadMaxAgeDays: 5
             EnableAdultMetadata: true
@@ -75086,6 +75188,7 @@ components:
             CollapseSingleItemFolders: true
             EnableMarkerDetectionDuringLibraryScan: true
             EnableEmbeddedTitles: true
+            PlaceholderMetadataRefreshIntervalDays: 1
             EnableChapterImageExtraction: true
             AutomaticRefreshIntervalDays: 6
             SubtitleFetcherOrder:
@@ -75109,8 +75212,8 @@ components:
               Username: Username
               NetworkPath: NetworkPath
               Password: Password
-            SampleIgnoreSize: 2
-            MinCollectionItems: 5
+            SampleIgnoreSize: 4
+            MinCollectionItems: 2
           Id: Id
           Guid: Guid
           ItemId: ItemId
@@ -75144,14 +75247,14 @@ components:
         RefreshStatus:
           type: string
       example:
-        RefreshProgress: 4.145608029883936
+        RefreshProgress: 7.386281948385884
         PrimaryImageItemId: PrimaryImageItemId
         CollectionType: CollectionType
         Locations:
         - Locations
         - Locations
         LibraryOptions:
-          LyricsDownloadMaxAgeDays: 1
+          LyricsDownloadMaxAgeDays: 5
           SaveLyricsWithMedia: true
           EnableMarkerDetection: true
           ContentType: ContentType
@@ -75166,9 +75269,9 @@ components:
           Name: Name
           PreferredImageLanguage: PreferredImageLanguage
           DownloadImagesInAdvance: true
-          ThumbnailImagesIntervalSeconds: 3
-          MaxResumePct: 7
-          MinResumeDurationSeconds: 9
+          ThumbnailImagesIntervalSeconds: 2
+          MaxResumePct: 9
+          MinResumeDurationSeconds: 3
           EnableAudioResume: true
           MusicFolderStructure: MusicFolderStructure
           IgnoreHiddenFiles: true
@@ -75227,7 +75330,7 @@ components:
           SubtitleDownloadLanguages:
           - SubtitleDownloadLanguages
           - SubtitleDownloadLanguages
-          MinResumePct: 2
+          MinResumePct: 7
           SaveLocalThumbnailSets: true
           SubtitleDownloadMaxAgeDays: 5
           EnableAdultMetadata: true
@@ -75249,6 +75352,7 @@ components:
           CollapseSingleItemFolders: true
           EnableMarkerDetectionDuringLibraryScan: true
           EnableEmbeddedTitles: true
+          PlaceholderMetadataRefreshIntervalDays: 1
           EnableChapterImageExtraction: true
           AutomaticRefreshIntervalDays: 6
           SubtitleFetcherOrder:
@@ -75272,8 +75376,8 @@ components:
             Username: Username
             NetworkPath: NetworkPath
             Password: Password
-          SampleIgnoreSize: 2
-          MinCollectionItems: 5
+          SampleIgnoreSize: 4
+          MinCollectionItems: 2
         Id: Id
         Guid: Guid
         ItemId: ItemId
@@ -75425,6 +75529,18 @@ components:
         - UserIds
         IsSelfNotification: true
       x-internal-ref-name: Emby.Notifications.UserNotificationInfo
+    Playlists.AddToPlaylistResult:
+      type: object
+      properties:
+        Id:
+          type: string
+        ItemAddedCount:
+          type: integer
+          format: int32
+      example:
+        ItemAddedCount: 0
+        Id: Id
+      x-internal-ref-name: MediaBrowser.Controller.Playlists.AddToPlaylistResult
     PlayCommand:
       type: string
       enum:

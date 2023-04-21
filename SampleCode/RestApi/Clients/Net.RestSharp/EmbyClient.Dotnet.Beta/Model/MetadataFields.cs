@@ -97,5 +97,20 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// Enum SortParentIndexNumber for value: SortParentIndexNumber
         /// </summary>
         [EnumMember(Value = "SortParentIndexNumber")]
-        SortParentIndexNumber = 15    }
+        SortParentIndexNumber = 15,
+        /// <summary>
+        /// Enum CommunityRating for value: CommunityRating
+        /// </summary>
+        [EnumMember(Value = "CommunityRating")]
+        CommunityRating = 16,
+        /// <summary>
+        /// Enum CriticRating for value: CriticRating
+        /// </summary>
+        [EnumMember(Value = "CriticRating")]
+        CriticRating = 17,
+        /// <summary>
+        /// Enum Tagline for value: Tagline
+        /// </summary>
+        [EnumMember(Value = "Tagline")]
+        Tagline = 18    }
 }

@@ -25,4 +25,7 @@ const (
 	ORIGINAL_TITLE_MetadataFields MetadataFields = "OriginalTitle"
 	SORT_INDEX_NUMBER_MetadataFields MetadataFields = "SortIndexNumber"
 	SORT_PARENT_INDEX_NUMBER_MetadataFields MetadataFields = "SortParentIndexNumber"
+	COMMUNITY_RATING_MetadataFields MetadataFields = "CommunityRating"
+	CRITIC_RATING_MetadataFields MetadataFields = "CriticRating"
+	TAGLINE_MetadataFields MetadataFields = "Tagline"
 )

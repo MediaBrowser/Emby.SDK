@@ -67,6 +67,21 @@ public class ItemLookupServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Resets metadata for one or more items
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postItemsMetadataResetTest() throws Exception {
+        String itemIds = null;
+        api.postItemsMetadataReset(itemIds);
+
+        // TODO: test validations
+    }
+    /**
      * Applies search criteria to an item and refreshes metadata
      *
      * Requires authentication as administrator

@@ -43,6 +43,7 @@ class ConfigurationLibraryOptions(object):
         'enable_embedded_titles': 'bool',
         'enable_audio_resume': 'bool',
         'automatic_refresh_interval_days': 'int',
+        'placeholder_metadata_refresh_interval_days': 'int',
         'preferred_metadata_language': 'str',
         'preferred_image_language': 'str',
         'content_type': 'str',
@@ -101,6 +102,7 @@ class ConfigurationLibraryOptions(object):
         'enable_embedded_titles': 'EnableEmbeddedTitles',
         'enable_audio_resume': 'EnableAudioResume',
         'automatic_refresh_interval_days': 'AutomaticRefreshIntervalDays',
+        'placeholder_metadata_refresh_interval_days': 'PlaceholderMetadataRefreshIntervalDays',
         'preferred_metadata_language': 'PreferredMetadataLanguage',
         'preferred_image_language': 'PreferredImageLanguage',
         'content_type': 'ContentType',
@@ -137,7 +139,7 @@ class ConfigurationLibraryOptions(object):
         'sample_ignore_size': 'SampleIgnoreSize'
     }
 
-    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_missing_episodes=None, import_playlists=None, enable_automatic_series_grouping=None, enable_embedded_titles=None, enable_audio_resume=None, automatic_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, season_zero_display_name=None, name=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, type_options=None, collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
+    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_missing_episodes=None, import_playlists=None, enable_automatic_series_grouping=None, enable_embedded_titles=None, enable_audio_resume=None, automatic_refresh_interval_days=None, placeholder_metadata_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, season_zero_display_name=None, name=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, type_options=None, collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
         """ConfigurationLibraryOptions - a model defined in Swagger"""  # noqa: E501
         self._enable_archive_media_files = None
         self._enable_photos = None
@@ -160,6 +162,7 @@ class ConfigurationLibraryOptions(object):
         self._enable_embedded_titles = None
         self._enable_audio_resume = None
         self._automatic_refresh_interval_days = None
+        self._placeholder_metadata_refresh_interval_days = None
         self._preferred_metadata_language = None
         self._preferred_image_language = None
         self._content_type = None
@@ -237,6 +240,8 @@ class ConfigurationLibraryOptions(object):
             self.enable_audio_resume = enable_audio_resume
         if automatic_refresh_interval_days is not None:
             self.automatic_refresh_interval_days = automatic_refresh_interval_days
+        if placeholder_metadata_refresh_interval_days is not None:
+            self.placeholder_metadata_refresh_interval_days = placeholder_metadata_refresh_interval_days
         if preferred_metadata_language is not None:
             self.preferred_metadata_language = preferred_metadata_language
         if preferred_image_language is not None:
@@ -746,6 +751,27 @@ class ConfigurationLibraryOptions(object):
         """
 
         self._automatic_refresh_interval_days = automatic_refresh_interval_days
+
+    @property
+    def placeholder_metadata_refresh_interval_days(self):
+        """Gets the placeholder_metadata_refresh_interval_days of this ConfigurationLibraryOptions.  # noqa: E501
+
+
+        :return: The placeholder_metadata_refresh_interval_days of this ConfigurationLibraryOptions.  # noqa: E501
+        :rtype: int
+        """
+        return self._placeholder_metadata_refresh_interval_days
+
+    @placeholder_metadata_refresh_interval_days.setter
+    def placeholder_metadata_refresh_interval_days(self, placeholder_metadata_refresh_interval_days):
+        """Sets the placeholder_metadata_refresh_interval_days of this ConfigurationLibraryOptions.
+
+
+        :param placeholder_metadata_refresh_interval_days: The placeholder_metadata_refresh_interval_days of this ConfigurationLibraryOptions.  # noqa: E501
+        :type: int
+        """
+
+        self._placeholder_metadata_refresh_interval_days = placeholder_metadata_refresh_interval_days
 
     @property
     def preferred_metadata_language(self):

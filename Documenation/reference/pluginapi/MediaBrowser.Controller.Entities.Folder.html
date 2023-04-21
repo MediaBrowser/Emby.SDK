@@ -179,6 +179,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
+    <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -292,6 +293,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds">BaseItem.LocalTrailerIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasPlaceholderMatadata">BaseItem.HasPlaceholderMatadata()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsManageAccess">BaseItem.SupportsManageAccess()</a>
@@ -1019,12 +1023,21 @@
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowEditingField_MediaBrowser_Model_Entities_MetadataFields_">BaseItem.AllowEditingField(MetadataFields)</a>
     </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsResetMetadata">BaseItem.SupportsResetMetadata</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResetMetadata">BaseItem.ResetMetadata()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResetMetadataInternal">BaseItem.ResetMetadataInternal()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_Folder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Folder : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Folder : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasFolderGrouping</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -2183,90 +2196,6 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkUnplayed_MediaBrowser_Controller_Entities_User_">BaseItem.MarkUnplayed(User)</a></div>
   
   
-  <a id="MediaBrowser_Controller_Entities_Folder_QueryRecursive_" data-uid="MediaBrowser.Controller.Entities.Folder.QueryRecursive*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Folder_QueryRecursive_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.Folder.QueryRecursive(MediaBrowser.Controller.Entities.InternalItemsQuery)">QueryRecursive(InternalItemsQuery)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QueryResult&lt;BaseItem&gt; QueryRecursive(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Folder_QueryRecursiveForItemIds_" data-uid="MediaBrowser.Controller.Entities.Folder.QueryRecursiveForItemIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Folder_QueryRecursiveForItemIds_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.Folder.QueryRecursiveForItemIds(MediaBrowser.Controller.Entities.InternalItemsQuery)">QueryRecursiveForItemIds(InternalItemsQuery)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long[] QueryRecursiveForItemIds(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_Folder_SortChildrenForValidation_" data-uid="MediaBrowser.Controller.Entities.Folder.SortChildrenForValidation*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_SortChildrenForValidation_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Entities.Folder.SortChildrenForValidation(MediaBrowser.Controller.Entities.BaseItem[])">SortChildrenForValidation(BaseItem[])</h4>
   <div class="markdown level1 summary"></div>
@@ -2480,6 +2409,9 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>

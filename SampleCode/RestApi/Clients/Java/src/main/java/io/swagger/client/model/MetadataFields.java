@@ -33,7 +33,10 @@ public enum MetadataFields {
   SORTNAME("SortName"),
   ORIGINALTITLE("OriginalTitle"),
   SORTINDEXNUMBER("SortIndexNumber"),
-  SORTPARENTINDEXNUMBER("SortParentIndexNumber");
+  SORTPARENTINDEXNUMBER("SortParentIndexNumber"),
+  COMMUNITYRATING("CommunityRating"),
+  CRITICRATING("CriticRating"),
+  TAGLINE("Tagline");
 
   private String value;
 

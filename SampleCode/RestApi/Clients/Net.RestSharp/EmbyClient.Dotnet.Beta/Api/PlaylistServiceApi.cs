@@ -42,6 +42,31 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePlaylistsByIdItemsWithHttpInfo (string id, string entryIds);
         /// <summary>
+        /// Gets add to playlist info
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns></returns>
+        void GetPlaylistsByIdAddtoplaylistinfo (string ids, string id, string userId);
+
+        /// <summary>
+        /// Gets add to playlist info
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo (string ids, string id, string userId);
+        /// <summary>
         /// Gets the original items of a playlist
         /// </summary>
         /// <remarks>
@@ -113,8 +138,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns></returns>
-        void PostPlaylistsByIdItems (string ids, string id, string userId);
+        /// <returns>PlaylistsAddToPlaylistResult</returns>
+        PlaylistsAddToPlaylistResult PostPlaylistsByIdItems (string ids, string id, string userId);
 
         /// <summary>
         /// Adds items to a playlist
@@ -126,8 +151,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostPlaylistsByIdItemsWithHttpInfo (string ids, string id, string userId);
+        /// <returns>ApiResponse of PlaylistsAddToPlaylistResult</returns>
+        ApiResponse<PlaylistsAddToPlaylistResult> PostPlaylistsByIdItemsWithHttpInfo (string ids, string id, string userId);
         /// <summary>
         /// Moves a playlist item
         /// </summary>
@@ -202,6 +227,31 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePlaylistsByIdItemsAsyncWithHttpInfo (string id, string entryIds);
         /// <summary>
+        /// Gets add to playlist info
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetPlaylistsByIdAddtoplaylistinfoAsync (string ids, string id, string userId);
+
+        /// <summary>
+        /// Gets add to playlist info
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo (string ids, string id, string userId);
+        /// <summary>
         /// Gets the original items of a playlist
         /// </summary>
         /// <remarks>
@@ -273,8 +323,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostPlaylistsByIdItemsAsync (string ids, string id, string userId);
+        /// <returns>Task of PlaylistsAddToPlaylistResult</returns>
+        System.Threading.Tasks.Task<PlaylistsAddToPlaylistResult> PostPlaylistsByIdItemsAsync (string ids, string id, string userId);
 
         /// <summary>
         /// Adds items to a playlist
@@ -286,8 +336,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostPlaylistsByIdItemsAsyncWithHttpInfo (string ids, string id, string userId);
+        /// <returns>Task of ApiResponse (PlaylistsAddToPlaylistResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PlaylistsAddToPlaylistResult>> PostPlaylistsByIdItemsAsyncWithHttpInfo (string ids, string id, string userId);
         /// <summary>
         /// Moves a playlist item
         /// </summary>
@@ -600,6 +650,177 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("DeletePlaylistsByIdItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets add to playlist info Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns></returns>
+        public void GetPlaylistsByIdAddtoplaylistinfo (string ids, string id, string userId)
+        {
+             GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo(ids, id, userId);
+        }
+
+        /// <summary>
+        /// Gets add to playlist info Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo (string ids, string id, string userId)
+        {
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling PlaylistServiceApi->GetPlaylistsByIdAddtoplaylistinfo");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling PlaylistServiceApi->GetPlaylistsByIdAddtoplaylistinfo");
+
+            var localVarPath = "/Playlists/{Id}/AddToPlaylistInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
+            if (ids != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Ids", ids)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPlaylistsByIdAddtoplaylistinfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets add to playlist info Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetPlaylistsByIdAddtoplaylistinfoAsync (string ids, string id, string userId)
+        {
+             await GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo(ids, id, userId);
+
+        }
+
+        /// <summary>
+        /// Gets add to playlist info Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">Item id, comma delimited</param>
+        /// <param name="id"></param>
+        /// <param name="userId">User Id (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo (string ids, string id, string userId)
+        {
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling PlaylistServiceApi->GetPlaylistsByIdAddtoplaylistinfo");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling PlaylistServiceApi->GetPlaylistsByIdAddtoplaylistinfo");
+
+            var localVarPath = "/Playlists/{Id}/AddToPlaylistInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
+            if (ids != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Ids", ids)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPlaylistsByIdAddtoplaylistinfo", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -979,10 +1200,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns></returns>
-        public void PostPlaylistsByIdItems (string ids, string id, string userId)
+        /// <returns>PlaylistsAddToPlaylistResult</returns>
+        public PlaylistsAddToPlaylistResult PostPlaylistsByIdItems (string ids, string id, string userId)
         {
-             PostPlaylistsByIdItemsWithHttpInfo(ids, id, userId);
+             ApiResponse<PlaylistsAddToPlaylistResult> localVarResponse = PostPlaylistsByIdItemsWithHttpInfo(ids, id, userId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -992,8 +1214,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostPlaylistsByIdItemsWithHttpInfo (string ids, string id, string userId)
+        /// <returns>ApiResponse of PlaylistsAddToPlaylistResult</returns>
+        public ApiResponse< PlaylistsAddToPlaylistResult > PostPlaylistsByIdItemsWithHttpInfo (string ids, string id, string userId)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -1017,6 +1239,8 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1050,9 +1274,9 @@ namespace EmbyClient.Dotnet.Beta.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<PlaylistsAddToPlaylistResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                (PlaylistsAddToPlaylistResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaylistsAddToPlaylistResult)));
         }
 
         /// <summary>
@@ -1062,10 +1286,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostPlaylistsByIdItemsAsync (string ids, string id, string userId)
+        /// <returns>Task of PlaylistsAddToPlaylistResult</returns>
+        public async System.Threading.Tasks.Task<PlaylistsAddToPlaylistResult> PostPlaylistsByIdItemsAsync (string ids, string id, string userId)
         {
-             await PostPlaylistsByIdItemsAsyncWithHttpInfo(ids, id, userId);
+             ApiResponse<PlaylistsAddToPlaylistResult> localVarResponse = await PostPlaylistsByIdItemsAsyncWithHttpInfo(ids, id, userId);
+             return localVarResponse.Data;
 
         }
 
@@ -1076,8 +1301,8 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
         /// <param name="userId">User Id (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostPlaylistsByIdItemsAsyncWithHttpInfo (string ids, string id, string userId)
+        /// <returns>Task of ApiResponse (PlaylistsAddToPlaylistResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PlaylistsAddToPlaylistResult>> PostPlaylistsByIdItemsAsyncWithHttpInfo (string ids, string id, string userId)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -1101,6 +1326,8 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1134,9 +1361,9 @@ namespace EmbyClient.Dotnet.Beta.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<PlaylistsAddToPlaylistResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                (PlaylistsAddToPlaylistResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaylistsAddToPlaylistResult)));
         }
 
         /// <summary>

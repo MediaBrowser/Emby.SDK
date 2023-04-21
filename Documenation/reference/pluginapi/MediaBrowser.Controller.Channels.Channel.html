@@ -166,6 +166,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
+    <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.ICollectionFolder.html">ICollectionFolder</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasCollectionType.html">IHasCollectionType</a></div>
   </div>
@@ -232,12 +233,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_">Folder.GetRecursiveChildCount(User)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_QueryRecursiveForItemIds_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.QueryRecursiveForItemIds(InternalItemsQuery)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_QueryRecursive_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.QueryRecursive(InternalItemsQuery)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItems(InternalItemsQuery)</a>
     </div>
     <div>
@@ -245,6 +240,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemList_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemList(InternalItemsQuery)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemIdsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemIdsInternal(InternalItemsQuery)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemsInternal(InternalItemsQuery)</a>
@@ -386,6 +384,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds">BaseItem.LocalTrailerIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasPlaceholderMatadata">BaseItem.HasPlaceholderMatadata()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsManageAccess">BaseItem.SupportsManageAccess()</a>
@@ -1113,12 +1114,21 @@
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowEditingField_MediaBrowser_Model_Entities_MetadataFields_">BaseItem.AllowEditingField(MetadataFields)</a>
     </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsResetMetadata">BaseItem.SupportsResetMetadata</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResetMetadata">BaseItem.ResetMetadata()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResetMetadataInternal">BaseItem.ResetMetadataInternal()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Channels.html">MediaBrowser.Controller.Channels</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Channels_Channel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Channel : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, ICollectionFolder, IHasCollectionType</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Channel : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasFolderGrouping, ICollectionFolder, IHasCollectionType</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -1289,50 +1299,6 @@ public override bool SupportsUserData { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CanDelete">Folder.CanDelete()</a></div>
   
   
-  <a id="MediaBrowser_Controller_Channels_Channel_GetItemIdsInternal_" data-uid="MediaBrowser.Controller.Channels.Channel.GetItemIdsInternal*"></a>
-  <h4 id="MediaBrowser_Controller_Channels_Channel_GetItemIdsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Channels.Channel.GetItemIdsInternal(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetItemIdsInternal(InternalItemsQuery)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override long[] GetItemIdsInternal(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemIdsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemIdsInternal(InternalItemsQuery)</a></div>
-  
-  
   <a id="MediaBrowser_Controller_Channels_Channel_GetLatestItemsOrderBy_" data-uid="MediaBrowser.Controller.Channels.Channel.GetLatestItemsOrderBy*"></a>
   <h4 id="MediaBrowser_Controller_Channels_Channel_GetLatestItemsOrderBy" data-uid="MediaBrowser.Controller.Channels.Channel.GetLatestItemsOrderBy">GetLatestItemsOrderBy()</h4>
   <div class="markdown level1 summary"></div>
@@ -1387,6 +1353,9 @@ public override bool SupportsUserData { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.ICollectionFolder.html">ICollectionFolder</a>

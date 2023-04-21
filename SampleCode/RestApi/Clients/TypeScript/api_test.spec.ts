@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.29
+ * OpenAPI spec version: 4.8.0.30
  * 
  *
  * NOTE: This file is auto generated.
@@ -2099,6 +2099,10 @@ describe("ItemLookupServiceApi", () => {
     const providerName: string = "providerName_example"
     return expect(instance.getItemsRemotesearchImage(imageUrl, providerName, {})).resolves.toBe(null)
   })
+  test("postItemsMetadataReset", () => {
+    const itemIds: string = "itemIds_example"
+    return expect(instance.postItemsMetadataReset(itemIds, {})).resolves.toBe(null)
+  })
   test("postItemsRemotesearchApplyById", () => {
     const body: api.RemoteSearchResult = undefined
     const id: string = "id_example"
@@ -4039,6 +4043,12 @@ describe("PlaylistServiceApi", () => {
     const id: string = "id_example"
     const entryIds: string = "entryIds_example"
     return expect(instance.deletePlaylistsByIdItems(id, entryIds, {})).resolves.toBe(null)
+  })
+  test("getPlaylistsByIdAddtoplaylistinfo", () => {
+    const ids: string = "ids_example"
+    const id: string = "id_example"
+    const userId: string = "userId_example"
+    return expect(instance.getPlaylistsByIdAddtoplaylistinfo(ids, id, userId, {})).resolves.toBe(null)
   })
   test("getPlaylistsByIdItems", () => {
     const id: string = "id_example"

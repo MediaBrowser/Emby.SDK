@@ -109,14 +109,14 @@ open class LibraryStructureServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "TotalRecordCount" : 7,
+  "TotalRecordCount" : 1,
   "Items" : [ {
-    "RefreshProgress" : 4.145608029883936,
+    "RefreshProgress" : 7.386281948385884,
     "PrimaryImageItemId" : "PrimaryImageItemId",
     "CollectionType" : "CollectionType",
     "Locations" : [ "Locations", "Locations" ],
     "LibraryOptions" : {
-      "LyricsDownloadMaxAgeDays" : 1,
+      "LyricsDownloadMaxAgeDays" : 5,
       "SaveLyricsWithMedia" : true,
       "EnableMarkerDetection" : true,
       "ContentType" : "ContentType",
@@ -129,9 +129,9 @@ open class LibraryStructureServiceAPI {
       "Name" : "Name",
       "PreferredImageLanguage" : "PreferredImageLanguage",
       "DownloadImagesInAdvance" : true,
-      "ThumbnailImagesIntervalSeconds" : 3,
-      "MaxResumePct" : 7,
-      "MinResumeDurationSeconds" : 9,
+      "ThumbnailImagesIntervalSeconds" : 2,
+      "MaxResumePct" : 9,
+      "MinResumeDurationSeconds" : 3,
       "EnableAudioResume" : true,
       "MusicFolderStructure" : "MusicFolderStructure",
       "IgnoreHiddenFiles" : true,
@@ -170,7 +170,7 @@ open class LibraryStructureServiceAPI {
       "EnableAutomaticSeriesGrouping" : true,
       "ExtractChapterImagesDuringLibraryScan" : true,
       "SubtitleDownloadLanguages" : [ "SubtitleDownloadLanguages", "SubtitleDownloadLanguages" ],
-      "MinResumePct" : 2,
+      "MinResumePct" : 7,
       "SaveLocalThumbnailSets" : true,
       "SubtitleDownloadMaxAgeDays" : 5,
       "EnableAdultMetadata" : true,
@@ -184,6 +184,7 @@ open class LibraryStructureServiceAPI {
       "CollapseSingleItemFolders" : true,
       "EnableMarkerDetectionDuringLibraryScan" : true,
       "EnableEmbeddedTitles" : true,
+      "PlaceholderMetadataRefreshIntervalDays" : 1,
       "EnableChapterImageExtraction" : true,
       "AutomaticRefreshIntervalDays" : 6,
       "SubtitleFetcherOrder" : [ "SubtitleFetcherOrder", "SubtitleFetcherOrder" ],
@@ -205,8 +206,8 @@ open class LibraryStructureServiceAPI {
         "NetworkPath" : "NetworkPath",
         "Password" : "Password"
       } ],
-      "SampleIgnoreSize" : 2,
-      "MinCollectionItems" : 5
+      "SampleIgnoreSize" : 4,
+      "MinCollectionItems" : 2
     },
     "Id" : "Id",
     "Guid" : "Guid",
@@ -214,12 +215,12 @@ open class LibraryStructureServiceAPI {
     "RefreshStatus" : "RefreshStatus",
     "Name" : "Name"
   }, {
-    "RefreshProgress" : 4.145608029883936,
+    "RefreshProgress" : 7.386281948385884,
     "PrimaryImageItemId" : "PrimaryImageItemId",
     "CollectionType" : "CollectionType",
     "Locations" : [ "Locations", "Locations" ],
     "LibraryOptions" : {
-      "LyricsDownloadMaxAgeDays" : 1,
+      "LyricsDownloadMaxAgeDays" : 5,
       "SaveLyricsWithMedia" : true,
       "EnableMarkerDetection" : true,
       "ContentType" : "ContentType",
@@ -232,9 +233,9 @@ open class LibraryStructureServiceAPI {
       "Name" : "Name",
       "PreferredImageLanguage" : "PreferredImageLanguage",
       "DownloadImagesInAdvance" : true,
-      "ThumbnailImagesIntervalSeconds" : 3,
-      "MaxResumePct" : 7,
-      "MinResumeDurationSeconds" : 9,
+      "ThumbnailImagesIntervalSeconds" : 2,
+      "MaxResumePct" : 9,
+      "MinResumeDurationSeconds" : 3,
       "EnableAudioResume" : true,
       "MusicFolderStructure" : "MusicFolderStructure",
       "IgnoreHiddenFiles" : true,
@@ -273,7 +274,7 @@ open class LibraryStructureServiceAPI {
       "EnableAutomaticSeriesGrouping" : true,
       "ExtractChapterImagesDuringLibraryScan" : true,
       "SubtitleDownloadLanguages" : [ "SubtitleDownloadLanguages", "SubtitleDownloadLanguages" ],
-      "MinResumePct" : 2,
+      "MinResumePct" : 7,
       "SaveLocalThumbnailSets" : true,
       "SubtitleDownloadMaxAgeDays" : 5,
       "EnableAdultMetadata" : true,
@@ -287,6 +288,7 @@ open class LibraryStructureServiceAPI {
       "CollapseSingleItemFolders" : true,
       "EnableMarkerDetectionDuringLibraryScan" : true,
       "EnableEmbeddedTitles" : true,
+      "PlaceholderMetadataRefreshIntervalDays" : 1,
       "EnableChapterImageExtraction" : true,
       "AutomaticRefreshIntervalDays" : 6,
       "SubtitleFetcherOrder" : [ "SubtitleFetcherOrder", "SubtitleFetcherOrder" ],
@@ -308,8 +310,8 @@ open class LibraryStructureServiceAPI {
         "NetworkPath" : "NetworkPath",
         "Password" : "Password"
       } ],
-      "SampleIgnoreSize" : 2,
-      "MinCollectionItems" : 5
+      "SampleIgnoreSize" : 4,
+      "MinCollectionItems" : 2
     },
     "Id" : "Id",
     "Guid" : "Guid",

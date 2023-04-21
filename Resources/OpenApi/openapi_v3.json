@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.29"
+    "version": "4.8.0.30"
   },
   "servers": [
     {
@@ -27440,8 +27440,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -40833,6 +40832,59 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
+    "/Items/Metadata/Reset": {
+      "summary": "Resets metadata for one or more items",
+      "post": {
+        "tags": [
+          "ItemLookupService"
+        ],
+        "summary": "Resets metadata for one or more items",
+        "description": "Requires authentication as administrator",
+        "operationId": "postItemsMetadataReset",
+        "parameters": [
+          {
+            "name": "ItemIds",
+            "in": "query",
+            "description": "The item ids",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      }
+    },
     "/Items/{Id}/Refresh": {
       "summary": "Refreshes metadata for an item",
       "post": {
@@ -44219,8 +44271,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -46200,6 +46251,86 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
+    "/Playlists/{Id}/AddToPlaylistInfo": {
+      "summary": "Gets add to playlist info",
+      "get": {
+        "tags": [
+          "PlaylistService"
+        ],
+        "summary": "Gets add to playlist info",
+        "description": "Requires authentication as user",
+        "operationId": "getPlaylistsByIdAddtoplaylistinfo",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "query",
+            "description": "User Id",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ids",
+            "in": "query",
+            "description": "Item id, comma delimited",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a GetAddToPlaylistInfo object.",
+            "content": {
+              "application/json": {
+                "schema": { }
+              },
+              "application/xml": {
+                "schema": { }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Playlists/{Id}/Items": {
       "summary": "Adds items to a playlist",
       "post": {
@@ -46243,7 +46374,19 @@
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Empty response."
+            "description": "Operation successful. Returning a AddToPlaylistResult object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Playlists.AddToPlaylistResult"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Playlists.AddToPlaylistResult"
+                }
+              }
+            }
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -71004,7 +71147,10 @@
           "SortName",
           "OriginalTitle",
           "SortIndexNumber",
-          "SortParentIndexNumber"
+          "SortParentIndexNumber",
+          "CommunityRating",
+          "CriticRating",
+          "Tagline"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Entities.MetadataFields"
@@ -73324,6 +73470,10 @@
             "type": "boolean"
           },
           "AutomaticRefreshIntervalDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PlaceholderMetadataRefreshIntervalDays": {
             "type": "integer",
             "format": "int32"
           },
@@ -78600,6 +78750,19 @@
           }
         },
         "x-internal-ref-name": "Emby.Notifications.UserNotificationInfo"
+      },
+      "Playlists.AddToPlaylistResult": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "ItemAddedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Controller.Playlists.AddToPlaylistResult"
       },
       "PlayCommand": {
         "enum": [

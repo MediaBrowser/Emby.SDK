@@ -27066,6 +27066,43 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
+            /// Resets metadata for one or more items
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as administrator
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='itemIds'>
+            /// The item ids
+            /// </param>
+            public static void PostItemsMetadataReset(this IRestClient operations, string itemIds)
+            {
+                operations.PostItemsMetadataResetAsync(itemIds).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Resets metadata for one or more items
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as administrator
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='itemIds'>
+            /// The item ids
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task PostItemsMetadataResetAsync(this IRestClient operations, string itemIds, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                (await operations.PostItemsMetadataResetWithHttpMessagesAsync(itemIds, null, cancellationToken).ConfigureAwait(false)).Dispose();
+            }
+
+            /// <summary>
             /// Refreshes metadata for an item
             /// </summary>
             /// <remarks>
@@ -30532,6 +30569,56 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
+            /// Gets add to playlist info
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as user
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='ids'>
+            /// Item id, comma delimited
+            /// </param>
+            /// <param name='id'>
+            /// </param>
+            /// <param name='userId'>
+            /// User Id
+            /// </param>
+            public static object GetPlaylistsByIdAddtoplaylistinfo(this IRestClient operations, string ids, string id, string userId = default(string))
+            {
+                return operations.GetPlaylistsByIdAddtoplaylistinfoAsync(ids, id, userId).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Gets add to playlist info
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as user
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='ids'>
+            /// Item id, comma delimited
+            /// </param>
+            /// <param name='id'>
+            /// </param>
+            /// <param name='userId'>
+            /// User Id
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<object> GetPlaylistsByIdAddtoplaylistinfoAsync(this IRestClient operations, string ids, string id, string userId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.GetPlaylistsByIdAddtoplaylistinfoWithHttpMessagesAsync(ids, id, userId, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
             /// Adds items to a playlist
             /// </summary>
             /// <remarks>
@@ -30548,9 +30635,9 @@ namespace EmbyClient.MsRest
             /// <param name='userId'>
             /// User Id
             /// </param>
-            public static void PostPlaylistsByIdItems(this IRestClient operations, string ids, string id, string userId = default(string))
+            public static PlaylistsAddToPlaylistResult PostPlaylistsByIdItems(this IRestClient operations, string ids, string id, string userId = default(string))
             {
-                operations.PostPlaylistsByIdItemsAsync(ids, id, userId).GetAwaiter().GetResult();
+                return operations.PostPlaylistsByIdItemsAsync(ids, id, userId).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -30573,9 +30660,12 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task PostPlaylistsByIdItemsAsync(this IRestClient operations, string ids, string id, string userId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<PlaylistsAddToPlaylistResult> PostPlaylistsByIdItemsAsync(this IRestClient operations, string ids, string id, string userId = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                (await operations.PostPlaylistsByIdItemsWithHttpMessagesAsync(ids, id, userId, null, cancellationToken).ConfigureAwait(false)).Dispose();
+                using (var _result = await operations.PostPlaylistsByIdItemsWithHttpMessagesAsync(ids, id, userId, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
             }
 
             /// <summary>

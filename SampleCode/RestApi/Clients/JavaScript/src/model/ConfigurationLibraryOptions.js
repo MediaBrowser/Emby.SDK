@@ -16,7 +16,7 @@ import ConfigurationTypeOptions from './ConfigurationTypeOptions';
 /**
 * The ConfigurationLibraryOptions model module.
 * @module model/ConfigurationLibraryOptions
-* @version 4.8.0.29
+* @version 4.8.0.30
 */
 export default class ConfigurationLibraryOptions {
     /**
@@ -105,6 +105,9 @@ export default class ConfigurationLibraryOptions {
             }
             if (data.hasOwnProperty('AutomaticRefreshIntervalDays')) {
                 obj['AutomaticRefreshIntervalDays'] = ApiClient.convertToType(data['AutomaticRefreshIntervalDays'], 'Number');
+            }
+            if (data.hasOwnProperty('PlaceholderMetadataRefreshIntervalDays')) {
+                obj['PlaceholderMetadataRefreshIntervalDays'] = ApiClient.convertToType(data['PlaceholderMetadataRefreshIntervalDays'], 'Number');
             }
             if (data.hasOwnProperty('PreferredMetadataLanguage')) {
                 obj['PreferredMetadataLanguage'] = ApiClient.convertToType(data['PreferredMetadataLanguage'], 'String');
@@ -296,6 +299,10 @@ export default class ConfigurationLibraryOptions {
     * @member {Number} AutomaticRefreshIntervalDays
     */
     'AutomaticRefreshIntervalDays' = undefined;
+    /**
+    * @member {Number} PlaceholderMetadataRefreshIntervalDays
+    */
+    'PlaceholderMetadataRefreshIntervalDays' = undefined;
     /**
     * @member {String} PreferredMetadataLanguage
     */

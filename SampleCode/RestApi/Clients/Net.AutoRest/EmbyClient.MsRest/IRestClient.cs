@@ -13049,6 +13049,23 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetItemsRemotesearchImageWithHttpMessagesAsync(string imageUrl, string providerName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <param name='itemIds'>
+        /// The item ids
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse> PostItemsMetadataResetWithHttpMessagesAsync(string itemIds, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
         /// Refreshes metadata for an item
         /// </summary>
         /// <remarks>
@@ -14634,6 +14651,28 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> DeletePackagesInstallingByIdWithHttpMessagesAsync(string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
+        /// Gets add to playlist info
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name='ids'>
+        /// Item id, comma delimited
+        /// </param>
+        /// <param name='id'>
+        /// </param>
+        /// <param name='userId'>
+        /// User Id
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse<object>> GetPlaylistsByIdAddtoplaylistinfoWithHttpMessagesAsync(string ids, string id, string userId = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
         /// Adds items to a playlist
         /// </summary>
         /// <remarks>
@@ -14653,7 +14692,7 @@ namespace EmbyClient.MsRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse> PostPlaylistsByIdItemsWithHttpMessagesAsync(string ids, string id, string userId = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<PlaylistsAddToPlaylistResult>> PostPlaylistsByIdItemsWithHttpMessagesAsync(string ids, string id, string userId = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Removes items from a playlist

@@ -19,6 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import io.swagger.client.model.PlaylistsAddToPlaylistResult;
 import io.swagger.client.model.PlaylistsPlaylistCreationResult;
 import io.swagger.client.model.QueryResultBaseItemDto;
 
@@ -176,6 +177,147 @@ public class PlaylistServiceApi {
 
         com.squareup.okhttp.Call call = deletePlaylistsByIdItemsValidateBeforeCall(id, entryIds, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for getPlaylistsByIdAddtoplaylistinfo
+     * @param ids Item id, comma delimited (required)
+     * @param id  (required)
+     * @param userId User Id (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getPlaylistsByIdAddtoplaylistinfoCall(String ids, String id, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Playlists/{Id}/AddToPlaylistInfo"
+            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (userId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("UserId", userId));
+        if (ids != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Ids", ids));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getPlaylistsByIdAddtoplaylistinfoValidateBeforeCall(String ids, String id, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'ids' is set
+        if (ids == null) {
+            throw new ApiException("Missing the required parameter 'ids' when calling getPlaylistsByIdAddtoplaylistinfo(Async)");
+        }
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling getPlaylistsByIdAddtoplaylistinfo(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = getPlaylistsByIdAddtoplaylistinfoCall(ids, id, userId, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets add to playlist info
+     * Requires authentication as user
+     * @param ids Item id, comma delimited (required)
+     * @param id  (required)
+     * @param userId User Id (optional)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public Object getPlaylistsByIdAddtoplaylistinfo(String ids, String id, String userId) throws ApiException {
+        ApiResponse<Object> resp = getPlaylistsByIdAddtoplaylistinfoWithHttpInfo(ids, id, userId);
+        return resp.getData();
+    }
+
+    /**
+     * Gets add to playlist info
+     * Requires authentication as user
+     * @param ids Item id, comma delimited (required)
+     * @param id  (required)
+     * @param userId User Id (optional)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Object> getPlaylistsByIdAddtoplaylistinfoWithHttpInfo(String ids, String id, String userId) throws ApiException {
+        com.squareup.okhttp.Call call = getPlaylistsByIdAddtoplaylistinfoValidateBeforeCall(ids, id, userId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Gets add to playlist info (asynchronously)
+     * Requires authentication as user
+     * @param ids Item id, comma delimited (required)
+     * @param id  (required)
+     * @param userId User Id (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getPlaylistsByIdAddtoplaylistinfoAsync(String ids, String id, String userId, final ApiCallback<Object> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getPlaylistsByIdAddtoplaylistinfoValidateBeforeCall(ids, id, userId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
@@ -522,7 +664,7 @@ public class PlaylistServiceApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
+            "application/json", "application/xml"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -575,10 +717,12 @@ public class PlaylistServiceApi {
      * @param ids Item id, comma delimited (required)
      * @param id  (required)
      * @param userId User Id (optional)
+     * @return PlaylistsAddToPlaylistResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postPlaylistsByIdItems(String ids, String id, String userId) throws ApiException {
-        postPlaylistsByIdItemsWithHttpInfo(ids, id, userId);
+    public PlaylistsAddToPlaylistResult postPlaylistsByIdItems(String ids, String id, String userId) throws ApiException {
+        ApiResponse<PlaylistsAddToPlaylistResult> resp = postPlaylistsByIdItemsWithHttpInfo(ids, id, userId);
+        return resp.getData();
     }
 
     /**
@@ -587,12 +731,13 @@ public class PlaylistServiceApi {
      * @param ids Item id, comma delimited (required)
      * @param id  (required)
      * @param userId User Id (optional)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;PlaylistsAddToPlaylistResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postPlaylistsByIdItemsWithHttpInfo(String ids, String id, String userId) throws ApiException {
+    public ApiResponse<PlaylistsAddToPlaylistResult> postPlaylistsByIdItemsWithHttpInfo(String ids, String id, String userId) throws ApiException {
         com.squareup.okhttp.Call call = postPlaylistsByIdItemsValidateBeforeCall(ids, id, userId, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<PlaylistsAddToPlaylistResult>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -605,7 +750,7 @@ public class PlaylistServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postPlaylistsByIdItemsAsync(String ids, String id, String userId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postPlaylistsByIdItemsAsync(String ids, String id, String userId, final ApiCallback<PlaylistsAddToPlaylistResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -627,7 +772,8 @@ public class PlaylistServiceApi {
         }
 
         com.squareup.okhttp.Call call = postPlaylistsByIdItemsValidateBeforeCall(ids, id, userId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<PlaylistsAddToPlaylistResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**

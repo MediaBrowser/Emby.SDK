@@ -63,6 +63,27 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetItemsRemotesearchImageWithHttpInfo (string imageUrl, string providerName);
         /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns></returns>
+        void PostItemsMetadataReset (string itemIds);
+
+        /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostItemsMetadataResetWithHttpInfo (string itemIds);
+        /// <summary>
         /// Applies search criteria to an item and refreshes metadata
         /// </summary>
         /// <remarks>
@@ -343,6 +364,27 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="providerName"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsRemotesearchImageAsyncWithHttpInfo (string imageUrl, string providerName);
+        /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostItemsMetadataResetAsync (string itemIds);
+
+        /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsMetadataResetAsyncWithHttpInfo (string itemIds);
         /// <summary>
         /// Applies search criteria to an item and refreshes metadata
         /// </summary>
@@ -997,6 +1039,155 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetItemsRemotesearchImage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns></returns>
+        public void PostItemsMetadataReset (string itemIds)
+        {
+             PostItemsMetadataResetWithHttpInfo(itemIds);
+        }
+
+        /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostItemsMetadataResetWithHttpInfo (string itemIds)
+        {
+            // verify the required parameter 'itemIds' is set
+            if (itemIds == null)
+                throw new ApiException(400, "Missing required parameter 'itemIds' when calling ItemLookupServiceApi->PostItemsMetadataReset");
+
+            var localVarPath = "/Items/Metadata/Reset";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (itemIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ItemIds", itemIds)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsMetadataReset", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostItemsMetadataResetAsync (string itemIds)
+        {
+             await PostItemsMetadataResetAsyncWithHttpInfo(itemIds);
+
+        }
+
+        /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsMetadataResetAsyncWithHttpInfo (string itemIds)
+        {
+            // verify the required parameter 'itemIds' is set
+            if (itemIds == null)
+                throw new ApiException(400, "Missing required parameter 'itemIds' when calling ItemLookupServiceApi->PostItemsMetadataReset");
+
+            var localVarPath = "/Items/Metadata/Reset";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (itemIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ItemIds", itemIds)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsMetadataReset", localVarResponse);
                 if (exception != null) throw exception;
             }
 

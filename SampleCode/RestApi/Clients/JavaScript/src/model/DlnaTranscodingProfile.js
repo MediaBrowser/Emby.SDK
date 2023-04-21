@@ -17,7 +17,7 @@ import DlnaTranscodeSeekInfo from './DlnaTranscodeSeekInfo';
 /**
 * The DlnaTranscodingProfile model module.
 * @module model/DlnaTranscodingProfile
-* @version 4.8.0.29
+* @version 4.8.0.30
 */
 export default class DlnaTranscodingProfile {
     /**

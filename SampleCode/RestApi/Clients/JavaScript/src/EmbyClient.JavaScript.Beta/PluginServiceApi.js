@@ -15,7 +15,7 @@ import PluginsPluginInfo from '../model/PluginsPluginInfo';
 /**
 * PluginService service.
 * @module EmbyClient.JavaScript.Beta/PluginServiceApi
-* @version 4.8.0.29
+* @version 4.8.0.30
 */
 export default class PluginServiceApi {
 

@@ -61,6 +61,60 @@ open class PlaylistServiceAPI {
         return requestBuilder.init(method: "DELETE", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets add to playlist info
+
+     - parameter ids: (query) Item id, comma delimited 
+     - parameter _id: (path)  
+     - parameter userId: (query) User Id (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPlaylistsByIdAddtoplaylistinfo(ids: String, _id: String, userId: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getPlaylistsByIdAddtoplaylistinfoWithRequestBuilder(ids: ids, _id: _id, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets add to playlist info
+     - GET /Playlists/{Id}/AddToPlaylistInfo
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example=""}]
+     - parameter ids: (query) Item id, comma delimited 
+     - parameter _id: (path)  
+     - parameter userId: (query) User Id (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getPlaylistsByIdAddtoplaylistinfoWithRequestBuilder(ids: String, _id: String, userId: String? = nil) -> RequestBuilder<Void> {
+        var path = "/Playlists/{Id}/AddToPlaylistInfo"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "UserId": userId, 
+                        "Ids": ids
+        ])
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets the original items of a playlist
 
      - parameter _id: (path)  
@@ -1202,13 +1256,9 @@ open class PlaylistServiceAPI {
      - parameter userId: (query) User Id (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postPlaylistsByIdItems(ids: String, _id: String, userId: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postPlaylistsByIdItems(ids: String, _id: String, userId: String? = nil, completion: @escaping ((_ data: PlaylistsAddToPlaylistResult?,_ error: Error?) -> Void)) {
         postPlaylistsByIdItemsWithRequestBuilder(ids: ids, _id: _id, userId: userId).execute { (response, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
+            completion(response?.body, error)
         }
     }
 
@@ -1223,13 +1273,17 @@ open class PlaylistServiceAPI {
      - :
        - type: http
        - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "ItemAddedCount" : 0,
+  "Id" : "Id"
+}}]
      - parameter ids: (query) Item id, comma delimited 
      - parameter _id: (path)  
      - parameter userId: (query) User Id (optional)
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<PlaylistsAddToPlaylistResult> 
      */
-    open class func postPlaylistsByIdItemsWithRequestBuilder(ids: String, _id: String, userId: String? = nil) -> RequestBuilder<Void> {
+    open class func postPlaylistsByIdItemsWithRequestBuilder(ids: String, _id: String, userId: String? = nil) -> RequestBuilder<PlaylistsAddToPlaylistResult> {
         var path = "/Playlists/{Id}/Items"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1243,7 +1297,7 @@ open class PlaylistServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+        let requestBuilder: RequestBuilder<PlaylistsAddToPlaylistResult>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

@@ -28,6 +28,7 @@ type ConfigurationLibraryOptions struct {
 	EnableEmbeddedTitles bool `json:"EnableEmbeddedTitles,omitempty"`
 	EnableAudioResume bool `json:"EnableAudioResume,omitempty"`
 	AutomaticRefreshIntervalDays int32 `json:"AutomaticRefreshIntervalDays,omitempty"`
+	PlaceholderMetadataRefreshIntervalDays int32 `json:"PlaceholderMetadataRefreshIntervalDays,omitempty"`
 	PreferredMetadataLanguage string `json:"PreferredMetadataLanguage,omitempty"`
 	PreferredImageLanguage string `json:"PreferredImageLanguage,omitempty"`
 	ContentType string `json:"ContentType,omitempty"`

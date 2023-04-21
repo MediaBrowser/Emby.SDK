@@ -33,6 +33,9 @@ class MetadataFields(object):
     ORIGINALTITLE = "OriginalTitle"
     SORTINDEXNUMBER = "SortIndexNumber"
     SORTPARENTINDEXNUMBER = "SortParentIndexNumber"
+    COMMUNITYRATING = "CommunityRating"
+    CRITICRATING = "CriticRating"
+    TAGLINE = "Tagline"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

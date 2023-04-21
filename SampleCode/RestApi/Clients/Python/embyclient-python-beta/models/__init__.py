@@ -195,6 +195,7 @@ from embyclient-python-beta.models.playback_progress_info import PlaybackProgres
 from embyclient-python-beta.models.playback_start_info import PlaybackStartInfo
 from embyclient-python-beta.models.playback_stop_info import PlaybackStopInfo
 from embyclient-python-beta.models.player_state_info import PlayerStateInfo
+from embyclient-python-beta.models.playlists_add_to_playlist_result import PlaylistsAddToPlaylistResult
 from embyclient-python-beta.models.playlists_playlist_creation_result import PlaylistsPlaylistCreationResult
 from embyclient-python-beta.models.playstate_command import PlaystateCommand
 from embyclient-python-beta.models.playstate_request import PlaystateRequest

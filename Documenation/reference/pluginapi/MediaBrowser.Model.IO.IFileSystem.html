@@ -291,6 +291,53 @@
   </table>
   
   
+  <a id="MediaBrowser_Model_IO_IFileSystem_AreEqual_" data-uid="MediaBrowser.Model.IO.IFileSystem.AreEqual*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_AreEqual_System_String_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.AreEqual(System.String,System.String)">AreEqual(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AreEqual(string path1, string path2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Model_IO_IFileSystem_ContainsSubPath_" data-uid="MediaBrowser.Model.IO.IFileSystem.ContainsSubPath*"></a>
   <h4 id="MediaBrowser_Model_IO_IFileSystem_ContainsSubPath_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.IO.IFileSystem.ContainsSubPath(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">ContainsSubPath(ReadOnlySpan&lt;Char&gt;, ReadOnlySpan&lt;Char&gt;)</h4>
   <div class="markdown level1 summary"><p>Determines whether [contains sub path] [the specified parent path].</p>
@@ -337,6 +384,53 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if [contains sub path] [the specified parent path]; otherwise, <code>false</code>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_ContainsSubPath_" data-uid="MediaBrowser.Model.IO.IFileSystem.ContainsSubPath*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_ContainsSubPath_System_String_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.ContainsSubPath(System.String,System.String)">ContainsSubPath(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ContainsSubPath(string parentPath, string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">parentPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2558,6 +2652,48 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><p>System.String.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IFileSystem_NormalizePath_" data-uid="MediaBrowser.Model.IO.IFileSystem.NormalizePath*"></a>
+  <h4 id="MediaBrowser_Model_IO_IFileSystem_NormalizePath_System_String_" data-uid="MediaBrowser.Model.IO.IFileSystem.NormalizePath(System.String)">NormalizePath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string NormalizePath(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
