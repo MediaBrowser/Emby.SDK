@@ -16,7 +16,7 @@ import UpdatesPackageVersionClass from './UpdatesPackageVersionClass';
 /**
 * The SystemInfo model module.
 * @module model/SystemInfo
-* @version 4.8.0.30
+* @version 4.8.0.31
 */
 export default class SystemInfo {
     /**

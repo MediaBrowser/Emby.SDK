@@ -15,7 +15,7 @@ import DlnaSubtitleDeliveryMethod from '../model/DlnaSubtitleDeliveryMethod';
 /**
 * VideoService service.
 * @module EmbyClient.JavaScript.Beta/VideoServiceApi
-* @version 4.8.0.30
+* @version 4.8.0.31
 */
 export default class VideoServiceApi {
 
