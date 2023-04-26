@@ -15,7 +15,7 @@ import BaseItemDto from './BaseItemDto';
 /**
 * The QueryResultBaseItemDto model module.
 * @module model/QueryResultBaseItemDto
-* @version 4.8.0.31
+* @version 4.8.0.32
 */
 export default class QueryResultBaseItemDto {
     /**

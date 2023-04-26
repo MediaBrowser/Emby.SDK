@@ -18,7 +18,7 @@ import ParentalRating from '../model/ParentalRating';
 /**
 * LocalizationService service.
 * @module EmbyClient.JavaScript.Beta/LocalizationServiceApi
-* @version 4.8.0.31
+* @version 4.8.0.32
 */
 export default class LocalizationServiceApi {
 

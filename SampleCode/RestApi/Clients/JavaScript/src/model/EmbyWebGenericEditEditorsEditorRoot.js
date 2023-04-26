@@ -19,7 +19,7 @@ import EmbyWebGenericEditEditorsEditorButtonItem from './EmbyWebGenericEditEdito
 /**
 * The EmbyWebGenericEditEditorsEditorRoot model module.
 * @module model/EmbyWebGenericEditEditorsEditorRoot
-* @version 4.8.0.31
+* @version 4.8.0.32
 */
 export default class EmbyWebGenericEditEditorsEditorRoot {
     /**

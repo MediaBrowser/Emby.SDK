@@ -15,7 +15,7 @@ import ProgressEvent from './ProgressEvent';
 /**
 * The MediaEncodingApiOnPlaybackProgress model module.
 * @module model/MediaEncodingApiOnPlaybackProgress
-* @version 4.8.0.31
+* @version 4.8.0.32
 */
 export default class MediaEncodingApiOnPlaybackProgress {
     /**

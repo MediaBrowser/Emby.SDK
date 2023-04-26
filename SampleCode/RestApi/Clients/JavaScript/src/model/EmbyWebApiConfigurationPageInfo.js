@@ -16,7 +16,7 @@ import PluginsConfigurationPageType from './PluginsConfigurationPageType';
 /**
 * The EmbyWebApiConfigurationPageInfo model module.
 * @module model/EmbyWebApiConfigurationPageInfo
-* @version 4.8.0.31
+* @version 4.8.0.32
 */
 export default class EmbyWebApiConfigurationPageInfo {
     /**
