@@ -15,7 +15,7 @@ import ProvidersMovieInfo from './ProvidersMovieInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersMovieInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersMovieInfo
-* @version 4.8.0.32
+* @version 4.8.0.33
 */
 export default class ProvidersRemoteSearchQueryProvidersMovieInfo {
     /**

@@ -15,7 +15,7 @@ import EmbyNotificationsUserNotificationInfo from '../model/EmbyNotificationsUse
 /**
 * UserNotificationsService service.
 * @module EmbyClient.JavaScript.Beta/UserNotificationsServiceApi
-* @version 4.8.0.32
+* @version 4.8.0.33
 */
 export default class UserNotificationsServiceApi {
 

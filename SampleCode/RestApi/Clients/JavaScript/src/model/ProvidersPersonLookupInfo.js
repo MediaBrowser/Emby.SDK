@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The ProvidersPersonLookupInfo model module.
 * @module model/ProvidersPersonLookupInfo
-* @version 4.8.0.32
+* @version 4.8.0.33
 */
 export default class ProvidersPersonLookupInfo {
     /**

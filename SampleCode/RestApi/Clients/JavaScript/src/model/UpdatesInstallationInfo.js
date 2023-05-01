@@ -15,7 +15,7 @@ import UpdatesPackageVersionClass from './UpdatesPackageVersionClass';
 /**
 * The UpdatesInstallationInfo model module.
 * @module model/UpdatesInstallationInfo
-* @version 4.8.0.32
+* @version 4.8.0.33
 */
 export default class UpdatesInstallationInfo {
     /**

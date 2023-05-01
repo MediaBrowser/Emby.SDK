@@ -15,7 +15,7 @@ import ProvidersArtistInfo from './ProvidersArtistInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersArtistInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersArtistInfo
-* @version 4.8.0.32
+* @version 4.8.0.33
 */
 export default class ProvidersRemoteSearchQueryProvidersArtistInfo {
     /**

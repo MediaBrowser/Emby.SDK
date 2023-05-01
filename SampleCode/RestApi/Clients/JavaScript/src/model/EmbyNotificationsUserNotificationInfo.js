@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EmbyNotificationsUserNotificationInfo model module.
 * @module model/EmbyNotificationsUserNotificationInfo
-* @version 4.8.0.32
+* @version 4.8.0.33
 */
 export default class EmbyNotificationsUserNotificationInfo {
     /**

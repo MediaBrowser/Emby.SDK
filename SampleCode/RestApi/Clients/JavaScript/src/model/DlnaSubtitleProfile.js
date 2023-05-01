@@ -15,7 +15,7 @@ import DlnaSubtitleDeliveryMethod from './DlnaSubtitleDeliveryMethod';
 /**
 * The DlnaSubtitleProfile model module.
 * @module model/DlnaSubtitleProfile
-* @version 4.8.0.32
+* @version 4.8.0.33
 */
 export default class DlnaSubtitleProfile {
     /**
