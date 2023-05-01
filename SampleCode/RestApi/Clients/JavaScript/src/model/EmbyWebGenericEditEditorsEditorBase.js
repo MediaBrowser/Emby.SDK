@@ -15,7 +15,7 @@ import EmbyWebGenericEditCommonEditorTypes from './EmbyWebGenericEditCommonEdito
 /**
 * The EmbyWebGenericEditEditorsEditorBase model module.
 * @module model/EmbyWebGenericEditEditorsEditorBase
-* @version 4.8.0.33
+* @version 4.8.0.34
 */
 export default class EmbyWebGenericEditEditorsEditorBase {
     /**

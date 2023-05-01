@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SyncModelSyncQualityOption model module.
 * @module model/SyncModelSyncQualityOption
-* @version 4.8.0.33
+* @version 4.8.0.34
 */
 export default class SyncModelSyncQualityOption {
     /**

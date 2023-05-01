@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The ProvidersMovieInfo model module.
 * @module model/ProvidersMovieInfo
-* @version 4.8.0.33
+* @version 4.8.0.34
 */
 export default class ProvidersMovieInfo {
     /**
