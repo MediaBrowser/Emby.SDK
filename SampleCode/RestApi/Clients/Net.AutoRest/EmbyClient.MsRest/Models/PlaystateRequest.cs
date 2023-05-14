@@ -24,7 +24,7 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         /// <param name="command">Possible values include: 'Stop', 'Pause',
         /// 'Unpause', 'NextTrack', 'PreviousTrack', 'Seek', 'Rewind',
-        /// 'FastForward', 'PlayPause'</param>
+        /// 'FastForward', 'PlayPause', 'SeekRelative'</param>
         public PlaystateRequest(string command = default(string), long? seekPositionTicks = default(long?), string controllingUserId = default(string))
         {
             Command = command;
@@ -41,7 +41,7 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Gets or sets possible values include: 'Stop', 'Pause', 'Unpause',
         /// 'NextTrack', 'PreviousTrack', 'Seek', 'Rewind', 'FastForward',
-        /// 'PlayPause'
+        /// 'PlayPause', 'SeekRelative'
         /// </summary>
         [JsonProperty(PropertyName = "Command")]
         public string Command { get; set; }

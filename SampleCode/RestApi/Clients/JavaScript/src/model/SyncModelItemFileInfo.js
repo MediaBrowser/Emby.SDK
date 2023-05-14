@@ -16,7 +16,7 @@ import SyncModelItemFileType from './SyncModelItemFileType';
 /**
 * The SyncModelItemFileInfo model module.
 * @module model/SyncModelItemFileInfo
-* @version 4.8.0.34
+* @version 4.8.0.35
 */
 export default class SyncModelItemFileInfo {
     /**

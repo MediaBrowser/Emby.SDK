@@ -11,4 +11,5 @@ type LibraryMediaFolder struct {
 	Id string `json:"Id,omitempty"`
 	Guid string `json:"Guid,omitempty"`
 	SubFolders []LibrarySubFolder `json:"SubFolders,omitempty"`
+	IsUserAccessConfigurable bool `json:"IsUserAccessConfigurable,omitempty"`
 }

@@ -24,20 +24,23 @@ class LibrarySubFolder(object):
     swagger_types = {
         'name': 'str',
         'id': 'str',
-        'path': 'str'
+        'path': 'str',
+        'is_user_access_configurable': 'bool'
     }
 
     attribute_map = {
         'name': 'Name',
         'id': 'Id',
-        'path': 'Path'
+        'path': 'Path',
+        'is_user_access_configurable': 'IsUserAccessConfigurable'
     }
 
-    def __init__(self, name=None, id=None, path=None):  # noqa: E501
+    def __init__(self, name=None, id=None, path=None, is_user_access_configurable=None):  # noqa: E501
         """LibrarySubFolder - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._id = None
         self._path = None
+        self._is_user_access_configurable = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -45,6 +48,8 @@ class LibrarySubFolder(object):
             self.id = id
         if path is not None:
             self.path = path
+        if is_user_access_configurable is not None:
+            self.is_user_access_configurable = is_user_access_configurable
 
     @property
     def name(self):
@@ -108,6 +113,27 @@ class LibrarySubFolder(object):
         """
 
         self._path = path
+
+    @property
+    def is_user_access_configurable(self):
+        """Gets the is_user_access_configurable of this LibrarySubFolder.  # noqa: E501
+
+
+        :return: The is_user_access_configurable of this LibrarySubFolder.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_user_access_configurable
+
+    @is_user_access_configurable.setter
+    def is_user_access_configurable(self, is_user_access_configurable):
+        """Sets the is_user_access_configurable of this LibrarySubFolder.
+
+
+        :param is_user_access_configurable: The is_user_access_configurable of this LibrarySubFolder.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_user_access_configurable = is_user_access_configurable
 
     def to_dict(self):
         """Returns the model properties as a dict"""

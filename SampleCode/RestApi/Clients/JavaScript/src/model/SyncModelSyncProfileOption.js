@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SyncModelSyncProfileOption model module.
 * @module model/SyncModelSyncProfileOption
-* @version 4.8.0.34
+* @version 4.8.0.35
 */
 export default class SyncModelSyncProfileOption {
     /**

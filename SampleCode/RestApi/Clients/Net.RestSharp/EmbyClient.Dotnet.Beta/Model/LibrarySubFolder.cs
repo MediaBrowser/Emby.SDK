@@ -29,11 +29,13 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="name">name.</param>
         /// <param name="id">id.</param>
         /// <param name="path">path.</param>
-        public LibrarySubFolder(string name = default(string), string id = default(string), string path = default(string))
+        /// <param name="isUserAccessConfigurable">isUserAccessConfigurable.</param>
+        public LibrarySubFolder(string name = default(string), string id = default(string), string path = default(string), bool? isUserAccessConfigurable = default(bool?))
         {
             this.Name = name;
             this.Id = id;
             this.Path = path;
+            this.IsUserAccessConfigurable = isUserAccessConfigurable;
         }
         
         /// <summary>
@@ -55,6 +57,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string Path { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsUserAccessConfigurable
+        /// </summary>
+        [DataMember(Name="IsUserAccessConfigurable", EmitDefaultValue=false)]
+        public bool? IsUserAccessConfigurable { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +73,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
+            sb.Append("  IsUserAccessConfigurable: ").Append(IsUserAccessConfigurable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -113,6 +122,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.Path == input.Path ||
                     (this.Path != null &&
                     this.Path.Equals(input.Path))
+                ) && 
+                (
+                    this.IsUserAccessConfigurable == input.IsUserAccessConfigurable ||
+                    (this.IsUserAccessConfigurable != null &&
+                    this.IsUserAccessConfigurable.Equals(input.IsUserAccessConfigurable))
                 );
         }
 
@@ -131,6 +145,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Path != null)
                     hashCode = hashCode * 59 + this.Path.GetHashCode();
+                if (this.IsUserAccessConfigurable != null)
+                    hashCode = hashCode * 59 + this.IsUserAccessConfigurable.GetHashCode();
                 return hashCode;
             }
         }

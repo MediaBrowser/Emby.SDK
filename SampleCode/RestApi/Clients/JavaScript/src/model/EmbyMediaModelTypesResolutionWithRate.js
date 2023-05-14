@@ -15,7 +15,7 @@ import EmbyMediaModelTypesResolution from './EmbyMediaModelTypesResolution';
 /**
 * The EmbyMediaModelTypesResolutionWithRate model module.
 * @module model/EmbyMediaModelTypesResolutionWithRate
-* @version 4.8.0.34
+* @version 4.8.0.35
 */
 export default class EmbyMediaModelTypesResolutionWithRate {
     /**

@@ -27764,9 +27764,28 @@ namespace EmbyClient.MsRest
             /// <param name='inheritFromParent'>
             /// Determines whether or not parent items should be searched for theme media.
             /// </param>
-            public static AllThemeMediaResult GetItemsByIdThememedia(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?))
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines, TrailerUrls
+            /// </param>
+            public static AllThemeMediaResult GetItemsByIdThememedia(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string))
             {
-                return operations.GetItemsByIdThememediaAsync(id, userId, inheritFromParent).GetAwaiter().GetResult();
+                return operations.GetItemsByIdThememediaAsync(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -27787,12 +27806,31 @@ namespace EmbyClient.MsRest
             /// <param name='inheritFromParent'>
             /// Determines whether or not parent items should be searched for theme media.
             /// </param>
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines, TrailerUrls
+            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<AllThemeMediaResult> GetItemsByIdThememediaAsync(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<AllThemeMediaResult> GetItemsByIdThememediaAsync(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetItemsByIdThememediaWithHttpMessagesAsync(id, userId, inheritFromParent, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetItemsByIdThememediaWithHttpMessagesAsync(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -27816,9 +27854,28 @@ namespace EmbyClient.MsRest
             /// <param name='inheritFromParent'>
             /// Determines whether or not parent items should be searched for theme media.
             /// </param>
-            public static ThemeMediaResult GetItemsByIdThemesongs(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?))
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines, TrailerUrls
+            /// </param>
+            public static ThemeMediaResult GetItemsByIdThemesongs(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string))
             {
-                return operations.GetItemsByIdThemesongsAsync(id, userId, inheritFromParent).GetAwaiter().GetResult();
+                return operations.GetItemsByIdThemesongsAsync(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -27839,12 +27896,31 @@ namespace EmbyClient.MsRest
             /// <param name='inheritFromParent'>
             /// Determines whether or not parent items should be searched for theme media.
             /// </param>
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines, TrailerUrls
+            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ThemeMediaResult> GetItemsByIdThemesongsAsync(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ThemeMediaResult> GetItemsByIdThemesongsAsync(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetItemsByIdThemesongsWithHttpMessagesAsync(id, userId, inheritFromParent, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetItemsByIdThemesongsWithHttpMessagesAsync(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -27868,9 +27944,28 @@ namespace EmbyClient.MsRest
             /// <param name='inheritFromParent'>
             /// Determines whether or not parent items should be searched for theme media.
             /// </param>
-            public static ThemeMediaResult GetItemsByIdThemevideos(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?))
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines, TrailerUrls
+            /// </param>
+            public static ThemeMediaResult GetItemsByIdThemevideos(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string))
             {
-                return operations.GetItemsByIdThemevideosAsync(id, userId, inheritFromParent).GetAwaiter().GetResult();
+                return operations.GetItemsByIdThemevideosAsync(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -27891,12 +27986,31 @@ namespace EmbyClient.MsRest
             /// <param name='inheritFromParent'>
             /// Determines whether or not parent items should be searched for theme media.
             /// </param>
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines, TrailerUrls
+            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ThemeMediaResult> GetItemsByIdThemevideosAsync(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ThemeMediaResult> GetItemsByIdThemevideosAsync(this IRestClient operations, string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetItemsByIdThemevideosWithHttpMessagesAsync(id, userId, inheritFromParent, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetItemsByIdThemevideosWithHttpMessagesAsync(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -39323,7 +39437,8 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='command'>
             /// Possible values include: 'Stop', 'Pause', 'Unpause', 'NextTrack',
-            /// 'PreviousTrack', 'Seek', 'Rewind', 'FastForward', 'PlayPause'
+            /// 'PreviousTrack', 'Seek', 'Rewind', 'FastForward', 'PlayPause',
+            /// 'SeekRelative'
             /// </param>
             public static void PostSessionsByIdPlayingByCommand(this IRestClient operations, PlaystateRequest body, string id, string command)
             {
@@ -39347,7 +39462,8 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='command'>
             /// Possible values include: 'Stop', 'Pause', 'Unpause', 'NextTrack',
-            /// 'PreviousTrack', 'Seek', 'Rewind', 'FastForward', 'PlayPause'
+            /// 'PreviousTrack', 'Seek', 'Rewind', 'FastForward', 'PlayPause',
+            /// 'SeekRelative'
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.

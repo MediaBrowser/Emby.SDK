@@ -22,11 +22,12 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the LibrarySubFolder class.
         /// </summary>
-        public LibrarySubFolder(string name = default(string), string id = default(string), string path = default(string))
+        public LibrarySubFolder(string name = default(string), string id = default(string), string path = default(string), bool? isUserAccessConfigurable = default(bool?))
         {
             Name = name;
             Id = id;
             Path = path;
+            IsUserAccessConfigurable = isUserAccessConfigurable;
             CustomInit();
         }
 
@@ -49,6 +50,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "Path")]
         public string Path { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "IsUserAccessConfigurable")]
+        public bool? IsUserAccessConfigurable { get; set; }
 
     }
 }

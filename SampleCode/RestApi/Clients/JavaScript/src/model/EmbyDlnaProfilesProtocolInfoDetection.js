@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EmbyDlnaProfilesProtocolInfoDetection model module.
 * @module model/EmbyDlnaProfilesProtocolInfoDetection
-* @version 4.8.0.34
+* @version 4.8.0.35
 */
 export default class EmbyDlnaProfilesProtocolInfoDetection {
     /**

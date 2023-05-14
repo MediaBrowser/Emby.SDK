@@ -13374,13 +13374,33 @@ namespace EmbyClient.MsRest
         /// Determines whether or not parent items should be searched for theme
         /// media.
         /// </param>
+        /// <param name='enableImages'>
+        /// Optional, include image information in output
+        /// </param>
+        /// <param name='imageTypeLimit'>
+        /// Optional, the max number of images to return, per image type
+        /// </param>
+        /// <param name='enableImageTypes'>
+        /// Optional. The image types to include in the output.
+        /// </param>
+        /// <param name='enableUserData'>
+        /// Optional, include user data
+        /// </param>
+        /// <param name='fields'>
+        /// Optional. Specify additional fields of information to return in the
+        /// output. This allows multiple, comma delimeted. Options: Budget,
+        /// Chapters, DateCreated, Genres, HomePageUrl, IndexOptions,
+        /// MediaStreams, Overview, ParentId, Path, People, ProviderIds,
+        /// PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines,
+        /// TrailerUrls
+        /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<AllThemeMediaResult>> GetItemsByIdThememediaWithHttpMessagesAsync(string id, string userId = default(string), bool? inheritFromParent = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<AllThemeMediaResult>> GetItemsByIdThememediaWithHttpMessagesAsync(string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets theme songs for an item
@@ -13398,13 +13418,33 @@ namespace EmbyClient.MsRest
         /// Determines whether or not parent items should be searched for theme
         /// media.
         /// </param>
+        /// <param name='enableImages'>
+        /// Optional, include image information in output
+        /// </param>
+        /// <param name='imageTypeLimit'>
+        /// Optional, the max number of images to return, per image type
+        /// </param>
+        /// <param name='enableImageTypes'>
+        /// Optional. The image types to include in the output.
+        /// </param>
+        /// <param name='enableUserData'>
+        /// Optional, include user data
+        /// </param>
+        /// <param name='fields'>
+        /// Optional. Specify additional fields of information to return in the
+        /// output. This allows multiple, comma delimeted. Options: Budget,
+        /// Chapters, DateCreated, Genres, HomePageUrl, IndexOptions,
+        /// MediaStreams, Overview, ParentId, Path, People, ProviderIds,
+        /// PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines,
+        /// TrailerUrls
+        /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<ThemeMediaResult>> GetItemsByIdThemesongsWithHttpMessagesAsync(string id, string userId = default(string), bool? inheritFromParent = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ThemeMediaResult>> GetItemsByIdThemesongsWithHttpMessagesAsync(string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets theme videos for an item
@@ -13422,13 +13462,33 @@ namespace EmbyClient.MsRest
         /// Determines whether or not parent items should be searched for theme
         /// media.
         /// </param>
+        /// <param name='enableImages'>
+        /// Optional, include image information in output
+        /// </param>
+        /// <param name='imageTypeLimit'>
+        /// Optional, the max number of images to return, per image type
+        /// </param>
+        /// <param name='enableImageTypes'>
+        /// Optional. The image types to include in the output.
+        /// </param>
+        /// <param name='enableUserData'>
+        /// Optional, include user data
+        /// </param>
+        /// <param name='fields'>
+        /// Optional. Specify additional fields of information to return in the
+        /// output. This allows multiple, comma delimeted. Options: Budget,
+        /// Chapters, DateCreated, Genres, HomePageUrl, IndexOptions,
+        /// MediaStreams, Overview, ParentId, Path, People, ProviderIds,
+        /// PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines,
+        /// TrailerUrls
+        /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<ThemeMediaResult>> GetItemsByIdThemevideosWithHttpMessagesAsync(string id, string userId = default(string), bool? inheritFromParent = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ThemeMediaResult>> GetItemsByIdThemevideosWithHttpMessagesAsync(string id, string userId = default(string), bool? inheritFromParent = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), string fields = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets information about an item's images
@@ -18881,7 +18941,8 @@ namespace EmbyClient.MsRest
         /// </param>
         /// <param name='command'>
         /// Possible values include: 'Stop', 'Pause', 'Unpause', 'NextTrack',
-        /// 'PreviousTrack', 'Seek', 'Rewind', 'FastForward', 'PlayPause'
+        /// 'PreviousTrack', 'Seek', 'Rewind', 'FastForward', 'PlayPause',
+        /// 'SeekRelative'
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.

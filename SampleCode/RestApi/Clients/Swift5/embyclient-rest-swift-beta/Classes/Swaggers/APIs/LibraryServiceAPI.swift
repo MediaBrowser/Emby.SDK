@@ -6696,10 +6696,15 @@ open class LibraryServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
      - parameter inheritFromParent: (query) Determines whether or not parent items should be searched for theme media. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdThememedia(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, completion: @escaping ((_ data: AllThemeMediaResult?,_ error: Error?) -> Void)) {
-        getItemsByIdThememediaWithRequestBuilder(_id: _id, userId: userId, inheritFromParent: inheritFromParent).execute { (response, error) -> Void in
+    open class func getItemsByIdThememedia(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, fields: String? = nil, completion: @escaping ((_ data: AllThemeMediaResult?,_ error: Error?) -> Void)) {
+        getItemsByIdThememediaWithRequestBuilder(_id: _id, userId: userId, inheritFromParent: inheritFromParent, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData, fields: fields).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -7733,10 +7738,15 @@ open class LibraryServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
      - parameter inheritFromParent: (query) Determines whether or not parent items should be searched for theme media. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
 
      - returns: RequestBuilder<AllThemeMediaResult> 
      */
-    open class func getItemsByIdThememediaWithRequestBuilder(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil) -> RequestBuilder<AllThemeMediaResult> {
+    open class func getItemsByIdThememediaWithRequestBuilder(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, fields: String? = nil) -> RequestBuilder<AllThemeMediaResult> {
         var path = "/Items/{Id}/ThemeMedia"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7746,7 +7756,12 @@ open class LibraryServiceAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "UserId": userId, 
-                        "InheritFromParent": inheritFromParent
+                        "InheritFromParent": inheritFromParent, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData, 
+                        "Fields": fields
         ])
 
 
@@ -7760,10 +7775,15 @@ open class LibraryServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
      - parameter inheritFromParent: (query) Determines whether or not parent items should be searched for theme media. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdThemesongs(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, completion: @escaping ((_ data: ThemeMediaResult?,_ error: Error?) -> Void)) {
-        getItemsByIdThemesongsWithRequestBuilder(_id: _id, userId: userId, inheritFromParent: inheritFromParent).execute { (response, error) -> Void in
+    open class func getItemsByIdThemesongs(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, fields: String? = nil, completion: @escaping ((_ data: ThemeMediaResult?,_ error: Error?) -> Void)) {
+        getItemsByIdThemesongsWithRequestBuilder(_id: _id, userId: userId, inheritFromParent: inheritFromParent, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData, fields: fields).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -8795,10 +8815,15 @@ open class LibraryServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
      - parameter inheritFromParent: (query) Determines whether or not parent items should be searched for theme media. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
 
      - returns: RequestBuilder<ThemeMediaResult> 
      */
-    open class func getItemsByIdThemesongsWithRequestBuilder(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil) -> RequestBuilder<ThemeMediaResult> {
+    open class func getItemsByIdThemesongsWithRequestBuilder(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, fields: String? = nil) -> RequestBuilder<ThemeMediaResult> {
         var path = "/Items/{Id}/ThemeSongs"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8808,7 +8833,12 @@ open class LibraryServiceAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "UserId": userId, 
-                        "InheritFromParent": inheritFromParent
+                        "InheritFromParent": inheritFromParent, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData, 
+                        "Fields": fields
         ])
 
 
@@ -8822,10 +8852,15 @@ open class LibraryServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
      - parameter inheritFromParent: (query) Determines whether or not parent items should be searched for theme media. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdThemevideos(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, completion: @escaping ((_ data: ThemeMediaResult?,_ error: Error?) -> Void)) {
-        getItemsByIdThemevideosWithRequestBuilder(_id: _id, userId: userId, inheritFromParent: inheritFromParent).execute { (response, error) -> Void in
+    open class func getItemsByIdThemevideos(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, fields: String? = nil, completion: @escaping ((_ data: ThemeMediaResult?,_ error: Error?) -> Void)) {
+        getItemsByIdThemevideosWithRequestBuilder(_id: _id, userId: userId, inheritFromParent: inheritFromParent, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData, fields: fields).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -9857,10 +9892,15 @@ open class LibraryServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
      - parameter inheritFromParent: (query) Determines whether or not parent items should be searched for theme media. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
 
      - returns: RequestBuilder<ThemeMediaResult> 
      */
-    open class func getItemsByIdThemevideosWithRequestBuilder(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil) -> RequestBuilder<ThemeMediaResult> {
+    open class func getItemsByIdThemevideosWithRequestBuilder(_id: String, userId: String? = nil, inheritFromParent: Bool? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, fields: String? = nil) -> RequestBuilder<ThemeMediaResult> {
         var path = "/Items/{Id}/ThemeVideos"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9870,7 +9910,12 @@ open class LibraryServiceAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "UserId": userId, 
-                        "InheritFromParent": inheritFromParent
+                        "InheritFromParent": inheritFromParent, 
+                        "EnableImages": enableImages, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "EnableUserData": enableUserData, 
+                        "Fields": fields
         ])
 
 
@@ -11175,27 +11220,33 @@ open class LibraryServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
+  "IsUserAccessConfigurable" : true,
   "Id" : "Id",
   "Guid" : "Guid",
   "SubFolders" : [ {
     "Path" : "Path",
+    "IsUserAccessConfigurable" : true,
     "Id" : "Id",
     "Name" : "Name"
   }, {
     "Path" : "Path",
+    "IsUserAccessConfigurable" : true,
     "Id" : "Id",
     "Name" : "Name"
   } ],
   "Name" : "Name"
 }, {
+  "IsUserAccessConfigurable" : true,
   "Id" : "Id",
   "Guid" : "Guid",
   "SubFolders" : [ {
     "Path" : "Path",
+    "IsUserAccessConfigurable" : true,
     "Id" : "Id",
     "Name" : "Name"
   }, {
     "Path" : "Path",
+    "IsUserAccessConfigurable" : true,
     "Id" : "Id",
     "Name" : "Name"
   } ],

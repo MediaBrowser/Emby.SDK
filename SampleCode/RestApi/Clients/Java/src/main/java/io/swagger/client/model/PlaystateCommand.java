@@ -27,7 +27,8 @@ public enum PlaystateCommand {
   SEEK("Seek"),
   REWIND("Rewind"),
   FASTFORWARD("FastForward"),
-  PLAYPAUSE("PlayPause");
+  PLAYPAUSE("PlayPause"),
+  SEEKRELATIVE("SeekRelative");
 
   private String value;
 

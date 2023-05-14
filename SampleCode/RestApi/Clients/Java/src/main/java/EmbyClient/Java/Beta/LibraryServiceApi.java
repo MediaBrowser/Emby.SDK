@@ -1678,12 +1678,17 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdThememediaCall(String id, String userId, Boolean inheritFromParent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdThememediaCall(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1696,6 +1701,16 @@ public class LibraryServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("UserId", userId));
         if (inheritFromParent != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("InheritFromParent", inheritFromParent));
+        if (enableImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImages", enableImages));
+        if (imageTypeLimit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ImageTypeLimit", imageTypeLimit));
+        if (enableImageTypes != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageTypes", enableImageTypes));
+        if (enableUserData != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableUserData", enableUserData));
+        if (fields != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Fields", fields));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1730,13 +1745,13 @@ public class LibraryServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdThememediaValidateBeforeCall(String id, String userId, Boolean inheritFromParent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdThememediaValidateBeforeCall(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdThememedia(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdThememediaCall(id, userId, inheritFromParent, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdThememediaCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, progressListener, progressRequestListener);
         return call;
 
         
@@ -1751,11 +1766,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @return AllThemeMediaResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AllThemeMediaResult getItemsByIdThememedia(String id, String userId, Boolean inheritFromParent) throws ApiException {
-        ApiResponse<AllThemeMediaResult> resp = getItemsByIdThememediaWithHttpInfo(id, userId, inheritFromParent);
+    public AllThemeMediaResult getItemsByIdThememedia(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields) throws ApiException {
+        ApiResponse<AllThemeMediaResult> resp = getItemsByIdThememediaWithHttpInfo(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
         return resp.getData();
     }
 
@@ -1765,11 +1785,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @return ApiResponse&lt;AllThemeMediaResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AllThemeMediaResult> getItemsByIdThememediaWithHttpInfo(String id, String userId, Boolean inheritFromParent) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdThememediaValidateBeforeCall(id, userId, inheritFromParent, null, null);
+    public ApiResponse<AllThemeMediaResult> getItemsByIdThememediaWithHttpInfo(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdThememediaValidateBeforeCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, null, null);
         Type localVarReturnType = new TypeToken<AllThemeMediaResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1780,11 +1805,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdThememediaAsync(String id, String userId, Boolean inheritFromParent, final ApiCallback<AllThemeMediaResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdThememediaAsync(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ApiCallback<AllThemeMediaResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1805,7 +1835,7 @@ public class LibraryServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdThememediaValidateBeforeCall(id, userId, inheritFromParent, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdThememediaValidateBeforeCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<AllThemeMediaResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1815,12 +1845,17 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdThemesongsCall(String id, String userId, Boolean inheritFromParent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdThemesongsCall(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1833,6 +1868,16 @@ public class LibraryServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("UserId", userId));
         if (inheritFromParent != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("InheritFromParent", inheritFromParent));
+        if (enableImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImages", enableImages));
+        if (imageTypeLimit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ImageTypeLimit", imageTypeLimit));
+        if (enableImageTypes != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageTypes", enableImageTypes));
+        if (enableUserData != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableUserData", enableUserData));
+        if (fields != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Fields", fields));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1867,13 +1912,13 @@ public class LibraryServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdThemesongsValidateBeforeCall(String id, String userId, Boolean inheritFromParent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdThemesongsValidateBeforeCall(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdThemesongs(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdThemesongsCall(id, userId, inheritFromParent, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdThemesongsCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, progressListener, progressRequestListener);
         return call;
 
         
@@ -1888,11 +1933,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @return ThemeMediaResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ThemeMediaResult getItemsByIdThemesongs(String id, String userId, Boolean inheritFromParent) throws ApiException {
-        ApiResponse<ThemeMediaResult> resp = getItemsByIdThemesongsWithHttpInfo(id, userId, inheritFromParent);
+    public ThemeMediaResult getItemsByIdThemesongs(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields) throws ApiException {
+        ApiResponse<ThemeMediaResult> resp = getItemsByIdThemesongsWithHttpInfo(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
         return resp.getData();
     }
 
@@ -1902,11 +1952,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @return ApiResponse&lt;ThemeMediaResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<ThemeMediaResult> getItemsByIdThemesongsWithHttpInfo(String id, String userId, Boolean inheritFromParent) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdThemesongsValidateBeforeCall(id, userId, inheritFromParent, null, null);
+    public ApiResponse<ThemeMediaResult> getItemsByIdThemesongsWithHttpInfo(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdThemesongsValidateBeforeCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, null, null);
         Type localVarReturnType = new TypeToken<ThemeMediaResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1917,11 +1972,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdThemesongsAsync(String id, String userId, Boolean inheritFromParent, final ApiCallback<ThemeMediaResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdThemesongsAsync(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ApiCallback<ThemeMediaResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1942,7 +2002,7 @@ public class LibraryServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdThemesongsValidateBeforeCall(id, userId, inheritFromParent, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdThemesongsValidateBeforeCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ThemeMediaResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1952,12 +2012,17 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdThemevideosCall(String id, String userId, Boolean inheritFromParent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdThemevideosCall(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1970,6 +2035,16 @@ public class LibraryServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("UserId", userId));
         if (inheritFromParent != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("InheritFromParent", inheritFromParent));
+        if (enableImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImages", enableImages));
+        if (imageTypeLimit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ImageTypeLimit", imageTypeLimit));
+        if (enableImageTypes != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableImageTypes", enableImageTypes));
+        if (enableUserData != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableUserData", enableUserData));
+        if (fields != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Fields", fields));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -2004,13 +2079,13 @@ public class LibraryServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdThemevideosValidateBeforeCall(String id, String userId, Boolean inheritFromParent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdThemevideosValidateBeforeCall(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdThemevideos(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdThemevideosCall(id, userId, inheritFromParent, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdThemevideosCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, progressListener, progressRequestListener);
         return call;
 
         
@@ -2025,11 +2100,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @return ThemeMediaResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ThemeMediaResult getItemsByIdThemevideos(String id, String userId, Boolean inheritFromParent) throws ApiException {
-        ApiResponse<ThemeMediaResult> resp = getItemsByIdThemevideosWithHttpInfo(id, userId, inheritFromParent);
+    public ThemeMediaResult getItemsByIdThemevideos(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields) throws ApiException {
+        ApiResponse<ThemeMediaResult> resp = getItemsByIdThemevideosWithHttpInfo(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
         return resp.getData();
     }
 
@@ -2039,11 +2119,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @return ApiResponse&lt;ThemeMediaResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<ThemeMediaResult> getItemsByIdThemevideosWithHttpInfo(String id, String userId, Boolean inheritFromParent) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdThemevideosValidateBeforeCall(id, userId, inheritFromParent, null, null);
+    public ApiResponse<ThemeMediaResult> getItemsByIdThemevideosWithHttpInfo(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdThemevideosValidateBeforeCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, null, null);
         Type localVarReturnType = new TypeToken<ThemeMediaResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -2054,11 +2139,16 @@ public class LibraryServiceApi {
      * @param id Item Id (required)
      * @param userId Optional. Filter by user id, and attach user data (optional)
      * @param inheritFromParent Determines whether or not parent items should be searched for theme media. (optional)
+     * @param enableImages Optional, include image information in output (optional)
+     * @param imageTypeLimit Optional, the max number of images to return, per image type (optional)
+     * @param enableImageTypes Optional. The image types to include in the output. (optional)
+     * @param enableUserData Optional, include user data (optional)
+     * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdThemevideosAsync(String id, String userId, Boolean inheritFromParent, final ApiCallback<ThemeMediaResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdThemevideosAsync(String id, String userId, Boolean inheritFromParent, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, String fields, final ApiCallback<ThemeMediaResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2079,7 +2169,7 @@ public class LibraryServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdThemevideosValidateBeforeCall(id, userId, inheritFromParent, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdThemevideosValidateBeforeCall(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ThemeMediaResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

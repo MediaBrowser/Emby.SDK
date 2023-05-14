@@ -15,7 +15,7 @@ import LibrarySubFolder from './LibrarySubFolder';
 /**
 * The LibraryMediaFolder model module.
 * @module model/LibraryMediaFolder
-* @version 4.8.0.34
+* @version 4.8.0.35
 */
 export default class LibraryMediaFolder {
     /**
@@ -54,6 +54,9 @@ export default class LibraryMediaFolder {
             if (data.hasOwnProperty('SubFolders')) {
                 obj['SubFolders'] = ApiClient.convertToType(data['SubFolders'], [LibrarySubFolder]);
             }
+            if (data.hasOwnProperty('IsUserAccessConfigurable')) {
+                obj['IsUserAccessConfigurable'] = ApiClient.convertToType(data['IsUserAccessConfigurable'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -74,6 +77,10 @@ export default class LibraryMediaFolder {
     * @member {Array.<module:model/LibrarySubFolder>} SubFolders
     */
     'SubFolders' = undefined;
+    /**
+    * @member {Boolean} IsUserAccessConfigurable
+    */
+    'IsUserAccessConfigurable' = undefined;
 
 
 

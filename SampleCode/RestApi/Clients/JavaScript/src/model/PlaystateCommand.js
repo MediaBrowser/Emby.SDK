@@ -70,6 +70,12 @@ export default class PlaystateCommand {
          */
         playPause = "PlayPause";
 
+        /**
+         * value: "SeekRelative"
+         * @const
+         */
+        seekRelative = "SeekRelative";
+
 
     /**
     * Returns a <code>PlaystateCommand</code> enum value from a Javascript object name.

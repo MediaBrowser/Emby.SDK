@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTVApiSetChannelSortIndex model module.
 * @module model/LiveTVApiSetChannelSortIndex
-* @version 4.8.0.34
+* @version 4.8.0.35
 */
 export default class LiveTVApiSetChannelSortIndex {
     /**

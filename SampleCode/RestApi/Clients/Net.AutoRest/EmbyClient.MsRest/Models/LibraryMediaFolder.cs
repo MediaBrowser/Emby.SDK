@@ -24,12 +24,13 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the LibraryMediaFolder class.
         /// </summary>
-        public LibraryMediaFolder(string name = default(string), string id = default(string), string guid = default(string), IList<LibrarySubFolder> subFolders = default(IList<LibrarySubFolder>))
+        public LibraryMediaFolder(string name = default(string), string id = default(string), string guid = default(string), IList<LibrarySubFolder> subFolders = default(IList<LibrarySubFolder>), bool? isUserAccessConfigurable = default(bool?))
         {
             Name = name;
             Id = id;
             Guid = guid;
             SubFolders = subFolders;
+            IsUserAccessConfigurable = isUserAccessConfigurable;
             CustomInit();
         }
 
@@ -57,6 +58,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "SubFolders")]
         public IList<LibrarySubFolder> SubFolders { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "IsUserAccessConfigurable")]
+        public bool? IsUserAccessConfigurable { get; set; }
 
     }
 }

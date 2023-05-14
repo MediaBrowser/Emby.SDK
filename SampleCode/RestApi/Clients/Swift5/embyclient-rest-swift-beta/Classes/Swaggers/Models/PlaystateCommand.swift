@@ -18,4 +18,5 @@ public enum PlaystateCommand: String, Codable {
     case rewind = "Rewind"
     case fastForward = "FastForward"
     case playPause = "PlayPause"
+    case seekRelative = "SeekRelative"
 }

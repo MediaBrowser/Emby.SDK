@@ -19,4 +19,5 @@ const (
 	REWIND_PlaystateCommand PlaystateCommand = "Rewind"
 	FAST_FORWARD_PlaystateCommand PlaystateCommand = "FastForward"
 	PLAY_PAUSE_PlaystateCommand PlaystateCommand = "PlayPause"
+	SEEK_RELATIVE_PlaystateCommand PlaystateCommand = "SeekRelative"
 )

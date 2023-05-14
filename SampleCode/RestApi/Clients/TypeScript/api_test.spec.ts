@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.34
+ * OpenAPI spec version: 4.8.0.35
  * 
  *
  * NOTE: This file is auto generated.
@@ -2561,19 +2561,34 @@ describe("LibraryServiceApi", () => {
     const id: string = "id_example"
     const userId: string = "userId_example"
     const inheritFromParent: boolean = true
-    return expect(instance.getItemsByIdThememedia(id, userId, inheritFromParent, {})).resolves.toBe(null)
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    const fields: string = "fields_example"
+    return expect(instance.getItemsByIdThememedia(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
   })
   test("getItemsByIdThemesongs", () => {
     const id: string = "id_example"
     const userId: string = "userId_example"
     const inheritFromParent: boolean = true
-    return expect(instance.getItemsByIdThemesongs(id, userId, inheritFromParent, {})).resolves.toBe(null)
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    const fields: string = "fields_example"
+    return expect(instance.getItemsByIdThemesongs(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
   })
   test("getItemsByIdThemevideos", () => {
     const id: string = "id_example"
     const userId: string = "userId_example"
     const inheritFromParent: boolean = true
-    return expect(instance.getItemsByIdThemevideos(id, userId, inheritFromParent, {})).resolves.toBe(null)
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    const fields: string = "fields_example"
+    return expect(instance.getItemsByIdThemevideos(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
   })
   test("getItemsCounts", () => {
     const userId: string = "userId_example"

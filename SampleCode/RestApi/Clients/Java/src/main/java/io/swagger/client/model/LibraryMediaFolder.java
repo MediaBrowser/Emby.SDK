@@ -35,6 +35,9 @@ public class LibraryMediaFolder {
   @SerializedName("SubFolders")
   private List<LibrarySubFolder> subFolders = null;
 
+  @SerializedName("IsUserAccessConfigurable")
+  private Boolean isUserAccessConfigurable = null;
+
   public LibraryMediaFolder name(String name) {
     this.name = name;
     return this;
@@ -115,6 +118,24 @@ public class LibraryMediaFolder {
     this.subFolders = subFolders;
   }
 
+  public LibraryMediaFolder isUserAccessConfigurable(Boolean isUserAccessConfigurable) {
+    this.isUserAccessConfigurable = isUserAccessConfigurable;
+    return this;
+  }
+
+   /**
+   * Get isUserAccessConfigurable
+   * @return isUserAccessConfigurable
+  **/
+  @Schema(description = "")
+  public Boolean isIsUserAccessConfigurable() {
+    return isUserAccessConfigurable;
+  }
+
+  public void setIsUserAccessConfigurable(Boolean isUserAccessConfigurable) {
+    this.isUserAccessConfigurable = isUserAccessConfigurable;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -128,12 +149,13 @@ public class LibraryMediaFolder {
     return Objects.equals(this.name, libraryMediaFolder.name) &&
         Objects.equals(this.id, libraryMediaFolder.id) &&
         Objects.equals(this.guid, libraryMediaFolder.guid) &&
-        Objects.equals(this.subFolders, libraryMediaFolder.subFolders);
+        Objects.equals(this.subFolders, libraryMediaFolder.subFolders) &&
+        Objects.equals(this.isUserAccessConfigurable, libraryMediaFolder.isUserAccessConfigurable);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, id, guid, subFolders);
+    return Objects.hash(name, id, guid, subFolders, isUserAccessConfigurable);
   }
 
 
@@ -146,6 +168,7 @@ public class LibraryMediaFolder {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    guid: ").append(toIndentedString(guid)).append("\n");
     sb.append("    subFolders: ").append(toIndentedString(subFolders)).append("\n");
+    sb.append("    isUserAccessConfigurable: ").append(toIndentedString(isUserAccessConfigurable)).append("\n");
     sb.append("}");
     return sb.toString();
   }

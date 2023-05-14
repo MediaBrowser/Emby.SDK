@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.34"
+    "version": "4.8.0.35"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -29019,6 +29019,37 @@
             "name": "InheritFromParent",
             "description": "Determines whether or not parent items should be searched for theme media.",
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
           }
         ],
         "responses": {
@@ -29087,6 +29118,37 @@
             "name": "InheritFromParent",
             "description": "Determines whether or not parent items should be searched for theme media.",
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
           }
         ],
         "responses": {
@@ -29155,6 +29217,37 @@
             "name": "InheritFromParent",
             "description": "Determines whether or not parent items should be searched for theme media.",
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "type": "string"
           }
         ],
         "responses": {
@@ -53435,6 +53528,9 @@
           "items": {
             "$ref": "#/definitions/Library.SubFolder"
           }
+        },
+        "IsUserAccessConfigurable": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "Emby.Api.Library.MediaFolder"
@@ -53450,6 +53546,9 @@
         },
         "Path": {
           "type": "string"
+        },
+        "IsUserAccessConfigurable": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "Emby.Api.Library.SubFolder"
@@ -59296,7 +59395,8 @@
         "Seek",
         "Rewind",
         "FastForward",
-        "PlayPause"
+        "PlayPause",
+        "SeekRelative"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.PlaystateCommand"

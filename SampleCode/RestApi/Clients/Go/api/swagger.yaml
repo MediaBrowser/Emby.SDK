@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.34
+  version: 4.8.0.35
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -33889,6 +33889,54 @@ paths:
         explode: false
         schema:
           type: boolean
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       responses:
         "200":
           description: Operation successful. Returning a AllThemeMediaResult object.
@@ -33947,6 +33995,54 @@ paths:
         explode: false
         schema:
           type: boolean
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       responses:
         "200":
           description: Operation successful. Returning a ThemeMediaResult object.
@@ -34005,6 +34101,54 @@ paths:
         explode: false
         schema:
           type: boolean
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines, TrailerUrls"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       responses:
         "200":
           description: Operation successful. Returning a ThemeMediaResult object.
@@ -61080,14 +61224,19 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Library.SubFolder'
+        IsUserAccessConfigurable:
+          type: boolean
       example:
+        IsUserAccessConfigurable: true
         Id: Id
         Guid: Guid
         SubFolders:
         - Path: Path
+          IsUserAccessConfigurable: true
           Id: Id
           Name: Name
         - Path: Path
+          IsUserAccessConfigurable: true
           Id: Id
           Name: Name
         Name: Name
@@ -61101,8 +61250,11 @@ components:
           type: string
         Path:
           type: string
+        IsUserAccessConfigurable:
+          type: boolean
       example:
         Path: Path
+        IsUserAccessConfigurable: true
         Id: Id
         Name: Name
       x-internal-ref-name: Emby.Api.Library.SubFolder
@@ -76560,6 +76712,7 @@ components:
       - Rewind
       - FastForward
       - PlayPause
+      - SeekRelative
       x-internal-ref-name: MediaBrowser.Model.Session.PlaystateCommand
     PlaystateRequest:
       type: object

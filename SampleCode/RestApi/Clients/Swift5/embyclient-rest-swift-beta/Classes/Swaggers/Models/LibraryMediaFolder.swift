@@ -15,12 +15,14 @@ public struct LibraryMediaFolder: Codable {
     public var _id: String?
     public var guid: String?
     public var subFolders: [LibrarySubFolder]?
+    public var isUserAccessConfigurable: Bool?
 
-    public init(name: String? = nil, _id: String? = nil, guid: String? = nil, subFolders: [LibrarySubFolder]? = nil) {
+    public init(name: String? = nil, _id: String? = nil, guid: String? = nil, subFolders: [LibrarySubFolder]? = nil, isUserAccessConfigurable: Bool? = nil) {
         self.name = name
         self._id = _id
         self.guid = guid
         self.subFolders = subFolders
+        self.isUserAccessConfigurable = isUserAccessConfigurable
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -28,6 +30,7 @@ public struct LibraryMediaFolder: Codable {
         case _id = "Id"
         case guid = "Guid"
         case subFolders = "SubFolders"
+        case isUserAccessConfigurable = "IsUserAccessConfigurable"
     }
 
 }

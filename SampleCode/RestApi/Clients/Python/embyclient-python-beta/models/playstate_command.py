@@ -27,6 +27,7 @@ class PlaystateCommand(object):
     REWIND = "Rewind"
     FASTFORWARD = "FastForward"
     PLAYPAUSE = "PlayPause"
+    SEEKRELATIVE = "SeekRelative"
     """
     Attributes:
       swagger_types (dict): The key is attribute name
