@@ -15,7 +15,7 @@ import TimeSpan from './TimeSpan';
 /**
 * The ProcessRunMetricsProcessMetricPoint model module.
 * @module model/ProcessRunMetricsProcessMetricPoint
-* @version 4.8.0.35
+* @version 4.8.0.36
 */
 export default class ProcessRunMetricsProcessMetricPoint {
     /**

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibrarySubFolder model module.
 * @module model/LibrarySubFolder
-* @version 4.8.0.35
+* @version 4.8.0.36
 */
 export default class LibrarySubFolder {
     /**
