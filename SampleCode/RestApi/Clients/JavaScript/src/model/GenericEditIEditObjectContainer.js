@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The GenericEditIEditObjectContainer model module.
 * @module model/GenericEditIEditObjectContainer
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class GenericEditIEditObjectContainer {
     /**

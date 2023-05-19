@@ -15,7 +15,7 @@ import EmbyDlnaProfilesHttpHeaderInfo from './EmbyDlnaProfilesHttpHeaderInfo';
 /**
 * The EmbyDlnaProfilesDeviceIdentification model module.
 * @module model/EmbyDlnaProfilesDeviceIdentification
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class EmbyDlnaProfilesDeviceIdentification {
     /**

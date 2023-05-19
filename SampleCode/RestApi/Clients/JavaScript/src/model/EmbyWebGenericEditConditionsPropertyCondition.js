@@ -17,7 +17,7 @@ import EmbyWebGenericEditConditionsPropertyConditionType from './EmbyWebGenericE
 /**
 * The EmbyWebGenericEditConditionsPropertyCondition model module.
 * @module model/EmbyWebGenericEditConditionsPropertyCondition
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class EmbyWebGenericEditConditionsPropertyCondition {
     /**

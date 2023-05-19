@@ -16,7 +16,7 @@ import ConfigurationUnratedItem from './ConfigurationUnratedItem';
 /**
 * The UsersUserPolicy model module.
 * @module model/UsersUserPolicy
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class UsersUserPolicy {
     /**

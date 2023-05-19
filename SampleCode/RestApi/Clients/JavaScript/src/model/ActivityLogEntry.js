@@ -15,7 +15,7 @@ import LoggingLogSeverity from './LoggingLogSeverity';
 /**
 * The ActivityLogEntry model module.
 * @module model/ActivityLogEntry
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class ActivityLogEntry {
     /**

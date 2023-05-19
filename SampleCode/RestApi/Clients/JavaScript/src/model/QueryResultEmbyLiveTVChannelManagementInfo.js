@@ -15,7 +15,7 @@ import EmbyLiveTVChannelManagementInfo from './EmbyLiveTVChannelManagementInfo';
 /**
 * The QueryResultEmbyLiveTVChannelManagementInfo model module.
 * @module model/QueryResultEmbyLiveTVChannelManagementInfo
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class QueryResultEmbyLiveTVChannelManagementInfo {
     /**

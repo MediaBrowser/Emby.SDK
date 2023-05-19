@@ -24,7 +24,7 @@ import ThemeMediaResult from '../model/ThemeMediaResult';
 /**
 * LibraryService service.
 * @module EmbyClient.JavaScript.Beta/LibraryServiceApi
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class LibraryServiceApi {
 

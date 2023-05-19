@@ -15,7 +15,7 @@ import DlnaDeviceProfile from './DlnaDeviceProfile';
 /**
 * The ClientCapabilities model module.
 * @module model/ClientCapabilities
-* @version 4.8.0.36
+* @version 4.8.0.37
 */
 export default class ClientCapabilities {
     /**
