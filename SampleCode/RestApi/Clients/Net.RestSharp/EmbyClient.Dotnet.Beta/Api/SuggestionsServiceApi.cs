@@ -22,7 +22,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -38,7 +38,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -55,7 +55,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -71,7 +71,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -194,7 +194,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -211,7 +211,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -255,6 +255,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
             if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
             if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -275,7 +286,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -293,7 +304,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
@@ -337,6 +348,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
             if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
             if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,

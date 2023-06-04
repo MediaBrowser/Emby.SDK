@@ -42,7 +42,7 @@ public class PluginServiceApiTest {
     /**
      * Gets a list of currently installed plugins
      *
-     * Requires authentication as user
+     * Requires authentication as administrator
      *
      * @throws Exception
      *          if the Api call fails
@@ -56,7 +56,7 @@ public class PluginServiceApiTest {
     /**
      * Gets a plugin&#x27;s configuration
      *
-     * Requires authentication as user
+     * Requires authentication as administrator
      *
      * @throws Exception
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class PluginServiceApiTest {
     /**
      * Gets a plugin thumb image
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -86,7 +86,7 @@ public class PluginServiceApiTest {
     /**
      * Updates a plugin&#x27;s configuration
      *
-     * Requires authentication as user
+     * Requires authentication as administrator
      *
      * @throws Exception
      *          if the Api call fails

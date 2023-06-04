@@ -2304,7 +2304,7 @@ public class LiveTvServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2322,7 +2322,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tags
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -2425,7 +2425,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tags
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -2529,7 +2529,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tags (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -2966,7 +2966,7 @@ public class LiveTvServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2984,7 +2984,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tag prefixes
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -3085,7 +3085,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tag prefixes
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -3187,7 +3187,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tag prefixes (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -4586,7 +4586,7 @@ public class LiveTvServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -4608,7 +4608,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -4618,7 +4618,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4630,7 +4630,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -4709,7 +4709,7 @@ public class LiveTvServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -4735,7 +4735,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param container  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4746,7 +4746,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param container  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -4759,7 +4759,7 @@ public class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param container  (required)
      * @param callback The callback to be executed when the API call finishes

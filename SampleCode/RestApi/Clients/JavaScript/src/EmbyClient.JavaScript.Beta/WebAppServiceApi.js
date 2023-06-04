@@ -15,7 +15,7 @@ import EmbyWebApiConfigurationPageInfo from '../model/EmbyWebApiConfigurationPag
 /**
 * WebAppService service.
 * @module EmbyClient.JavaScript.Beta/WebAppServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class WebAppServiceApi {
 
@@ -39,7 +39,7 @@ export default class WebAppServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/WebAppServiceApi~getWebConfigurationpageCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getWebConfigurationpage() {
@@ -54,7 +54,7 @@ export default class WebAppServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -74,7 +74,7 @@ export default class WebAppServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/WebAppServiceApi~getWebConfigurationpagesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/EmbyWebApiConfigurationPageInfo>}
      */
@@ -90,7 +90,7 @@ export default class WebAppServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = [EmbyWebApiConfigurationPageInfo];
@@ -110,7 +110,7 @@ export default class WebAppServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/WebAppServiceApi~getWebStringsCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getWebStrings() {
@@ -125,7 +125,7 @@ export default class WebAppServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

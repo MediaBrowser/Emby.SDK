@@ -229,7 +229,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -255,7 +255,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -266,7 +266,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -279,7 +279,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -758,7 +758,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -776,7 +776,7 @@ public class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen.
-     * No authentication required
+     * Requires authentication as user
      * @return List&lt;UserDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
@@ -789,7 +789,7 @@ public class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen.
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;List&lt;UserDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
@@ -803,7 +803,7 @@ public class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1032,7 +1032,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1058,7 +1058,7 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param body AuthenticateUserByName (required)
      * @param xEmbyAuthorization The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. (required)
      * @return AuthenticationAuthenticationResult
@@ -1073,7 +1073,7 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param body AuthenticateUserByName (required)
      * @param xEmbyAuthorization The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. (required)
      * @return ApiResponse&lt;AuthenticationAuthenticationResult&gt;
@@ -1089,7 +1089,7 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user (asynchronously)
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param body AuthenticateUserByName (required)
      * @param xEmbyAuthorization The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1302,7 +1302,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1328,7 +1328,7 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * No authentication required
+     * Requires authentication as user
      * @param body AuthenticateUser (required)
      * @param id  (required)
      * @return AuthenticationAuthenticationResult
@@ -1343,7 +1343,7 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * No authentication required
+     * Requires authentication as user
      * @param body AuthenticateUser (required)
      * @param id  (required)
      * @return ApiResponse&lt;AuthenticationAuthenticationResult&gt;
@@ -1359,7 +1359,7 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body AuthenticateUser (required)
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2079,7 +2079,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2105,7 +2105,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2116,7 +2116,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -2129,7 +2129,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2344,7 +2344,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2366,7 +2366,7 @@ public class UserServiceApi {
 
     /**
      * Initiates the forgot password process for a local user
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPassword (required)
      * @return UsersForgotPasswordResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2378,7 +2378,7 @@ public class UserServiceApi {
 
     /**
      * Initiates the forgot password process for a local user
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPassword (required)
      * @return ApiResponse&lt;UsersForgotPasswordResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2391,7 +2391,7 @@ public class UserServiceApi {
 
     /**
      * Initiates the forgot password process for a local user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPassword (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2468,7 +2468,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2490,7 +2490,7 @@ public class UserServiceApi {
 
     /**
      * Redeems a forgot password pin
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPasswordPin (required)
      * @return UsersPinRedeemResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2502,7 +2502,7 @@ public class UserServiceApi {
 
     /**
      * Redeems a forgot password pin
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPasswordPin (required)
      * @return ApiResponse&lt;UsersPinRedeemResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2515,7 +2515,7 @@ public class UserServiceApi {
 
     /**
      * Redeems a forgot password pin (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPasswordPin (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

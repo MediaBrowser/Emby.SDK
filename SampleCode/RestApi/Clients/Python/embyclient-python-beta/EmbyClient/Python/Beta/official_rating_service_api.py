@@ -26,7 +26,7 @@ class OfficialRatingServiceApi(object):
     def get_officialratings(self, **kwargs):  # noqa: E501
         """Gets items based on a query.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_officialratings(async_req=True)
@@ -137,7 +137,7 @@ class OfficialRatingServiceApi(object):
     def get_officialratings_with_http_info(self, **kwargs):  # noqa: E501
         """Gets items based on a query.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_officialratings_with_http_info(async_req=True)
@@ -452,7 +452,7 @@ class OfficialRatingServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/OfficialRatings', 'GET',

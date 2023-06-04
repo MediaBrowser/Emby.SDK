@@ -687,7 +687,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -713,7 +713,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -738,7 +738,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -765,7 +765,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -900,7 +900,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -930,7 +930,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -955,7 +955,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -982,7 +982,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -1118,7 +1118,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1144,7 +1144,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -1169,7 +1169,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -1196,7 +1196,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -1331,7 +1331,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1361,7 +1361,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -1386,7 +1386,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -1413,7 +1413,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -1549,7 +1549,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1575,7 +1575,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -1600,7 +1600,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -1627,7 +1627,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -1762,7 +1762,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1792,7 +1792,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -1817,7 +1817,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -1844,7 +1844,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -2105,7 +2105,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2131,7 +2131,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -2156,7 +2156,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -2183,7 +2183,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -2318,7 +2318,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2348,7 +2348,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -2373,7 +2373,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -2400,7 +2400,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -2535,7 +2535,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2589,7 +2589,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param percentPlayed  (required)
      * @param unPlayedCount  (required)
      * @param id Item Id (required)
@@ -2616,7 +2616,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param percentPlayed  (required)
      * @param unPlayedCount  (required)
      * @param id Item Id (required)
@@ -2645,7 +2645,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param percentPlayed  (required)
      * @param unPlayedCount  (required)
      * @param id Item Id (required)
@@ -2783,7 +2783,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2809,7 +2809,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -2834,7 +2834,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -2861,7 +2861,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -2996,7 +2996,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -3026,7 +3026,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3051,7 +3051,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3078,7 +3078,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3214,7 +3214,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -3240,7 +3240,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -3265,7 +3265,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -3292,7 +3292,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -3427,7 +3427,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -3457,7 +3457,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3482,7 +3482,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3509,7 +3509,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3645,7 +3645,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -3671,7 +3671,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -3696,7 +3696,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -3723,7 +3723,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -3858,7 +3858,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -3888,7 +3888,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3913,7 +3913,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -3940,7 +3940,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -4078,7 +4078,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -4104,7 +4104,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -4131,7 +4131,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -4160,7 +4160,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -4297,7 +4297,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -4327,7 +4327,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -4352,7 +4352,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -4379,7 +4379,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -4515,7 +4515,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -4541,7 +4541,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -4566,7 +4566,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -4593,7 +4593,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -4728,7 +4728,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -4758,7 +4758,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -4783,7 +4783,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -4810,7 +4810,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -4946,7 +4946,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -4972,7 +4972,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -4997,7 +4997,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -5024,7 +5024,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -5159,7 +5159,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -5189,7 +5189,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -5214,7 +5214,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -5241,7 +5241,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -5377,7 +5377,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -5403,7 +5403,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -5428,7 +5428,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -5455,7 +5455,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -5590,7 +5590,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -5620,7 +5620,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -5645,7 +5645,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -5672,7 +5672,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -5808,7 +5808,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -5834,7 +5834,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -5859,7 +5859,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -5886,7 +5886,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -6021,7 +6021,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -6051,7 +6051,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -6076,7 +6076,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -6103,7 +6103,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -6238,7 +6238,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -6292,7 +6292,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param percentPlayed  (required)
      * @param unPlayedCount  (required)
      * @param id Item Id (required)
@@ -6319,7 +6319,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param percentPlayed  (required)
      * @param unPlayedCount  (required)
      * @param id Item Id (required)
@@ -6348,7 +6348,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param percentPlayed  (required)
      * @param unPlayedCount  (required)
      * @param id Item Id (required)
@@ -6486,7 +6486,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -6512,7 +6512,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -6537,7 +6537,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -6564,7 +6564,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -6699,7 +6699,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -6729,7 +6729,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -6754,7 +6754,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -6781,7 +6781,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -6917,7 +6917,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -6943,7 +6943,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -6968,7 +6968,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -6995,7 +6995,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -7130,7 +7130,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -7160,7 +7160,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -7185,7 +7185,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -7212,7 +7212,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -7348,7 +7348,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -7374,7 +7374,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -7399,7 +7399,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -7426,7 +7426,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -7561,7 +7561,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -7591,7 +7591,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -7616,7 +7616,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -7643,7 +7643,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param name Item name (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -7779,7 +7779,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -7805,7 +7805,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -7830,7 +7830,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -7857,7 +7857,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
@@ -7992,7 +7992,7 @@ public class ImageServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -8022,7 +8022,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -8047,7 +8047,7 @@ public class ImageServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)
@@ -8074,7 +8074,7 @@ public class ImageServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id User Id (required)
      * @param type Image Type (required)
      * @param index Image Index (required)

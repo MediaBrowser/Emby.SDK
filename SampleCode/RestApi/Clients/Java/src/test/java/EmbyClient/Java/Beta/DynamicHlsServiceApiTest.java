@@ -27,7 +27,7 @@ public class DynamicHlsServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -131,7 +131,7 @@ public class DynamicHlsServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -269,7 +269,7 @@ public class DynamicHlsServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -330,7 +330,7 @@ public class DynamicHlsServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

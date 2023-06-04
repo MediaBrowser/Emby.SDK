@@ -31,6 +31,12 @@ open class DlnaServerServiceAPI {
      Gets dlna connection manager xml
      - GET /Dlna/{UuId}/connectionmanager/connectionmanager
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter uuId: (path) Server UuId 
 
      - returns: RequestBuilder<Void> 
@@ -70,6 +76,12 @@ open class DlnaServerServiceAPI {
      Gets dlna connection manager xml
      - GET /Dlna/{UuId}/connectionmanager/connectionmanager.xml
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter uuId: (path) Server UuId 
 
      - returns: RequestBuilder<Void> 
@@ -109,6 +121,12 @@ open class DlnaServerServiceAPI {
      Gets dlna content directory xml
      - GET /Dlna/{UuId}/contentdirectory/contentdirectory
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter uuId: (path) Server UuId 
 
      - returns: RequestBuilder<Void> 
@@ -148,6 +166,12 @@ open class DlnaServerServiceAPI {
      Gets dlna content directory xml
      - GET /Dlna/{UuId}/contentdirectory/contentdirectory.xml
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter uuId: (path) Server UuId 
 
      - returns: RequestBuilder<Void> 
@@ -187,6 +211,12 @@ open class DlnaServerServiceAPI {
      Gets dlna server info
      - GET /Dlna/{UuId}/description
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter uuId: (path) Server UuId 
 
      - returns: RequestBuilder<Void> 
@@ -226,6 +256,12 @@ open class DlnaServerServiceAPI {
      Gets dlna server info
      - GET /Dlna/{UuId}/description.xml
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter uuId: (path) Server UuId 
 
      - returns: RequestBuilder<Void> 
@@ -266,6 +302,12 @@ open class DlnaServerServiceAPI {
      Gets a server icon
      - GET /Dlna/{UuId}/icons/{Filename}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter uuId: (path) Server UuId 
      - parameter filename: (path) The icon filename 
 
@@ -310,6 +352,12 @@ open class DlnaServerServiceAPI {
      Gets a server icon
      - GET /Dlna/icons/{Filename}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter filename: (path) The icon filename 
      - parameter uuId: (query) Server UuId (optional)
 
@@ -354,6 +402,12 @@ open class DlnaServerServiceAPI {
      Processes a control request
      - POST /Dlna/{UuId}/connectionmanager/control
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter body: (body) Binary stream 
      - parameter uuId: (path) Server UuId 
 
@@ -395,6 +449,12 @@ open class DlnaServerServiceAPI {
      Processes a control request
      - POST /Dlna/{UuId}/contentdirectory/control
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter body: (body) Binary stream 
      - parameter uuId: (path) Server UuId 
 

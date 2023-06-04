@@ -149,6 +149,12 @@ open class SystemServiceAPI {
      Gets public information about the server
      - GET /System/Info/Public
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "LocalAddress" : "LocalAddress",
   "WanAddress" : "WanAddress",
@@ -343,6 +349,12 @@ open class SystemServiceAPI {
     /**
      - GET /System/Ping
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */
@@ -533,6 +545,12 @@ open class SystemServiceAPI {
     /**
      - POST /System/Ping
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */

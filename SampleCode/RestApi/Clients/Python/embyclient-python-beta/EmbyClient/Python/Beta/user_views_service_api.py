@@ -26,7 +26,7 @@ class UserViewsServiceApi(object):
     def get_users_by_userid_views(self, user_id, include_external_content, **kwargs):  # noqa: E501
         """get_users_by_userid_views  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_userid_views(user_id, include_external_content, async_req=True)
@@ -49,7 +49,7 @@ class UserViewsServiceApi(object):
     def get_users_by_userid_views_with_http_info(self, user_id, include_external_content, **kwargs):  # noqa: E501
         """get_users_by_userid_views  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_userid_views_with_http_info(user_id, include_external_content, async_req=True)
@@ -108,7 +108,7 @@ class UserViewsServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{UserId}/Views', 'GET',

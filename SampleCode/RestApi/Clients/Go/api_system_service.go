@@ -217,7 +217,7 @@ func (a *SystemServiceApiService) GetSystemInfo(ctx context.Context) (SystemInfo
 }
 /*
 SystemServiceApiService Gets public information about the server
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 @return PublicSystemInfo
 */
@@ -253,6 +253,19 @@ func (a *SystemServiceApiService) GetSystemInfoPublic(ctx context.Context) (Publ
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
@@ -600,7 +613,7 @@ func (a *SystemServiceApiService) GetSystemLogsQuery(ctx context.Context, localV
 }
 /*
 SystemServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
@@ -636,6 +649,19 @@ func (a *SystemServiceApiService) GetSystemPing(ctx context.Context) (*http.Resp
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
@@ -954,7 +980,7 @@ func (a *SystemServiceApiService) GetSystemWakeonlaninfo(ctx context.Context) ([
 }
 /*
 SystemServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
@@ -990,6 +1016,19 @@ func (a *SystemServiceApiService) PostSystemPing(ctx context.Context) (*http.Res
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {

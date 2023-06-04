@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * UserViewsService service.
 * @module EmbyClient.JavaScript.Beta/UserViewsServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class UserViewsServiceApi {
 
@@ -39,7 +39,7 @@ export default class UserViewsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserViewsServiceApi~getUsersByUseridViewsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
@@ -57,7 +57,7 @@ export default class UserViewsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = QueryResultBaseItemDto;

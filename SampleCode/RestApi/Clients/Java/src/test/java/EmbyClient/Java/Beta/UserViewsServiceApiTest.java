@@ -27,7 +27,7 @@ public class UserViewsServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

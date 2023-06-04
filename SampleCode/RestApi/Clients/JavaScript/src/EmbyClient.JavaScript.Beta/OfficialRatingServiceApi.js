@@ -15,7 +15,7 @@ import QueryResultUserLibraryOfficialRatingItem from '../model/QueryResultUserLi
 /**
 * OfficialRatingService service.
 * @module EmbyClient.JavaScript.Beta/OfficialRatingServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class OfficialRatingServiceApi {
 
@@ -40,7 +40,7 @@ export default class OfficialRatingServiceApi {
 
     /**
      * Gets items based on a query.
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/OfficialRatingServiceApi~getOfficialratingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultUserLibraryOfficialRatingItem}
@@ -148,7 +148,7 @@ export default class OfficialRatingServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = QueryResultUserLibraryOfficialRatingItem;

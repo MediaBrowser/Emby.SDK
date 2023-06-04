@@ -6229,7 +6229,7 @@ namespace EmbyClient.MsRest
             /// Gets items based on a query.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -6554,7 +6554,7 @@ namespace EmbyClient.MsRest
             /// Gets items based on a query.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -7721,7 +7721,7 @@ namespace EmbyClient.MsRest
             /// Gets a list of currently installed plugins
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// Requires authentication as administrator
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -7735,7 +7735,7 @@ namespace EmbyClient.MsRest
             /// Gets a list of currently installed plugins
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// Requires authentication as administrator
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -12516,7 +12516,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -12585,7 +12585,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -12657,7 +12657,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -12726,7 +12726,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -14463,7 +14463,7 @@ namespace EmbyClient.MsRest
             /// Gets branding configuration
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -14477,7 +14477,7 @@ namespace EmbyClient.MsRest
             /// Gets branding configuration
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -14497,7 +14497,7 @@ namespace EmbyClient.MsRest
             /// Gets custom css
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -14511,7 +14511,7 @@ namespace EmbyClient.MsRest
             /// Gets custom css
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -14528,7 +14528,7 @@ namespace EmbyClient.MsRest
             /// Gets custom css
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -14542,7 +14542,7 @@ namespace EmbyClient.MsRest
             /// Gets custom css
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -17055,7 +17055,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/Item-Information" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -17381,7 +17381,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/Item-Information" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23012,7 +23012,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23023,7 +23023,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23037,7 +23037,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23048,7 +23048,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23316,7 +23316,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23331,7 +23331,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23605,7 +23605,7 @@ namespace EmbyClient.MsRest
             /// Authenticate a user by nane and password. A 200 status code indicates
             /// success, while anything in the 400 or 500 range indicates failure
             /// ---
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23634,7 +23634,7 @@ namespace EmbyClient.MsRest
             /// Authenticate a user by nane and password. A 200 status code indicates
             /// success, while anything in the 400 or 500 range indicates failure
             /// ---
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23705,7 +23705,7 @@ namespace EmbyClient.MsRest
             /// Initiates the forgot password process for a local user
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23722,7 +23722,7 @@ namespace EmbyClient.MsRest
             /// Initiates the forgot password process for a local user
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23818,7 +23818,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23829,7 +23829,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23843,7 +23843,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23854,7 +23854,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23871,7 +23871,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -23882,7 +23882,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26211,7 +26211,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26228,7 +26228,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26248,7 +26248,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26265,7 +26265,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26285,7 +26285,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26305,7 +26305,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -28748,7 +28748,7 @@ namespace EmbyClient.MsRest
             /// Gets live tv channel tag prefixes
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -29073,7 +29073,7 @@ namespace EmbyClient.MsRest
             /// Gets live tv channel tag prefixes
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -31023,7 +31023,7 @@ namespace EmbyClient.MsRest
             /// Gets a plugin thumb image
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -31040,7 +31040,7 @@ namespace EmbyClient.MsRest
             /// Gets a plugin thumb image
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -31060,7 +31060,7 @@ namespace EmbyClient.MsRest
             /// Gets a plugin's configuration
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// Requires authentication as administrator
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -31077,7 +31077,7 @@ namespace EmbyClient.MsRest
             /// Gets a plugin's configuration
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// Requires authentication as administrator
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -31097,7 +31097,7 @@ namespace EmbyClient.MsRest
             /// Updates a plugin's configuration
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// Requires authentication as administrator
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -31117,7 +31117,7 @@ namespace EmbyClient.MsRest
             /// Updates a plugin's configuration
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// Requires authentication as administrator
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33168,7 +33168,7 @@ namespace EmbyClient.MsRest
             /// Gets public information about the server
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33182,7 +33182,7 @@ namespace EmbyClient.MsRest
             /// Gets public information about the server
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33357,7 +33357,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/Item-Information" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33393,7 +33393,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/Item-Information" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33470,7 +33470,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33490,7 +33490,7 @@ namespace EmbyClient.MsRest
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication" />
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33597,7 +33597,7 @@ namespace EmbyClient.MsRest
             /// Redeems a forgot password pin
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -33614,7 +33614,7 @@ namespace EmbyClient.MsRest
             /// Redeems a forgot password pin
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -34374,7 +34374,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library" />
             /// </summary>
             /// <param name='operations'>
@@ -34392,7 +34392,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library" />
             /// </summary>
             /// <param name='operations'>
@@ -34539,7 +34539,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -34555,7 +34555,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36633,7 +36633,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36698,7 +36698,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36766,7 +36766,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36831,7 +36831,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36974,7 +36974,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36991,7 +36991,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37011,7 +37011,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37028,7 +37028,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37048,7 +37048,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37065,7 +37065,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37085,7 +37085,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37102,7 +37102,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37122,7 +37122,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37142,7 +37142,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37165,7 +37165,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37185,7 +37185,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37208,7 +37208,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37228,7 +37228,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37248,7 +37248,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37313,7 +37313,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37381,7 +37381,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37446,7 +37446,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37514,7 +37514,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37579,7 +37579,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37647,7 +37647,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37712,7 +37712,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37921,7 +37921,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37986,7 +37986,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38054,7 +38054,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38119,7 +38119,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38457,7 +38457,7 @@ namespace EmbyClient.MsRest
             /// Gets a live tv channel
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38473,7 +38473,7 @@ namespace EmbyClient.MsRest
             /// Gets a live tv channel
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38492,7 +38492,7 @@ namespace EmbyClient.MsRest
             /// Gets a live tv channel
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38510,7 +38510,7 @@ namespace EmbyClient.MsRest
             /// Gets a live tv channel
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38747,7 +38747,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38812,7 +38812,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38880,7 +38880,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -38945,7 +38945,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39050,7 +39050,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39115,7 +39115,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39183,7 +39183,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39248,7 +39248,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39646,7 +39646,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39711,7 +39711,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39779,7 +39779,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -39844,7 +39844,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -40300,7 +40300,7 @@ namespace EmbyClient.MsRest
             /// Clears audio or subtitle track selections for a user
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -40318,7 +40318,7 @@ namespace EmbyClient.MsRest
             /// Clears audio or subtitle track selections for a user
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -41388,7 +41388,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication" />
             /// </summary>
             /// <param name='operations'>
@@ -41454,7 +41454,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// <see href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication" />
             /// </summary>
             /// <param name='operations'>
@@ -41523,7 +41523,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -41588,7 +41588,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42181,7 +42181,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42246,7 +42246,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42314,7 +42314,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42379,7 +42379,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42447,7 +42447,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42466,7 +42466,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42488,7 +42488,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42507,7 +42507,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42529,7 +42529,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42594,7 +42594,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42662,7 +42662,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42727,7 +42727,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42795,7 +42795,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42860,7 +42860,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42928,7 +42928,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -42993,7 +42993,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43214,7 +43214,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43279,7 +43279,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43347,7 +43347,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43412,7 +43412,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43721,7 +43721,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43786,7 +43786,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43854,7 +43854,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43919,7 +43919,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -43987,7 +43987,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44052,7 +44052,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44120,7 +44120,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44185,7 +44185,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44296,7 +44296,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44361,7 +44361,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44429,7 +44429,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44494,7 +44494,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44565,7 +44565,7 @@ namespace EmbyClient.MsRest
             /// Clears audio or subtitle track selections for a user
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -44583,7 +44583,7 @@ namespace EmbyClient.MsRest
             /// Clears audio or subtitle track selections for a user
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45055,7 +45055,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45120,7 +45120,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45188,7 +45188,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45253,7 +45253,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45839,7 +45839,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45858,7 +45858,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45880,7 +45880,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45899,7 +45899,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45921,7 +45921,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45940,7 +45940,7 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
-            /// No authentication required
+            /// Requires authentication as user
             /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -45965,7 +45965,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -46000,7 +46000,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -46343,7 +46343,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -46378,7 +46378,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -46416,7 +46416,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -46451,7 +46451,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -46489,7 +46489,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -46524,7 +46524,7 @@ namespace EmbyClient.MsRest
             /// Gets subtitles in a specified format.
             /// </summary>
             /// <remarks>
-            /// No authentication required
+            /// Requires authentication as user
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.

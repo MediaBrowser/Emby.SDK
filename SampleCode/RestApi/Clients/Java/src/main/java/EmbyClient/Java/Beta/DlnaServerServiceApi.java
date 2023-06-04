@@ -91,7 +91,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -113,7 +113,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -123,7 +123,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -135,7 +135,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -212,7 +212,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -234,7 +234,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -244,7 +244,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -256,7 +256,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -333,7 +333,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -355,7 +355,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -365,7 +365,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -377,7 +377,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -454,7 +454,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -476,7 +476,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -486,7 +486,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -498,7 +498,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -575,7 +575,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -597,7 +597,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -607,7 +607,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -619,7 +619,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -696,7 +696,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -718,7 +718,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -728,7 +728,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -740,7 +740,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -819,7 +819,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -845,7 +845,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets a server icon
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param filename The icon filename (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -856,7 +856,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets a server icon
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param filename The icon filename (required)
      * @return ApiResponse&lt;Void&gt;
@@ -869,7 +869,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets a server icon (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param uuId Server UuId (required)
      * @param filename The icon filename (required)
      * @param callback The callback to be executed when the API call finishes
@@ -950,7 +950,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -972,7 +972,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets a server icon
-     * No authentication required
+     * Requires authentication as user
      * @param filename The icon filename (required)
      * @param uuId Server UuId (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -983,7 +983,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets a server icon
-     * No authentication required
+     * Requires authentication as user
      * @param filename The icon filename (required)
      * @param uuId Server UuId (optional)
      * @return ApiResponse&lt;Void&gt;
@@ -996,7 +996,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Gets a server icon (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param filename The icon filename (required)
      * @param uuId Server UuId (optional)
      * @param callback The callback to be executed when the API call finishes
@@ -1075,7 +1075,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1101,7 +1101,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Processes a control request
-     * No authentication required
+     * Requires authentication as user
      * @param body Binary stream (required)
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1112,7 +1112,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Processes a control request
-     * No authentication required
+     * Requires authentication as user
      * @param body Binary stream (required)
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1125,7 +1125,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Processes a control request (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body Binary stream (required)
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1204,7 +1204,7 @@ public class DlnaServerServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1230,7 +1230,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Processes a control request
-     * No authentication required
+     * Requires authentication as user
      * @param body Binary stream (required)
      * @param uuId Server UuId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1241,7 +1241,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Processes a control request
-     * No authentication required
+     * Requires authentication as user
      * @param body Binary stream (required)
      * @param uuId Server UuId (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1254,7 +1254,7 @@ public class DlnaServerServiceApi {
 
     /**
      * Processes a control request (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body Binary stream (required)
      * @param uuId Server UuId (required)
      * @param callback The callback to be executed when the API call finishes

@@ -26,6 +26,12 @@ open class BrandingServiceAPI {
      Gets branding configuration
      - GET /Branding/Configuration
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "CustomCss" : "CustomCss",
   "LoginDisclaimer" : "LoginDisclaimer"
@@ -64,6 +70,12 @@ open class BrandingServiceAPI {
      Gets custom css
      - GET /Branding/Css
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */
@@ -98,6 +110,12 @@ open class BrandingServiceAPI {
      Gets custom css
      - GET /Branding/Css.css
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */

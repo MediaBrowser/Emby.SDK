@@ -84,6 +84,12 @@ open class BifServiceAPI {
     /**
      - GET /Videos/{Id}/index.bif
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter width: (query)  
      - parameter _id: (path) Item Id 
 

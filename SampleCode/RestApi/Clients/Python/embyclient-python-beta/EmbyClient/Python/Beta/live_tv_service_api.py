@@ -1403,7 +1403,7 @@ class LiveTvServiceApi(object):
     def get_livetv_channeltags(self, **kwargs):  # noqa: E501
         """Gets live tv channel tags  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_channeltags(async_req=True)
@@ -1514,7 +1514,7 @@ class LiveTvServiceApi(object):
     def get_livetv_channeltags_with_http_info(self, **kwargs):  # noqa: E501
         """Gets live tv channel tags  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_channeltags_with_http_info(async_req=True)
@@ -1829,7 +1829,7 @@ class LiveTvServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/LiveTv/ChannelTags', 'GET',
@@ -1850,7 +1850,7 @@ class LiveTvServiceApi(object):
     def get_livetv_channeltags_prefixes(self, **kwargs):  # noqa: E501
         """Gets live tv channel tag prefixes  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_channeltags_prefixes(async_req=True)
@@ -1961,7 +1961,7 @@ class LiveTvServiceApi(object):
     def get_livetv_channeltags_prefixes_with_http_info(self, **kwargs):  # noqa: E501
         """Gets live tv channel tag prefixes  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_channeltags_prefixes_with_http_info(async_req=True)
@@ -2276,7 +2276,7 @@ class LiveTvServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/LiveTv/ChannelTags/Prefixes', 'GET',
@@ -3200,7 +3200,7 @@ class LiveTvServiceApi(object):
     def get_livetv_liverecordings_by_id_stream(self, id, **kwargs):  # noqa: E501
         """Gets a live tv channel  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_liverecordings_by_id_stream(id, async_req=True)
@@ -3222,7 +3222,7 @@ class LiveTvServiceApi(object):
     def get_livetv_liverecordings_by_id_stream_with_http_info(self, id, **kwargs):  # noqa: E501
         """Gets a live tv channel  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_liverecordings_by_id_stream_with_http_info(id, async_req=True)
@@ -3270,7 +3270,7 @@ class LiveTvServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/LiveTv/LiveRecordings/{Id}/stream', 'GET',
@@ -3291,7 +3291,7 @@ class LiveTvServiceApi(object):
     def get_livetv_livestreamfiles_by_id_stream_by_container(self, id, container, **kwargs):  # noqa: E501
         """Gets a live tv channel  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_livestreamfiles_by_id_stream_by_container(id, container, async_req=True)
@@ -3314,7 +3314,7 @@ class LiveTvServiceApi(object):
     def get_livetv_livestreamfiles_by_id_stream_by_container_with_http_info(self, id, container, **kwargs):  # noqa: E501
         """Gets a live tv channel  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_livetv_livestreamfiles_by_id_stream_by_container_with_http_info(id, container, async_req=True)
@@ -3369,7 +3369,7 @@ class LiveTvServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/LiveTv/LiveStreamFiles/{Id}/stream.{Container}', 'GET',

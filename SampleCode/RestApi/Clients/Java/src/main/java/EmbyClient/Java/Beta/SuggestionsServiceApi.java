@@ -109,7 +109,7 @@ public class SuggestionsServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -131,7 +131,7 @@ public class SuggestionsServiceApi {
 
     /**
      * Gets items based on a query.
-     * No authentication required
+     * Requires authentication as user
      * @param userId  (required)
      * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param enableImages Optional, include image information in output (optional)
@@ -150,7 +150,7 @@ public class SuggestionsServiceApi {
 
     /**
      * Gets items based on a query.
-     * No authentication required
+     * Requires authentication as user
      * @param userId  (required)
      * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param enableImages Optional, include image information in output (optional)
@@ -170,7 +170,7 @@ public class SuggestionsServiceApi {
 
     /**
      * Gets items based on a query. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param userId  (required)
      * @param fields Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      * @param enableImages Optional, include image information in output (optional)

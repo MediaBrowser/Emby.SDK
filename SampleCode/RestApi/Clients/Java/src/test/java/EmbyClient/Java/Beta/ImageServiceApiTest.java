@@ -96,7 +96,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -126,7 +126,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -156,7 +156,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -186,7 +186,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -216,7 +216,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -246,7 +246,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -291,7 +291,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -321,7 +321,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -351,7 +351,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -383,7 +383,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -413,7 +413,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -443,7 +443,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -473,7 +473,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -503,7 +503,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -533,7 +533,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -563,7 +563,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -593,7 +593,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -623,7 +623,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -653,7 +653,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -683,7 +683,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -713,7 +713,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -743,7 +743,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -773,7 +773,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -803,7 +803,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -833,7 +833,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -863,7 +863,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -895,7 +895,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -925,7 +925,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -955,7 +955,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -985,7 +985,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -1015,7 +1015,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -1045,7 +1045,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -1075,7 +1075,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -1105,7 +1105,7 @@ public class ImageServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

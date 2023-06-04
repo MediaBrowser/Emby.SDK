@@ -15,7 +15,7 @@ import RokuMetadataApiThumbnailSetInfo from '../model/RokuMetadataApiThumbnailSe
 /**
 * BifService service.
 * @module EmbyClient.JavaScript.Beta/BifServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class BifServiceApi {
 
@@ -77,7 +77,7 @@ export default class BifServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/BifServiceApi~getVideosByIdIndexBifCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getVideosByIdIndexBif() {
@@ -94,7 +94,7 @@ export default class BifServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

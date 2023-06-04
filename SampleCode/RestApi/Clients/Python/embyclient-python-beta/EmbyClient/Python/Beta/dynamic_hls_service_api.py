@@ -26,7 +26,7 @@ class DynamicHlsServiceApi(object):
     def get_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """get_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -51,7 +51,7 @@ class DynamicHlsServiceApi(object):
     def get_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """get_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -120,7 +120,7 @@ class DynamicHlsServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'GET',
@@ -555,7 +555,7 @@ class DynamicHlsServiceApi(object):
     def get_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """get_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -580,7 +580,7 @@ class DynamicHlsServiceApi(object):
     def get_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """get_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -649,7 +649,7 @@ class DynamicHlsServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'GET',
@@ -1298,7 +1298,7 @@ class DynamicHlsServiceApi(object):
     def head_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """head_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -1323,7 +1323,7 @@ class DynamicHlsServiceApi(object):
     def head_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """head_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_audio_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -1392,7 +1392,7 @@ class DynamicHlsServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'HEAD',
@@ -1620,7 +1620,7 @@ class DynamicHlsServiceApi(object):
     def head_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """head_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -1645,7 +1645,7 @@ class DynamicHlsServiceApi(object):
     def head_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(self, segment_container, segment_id, id, playlist_id, **kwargs):  # noqa: E501
         """head_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_videos_by_id_hls1_by_playlistid_by_segmentid_by_segmentcontainer_with_http_info(segment_container, segment_id, id, playlist_id, async_req=True)
@@ -1714,7 +1714,7 @@ class DynamicHlsServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'HEAD',

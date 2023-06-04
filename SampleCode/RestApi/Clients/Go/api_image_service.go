@@ -381,7 +381,7 @@ func (a *ImageServiceApiService) DeleteUsersByIdImagesByTypeByIndex(ctx context.
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -497,6 +497,19 @@ func (a *ImageServiceApiService) GetArtistsByNameImagesByType(ctx context.Contex
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -526,7 +539,7 @@ func (a *ImageServiceApiService) GetArtistsByNameImagesByType(ctx context.Contex
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -639,6 +652,19 @@ func (a *ImageServiceApiService) GetArtistsByNameImagesByTypeByIndex(ctx context
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -668,7 +694,7 @@ func (a *ImageServiceApiService) GetArtistsByNameImagesByTypeByIndex(ctx context
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -784,6 +810,19 @@ func (a *ImageServiceApiService) GetGamegenresByNameImagesByType(ctx context.Con
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -813,7 +852,7 @@ func (a *ImageServiceApiService) GetGamegenresByNameImagesByType(ctx context.Con
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -926,6 +965,19 @@ func (a *ImageServiceApiService) GetGamegenresByNameImagesByTypeByIndex(ctx cont
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -955,7 +1007,7 @@ func (a *ImageServiceApiService) GetGamegenresByNameImagesByTypeByIndex(ctx cont
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -1071,6 +1123,19 @@ func (a *ImageServiceApiService) GetGenresByNameImagesByType(ctx context.Context
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -1100,7 +1165,7 @@ func (a *ImageServiceApiService) GetGenresByNameImagesByType(ctx context.Context
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -1212,6 +1277,19 @@ func (a *ImageServiceApiService) GetGenresByNameImagesByTypeByIndex(ctx context.
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
@@ -1340,7 +1418,7 @@ func (a *ImageServiceApiService) GetItemsByIdImages(ctx context.Context, id stri
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
  * @param type_ Image Type
@@ -1456,6 +1534,19 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByType(ctx context.Context, i
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -1485,7 +1576,7 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByType(ctx context.Context, i
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
  * @param type_ Image Type
@@ -1598,6 +1689,19 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndex(ctx context.Con
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -1627,7 +1731,7 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndex(ctx context.Con
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param percentPlayed
  * @param unPlayedCount
@@ -1732,6 +1836,19 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByM
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -1761,7 +1878,7 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByM
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -1877,6 +1994,19 @@ func (a *ImageServiceApiService) GetMusicgenresByNameImagesByType(ctx context.Co
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -1906,7 +2036,7 @@ func (a *ImageServiceApiService) GetMusicgenresByNameImagesByType(ctx context.Co
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -2019,6 +2149,19 @@ func (a *ImageServiceApiService) GetMusicgenresByNameImagesByTypeByIndex(ctx con
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -2048,7 +2191,7 @@ func (a *ImageServiceApiService) GetMusicgenresByNameImagesByTypeByIndex(ctx con
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -2164,6 +2307,19 @@ func (a *ImageServiceApiService) GetPersonsByNameImagesByType(ctx context.Contex
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -2193,7 +2349,7 @@ func (a *ImageServiceApiService) GetPersonsByNameImagesByType(ctx context.Contex
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -2306,6 +2462,19 @@ func (a *ImageServiceApiService) GetPersonsByNameImagesByTypeByIndex(ctx context
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -2335,7 +2504,7 @@ func (a *ImageServiceApiService) GetPersonsByNameImagesByTypeByIndex(ctx context
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -2451,6 +2620,19 @@ func (a *ImageServiceApiService) GetStudiosByNameImagesByType(ctx context.Contex
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -2480,7 +2662,7 @@ func (a *ImageServiceApiService) GetStudiosByNameImagesByType(ctx context.Contex
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -2593,6 +2775,19 @@ func (a *ImageServiceApiService) GetStudiosByNameImagesByTypeByIndex(ctx context
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -2622,7 +2817,7 @@ func (a *ImageServiceApiService) GetStudiosByNameImagesByTypeByIndex(ctx context
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
  * @param type_ Image Type
@@ -2738,6 +2933,19 @@ func (a *ImageServiceApiService) GetUsersByIdImagesByType(ctx context.Context, i
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -2767,7 +2975,7 @@ func (a *ImageServiceApiService) GetUsersByIdImagesByType(ctx context.Context, i
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
  * @param type_ Image Type
@@ -2880,6 +3088,19 @@ func (a *ImageServiceApiService) GetUsersByIdImagesByTypeByIndex(ctx context.Con
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -2909,7 +3130,7 @@ func (a *ImageServiceApiService) GetUsersByIdImagesByTypeByIndex(ctx context.Con
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -3025,6 +3246,19 @@ func (a *ImageServiceApiService) HeadArtistsByNameImagesByType(ctx context.Conte
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3054,7 +3288,7 @@ func (a *ImageServiceApiService) HeadArtistsByNameImagesByType(ctx context.Conte
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -3167,6 +3401,19 @@ func (a *ImageServiceApiService) HeadArtistsByNameImagesByTypeByIndex(ctx contex
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3196,7 +3443,7 @@ func (a *ImageServiceApiService) HeadArtistsByNameImagesByTypeByIndex(ctx contex
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -3312,6 +3559,19 @@ func (a *ImageServiceApiService) HeadGamegenresByNameImagesByType(ctx context.Co
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3341,7 +3601,7 @@ func (a *ImageServiceApiService) HeadGamegenresByNameImagesByType(ctx context.Co
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -3454,6 +3714,19 @@ func (a *ImageServiceApiService) HeadGamegenresByNameImagesByTypeByIndex(ctx con
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3483,7 +3756,7 @@ func (a *ImageServiceApiService) HeadGamegenresByNameImagesByTypeByIndex(ctx con
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -3599,6 +3872,19 @@ func (a *ImageServiceApiService) HeadGenresByNameImagesByType(ctx context.Contex
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3628,7 +3914,7 @@ func (a *ImageServiceApiService) HeadGenresByNameImagesByType(ctx context.Contex
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -3741,6 +4027,19 @@ func (a *ImageServiceApiService) HeadGenresByNameImagesByTypeByIndex(ctx context
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3770,7 +4069,7 @@ func (a *ImageServiceApiService) HeadGenresByNameImagesByTypeByIndex(ctx context
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
  * @param type_ Image Type
@@ -3886,6 +4185,19 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByType(ctx context.Context, 
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3915,7 +4227,7 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByType(ctx context.Context, 
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
  * @param type_ Image Type
@@ -4028,6 +4340,19 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndex(ctx context.Co
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -4057,7 +4382,7 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndex(ctx context.Co
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param percentPlayed
  * @param unPlayedCount
@@ -4162,6 +4487,19 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatBy
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -4191,7 +4529,7 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatBy
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -4307,6 +4645,19 @@ func (a *ImageServiceApiService) HeadMusicgenresByNameImagesByType(ctx context.C
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -4336,7 +4687,7 @@ func (a *ImageServiceApiService) HeadMusicgenresByNameImagesByType(ctx context.C
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -4449,6 +4800,19 @@ func (a *ImageServiceApiService) HeadMusicgenresByNameImagesByTypeByIndex(ctx co
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -4478,7 +4842,7 @@ func (a *ImageServiceApiService) HeadMusicgenresByNameImagesByTypeByIndex(ctx co
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -4594,6 +4958,19 @@ func (a *ImageServiceApiService) HeadPersonsByNameImagesByType(ctx context.Conte
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -4623,7 +5000,7 @@ func (a *ImageServiceApiService) HeadPersonsByNameImagesByType(ctx context.Conte
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -4736,6 +5113,19 @@ func (a *ImageServiceApiService) HeadPersonsByNameImagesByTypeByIndex(ctx contex
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -4765,7 +5155,7 @@ func (a *ImageServiceApiService) HeadPersonsByNameImagesByTypeByIndex(ctx contex
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -4881,6 +5271,19 @@ func (a *ImageServiceApiService) HeadStudiosByNameImagesByType(ctx context.Conte
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -4910,7 +5313,7 @@ func (a *ImageServiceApiService) HeadStudiosByNameImagesByType(ctx context.Conte
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
  * @param type_ Image Type
@@ -5023,6 +5426,19 @@ func (a *ImageServiceApiService) HeadStudiosByNameImagesByTypeByIndex(ctx contex
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -5052,7 +5468,7 @@ func (a *ImageServiceApiService) HeadStudiosByNameImagesByTypeByIndex(ctx contex
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
  * @param type_ Image Type
@@ -5168,6 +5584,19 @@ func (a *ImageServiceApiService) HeadUsersByIdImagesByType(ctx context.Context, 
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -5197,7 +5626,7 @@ func (a *ImageServiceApiService) HeadUsersByIdImagesByType(ctx context.Context, 
 }
 /*
 ImageServiceApiService
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
  * @param type_ Image Type
@@ -5309,6 +5738,19 @@ func (a *ImageServiceApiService) HeadUsersByIdImagesByTypeByIndex(ctx context.Co
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {

@@ -31,6 +31,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="isHiddenRemotely">isHiddenRemotely.</param>
         /// <param name="isHiddenFromUnusedDevices">isHiddenFromUnusedDevices.</param>
         /// <param name="isDisabled">isDisabled.</param>
+        /// <param name="lockedOutDate">lockedOutDate.</param>
         /// <param name="maxParentalRating">maxParentalRating.</param>
         /// <param name="allowTagOrRating">allowTagOrRating.</param>
         /// <param name="blockedTags">blockedTags.</param>
@@ -69,13 +70,14 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="simultaneousStreamLimit">simultaneousStreamLimit.</param>
         /// <param name="enabledDevices">enabledDevices.</param>
         /// <param name="enableAllDevices">enableAllDevices.</param>
-        public UsersUserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<ConfigurationAccessSchedule> accessSchedules = default(List<ConfigurationAccessSchedule>), List<ConfigurationUnratedItem> blockUnratedItems = default(List<ConfigurationUnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), List<string> blockedMediaFolders = default(List<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?))
+        public UsersUserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), int? lockedOutDate = default(int?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<ConfigurationAccessSchedule> accessSchedules = default(List<ConfigurationAccessSchedule>), List<ConfigurationUnratedItem> blockUnratedItems = default(List<ConfigurationUnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), List<string> blockedMediaFolders = default(List<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?))
         {
             this.IsAdministrator = isAdministrator;
             this.IsHidden = isHidden;
             this.IsHiddenRemotely = isHiddenRemotely;
             this.IsHiddenFromUnusedDevices = isHiddenFromUnusedDevices;
             this.IsDisabled = isDisabled;
+            this.LockedOutDate = lockedOutDate;
             this.MaxParentalRating = maxParentalRating;
             this.AllowTagOrRating = allowTagOrRating;
             this.BlockedTags = blockedTags;
@@ -145,6 +147,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="IsDisabled", EmitDefaultValue=false)]
         public bool? IsDisabled { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LockedOutDate
+        /// </summary>
+        [DataMember(Name="LockedOutDate", EmitDefaultValue=false)]
+        public int? LockedOutDate { get; set; }
 
         /// <summary>
         /// Gets or Sets MaxParentalRating
@@ -387,6 +395,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  IsHiddenRemotely: ").Append(IsHiddenRemotely).Append("\n");
             sb.Append("  IsHiddenFromUnusedDevices: ").Append(IsHiddenFromUnusedDevices).Append("\n");
             sb.Append("  IsDisabled: ").Append(IsDisabled).Append("\n");
+            sb.Append("  LockedOutDate: ").Append(LockedOutDate).Append("\n");
             sb.Append("  MaxParentalRating: ").Append(MaxParentalRating).Append("\n");
             sb.Append("  AllowTagOrRating: ").Append(AllowTagOrRating).Append("\n");
             sb.Append("  BlockedTags: ").Append(BlockedTags).Append("\n");
@@ -483,6 +492,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.IsDisabled == input.IsDisabled ||
                     (this.IsDisabled != null &&
                     this.IsDisabled.Equals(input.IsDisabled))
+                ) && 
+                (
+                    this.LockedOutDate == input.LockedOutDate ||
+                    (this.LockedOutDate != null &&
+                    this.LockedOutDate.Equals(input.LockedOutDate))
                 ) && 
                 (
                     this.MaxParentalRating == input.MaxParentalRating ||
@@ -706,6 +720,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.IsHiddenFromUnusedDevices.GetHashCode();
                 if (this.IsDisabled != null)
                     hashCode = hashCode * 59 + this.IsDisabled.GetHashCode();
+                if (this.LockedOutDate != null)
+                    hashCode = hashCode * 59 + this.LockedOutDate.GetHashCode();
                 if (this.MaxParentalRating != null)
                     hashCode = hashCode * 59 + this.MaxParentalRating.GetHashCode();
                 if (this.AllowTagOrRating != null)

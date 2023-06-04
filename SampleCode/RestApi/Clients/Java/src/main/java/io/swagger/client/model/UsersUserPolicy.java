@@ -39,6 +39,9 @@ public class UsersUserPolicy {
   @SerializedName("IsDisabled")
   private Boolean isDisabled = null;
 
+  @SerializedName("LockedOutDate")
+  private Integer lockedOutDate = null;
+
   @SerializedName("MaxParentalRating")
   private Integer maxParentalRating = null;
 
@@ -241,6 +244,24 @@ public class UsersUserPolicy {
 
   public void setIsDisabled(Boolean isDisabled) {
     this.isDisabled = isDisabled;
+  }
+
+  public UsersUserPolicy lockedOutDate(Integer lockedOutDate) {
+    this.lockedOutDate = lockedOutDate;
+    return this;
+  }
+
+   /**
+   * Get lockedOutDate
+   * @return lockedOutDate
+  **/
+  @Schema(description = "")
+  public Integer getLockedOutDate() {
+    return lockedOutDate;
+  }
+
+  public void setLockedOutDate(Integer lockedOutDate) {
+    this.lockedOutDate = lockedOutDate;
   }
 
   public UsersUserPolicy maxParentalRating(Integer maxParentalRating) {
@@ -1030,6 +1051,7 @@ public class UsersUserPolicy {
         Objects.equals(this.isHiddenRemotely, usersUserPolicy.isHiddenRemotely) &&
         Objects.equals(this.isHiddenFromUnusedDevices, usersUserPolicy.isHiddenFromUnusedDevices) &&
         Objects.equals(this.isDisabled, usersUserPolicy.isDisabled) &&
+        Objects.equals(this.lockedOutDate, usersUserPolicy.lockedOutDate) &&
         Objects.equals(this.maxParentalRating, usersUserPolicy.maxParentalRating) &&
         Objects.equals(this.allowTagOrRating, usersUserPolicy.allowTagOrRating) &&
         Objects.equals(this.blockedTags, usersUserPolicy.blockedTags) &&
@@ -1072,7 +1094,7 @@ public class UsersUserPolicy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices);
+    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices);
   }
 
 
@@ -1086,6 +1108,7 @@ public class UsersUserPolicy {
     sb.append("    isHiddenRemotely: ").append(toIndentedString(isHiddenRemotely)).append("\n");
     sb.append("    isHiddenFromUnusedDevices: ").append(toIndentedString(isHiddenFromUnusedDevices)).append("\n");
     sb.append("    isDisabled: ").append(toIndentedString(isDisabled)).append("\n");
+    sb.append("    lockedOutDate: ").append(toIndentedString(lockedOutDate)).append("\n");
     sb.append("    maxParentalRating: ").append(toIndentedString(maxParentalRating)).append("\n");
     sb.append("    allowTagOrRating: ").append(toIndentedString(allowTagOrRating)).append("\n");
     sb.append("    blockedTags: ").append(toIndentedString(blockedTags)).append("\n");

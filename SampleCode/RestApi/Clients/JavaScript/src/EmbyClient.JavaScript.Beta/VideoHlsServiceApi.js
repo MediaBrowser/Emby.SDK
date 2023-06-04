@@ -15,7 +15,7 @@ import DlnaSubtitleDeliveryMethod from '../model/DlnaSubtitleDeliveryMethod';
 /**
 * VideoHlsService service.
 * @module EmbyClient.JavaScript.Beta/VideoHlsServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class VideoHlsServiceApi {
 
@@ -39,7 +39,7 @@ export default class VideoHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/VideoHlsServiceApi~getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer() {
@@ -58,7 +58,7 @@ export default class VideoHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

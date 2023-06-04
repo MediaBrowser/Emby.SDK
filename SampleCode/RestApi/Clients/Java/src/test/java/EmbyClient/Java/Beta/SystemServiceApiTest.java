@@ -61,7 +61,7 @@ public class SystemServiceApiTest {
     /**
      * Gets public information about the server
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -122,7 +122,7 @@ public class SystemServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -178,7 +178,7 @@ public class SystemServiceApiTest {
     /**
      * 
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

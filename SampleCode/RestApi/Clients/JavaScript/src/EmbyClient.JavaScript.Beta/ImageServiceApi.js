@@ -16,7 +16,7 @@ import ImageType from '../model/ImageType';
 /**
 * ImageService service.
 * @module EmbyClient.JavaScript.Beta/ImageServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class ImageServiceApi {
 
@@ -196,7 +196,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getArtistsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -229,7 +229,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -249,7 +249,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getArtistsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -282,7 +282,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -302,7 +302,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getGamegenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -335,7 +335,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -355,7 +355,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getGamegenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -388,7 +388,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -408,7 +408,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getGenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -441,7 +441,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -461,7 +461,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getGenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -494,7 +494,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -552,7 +552,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getItemsByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -585,7 +585,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -605,7 +605,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getItemsByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -638,7 +638,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -658,7 +658,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -693,7 +693,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -713,7 +713,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getMusicgenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -746,7 +746,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -766,7 +766,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getMusicgenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -799,7 +799,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -819,7 +819,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getPersonsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -852,7 +852,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -872,7 +872,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getPersonsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -905,7 +905,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -925,7 +925,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getStudiosByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -958,7 +958,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -978,7 +978,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getStudiosByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1011,7 +1011,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1031,7 +1031,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getUsersByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1064,7 +1064,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1084,7 +1084,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~getUsersByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1117,7 +1117,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1137,7 +1137,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headArtistsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1170,7 +1170,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1190,7 +1190,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headArtistsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1223,7 +1223,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1243,7 +1243,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headGamegenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1276,7 +1276,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1296,7 +1296,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headGamegenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1329,7 +1329,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1349,7 +1349,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headGenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1382,7 +1382,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1402,7 +1402,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headGenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1435,7 +1435,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1455,7 +1455,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headItemsByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1488,7 +1488,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1508,7 +1508,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headItemsByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1541,7 +1541,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1561,7 +1561,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1596,7 +1596,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1616,7 +1616,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headMusicgenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1649,7 +1649,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1669,7 +1669,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headMusicgenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1702,7 +1702,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1722,7 +1722,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headPersonsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1755,7 +1755,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1775,7 +1775,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headPersonsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1808,7 +1808,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1828,7 +1828,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headStudiosByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1861,7 +1861,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1881,7 +1881,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headStudiosByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1914,7 +1914,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1934,7 +1934,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headUsersByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1967,7 +1967,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1987,7 +1987,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~headUsersByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -2020,7 +2020,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

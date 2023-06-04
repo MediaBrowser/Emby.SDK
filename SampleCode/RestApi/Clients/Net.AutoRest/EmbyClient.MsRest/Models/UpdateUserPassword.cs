@@ -22,10 +22,9 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the UpdateUserPassword class.
         /// </summary>
-        public UpdateUserPassword(string id = default(string), string currentPw = default(string), string newPw = default(string), bool? resetPassword = default(bool?))
+        public UpdateUserPassword(string id = default(string), string newPw = default(string), bool? resetPassword = default(bool?))
         {
             Id = id;
-            CurrentPw = currentPw;
             NewPw = newPw;
             ResetPassword = resetPassword;
             CustomInit();
@@ -40,11 +39,6 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "Id")]
         public string Id { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "CurrentPw")]
-        public string CurrentPw { get; set; }
 
         /// <summary>
         /// </summary>

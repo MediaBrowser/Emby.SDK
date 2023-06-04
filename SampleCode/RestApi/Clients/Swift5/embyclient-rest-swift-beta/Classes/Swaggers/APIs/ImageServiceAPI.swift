@@ -256,6 +256,12 @@ open class ImageServiceAPI {
     /**
      - GET /Artists/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -342,6 +348,12 @@ open class ImageServiceAPI {
     /**
      - GET /Artists/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -430,6 +442,12 @@ open class ImageServiceAPI {
     /**
      - GET /GameGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -516,6 +534,12 @@ open class ImageServiceAPI {
     /**
      - GET /GameGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -604,6 +628,12 @@ open class ImageServiceAPI {
     /**
      - GET /Genres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -690,6 +720,12 @@ open class ImageServiceAPI {
     /**
      - GET /Genres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -836,6 +872,12 @@ open class ImageServiceAPI {
     /**
      - GET /Items/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -922,6 +964,12 @@ open class ImageServiceAPI {
     /**
      - GET /Items/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1012,6 +1060,12 @@ open class ImageServiceAPI {
     /**
      - GET /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter percentPlayed: (path)  
      - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
@@ -1116,6 +1170,12 @@ open class ImageServiceAPI {
     /**
      - GET /MusicGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1202,6 +1262,12 @@ open class ImageServiceAPI {
     /**
      - GET /MusicGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1290,6 +1356,12 @@ open class ImageServiceAPI {
     /**
      - GET /Persons/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1376,6 +1448,12 @@ open class ImageServiceAPI {
     /**
      - GET /Persons/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1464,6 +1542,12 @@ open class ImageServiceAPI {
     /**
      - GET /Studios/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1550,6 +1634,12 @@ open class ImageServiceAPI {
     /**
      - GET /Studios/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1638,6 +1728,12 @@ open class ImageServiceAPI {
     /**
      - GET /Users/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
     url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
@@ -1728,6 +1824,12 @@ open class ImageServiceAPI {
     /**
      - GET /Users/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1816,6 +1918,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Artists/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1902,6 +2010,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Artists/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1990,6 +2104,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /GameGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2076,6 +2196,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /GameGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2164,6 +2290,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Genres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2250,6 +2382,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Genres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2338,6 +2476,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Items/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2424,6 +2568,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Items/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2514,6 +2664,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter percentPlayed: (path)  
      - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
@@ -2618,6 +2774,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /MusicGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2704,6 +2866,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /MusicGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2792,6 +2960,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Persons/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2878,6 +3052,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Persons/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2966,6 +3146,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Studios/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -3052,6 +3238,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Studios/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -3140,6 +3332,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Users/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -3226,6 +3424,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Users/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 

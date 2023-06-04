@@ -16,7 +16,7 @@ import ConfigurationUnratedItem from './ConfigurationUnratedItem';
 /**
 * The UsersUserPolicy model module.
 * @module model/UsersUserPolicy
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class UsersUserPolicy {
     /**
@@ -57,6 +57,9 @@ export default class UsersUserPolicy {
             }
             if (data.hasOwnProperty('IsDisabled')) {
                 obj['IsDisabled'] = ApiClient.convertToType(data['IsDisabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('LockedOutDate')) {
+                obj['LockedOutDate'] = ApiClient.convertToType(data['LockedOutDate'], 'Number');
             }
             if (data.hasOwnProperty('MaxParentalRating')) {
                 obj['MaxParentalRating'] = ApiClient.convertToType(data['MaxParentalRating'], 'Number');
@@ -196,6 +199,10 @@ export default class UsersUserPolicy {
     * @member {Boolean} IsDisabled
     */
     'IsDisabled' = undefined;
+    /**
+    * @member {Number} LockedOutDate
+    */
+    'LockedOutDate' = undefined;
     /**
     * @member {Number} MaxParentalRating
     */

@@ -24,10 +24,11 @@ namespace EmbyClient.MsRest.Models
         /// Initializes a new instance of the PlaylistsPlaylistCreationResult
         /// class.
         /// </summary>
-        public PlaylistsPlaylistCreationResult(string id = default(string), string name = default(string))
+        public PlaylistsPlaylistCreationResult(string id = default(string), string name = default(string), int? itemAddedCount = default(int?))
         {
             Id = id;
             Name = name;
+            ItemAddedCount = itemAddedCount;
             CustomInit();
         }
 
@@ -45,6 +46,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "Name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ItemAddedCount")]
+        public int? ItemAddedCount { get; set; }
 
     }
 }

@@ -446,7 +446,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type(name, type, async_req=True)
@@ -483,7 +483,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -580,7 +580,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}', 'GET',
@@ -601,7 +601,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -638,7 +638,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -739,7 +739,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}/{Index}', 'GET',
@@ -760,7 +760,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type(name, type, async_req=True)
@@ -797,7 +797,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -894,7 +894,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}', 'GET',
@@ -915,7 +915,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -952,7 +952,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -1053,7 +1053,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}/{Index}', 'GET',
@@ -1074,7 +1074,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type(name, type, async_req=True)
@@ -1111,7 +1111,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -1208,7 +1208,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}', 'GET',
@@ -1229,7 +1229,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -1266,7 +1266,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -1367,7 +1367,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}/{Index}', 'GET',
@@ -1483,7 +1483,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type(id, type, async_req=True)
@@ -1520,7 +1520,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -1617,7 +1617,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}', 'GET',
@@ -1638,7 +1638,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -1675,7 +1675,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -1776,7 +1776,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}', 'GET',
@@ -1797,7 +1797,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
@@ -1836,7 +1836,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
@@ -1967,7 +1967,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}', 'GET',
@@ -1988,7 +1988,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type(name, type, async_req=True)
@@ -2025,7 +2025,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -2122,7 +2122,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}', 'GET',
@@ -2143,7 +2143,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -2180,7 +2180,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -2281,7 +2281,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}/{Index}', 'GET',
@@ -2302,7 +2302,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type(name, type, async_req=True)
@@ -2339,7 +2339,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -2436,7 +2436,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}', 'GET',
@@ -2457,7 +2457,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -2494,7 +2494,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -2595,7 +2595,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}/{Index}', 'GET',
@@ -2616,7 +2616,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type(name, type, async_req=True)
@@ -2653,7 +2653,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -2750,7 +2750,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}', 'GET',
@@ -2771,7 +2771,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -2808,7 +2808,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -2909,7 +2909,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}/{Index}', 'GET',
@@ -2930,7 +2930,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type(id, type, async_req=True)
@@ -2967,7 +2967,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -3064,7 +3064,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}', 'GET',
@@ -3085,7 +3085,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -3122,7 +3122,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -3223,7 +3223,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}/{Index}', 'GET',
@@ -3244,7 +3244,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type(name, type, async_req=True)
@@ -3281,7 +3281,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -3378,7 +3378,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}', 'HEAD',
@@ -3399,7 +3399,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -3436,7 +3436,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -3537,7 +3537,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -3558,7 +3558,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type(name, type, async_req=True)
@@ -3595,7 +3595,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -3692,7 +3692,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}', 'HEAD',
@@ -3713,7 +3713,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -3750,7 +3750,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -3851,7 +3851,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -3872,7 +3872,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type(name, type, async_req=True)
@@ -3909,7 +3909,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -4006,7 +4006,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}', 'HEAD',
@@ -4027,7 +4027,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -4064,7 +4064,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -4165,7 +4165,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -4186,7 +4186,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type(id, type, async_req=True)
@@ -4223,7 +4223,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -4320,7 +4320,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}', 'HEAD',
@@ -4341,7 +4341,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -4378,7 +4378,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -4479,7 +4479,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}', 'HEAD',
@@ -4500,7 +4500,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
@@ -4539,7 +4539,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
@@ -4670,7 +4670,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}', 'HEAD',
@@ -4691,7 +4691,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type(name, type, async_req=True)
@@ -4728,7 +4728,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -4825,7 +4825,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}', 'HEAD',
@@ -4846,7 +4846,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -4883,7 +4883,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -4984,7 +4984,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -5005,7 +5005,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type(name, type, async_req=True)
@@ -5042,7 +5042,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -5139,7 +5139,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}', 'HEAD',
@@ -5160,7 +5160,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -5197,7 +5197,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -5298,7 +5298,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -5319,7 +5319,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type(name, type, async_req=True)
@@ -5356,7 +5356,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -5453,7 +5453,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}', 'HEAD',
@@ -5474,7 +5474,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -5511,7 +5511,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -5612,7 +5612,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -5633,7 +5633,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type(id, type, async_req=True)
@@ -5670,7 +5670,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -5767,7 +5767,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}', 'HEAD',
@@ -5788,7 +5788,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -5825,7 +5825,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -5926,7 +5926,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}/{Index}', 'HEAD',

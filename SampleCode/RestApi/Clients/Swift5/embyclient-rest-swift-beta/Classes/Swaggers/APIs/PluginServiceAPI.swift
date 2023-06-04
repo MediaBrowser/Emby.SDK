@@ -172,6 +172,12 @@ open class PluginServiceAPI {
      Gets a plugin thumb image
      - GET /Plugins/{Id}/Thumb
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Plugin Id 
 
      - returns: RequestBuilder<Void> 

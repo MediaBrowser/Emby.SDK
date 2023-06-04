@@ -56,7 +56,7 @@ public class UserServiceApiTest {
     /**
      * Clears audio or subtitle track selections for a user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -122,7 +122,7 @@ public class UserServiceApiTest {
     /**
      * Gets a list of publicly visible users for display on a login screen.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -155,7 +155,7 @@ public class UserServiceApiTest {
     /**
      * Authenticates a user
      *
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -187,7 +187,7 @@ public class UserServiceApiTest {
     /**
      * Authenticates a user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -282,7 +282,7 @@ public class UserServiceApiTest {
     /**
      * Clears audio or subtitle track selections for a user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -315,7 +315,7 @@ public class UserServiceApiTest {
     /**
      * Initiates the forgot password process for a local user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -330,7 +330,7 @@ public class UserServiceApiTest {
     /**
      * Redeems a forgot password pin
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

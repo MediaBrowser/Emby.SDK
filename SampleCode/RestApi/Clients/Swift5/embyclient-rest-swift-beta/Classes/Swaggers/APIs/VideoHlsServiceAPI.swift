@@ -32,6 +32,12 @@ open class VideoHlsServiceAPI {
     /**
      - GET /Videos/{Id}/hls/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  

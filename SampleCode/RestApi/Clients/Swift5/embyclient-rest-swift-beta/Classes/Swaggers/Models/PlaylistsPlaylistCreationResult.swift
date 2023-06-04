@@ -13,15 +13,18 @@ public struct PlaylistsPlaylistCreationResult: Codable {
 
     public var _id: String?
     public var name: String?
+    public var itemAddedCount: Int?
 
-    public init(_id: String? = nil, name: String? = nil) {
+    public init(_id: String? = nil, name: String? = nil, itemAddedCount: Int? = nil) {
         self._id = _id
         self.name = name
+        self.itemAddedCount = itemAddedCount
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "Id"
         case name = "Name"
+        case itemAddedCount = "ItemAddedCount"
     }
 
 }

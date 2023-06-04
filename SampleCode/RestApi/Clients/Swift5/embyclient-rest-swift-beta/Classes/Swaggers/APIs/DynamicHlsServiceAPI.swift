@@ -32,6 +32,12 @@ open class DynamicHlsServiceAPI {
     /**
      - GET /Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  
@@ -346,6 +352,12 @@ open class DynamicHlsServiceAPI {
     /**
      - GET /Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  
@@ -766,6 +778,12 @@ open class DynamicHlsServiceAPI {
     /**
      - HEAD /Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  
@@ -949,6 +967,12 @@ open class DynamicHlsServiceAPI {
     /**
      - HEAD /Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  

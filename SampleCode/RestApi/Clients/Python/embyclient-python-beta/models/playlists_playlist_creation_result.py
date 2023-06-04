@@ -23,23 +23,28 @@ class PlaylistsPlaylistCreationResult(object):
     """
     swagger_types = {
         'id': 'str',
-        'name': 'str'
+        'name': 'str',
+        'item_added_count': 'int'
     }
 
     attribute_map = {
         'id': 'Id',
-        'name': 'Name'
+        'name': 'Name',
+        'item_added_count': 'ItemAddedCount'
     }
 
-    def __init__(self, id=None, name=None):  # noqa: E501
+    def __init__(self, id=None, name=None, item_added_count=None):  # noqa: E501
         """PlaylistsPlaylistCreationResult - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
+        self._item_added_count = None
         self.discriminator = None
         if id is not None:
             self.id = id
         if name is not None:
             self.name = name
+        if item_added_count is not None:
+            self.item_added_count = item_added_count
 
     @property
     def id(self):
@@ -82,6 +87,27 @@ class PlaylistsPlaylistCreationResult(object):
         """
 
         self._name = name
+
+    @property
+    def item_added_count(self):
+        """Gets the item_added_count of this PlaylistsPlaylistCreationResult.  # noqa: E501
+
+
+        :return: The item_added_count of this PlaylistsPlaylistCreationResult.  # noqa: E501
+        :rtype: int
+        """
+        return self._item_added_count
+
+    @item_added_count.setter
+    def item_added_count(self, item_added_count):
+        """Sets the item_added_count of this PlaylistsPlaylistCreationResult.
+
+
+        :param item_added_count: The item_added_count of this PlaylistsPlaylistCreationResult.  # noqa: E501
+        :type: int
+        """
+
+        self._item_added_count = item_added_count
 
     def to_dict(self):
         """Returns the model properties as a dict"""

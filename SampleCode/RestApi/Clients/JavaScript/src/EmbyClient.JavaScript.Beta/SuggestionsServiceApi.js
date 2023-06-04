@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * SuggestionsService service.
 * @module EmbyClient.JavaScript.Beta/SuggestionsServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class SuggestionsServiceApi {
 
@@ -40,7 +40,7 @@ export default class SuggestionsServiceApi {
 
     /**
      * Gets items based on a query.
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/SuggestionsServiceApi~getUsersByUseridSuggestionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
@@ -64,7 +64,7 @@ export default class SuggestionsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = QueryResultBaseItemDto;

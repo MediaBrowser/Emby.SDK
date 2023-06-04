@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.37"
+    "version": "4.8.0.38"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -5808,7 +5808,7 @@
           "OfficialRatingService"
         ],
         "summary": "Gets items based on a query.",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getOfficialratings",
         "produces": [
           "application/json",
@@ -6377,6 +6377,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -6384,7 +6390,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets items based on a query."
     },
@@ -7207,7 +7221,7 @@
           "PluginService"
         ],
         "summary": "Gets a list of currently installed plugins",
-        "description": "Requires authentication as user",
+        "description": "Requires authentication as administrator",
         "operationId": "getPlugins",
         "produces": [
           "application/json",
@@ -7247,7 +7261,7 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       },
       "x-summary": "Gets a list of currently installed plugins"
     },
@@ -11664,7 +11678,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount",
         "parameters": [
           {
@@ -11797,6 +11811,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -11804,13 +11824,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount",
         "parameters": [
           {
@@ -11943,6 +11971,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -11950,7 +11984,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Artists/{Name}": {
@@ -13601,7 +13643,7 @@
           "BrandingService"
         ],
         "summary": "Gets branding configuration",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getBrandingConfiguration",
         "produces": [
           "application/json",
@@ -13617,6 +13659,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -13624,7 +13672,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets branding configuration"
     },
@@ -13634,7 +13690,7 @@
           "BrandingService"
         ],
         "summary": "Gets custom css",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getBrandingCss",
         "responses": {
           "200": {
@@ -13643,6 +13699,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -13650,7 +13712,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets custom css"
     },
@@ -13660,7 +13730,7 @@
           "BrandingService"
         ],
         "summary": "Gets custom css",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getBrandingCssCss",
         "responses": {
           "200": {
@@ -13669,6 +13739,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -13676,7 +13752,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets custom css"
     },
@@ -16875,7 +16959,7 @@
           "LiveTvService"
         ],
         "summary": "Gets live tv channel tags",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "externalDocs": {
           "description": "API Documentation: Item Information",
           "url": "https://github.com/MediaBrowser/Emby/wiki/Item-Information"
@@ -17448,6 +17532,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -17455,7 +17545,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets live tv channel tags"
     },
@@ -23383,7 +23481,7 @@
         "tags": [
           "SystemService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "postSystemPing",
         "responses": {
           "200": {
@@ -23392,6 +23490,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -23399,13 +23503,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "get": {
         "tags": [
           "SystemService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getSystemPing",
         "responses": {
           "200": {
@@ -23414,6 +23526,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -23421,7 +23539,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/System/WakeOnLanInfo": {
@@ -23779,7 +23905,7 @@
           "UserService"
         ],
         "summary": "Gets a list of publicly visible users for display on a login screen.",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "externalDocs": {
           "description": "API Documentation: Authentication",
           "url": "https://github.com/MediaBrowser/Emby/wiki/User-Authentication"
@@ -23802,6 +23928,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -23809,7 +23941,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a list of publicly visible users for display on a login screen."
     },
@@ -24143,7 +24283,7 @@
           "UserService"
         ],
         "summary": "Authenticates a user",
-        "description": "Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure\n---\nNo authentication required",
+        "description": "Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure\n---\nRequires authentication as user",
         "externalDocs": {
           "description": "API Documentation: Authentication",
           "url": "https://github.com/MediaBrowser/Emby/wiki/User-Authentication"
@@ -24198,7 +24338,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Authenticates a user",
       "x-description": "Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure"
@@ -24271,7 +24419,7 @@
           "UserService"
         ],
         "summary": "Initiates the forgot password process for a local user",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "postUsersForgotpassword",
         "consumes": [
           "application/json",
@@ -24302,6 +24450,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -24309,7 +24463,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Initiates the forgot password process for a local user"
     },
@@ -24420,7 +24582,7 @@
         "tags": [
           "WebAppService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getWebConfigurationpage",
         "responses": {
           "200": {
@@ -24429,6 +24591,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -24436,7 +24604,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/web/ConfigurationPages": {
@@ -24444,7 +24620,7 @@
         "tags": [
           "WebAppService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getWebConfigurationpages",
         "produces": [
           "application/json",
@@ -24463,6 +24639,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -24470,7 +24652,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/web/strings": {
@@ -24478,7 +24668,7 @@
         "tags": [
           "WebAppService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getWebStrings",
         "responses": {
           "200": {
@@ -24487,6 +24677,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -24494,7 +24690,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Albums/{Id}/InstantMix": {
@@ -26873,7 +27077,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna server info",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaByUuidDescriptionXml",
         "parameters": [
           {
@@ -26891,6 +27095,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -26898,7 +27108,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets dlna server info"
     },
@@ -26908,7 +27126,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna server info",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaByUuidDescription",
         "parameters": [
           {
@@ -26926,6 +27144,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -26933,7 +27157,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets dlna server info"
     },
@@ -26943,7 +27175,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets a server icon",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaIconsByFilename",
         "parameters": [
           {
@@ -26967,6 +27199,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -26974,7 +27212,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a server icon"
     },
@@ -30333,7 +30579,7 @@
           "LiveTvService"
         ],
         "summary": "Gets live tv channel tag prefixes",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getLivetvChanneltagsPrefixes",
         "produces": [
           "application/json",
@@ -30905,6 +31151,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -30912,7 +31164,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets live tv channel tag prefixes"
     },
@@ -32976,7 +33236,7 @@
           "PluginService"
         ],
         "summary": "Gets a plugin thumb image",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getPluginsByIdThumb",
         "parameters": [
           {
@@ -32995,6 +33255,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -33002,7 +33268,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a plugin thumb image"
     },
@@ -33012,7 +33286,7 @@
           "PluginService"
         ],
         "summary": "Gets a plugin's configuration",
-        "description": "Requires authentication as user",
+        "description": "Requires authentication as administrator",
         "operationId": "getPluginsByIdConfiguration",
         "parameters": [
           {
@@ -33051,14 +33325,14 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       },
       "post": {
         "tags": [
           "PluginService"
         ],
         "summary": "Updates a plugin's configuration",
-        "description": "Requires authentication as user",
+        "description": "Requires authentication as administrator",
         "operationId": "postPluginsByIdConfiguration",
         "consumes": [
           "application/octet-stream"
@@ -33110,7 +33384,7 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       },
       "x-summary": "Gets a plugin's configuration"
     },
@@ -35509,7 +35783,7 @@
           "SystemService"
         ],
         "summary": "Gets public information about the server",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getSystemInfoPublic",
         "produces": [
           "application/json",
@@ -35525,6 +35799,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -35532,7 +35812,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets public information about the server"
     },
@@ -35722,7 +36010,7 @@
           "SuggestionsService"
         ],
         "summary": "Gets items based on a query.",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "externalDocs": {
           "description": "API Documentation: Item Information",
           "url": "https://github.com/MediaBrowser/Emby/wiki/Item-Information"
@@ -35781,6 +36069,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -35788,7 +36082,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets items based on a query."
     },
@@ -35846,7 +36148,7 @@
           "UserService"
         ],
         "summary": "Authenticates a user",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "externalDocs": {
           "description": "API Documentation: Authentication",
           "url": "https://github.com/MediaBrowser/Emby/wiki/User-Authentication"
@@ -35887,6 +36189,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -35894,7 +36202,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Authenticates a user"
     },
@@ -36026,7 +36342,7 @@
           "UserService"
         ],
         "summary": "Redeems a forgot password pin",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "postUsersForgotpasswordPin",
         "consumes": [
           "application/json",
@@ -36057,6 +36373,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -36064,7 +36386,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Redeems a forgot password pin"
     },
@@ -36800,7 +37130,7 @@
         "tags": [
           "UserViewsService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "externalDocs": {
           "description": "API Documentation: Browsing the Library",
           "url": "https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library"
@@ -36836,6 +37166,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -36843,7 +37179,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Videos/{Id}/AlternateSources": {
@@ -36998,7 +37342,7 @@
         "tags": [
           "BifService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getVideosByIdIndexBif",
         "parameters": [
           {
@@ -37023,6 +37367,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -37030,7 +37380,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Videos/{Id}/stream.{Container}": {
@@ -39081,7 +39439,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getArtistsByNameImagesByType",
         "parameters": [
           {
@@ -39195,6 +39553,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39202,13 +39566,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headArtistsByNameImagesByType",
         "parameters": [
           {
@@ -39322,6 +39694,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39329,7 +39707,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Auth/Keys/{Key}/Delete": {
@@ -39440,7 +39826,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna content directory xml",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaByUuidContentdirectoryContentdirectoryXml",
         "parameters": [
           {
@@ -39458,6 +39844,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39465,7 +39857,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets dlna content directory xml"
     },
@@ -39475,7 +39875,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna content directory xml",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaByUuidContentdirectoryContentdirectory",
         "parameters": [
           {
@@ -39493,6 +39893,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39500,7 +39906,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets dlna content directory xml"
     },
@@ -39510,7 +39924,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna connection manager xml",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaByUuidConnectionmanagerConnectionmanagerXml",
         "parameters": [
           {
@@ -39528,6 +39942,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39535,7 +39955,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets dlna connection manager xml"
     },
@@ -39545,7 +39973,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna connection manager xml",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaByUuidConnectionmanagerConnectionmanager",
         "parameters": [
           {
@@ -39563,6 +39991,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39570,7 +40004,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets dlna connection manager xml"
     },
@@ -39580,7 +40022,7 @@
           "DlnaServerService"
         ],
         "summary": "Processes a control request",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "postDlnaByUuidContentdirectoryControl",
         "consumes": [
           "application/octet-stream"
@@ -39611,6 +40053,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39618,7 +40066,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Processes a control request"
     },
@@ -39628,7 +40084,7 @@
           "DlnaServerService"
         ],
         "summary": "Processes a control request",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "postDlnaByUuidConnectionmanagerControl",
         "consumes": [
           "application/octet-stream"
@@ -39659,6 +40115,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39666,7 +40128,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Processes a control request"
     },
@@ -39676,7 +40146,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets a server icon",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getDlnaByUuidIconsByFilename",
         "parameters": [
           {
@@ -39701,6 +40171,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39708,7 +40184,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a server icon"
     },
@@ -39717,7 +40201,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getGamegenresByNameImagesByType",
         "parameters": [
           {
@@ -39831,6 +40315,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39838,13 +40328,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headGamegenresByNameImagesByType",
         "parameters": [
           {
@@ -39958,6 +40456,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -39965,7 +40469,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Genres/{Name}/Images/{Type}": {
@@ -39973,7 +40485,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getGenresByNameImagesByType",
         "parameters": [
           {
@@ -40087,6 +40599,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -40094,13 +40612,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headGenresByNameImagesByType",
         "parameters": [
           {
@@ -40214,6 +40740,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -40221,7 +40753,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Items/RemoteSearch/Apply/{Id}": {
@@ -40423,7 +40963,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getItemsByIdImagesByType",
         "parameters": [
           {
@@ -40537,6 +41077,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -40544,13 +41090,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headItemsByIdImagesByType",
         "parameters": [
           {
@@ -40664,6 +41218,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -40671,7 +41231,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "post": {
         "tags": [
@@ -41042,7 +41610,7 @@
           "LiveTvService"
         ],
         "summary": "Gets a live tv channel",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getLivetvLiverecordingsByIdStream",
         "parameters": [
           {
@@ -41059,6 +41627,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -41066,7 +41640,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a live tv channel"
     },
@@ -41076,7 +41658,7 @@
           "LiveTvService"
         ],
         "summary": "Gets a live tv channel",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getLivetvLivestreamfilesByIdStreamByContainer",
         "parameters": [
           {
@@ -41099,6 +41681,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -41106,7 +41694,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a live tv channel"
     },
@@ -41407,7 +42003,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getMusicgenresByNameImagesByType",
         "parameters": [
           {
@@ -41521,6 +42117,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -41528,13 +42130,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headMusicgenresByNameImagesByType",
         "parameters": [
           {
@@ -41648,6 +42258,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -41655,7 +42271,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Packages/Installing/{Id}/Delete": {
@@ -41712,7 +42336,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getPersonsByNameImagesByType",
         "parameters": [
           {
@@ -41826,6 +42450,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -41833,13 +42463,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headPersonsByNameImagesByType",
         "parameters": [
           {
@@ -41953,6 +42591,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -41960,7 +42604,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Playlists/{Id}/Items/Delete": {
@@ -42405,7 +43057,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getStudiosByNameImagesByType",
         "parameters": [
           {
@@ -42519,6 +43171,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -42526,13 +43184,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headStudiosByNameImagesByType",
         "parameters": [
           {
@@ -42646,6 +43312,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -42653,7 +43325,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Sync/Jobs/{Id}/Delete": {
@@ -43172,7 +43852,7 @@
           "UserService"
         ],
         "summary": "Clears audio or subtitle track selections for a user",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "deleteUsersByIdTrackselectionsByTracktype",
         "parameters": [
           {
@@ -43195,6 +43875,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -43202,7 +43888,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Clears audio or subtitle track selections for a user"
     },
@@ -44325,7 +45019,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "externalDocs": {
           "description": "API Documentation: Authentication",
           "url": "https://github.com/MediaBrowser/Emby/wiki/User-Authentication"
@@ -44443,6 +45137,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -44450,13 +45150,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headUsersByIdImagesByType",
         "parameters": [
           {
@@ -44570,6 +45278,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -44577,7 +45291,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "post": {
         "tags": [
@@ -45255,7 +45977,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getArtistsByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -45370,6 +46092,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -45377,13 +46105,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headArtistsByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -45498,6 +46234,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -45505,7 +46247,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}": {
@@ -45513,7 +46263,7 @@
         "tags": [
           "DynamicHlsService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer",
         "parameters": [
           {
@@ -45548,6 +46298,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -45555,13 +46311,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "DynamicHlsService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer",
         "parameters": [
           {
@@ -45596,6 +46360,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -45603,7 +46373,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/GameGenres/{Name}/Images/{Type}/{Index}": {
@@ -45611,7 +46389,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getGamegenresByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -45726,6 +46504,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -45733,13 +46517,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headGamegenresByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -45854,6 +46646,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -45861,7 +46659,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Genres/{Name}/Images/{Type}/{Index}": {
@@ -45869,7 +46675,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getGenresByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -45984,6 +46790,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -45991,13 +46803,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headGenresByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -46112,6 +46932,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -46119,7 +46945,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Items/{Id}/RemoteSearch/Subtitles/{Language}": {
@@ -46342,7 +47176,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getItemsByIdImagesByTypeByIndex",
         "parameters": [
           {
@@ -46457,6 +47291,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -46464,13 +47304,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headItemsByIdImagesByTypeByIndex",
         "parameters": [
           {
@@ -46585,6 +47433,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -46592,7 +47446,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "post": {
         "tags": [
@@ -46928,7 +47790,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getMusicgenresByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -47043,6 +47905,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -47050,13 +47918,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headMusicgenresByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -47171,6 +48047,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -47178,7 +48060,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Persons/{Name}/Images/{Type}/{Index}": {
@@ -47186,7 +48076,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getPersonsByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -47301,6 +48191,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -47308,13 +48204,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headPersonsByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -47429,6 +48333,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -47436,7 +48346,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Sessions/{Id}/Users/{UserId}/Delete": {
@@ -47500,7 +48418,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getStudiosByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -47615,6 +48533,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -47622,13 +48546,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headStudiosByNameImagesByTypeByIndex",
         "parameters": [
           {
@@ -47743,6 +48675,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -47750,7 +48688,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Users/{Id}/TrackSelections/{TrackType}/Delete": {
@@ -47759,7 +48705,7 @@
           "UserService"
         ],
         "summary": "Clears audio or subtitle track selections for a user",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "postUsersByIdTrackselectionsByTracktypeDelete",
         "parameters": [
           {
@@ -47782,6 +48728,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -47789,7 +48741,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Clears audio or subtitle track selections for a user"
     },
@@ -48364,7 +49324,7 @@
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getUsersByIdImagesByTypeByIndex",
         "parameters": [
           {
@@ -48479,6 +49439,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -48486,13 +49452,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "ImageService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headUsersByIdImagesByTypeByIndex",
         "parameters": [
           {
@@ -48607,6 +49581,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -48614,7 +49594,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "post": {
         "tags": [
@@ -49290,7 +50278,7 @@
         "tags": [
           "DynamicHlsService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer",
         "parameters": [
           {
@@ -49325,6 +50313,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -49332,13 +50326,21 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "head": {
         "tags": [
           "DynamicHlsService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "headVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer",
         "parameters": [
           {
@@ -49373,6 +50375,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -49380,7 +50388,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Videos/{Id}/hls/{PlaylistId}/{SegmentId}.{SegmentContainer}": {
@@ -49388,7 +50404,7 @@
         "tags": [
           "VideoHlsService"
         ],
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer",
         "parameters": [
           {
@@ -49423,6 +50439,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -49430,7 +50452,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}": {
@@ -49439,7 +50469,7 @@
           "SubtitleService"
         ],
         "summary": "Gets subtitles in a specified format.",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat",
         "parameters": [
           {
@@ -49499,6 +50529,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -49506,7 +50542,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets subtitles in a specified format."
     },
@@ -49906,7 +50950,7 @@
           "SubtitleService"
         ],
         "summary": "Gets subtitles in a specified format.",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat",
         "parameters": [
           {
@@ -49966,6 +51010,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -49973,7 +51023,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets subtitles in a specified format."
     },
@@ -49983,7 +51041,7 @@
           "SubtitleService"
         ],
         "summary": "Gets subtitles in a specified format.",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
         "parameters": [
           {
@@ -50044,6 +51102,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -50051,7 +51115,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets subtitles in a specified format."
     },
@@ -50061,7 +51133,7 @@
           "SubtitleService"
         ],
         "summary": "Gets subtitles in a specified format.",
-        "description": "No authentication required",
+        "description": "Requires authentication as user",
         "operationId": "getVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
         "parameters": [
           {
@@ -50122,6 +51194,12 @@
           "400": {
             "$ref": "#/responses/400"
           },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
           "404": {
             "$ref": "#/responses/404"
           },
@@ -50129,7 +51207,15 @@
             "$ref": "#/responses/500"
           }
         },
-        "x-RequiredAuthentication": "No authentication required"
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets subtitles in a specified format."
     }
@@ -51669,6 +52755,10 @@
         },
         "Name": {
           "type": "string"
+        },
+        "ItemAddedCount": {
+          "format": "int32",
+          "type": "integer"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Playlists.PlaylistCreationResult"
@@ -56232,6 +57322,10 @@
         "IsDisabled": {
           "type": "boolean"
         },
+        "LockedOutDate": {
+          "format": "int32",
+          "type": "integer"
+        },
         "MaxParentalRating": {
           "format": "int32",
           "type": "integer"
@@ -59278,9 +60372,6 @@
       "type": "object",
       "properties": {
         "Id": {
-          "type": "string"
-        },
-        "CurrentPw": {
           "type": "string"
         },
         "NewPw": {

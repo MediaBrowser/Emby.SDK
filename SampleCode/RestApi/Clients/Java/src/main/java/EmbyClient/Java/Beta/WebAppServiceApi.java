@@ -90,7 +90,7 @@ public class WebAppServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -108,7 +108,7 @@ public class WebAppServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getWebConfigurationpage() throws ApiException {
@@ -117,7 +117,7 @@ public class WebAppServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -128,7 +128,7 @@ public class WebAppServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -202,7 +202,7 @@ public class WebAppServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -220,7 +220,7 @@ public class WebAppServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return List&lt;EmbyWebApiConfigurationPageInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -231,7 +231,7 @@ public class WebAppServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;List&lt;EmbyWebApiConfigurationPageInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -243,7 +243,7 @@ public class WebAppServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -318,7 +318,7 @@ public class WebAppServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -336,7 +336,7 @@ public class WebAppServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getWebStrings() throws ApiException {
@@ -345,7 +345,7 @@ public class WebAppServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -356,7 +356,7 @@ public class WebAppServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

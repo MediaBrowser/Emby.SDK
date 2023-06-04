@@ -62,7 +62,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -83,7 +83,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -138,7 +138,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -159,7 +159,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

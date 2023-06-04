@@ -116,6 +116,12 @@ open class OfficialRatingServiceAPI {
      Gets items based on a query.
      - GET /OfficialRatings
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "TotalRecordCount" : 0,
   "Items" : [ {

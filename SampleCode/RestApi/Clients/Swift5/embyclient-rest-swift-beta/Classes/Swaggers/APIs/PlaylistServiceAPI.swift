@@ -1223,6 +1223,7 @@ open class PlaylistServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
+  "ItemAddedCount" : 0,
   "Id" : "Id",
   "Name" : "Name"
 }}]

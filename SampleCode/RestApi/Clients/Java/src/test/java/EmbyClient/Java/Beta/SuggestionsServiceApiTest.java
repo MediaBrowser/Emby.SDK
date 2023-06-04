@@ -27,7 +27,7 @@ public class SuggestionsServiceApiTest {
     /**
      * Gets items based on a query.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

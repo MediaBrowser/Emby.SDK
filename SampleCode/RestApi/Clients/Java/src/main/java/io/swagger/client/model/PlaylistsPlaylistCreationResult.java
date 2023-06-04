@@ -26,6 +26,9 @@ public class PlaylistsPlaylistCreationResult {
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("ItemAddedCount")
+  private Integer itemAddedCount = null;
+
   public PlaylistsPlaylistCreationResult id(String id) {
     this.id = id;
     return this;
@@ -62,6 +65,24 @@ public class PlaylistsPlaylistCreationResult {
     this.name = name;
   }
 
+  public PlaylistsPlaylistCreationResult itemAddedCount(Integer itemAddedCount) {
+    this.itemAddedCount = itemAddedCount;
+    return this;
+  }
+
+   /**
+   * Get itemAddedCount
+   * @return itemAddedCount
+  **/
+  @Schema(description = "")
+  public Integer getItemAddedCount() {
+    return itemAddedCount;
+  }
+
+  public void setItemAddedCount(Integer itemAddedCount) {
+    this.itemAddedCount = itemAddedCount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,12 +94,13 @@ public class PlaylistsPlaylistCreationResult {
     }
     PlaylistsPlaylistCreationResult playlistsPlaylistCreationResult = (PlaylistsPlaylistCreationResult) o;
     return Objects.equals(this.id, playlistsPlaylistCreationResult.id) &&
-        Objects.equals(this.name, playlistsPlaylistCreationResult.name);
+        Objects.equals(this.name, playlistsPlaylistCreationResult.name) &&
+        Objects.equals(this.itemAddedCount, playlistsPlaylistCreationResult.itemAddedCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name);
+    return Objects.hash(id, name, itemAddedCount);
   }
 
 
@@ -89,6 +111,7 @@ public class PlaylistsPlaylistCreationResult {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    itemAddedCount: ").append(toIndentedString(itemAddedCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

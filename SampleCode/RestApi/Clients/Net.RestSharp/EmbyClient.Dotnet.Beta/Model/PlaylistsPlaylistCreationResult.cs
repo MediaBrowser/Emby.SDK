@@ -28,10 +28,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
-        public PlaylistsPlaylistCreationResult(string id = default(string), string name = default(string))
+        /// <param name="itemAddedCount">itemAddedCount.</param>
+        public PlaylistsPlaylistCreationResult(string id = default(string), string name = default(string), int? itemAddedCount = default(int?))
         {
             this.Id = id;
             this.Name = name;
+            this.ItemAddedCount = itemAddedCount;
         }
         
         /// <summary>
@@ -47,6 +49,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets ItemAddedCount
+        /// </summary>
+        [DataMember(Name="ItemAddedCount", EmitDefaultValue=false)]
+        public int? ItemAddedCount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +64,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("class PlaylistsPlaylistCreationResult {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ItemAddedCount: ").Append(ItemAddedCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,6 +108,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.ItemAddedCount == input.ItemAddedCount ||
+                    (this.ItemAddedCount != null &&
+                    this.ItemAddedCount.Equals(input.ItemAddedCount))
                 );
         }
 
@@ -115,6 +129,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.ItemAddedCount != null)
+                    hashCode = hashCode * 59 + this.ItemAddedCount.GetHashCode();
                 return hashCode;
             }
         }

@@ -229,7 +229,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a list of currently installed plugins
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @return List&lt;PluginsPluginInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -240,7 +240,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a list of currently installed plugins
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @return ApiResponse&lt;List&lt;PluginsPluginInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -252,7 +252,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a list of currently installed plugins (asynchronously)
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,7 +351,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a plugin&#x27;s configuration
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param id Plugin Id (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -361,7 +361,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a plugin&#x27;s configuration
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param id Plugin Id (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -373,7 +373,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a plugin&#x27;s configuration (asynchronously)
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param id Plugin Id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -450,7 +450,7 @@ public class PluginServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -472,7 +472,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a plugin thumb image
-     * No authentication required
+     * Requires authentication as user
      * @param id Plugin Id (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -482,7 +482,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a plugin thumb image
-     * No authentication required
+     * Requires authentication as user
      * @param id Plugin Id (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -494,7 +494,7 @@ public class PluginServiceApi {
 
     /**
      * Gets a plugin thumb image (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Plugin Id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -598,7 +598,7 @@ public class PluginServiceApi {
 
     /**
      * Updates a plugin&#x27;s configuration
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param body Binary stream (required)
      * @param id Plugin Id (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -609,7 +609,7 @@ public class PluginServiceApi {
 
     /**
      * Updates a plugin&#x27;s configuration
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param body Binary stream (required)
      * @param id Plugin Id (required)
      * @return ApiResponse&lt;Void&gt;
@@ -622,7 +622,7 @@ public class PluginServiceApi {
 
     /**
      * Updates a plugin&#x27;s configuration (asynchronously)
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param body Binary stream (required)
      * @param id Plugin Id (required)
      * @param callback The callback to be executed when the API call finishes

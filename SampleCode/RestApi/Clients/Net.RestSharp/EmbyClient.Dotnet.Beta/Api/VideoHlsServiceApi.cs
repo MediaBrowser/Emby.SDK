@@ -22,7 +22,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -36,7 +36,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -128,7 +128,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -142,7 +142,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -340,7 +340,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -354,7 +354,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -401,6 +401,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (segmentId != null) localVarPathParams.Add("SegmentId", this.Configuration.ApiClient.ParameterToString(segmentId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (playlistId != null) localVarPathParams.Add("PlaylistId", this.Configuration.ApiClient.ParameterToString(playlistId)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -421,7 +432,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -436,7 +447,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentContainer"></param>
@@ -483,6 +494,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (segmentId != null) localVarPathParams.Add("SegmentId", this.Configuration.ApiClient.ParameterToString(segmentId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (playlistId != null) localVarPathParams.Add("PlaylistId", this.Configuration.ApiClient.ParameterToString(playlistId)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,

@@ -15,7 +15,7 @@ import ProvidersSeriesInfo from './ProvidersSeriesInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersSeriesInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersSeriesInfo
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class ProvidersRemoteSearchQueryProvidersSeriesInfo {
     /**

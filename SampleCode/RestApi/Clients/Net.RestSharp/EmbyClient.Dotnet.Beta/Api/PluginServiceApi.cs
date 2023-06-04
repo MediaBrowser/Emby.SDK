@@ -43,7 +43,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of currently installed plugins
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;PluginsPluginInfo&gt;</returns>
@@ -53,7 +53,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of currently installed plugins
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;PluginsPluginInfo&gt;</returns>
@@ -62,7 +62,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -73,7 +73,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -83,7 +83,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin thumb image
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -94,7 +94,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin thumb image
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -104,7 +104,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Updates a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -116,7 +116,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Updates a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -171,7 +171,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of currently installed plugins
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;PluginsPluginInfo&gt;</returns>
@@ -181,7 +181,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of currently installed plugins
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;PluginsPluginInfo&gt;)</returns>
@@ -190,7 +190,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -201,7 +201,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -211,7 +211,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin thumb image
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -222,7 +222,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a plugin thumb image
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -232,7 +232,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Updates a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -244,7 +244,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Updates a plugin&#x27;s configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -533,7 +533,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of currently installed plugins Requires authentication as user
+        /// Gets a list of currently installed plugins Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;PluginsPluginInfo&gt;</returns>
@@ -544,7 +544,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of currently installed plugins Requires authentication as user
+        /// Gets a list of currently installed plugins Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;PluginsPluginInfo&gt;</returns>
@@ -604,7 +604,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of currently installed plugins Requires authentication as user
+        /// Gets a list of currently installed plugins Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;PluginsPluginInfo&gt;</returns>
@@ -616,7 +616,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of currently installed plugins Requires authentication as user
+        /// Gets a list of currently installed plugins Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;PluginsPluginInfo&gt;)</returns>
@@ -676,7 +676,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin&#x27;s configuration Requires authentication as user
+        /// Gets a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -687,7 +687,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin&#x27;s configuration Requires authentication as user
+        /// Gets a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -750,7 +750,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin&#x27;s configuration Requires authentication as user
+        /// Gets a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -762,7 +762,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin&#x27;s configuration Requires authentication as user
+        /// Gets a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -825,7 +825,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin thumb image No authentication required
+        /// Gets a plugin thumb image Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -836,7 +836,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin thumb image No authentication required
+        /// Gets a plugin thumb image Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -868,6 +868,17 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -888,7 +899,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin thumb image No authentication required
+        /// Gets a plugin thumb image Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -900,7 +911,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a plugin thumb image No authentication required
+        /// Gets a plugin thumb image Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Plugin Id</param>
@@ -932,6 +943,17 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -952,7 +974,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Updates a plugin&#x27;s configuration Requires authentication as user
+        /// Updates a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -964,7 +986,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Updates a plugin&#x27;s configuration Requires authentication as user
+        /// Updates a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -1040,7 +1062,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Updates a plugin&#x27;s configuration Requires authentication as user
+        /// Updates a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -1053,7 +1075,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Updates a plugin&#x27;s configuration Requires authentication as user
+        /// Updates a plugin&#x27;s configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>

@@ -21,7 +21,7 @@ import WakeOnLanInfo from '../model/WakeOnLanInfo';
 /**
 * SystemService service.
 * @module EmbyClient.JavaScript.Beta/SystemServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class SystemServiceApi {
 
@@ -120,7 +120,7 @@ export default class SystemServiceApi {
 
     /**
      * Gets public information about the server
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SystemServiceApi~getSystemInfoPublicCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/PublicSystemInfo}
      */
@@ -136,7 +136,7 @@ export default class SystemServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = PublicSystemInfo;
@@ -275,7 +275,7 @@ export default class SystemServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SystemServiceApi~getSystemPingCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getSystemPing() {
@@ -290,7 +290,7 @@ export default class SystemServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -421,7 +421,7 @@ export default class SystemServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SystemServiceApi~postSystemPingCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postSystemPing() {
@@ -436,7 +436,7 @@ export default class SystemServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

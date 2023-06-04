@@ -26,7 +26,7 @@ class WebAppServiceApi(object):
     def get_web_configurationpage(self, **kwargs):  # noqa: E501
         """get_web_configurationpage  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_web_configurationpage(async_req=True)
@@ -47,7 +47,7 @@ class WebAppServiceApi(object):
     def get_web_configurationpage_with_http_info(self, **kwargs):  # noqa: E501
         """get_web_configurationpage  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_web_configurationpage_with_http_info(async_req=True)
@@ -88,7 +88,7 @@ class WebAppServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/web/ConfigurationPage', 'GET',
@@ -109,7 +109,7 @@ class WebAppServiceApi(object):
     def get_web_configurationpages(self, **kwargs):  # noqa: E501
         """get_web_configurationpages  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_web_configurationpages(async_req=True)
@@ -130,7 +130,7 @@ class WebAppServiceApi(object):
     def get_web_configurationpages_with_http_info(self, **kwargs):  # noqa: E501
         """get_web_configurationpages  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_web_configurationpages_with_http_info(async_req=True)
@@ -175,7 +175,7 @@ class WebAppServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/web/ConfigurationPages', 'GET',
@@ -196,7 +196,7 @@ class WebAppServiceApi(object):
     def get_web_strings(self, **kwargs):  # noqa: E501
         """get_web_strings  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_web_strings(async_req=True)
@@ -217,7 +217,7 @@ class WebAppServiceApi(object):
     def get_web_strings_with_http_info(self, **kwargs):  # noqa: E501
         """get_web_strings  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_web_strings_with_http_info(async_req=True)
@@ -258,7 +258,7 @@ class WebAppServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/web/strings', 'GET',

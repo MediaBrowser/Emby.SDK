@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.37
+  version: 4.8.0.38
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -8060,7 +8060,7 @@ paths:
       tags:
       - OfficialRatingService
       summary: Gets items based on a query.
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getOfficialratings
       parameters:
       - name: ArtistType
@@ -8888,11 +8888,18 @@ paths:
                 $ref: '#/components/schemas/QueryResult_UserLibrary.OfficialRatingItem'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /openapi:
     summary: Gets the OpenAPI 3 specifications
     get:
@@ -9930,7 +9937,7 @@ paths:
       tags:
       - PluginService
       summary: Gets a list of currently installed plugins
-      description: Requires authentication as user
+      description: Requires authentication as administrator
       operationId: getPlugins
       responses:
         "200":
@@ -9960,7 +9967,7 @@ paths:
       security:
       - apikeyauth: []
       - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: Requires authentication as administrator
   /ScheduledTasks:
     summary: Gets scheduled tasks
     get:
@@ -16059,7 +16066,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
       parameters:
       - name: PercentPlayed
@@ -16224,15 +16231,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
       parameters:
       - name: PercentPlayed
@@ -16397,11 +16411,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Artists/{Name}:
     summary: "Gets an artist, by name"
     get:
@@ -18514,7 +18535,7 @@ paths:
       tags:
       - BrandingService
       summary: Gets branding configuration
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getBrandingConfiguration
       responses:
         "200":
@@ -18528,47 +18549,68 @@ paths:
                 $ref: '#/components/schemas/Branding.BrandingOptions'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Branding/Css:
     summary: Gets custom css
     get:
       tags:
       - BrandingService
       summary: Gets custom css
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getBrandingCss
       responses:
         "200":
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Branding/Css.css:
     summary: Gets custom css
     get:
       tags:
       - BrandingService
       summary: Gets custom css
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getBrandingCssCss
       responses:
         "200":
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Connect/Pending:
     summary: Creates a Connect link for a user
     get:
@@ -21281,7 +21323,7 @@ paths:
       tags:
       - LiveTvService
       summary: Gets live tv channel tags
-      description: No authentication required
+      description: Requires authentication as user
       externalDocs:
         description: "API Documentation: Item Information"
         url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
@@ -22112,11 +22154,18 @@ paths:
                 $ref: '#/components/schemas/QueryResult_BaseItemDto'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /LiveTv/Folder:
     summary: Gets the top level live tv folder
     get:
@@ -28423,33 +28472,47 @@ paths:
     get:
       tags:
       - SystemService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getSystemPing
       responses:
         "200":
           description: Operation successful. Empty response.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     post:
       tags:
       - SystemService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: postSystemPing
       responses:
         "200":
           description: Operation successful. Empty response.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /System/WakeOnLanInfo:
     summary: Gets wake on lan information
     get:
@@ -28698,7 +28761,7 @@ paths:
       tags:
       - UserService
       summary: Gets a list of publicly visible users for display on a login screen.
-      description: No authentication required
+      description: Requires authentication as user
       externalDocs:
         description: "API Documentation: Authentication"
         url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
@@ -28720,11 +28783,18 @@ paths:
                   $ref: '#/components/schemas/UserDto'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/Query:
     summary: Gets a list of users
     get:
@@ -29014,7 +29084,7 @@ paths:
       description: |-
         Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure
         ---
-        No authentication required
+        Requires authentication as user
       externalDocs:
         description: "API Documentation: Authentication"
         url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
@@ -29062,7 +29132,10 @@ paths:
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/New:
     summary: Creates a user
     post:
@@ -29111,7 +29184,7 @@ paths:
       tags:
       - UserService
       summary: Initiates the forgot password process for a local user
-      description: No authentication required
+      description: Requires authentication as user
       operationId: postUsersForgotpassword
       requestBody:
         description: ForgotPassword
@@ -29135,11 +29208,18 @@ paths:
                 $ref: '#/components/schemas/Users.ForgotPasswordResult'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Videos/MergeVersions:
     summary: Merges videos into a single record
     post:
@@ -29219,23 +29299,30 @@ paths:
     get:
       tags:
       - WebAppService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getWebConfigurationpage
       responses:
         "200":
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /web/ConfigurationPages:
     get:
       tags:
       - WebAppService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getWebConfigurationpages
       responses:
         "200":
@@ -29255,27 +29342,41 @@ paths:
                   $ref: '#/components/schemas/Emby.Web.Api.ConfigurationPageInfo'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /web/strings:
     get:
       tags:
       - WebAppService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getWebStrings
       responses:
         "200":
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Albums/{Id}/InstantMix:
     summary: Creates an instant playlist based on a given album
     get:
@@ -32157,7 +32258,7 @@ paths:
       tags:
       - DlnaServerService
       summary: Gets dlna server info
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaByUuidDescriptionXml
       parameters:
       - name: UuId
@@ -32173,18 +32274,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/{UuId}/description:
     summary: Gets dlna server info
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna server info
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaByUuidDescription
       parameters:
       - name: UuId
@@ -32200,18 +32308,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/icons/{Filename}:
     summary: Gets a server icon
     get:
       tags:
       - DlnaServerService
       summary: Gets a server icon
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaIconsByFilename
       parameters:
       - name: UuId
@@ -32235,11 +32350,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/Profiles/{Id}:
     summary: Gets a single profile
     get:
@@ -34947,7 +35069,7 @@ paths:
       tags:
       - LiveTvService
       summary: Gets live tv channel tag prefixes
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getLivetvChanneltagsPrefixes
       parameters:
       - name: ArtistType
@@ -35779,11 +35901,18 @@ paths:
                   $ref: '#/components/schemas/LiveTV.Api.TagItem'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /LiveTv/Recordings/Folders:
     summary: Gets recording folders
     get:
@@ -37574,7 +37703,7 @@ paths:
       tags:
       - PluginService
       summary: Gets a plugin thumb image
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getPluginsByIdThumb
       parameters:
       - name: Id
@@ -37591,18 +37720,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Plugins/{Id}/Configuration:
     summary: Gets a plugin's configuration
     get:
       tags:
       - PluginService
       summary: Gets a plugin's configuration
-      description: Requires authentication as user
+      description: Requires authentication as administrator
       operationId: getPluginsByIdConfiguration
       parameters:
       - name: Id
@@ -37629,12 +37765,12 @@ paths:
       security:
       - apikeyauth: []
       - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: Requires authentication as administrator
     post:
       tags:
       - PluginService
       summary: Updates a plugin's configuration
-      description: Requires authentication as user
+      description: Requires authentication as administrator
       operationId: postPluginsByIdConfiguration
       parameters:
       - name: Id
@@ -37669,7 +37805,7 @@ paths:
       security:
       - apikeyauth: []
       - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: Requires authentication as administrator
   /Plugins/{Id}/Delete:
     summary: Uninstalls a plugin
     post:
@@ -39974,7 +40110,7 @@ paths:
       tags:
       - SystemService
       summary: Gets public information about the server
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getSystemInfoPublic
       responses:
         "200":
@@ -39988,11 +40124,18 @@ paths:
                 $ref: '#/components/schemas/PublicSystemInfo'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /System/ActivityLog/Entries:
     summary: Gets activity log entries
     get:
@@ -40183,7 +40326,7 @@ paths:
       tags:
       - SuggestionsService
       summary: Gets items based on a query.
-      description: No authentication required
+      description: Requires authentication as user
       externalDocs:
         description: "API Documentation: Item Information"
         url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
@@ -40257,11 +40400,18 @@ paths:
                 $ref: '#/components/schemas/QueryResult_BaseItemDto'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{Id}/Delete:
     summary: Deletes a user
     post:
@@ -40301,7 +40451,7 @@ paths:
       tags:
       - UserService
       summary: Authenticates a user
-      description: No authentication required
+      description: Requires authentication as user
       externalDocs:
         description: "API Documentation: Authentication"
         url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
@@ -40336,11 +40486,18 @@ paths:
                 $ref: '#/components/schemas/Authentication.AuthenticationResult'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{Id}/Password:
     summary: Updates a user's password
     post:
@@ -40433,7 +40590,7 @@ paths:
       tags:
       - UserService
       summary: Redeems a forgot password pin
-      description: No authentication required
+      description: Requires authentication as user
       operationId: postUsersForgotpasswordPin
       requestBody:
         description: ForgotPasswordPin
@@ -40457,11 +40614,18 @@ paths:
                 $ref: '#/components/schemas/Users.PinRedeemResult'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{Id}/Configuration:
     summary: Updates a user configuration
     post:
@@ -41401,7 +41565,7 @@ paths:
     get:
       tags:
       - UserViewsService
-      description: No authentication required
+      description: Requires authentication as user
       externalDocs:
         description: "API Documentation: Browsing the Library"
         url: https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library
@@ -41438,11 +41602,18 @@ paths:
                 $ref: '#/components/schemas/QueryResult_BaseItemDto'
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Videos/{Id}/AlternateSources:
     summary: Removes alternate video sources.
     delete:
@@ -41583,7 +41754,7 @@ paths:
     get:
       tags:
       - BifService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getVideosByIdIndexBif
       parameters:
       - name: Width
@@ -41607,11 +41778,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Videos/{Id}/stream.{Container}:
     summary: Gets a video stream
     get:
@@ -44247,7 +44425,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getArtistsByNameImagesByType
       parameters:
       - name: Name
@@ -44394,15 +44572,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headArtistsByNameImagesByType
       parameters:
       - name: Name
@@ -44549,11 +44734,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Auth/Keys/{Key}/Delete:
     post:
       tags:
@@ -44633,7 +44825,7 @@ paths:
       tags:
       - DlnaServerService
       summary: Gets dlna content directory xml
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaByUuidContentdirectoryContentdirectoryXml
       parameters:
       - name: UuId
@@ -44649,18 +44841,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/{UuId}/contentdirectory/contentdirectory:
     summary: Gets dlna content directory xml
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna content directory xml
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaByUuidContentdirectoryContentdirectory
       parameters:
       - name: UuId
@@ -44676,18 +44875,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/{UuId}/connectionmanager/connectionmanager.xml:
     summary: Gets dlna connection manager xml
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna connection manager xml
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaByUuidConnectionmanagerConnectionmanagerXml
       parameters:
       - name: UuId
@@ -44703,18 +44909,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/{UuId}/connectionmanager/connectionmanager:
     summary: Gets dlna connection manager xml
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna connection manager xml
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaByUuidConnectionmanagerConnectionmanager
       parameters:
       - name: UuId
@@ -44730,18 +44943,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/{UuId}/contentdirectory/control:
     summary: Processes a control request
     post:
       tags:
       - DlnaServerService
       summary: Processes a control request
-      description: No authentication required
+      description: Requires authentication as user
       operationId: postDlnaByUuidContentdirectoryControl
       parameters:
       - name: UuId
@@ -44765,18 +44985,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/{UuId}/connectionmanager/control:
     summary: Processes a control request
     post:
       tags:
       - DlnaServerService
       summary: Processes a control request
-      description: No authentication required
+      description: Requires authentication as user
       operationId: postDlnaByUuidConnectionmanagerControl
       parameters:
       - name: UuId
@@ -44800,18 +45027,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Dlna/{UuId}/icons/{Filename}:
     summary: Gets a server icon
     get:
       tags:
       - DlnaServerService
       summary: Gets a server icon
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getDlnaByUuidIconsByFilename
       parameters:
       - name: UuId
@@ -44835,16 +45069,23 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /GameGenres/{Name}/Images/{Type}:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getGamegenresByNameImagesByType
       parameters:
       - name: Name
@@ -44991,15 +45232,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headGamegenresByNameImagesByType
       parameters:
       - name: Name
@@ -45146,16 +45394,23 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Genres/{Name}/Images/{Type}:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getGenresByNameImagesByType
       parameters:
       - name: Name
@@ -45302,15 +45557,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headGenresByNameImagesByType
       parameters:
       - name: Name
@@ -45457,11 +45719,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/RemoteSearch/Apply/{Id}:
     summary: Applies search criteria to an item and refreshes metadata
     post:
@@ -45613,7 +45882,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getItemsByIdImagesByType
       parameters:
       - name: Id
@@ -45760,11 +46029,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     post:
       tags:
       - ImageService
@@ -45873,7 +46149,7 @@ paths:
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headItemsByIdImagesByType
       parameters:
       - name: Id
@@ -46020,11 +46296,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/RemoteImages/Providers:
     summary: Gets available remote image providers for an item
     get:
@@ -46201,7 +46484,7 @@ paths:
       tags:
       - LiveTvService
       summary: Gets a live tv channel
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getLivetvLiverecordingsByIdStream
       parameters:
       - name: Id
@@ -46216,18 +46499,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /LiveTv/LiveStreamFiles/{Id}/stream.{Container}:
     summary: Gets a live tv channel
     get:
       tags:
       - LiveTvService
       summary: Gets a live tv channel
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getLivetvLivestreamfilesByIdStreamByContainer
       parameters:
       - name: Id
@@ -46249,11 +46539,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /LiveTv/ListingProviders/SchedulesDirect/Countries:
     summary: Gets available lineups
     get:
@@ -46460,7 +46757,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getMusicgenresByNameImagesByType
       parameters:
       - name: Name
@@ -46607,15 +46904,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headMusicgenresByNameImagesByType
       parameters:
       - name: Name
@@ -46762,11 +47066,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Packages/Installing/{Id}/Delete:
     summary: Cancels a package installation
     post:
@@ -46805,7 +47116,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getPersonsByNameImagesByType
       parameters:
       - name: Name
@@ -46952,15 +47263,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headPersonsByNameImagesByType
       parameters:
       - name: Name
@@ -47107,11 +47425,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Playlists/{Id}/Items/Delete:
     summary: Removes items from a playlist
     post:
@@ -47438,7 +47763,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getStudiosByNameImagesByType
       parameters:
       - name: Name
@@ -47585,15 +47910,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headStudiosByNameImagesByType
       parameters:
       - name: Name
@@ -47740,11 +48072,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Sync/Jobs/{Id}/Delete:
     summary: Cancels a sync job.
     post:
@@ -48114,7 +48453,7 @@ paths:
       tags:
       - UserService
       summary: Clears audio or subtitle track selections for a user
-      description: No authentication required
+      description: Requires authentication as user
       operationId: deleteUsersByIdTrackselectionsByTracktype
       parameters:
       - name: Id
@@ -48136,11 +48475,18 @@ paths:
           description: Operation successful. Empty response.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{UserId}/TypedSettings/{Key}:
     summary: Gets a typed user setting
     get:
@@ -49434,7 +49780,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       externalDocs:
         description: "API Documentation: Authentication"
         url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
@@ -49584,11 +49930,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     post:
       tags:
       - ImageService
@@ -49697,7 +50050,7 @@ paths:
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headUsersByIdImagesByType
       parameters:
       - name: Id
@@ -49844,11 +50197,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{UserId}/PlayedItems/{Id}:
     summary: Marks an item as played
     post:
@@ -50309,7 +50669,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getArtistsByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -50456,15 +50816,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headArtistsByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -50611,16 +50978,23 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}:
     get:
       tags:
       - DynamicHlsService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
       parameters:
       - name: SegmentContainer
@@ -50656,15 +51030,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - DynamicHlsService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
       parameters:
       - name: SegmentContainer
@@ -50700,16 +51081,23 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /GameGenres/{Name}/Images/{Type}/{Index}:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getGamegenresByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -50856,15 +51244,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headGamegenresByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -51011,16 +51406,23 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Genres/{Name}/Images/{Type}/{Index}:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getGenresByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -51167,15 +51569,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headGenresByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -51322,11 +51731,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/RemoteSearch/Subtitles/{Language}:
     get:
       tags:
@@ -51515,7 +51931,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getItemsByIdImagesByTypeByIndex
       parameters:
       - name: Id
@@ -51662,11 +52078,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     post:
       tags:
       - ImageService
@@ -51775,7 +52198,7 @@ paths:
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headItemsByIdImagesByTypeByIndex
       parameters:
       - name: Id
@@ -51922,11 +52345,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/Images/{Type}/Delete:
     post:
       tags:
@@ -52082,7 +52512,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getMusicgenresByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -52229,15 +52659,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headMusicgenresByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -52384,16 +52821,23 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Persons/{Name}/Images/{Type}/{Index}:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getPersonsByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -52540,15 +52984,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headPersonsByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -52695,11 +53146,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Sessions/{Id}/Users/{UserId}/Delete:
     summary: Removes an additional user from a session
     post:
@@ -52746,7 +53204,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getStudiosByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -52893,15 +53351,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headStudiosByNameImagesByTypeByIndex
       parameters:
       - name: Name
@@ -53048,18 +53513,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{Id}/TrackSelections/{TrackType}/Delete:
     summary: Clears audio or subtitle track selections for a user
     post:
       tags:
       - UserService
       summary: Clears audio or subtitle track selections for a user
-      description: No authentication required
+      description: Requires authentication as user
       operationId: postUsersByIdTrackselectionsByTracktypeDelete
       parameters:
       - name: Id
@@ -53081,11 +53553,18 @@ paths:
           description: Operation successful. Empty response.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{UserId}/Items/{Id}/SpecialFeatures:
     summary: Gets special features for an item
     get:
@@ -53614,7 +54093,7 @@ paths:
     get:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getUsersByIdImagesByTypeByIndex
       parameters:
       - name: Id
@@ -53761,11 +54240,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     post:
       tags:
       - ImageService
@@ -53874,7 +54360,7 @@ paths:
     head:
       tags:
       - ImageService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headUsersByIdImagesByTypeByIndex
       parameters:
       - name: Id
@@ -54021,11 +54507,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{Id}/Images/{Type}/Delete:
     post:
       tags:
@@ -54506,7 +54999,7 @@ paths:
     get:
       tags:
       - DynamicHlsService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
       parameters:
       - name: SegmentContainer
@@ -54542,15 +55035,22 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
     head:
       tags:
       - DynamicHlsService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: headVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
       parameters:
       - name: SegmentContainer
@@ -54586,16 +55086,23 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Videos/{Id}/hls/{PlaylistId}/{SegmentId}.{SegmentContainer}:
     get:
       tags:
       - VideoHlsService
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer
       parameters:
       - name: SegmentContainer
@@ -54631,18 +55138,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}:
     summary: Gets subtitles in a specified format.
     get:
       tags:
       - SubtitleService
       summary: Gets subtitles in a specified format.
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat
       parameters:
       - name: Id
@@ -54710,11 +55224,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/Images/{Type}/{Index}/Delete:
     post:
       tags:
@@ -55038,7 +55559,7 @@ paths:
       tags:
       - SubtitleService
       summary: Gets subtitles in a specified format.
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat
       parameters:
       - name: Id
@@ -55106,18 +55627,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}:
     summary: Gets subtitles in a specified format.
     get:
       tags:
       - SubtitleService
       summary: Gets subtitles in a specified format.
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat
       parameters:
       - name: Id
@@ -55185,18 +55713,25 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}:
     summary: Gets subtitles in a specified format.
     get:
       tags:
       - SubtitleService
       summary: Gets subtitles in a specified format.
-      description: No authentication required
+      description: Requires authentication as user
       operationId: getVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat
       parameters:
       - name: Id
@@ -55264,11 +55799,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      x-RequiredAuthentication: No authentication required
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
 components:
   schemas:
     QueryResult_BaseItemDto:
@@ -58377,7 +58919,11 @@ components:
           type: string
         Name:
           type: string
+        ItemAddedCount:
+          type: integer
+          format: int32
       example:
+        ItemAddedCount: 0
         Id: Id
         Name: Name
       x-internal-ref-name: MediaBrowser.Controller.Playlists.PlaylistCreationResult
@@ -69170,18 +69716,18 @@ components:
           - BlockedMediaFolders
           - BlockedMediaFolders
           IsDisabled: true
-          MaxParentalRating: 6
+          MaxParentalRating: 1
           EnablePublicSharing: true
           AccessSchedules:
           - DayOfWeek: Sunday
-            StartHour: 1.4658129805029452
-            EndHour: 5.962133916683182
+            StartHour: 5.962133916683182
+            EndHour: 5.637376656633329
           - DayOfWeek: Sunday
-            StartHour: 1.4658129805029452
-            EndHour: 5.962133916683182
+            StartHour: 5.962133916683182
+            EndHour: 5.637376656633329
           EnableContentDownloading: true
           EnableSubtitleManagement: true
-          SimultaneousStreamLimit: 7
+          SimultaneousStreamLimit: 9
           IncludeTags:
           - IncludeTags
           - IncludeTags
@@ -69192,7 +69738,7 @@ components:
           - EnabledChannels
           EnableAllDevices: true
           EnableMediaConversion: true
-          InvalidLoginAttemptCount: 5
+          InvalidLoginAttemptCount: 2
           IsTagBlockingModeInclusive: true
           RestrictedFeatures:
           - RestrictedFeatures
@@ -69211,6 +69757,7 @@ components:
           EnableAllChannels: true
           EnableUserPreferenceAccess: true
           AuthenticationProviderId: AuthenticationProviderId
+          LockedOutDate: 6
           BlockedTags:
           - BlockedTags
           - BlockedTags
@@ -69222,7 +69769,7 @@ components:
           EnableAudioPlaybackTranscoding: true
           IsHiddenFromUnusedDevices: true
           EnableSyncTranscoding: true
-          RemoteClientBitrateLimit: 2
+          RemoteClientBitrateLimit: 7
         HasConfiguredEasyPassword: true
         EnableAutoLogin: true
         Configuration:
@@ -69257,7 +69804,7 @@ components:
         HasConfiguredPassword: true
         ServerName: ServerName
         LastActivityDate: 2000-01-23T04:56:07.000+00:00
-        PrimaryImageAspectRatio: 9.301444243932576
+        PrimaryImageAspectRatio: 3.616076749251911
         ConnectLinkType: LinkedUser
         Id: Id
         HasPassword: true
@@ -69360,6 +69907,9 @@ components:
           type: boolean
         IsDisabled:
           type: boolean
+        LockedOutDate:
+          type: integer
+          format: int32
         MaxParentalRating:
           type: integer
           format: int32
@@ -69480,18 +70030,18 @@ components:
         - BlockedMediaFolders
         - BlockedMediaFolders
         IsDisabled: true
-        MaxParentalRating: 6
+        MaxParentalRating: 1
         EnablePublicSharing: true
         AccessSchedules:
         - DayOfWeek: Sunday
-          StartHour: 1.4658129805029452
-          EndHour: 5.962133916683182
+          StartHour: 5.962133916683182
+          EndHour: 5.637376656633329
         - DayOfWeek: Sunday
-          StartHour: 1.4658129805029452
-          EndHour: 5.962133916683182
+          StartHour: 5.962133916683182
+          EndHour: 5.637376656633329
         EnableContentDownloading: true
         EnableSubtitleManagement: true
-        SimultaneousStreamLimit: 7
+        SimultaneousStreamLimit: 9
         IncludeTags:
         - IncludeTags
         - IncludeTags
@@ -69502,7 +70052,7 @@ components:
         - EnabledChannels
         EnableAllDevices: true
         EnableMediaConversion: true
-        InvalidLoginAttemptCount: 5
+        InvalidLoginAttemptCount: 2
         IsTagBlockingModeInclusive: true
         RestrictedFeatures:
         - RestrictedFeatures
@@ -69521,6 +70071,7 @@ components:
         EnableAllChannels: true
         EnableUserPreferenceAccess: true
         AuthenticationProviderId: AuthenticationProviderId
+        LockedOutDate: 6
         BlockedTags:
         - BlockedTags
         - BlockedTags
@@ -69532,7 +70083,7 @@ components:
         EnableAudioPlaybackTranscoding: true
         IsHiddenFromUnusedDevices: true
         EnableSyncTranscoding: true
-        RemoteClientBitrateLimit: 2
+        RemoteClientBitrateLimit: 7
       x-internal-ref-name: MediaBrowser.Model.Users.UserPolicy
     Configuration.AccessSchedule:
       type: object
@@ -69547,8 +70098,8 @@ components:
           format: double
       example:
         DayOfWeek: Sunday
-        StartHour: 1.4658129805029452
-        EndHour: 5.962133916683182
+        StartHour: 5.962133916683182
+        EndHour: 5.637376656633329
       x-internal-ref-name: MediaBrowser.Model.Configuration.AccessSchedule
     Configuration.DynamicDayOfWeek:
       type: string
@@ -69608,18 +70159,18 @@ components:
             - BlockedMediaFolders
             - BlockedMediaFolders
             IsDisabled: true
-            MaxParentalRating: 6
+            MaxParentalRating: 1
             EnablePublicSharing: true
             AccessSchedules:
             - DayOfWeek: Sunday
-              StartHour: 1.4658129805029452
-              EndHour: 5.962133916683182
+              StartHour: 5.962133916683182
+              EndHour: 5.637376656633329
             - DayOfWeek: Sunday
-              StartHour: 1.4658129805029452
-              EndHour: 5.962133916683182
+              StartHour: 5.962133916683182
+              EndHour: 5.637376656633329
             EnableContentDownloading: true
             EnableSubtitleManagement: true
-            SimultaneousStreamLimit: 7
+            SimultaneousStreamLimit: 9
             IncludeTags:
             - IncludeTags
             - IncludeTags
@@ -69630,7 +70181,7 @@ components:
             - EnabledChannels
             EnableAllDevices: true
             EnableMediaConversion: true
-            InvalidLoginAttemptCount: 5
+            InvalidLoginAttemptCount: 2
             IsTagBlockingModeInclusive: true
             RestrictedFeatures:
             - RestrictedFeatures
@@ -69649,6 +70200,7 @@ components:
             EnableAllChannels: true
             EnableUserPreferenceAccess: true
             AuthenticationProviderId: AuthenticationProviderId
+            LockedOutDate: 6
             BlockedTags:
             - BlockedTags
             - BlockedTags
@@ -69660,7 +70212,7 @@ components:
             EnableAudioPlaybackTranscoding: true
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
-            RemoteClientBitrateLimit: 2
+            RemoteClientBitrateLimit: 7
           HasConfiguredEasyPassword: true
           EnableAutoLogin: true
           Configuration:
@@ -69695,7 +70247,7 @@ components:
           HasConfiguredPassword: true
           ServerName: ServerName
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          PrimaryImageAspectRatio: 9.301444243932576
+          PrimaryImageAspectRatio: 3.616076749251911
           ConnectLinkType: LinkedUser
           Id: Id
           HasPassword: true
@@ -69716,18 +70268,18 @@ components:
             - BlockedMediaFolders
             - BlockedMediaFolders
             IsDisabled: true
-            MaxParentalRating: 6
+            MaxParentalRating: 1
             EnablePublicSharing: true
             AccessSchedules:
             - DayOfWeek: Sunday
-              StartHour: 1.4658129805029452
-              EndHour: 5.962133916683182
+              StartHour: 5.962133916683182
+              EndHour: 5.637376656633329
             - DayOfWeek: Sunday
-              StartHour: 1.4658129805029452
-              EndHour: 5.962133916683182
+              StartHour: 5.962133916683182
+              EndHour: 5.637376656633329
             EnableContentDownloading: true
             EnableSubtitleManagement: true
-            SimultaneousStreamLimit: 7
+            SimultaneousStreamLimit: 9
             IncludeTags:
             - IncludeTags
             - IncludeTags
@@ -69738,7 +70290,7 @@ components:
             - EnabledChannels
             EnableAllDevices: true
             EnableMediaConversion: true
-            InvalidLoginAttemptCount: 5
+            InvalidLoginAttemptCount: 2
             IsTagBlockingModeInclusive: true
             RestrictedFeatures:
             - RestrictedFeatures
@@ -69757,6 +70309,7 @@ components:
             EnableAllChannels: true
             EnableUserPreferenceAccess: true
             AuthenticationProviderId: AuthenticationProviderId
+            LockedOutDate: 6
             BlockedTags:
             - BlockedTags
             - BlockedTags
@@ -69768,7 +70321,7 @@ components:
             EnableAudioPlaybackTranscoding: true
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
-            RemoteClientBitrateLimit: 2
+            RemoteClientBitrateLimit: 7
           HasConfiguredEasyPassword: true
           EnableAutoLogin: true
           Configuration:
@@ -69803,7 +70356,7 @@ components:
           HasConfiguredPassword: true
           ServerName: ServerName
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          PrimaryImageAspectRatio: 9.301444243932576
+          PrimaryImageAspectRatio: 3.616076749251911
           ConnectLinkType: LinkedUser
           Id: Id
           HasPassword: true
@@ -69845,18 +70398,18 @@ components:
             - BlockedMediaFolders
             - BlockedMediaFolders
             IsDisabled: true
-            MaxParentalRating: 6
+            MaxParentalRating: 1
             EnablePublicSharing: true
             AccessSchedules:
             - DayOfWeek: Sunday
-              StartHour: 1.4658129805029452
-              EndHour: 5.962133916683182
+              StartHour: 5.962133916683182
+              EndHour: 5.637376656633329
             - DayOfWeek: Sunday
-              StartHour: 1.4658129805029452
-              EndHour: 5.962133916683182
+              StartHour: 5.962133916683182
+              EndHour: 5.637376656633329
             EnableContentDownloading: true
             EnableSubtitleManagement: true
-            SimultaneousStreamLimit: 7
+            SimultaneousStreamLimit: 9
             IncludeTags:
             - IncludeTags
             - IncludeTags
@@ -69867,7 +70420,7 @@ components:
             - EnabledChannels
             EnableAllDevices: true
             EnableMediaConversion: true
-            InvalidLoginAttemptCount: 5
+            InvalidLoginAttemptCount: 2
             IsTagBlockingModeInclusive: true
             RestrictedFeatures:
             - RestrictedFeatures
@@ -69886,6 +70439,7 @@ components:
             EnableAllChannels: true
             EnableUserPreferenceAccess: true
             AuthenticationProviderId: AuthenticationProviderId
+            LockedOutDate: 6
             BlockedTags:
             - BlockedTags
             - BlockedTags
@@ -69897,7 +70451,7 @@ components:
             EnableAudioPlaybackTranscoding: true
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
-            RemoteClientBitrateLimit: 2
+            RemoteClientBitrateLimit: 7
           HasConfiguredEasyPassword: true
           EnableAutoLogin: true
           Configuration:
@@ -69932,7 +70486,7 @@ components:
           HasConfiguredPassword: true
           ServerName: ServerName
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          PrimaryImageAspectRatio: 9.301444243932576
+          PrimaryImageAspectRatio: 3.616076749251911
           ConnectLinkType: LinkedUser
           Id: Id
           HasPassword: true
@@ -76620,8 +77174,6 @@ components:
       type: object
       properties:
         Id:
-          type: string
-        CurrentPw:
           type: string
         NewPw:
           type: string

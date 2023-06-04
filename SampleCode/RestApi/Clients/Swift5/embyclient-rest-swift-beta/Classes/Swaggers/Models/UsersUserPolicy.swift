@@ -16,6 +16,7 @@ public struct UsersUserPolicy: Codable {
     public var isHiddenRemotely: Bool?
     public var isHiddenFromUnusedDevices: Bool?
     public var isDisabled: Bool?
+    public var lockedOutDate: Int?
     public var maxParentalRating: Int?
     public var allowTagOrRating: Bool?
     public var blockedTags: [String]?
@@ -55,12 +56,13 @@ public struct UsersUserPolicy: Codable {
     public var enabledDevices: [String]?
     public var enableAllDevices: Bool?
 
-    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [ConfigurationAccessSchedule]? = nil, blockUnratedItems: [ConfigurationUnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, restrictedFeatures: [String]? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil) {
+    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, lockedOutDate: Int? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [ConfigurationAccessSchedule]? = nil, blockUnratedItems: [ConfigurationUnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, restrictedFeatures: [String]? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil) {
         self.isAdministrator = isAdministrator
         self.isHidden = isHidden
         self.isHiddenRemotely = isHiddenRemotely
         self.isHiddenFromUnusedDevices = isHiddenFromUnusedDevices
         self.isDisabled = isDisabled
+        self.lockedOutDate = lockedOutDate
         self.maxParentalRating = maxParentalRating
         self.allowTagOrRating = allowTagOrRating
         self.blockedTags = blockedTags
@@ -107,6 +109,7 @@ public struct UsersUserPolicy: Codable {
         case isHiddenRemotely = "IsHiddenRemotely"
         case isHiddenFromUnusedDevices = "IsHiddenFromUnusedDevices"
         case isDisabled = "IsDisabled"
+        case lockedOutDate = "LockedOutDate"
         case maxParentalRating = "MaxParentalRating"
         case allowTagOrRating = "AllowTagOrRating"
         case blockedTags = "BlockedTags"

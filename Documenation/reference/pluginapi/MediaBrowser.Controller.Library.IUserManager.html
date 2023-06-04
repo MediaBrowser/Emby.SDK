@@ -1960,13 +1960,13 @@ User[] Users { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_" data-uid="MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess(System.String,System.Boolean)">StartForgotPasswordProcess(String, Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess(System.String,System.Boolean,System.Threading.CancellationToken)">StartForgotPasswordProcess(String, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Starts the forgot password process.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ForgotPasswordResult&gt; StartForgotPasswordProcess(string enteredUsername, bool isInNetwork)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ForgotPasswordResult&gt; StartForgotPasswordProcess(string enteredUsername, bool isInNetwork, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1989,6 +1989,11 @@ User[] Users { get; }</code></pre>
         <td><span class="parametername">isInNetwork</span></td>
         <td><p>if set to <code>true</code> [is in network].</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

@@ -97,7 +97,7 @@ public class UserViewsServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -123,7 +123,7 @@ public class UserViewsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param userId User Id (required)
      * @param includeExternalContent Whether or not to include external views such as channels or live tv (required)
      * @return QueryResultBaseItemDto
@@ -138,7 +138,7 @@ public class UserViewsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param userId User Id (required)
      * @param includeExternalContent Whether or not to include external views such as channels or live tv (required)
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
@@ -154,7 +154,7 @@ public class UserViewsServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param userId User Id (required)
      * @param includeExternalContent Whether or not to include external views such as channels or live tv (required)
      * @param callback The callback to be executed when the API call finishes

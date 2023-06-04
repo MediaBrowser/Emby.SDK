@@ -28,6 +28,12 @@ open class WebAppServiceAPI {
     /**
      - GET /web/ConfigurationPage
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */
@@ -56,6 +62,12 @@ open class WebAppServiceAPI {
     /**
      - GET /web/ConfigurationPages
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "MenuIcon" : "MenuIcon",
   "EnableInMainMenu" : true,
@@ -145,6 +157,12 @@ open class WebAppServiceAPI {
     /**
      - GET /web/strings
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */

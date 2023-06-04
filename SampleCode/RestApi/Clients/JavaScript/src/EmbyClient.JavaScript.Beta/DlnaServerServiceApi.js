@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * DlnaServerService service.
 * @module EmbyClient.JavaScript.Beta/DlnaServerServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class DlnaServerServiceApi {
 
@@ -39,7 +39,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaByUuidConnectionmanagerConnectionmanagerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getDlnaByUuidConnectionmanagerConnectionmanager() {
@@ -55,7 +55,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -76,7 +76,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets dlna connection manager xml
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaByUuidConnectionmanagerConnectionmanagerXmlCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getDlnaByUuidConnectionmanagerConnectionmanagerXml() {
@@ -92,7 +92,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -113,7 +113,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaByUuidContentdirectoryContentdirectoryCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getDlnaByUuidContentdirectoryContentdirectory() {
@@ -129,7 +129,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -150,7 +150,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets dlna content directory xml
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaByUuidContentdirectoryContentdirectoryXmlCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getDlnaByUuidContentdirectoryContentdirectoryXml() {
@@ -166,7 +166,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -187,7 +187,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaByUuidDescriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getDlnaByUuidDescription() {
@@ -203,7 +203,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -224,7 +224,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets dlna server info
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaByUuidDescriptionXmlCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getDlnaByUuidDescriptionXml() {
@@ -240,7 +240,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -261,7 +261,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets a server icon
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaByUuidIconsByFilenameCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getDlnaByUuidIconsByFilename() {
@@ -278,7 +278,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -299,7 +299,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Gets a server icon
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~getDlnaIconsByFilenameCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -318,7 +318,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -339,7 +339,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Processes a control request
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~postDlnaByUuidConnectionmanagerControlCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postDlnaByUuidConnectionmanagerControl() {
@@ -355,7 +355,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/octet-stream'];
       let accepts = [];
       let returnType = null;
@@ -376,7 +376,7 @@ export default class DlnaServerServiceApi {
 
     /**
      * Processes a control request
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DlnaServerServiceApi~postDlnaByUuidContentdirectoryControlCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postDlnaByUuidContentdirectoryControl() {
@@ -392,7 +392,7 @@ export default class DlnaServerServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/octet-stream'];
       let accepts = [];
       let returnType = null;

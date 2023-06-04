@@ -15,7 +15,7 @@ import DlnaSubtitleDeliveryMethod from '../model/DlnaSubtitleDeliveryMethod';
 /**
 * DynamicHlsService service.
 * @module EmbyClient.JavaScript.Beta/DynamicHlsServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class DynamicHlsServiceApi {
 
@@ -39,7 +39,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -58,7 +58,7 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -212,7 +212,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -231,7 +231,7 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -463,7 +463,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~headAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     headAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -482,7 +482,7 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -569,7 +569,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~headVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     headVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -588,7 +588,7 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

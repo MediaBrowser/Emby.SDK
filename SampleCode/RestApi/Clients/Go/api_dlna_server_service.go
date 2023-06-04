@@ -25,7 +25,7 @@ var (
 type DlnaServerServiceApiService service
 /*
 DlnaServerServiceApiService Gets dlna connection manager xml
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param uuId Server UuId
 
@@ -64,6 +64,19 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidConnectionmanagerConnectionma
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -93,7 +106,7 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidConnectionmanagerConnectionma
 }
 /*
 DlnaServerServiceApiService Gets dlna connection manager xml
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param uuId Server UuId
 
@@ -132,6 +145,19 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidConnectionmanagerConnectionma
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -161,7 +187,7 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidConnectionmanagerConnectionma
 }
 /*
 DlnaServerServiceApiService Gets dlna content directory xml
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param uuId Server UuId
 
@@ -200,6 +226,19 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidContentdirectoryContentdirect
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -229,7 +268,7 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidContentdirectoryContentdirect
 }
 /*
 DlnaServerServiceApiService Gets dlna content directory xml
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param uuId Server UuId
 
@@ -268,6 +307,19 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidContentdirectoryContentdirect
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -297,7 +349,7 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidContentdirectoryContentdirect
 }
 /*
 DlnaServerServiceApiService Gets dlna server info
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param uuId Server UuId
 
@@ -336,6 +388,19 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidDescription(ctx context.Conte
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -365,7 +430,7 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidDescription(ctx context.Conte
 }
 /*
 DlnaServerServiceApiService Gets dlna server info
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param uuId Server UuId
 
@@ -404,6 +469,19 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidDescriptionXml(ctx context.Co
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -433,7 +511,7 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidDescriptionXml(ctx context.Co
 }
 /*
 DlnaServerServiceApiService Gets a server icon
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param uuId Server UuId
  * @param filename The icon filename
@@ -474,6 +552,19 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidIconsByFilename(ctx context.C
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -503,7 +594,7 @@ func (a *DlnaServerServiceApiService) GetDlnaByUuidIconsByFilename(ctx context.C
 }
 /*
 DlnaServerServiceApiService Gets a server icon
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param filename The icon filename
  * @param optional nil or *DlnaServerServiceApiGetDlnaIconsByFilenameOpts - Optional Parameters:
@@ -552,6 +643,19 @@ func (a *DlnaServerServiceApiService) GetDlnaIconsByFilename(ctx context.Context
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -581,7 +685,7 @@ func (a *DlnaServerServiceApiService) GetDlnaIconsByFilename(ctx context.Context
 }
 /*
 DlnaServerServiceApiService Processes a control request
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body Binary stream
  * @param uuId Server UuId
@@ -623,6 +727,19 @@ func (a *DlnaServerServiceApiService) PostDlnaByUuidConnectionmanagerControl(ctx
 	}
 	// body params
 	localVarPostBody = &body
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -652,7 +769,7 @@ func (a *DlnaServerServiceApiService) PostDlnaByUuidConnectionmanagerControl(ctx
 }
 /*
 DlnaServerServiceApiService Processes a control request
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body Binary stream
  * @param uuId Server UuId
@@ -694,6 +811,19 @@ func (a *DlnaServerServiceApiService) PostDlnaByUuidContentdirectoryControl(ctx 
 	}
 	// body params
 	localVarPostBody = &body
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err

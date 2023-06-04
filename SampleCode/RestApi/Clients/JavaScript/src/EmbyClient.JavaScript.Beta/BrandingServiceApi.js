@@ -15,7 +15,7 @@ import BrandingBrandingOptions from '../model/BrandingBrandingOptions';
 /**
 * BrandingService service.
 * @module EmbyClient.JavaScript.Beta/BrandingServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class BrandingServiceApi {
 
@@ -40,7 +40,7 @@ export default class BrandingServiceApi {
 
     /**
      * Gets branding configuration
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/BrandingServiceApi~getBrandingConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/BrandingBrandingOptions}
      */
@@ -56,7 +56,7 @@ export default class BrandingServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = BrandingBrandingOptions;
@@ -77,7 +77,7 @@ export default class BrandingServiceApi {
 
     /**
      * Gets custom css
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/BrandingServiceApi~getBrandingCssCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getBrandingCss() {
@@ -92,7 +92,7 @@ export default class BrandingServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -113,7 +113,7 @@ export default class BrandingServiceApi {
 
     /**
      * Gets custom css
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/BrandingServiceApi~getBrandingCssCssCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getBrandingCssCss() {
@@ -128,7 +128,7 @@ export default class BrandingServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

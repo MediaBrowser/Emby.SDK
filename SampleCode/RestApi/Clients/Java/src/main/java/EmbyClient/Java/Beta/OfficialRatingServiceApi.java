@@ -360,7 +360,7 @@ public class OfficialRatingServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -378,7 +378,7 @@ public class OfficialRatingServiceApi {
 
     /**
      * Gets items based on a query.
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -479,7 +479,7 @@ public class OfficialRatingServiceApi {
 
     /**
      * Gets items based on a query.
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)
@@ -581,7 +581,7 @@ public class OfficialRatingServiceApi {
 
     /**
      * Gets items based on a query. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param artistType Artist or AlbumArtist (optional)
      * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      * @param hasThemeSong Optional filter by items with theme songs. (optional)

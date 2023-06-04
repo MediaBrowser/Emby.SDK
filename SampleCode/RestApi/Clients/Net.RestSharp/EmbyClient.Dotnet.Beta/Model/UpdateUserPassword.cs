@@ -27,13 +27,11 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// Initializes a new instance of the <see cref="UpdateUserPassword" /> class.
         /// </summary>
         /// <param name="id">id.</param>
-        /// <param name="currentPw">currentPw.</param>
         /// <param name="newPw">newPw.</param>
         /// <param name="resetPassword">resetPassword.</param>
-        public UpdateUserPassword(string id = default(string), string currentPw = default(string), string newPw = default(string), bool? resetPassword = default(bool?))
+        public UpdateUserPassword(string id = default(string), string newPw = default(string), bool? resetPassword = default(bool?))
         {
             this.Id = id;
-            this.CurrentPw = currentPw;
             this.NewPw = newPw;
             this.ResetPassword = resetPassword;
         }
@@ -43,12 +41,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CurrentPw
-        /// </summary>
-        [DataMember(Name="CurrentPw", EmitDefaultValue=false)]
-        public string CurrentPw { get; set; }
 
         /// <summary>
         /// Gets or Sets NewPw
@@ -71,7 +63,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             var sb = new StringBuilder();
             sb.Append("class UpdateUserPassword {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  CurrentPw: ").Append(CurrentPw).Append("\n");
             sb.Append("  NewPw: ").Append(NewPw).Append("\n");
             sb.Append("  ResetPassword: ").Append(ResetPassword).Append("\n");
             sb.Append("}\n");
@@ -114,11 +105,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.CurrentPw == input.CurrentPw ||
-                    (this.CurrentPw != null &&
-                    this.CurrentPw.Equals(input.CurrentPw))
-                ) && 
-                (
                     this.NewPw == input.NewPw ||
                     (this.NewPw != null &&
                     this.NewPw.Equals(input.NewPw))
@@ -141,8 +127,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.CurrentPw != null)
-                    hashCode = hashCode * 59 + this.CurrentPw.GetHashCode();
                 if (this.NewPw != null)
                     hashCode = hashCode * 59 + this.NewPw.GetHashCode();
                 if (this.ResetPassword != null)

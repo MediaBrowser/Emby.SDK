@@ -1454,7 +1454,7 @@ func (a *LiveTvServiceApiService) GetLivetvChannelsById(ctx context.Context, id 
 }
 /*
 LiveTvServiceApiService Gets live tv channel tags
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *LiveTvServiceApiGetLivetvChanneltagsOpts - Optional Parameters:
      * @param "ArtistType" (optional.String) -  Artist or AlbumArtist
@@ -1946,6 +1946,19 @@ func (a *LiveTvServiceApiService) GetLivetvChanneltags(ctx context.Context, loca
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1992,7 +2005,7 @@ func (a *LiveTvServiceApiService) GetLivetvChanneltags(ctx context.Context, loca
 }
 /*
 LiveTvServiceApiService Gets live tv channel tag prefixes
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *LiveTvServiceApiGetLivetvChanneltagsPrefixesOpts - Optional Parameters:
      * @param "ArtistType" (optional.String) -  Artist or AlbumArtist
@@ -2483,6 +2496,19 @@ func (a *LiveTvServiceApiService) GetLivetvChanneltagsPrefixes(ctx context.Conte
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
@@ -3534,7 +3560,7 @@ func (a *LiveTvServiceApiService) GetLivetvListingprovidersSchedulesdirectCountr
 }
 /*
 LiveTvServiceApiService Gets a live tv channel
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3573,6 +3599,19 @@ func (a *LiveTvServiceApiService) GetLivetvLiverecordingsByIdStream(ctx context.
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
+	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return nil, err
@@ -3602,7 +3641,7 @@ func (a *LiveTvServiceApiService) GetLivetvLiverecordingsByIdStream(ctx context.
 }
 /*
 LiveTvServiceApiService Gets a live tv channel
-No authentication required
+Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param container
@@ -3642,6 +3681,19 @@ func (a *LiveTvServiceApiService) GetLivetvLivestreamfilesByIdStreamByContainer(
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	if ctx != nil {
+		// API Key Authentication
+		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
+			var key string
+			if auth.Prefix != "" {
+				key = auth.Prefix + " " + auth.Key
+			} else {
+				key = auth.Key
+			}
+			
+			localVarQueryParams.Add("api_key", key)
+		}
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {

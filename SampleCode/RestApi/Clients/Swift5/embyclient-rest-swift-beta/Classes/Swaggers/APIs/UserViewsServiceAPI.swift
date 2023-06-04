@@ -26,6 +26,12 @@ open class UserViewsServiceAPI {
     /**
      - GET /Users/{UserId}/Views
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "TotalRecordCount" : 8,
   "Items" : [ {

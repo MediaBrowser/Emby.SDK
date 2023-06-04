@@ -29,7 +29,7 @@ import UsersUserPolicy from '../model/UsersUserPolicy';
 /**
 * UserService service.
 * @module EmbyClient.JavaScript.Beta/UserServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class UserServiceApi {
 
@@ -91,7 +91,7 @@ export default class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~deleteUsersByIdTrackselectionsByTracktypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deleteUsersByIdTrackselectionsByTracktype() {
@@ -108,7 +108,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -249,7 +249,7 @@ export default class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen.
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~getUsersPublicCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UserDto>}
      */
@@ -265,7 +265,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = [UserDto];
@@ -330,7 +330,7 @@ export default class UserServiceApi {
 
     /**
      * Authenticates a user
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersAuthenticatebynameCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AuthenticationAuthenticationResult}
      */
@@ -347,7 +347,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
       let returnType = AuthenticationAuthenticationResult;
@@ -405,7 +405,7 @@ export default class UserServiceApi {
 
     /**
      * Authenticates a user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersByIdAuthenticateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AuthenticationAuthenticationResult}
      */
@@ -422,7 +422,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
       let returnType = AuthenticationAuthenticationResult;
@@ -628,7 +628,7 @@ export default class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersByIdTrackselectionsByTracktypeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postUsersByIdTrackselectionsByTracktypeDelete() {
@@ -645,7 +645,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -704,7 +704,7 @@ export default class UserServiceApi {
 
     /**
      * Initiates the forgot password process for a local user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersForgotpasswordCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/UsersForgotPasswordResult}
      */
@@ -720,7 +720,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
       let returnType = UsersForgotPasswordResult;
@@ -741,7 +741,7 @@ export default class UserServiceApi {
 
     /**
      * Redeems a forgot password pin
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersForgotpasswordPinCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/UsersPinRedeemResult}
      */
@@ -757,7 +757,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
       let returnType = UsersPinRedeemResult;

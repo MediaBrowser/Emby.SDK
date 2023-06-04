@@ -309,7 +309,7 @@ public class LiveTvServiceApiTest {
     /**
      * Gets live tv channel tags
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -413,7 +413,7 @@ public class LiveTvServiceApiTest {
     /**
      * Gets live tv channel tag prefixes
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -673,7 +673,7 @@ public class LiveTvServiceApiTest {
     /**
      * Gets a live tv channel
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -688,7 +688,7 @@ public class LiveTvServiceApiTest {
     /**
      * Gets a live tv channel
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

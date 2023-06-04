@@ -22,7 +22,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -122,7 +122,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -223,7 +223,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -323,7 +323,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -530,7 +530,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -631,7 +631,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -840,6 +840,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (albumArtistStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AlbumArtistStartsWithOrGreater", albumArtistStartsWithOrGreater)); // query parameter
             if (nameStartsWith != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWith", nameStartsWith)); // query parameter
             if (nameLessThan != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameLessThan", nameLessThan)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -860,7 +871,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -962,7 +973,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets items based on a query. No authentication required
+        /// Gets items based on a query. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistType">Artist or AlbumArtist (optional)</param>
@@ -1171,6 +1182,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (albumArtistStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AlbumArtistStartsWithOrGreater", albumArtistStartsWithOrGreater)); // query parameter
             if (nameStartsWith != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWith", nameStartsWith)); // query parameter
             if (nameLessThan != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameLessThan", nameLessThan)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,

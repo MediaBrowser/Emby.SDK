@@ -328,7 +328,7 @@ public class SystemServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -346,7 +346,7 @@ public class SystemServiceApi {
 
     /**
      * Gets public information about the server
-     * No authentication required
+     * Requires authentication as user
      * @return PublicSystemInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -357,7 +357,7 @@ public class SystemServiceApi {
 
     /**
      * Gets public information about the server
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;PublicSystemInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -369,7 +369,7 @@ public class SystemServiceApi {
 
     /**
      * Gets public information about the server (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -824,7 +824,7 @@ public class SystemServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -842,7 +842,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getSystemPing() throws ApiException {
@@ -851,7 +851,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -862,7 +862,7 @@ public class SystemServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1284,7 +1284,7 @@ public class SystemServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1302,7 +1302,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void postSystemPing() throws ApiException {
@@ -1311,7 +1311,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1322,7 +1322,7 @@ public class SystemServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

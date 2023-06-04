@@ -117,7 +117,7 @@ class UserServiceApi(object):
     def delete_users_by_id_trackselections_by_tracktype(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_users_by_id_trackselections_by_tracktype(id, track_type, async_req=True)
@@ -140,7 +140,7 @@ class UserServiceApi(object):
     def delete_users_by_id_trackselections_by_tracktype_with_http_info(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_users_by_id_trackselections_by_tracktype_with_http_info(id, track_type, async_req=True)
@@ -195,7 +195,7 @@ class UserServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/TrackSelections/{TrackType}', 'DELETE',
@@ -517,7 +517,7 @@ class UserServiceApi(object):
     def get_users_public(self, **kwargs):  # noqa: E501
         """Gets a list of publicly visible users for display on a login screen.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_public(async_req=True)
@@ -538,7 +538,7 @@ class UserServiceApi(object):
     def get_users_public_with_http_info(self, **kwargs):  # noqa: E501
         """Gets a list of publicly visible users for display on a login screen.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_public_with_http_info(async_req=True)
@@ -583,7 +583,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/Public', 'GET',
@@ -711,7 +711,7 @@ class UserServiceApi(object):
     def post_users_authenticatebyname(self, body, x_emby_authorization, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required  # noqa: E501
+        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_authenticatebyname(body, x_emby_authorization, async_req=True)
@@ -734,7 +734,7 @@ class UserServiceApi(object):
     def post_users_authenticatebyname_with_http_info(self, body, x_emby_authorization, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required  # noqa: E501
+        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_authenticatebyname_with_http_info(body, x_emby_authorization, async_req=True)
@@ -797,7 +797,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/AuthenticateByName', 'POST',
@@ -921,7 +921,7 @@ class UserServiceApi(object):
     def post_users_by_id_authenticate(self, body, id, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_authenticate(body, id, async_req=True)
@@ -944,7 +944,7 @@ class UserServiceApi(object):
     def post_users_by_id_authenticate_with_http_info(self, body, id, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_authenticate_with_http_info(body, id, async_req=True)
@@ -1007,7 +1007,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Authenticate', 'POST',
@@ -1531,7 +1531,7 @@ class UserServiceApi(object):
     def post_users_by_id_trackselections_by_tracktype_delete(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_trackselections_by_tracktype_delete(id, track_type, async_req=True)
@@ -1554,7 +1554,7 @@ class UserServiceApi(object):
     def post_users_by_id_trackselections_by_tracktype_delete_with_http_info(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_trackselections_by_tracktype_delete_with_http_info(id, track_type, async_req=True)
@@ -1609,7 +1609,7 @@ class UserServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/TrackSelections/{TrackType}/Delete', 'POST',
@@ -1741,7 +1741,7 @@ class UserServiceApi(object):
     def post_users_forgotpassword(self, body, **kwargs):  # noqa: E501
         """Initiates the forgot password process for a local user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword(body, async_req=True)
@@ -1763,7 +1763,7 @@ class UserServiceApi(object):
     def post_users_forgotpassword_with_http_info(self, body, **kwargs):  # noqa: E501
         """Initiates the forgot password process for a local user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword_with_http_info(body, async_req=True)
@@ -1819,7 +1819,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/ForgotPassword', 'POST',
@@ -1840,7 +1840,7 @@ class UserServiceApi(object):
     def post_users_forgotpassword_pin(self, body, **kwargs):  # noqa: E501
         """Redeems a forgot password pin  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword_pin(body, async_req=True)
@@ -1862,7 +1862,7 @@ class UserServiceApi(object):
     def post_users_forgotpassword_pin_with_http_info(self, body, **kwargs):  # noqa: E501
         """Redeems a forgot password pin  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword_pin_with_http_info(body, async_req=True)
@@ -1918,7 +1918,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/ForgotPassword/Pin', 'POST',

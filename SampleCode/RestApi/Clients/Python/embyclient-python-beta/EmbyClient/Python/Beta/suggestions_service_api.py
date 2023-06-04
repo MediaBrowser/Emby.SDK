@@ -26,7 +26,7 @@ class SuggestionsServiceApi(object):
     def get_users_by_userid_suggestions(self, user_id, **kwargs):  # noqa: E501
         """Gets items based on a query.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_userid_suggestions(user_id, async_req=True)
@@ -53,7 +53,7 @@ class SuggestionsServiceApi(object):
     def get_users_by_userid_suggestions_with_http_info(self, user_id, **kwargs):  # noqa: E501
         """Gets items based on a query.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_userid_suggestions_with_http_info(user_id, async_req=True)
@@ -120,7 +120,7 @@ class SuggestionsServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{UserId}/Suggestions', 'GET',

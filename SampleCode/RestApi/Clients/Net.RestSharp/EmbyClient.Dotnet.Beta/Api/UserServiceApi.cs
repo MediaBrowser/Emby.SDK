@@ -43,7 +43,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -55,7 +55,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -139,7 +139,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;UserDto&gt;</returns>
@@ -149,7 +149,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;UserDto&gt;</returns>
@@ -187,7 +187,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -199,7 +199,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -233,7 +233,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -245,7 +245,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -369,7 +369,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -381,7 +381,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -417,7 +417,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -428,7 +428,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -438,7 +438,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -449,7 +449,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -503,7 +503,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -515,7 +515,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -599,7 +599,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;UserDto&gt;</returns>
@@ -609,7 +609,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;UserDto&gt;)</returns>
@@ -647,7 +647,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -659,7 +659,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -693,7 +693,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -705,7 +705,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -829,7 +829,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -841,7 +841,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -877,7 +877,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -888,7 +888,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -898,7 +898,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -909,7 +909,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -1197,7 +1197,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1209,7 +1209,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1246,6 +1246,17 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1266,7 +1277,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1279,7 +1290,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1316,6 +1327,17 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1825,7 +1847,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;UserDto&gt;</returns>
@@ -1836,7 +1858,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;UserDto&gt;</returns>
@@ -1865,6 +1887,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1885,7 +1918,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;UserDto&gt;</returns>
@@ -1897,7 +1930,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;UserDto&gt;)</returns>
@@ -1926,6 +1959,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2119,7 +2163,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -2132,7 +2176,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -2180,6 +2224,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2200,7 +2255,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -2214,7 +2269,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -2261,6 +2316,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             else
             {
                 localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
@@ -2461,7 +2527,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2474,7 +2540,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2522,6 +2588,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2542,7 +2619,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2556,7 +2633,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2603,6 +2680,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             else
             {
                 localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
@@ -3489,7 +3577,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3501,7 +3589,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3538,6 +3626,17 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -3558,7 +3657,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3571,7 +3670,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3608,6 +3707,17 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3817,7 +3927,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -3829,7 +3939,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -3872,6 +3982,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -3892,7 +4013,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -3905,7 +4026,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
@@ -3948,6 +4069,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3968,7 +4100,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -3980,7 +4112,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -4023,6 +4155,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -4043,7 +4186,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -4056,7 +4199,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
@@ -4098,6 +4241,17 @@ namespace EmbyClient.Dotnet.Beta.Api
             else
             {
                 localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request

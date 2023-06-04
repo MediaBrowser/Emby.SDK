@@ -2407,6 +2407,12 @@ open class LiveTvServiceAPI {
      Gets live tv channel tags
      - GET /LiveTv/ChannelTags
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "TotalRecordCount" : 8,
   "Items" : [ {
@@ -3725,6 +3731,12 @@ open class LiveTvServiceAPI {
      Gets live tv channel tag prefixes
      - GET /LiveTv/ChannelTags/Prefixes
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "Id" : "Id",
   "Name" : "Name"
@@ -6008,6 +6020,12 @@ open class LiveTvServiceAPI {
      Gets a live tv channel
      - GET /LiveTv/LiveRecordings/{Id}/stream
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path)  
 
      - returns: RequestBuilder<Void> 
@@ -6048,6 +6066,12 @@ open class LiveTvServiceAPI {
      Gets a live tv channel
      - GET /LiveTv/LiveStreamFiles/{Id}/stream.{Container}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path)  
      - parameter container: (path)  
 

@@ -98,7 +98,7 @@ public class DynamicHlsServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -132,7 +132,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -145,7 +145,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -160,7 +160,7 @@ public class DynamicHlsServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -832,7 +832,7 @@ public class DynamicHlsServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -866,7 +866,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -879,7 +879,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -894,7 +894,7 @@ public class DynamicHlsServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -1848,7 +1848,7 @@ public class DynamicHlsServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1882,7 +1882,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -1895,7 +1895,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -1910,7 +1910,7 @@ public class DynamicHlsServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -2289,7 +2289,7 @@ public class DynamicHlsServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2323,7 +2323,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -2336,7 +2336,7 @@ public class DynamicHlsServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)
@@ -2351,7 +2351,7 @@ public class DynamicHlsServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param segmentContainer  (required)
      * @param segmentId  (required)
      * @param id  (required)

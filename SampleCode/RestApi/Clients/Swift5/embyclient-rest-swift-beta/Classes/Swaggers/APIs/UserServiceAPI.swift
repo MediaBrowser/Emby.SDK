@@ -77,6 +77,12 @@ open class UserServiceAPI {
      Clears audio or subtitle track selections for a user
      - DELETE /Users/{Id}/TrackSelections/{TrackType}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path)  
      - parameter trackType: (path)  
 
@@ -132,27 +138,27 @@ open class UserServiceAPI {
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
     "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
@@ -167,6 +173,7 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -174,7 +181,7 @@ open class UserServiceAPI {
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
@@ -205,7 +212,7 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true
@@ -354,6 +361,12 @@ open class UserServiceAPI {
      Gets a list of publicly visible users for display on a login screen.
      - GET /Users/Public
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "Policy" : {
     "AllowTagOrRating" : true,
@@ -364,27 +377,27 @@ open class UserServiceAPI {
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
     "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
@@ -399,6 +412,7 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -406,7 +420,7 @@ open class UserServiceAPI {
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
@@ -437,7 +451,7 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true
@@ -451,27 +465,27 @@ open class UserServiceAPI {
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
     "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
@@ -486,6 +500,7 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -493,7 +508,7 @@ open class UserServiceAPI {
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
@@ -524,7 +539,7 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true
@@ -586,27 +601,27 @@ open class UserServiceAPI {
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
       "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
@@ -621,6 +636,7 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -628,7 +644,7 @@ open class UserServiceAPI {
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
@@ -659,7 +675,7 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
@@ -673,27 +689,27 @@ open class UserServiceAPI {
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
       "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
@@ -708,6 +724,7 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -715,7 +732,7 @@ open class UserServiceAPI {
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
@@ -746,7 +763,7 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
@@ -796,6 +813,12 @@ open class UserServiceAPI {
      Authenticates a user
      - POST /Users/AuthenticateByName
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "User" : {
     "Policy" : {
@@ -807,27 +830,27 @@ open class UserServiceAPI {
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
       "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
@@ -842,6 +865,7 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -849,7 +873,7 @@ open class UserServiceAPI {
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
@@ -880,7 +904,7 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
@@ -1631,6 +1655,12 @@ open class UserServiceAPI {
      Authenticates a user
      - POST /Users/{Id}/Authenticate
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "User" : {
     "Policy" : {
@@ -1642,27 +1672,27 @@ open class UserServiceAPI {
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
       "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
@@ -1677,6 +1707,7 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -1684,7 +1715,7 @@ open class UserServiceAPI {
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
@@ -1715,7 +1746,7 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
@@ -2656,6 +2687,12 @@ open class UserServiceAPI {
      Clears audio or subtitle track selections for a user
      - POST /Users/{Id}/TrackSelections/{TrackType}/Delete
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path)  
      - parameter trackType: (path)  
 
@@ -2747,6 +2784,12 @@ open class UserServiceAPI {
      Initiates the forgot password process for a local user
      - POST /Users/ForgotPassword
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "Action" : "ContactAdmin",
   "PinExpirationDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2784,6 +2827,12 @@ open class UserServiceAPI {
      Redeems a forgot password pin
      - POST /Users/ForgotPassword/Pin
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "UsersReset" : [ "UsersReset", "UsersReset" ],
   "Success" : true
@@ -2836,27 +2885,27 @@ open class UserServiceAPI {
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
     "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
@@ -2871,6 +2920,7 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
@@ -2878,7 +2928,7 @@ open class UserServiceAPI {
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
@@ -2909,7 +2959,7 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true

@@ -147,6 +147,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 
@@ -214,6 +220,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 
@@ -406,6 +418,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 
@@ -473,6 +491,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 

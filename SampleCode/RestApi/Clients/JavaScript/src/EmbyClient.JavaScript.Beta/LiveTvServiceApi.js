@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.37
+* @version 4.8.0.38
 */
 export default class LiveTvServiceApi {
 
@@ -570,7 +570,7 @@ export default class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tags
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvChanneltagsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
@@ -678,7 +678,7 @@ export default class LiveTvServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = QueryResultBaseItemDto;
@@ -699,7 +699,7 @@ export default class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tag prefixes
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvChanneltagsPrefixesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/LiveTVApiTagItem>}
@@ -807,7 +807,7 @@ export default class LiveTvServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = [LiveTVApiTagItem];
@@ -1193,7 +1193,7 @@ export default class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvLiverecordingsByIdStreamCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getLivetvLiverecordingsByIdStream() {
@@ -1209,7 +1209,7 @@ export default class LiveTvServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1230,7 +1230,7 @@ export default class LiveTvServiceApi {
 
     /**
      * Gets a live tv channel
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvLivestreamfilesByIdStreamByContainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getLivetvLivestreamfilesByIdStreamByContainer() {
@@ -1247,7 +1247,7 @@ export default class LiveTvServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

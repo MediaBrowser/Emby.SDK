@@ -151,7 +151,7 @@
 <h1 id="emby_restapi_getLivetvChanneltagsPrefixes" data-uid="emby.restapi/getLivetvChanneltagsPrefixes" class="text-capitalize text-break">getLivetvChanneltagsPrefixes</h1>
 <div class="markdown level0 summary"><p>Gets live tv channel tag prefixes</p>
 </div>
-<div class="markdown level0 description"><p>No authentication required</p>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
 </div>
 
 
@@ -1200,6 +1200,28 @@
   
         </td>
         <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
 </td>
         <td class="sample-response">
         </td>

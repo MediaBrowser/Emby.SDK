@@ -117,7 +117,7 @@ class PluginServiceApi(object):
     def get_plugins(self, **kwargs):  # noqa: E501
         """Gets a list of currently installed plugins  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_plugins(async_req=True)
@@ -138,7 +138,7 @@ class PluginServiceApi(object):
     def get_plugins_with_http_info(self, **kwargs):  # noqa: E501
         """Gets a list of currently installed plugins  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_plugins_with_http_info(async_req=True)
@@ -204,7 +204,7 @@ class PluginServiceApi(object):
     def get_plugins_by_id_configuration(self, id, **kwargs):  # noqa: E501
         """Gets a plugin's configuration  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_plugins_by_id_configuration(id, async_req=True)
@@ -226,7 +226,7 @@ class PluginServiceApi(object):
     def get_plugins_by_id_configuration_with_http_info(self, id, **kwargs):  # noqa: E501
         """Gets a plugin's configuration  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_plugins_by_id_configuration_with_http_info(id, async_req=True)
@@ -295,7 +295,7 @@ class PluginServiceApi(object):
     def get_plugins_by_id_thumb(self, id, **kwargs):  # noqa: E501
         """Gets a plugin thumb image  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_plugins_by_id_thumb(id, async_req=True)
@@ -317,7 +317,7 @@ class PluginServiceApi(object):
     def get_plugins_by_id_thumb_with_http_info(self, id, **kwargs):  # noqa: E501
         """Gets a plugin thumb image  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_plugins_by_id_thumb_with_http_info(id, async_req=True)
@@ -365,7 +365,7 @@ class PluginServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Plugins/{Id}/Thumb', 'GET',
@@ -386,7 +386,7 @@ class PluginServiceApi(object):
     def post_plugins_by_id_configuration(self, body, id, **kwargs):  # noqa: E501
         """Updates a plugin's configuration  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_plugins_by_id_configuration(body, id, async_req=True)
@@ -409,7 +409,7 @@ class PluginServiceApi(object):
     def post_plugins_by_id_configuration_with_http_info(self, body, id, **kwargs):  # noqa: E501
         """Updates a plugin's configuration  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_plugins_by_id_configuration_with_http_info(body, id, async_req=True)

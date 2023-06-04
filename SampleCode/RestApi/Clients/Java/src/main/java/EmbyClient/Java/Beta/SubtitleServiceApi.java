@@ -387,7 +387,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -425,7 +425,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -441,7 +441,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -459,7 +459,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -557,7 +557,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -591,7 +591,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -607,7 +607,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -625,7 +625,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -999,7 +999,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1037,7 +1037,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1053,7 +1053,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1071,7 +1071,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1169,7 +1169,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1203,7 +1203,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1219,7 +1219,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1237,7 +1237,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)

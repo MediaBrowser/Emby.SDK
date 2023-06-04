@@ -3098,7 +3098,7 @@ namespace EmbyClient.MsRest
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='artistType'>
         /// Artist or AlbumArtist
@@ -3826,7 +3826,7 @@ namespace EmbyClient.MsRest
         /// Gets a list of currently installed plugins
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -6184,7 +6184,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<QueryResultUserLibraryTagItem>> GetYearsWithHttpMessagesAsync(string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='percentPlayed'>
         /// </param>
@@ -6254,7 +6254,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpMessagesAsync(int percentPlayed, int unPlayedCount, string id, int maxWidth, int maxHeight, string tag, string format, string type, int index, int? width = default(int?), int? height = default(int?), int? quality = default(int?), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='percentPlayed'>
         /// </param>
@@ -7136,7 +7136,7 @@ namespace EmbyClient.MsRest
         /// Gets branding configuration
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7150,7 +7150,7 @@ namespace EmbyClient.MsRest
         /// Gets custom css
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7164,7 +7164,7 @@ namespace EmbyClient.MsRest
         /// Gets custom css
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -8310,7 +8310,7 @@ namespace EmbyClient.MsRest
         /// Gets live tv channel tags
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='artistType'>
         /// Artist or AlbumArtist
@@ -11135,7 +11135,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<UpdatesPackageVersionInfo>> GetSystemReleasenotesWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -11146,7 +11146,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> PostSystemPingWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -11268,7 +11268,7 @@ namespace EmbyClient.MsRest
         /// screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -11399,7 +11399,7 @@ namespace EmbyClient.MsRest
         /// indicates success, while anything in the 400 or 500 range indicates
         /// failure
         /// ---
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='body'>
         /// AuthenticateUserByName
@@ -11441,7 +11441,7 @@ namespace EmbyClient.MsRest
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='body'>
         /// ForgotPassword
@@ -11490,7 +11490,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> DeleteVideosActiveencodingsWithHttpMessagesAsync(string deviceId, string playSessionId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -11501,7 +11501,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetWebConfigurationpageWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -11512,7 +11512,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<IList<EmbyWebApiConfigurationPageInfo>>> GetWebConfigurationpagesWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12680,7 +12680,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -12697,7 +12697,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -12714,7 +12714,7 @@ namespace EmbyClient.MsRest
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='filename'>
         /// The icon filename
@@ -13816,7 +13816,7 @@ namespace EmbyClient.MsRest
         /// Gets live tv channel tag prefixes
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='artistType'>
         /// Artist or AlbumArtist
@@ -14868,7 +14868,7 @@ namespace EmbyClient.MsRest
         /// Gets a plugin thumb image
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// Plugin Id
@@ -14885,7 +14885,7 @@ namespace EmbyClient.MsRest
         /// Gets a plugin's configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <param name='id'>
         /// Plugin Id
@@ -14902,7 +14902,7 @@ namespace EmbyClient.MsRest
         /// Updates a plugin's configuration
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <param name='body'>
         /// Binary stream
@@ -15880,7 +15880,7 @@ namespace EmbyClient.MsRest
         /// Gets public information about the server
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -15965,7 +15965,7 @@ namespace EmbyClient.MsRest
         /// Gets items based on a query.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='userId'>
         /// </param>
@@ -16017,7 +16017,7 @@ namespace EmbyClient.MsRest
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='body'>
         /// AuthenticateUser
@@ -16074,7 +16074,7 @@ namespace EmbyClient.MsRest
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='body'>
         /// ForgotPasswordPin
@@ -16451,7 +16451,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<QueryResultBaseItemDto>> GetUsersByUseridItemsWithHttpMessagesAsync(string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='userId'>
         /// User Id
@@ -16526,7 +16526,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<QueryResultBaseItemDto>> GetVideosByIdAdditionalpartsWithHttpMessagesAsync(string id, string userId = default(string), string fields = default(string), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), bool? enableUserData = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='width'>
         /// </param>
@@ -17587,7 +17587,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetVideosByIdLiveM3u8WithHttpMessagesAsync(string id, string container, string deviceProfileId = default(string), string deviceId = default(string), string audioCodec = default(string), bool? enableAutoStreamCopy = default(bool?), int? audioSampleRate = default(int?), int? audioBitRate = default(int?), int? audioChannels = default(int?), int? maxAudioChannels = default(int?), bool? staticParameter = default(bool?), string profile = default(string), string level = default(string), double? framerate = default(double?), double? maxFramerate = default(double?), bool? copyTimestamps = default(bool?), long? startTimeTicks = default(long?), int? width = default(int?), int? height = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), int? videoBitRate = default(int?), int? subtitleStreamIndex = default(int?), string subtitleMethod = default(string), int? maxRefFrames = default(int?), int? maxVideoBitDepth = default(int?), string videoCodec = default(string), int? audioStreamIndex = default(int?), int? videoStreamIndex = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -17653,7 +17653,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetArtistsByNameImagesByTypeWithHttpMessagesAsync(string name, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -17755,7 +17755,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17772,7 +17772,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17789,7 +17789,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17806,7 +17806,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17823,7 +17823,7 @@ namespace EmbyClient.MsRest
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='body'>
         /// Binary stream
@@ -17843,7 +17843,7 @@ namespace EmbyClient.MsRest
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='body'>
         /// Binary stream
@@ -17863,7 +17863,7 @@ namespace EmbyClient.MsRest
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17880,7 +17880,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetDlnaByUuidIconsByFilenameWithHttpMessagesAsync(string uuId, string filename, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -17946,7 +17946,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetGamegenresByNameImagesByTypeWithHttpMessagesAsync(string name, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -18012,7 +18012,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> HeadGamegenresByNameImagesByTypeWithHttpMessagesAsync(string name, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -18078,7 +18078,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetGenresByNameImagesByTypeWithHttpMessagesAsync(string name, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -18210,7 +18210,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> DeleteItemsByIdSubtitlesByIndexWithHttpMessagesAsync(string id, string mediaSourceId, int index, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// Item Id
@@ -18276,7 +18276,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetItemsByIdImagesByTypeWithHttpMessagesAsync(string id, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// Item Id
@@ -18469,7 +18469,7 @@ namespace EmbyClient.MsRest
         /// Gets a live tv channel
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// </param>
@@ -18485,7 +18485,7 @@ namespace EmbyClient.MsRest
         /// Gets a live tv channel
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// </param>
@@ -18599,7 +18599,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> PostLivetvTunersByIdResetWithHttpMessagesAsync(string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -18665,7 +18665,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetMusicgenresByNameImagesByTypeWithHttpMessagesAsync(string name, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -18748,7 +18748,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> PostPackagesInstallingByIdDeleteWithHttpMessagesAsync(string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -18814,7 +18814,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetPersonsByNameImagesByTypeWithHttpMessagesAsync(string name, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -19033,7 +19033,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> DeleteSessionsByIdUsersByUseridWithHttpMessagesAsync(string id, string userId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -19099,7 +19099,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetStudiosByNameImagesByTypeWithHttpMessagesAsync(string name, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -19344,7 +19344,7 @@ namespace EmbyClient.MsRest
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// </param>
@@ -19861,7 +19861,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<UserItemDataDto>> DeleteUsersByUseridFavoriteitemsByIdWithHttpMessagesAsync(string userId, string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// User Id
@@ -19927,7 +19927,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetUsersByIdImagesByTypeWithHttpMessagesAsync(string id, string type, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), int? index = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// User Id
@@ -20234,7 +20234,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> DeleteVideosByIdSubtitlesByIndexWithHttpMessagesAsync(string id, string mediaSourceId, int index, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -20300,7 +20300,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetArtistsByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -20366,7 +20366,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> HeadArtistsByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='segmentContainer'>
         /// </param>
@@ -20385,7 +20385,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerWithHttpMessagesAsync(string segmentContainer, string segmentId, string id, string playlistId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='segmentContainer'>
         /// </param>
@@ -20404,7 +20404,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerWithHttpMessagesAsync(string segmentContainer, string segmentId, string id, string playlistId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -20470,7 +20470,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetGamegenresByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -20536,7 +20536,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> HeadGamegenresByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -20602,7 +20602,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetGenresByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -20737,7 +20737,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<SubtitlesSubtitleDownloadResult>> PostItemsByIdRemotesearchSubtitlesBySubtitleidWithHttpMessagesAsync(string id, string mediaSourceId, string subtitleId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// Item Id
@@ -20803,7 +20803,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetItemsByIdImagesByTypeByIndexWithHttpMessagesAsync(string id, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// Item Id
@@ -20979,7 +20979,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<QueryResultEmbyLiveTVChannelManagementInfo>> PostLivetvManageChannelsByIdSortindexWithHttpMessagesAsync(LiveTVApiSetChannelSortIndex body, string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -21045,7 +21045,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetMusicgenresByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -21111,7 +21111,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> HeadMusicgenresByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -21177,7 +21177,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetPersonsByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -21263,7 +21263,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> PostSessionsByIdUsersByUseridDeleteWithHttpMessagesAsync(string id, string userId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -21329,7 +21329,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetStudiosByNameImagesByTypeByIndexWithHttpMessagesAsync(string name, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='name'>
         /// Item name
@@ -21398,7 +21398,7 @@ namespace EmbyClient.MsRest
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// </param>
@@ -21619,7 +21619,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse<UserItemDataDto>> PostUsersByUseridItemsByIdHidefromresumeWithHttpMessagesAsync(string userId, string id, bool hide, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// User Id
@@ -21685,7 +21685,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetUsersByIdImagesByTypeByIndexWithHttpMessagesAsync(string id, string type, int index, int? maxWidth = default(int?), int? maxHeight = default(int?), int? width = default(int?), int? height = default(int?), int? quality = default(int?), string tag = default(string), bool? cropWhitespace = default(bool?), bool? enableImageEnhancers = default(bool?), string format = default(string), string backgroundColor = default(string), string foregroundLayer = default(string), bool? autoOrient = default(bool?), bool? keepAnimation = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='id'>
         /// User Id
@@ -21995,7 +21995,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> PostVideosByIdSubtitlesByIndexDeleteWithHttpMessagesAsync(string id, string mediaSourceId, int index, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='segmentContainer'>
         /// </param>
@@ -22014,7 +22014,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerWithHttpMessagesAsync(string segmentContainer, string segmentId, string id, string playlistId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='segmentContainer'>
         /// </param>
@@ -22033,7 +22033,7 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerWithHttpMessagesAsync(string segmentContainer, string segmentId, string id, string playlistId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// No authentication required
+        /// Requires authentication as user
         /// </summary>
         /// <param name='segmentContainer'>
         /// </param>
@@ -22055,7 +22055,7 @@ namespace EmbyClient.MsRest
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// Item Id
@@ -22232,7 +22232,7 @@ namespace EmbyClient.MsRest
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// Item Id
@@ -22267,7 +22267,7 @@ namespace EmbyClient.MsRest
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// Item Id
@@ -22302,7 +22302,7 @@ namespace EmbyClient.MsRest
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <param name='id'>
         /// Item Id
