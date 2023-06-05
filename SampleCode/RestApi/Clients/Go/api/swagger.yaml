@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.38
+  version: 4.8.0.39
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -32258,7 +32258,7 @@ paths:
       tags:
       - DlnaServerService
       summary: Gets dlna server info
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaByUuidDescriptionXml
       parameters:
       - name: UuId
@@ -32274,25 +32274,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/description:
     summary: Gets dlna server info
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna server info
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaByUuidDescription
       parameters:
       - name: UuId
@@ -32308,25 +32301,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/icons/{Filename}:
     summary: Gets a server icon
     get:
       tags:
       - DlnaServerService
       summary: Gets a server icon
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaIconsByFilename
       parameters:
       - name: UuId
@@ -32350,18 +32336,11 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/Profiles/{Id}:
     summary: Gets a single profile
     get:
@@ -44825,7 +44804,7 @@ paths:
       tags:
       - DlnaServerService
       summary: Gets dlna content directory xml
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaByUuidContentdirectoryContentdirectoryXml
       parameters:
       - name: UuId
@@ -44841,25 +44820,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/contentdirectory/contentdirectory:
     summary: Gets dlna content directory xml
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna content directory xml
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaByUuidContentdirectoryContentdirectory
       parameters:
       - name: UuId
@@ -44875,25 +44847,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/connectionmanager/connectionmanager.xml:
     summary: Gets dlna connection manager xml
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna connection manager xml
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaByUuidConnectionmanagerConnectionmanagerXml
       parameters:
       - name: UuId
@@ -44909,25 +44874,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/connectionmanager/connectionmanager:
     summary: Gets dlna connection manager xml
     get:
       tags:
       - DlnaServerService
       summary: Gets dlna connection manager xml
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaByUuidConnectionmanagerConnectionmanager
       parameters:
       - name: UuId
@@ -44943,25 +44901,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/contentdirectory/control:
     summary: Processes a control request
     post:
       tags:
       - DlnaServerService
       summary: Processes a control request
-      description: Requires authentication as user
+      description: No authentication required
       operationId: postDlnaByUuidContentdirectoryControl
       parameters:
       - name: UuId
@@ -44985,25 +44936,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/connectionmanager/control:
     summary: Processes a control request
     post:
       tags:
       - DlnaServerService
       summary: Processes a control request
-      description: Requires authentication as user
+      description: No authentication required
       operationId: postDlnaByUuidConnectionmanagerControl
       parameters:
       - name: UuId
@@ -45027,25 +44971,18 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/icons/{Filename}:
     summary: Gets a server icon
     get:
       tags:
       - DlnaServerService
       summary: Gets a server icon
-      description: Requires authentication as user
+      description: No authentication required
       operationId: getDlnaByUuidIconsByFilename
       parameters:
       - name: UuId
@@ -45069,18 +45006,11 @@ paths:
           description: Operation successful. Response content unknown.
         "400":
           description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
         "404":
           description: Resource not found or unavailable.
         "500":
           description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as user
+      x-RequiredAuthentication: No authentication required
   /GameGenres/{Name}/Images/{Type}:
     get:
       tags:
@@ -69909,7 +69839,7 @@ components:
           type: boolean
         LockedOutDate:
           type: integer
-          format: int32
+          format: int64
         MaxParentalRating:
           type: integer
           format: int32

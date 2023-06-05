@@ -26,7 +26,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_connectionmanager_connectionmanager(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna connection manager xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_connectionmanager_connectionmanager(uu_id, async_req=True)
@@ -48,7 +48,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_connectionmanager_connectionmanager_with_http_info(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna connection manager xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_connectionmanager_connectionmanager_with_http_info(uu_id, async_req=True)
@@ -96,7 +96,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/connectionmanager/connectionmanager', 'GET',
@@ -117,7 +117,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_connectionmanager_connectionmanager_xml(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna connection manager xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_connectionmanager_connectionmanager_xml(uu_id, async_req=True)
@@ -139,7 +139,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_connectionmanager_connectionmanager_xml_with_http_info(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna connection manager xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_connectionmanager_connectionmanager_xml_with_http_info(uu_id, async_req=True)
@@ -187,7 +187,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/connectionmanager/connectionmanager.xml', 'GET',
@@ -208,7 +208,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_contentdirectory_contentdirectory(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna content directory xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_contentdirectory_contentdirectory(uu_id, async_req=True)
@@ -230,7 +230,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_contentdirectory_contentdirectory_with_http_info(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna content directory xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_contentdirectory_contentdirectory_with_http_info(uu_id, async_req=True)
@@ -278,7 +278,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/contentdirectory/contentdirectory', 'GET',
@@ -299,7 +299,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_contentdirectory_contentdirectory_xml(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna content directory xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_contentdirectory_contentdirectory_xml(uu_id, async_req=True)
@@ -321,7 +321,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_contentdirectory_contentdirectory_xml_with_http_info(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna content directory xml  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_contentdirectory_contentdirectory_xml_with_http_info(uu_id, async_req=True)
@@ -369,7 +369,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/contentdirectory/contentdirectory.xml', 'GET',
@@ -390,7 +390,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_description(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna server info  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_description(uu_id, async_req=True)
@@ -412,7 +412,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_description_with_http_info(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna server info  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_description_with_http_info(uu_id, async_req=True)
@@ -460,7 +460,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/description', 'GET',
@@ -481,7 +481,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_description_xml(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna server info  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_description_xml(uu_id, async_req=True)
@@ -503,7 +503,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_description_xml_with_http_info(self, uu_id, **kwargs):  # noqa: E501
         """Gets dlna server info  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_description_xml_with_http_info(uu_id, async_req=True)
@@ -551,7 +551,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/description.xml', 'GET',
@@ -572,7 +572,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_icons_by_filename(self, uu_id, filename, **kwargs):  # noqa: E501
         """Gets a server icon  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_icons_by_filename(uu_id, filename, async_req=True)
@@ -595,7 +595,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_by_uuid_icons_by_filename_with_http_info(self, uu_id, filename, **kwargs):  # noqa: E501
         """Gets a server icon  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_by_uuid_icons_by_filename_with_http_info(uu_id, filename, async_req=True)
@@ -650,7 +650,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/icons/{Filename}', 'GET',
@@ -671,7 +671,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_icons_by_filename(self, filename, **kwargs):  # noqa: E501
         """Gets a server icon  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_icons_by_filename(filename, async_req=True)
@@ -694,7 +694,7 @@ class DlnaServerServiceApi(object):
     def get_dlna_icons_by_filename_with_http_info(self, filename, **kwargs):  # noqa: E501
         """Gets a server icon  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dlna_icons_by_filename_with_http_info(filename, async_req=True)
@@ -745,7 +745,7 @@ class DlnaServerServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/icons/{Filename}', 'GET',
@@ -766,7 +766,7 @@ class DlnaServerServiceApi(object):
     def post_dlna_by_uuid_connectionmanager_control(self, body, uu_id, **kwargs):  # noqa: E501
         """Processes a control request  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_dlna_by_uuid_connectionmanager_control(body, uu_id, async_req=True)
@@ -789,7 +789,7 @@ class DlnaServerServiceApi(object):
     def post_dlna_by_uuid_connectionmanager_control_with_http_info(self, body, uu_id, **kwargs):  # noqa: E501
         """Processes a control request  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_dlna_by_uuid_connectionmanager_control_with_http_info(body, uu_id, async_req=True)
@@ -848,7 +848,7 @@ class DlnaServerServiceApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/connectionmanager/control', 'POST',
@@ -869,7 +869,7 @@ class DlnaServerServiceApi(object):
     def post_dlna_by_uuid_contentdirectory_control(self, body, uu_id, **kwargs):  # noqa: E501
         """Processes a control request  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_dlna_by_uuid_contentdirectory_control(body, uu_id, async_req=True)
@@ -892,7 +892,7 @@ class DlnaServerServiceApi(object):
     def post_dlna_by_uuid_contentdirectory_control_with_http_info(self, body, uu_id, **kwargs):  # noqa: E501
         """Processes a control request  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        No authentication required  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_dlna_by_uuid_contentdirectory_control_with_http_info(body, uu_id, async_req=True)
@@ -951,7 +951,7 @@ class DlnaServerServiceApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/Dlna/{UuId}/contentdirectory/control', 'POST',

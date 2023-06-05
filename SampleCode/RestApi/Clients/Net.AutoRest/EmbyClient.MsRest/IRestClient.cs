@@ -12680,7 +12680,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -12697,7 +12697,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -12714,7 +12714,7 @@ namespace EmbyClient.MsRest
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='filename'>
         /// The icon filename
@@ -17755,7 +17755,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17772,7 +17772,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17789,7 +17789,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17806,7 +17806,7 @@ namespace EmbyClient.MsRest
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId
@@ -17823,7 +17823,7 @@ namespace EmbyClient.MsRest
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='body'>
         /// Binary stream
@@ -17843,7 +17843,7 @@ namespace EmbyClient.MsRest
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='body'>
         /// Binary stream
@@ -17863,7 +17863,7 @@ namespace EmbyClient.MsRest
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <param name='uuId'>
         /// Server UuId

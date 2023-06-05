@@ -12,7 +12,7 @@ type UsersUserPolicy struct {
 	IsHiddenRemotely bool `json:"IsHiddenRemotely,omitempty"`
 	IsHiddenFromUnusedDevices bool `json:"IsHiddenFromUnusedDevices,omitempty"`
 	IsDisabled bool `json:"IsDisabled,omitempty"`
-	LockedOutDate int32 `json:"LockedOutDate,omitempty"`
+	LockedOutDate int64 `json:"LockedOutDate,omitempty"`
 	MaxParentalRating int32 `json:"MaxParentalRating,omitempty"`
 	AllowTagOrRating bool `json:"AllowTagOrRating,omitempty"`
 	BlockedTags []string `json:"BlockedTags,omitempty"`

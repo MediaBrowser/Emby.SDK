@@ -15,7 +15,7 @@ import EmbyDlnaProfilesDlnaProfile from '../model/EmbyDlnaProfilesDlnaProfile';
 /**
 * DlnaService service.
 * @module EmbyClient.JavaScript.Beta/DlnaServiceApi
-* @version 4.8.0.38
+* @version 4.8.0.39
 */
 export default class DlnaServiceApi {
 

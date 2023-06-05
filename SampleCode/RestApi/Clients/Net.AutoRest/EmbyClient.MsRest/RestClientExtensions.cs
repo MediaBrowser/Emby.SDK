@@ -26211,7 +26211,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26228,7 +26228,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26248,7 +26248,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26265,7 +26265,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna server info
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26285,7 +26285,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -26305,7 +26305,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36974,7 +36974,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -36991,7 +36991,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37011,7 +37011,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37028,7 +37028,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna content directory xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37048,7 +37048,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37065,7 +37065,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37085,7 +37085,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37102,7 +37102,7 @@ namespace EmbyClient.MsRest
             /// Gets dlna connection manager xml
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37122,7 +37122,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37142,7 +37142,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37165,7 +37165,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37185,7 +37185,7 @@ namespace EmbyClient.MsRest
             /// Processes a control request
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37208,7 +37208,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
@@ -37228,7 +37228,7 @@ namespace EmbyClient.MsRest
             /// Gets a server icon
             /// </summary>
             /// <remarks>
-            /// Requires authentication as user
+            /// No authentication required
             /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.

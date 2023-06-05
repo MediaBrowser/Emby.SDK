@@ -26,7 +26,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets dlna connection manager xml
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -41,7 +41,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets dlna connection manager xml
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -56,7 +56,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets dlna content directory xml
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets dlna content directory xml
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -86,7 +86,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets dlna server info
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -101,7 +101,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets dlna server info
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -116,7 +116,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets a server icon
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -132,7 +132,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Gets a server icon
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -148,7 +148,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Processes a control request
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails
@@ -164,7 +164,7 @@ public class DlnaServerServiceApiTest {
     /**
      * Processes a control request
      *
-     * Requires authentication as user
+     * No authentication required
      *
      * @throws Exception
      *          if the Api call fails

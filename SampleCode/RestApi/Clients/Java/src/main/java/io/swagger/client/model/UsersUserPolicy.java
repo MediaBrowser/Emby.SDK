@@ -40,7 +40,7 @@ public class UsersUserPolicy {
   private Boolean isDisabled = null;
 
   @SerializedName("LockedOutDate")
-  private Integer lockedOutDate = null;
+  private Long lockedOutDate = null;
 
   @SerializedName("MaxParentalRating")
   private Integer maxParentalRating = null;
@@ -246,7 +246,7 @@ public class UsersUserPolicy {
     this.isDisabled = isDisabled;
   }
 
-  public UsersUserPolicy lockedOutDate(Integer lockedOutDate) {
+  public UsersUserPolicy lockedOutDate(Long lockedOutDate) {
     this.lockedOutDate = lockedOutDate;
     return this;
   }
@@ -256,11 +256,11 @@ public class UsersUserPolicy {
    * @return lockedOutDate
   **/
   @Schema(description = "")
-  public Integer getLockedOutDate() {
+  public Long getLockedOutDate() {
     return lockedOutDate;
   }
 
-  public void setLockedOutDate(Integer lockedOutDate) {
+  public void setLockedOutDate(Long lockedOutDate) {
     this.lockedOutDate = lockedOutDate;
   }
 

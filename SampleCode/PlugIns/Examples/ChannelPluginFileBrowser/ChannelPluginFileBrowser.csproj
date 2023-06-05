@@ -23,7 +23,7 @@
     <EmbeddedResource Include="thumb.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.38-beta" />
+    <PackageReference Include="MediaBrowser.Server.Core" Version="4.8.0.39-beta" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

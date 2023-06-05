@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The DevicesDeviceOptions model module.
 * @module model/DevicesDeviceOptions
-* @version 4.8.0.38
+* @version 4.8.0.39
 */
 export default class DevicesDeviceOptions {
     /**

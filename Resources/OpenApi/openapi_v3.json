@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.38"
+    "version": "4.8.0.39"
   },
   "servers": [
     {
@@ -39568,7 +39568,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna server info",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaByUuidDescriptionXml",
         "parameters": [
           {
@@ -39589,12 +39589,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -39602,15 +39596,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/description": {
@@ -39620,7 +39606,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna server info",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaByUuidDescription",
         "parameters": [
           {
@@ -39641,12 +39627,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -39654,15 +39634,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/icons/{Filename}": {
@@ -39672,7 +39644,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets a server icon",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaIconsByFilename",
         "parameters": [
           {
@@ -39703,12 +39675,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -39716,15 +39682,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/Profiles/{Id}": {
@@ -56286,7 +56244,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna content directory xml",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaByUuidContentdirectoryContentdirectoryXml",
         "parameters": [
           {
@@ -56307,12 +56265,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -56320,15 +56272,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/contentdirectory/contentdirectory": {
@@ -56338,7 +56282,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna content directory xml",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaByUuidContentdirectoryContentdirectory",
         "parameters": [
           {
@@ -56359,12 +56303,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -56372,15 +56310,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/connectionmanager/connectionmanager.xml": {
@@ -56390,7 +56320,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna connection manager xml",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaByUuidConnectionmanagerConnectionmanagerXml",
         "parameters": [
           {
@@ -56411,12 +56341,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -56424,15 +56348,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/connectionmanager/connectionmanager": {
@@ -56442,7 +56358,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets dlna connection manager xml",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaByUuidConnectionmanagerConnectionmanager",
         "parameters": [
           {
@@ -56463,12 +56379,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -56476,15 +56386,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/contentdirectory/control": {
@@ -56494,7 +56396,7 @@
           "DlnaServerService"
         ],
         "summary": "Processes a control request",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "postDlnaByUuidContentdirectoryControl",
         "parameters": [
           {
@@ -56527,12 +56429,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -56540,15 +56436,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/connectionmanager/control": {
@@ -56558,7 +56446,7 @@
           "DlnaServerService"
         ],
         "summary": "Processes a control request",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "postDlnaByUuidConnectionmanagerControl",
         "parameters": [
           {
@@ -56591,12 +56479,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -56604,15 +56486,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/icons/{Filename}": {
@@ -56622,7 +56496,7 @@
           "DlnaServerService"
         ],
         "summary": "Gets a server icon",
-        "description": "Requires authentication as user",
+        "description": "No authentication required",
         "operationId": "getDlnaByUuidIconsByFilename",
         "parameters": [
           {
@@ -56653,12 +56527,6 @@
           "400": {
             "$ref": "#/components/responses/400"
           },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
           "404": {
             "$ref": "#/components/responses/404"
           },
@@ -56666,15 +56534,7 @@
             "$ref": "#/components/responses/500"
           }
         },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/GameGenres/{Name}/Images/{Type}": {
@@ -77346,7 +77206,7 @@
           },
           "LockedOutDate": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "MaxParentalRating": {
             "type": "integer",

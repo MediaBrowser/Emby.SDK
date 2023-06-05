@@ -21,7 +21,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -32,7 +32,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -42,7 +42,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -53,7 +53,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -63,7 +63,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -74,7 +74,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -84,7 +84,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -95,7 +95,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -105,7 +105,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -116,7 +116,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -126,7 +126,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -137,7 +137,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -147,7 +147,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -159,7 +159,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -170,7 +170,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -182,7 +182,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -193,7 +193,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -205,7 +205,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -216,7 +216,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -228,7 +228,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -241,7 +241,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -252,7 +252,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -262,7 +262,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -273,7 +273,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna connection manager xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -283,7 +283,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -294,7 +294,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -304,7 +304,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -315,7 +315,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna content directory xml
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -325,7 +325,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -336,7 +336,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -346,7 +346,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -357,7 +357,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets dlna server info
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -367,7 +367,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -379,7 +379,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -390,7 +390,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -402,7 +402,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets a server icon
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -413,7 +413,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -425,7 +425,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -436,7 +436,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -448,7 +448,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Processes a control request
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -567,7 +567,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -578,7 +578,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -610,17 +610,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -641,7 +630,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -653,7 +642,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -685,17 +674,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -716,7 +694,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -727,7 +705,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -759,17 +737,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -790,7 +757,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -802,7 +769,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna connection manager xml Requires authentication as user
+        /// Gets dlna connection manager xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -834,17 +801,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -865,7 +821,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -876,7 +832,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -908,17 +864,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -939,7 +884,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -951,7 +896,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -983,17 +928,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1014,7 +948,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1025,7 +959,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1057,17 +991,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1088,7 +1011,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1100,7 +1023,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna content directory xml Requires authentication as user
+        /// Gets dlna content directory xml No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1132,17 +1055,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1163,7 +1075,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1174,7 +1086,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1206,17 +1118,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1237,7 +1138,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1249,7 +1150,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1281,17 +1182,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1312,7 +1202,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1323,7 +1213,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1355,17 +1245,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1386,7 +1265,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1398,7 +1277,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets dlna server info Requires authentication as user
+        /// Gets dlna server info No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1430,17 +1309,6 @@ namespace EmbyClient.Dotnet.Beta.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1461,7 +1329,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1473,7 +1341,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1510,17 +1378,6 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
             if (filename != null) localVarPathParams.Add("Filename", this.Configuration.ApiClient.ParameterToString(filename)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1541,7 +1398,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1554,7 +1411,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uuId">Server UuId</param>
@@ -1591,17 +1448,6 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
             if (filename != null) localVarPathParams.Add("Filename", this.Configuration.ApiClient.ParameterToString(filename)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1622,7 +1468,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -1634,7 +1480,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -1668,17 +1514,6 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (filename != null) localVarPathParams.Add("Filename", this.Configuration.ApiClient.ParameterToString(filename)); // path parameter
             if (uuId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UuId", uuId)); // query parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1699,7 +1534,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -1712,7 +1547,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Gets a server icon Requires authentication as user
+        /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The icon filename</param>
@@ -1746,17 +1581,6 @@ namespace EmbyClient.Dotnet.Beta.Api
 
             if (filename != null) localVarPathParams.Add("Filename", this.Configuration.ApiClient.ParameterToString(filename)); // path parameter
             if (uuId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UuId", uuId)); // query parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1777,7 +1601,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -1789,7 +1613,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -1834,17 +1658,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1865,7 +1678,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -1878,7 +1691,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -1923,17 +1736,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1954,7 +1756,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -1966,7 +1768,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -2011,17 +1813,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2042,7 +1833,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -2055,7 +1846,7 @@ namespace EmbyClient.Dotnet.Beta.Api
         }
 
         /// <summary>
-        /// Processes a control request Requires authentication as user
+        /// Processes a control request No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
@@ -2099,17 +1890,6 @@ namespace EmbyClient.Dotnet.Beta.Api
             else
             {
                 localVarPostBody = body; // byte array
-            }
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
