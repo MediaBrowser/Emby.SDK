@@ -23,7 +23,7 @@ namespace EmbyClient.MsRest.Models
         /// Initializes a new instance of the UsersForgotPasswordResult class.
         /// </summary>
         /// <param name="action">Possible values include: 'ContactAdmin',
-        /// 'PinCode', 'InNetworkRequired'</param>
+        /// 'PinCode'</param>
         public UsersForgotPasswordResult(string action = default(string), string pinFile = default(string), System.DateTime? pinExpirationDate = default(System.DateTime?))
         {
             Action = action;
@@ -38,8 +38,7 @@ namespace EmbyClient.MsRest.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets possible values include: 'ContactAdmin', 'PinCode',
-        /// 'InNetworkRequired'
+        /// Gets or sets possible values include: 'ContactAdmin', 'PinCode'
         /// </summary>
         [JsonProperty(PropertyName = "Action")]
         public string Action { get; set; }

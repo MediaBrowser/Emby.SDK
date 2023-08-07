@@ -61,6 +61,7 @@ type ConfigurationServerConfiguration struct {
 	DatabaseAnalysisLimit int32 `json:"DatabaseAnalysisLimit,omitempty"`
 	DisableAsyncIO bool `json:"DisableAsyncIO,omitempty"`
 	MigratedToUserItemShares bool `json:"MigratedToUserItemShares,omitempty"`
+	ProxyHeaderMode *ConfigurationProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`
 	EnableDebugLevelLogging bool `json:"EnableDebugLevelLogging,omitempty"`
 	RevertDebugLogging string `json:"RevertDebugLogging,omitempty"`
 	EnableAutoUpdate bool `json:"EnableAutoUpdate,omitempty"`

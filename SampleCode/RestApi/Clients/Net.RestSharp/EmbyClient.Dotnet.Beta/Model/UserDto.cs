@@ -37,14 +37,14 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="primaryImageTag">primaryImageTag.</param>
         /// <param name="hasPassword">hasPassword.</param>
         /// <param name="hasConfiguredPassword">hasConfiguredPassword.</param>
-        /// <param name="hasConfiguredEasyPassword">hasConfiguredEasyPassword.</param>
         /// <param name="enableAutoLogin">enableAutoLogin.</param>
         /// <param name="lastLoginDate">lastLoginDate.</param>
         /// <param name="lastActivityDate">lastActivityDate.</param>
         /// <param name="configuration">configuration.</param>
         /// <param name="policy">policy.</param>
         /// <param name="primaryImageAspectRatio">primaryImageAspectRatio.</param>
-        public UserDto(string name = default(string), string serverId = default(string), string serverName = default(string), string prefix = default(string), string connectUserName = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), ConnectUserLinkType connectLinkType = default(ConnectUserLinkType), string id = default(string), string primaryImageTag = default(string), bool? hasPassword = default(bool?), bool? hasConfiguredPassword = default(bool?), bool? hasConfiguredEasyPassword = default(bool?), bool? enableAutoLogin = default(bool?), DateTimeOffset? lastLoginDate = default(DateTimeOffset?), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), ConfigurationUserConfiguration configuration = default(ConfigurationUserConfiguration), UsersUserPolicy policy = default(UsersUserPolicy), double? primaryImageAspectRatio = default(double?))
+        /// <param name="hasConfiguredEasyPassword">hasConfiguredEasyPassword.</param>
+        public UserDto(string name = default(string), string serverId = default(string), string serverName = default(string), string prefix = default(string), string connectUserName = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), ConnectUserLinkType connectLinkType = default(ConnectUserLinkType), string id = default(string), string primaryImageTag = default(string), bool? hasPassword = default(bool?), bool? hasConfiguredPassword = default(bool?), bool? enableAutoLogin = default(bool?), DateTimeOffset? lastLoginDate = default(DateTimeOffset?), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), ConfigurationUserConfiguration configuration = default(ConfigurationUserConfiguration), UsersUserPolicy policy = default(UsersUserPolicy), double? primaryImageAspectRatio = default(double?), bool? hasConfiguredEasyPassword = default(bool?))
         {
             this.Name = name;
             this.ServerId = serverId;
@@ -57,13 +57,13 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.PrimaryImageTag = primaryImageTag;
             this.HasPassword = hasPassword;
             this.HasConfiguredPassword = hasConfiguredPassword;
-            this.HasConfiguredEasyPassword = hasConfiguredEasyPassword;
             this.EnableAutoLogin = enableAutoLogin;
             this.LastLoginDate = lastLoginDate;
             this.LastActivityDate = lastActivityDate;
             this.Configuration = configuration;
             this.Policy = policy;
             this.PrimaryImageAspectRatio = primaryImageAspectRatio;
+            this.HasConfiguredEasyPassword = hasConfiguredEasyPassword;
         }
         
         /// <summary>
@@ -133,12 +133,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? HasConfiguredPassword { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasConfiguredEasyPassword
-        /// </summary>
-        [DataMember(Name="HasConfiguredEasyPassword", EmitDefaultValue=false)]
-        public bool? HasConfiguredEasyPassword { get; set; }
-
-        /// <summary>
         /// Gets or Sets EnableAutoLogin
         /// </summary>
         [DataMember(Name="EnableAutoLogin", EmitDefaultValue=false)]
@@ -175,6 +169,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public double? PrimaryImageAspectRatio { get; set; }
 
         /// <summary>
+        /// Gets or Sets HasConfiguredEasyPassword
+        /// </summary>
+        [DataMember(Name="HasConfiguredEasyPassword", EmitDefaultValue=false)]
+        public bool? HasConfiguredEasyPassword { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -193,13 +193,13 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  PrimaryImageTag: ").Append(PrimaryImageTag).Append("\n");
             sb.Append("  HasPassword: ").Append(HasPassword).Append("\n");
             sb.Append("  HasConfiguredPassword: ").Append(HasConfiguredPassword).Append("\n");
-            sb.Append("  HasConfiguredEasyPassword: ").Append(HasConfiguredEasyPassword).Append("\n");
             sb.Append("  EnableAutoLogin: ").Append(EnableAutoLogin).Append("\n");
             sb.Append("  LastLoginDate: ").Append(LastLoginDate).Append("\n");
             sb.Append("  LastActivityDate: ").Append(LastActivityDate).Append("\n");
             sb.Append("  Configuration: ").Append(Configuration).Append("\n");
             sb.Append("  Policy: ").Append(Policy).Append("\n");
             sb.Append("  PrimaryImageAspectRatio: ").Append(PrimaryImageAspectRatio).Append("\n");
+            sb.Append("  HasConfiguredEasyPassword: ").Append(HasConfiguredEasyPassword).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -290,11 +290,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.HasConfiguredPassword.Equals(input.HasConfiguredPassword))
                 ) && 
                 (
-                    this.HasConfiguredEasyPassword == input.HasConfiguredEasyPassword ||
-                    (this.HasConfiguredEasyPassword != null &&
-                    this.HasConfiguredEasyPassword.Equals(input.HasConfiguredEasyPassword))
-                ) && 
-                (
                     this.EnableAutoLogin == input.EnableAutoLogin ||
                     (this.EnableAutoLogin != null &&
                     this.EnableAutoLogin.Equals(input.EnableAutoLogin))
@@ -323,6 +318,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.PrimaryImageAspectRatio == input.PrimaryImageAspectRatio ||
                     (this.PrimaryImageAspectRatio != null &&
                     this.PrimaryImageAspectRatio.Equals(input.PrimaryImageAspectRatio))
+                ) && 
+                (
+                    this.HasConfiguredEasyPassword == input.HasConfiguredEasyPassword ||
+                    (this.HasConfiguredEasyPassword != null &&
+                    this.HasConfiguredEasyPassword.Equals(input.HasConfiguredEasyPassword))
                 );
         }
 
@@ -357,8 +357,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.HasPassword.GetHashCode();
                 if (this.HasConfiguredPassword != null)
                     hashCode = hashCode * 59 + this.HasConfiguredPassword.GetHashCode();
-                if (this.HasConfiguredEasyPassword != null)
-                    hashCode = hashCode * 59 + this.HasConfiguredEasyPassword.GetHashCode();
                 if (this.EnableAutoLogin != null)
                     hashCode = hashCode * 59 + this.EnableAutoLogin.GetHashCode();
                 if (this.LastLoginDate != null)
@@ -371,6 +369,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.Policy.GetHashCode();
                 if (this.PrimaryImageAspectRatio != null)
                     hashCode = hashCode * 59 + this.PrimaryImageAspectRatio.GetHashCode();
+                if (this.HasConfiguredEasyPassword != null)
+                    hashCode = hashCode * 59 + this.HasConfiguredEasyPassword.GetHashCode();
                 return hashCode;
             }
         }

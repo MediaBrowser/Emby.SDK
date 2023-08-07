@@ -837,12 +837,12 @@
   
   
   <a id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackProgress_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackProgress*"></a>
-  <h4 id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackProgress_MediaBrowser_Model_Session_PlaybackProgressInfo_System_Boolean_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackProgress(MediaBrowser.Model.Session.PlaybackProgressInfo,System.Boolean)">OnPlaybackProgress(PlaybackProgressInfo, Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackProgress_MediaBrowser_Model_Session_PlaybackProgressInfo_MediaBrowser_Controller_Session_SessionInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackProgress(MediaBrowser.Model.Session.PlaybackProgressInfo,MediaBrowser.Controller.Session.SessionInfo)">OnPlaybackProgress(PlaybackProgressInfo, SessionInfo)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task OnPlaybackProgress(PlaybackProgressInfo info, bool isAutomated)</code></pre>
+    <pre><code class="lang-csharp hljs">Task OnPlaybackProgress(PlaybackProgressInfo info, SessionInfo sessionInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -857,6 +857,58 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackProgressInfo.html">PlaybackProgressInfo</a></td>
         <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">sessionInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackProgress_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackProgress*"></a>
+  <h4 id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackProgress_MediaBrowser_Model_Session_PlaybackProgressInfo_MediaBrowser_Controller_Session_SessionInfo_System_Boolean_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackProgress(MediaBrowser.Model.Session.PlaybackProgressInfo,MediaBrowser.Controller.Session.SessionInfo,System.Boolean)">OnPlaybackProgress(PlaybackProgressInfo, SessionInfo, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task OnPlaybackProgress(PlaybackProgressInfo info, SessionInfo sessionInfo, bool isAutomated)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackProgressInfo.html">PlaybackProgressInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">sessionInfo</span></td>
         <td></td>
       </tr>
       <tr>
@@ -928,6 +980,53 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackStart_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackStart*"></a>
+  <h4 id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackStart_MediaBrowser_Model_Session_PlaybackStartInfo_MediaBrowser_Controller_Session_SessionInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackStart(MediaBrowser.Model.Session.PlaybackStartInfo,MediaBrowser.Controller.Session.SessionInfo)">OnPlaybackStart(PlaybackStartInfo, SessionInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task OnPlaybackStart(PlaybackStartInfo info, SessionInfo sessionInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackStartInfo.html">PlaybackStartInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">sessionInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackStopped_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackStopped*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackStopped_MediaBrowser_Model_Session_PlaybackStopInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackStopped(MediaBrowser.Model.Session.PlaybackStopInfo)">OnPlaybackStopped(PlaybackStopInfo)</h4>
   <div class="markdown level1 summary"><p>Used to report that playback has ended for an item</p>
@@ -982,6 +1081,53 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackStopped_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackStopped*"></a>
+  <h4 id="MediaBrowser_Controller_Session_ISessionManager_OnPlaybackStopped_MediaBrowser_Model_Session_PlaybackStopInfo_MediaBrowser_Controller_Session_SessionInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.OnPlaybackStopped(MediaBrowser.Model.Session.PlaybackStopInfo,MediaBrowser.Controller.Session.SessionInfo)">OnPlaybackStopped(PlaybackStopInfo, SessionInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task OnPlaybackStopped(PlaybackStopInfo info, SessionInfo sessionInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackStopInfo.html">PlaybackStopInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">sessionInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1050,6 +1196,38 @@
         <td><span class="parametername">userId</span></td>
         <td><p>The user identifier.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Session_ISessionManager_ReportCapabilities_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ReportCapabilities*"></a>
+  <h4 id="MediaBrowser_Controller_Session_ISessionManager_ReportCapabilities_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_Session_ClientCapabilities_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ReportCapabilities(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Model.Session.ClientCapabilities)">ReportCapabilities(SessionInfo, ClientCapabilities)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ReportCapabilities(SessionInfo session, ClientCapabilities capabilities)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.ClientCapabilities.html">ClientCapabilities</a></td>
+        <td><span class="parametername">capabilities</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

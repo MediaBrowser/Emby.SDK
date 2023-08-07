@@ -17,7 +17,7 @@ import UsersUserPolicy from './UsersUserPolicy';
 /**
 * The UserDto model module.
 * @module model/UserDto
-* @version 4.8.0.39
+* @version 4.8.0.40
 */
 export default class UserDto {
     /**
@@ -77,9 +77,6 @@ export default class UserDto {
             if (data.hasOwnProperty('HasConfiguredPassword')) {
                 obj['HasConfiguredPassword'] = ApiClient.convertToType(data['HasConfiguredPassword'], 'Boolean');
             }
-            if (data.hasOwnProperty('HasConfiguredEasyPassword')) {
-                obj['HasConfiguredEasyPassword'] = ApiClient.convertToType(data['HasConfiguredEasyPassword'], 'Boolean');
-            }
             if (data.hasOwnProperty('EnableAutoLogin')) {
                 obj['EnableAutoLogin'] = ApiClient.convertToType(data['EnableAutoLogin'], 'Boolean');
             }
@@ -97,6 +94,9 @@ export default class UserDto {
             }
             if (data.hasOwnProperty('PrimaryImageAspectRatio')) {
                 obj['PrimaryImageAspectRatio'] = ApiClient.convertToType(data['PrimaryImageAspectRatio'], 'Number');
+            }
+            if (data.hasOwnProperty('HasConfiguredEasyPassword')) {
+                obj['HasConfiguredEasyPassword'] = ApiClient.convertToType(data['HasConfiguredEasyPassword'], 'Boolean');
             }
         }
         return obj;
@@ -147,10 +147,6 @@ export default class UserDto {
     */
     'HasConfiguredPassword' = undefined;
     /**
-    * @member {Boolean} HasConfiguredEasyPassword
-    */
-    'HasConfiguredEasyPassword' = undefined;
-    /**
     * @member {Boolean} EnableAutoLogin
     */
     'EnableAutoLogin' = undefined;
@@ -174,6 +170,10 @@ export default class UserDto {
     * @member {Number} PrimaryImageAspectRatio
     */
     'PrimaryImageAspectRatio' = undefined;
+    /**
+    * @member {Boolean} HasConfiguredEasyPassword
+    */
+    'HasConfiguredEasyPassword' = undefined;
 
 
 

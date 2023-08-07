@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.39
+ * OpenAPI spec version: 4.8.0.40
  * 
  *
  * NOTE: This file is auto generated.
@@ -233,6 +233,39 @@ describe("AudioServiceApi", () => {
     instance = new api.AudioServiceApi(config)
   });
 
+  test("getAudioByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const profile: string = "profile_example"
+    const level: string = "level_example"
+    const framerate: number = 3.4
+    const maxFramerate: number = 3.4
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const maxRefFrames: number = 56
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.getAudioByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
   test("getAudioByIdStream", () => {
     const id: string = "id_example"
     const container: string = "container_example"
@@ -296,6 +329,39 @@ describe("AudioServiceApi", () => {
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
     return expect(instance.getAudioByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
+  test("headAudioByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const profile: string = "profile_example"
+    const level: string = "level_example"
+    const framerate: number = 3.4
+    const maxFramerate: number = 3.4
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const maxRefFrames: number = 56
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.headAudioByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("headAudioByIdStream", () => {
     const id: string = "id_example"
@@ -6341,11 +6407,6 @@ describe("UserServiceApi", () => {
     const id: string = "id_example"
     return expect(instance.postUsersByIdDelete(id, {})).resolves.toBe(null)
   })
-  test("postUsersByIdEasypassword", () => {
-    const body: api.UpdateUserEasyPassword = undefined
-    const id: string = "id_example"
-    return expect(instance.postUsersByIdEasypassword(body, id, {})).resolves.toBe(null)
-  })
   test("postUsersByIdPassword", () => {
     const body: api.UpdateUserPassword = undefined
     const id: string = "id_example"
@@ -6447,6 +6508,39 @@ describe("VideoServiceApi", () => {
     instance = new api.VideoServiceApi(config)
   });
 
+  test("getVideosByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const profile: string = "profile_example"
+    const level: string = "level_example"
+    const framerate: number = 3.4
+    const maxFramerate: number = 3.4
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const maxRefFrames: number = 56
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.getVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
   test("getVideosByIdStream", () => {
     const id: string = "id_example"
     const container: string = "container_example"
@@ -6510,6 +6604,39 @@ describe("VideoServiceApi", () => {
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
     return expect(instance.getVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
+  test("headVideosByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const profile: string = "profile_example"
+    const level: string = "level_example"
+    const framerate: number = 3.4
+    const maxFramerate: number = 3.4
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const maxRefFrames: number = 56
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.headVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("headVideosByIdStream", () => {
     const id: string = "id_example"

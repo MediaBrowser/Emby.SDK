@@ -39,9 +39,6 @@ public class ConfigurationUserConfiguration {
   @SerializedName("SubtitleMode")
   private ConfigurationSubtitlePlaybackMode subtitleMode = null;
 
-  @SerializedName("EnableLocalPassword")
-  private Boolean enableLocalPassword = null;
-
   @SerializedName("OrderedViews")
   private List<String> orderedViews = null;
 
@@ -68,6 +65,9 @@ public class ConfigurationUserConfiguration {
 
   @SerializedName("IntroSkipMode")
   private ConfigurationSegmentSkipMode introSkipMode = null;
+
+  @SerializedName("EnableLocalPassword")
+  private Boolean enableLocalPassword = null;
 
   public ConfigurationUserConfiguration audioLanguagePreference(String audioLanguagePreference) {
     this.audioLanguagePreference = audioLanguagePreference;
@@ -157,24 +157,6 @@ public class ConfigurationUserConfiguration {
 
   public void setSubtitleMode(ConfigurationSubtitlePlaybackMode subtitleMode) {
     this.subtitleMode = subtitleMode;
-  }
-
-  public ConfigurationUserConfiguration enableLocalPassword(Boolean enableLocalPassword) {
-    this.enableLocalPassword = enableLocalPassword;
-    return this;
-  }
-
-   /**
-   * Get enableLocalPassword
-   * @return enableLocalPassword
-  **/
-  @Schema(description = "")
-  public Boolean isEnableLocalPassword() {
-    return enableLocalPassword;
-  }
-
-  public void setEnableLocalPassword(Boolean enableLocalPassword) {
-    this.enableLocalPassword = enableLocalPassword;
   }
 
   public ConfigurationUserConfiguration orderedViews(List<String> orderedViews) {
@@ -363,6 +345,24 @@ public class ConfigurationUserConfiguration {
     this.introSkipMode = introSkipMode;
   }
 
+  public ConfigurationUserConfiguration enableLocalPassword(Boolean enableLocalPassword) {
+    this.enableLocalPassword = enableLocalPassword;
+    return this;
+  }
+
+   /**
+   * Get enableLocalPassword
+   * @return enableLocalPassword
+  **/
+  @Schema(description = "")
+  public Boolean isEnableLocalPassword() {
+    return enableLocalPassword;
+  }
+
+  public void setEnableLocalPassword(Boolean enableLocalPassword) {
+    this.enableLocalPassword = enableLocalPassword;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -378,7 +378,6 @@ public class ConfigurationUserConfiguration {
         Objects.equals(this.subtitleLanguagePreference, configurationUserConfiguration.subtitleLanguagePreference) &&
         Objects.equals(this.displayMissingEpisodes, configurationUserConfiguration.displayMissingEpisodes) &&
         Objects.equals(this.subtitleMode, configurationUserConfiguration.subtitleMode) &&
-        Objects.equals(this.enableLocalPassword, configurationUserConfiguration.enableLocalPassword) &&
         Objects.equals(this.orderedViews, configurationUserConfiguration.orderedViews) &&
         Objects.equals(this.latestItemsExcludes, configurationUserConfiguration.latestItemsExcludes) &&
         Objects.equals(this.myMediaExcludes, configurationUserConfiguration.myMediaExcludes) &&
@@ -387,12 +386,13 @@ public class ConfigurationUserConfiguration {
         Objects.equals(this.rememberSubtitleSelections, configurationUserConfiguration.rememberSubtitleSelections) &&
         Objects.equals(this.enableNextEpisodeAutoPlay, configurationUserConfiguration.enableNextEpisodeAutoPlay) &&
         Objects.equals(this.resumeRewindSeconds, configurationUserConfiguration.resumeRewindSeconds) &&
-        Objects.equals(this.introSkipMode, configurationUserConfiguration.introSkipMode);
+        Objects.equals(this.introSkipMode, configurationUserConfiguration.introSkipMode) &&
+        Objects.equals(this.enableLocalPassword, configurationUserConfiguration.enableLocalPassword);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, displayMissingEpisodes, subtitleMode, enableLocalPassword, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode);
+    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, enableLocalPassword);
   }
 
 
@@ -406,7 +406,6 @@ public class ConfigurationUserConfiguration {
     sb.append("    subtitleLanguagePreference: ").append(toIndentedString(subtitleLanguagePreference)).append("\n");
     sb.append("    displayMissingEpisodes: ").append(toIndentedString(displayMissingEpisodes)).append("\n");
     sb.append("    subtitleMode: ").append(toIndentedString(subtitleMode)).append("\n");
-    sb.append("    enableLocalPassword: ").append(toIndentedString(enableLocalPassword)).append("\n");
     sb.append("    orderedViews: ").append(toIndentedString(orderedViews)).append("\n");
     sb.append("    latestItemsExcludes: ").append(toIndentedString(latestItemsExcludes)).append("\n");
     sb.append("    myMediaExcludes: ").append(toIndentedString(myMediaExcludes)).append("\n");
@@ -416,6 +415,7 @@ public class ConfigurationUserConfiguration {
     sb.append("    enableNextEpisodeAutoPlay: ").append(toIndentedString(enableNextEpisodeAutoPlay)).append("\n");
     sb.append("    resumeRewindSeconds: ").append(toIndentedString(resumeRewindSeconds)).append("\n");
     sb.append("    introSkipMode: ").append(toIndentedString(introSkipMode)).append("\n");
+    sb.append("    enableLocalPassword: ").append(toIndentedString(enableLocalPassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }

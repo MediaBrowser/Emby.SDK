@@ -31,7 +31,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="subtitleLanguagePreference">subtitleLanguagePreference.</param>
         /// <param name="displayMissingEpisodes">displayMissingEpisodes.</param>
         /// <param name="subtitleMode">subtitleMode.</param>
-        /// <param name="enableLocalPassword">enableLocalPassword.</param>
         /// <param name="orderedViews">orderedViews.</param>
         /// <param name="latestItemsExcludes">latestItemsExcludes.</param>
         /// <param name="myMediaExcludes">myMediaExcludes.</param>
@@ -41,14 +40,14 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="enableNextEpisodeAutoPlay">enableNextEpisodeAutoPlay.</param>
         /// <param name="resumeRewindSeconds">resumeRewindSeconds.</param>
         /// <param name="introSkipMode">introSkipMode.</param>
-        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), bool? displayMissingEpisodes = default(bool?), ConfigurationSubtitlePlaybackMode subtitleMode = default(ConfigurationSubtitlePlaybackMode), bool? enableLocalPassword = default(bool?), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), ConfigurationSegmentSkipMode introSkipMode = default(ConfigurationSegmentSkipMode))
+        /// <param name="enableLocalPassword">enableLocalPassword.</param>
+        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), bool? displayMissingEpisodes = default(bool?), ConfigurationSubtitlePlaybackMode subtitleMode = default(ConfigurationSubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), ConfigurationSegmentSkipMode introSkipMode = default(ConfigurationSegmentSkipMode), bool? enableLocalPassword = default(bool?))
         {
             this.AudioLanguagePreference = audioLanguagePreference;
             this.PlayDefaultAudioTrack = playDefaultAudioTrack;
             this.SubtitleLanguagePreference = subtitleLanguagePreference;
             this.DisplayMissingEpisodes = displayMissingEpisodes;
             this.SubtitleMode = subtitleMode;
-            this.EnableLocalPassword = enableLocalPassword;
             this.OrderedViews = orderedViews;
             this.LatestItemsExcludes = latestItemsExcludes;
             this.MyMediaExcludes = myMediaExcludes;
@@ -58,6 +57,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.EnableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay;
             this.ResumeRewindSeconds = resumeRewindSeconds;
             this.IntroSkipMode = introSkipMode;
+            this.EnableLocalPassword = enableLocalPassword;
         }
         
         /// <summary>
@@ -89,12 +89,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="SubtitleMode", EmitDefaultValue=false)]
         public ConfigurationSubtitlePlaybackMode SubtitleMode { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EnableLocalPassword
-        /// </summary>
-        [DataMember(Name="EnableLocalPassword", EmitDefaultValue=false)]
-        public bool? EnableLocalPassword { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderedViews
@@ -151,6 +145,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public ConfigurationSegmentSkipMode IntroSkipMode { get; set; }
 
         /// <summary>
+        /// Gets or Sets EnableLocalPassword
+        /// </summary>
+        [DataMember(Name="EnableLocalPassword", EmitDefaultValue=false)]
+        public bool? EnableLocalPassword { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -163,7 +163,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  SubtitleLanguagePreference: ").Append(SubtitleLanguagePreference).Append("\n");
             sb.Append("  DisplayMissingEpisodes: ").Append(DisplayMissingEpisodes).Append("\n");
             sb.Append("  SubtitleMode: ").Append(SubtitleMode).Append("\n");
-            sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
             sb.Append("  OrderedViews: ").Append(OrderedViews).Append("\n");
             sb.Append("  LatestItemsExcludes: ").Append(LatestItemsExcludes).Append("\n");
             sb.Append("  MyMediaExcludes: ").Append(MyMediaExcludes).Append("\n");
@@ -173,6 +172,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  EnableNextEpisodeAutoPlay: ").Append(EnableNextEpisodeAutoPlay).Append("\n");
             sb.Append("  ResumeRewindSeconds: ").Append(ResumeRewindSeconds).Append("\n");
             sb.Append("  IntroSkipMode: ").Append(IntroSkipMode).Append("\n");
+            sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -233,11 +233,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.SubtitleMode.Equals(input.SubtitleMode))
                 ) && 
                 (
-                    this.EnableLocalPassword == input.EnableLocalPassword ||
-                    (this.EnableLocalPassword != null &&
-                    this.EnableLocalPassword.Equals(input.EnableLocalPassword))
-                ) && 
-                (
                     this.OrderedViews == input.OrderedViews ||
                     this.OrderedViews != null &&
                     input.OrderedViews != null &&
@@ -284,6 +279,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.IntroSkipMode == input.IntroSkipMode ||
                     (this.IntroSkipMode != null &&
                     this.IntroSkipMode.Equals(input.IntroSkipMode))
+                ) && 
+                (
+                    this.EnableLocalPassword == input.EnableLocalPassword ||
+                    (this.EnableLocalPassword != null &&
+                    this.EnableLocalPassword.Equals(input.EnableLocalPassword))
                 );
         }
 
@@ -306,8 +306,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.DisplayMissingEpisodes.GetHashCode();
                 if (this.SubtitleMode != null)
                     hashCode = hashCode * 59 + this.SubtitleMode.GetHashCode();
-                if (this.EnableLocalPassword != null)
-                    hashCode = hashCode * 59 + this.EnableLocalPassword.GetHashCode();
                 if (this.OrderedViews != null)
                     hashCode = hashCode * 59 + this.OrderedViews.GetHashCode();
                 if (this.LatestItemsExcludes != null)
@@ -326,6 +324,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ResumeRewindSeconds.GetHashCode();
                 if (this.IntroSkipMode != null)
                     hashCode = hashCode * 59 + this.IntroSkipMode.GetHashCode();
+                if (this.EnableLocalPassword != null)
+                    hashCode = hashCode * 59 + this.EnableLocalPassword.GetHashCode();
                 return hashCode;
             }
         }

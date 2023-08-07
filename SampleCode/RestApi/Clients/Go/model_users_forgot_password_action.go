@@ -12,5 +12,4 @@ type UsersForgotPasswordAction string
 const (
 	CONTACT_ADMIN_UsersForgotPasswordAction UsersForgotPasswordAction = "ContactAdmin"
 	PIN_CODE_UsersForgotPasswordAction UsersForgotPasswordAction = "PinCode"
-	IN_NETWORK_REQUIRED_UsersForgotPasswordAction UsersForgotPasswordAction = "InNetworkRequired"
 )

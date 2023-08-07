@@ -14,7 +14,6 @@ import io.swagger.client.model.ForgotPassword;
 import io.swagger.client.model.ForgotPasswordPin;
 import io.swagger.client.model.NameIdPair;
 import io.swagger.client.model.QueryResultUserDto;
-import io.swagger.client.model.UpdateUserEasyPassword;
 import io.swagger.client.model.UpdateUserPassword;
 import io.swagger.client.model.UserDto;
 import io.swagger.client.model.UsersForgotPasswordResult;
@@ -228,22 +227,6 @@ public class UserServiceApiTest {
     public void postUsersByIdDeleteTest() throws Exception {
         String id = null;
         api.postUsersByIdDelete(id);
-
-        // TODO: test validations
-    }
-    /**
-     * Updates a user&#x27;s easy password
-     *
-     * Requires authentication as user
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void postUsersByIdEasypasswordTest() throws Exception {
-        UpdateUserEasyPassword body = null;
-        String id = null;
-        api.postUsersByIdEasypassword(body, id);
 
         // TODO: test validations
     }

@@ -12,7 +12,6 @@ type ConfigurationUserConfiguration struct {
 	SubtitleLanguagePreference string `json:"SubtitleLanguagePreference,omitempty"`
 	DisplayMissingEpisodes bool `json:"DisplayMissingEpisodes,omitempty"`
 	SubtitleMode *ConfigurationSubtitlePlaybackMode `json:"SubtitleMode,omitempty"`
-	EnableLocalPassword bool `json:"EnableLocalPassword,omitempty"`
 	OrderedViews []string `json:"OrderedViews,omitempty"`
 	LatestItemsExcludes []string `json:"LatestItemsExcludes,omitempty"`
 	MyMediaExcludes []string `json:"MyMediaExcludes,omitempty"`
@@ -22,4 +21,5 @@ type ConfigurationUserConfiguration struct {
 	EnableNextEpisodeAutoPlay bool `json:"EnableNextEpisodeAutoPlay,omitempty"`
 	ResumeRewindSeconds int32 `json:"ResumeRewindSeconds,omitempty"`
 	IntroSkipMode *ConfigurationSegmentSkipMode `json:"IntroSkipMode,omitempty"`
+	EnableLocalPassword bool `json:"EnableLocalPassword,omitempty"`
 }

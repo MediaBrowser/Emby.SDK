@@ -24,7 +24,7 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         /// <param name="connectLinkType">Possible values include:
         /// 'LinkedUser', 'Guest'</param>
-        public UserDto(string name = default(string), string serverId = default(string), string serverName = default(string), string prefix = default(string), string connectUserName = default(string), System.DateTime? dateCreated = default(System.DateTime?), string connectLinkType = default(string), string id = default(string), string primaryImageTag = default(string), bool? hasPassword = default(bool?), bool? hasConfiguredPassword = default(bool?), bool? hasConfiguredEasyPassword = default(bool?), bool? enableAutoLogin = default(bool?), System.DateTime? lastLoginDate = default(System.DateTime?), System.DateTime? lastActivityDate = default(System.DateTime?), ConfigurationUserConfiguration configuration = default(ConfigurationUserConfiguration), UsersUserPolicy policy = default(UsersUserPolicy), double? primaryImageAspectRatio = default(double?))
+        public UserDto(string name = default(string), string serverId = default(string), string serverName = default(string), string prefix = default(string), string connectUserName = default(string), System.DateTime? dateCreated = default(System.DateTime?), string connectLinkType = default(string), string id = default(string), string primaryImageTag = default(string), bool? hasPassword = default(bool?), bool? hasConfiguredPassword = default(bool?), bool? enableAutoLogin = default(bool?), System.DateTime? lastLoginDate = default(System.DateTime?), System.DateTime? lastActivityDate = default(System.DateTime?), ConfigurationUserConfiguration configuration = default(ConfigurationUserConfiguration), UsersUserPolicy policy = default(UsersUserPolicy), double? primaryImageAspectRatio = default(double?), bool? hasConfiguredEasyPassword = default(bool?))
         {
             Name = name;
             ServerId = serverId;
@@ -37,13 +37,13 @@ namespace EmbyClient.MsRest.Models
             PrimaryImageTag = primaryImageTag;
             HasPassword = hasPassword;
             HasConfiguredPassword = hasConfiguredPassword;
-            HasConfiguredEasyPassword = hasConfiguredEasyPassword;
             EnableAutoLogin = enableAutoLogin;
             LastLoginDate = lastLoginDate;
             LastActivityDate = lastActivityDate;
             Configuration = configuration;
             Policy = policy;
             PrimaryImageAspectRatio = primaryImageAspectRatio;
+            HasConfiguredEasyPassword = hasConfiguredEasyPassword;
             CustomInit();
         }
 
@@ -110,11 +110,6 @@ namespace EmbyClient.MsRest.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "HasConfiguredEasyPassword")]
-        public bool? HasConfiguredEasyPassword { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "EnableAutoLogin")]
         public bool? EnableAutoLogin { get; set; }
 
@@ -142,6 +137,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "PrimaryImageAspectRatio")]
         public double? PrimaryImageAspectRatio { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "HasConfiguredEasyPassword")]
+        public bool? HasConfiguredEasyPassword { get; set; }
 
     }
 }

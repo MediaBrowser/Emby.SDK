@@ -20,7 +20,6 @@ class UsersForgotPasswordAction(object):
     """
     CONTACTADMIN = "ContactAdmin"
     PINCODE = "PinCode"
-    INNETWORKREQUIRED = "InNetworkRequired"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

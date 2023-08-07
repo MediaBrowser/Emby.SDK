@@ -22,10 +22,12 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the ValidatePath class.
         /// </summary>
-        public ValidatePath(bool? validateWriteable = default(bool?), bool? isFile = default(bool?))
+        public ValidatePath(bool? validateWriteable = default(bool?), bool? isFile = default(bool?), string username = default(string), string password = default(string))
         {
             ValidateWriteable = validateWriteable;
             IsFile = isFile;
+            Username = username;
+            Password = password;
             CustomInit();
         }
 
@@ -43,6 +45,16 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "IsFile")]
         public bool? IsFile { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "Username")]
+        public string Username { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "Password")]
+        public string Password { get; set; }
 
     }
 }

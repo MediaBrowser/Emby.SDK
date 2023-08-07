@@ -195,8 +195,8 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -434,8 +434,8 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -522,8 +522,8 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -658,8 +658,8 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -746,8 +746,8 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -887,8 +887,8 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -1729,8 +1729,8 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -2525,53 +2525,6 @@ open class UserServiceAPI {
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
-     Updates a user's easy password
-
-     - parameter body: (body) UpdateUserEasyPassword 
-     - parameter _id: (path)  
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postUsersByIdEasypassword(body: UpdateUserEasyPassword, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postUsersByIdEasypasswordWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-
-    /**
-     Updates a user's easy password
-     - POST /Users/{Id}/EasyPassword
-
-     - API Key:
-       - type: apiKey api_key (QUERY)
-       - name: apikeyauth
-     - :
-       - type: http
-       - name: embyauth
-     - parameter body: (body) UpdateUserEasyPassword 
-     - parameter _id: (path)  
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func postUsersByIdEasypasswordWithRequestBuilder(body: UpdateUserEasyPassword, _id: String) -> RequestBuilder<Void> {
-        var path = "/Users/{Id}/EasyPassword"
-        let _idPreEscape = "\(_id)"
-        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let URLString = embyclient-rest-swift-betaAPI.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        let url = URLComponents(string: URLString)
-
-
-        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
-
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
-    }
-    /**
      Updates a user's password
 
      - parameter body: (body) UpdateUserPassword 
@@ -2942,8 +2895,8 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],

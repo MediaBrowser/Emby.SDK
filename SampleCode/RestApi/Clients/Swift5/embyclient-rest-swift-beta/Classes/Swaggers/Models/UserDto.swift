@@ -22,15 +22,15 @@ public struct UserDto: Codable {
     public var primaryImageTag: String?
     public var hasPassword: Bool?
     public var hasConfiguredPassword: Bool?
-    public var hasConfiguredEasyPassword: Bool?
     public var enableAutoLogin: Bool?
     public var lastLoginDate: Date?
     public var lastActivityDate: Date?
     public var configuration: ConfigurationUserConfiguration?
     public var policy: UsersUserPolicy?
     public var primaryImageAspectRatio: Double?
+    public var hasConfiguredEasyPassword: Bool?
 
-    public init(name: String? = nil, serverId: String? = nil, serverName: String? = nil, _prefix: String? = nil, connectUserName: String? = nil, dateCreated: Date? = nil, connectLinkType: ConnectUserLinkType? = nil, _id: String? = nil, primaryImageTag: String? = nil, hasPassword: Bool? = nil, hasConfiguredPassword: Bool? = nil, hasConfiguredEasyPassword: Bool? = nil, enableAutoLogin: Bool? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, configuration: ConfigurationUserConfiguration? = nil, policy: UsersUserPolicy? = nil, primaryImageAspectRatio: Double? = nil) {
+    public init(name: String? = nil, serverId: String? = nil, serverName: String? = nil, _prefix: String? = nil, connectUserName: String? = nil, dateCreated: Date? = nil, connectLinkType: ConnectUserLinkType? = nil, _id: String? = nil, primaryImageTag: String? = nil, hasPassword: Bool? = nil, hasConfiguredPassword: Bool? = nil, enableAutoLogin: Bool? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, configuration: ConfigurationUserConfiguration? = nil, policy: UsersUserPolicy? = nil, primaryImageAspectRatio: Double? = nil, hasConfiguredEasyPassword: Bool? = nil) {
         self.name = name
         self.serverId = serverId
         self.serverName = serverName
@@ -42,13 +42,13 @@ public struct UserDto: Codable {
         self.primaryImageTag = primaryImageTag
         self.hasPassword = hasPassword
         self.hasConfiguredPassword = hasConfiguredPassword
-        self.hasConfiguredEasyPassword = hasConfiguredEasyPassword
         self.enableAutoLogin = enableAutoLogin
         self.lastLoginDate = lastLoginDate
         self.lastActivityDate = lastActivityDate
         self.configuration = configuration
         self.policy = policy
         self.primaryImageAspectRatio = primaryImageAspectRatio
+        self.hasConfiguredEasyPassword = hasConfiguredEasyPassword
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -63,13 +63,13 @@ public struct UserDto: Codable {
         case primaryImageTag = "PrimaryImageTag"
         case hasPassword = "HasPassword"
         case hasConfiguredPassword = "HasConfiguredPassword"
-        case hasConfiguredEasyPassword = "HasConfiguredEasyPassword"
         case enableAutoLogin = "EnableAutoLogin"
         case lastLoginDate = "LastLoginDate"
         case lastActivityDate = "LastActivityDate"
         case configuration = "Configuration"
         case policy = "Policy"
         case primaryImageAspectRatio = "PrimaryImageAspectRatio"
+        case hasConfiguredEasyPassword = "HasConfiguredEasyPassword"
     }
 
 }

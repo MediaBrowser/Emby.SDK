@@ -17,7 +17,7 @@ import SeriesDisplayOrder from './SeriesDisplayOrder';
 /**
 * The ProvidersSeriesInfo model module.
 * @module model/ProvidersSeriesInfo
-* @version 4.8.0.39
+* @version 4.8.0.40
 */
 export default class ProvidersSeriesInfo {
     /**

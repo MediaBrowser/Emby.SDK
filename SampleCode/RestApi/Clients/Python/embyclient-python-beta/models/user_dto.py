@@ -33,13 +33,13 @@ class UserDto(object):
         'primary_image_tag': 'str',
         'has_password': 'bool',
         'has_configured_password': 'bool',
-        'has_configured_easy_password': 'bool',
         'enable_auto_login': 'bool',
         'last_login_date': 'datetime',
         'last_activity_date': 'datetime',
         'configuration': 'ConfigurationUserConfiguration',
         'policy': 'UsersUserPolicy',
-        'primary_image_aspect_ratio': 'float'
+        'primary_image_aspect_ratio': 'float',
+        'has_configured_easy_password': 'bool'
     }
 
     attribute_map = {
@@ -54,16 +54,16 @@ class UserDto(object):
         'primary_image_tag': 'PrimaryImageTag',
         'has_password': 'HasPassword',
         'has_configured_password': 'HasConfiguredPassword',
-        'has_configured_easy_password': 'HasConfiguredEasyPassword',
         'enable_auto_login': 'EnableAutoLogin',
         'last_login_date': 'LastLoginDate',
         'last_activity_date': 'LastActivityDate',
         'configuration': 'Configuration',
         'policy': 'Policy',
-        'primary_image_aspect_ratio': 'PrimaryImageAspectRatio'
+        'primary_image_aspect_ratio': 'PrimaryImageAspectRatio',
+        'has_configured_easy_password': 'HasConfiguredEasyPassword'
     }
 
-    def __init__(self, name=None, server_id=None, server_name=None, prefix=None, connect_user_name=None, date_created=None, connect_link_type=None, id=None, primary_image_tag=None, has_password=None, has_configured_password=None, has_configured_easy_password=None, enable_auto_login=None, last_login_date=None, last_activity_date=None, configuration=None, policy=None, primary_image_aspect_ratio=None):  # noqa: E501
+    def __init__(self, name=None, server_id=None, server_name=None, prefix=None, connect_user_name=None, date_created=None, connect_link_type=None, id=None, primary_image_tag=None, has_password=None, has_configured_password=None, enable_auto_login=None, last_login_date=None, last_activity_date=None, configuration=None, policy=None, primary_image_aspect_ratio=None, has_configured_easy_password=None):  # noqa: E501
         """UserDto - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._server_id = None
@@ -76,13 +76,13 @@ class UserDto(object):
         self._primary_image_tag = None
         self._has_password = None
         self._has_configured_password = None
-        self._has_configured_easy_password = None
         self._enable_auto_login = None
         self._last_login_date = None
         self._last_activity_date = None
         self._configuration = None
         self._policy = None
         self._primary_image_aspect_ratio = None
+        self._has_configured_easy_password = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -106,8 +106,6 @@ class UserDto(object):
             self.has_password = has_password
         if has_configured_password is not None:
             self.has_configured_password = has_configured_password
-        if has_configured_easy_password is not None:
-            self.has_configured_easy_password = has_configured_easy_password
         if enable_auto_login is not None:
             self.enable_auto_login = enable_auto_login
         if last_login_date is not None:
@@ -120,6 +118,8 @@ class UserDto(object):
             self.policy = policy
         if primary_image_aspect_ratio is not None:
             self.primary_image_aspect_ratio = primary_image_aspect_ratio
+        if has_configured_easy_password is not None:
+            self.has_configured_easy_password = has_configured_easy_password
 
     @property
     def name(self):
@@ -353,27 +353,6 @@ class UserDto(object):
         self._has_configured_password = has_configured_password
 
     @property
-    def has_configured_easy_password(self):
-        """Gets the has_configured_easy_password of this UserDto.  # noqa: E501
-
-
-        :return: The has_configured_easy_password of this UserDto.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_configured_easy_password
-
-    @has_configured_easy_password.setter
-    def has_configured_easy_password(self, has_configured_easy_password):
-        """Sets the has_configured_easy_password of this UserDto.
-
-
-        :param has_configured_easy_password: The has_configured_easy_password of this UserDto.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_configured_easy_password = has_configured_easy_password
-
-    @property
     def enable_auto_login(self):
         """Gets the enable_auto_login of this UserDto.  # noqa: E501
 
@@ -498,6 +477,27 @@ class UserDto(object):
         """
 
         self._primary_image_aspect_ratio = primary_image_aspect_ratio
+
+    @property
+    def has_configured_easy_password(self):
+        """Gets the has_configured_easy_password of this UserDto.  # noqa: E501
+
+
+        :return: The has_configured_easy_password of this UserDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_configured_easy_password
+
+    @has_configured_easy_password.setter
+    def has_configured_easy_password(self, has_configured_easy_password):
+        """Sets the has_configured_easy_password of this UserDto.
+
+
+        :param has_configured_easy_password: The has_configured_easy_password of this UserDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_configured_easy_password = has_configured_easy_password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

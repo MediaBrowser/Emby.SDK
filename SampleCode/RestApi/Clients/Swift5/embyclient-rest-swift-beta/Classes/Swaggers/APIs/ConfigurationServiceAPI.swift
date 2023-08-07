@@ -44,6 +44,7 @@ open class ConfigurationServiceAPI {
   "EnableUPnP" : true,
   "OptimizeDatabaseOnShutdown" : true,
   "MetadataCountryCode" : "MetadataCountryCode",
+  "ProxyHeaderMode" : "None",
   "MetadataNetworkPath" : "MetadataNetworkPath",
   "LocalNetworkSubnets" : [ "LocalNetworkSubnets", "LocalNetworkSubnets" ],
   "EnableDebugLevelLogging" : true,

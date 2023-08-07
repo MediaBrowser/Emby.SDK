@@ -30,14 +30,13 @@ namespace EmbyClient.MsRest.Models
         /// 'Always', 'OnlyForced', 'None', 'Smart'</param>
         /// <param name="introSkipMode">Possible values include: 'ShowButton',
         /// 'AutoSkip', 'None'</param>
-        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), bool? displayMissingEpisodes = default(bool?), string subtitleMode = default(string), bool? enableLocalPassword = default(bool?), IList<string> orderedViews = default(IList<string>), IList<string> latestItemsExcludes = default(IList<string>), IList<string> myMediaExcludes = default(IList<string>), bool? hidePlayedInLatest = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), string introSkipMode = default(string))
+        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), bool? displayMissingEpisodes = default(bool?), string subtitleMode = default(string), IList<string> orderedViews = default(IList<string>), IList<string> latestItemsExcludes = default(IList<string>), IList<string> myMediaExcludes = default(IList<string>), bool? hidePlayedInLatest = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), string introSkipMode = default(string), bool? enableLocalPassword = default(bool?))
         {
             AudioLanguagePreference = audioLanguagePreference;
             PlayDefaultAudioTrack = playDefaultAudioTrack;
             SubtitleLanguagePreference = subtitleLanguagePreference;
             DisplayMissingEpisodes = displayMissingEpisodes;
             SubtitleMode = subtitleMode;
-            EnableLocalPassword = enableLocalPassword;
             OrderedViews = orderedViews;
             LatestItemsExcludes = latestItemsExcludes;
             MyMediaExcludes = myMediaExcludes;
@@ -47,6 +46,7 @@ namespace EmbyClient.MsRest.Models
             EnableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay;
             ResumeRewindSeconds = resumeRewindSeconds;
             IntroSkipMode = introSkipMode;
+            EnableLocalPassword = enableLocalPassword;
             CustomInit();
         }
 
@@ -81,11 +81,6 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "SubtitleMode")]
         public string SubtitleMode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "EnableLocalPassword")]
-        public bool? EnableLocalPassword { get; set; }
 
         /// <summary>
         /// </summary>
@@ -133,6 +128,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "IntroSkipMode")]
         public string IntroSkipMode { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "EnableLocalPassword")]
+        public bool? EnableLocalPassword { get; set; }
 
     }
 }

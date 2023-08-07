@@ -21,11 +21,11 @@ type UserDto struct {
 	PrimaryImageTag string `json:"PrimaryImageTag,omitempty"`
 	HasPassword bool `json:"HasPassword,omitempty"`
 	HasConfiguredPassword bool `json:"HasConfiguredPassword,omitempty"`
-	HasConfiguredEasyPassword bool `json:"HasConfiguredEasyPassword,omitempty"`
 	EnableAutoLogin bool `json:"EnableAutoLogin,omitempty"`
 	LastLoginDate time.Time `json:"LastLoginDate,omitempty"`
 	LastActivityDate time.Time `json:"LastActivityDate,omitempty"`
 	Configuration *ConfigurationUserConfiguration `json:"Configuration,omitempty"`
 	Policy *UsersUserPolicy `json:"Policy,omitempty"`
 	PrimaryImageAspectRatio float64 `json:"PrimaryImageAspectRatio,omitempty"`
+	HasConfiguredEasyPassword bool `json:"HasConfiguredEasyPassword,omitempty"`
 }

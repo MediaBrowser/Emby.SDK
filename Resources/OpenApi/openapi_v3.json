@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.39"
+    "version": "4.8.0.40"
   },
   "servers": [
     {
@@ -38292,6 +38292,755 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Audio/{Id}/{StreamFileName}": {
+      "summary": "Gets an audio stream",
+      "get": {
+        "tags": [
+          "AudioService"
+        ],
+        "summary": "Gets an audio stream",
+        "description": "Requires authentication as user",
+        "operationId": "getAudioByIdByStreamfilename",
+        "parameters": [
+          {
+            "name": "DeviceProfileId",
+            "in": "query",
+            "description": "Optional. The dlna device profile id to utilize.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StreamFileName",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DeviceId",
+            "in": "query",
+            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Container",
+            "in": "query",
+            "description": "Container",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodec",
+            "in": "query",
+            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EnableAutoStreamCopy",
+            "in": "query",
+            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "AudioSampleRate",
+            "in": "query",
+            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioBitRate",
+            "in": "query",
+            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxAudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Static",
+            "in": "query",
+            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Profile",
+            "in": "query",
+            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Level",
+            "in": "query",
+            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Framerate",
+            "in": "query",
+            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxFramerate",
+            "in": "query",
+            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "StartTimeTicks",
+            "in": "query",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Width",
+            "in": "query",
+            "description": "Optional. The fixed horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Height",
+            "in": "query",
+            "description": "Optional. The fixed vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxWidth",
+            "in": "query",
+            "description": "Optional. The maximum horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxHeight",
+            "in": "query",
+            "description": "Optional. The maximum vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoBitRate",
+            "in": "query",
+            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleMethod",
+            "in": "query",
+            "description": "Optional. Specify the subtitle delivery method.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/Dlna.SubtitleDeliveryMethod"
+            }
+          },
+          {
+            "name": "MaxRefFrames",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxVideoBitDepth",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoCodec",
+            "in": "query",
+            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "AudioService"
+        ],
+        "summary": "Gets an audio stream",
+        "description": "Requires authentication as user",
+        "operationId": "headAudioByIdByStreamfilename",
+        "parameters": [
+          {
+            "name": "DeviceProfileId",
+            "in": "query",
+            "description": "Optional. The dlna device profile id to utilize.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StreamFileName",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DeviceId",
+            "in": "query",
+            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Container",
+            "in": "query",
+            "description": "Container",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodec",
+            "in": "query",
+            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EnableAutoStreamCopy",
+            "in": "query",
+            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "AudioSampleRate",
+            "in": "query",
+            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioBitRate",
+            "in": "query",
+            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxAudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Static",
+            "in": "query",
+            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Profile",
+            "in": "query",
+            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Level",
+            "in": "query",
+            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Framerate",
+            "in": "query",
+            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxFramerate",
+            "in": "query",
+            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "StartTimeTicks",
+            "in": "query",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Width",
+            "in": "query",
+            "description": "Optional. The fixed horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Height",
+            "in": "query",
+            "description": "Optional. The fixed vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxWidth",
+            "in": "query",
+            "description": "Optional. The maximum horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxHeight",
+            "in": "query",
+            "description": "Optional. The maximum vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoBitRate",
+            "in": "query",
+            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleMethod",
+            "in": "query",
+            "description": "Optional. Specify the subtitle delivery method.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/Dlna.SubtitleDeliveryMethod"
+            }
+          },
+          {
+            "name": "MaxRefFrames",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxVideoBitDepth",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoCodec",
+            "in": "query",
+            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Audio/{Id}/master.m3u8": {
       "summary": "Gets an audio stream using HTTP live streaming.",
       "get": {
@@ -51009,73 +51758,6 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
-    "/Users/{Id}/EasyPassword": {
-      "summary": "Updates a user's easy password",
-      "post": {
-        "tags": [
-          "UserService"
-        ],
-        "summary": "Updates a user's easy password",
-        "description": "Requires authentication as user",
-        "operationId": "postUsersByIdEasypassword",
-        "parameters": [
-          {
-            "name": "Id",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "UpdateUserEasyPassword",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateUserEasyPassword"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateUserEasyPassword"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      }
-    },
     "/Users/ForgotPassword/Pin": {
       "summary": "Redeems a forgot password pin",
       "post": {
@@ -53687,6 +54369,755 @@
             "description": "Optional. The dlna device profile id to utilize.",
             "style": "form",
             "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DeviceId",
+            "in": "query",
+            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Container",
+            "in": "query",
+            "description": "Container",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodec",
+            "in": "query",
+            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EnableAutoStreamCopy",
+            "in": "query",
+            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "AudioSampleRate",
+            "in": "query",
+            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioBitRate",
+            "in": "query",
+            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxAudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Static",
+            "in": "query",
+            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Profile",
+            "in": "query",
+            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Level",
+            "in": "query",
+            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Framerate",
+            "in": "query",
+            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxFramerate",
+            "in": "query",
+            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "StartTimeTicks",
+            "in": "query",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Width",
+            "in": "query",
+            "description": "Optional. The fixed horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Height",
+            "in": "query",
+            "description": "Optional. The fixed vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxWidth",
+            "in": "query",
+            "description": "Optional. The maximum horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxHeight",
+            "in": "query",
+            "description": "Optional. The maximum vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoBitRate",
+            "in": "query",
+            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleMethod",
+            "in": "query",
+            "description": "Optional. Specify the subtitle delivery method.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/Dlna.SubtitleDeliveryMethod"
+            }
+          },
+          {
+            "name": "MaxRefFrames",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxVideoBitDepth",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoCodec",
+            "in": "query",
+            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Videos/{Id}/{StreamFileName}": {
+      "summary": "Gets a video stream",
+      "get": {
+        "tags": [
+          "VideoService"
+        ],
+        "summary": "Gets a video stream",
+        "description": "Requires authentication as user",
+        "operationId": "getVideosByIdByStreamfilename",
+        "parameters": [
+          {
+            "name": "DeviceProfileId",
+            "in": "query",
+            "description": "Optional. The dlna device profile id to utilize.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StreamFileName",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DeviceId",
+            "in": "query",
+            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Container",
+            "in": "query",
+            "description": "Container",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodec",
+            "in": "query",
+            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EnableAutoStreamCopy",
+            "in": "query",
+            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "AudioSampleRate",
+            "in": "query",
+            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioBitRate",
+            "in": "query",
+            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxAudioChannels",
+            "in": "query",
+            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Static",
+            "in": "query",
+            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Profile",
+            "in": "query",
+            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Level",
+            "in": "query",
+            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Framerate",
+            "in": "query",
+            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxFramerate",
+            "in": "query",
+            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "StartTimeTicks",
+            "in": "query",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Width",
+            "in": "query",
+            "description": "Optional. The fixed horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Height",
+            "in": "query",
+            "description": "Optional. The fixed vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxWidth",
+            "in": "query",
+            "description": "Optional. The maximum horizontal resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxHeight",
+            "in": "query",
+            "description": "Optional. The maximum vertical resolution of the encoded video.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoBitRate",
+            "in": "query",
+            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SubtitleMethod",
+            "in": "query",
+            "description": "Optional. Specify the subtitle delivery method.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/Dlna.SubtitleDeliveryMethod"
+            }
+          },
+          {
+            "name": "MaxRefFrames",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxVideoBitDepth",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoCodec",
+            "in": "query",
+            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "VideoStreamIndex",
+            "in": "query",
+            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "VideoService"
+        ],
+        "summary": "Gets a video stream",
+        "description": "Requires authentication as user",
+        "operationId": "headVideosByIdByStreamfilename",
+        "parameters": [
+          {
+            "name": "DeviceProfileId",
+            "in": "query",
+            "description": "Optional. The dlna device profile id to utilize.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StreamFileName",
+            "in": "path",
+            "required": true,
+            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -72145,7 +73576,8 @@
           },
           "PlayCount": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "IsFavorite": {
             "type": "boolean"
@@ -74211,6 +75643,12 @@
           "IsFile": {
             "type": "boolean",
             "nullable": true
+          },
+          "Username": {
+            "type": "string"
+          },
+          "Password": {
+            "type": "string"
           }
         },
         "x-internal-ref-name": "Emby.Api.ValidatePath"
@@ -76644,6 +78082,9 @@
           "MigratedToUserItemShares": {
             "type": "boolean"
           },
+          "ProxyHeaderMode": {
+            "$ref": "#/components/schemas/Configuration.ProxyHeaderMode"
+          },
           "EnableDebugLevelLogging": {
             "type": "boolean"
           },
@@ -76688,6 +78129,15 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Configuration.PathSubstitution"
+      },
+      "Configuration.ProxyHeaderMode": {
+        "enum": [
+          "None",
+          "LanAddressesOnly",
+          "AllAddresses"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Configuration.ProxyHeaderMode"
       },
       "WakeOnLanInfo": {
         "type": "object",
@@ -77066,9 +78516,6 @@
           "HasConfiguredPassword": {
             "type": "boolean"
           },
-          "HasConfiguredEasyPassword": {
-            "type": "boolean"
-          },
           "EnableAutoLogin": {
             "type": "boolean",
             "nullable": true
@@ -77093,6 +78540,9 @@
             "type": "number",
             "format": "double",
             "nullable": true
+          },
+          "HasConfiguredEasyPassword": {
+            "type": "boolean"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
@@ -77122,9 +78572,6 @@
           },
           "SubtitleMode": {
             "$ref": "#/components/schemas/Configuration.SubtitlePlaybackMode"
-          },
-          "EnableLocalPassword": {
-            "type": "boolean"
           },
           "OrderedViews": {
             "type": "array",
@@ -77162,6 +78609,9 @@
           },
           "IntroSkipMode": {
             "$ref": "#/components/schemas/Configuration.SegmentSkipMode"
+          },
+          "EnableLocalPassword": {
+            "type": "boolean"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Configuration.UserConfiguration"
@@ -77512,8 +78962,7 @@
       "Users.ForgotPasswordAction": {
         "enum": [
           "ContactAdmin",
-          "PinCode",
-          "InNetworkRequired"
+          "PinCode"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Users.ForgotPasswordAction"
@@ -80350,21 +81799,6 @@
           }
         },
         "x-internal-ref-name": "Emby.Api.UpdateUserPassword"
-      },
-      "UpdateUserEasyPassword": {
-        "type": "object",
-        "properties": {
-          "Id": {
-            "type": "string"
-          },
-          "NewPw": {
-            "type": "string"
-          },
-          "ResetPassword": {
-            "type": "boolean"
-          }
-        },
-        "x-internal-ref-name": "Emby.Api.UpdateUserEasyPassword"
       },
       "ForgotPasswordPin": {
         "type": "object",

@@ -32,10 +32,5 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// Enum PinCode for value: PinCode
         /// </summary>
         [EnumMember(Value = "PinCode")]
-        PinCode = 2,
-        /// <summary>
-        /// Enum InNetworkRequired for value: InNetworkRequired
-        /// </summary>
-        [EnumMember(Value = "InNetworkRequired")]
-        InNetworkRequired = 3    }
+        PinCode = 2    }
 }

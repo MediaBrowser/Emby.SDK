@@ -34,6 +34,7 @@ import ConfigurationLibraryOptions from './model/ConfigurationLibraryOptions';
 import ConfigurationMediaPathInfo from './model/ConfigurationMediaPathInfo';
 import ConfigurationMetadataFeatures from './model/ConfigurationMetadataFeatures';
 import ConfigurationPathSubstitution from './model/ConfigurationPathSubstitution';
+import ConfigurationProxyHeaderMode from './model/ConfigurationProxyHeaderMode';
 import ConfigurationSegmentSkipMode from './model/ConfigurationSegmentSkipMode';
 import ConfigurationServerConfiguration from './model/ConfigurationServerConfiguration';
 import ConfigurationSubtitlePlaybackMode from './model/ConfigurationSubtitlePlaybackMode';
@@ -294,7 +295,6 @@ import TranscodingInfo from './model/TranscodingInfo';
 import TranscodingVpStepInfo from './model/TranscodingVpStepInfo';
 import TranscodingVpStepTypes from './model/TranscodingVpStepTypes';
 import TupleDoubleDouble from './model/TupleDoubleDouble';
-import UpdateUserEasyPassword from './model/UpdateUserEasyPassword';
 import UpdateUserPassword from './model/UpdateUserPassword';
 import UpdatesInstallationInfo from './model/UpdatesInstallationInfo';
 import UpdatesPackageInfo from './model/UpdatesPackageInfo';
@@ -413,7 +413,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.39
+* @version 4.8.0.40
 */
 export {
     /**
@@ -565,6 +565,12 @@ export {
      * @property {module:model/ConfigurationPathSubstitution}
      */
     ConfigurationPathSubstitution,
+
+    /**
+     * The ConfigurationProxyHeaderMode model constructor.
+     * @property {module:model/ConfigurationProxyHeaderMode}
+     */
+    ConfigurationProxyHeaderMode,
 
     /**
      * The ConfigurationSegmentSkipMode model constructor.
@@ -2125,12 +2131,6 @@ export {
      * @property {module:model/TupleDoubleDouble}
      */
     TupleDoubleDouble,
-
-    /**
-     * The UpdateUserEasyPassword model constructor.
-     * @property {module:model/UpdateUserEasyPassword}
-     */
-    UpdateUserEasyPassword,
 
     /**
      * The UpdateUserPassword model constructor.

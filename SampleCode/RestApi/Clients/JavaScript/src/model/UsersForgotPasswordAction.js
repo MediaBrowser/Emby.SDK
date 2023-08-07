@@ -28,12 +28,6 @@ export default class UsersForgotPasswordAction {
          */
         pinCode = "PinCode";
 
-        /**
-         * value: "InNetworkRequired"
-         * @const
-         */
-        inNetworkRequired = "InNetworkRequired";
-
 
     /**
     * Returns a <code>UsersForgotPasswordAction</code> enum value from a Javascript object name.

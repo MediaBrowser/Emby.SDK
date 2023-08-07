@@ -28,10 +28,14 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         /// <param name="validateWriteable">validateWriteable.</param>
         /// <param name="isFile">isFile.</param>
-        public ValidatePath(bool? validateWriteable = default(bool?), bool? isFile = default(bool?))
+        /// <param name="username">username.</param>
+        /// <param name="password">password.</param>
+        public ValidatePath(bool? validateWriteable = default(bool?), bool? isFile = default(bool?), string username = default(string), string password = default(string))
         {
             this.ValidateWriteable = validateWriteable;
             this.IsFile = isFile;
+            this.Username = username;
+            this.Password = password;
         }
         
         /// <summary>
@@ -47,6 +51,18 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? IsFile { get; set; }
 
         /// <summary>
+        /// Gets or Sets Username
+        /// </summary>
+        [DataMember(Name="Username", EmitDefaultValue=false)]
+        public string Username { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Password
+        /// </summary>
+        [DataMember(Name="Password", EmitDefaultValue=false)]
+        public string Password { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +72,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("class ValidatePath {\n");
             sb.Append("  ValidateWriteable: ").Append(ValidateWriteable).Append("\n");
             sb.Append("  IsFile: ").Append(IsFile).Append("\n");
+            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,6 +117,16 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.IsFile == input.IsFile ||
                     (this.IsFile != null &&
                     this.IsFile.Equals(input.IsFile))
+                ) && 
+                (
+                    this.Username == input.Username ||
+                    (this.Username != null &&
+                    this.Username.Equals(input.Username))
+                ) && 
+                (
+                    this.Password == input.Password ||
+                    (this.Password != null &&
+                    this.Password.Equals(input.Password))
                 );
         }
 
@@ -115,6 +143,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ValidateWriteable.GetHashCode();
                 if (this.IsFile != null)
                     hashCode = hashCode * 59 + this.IsFile.GetHashCode();
+                if (this.Username != null)
+                    hashCode = hashCode * 59 + this.Username.GetHashCode();
+                if (this.Password != null)
+                    hashCode = hashCode * 59 + this.Password.GetHashCode();
                 return hashCode;
             }
         }

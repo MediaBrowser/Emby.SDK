@@ -13,15 +13,21 @@ public struct ValidatePath: Codable {
 
     public var validateWriteable: Bool?
     public var isFile: Bool?
+    public var username: String?
+    public var password: String?
 
-    public init(validateWriteable: Bool? = nil, isFile: Bool? = nil) {
+    public init(validateWriteable: Bool? = nil, isFile: Bool? = nil, username: String? = nil, password: String? = nil) {
         self.validateWriteable = validateWriteable
         self.isFile = isFile
+        self.username = username
+        self.password = password
     }
 
     public enum CodingKeys: String, CodingKey { 
         case validateWriteable = "ValidateWriteable"
         case isFile = "IsFile"
+        case username = "Username"
+        case password = "Password"
     }
 
 }

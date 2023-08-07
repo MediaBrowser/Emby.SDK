@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>postUsersByIdEasypassword </title>
+    <title>getAudioByIdByStreamfilename </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="postUsersByIdEasypassword ">
+    <meta name="title" content="getAudioByIdByStreamfilename ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    <meta property="docfx:uid" content="emby.restapi/postUsersByIdEasypassword">
+    <meta property="docfx:uid" content="emby.restapi/getAudioByIdByStreamfilename">
     
     <meta property="docfx:rel" content="../../../">
     
@@ -145,11 +145,11 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="emby.restapi/postUsersByIdEasypassword">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/getAudioByIdByStreamfilename">
 <div class="refdoc">
 
-<h1 id="emby_restapi_postUsersByIdEasypassword" data-uid="emby.restapi/postUsersByIdEasypassword" class="text-capitalize text-break">postUsersByIdEasypassword</h1>
-<div class="markdown level0 summary"><p>Updates a user's easy password</p>
+<h1 id="emby_restapi_getAudioByIdByStreamfilename" data-uid="emby.restapi/getAudioByIdByStreamfilename" class="text-capitalize text-break">getAudioByIdByStreamfilename</h1>
+<div class="markdown level0 summary"><p>Gets an audio stream</p>
 </div>
 <div class="markdown level0 description"><p>Requires authentication as user</p>
 </div>
@@ -160,10 +160,10 @@
   
   
   
-   <h3 id="emby_restapi_postUsersByIdEasypassword_operation" data-uid="emby.restapi/postUsersByIdEasypassword/operation" style="display:none;" class="text-capitalize">postUsersByIdEasypassword</h3>
+   <h3 id="emby_restapi_getAudioByIdByStreamfilename_operation" data-uid="emby.restapi/getAudioByIdByStreamfilename/operation" style="display:none;" class="text-capitalize">getAudioByIdByStreamfilename</h3>
   <h5>Request</h5>
   <div class="codewrapper">
-    <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/EasyPassword</code></pre>
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Audio/{Id}/{StreamFileName}</code></pre>
   </div>
   <h5>Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,7 +178,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">*Id</span></td>
+        <td><span class="parametername">DeviceProfileId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The dlna device profile id to utilize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*StreamFileName</span></td>
         <td>path</td>
         <td>
               
@@ -188,15 +199,311 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="parametername">*body</span></td>
-        <td>body</td>
+        <td><span class="parametername">*Id</span></td>
+        <td>path</td>
         <td>
-  
-              <a href="#Emby_Api_UpdateUserEasyPassword" class="typelink">UpdateUserEasyPassword</a>
               
+  
         </td>
         <td></td>
-        <td><p>UpdateUserEasyPassword</p>
+        <td><p>Item Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">DeviceId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>The device id of the client requesting. Used to stop encoding processes when needed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*Container</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Container</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioCodec</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">EnableAutoStreamCopy</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioSampleRate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a specific audio sample rate, e.g. 44100</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioBitRate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioChannels</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a specific number of audio channels to encode to, e.g. 2</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxAudioChannels</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a maximum number of audio channels to encode to, e.g. 2</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Static</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Profile</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a specific h264 profile, e.g. main, baseline, high.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Level</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a level for the h264 profile, e.g. 3, 3.1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Framerate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxFramerate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">CopyTimestamps</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Whether or not to copy timestamps when transcoding with an offset. Defaults to false.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">StartTimeTicks</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Width</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The fixed horizontal resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Height</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The fixed vertical resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxWidth</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum horizontal resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxHeight</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum vertical resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">VideoBitRate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SubtitleStreamIndex</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SubtitleMethod</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify the subtitle delivery method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxRefFrames</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxVideoBitDepth</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">VideoCodec</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioStreamIndex</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The index of the audio stream to use. If omitted the first audio stream will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">VideoStreamIndex</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The index of the video stream to use. If omitted the first video stream will be used.</p>
 </td>
       </tr>
     </tbody>
@@ -219,7 +526,7 @@
               
   
         </td>
-        <td><p>Operation successful. Empty response.</p>
+        <td><p>Operation successful. Response content unknown.</p>
 </td>
         <td class="sample-response">
         </td>
@@ -282,50 +589,6 @@
       </tbody>
     </table>
   </div>
-<h2 id="definitions">Definitions</h2>
-  
-  <h3 id="Emby_Api_UpdateUserEasyPassword" class="text-capitalize">UpdateUserEasyPassword</h3>
-  <div>
-      <span class="xref">Emby.Api.UpdateUserEasyPassword</span>
-  </div>
-  <table class="table table-bordered table-striped table-condensed">
-      <thead>
-          <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Notes</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td><span class="parametername">Id</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">NewPw</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">ResetPassword</span></td>
-              <td>
-                    boolean
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-      </tbody>
-  </table>
 </div>
 </article>
           </div>

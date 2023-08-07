@@ -11,5 +11,4 @@ import Foundation
 public enum UsersForgotPasswordAction: String, Codable {
     case contactAdmin = "ContactAdmin"
     case pinCode = "PinCode"
-    case inNetworkRequired = "InNetworkRequired"
 }

@@ -32,6 +32,7 @@ from embyclient-python-beta.models.configuration_library_options import Configur
 from embyclient-python-beta.models.configuration_media_path_info import ConfigurationMediaPathInfo
 from embyclient-python-beta.models.configuration_metadata_features import ConfigurationMetadataFeatures
 from embyclient-python-beta.models.configuration_path_substitution import ConfigurationPathSubstitution
+from embyclient-python-beta.models.configuration_proxy_header_mode import ConfigurationProxyHeaderMode
 from embyclient-python-beta.models.configuration_segment_skip_mode import ConfigurationSegmentSkipMode
 from embyclient-python-beta.models.configuration_server_configuration import ConfigurationServerConfiguration
 from embyclient-python-beta.models.configuration_subtitle_playback_mode import ConfigurationSubtitlePlaybackMode
@@ -292,7 +293,6 @@ from embyclient-python-beta.models.transcoding_info import TranscodingInfo
 from embyclient-python-beta.models.transcoding_vp_step_info import TranscodingVpStepInfo
 from embyclient-python-beta.models.transcoding_vp_step_types import TranscodingVpStepTypes
 from embyclient-python-beta.models.tuple_double_double import TupleDoubleDouble
-from embyclient-python-beta.models.update_user_easy_password import UpdateUserEasyPassword
 from embyclient-python-beta.models.update_user_password import UpdateUserPassword
 from embyclient-python-beta.models.updates_installation_info import UpdatesInstallationInfo
 from embyclient-python-beta.models.updates_package_info import UpdatesPackageInfo

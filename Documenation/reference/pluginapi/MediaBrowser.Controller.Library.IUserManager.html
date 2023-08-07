@@ -291,39 +291,6 @@ User[] Users { get; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_IUserManager_ChangeEasyPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangeEasyPassword*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IUserManager_ChangeEasyPassword_MediaBrowser_Controller_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangeEasyPassword(MediaBrowser.Controller.Entities.User,System.String)">ChangeEasyPassword(User, String)</h4>
-  <div class="markdown level1 summary"><p>Changes the easy password.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ChangeEasyPassword(User user, string newPassword)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">newPassword</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Library_IUserManager_ChangePassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangePassword*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_ChangePassword_MediaBrowser_Controller_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangePassword(MediaBrowser.Controller.Entities.User,System.String)">ChangePassword(User, String)</h4>
   <div class="markdown level1 summary"><p>Changes the password.</p>
@@ -1032,13 +999,13 @@ User[] Users { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Library_IUserManager_GetUserByName_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserByName*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserByName_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserByName(System.ReadOnlySpan{System.Char})">GetUserByName(ReadOnlySpan&lt;Char&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserByName_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserByName(System.String)">GetUserByName(String)</h4>
   <div class="markdown level1 summary"><p>Gets the name of the user by.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">User GetUserByName(ReadOnlySpan&lt;char&gt; name)</code></pre>
+    <pre><code class="lang-csharp hljs">User GetUserByName(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1051,7 +1018,7 @@ User[] Users { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>The name.</p>
 </td>
@@ -1164,13 +1131,13 @@ User[] Users { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto(MediaBrowser.Controller.Entities.User,System.Boolean)">GetUserDto(User, Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto(MediaBrowser.Controller.Entities.User)">GetUserDto(User)</h4>
   <div class="markdown level1 summary"><p>Gets the user dto.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UserDto GetUserDto(User user, bool isInLocalNetwork = false)</code></pre>
+    <pre><code class="lang-csharp hljs">UserDto GetUserDto(User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1185,14 +1152,7 @@ User[] Users { get; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
-        <td><p>The user.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">isInLocalNetwork</span></td>
-        <td><p>if set to <code>true</code> [is in local network].</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1207,20 +1167,20 @@ User[] Users { get; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a></td>
-        <td><p>UserDto.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto(MediaBrowser.Controller.Entities.User,System.Boolean,System.Boolean)">GetUserDto(User, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto(MediaBrowser.Controller.Entities.User,System.Boolean)">GetUserDto(User, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the user dto.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UserDto GetUserDto(User user, bool isAuthenticated, bool isInLocalNetwork = false)</code></pre>
+    <pre><code class="lang-csharp hljs">UserDto GetUserDto(User user, bool isAuthenticated)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1240,11 +1200,6 @@ User[] Users { get; }</code></pre>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">isAuthenticated</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">isInLocalNetwork</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1811,35 +1766,6 @@ User[] Users { get; }</code></pre>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_IUserManager_ResetEasyPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetEasyPassword*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IUserManager_ResetEasyPassword_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetEasyPassword(MediaBrowser.Controller.Entities.User)">ResetEasyPassword(User)</h4>
-  <div class="markdown level1 summary"><p>Resets the easy password.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ResetEasyPassword(User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user.</p>
-</td>
       </tr>
     </tbody>
   </table>

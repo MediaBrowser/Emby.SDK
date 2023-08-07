@@ -12256,6 +12256,256 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> HeadAudioByIdStreamWithHttpMessagesAsync(string id, string container, string deviceProfileId = default(string), string deviceId = default(string), string audioCodec = default(string), bool? enableAutoStreamCopy = default(bool?), int? audioSampleRate = default(int?), int? audioBitRate = default(int?), int? audioChannels = default(int?), int? maxAudioChannels = default(int?), bool? staticParameter = default(bool?), string profile = default(string), string level = default(string), double? framerate = default(double?), double? maxFramerate = default(double?), bool? copyTimestamps = default(bool?), long? startTimeTicks = default(long?), int? width = default(int?), int? height = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), int? videoBitRate = default(int?), int? subtitleStreamIndex = default(int?), string subtitleMethod = default(string), int? maxRefFrames = default(int?), int? maxVideoBitDepth = default(int?), string videoCodec = default(string), int? audioStreamIndex = default(int?), int? videoStreamIndex = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
+        /// Gets an audio stream
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name='streamFileName'>
+        /// </param>
+        /// <param name='id'>
+        /// Item Id
+        /// </param>
+        /// <param name='container'>
+        /// Container
+        /// </param>
+        /// <param name='deviceProfileId'>
+        /// Optional. The dlna device profile id to utilize.
+        /// </param>
+        /// <param name='deviceId'>
+        /// The device id of the client requesting. Used to stop encoding
+        /// processes when needed.
+        /// </param>
+        /// <param name='audioCodec'>
+        /// Optional. Specify a audio codec to encode to, e.g. mp3. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// aac, mp3, vorbis, wma.
+        /// </param>
+        /// <param name='enableAutoStreamCopy'>
+        /// Whether or not to allow automatic stream copy if requested values
+        /// match the original source. Defaults to true.
+        /// </param>
+        /// <param name='audioSampleRate'>
+        /// Optional. Specify a specific audio sample rate, e.g. 44100
+        /// </param>
+        /// <param name='audioBitRate'>
+        /// Optional. Specify an audio bitrate to encode to, e.g. 128000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='audioChannels'>
+        /// Optional. Specify a specific number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='maxAudioChannels'>
+        /// Optional. Specify a maximum number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='staticParameter'>
+        /// Optional. If true, the original file will be streamed statically
+        /// without any encoding. Use either no url extension or the original
+        /// file extension. true/false
+        /// </param>
+        /// <param name='profile'>
+        /// Optional. Specify a specific h264 profile, e.g. main, baseline,
+        /// high.
+        /// </param>
+        /// <param name='level'>
+        /// Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
+        /// </param>
+        /// <param name='framerate'>
+        /// Optional. A specific video framerate to encode to, e.g. 23.976.
+        /// Generally this should be omitted unless the device has specific
+        /// requirements.
+        /// </param>
+        /// <param name='maxFramerate'>
+        /// Optional. A specific maximum video framerate to encode to, e.g.
+        /// 23.976. Generally this should be omitted unless the device has
+        /// specific requirements.
+        /// </param>
+        /// <param name='copyTimestamps'>
+        /// Whether or not to copy timestamps when transcoding with an offset.
+        /// Defaults to false.
+        /// </param>
+        /// <param name='startTimeTicks'>
+        /// Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
+        /// </param>
+        /// <param name='width'>
+        /// Optional. The fixed horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='height'>
+        /// Optional. The fixed vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='maxWidth'>
+        /// Optional. The maximum horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='maxHeight'>
+        /// Optional. The maximum vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='videoBitRate'>
+        /// Optional. Specify a video bitrate to encode to, e.g. 500000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='subtitleStreamIndex'>
+        /// Optional. The index of the subtitle stream to use. If omitted no
+        /// subtitles will be used.
+        /// </param>
+        /// <param name='subtitleMethod'>
+        /// Optional. Specify the subtitle delivery method. Possible values
+        /// include: 'Encode', 'Embed', 'External', 'Hls', 'VideoSideData'
+        /// </param>
+        /// <param name='maxRefFrames'>
+        /// Optional.
+        /// </param>
+        /// <param name='maxVideoBitDepth'>
+        /// Optional.
+        /// </param>
+        /// <param name='videoCodec'>
+        /// Optional. Specify a video codec to encode to, e.g. h264. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// h264, mpeg4, theora, vpx, wmv.
+        /// </param>
+        /// <param name='audioStreamIndex'>
+        /// Optional. The index of the audio stream to use. If omitted the
+        /// first audio stream will be used.
+        /// </param>
+        /// <param name='videoStreamIndex'>
+        /// Optional. The index of the video stream to use. If omitted the
+        /// first video stream will be used.
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse> GetAudioByIdByStreamfilenameWithHttpMessagesAsync(string streamFileName, string id, string container, string deviceProfileId = default(string), string deviceId = default(string), string audioCodec = default(string), bool? enableAutoStreamCopy = default(bool?), int? audioSampleRate = default(int?), int? audioBitRate = default(int?), int? audioChannels = default(int?), int? maxAudioChannels = default(int?), bool? staticParameter = default(bool?), string profile = default(string), string level = default(string), double? framerate = default(double?), double? maxFramerate = default(double?), bool? copyTimestamps = default(bool?), long? startTimeTicks = default(long?), int? width = default(int?), int? height = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), int? videoBitRate = default(int?), int? subtitleStreamIndex = default(int?), string subtitleMethod = default(string), int? maxRefFrames = default(int?), int? maxVideoBitDepth = default(int?), string videoCodec = default(string), int? audioStreamIndex = default(int?), int? videoStreamIndex = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Gets an audio stream
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name='streamFileName'>
+        /// </param>
+        /// <param name='id'>
+        /// Item Id
+        /// </param>
+        /// <param name='container'>
+        /// Container
+        /// </param>
+        /// <param name='deviceProfileId'>
+        /// Optional. The dlna device profile id to utilize.
+        /// </param>
+        /// <param name='deviceId'>
+        /// The device id of the client requesting. Used to stop encoding
+        /// processes when needed.
+        /// </param>
+        /// <param name='audioCodec'>
+        /// Optional. Specify a audio codec to encode to, e.g. mp3. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// aac, mp3, vorbis, wma.
+        /// </param>
+        /// <param name='enableAutoStreamCopy'>
+        /// Whether or not to allow automatic stream copy if requested values
+        /// match the original source. Defaults to true.
+        /// </param>
+        /// <param name='audioSampleRate'>
+        /// Optional. Specify a specific audio sample rate, e.g. 44100
+        /// </param>
+        /// <param name='audioBitRate'>
+        /// Optional. Specify an audio bitrate to encode to, e.g. 128000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='audioChannels'>
+        /// Optional. Specify a specific number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='maxAudioChannels'>
+        /// Optional. Specify a maximum number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='staticParameter'>
+        /// Optional. If true, the original file will be streamed statically
+        /// without any encoding. Use either no url extension or the original
+        /// file extension. true/false
+        /// </param>
+        /// <param name='profile'>
+        /// Optional. Specify a specific h264 profile, e.g. main, baseline,
+        /// high.
+        /// </param>
+        /// <param name='level'>
+        /// Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
+        /// </param>
+        /// <param name='framerate'>
+        /// Optional. A specific video framerate to encode to, e.g. 23.976.
+        /// Generally this should be omitted unless the device has specific
+        /// requirements.
+        /// </param>
+        /// <param name='maxFramerate'>
+        /// Optional. A specific maximum video framerate to encode to, e.g.
+        /// 23.976. Generally this should be omitted unless the device has
+        /// specific requirements.
+        /// </param>
+        /// <param name='copyTimestamps'>
+        /// Whether or not to copy timestamps when transcoding with an offset.
+        /// Defaults to false.
+        /// </param>
+        /// <param name='startTimeTicks'>
+        /// Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
+        /// </param>
+        /// <param name='width'>
+        /// Optional. The fixed horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='height'>
+        /// Optional. The fixed vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='maxWidth'>
+        /// Optional. The maximum horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='maxHeight'>
+        /// Optional. The maximum vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='videoBitRate'>
+        /// Optional. Specify a video bitrate to encode to, e.g. 500000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='subtitleStreamIndex'>
+        /// Optional. The index of the subtitle stream to use. If omitted no
+        /// subtitles will be used.
+        /// </param>
+        /// <param name='subtitleMethod'>
+        /// Optional. Specify the subtitle delivery method. Possible values
+        /// include: 'Encode', 'Embed', 'External', 'Hls', 'VideoSideData'
+        /// </param>
+        /// <param name='maxRefFrames'>
+        /// Optional.
+        /// </param>
+        /// <param name='maxVideoBitDepth'>
+        /// Optional.
+        /// </param>
+        /// <param name='videoCodec'>
+        /// Optional. Specify a video codec to encode to, e.g. h264. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// h264, mpeg4, theora, vpx, wmv.
+        /// </param>
+        /// <param name='audioStreamIndex'>
+        /// Optional. The index of the audio stream to use. If omitted the
+        /// first audio stream will be used.
+        /// </param>
+        /// <param name='videoStreamIndex'>
+        /// Optional. The index of the video stream to use. If omitted the
+        /// first video stream will be used.
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse> HeadAudioByIdByStreamfilenameWithHttpMessagesAsync(string streamFileName, string id, string container, string deviceProfileId = default(string), string deviceId = default(string), string audioCodec = default(string), bool? enableAutoStreamCopy = default(bool?), int? audioSampleRate = default(int?), int? audioBitRate = default(int?), int? audioChannels = default(int?), int? maxAudioChannels = default(int?), bool? staticParameter = default(bool?), string profile = default(string), string level = default(string), double? framerate = default(double?), double? maxFramerate = default(double?), bool? copyTimestamps = default(bool?), long? startTimeTicks = default(long?), int? width = default(int?), int? height = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), int? videoBitRate = default(int?), int? subtitleStreamIndex = default(int?), string subtitleMethod = default(string), int? maxRefFrames = default(int?), int? maxVideoBitDepth = default(int?), string videoCodec = default(string), int? audioStreamIndex = default(int?), int? videoStreamIndex = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
         /// Gets an audio stream using HTTP live streaming.
         /// </summary>
         /// <remarks>
@@ -16052,25 +16302,6 @@ namespace EmbyClient.MsRest
         Task<HttpOperationResponse> PostUsersByIdPasswordWithHttpMessagesAsync(UpdateUserPassword body, string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Updates a user's easy password
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <param name='body'>
-        /// UpdateUserEasyPassword
-        /// </param>
-        /// <param name='id'>
-        /// </param>
-        /// <param name='customHeaders'>
-        /// The headers that will be added to request.
-        /// </param>
-        /// <param name='cancellationToken'>
-        /// The cancellation token.
-        /// </param>
-        Task<HttpOperationResponse> PostUsersByIdEasypasswordWithHttpMessagesAsync(UpdateUserEasyPassword body, string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
@@ -17032,6 +17263,256 @@ namespace EmbyClient.MsRest
         /// The cancellation token.
         /// </param>
         Task<HttpOperationResponse> HeadVideosByIdStreamWithHttpMessagesAsync(string id, string container, string deviceProfileId = default(string), string deviceId = default(string), string audioCodec = default(string), bool? enableAutoStreamCopy = default(bool?), int? audioSampleRate = default(int?), int? audioBitRate = default(int?), int? audioChannels = default(int?), int? maxAudioChannels = default(int?), bool? staticParameter = default(bool?), string profile = default(string), string level = default(string), double? framerate = default(double?), double? maxFramerate = default(double?), bool? copyTimestamps = default(bool?), long? startTimeTicks = default(long?), int? width = default(int?), int? height = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), int? videoBitRate = default(int?), int? subtitleStreamIndex = default(int?), string subtitleMethod = default(string), int? maxRefFrames = default(int?), int? maxVideoBitDepth = default(int?), string videoCodec = default(string), int? audioStreamIndex = default(int?), int? videoStreamIndex = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Gets a video stream
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name='streamFileName'>
+        /// </param>
+        /// <param name='id'>
+        /// Item Id
+        /// </param>
+        /// <param name='container'>
+        /// Container
+        /// </param>
+        /// <param name='deviceProfileId'>
+        /// Optional. The dlna device profile id to utilize.
+        /// </param>
+        /// <param name='deviceId'>
+        /// The device id of the client requesting. Used to stop encoding
+        /// processes when needed.
+        /// </param>
+        /// <param name='audioCodec'>
+        /// Optional. Specify a audio codec to encode to, e.g. mp3. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// aac, mp3, vorbis, wma.
+        /// </param>
+        /// <param name='enableAutoStreamCopy'>
+        /// Whether or not to allow automatic stream copy if requested values
+        /// match the original source. Defaults to true.
+        /// </param>
+        /// <param name='audioSampleRate'>
+        /// Optional. Specify a specific audio sample rate, e.g. 44100
+        /// </param>
+        /// <param name='audioBitRate'>
+        /// Optional. Specify an audio bitrate to encode to, e.g. 128000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='audioChannels'>
+        /// Optional. Specify a specific number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='maxAudioChannels'>
+        /// Optional. Specify a maximum number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='staticParameter'>
+        /// Optional. If true, the original file will be streamed statically
+        /// without any encoding. Use either no url extension or the original
+        /// file extension. true/false
+        /// </param>
+        /// <param name='profile'>
+        /// Optional. Specify a specific h264 profile, e.g. main, baseline,
+        /// high.
+        /// </param>
+        /// <param name='level'>
+        /// Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
+        /// </param>
+        /// <param name='framerate'>
+        /// Optional. A specific video framerate to encode to, e.g. 23.976.
+        /// Generally this should be omitted unless the device has specific
+        /// requirements.
+        /// </param>
+        /// <param name='maxFramerate'>
+        /// Optional. A specific maximum video framerate to encode to, e.g.
+        /// 23.976. Generally this should be omitted unless the device has
+        /// specific requirements.
+        /// </param>
+        /// <param name='copyTimestamps'>
+        /// Whether or not to copy timestamps when transcoding with an offset.
+        /// Defaults to false.
+        /// </param>
+        /// <param name='startTimeTicks'>
+        /// Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
+        /// </param>
+        /// <param name='width'>
+        /// Optional. The fixed horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='height'>
+        /// Optional. The fixed vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='maxWidth'>
+        /// Optional. The maximum horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='maxHeight'>
+        /// Optional. The maximum vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='videoBitRate'>
+        /// Optional. Specify a video bitrate to encode to, e.g. 500000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='subtitleStreamIndex'>
+        /// Optional. The index of the subtitle stream to use. If omitted no
+        /// subtitles will be used.
+        /// </param>
+        /// <param name='subtitleMethod'>
+        /// Optional. Specify the subtitle delivery method. Possible values
+        /// include: 'Encode', 'Embed', 'External', 'Hls', 'VideoSideData'
+        /// </param>
+        /// <param name='maxRefFrames'>
+        /// Optional.
+        /// </param>
+        /// <param name='maxVideoBitDepth'>
+        /// Optional.
+        /// </param>
+        /// <param name='videoCodec'>
+        /// Optional. Specify a video codec to encode to, e.g. h264. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// h264, mpeg4, theora, vpx, wmv.
+        /// </param>
+        /// <param name='audioStreamIndex'>
+        /// Optional. The index of the audio stream to use. If omitted the
+        /// first audio stream will be used.
+        /// </param>
+        /// <param name='videoStreamIndex'>
+        /// Optional. The index of the video stream to use. If omitted the
+        /// first video stream will be used.
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse> GetVideosByIdByStreamfilenameWithHttpMessagesAsync(string streamFileName, string id, string container, string deviceProfileId = default(string), string deviceId = default(string), string audioCodec = default(string), bool? enableAutoStreamCopy = default(bool?), int? audioSampleRate = default(int?), int? audioBitRate = default(int?), int? audioChannels = default(int?), int? maxAudioChannels = default(int?), bool? staticParameter = default(bool?), string profile = default(string), string level = default(string), double? framerate = default(double?), double? maxFramerate = default(double?), bool? copyTimestamps = default(bool?), long? startTimeTicks = default(long?), int? width = default(int?), int? height = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), int? videoBitRate = default(int?), int? subtitleStreamIndex = default(int?), string subtitleMethod = default(string), int? maxRefFrames = default(int?), int? maxVideoBitDepth = default(int?), string videoCodec = default(string), int? audioStreamIndex = default(int?), int? videoStreamIndex = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Gets a video stream
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name='streamFileName'>
+        /// </param>
+        /// <param name='id'>
+        /// Item Id
+        /// </param>
+        /// <param name='container'>
+        /// Container
+        /// </param>
+        /// <param name='deviceProfileId'>
+        /// Optional. The dlna device profile id to utilize.
+        /// </param>
+        /// <param name='deviceId'>
+        /// The device id of the client requesting. Used to stop encoding
+        /// processes when needed.
+        /// </param>
+        /// <param name='audioCodec'>
+        /// Optional. Specify a audio codec to encode to, e.g. mp3. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// aac, mp3, vorbis, wma.
+        /// </param>
+        /// <param name='enableAutoStreamCopy'>
+        /// Whether or not to allow automatic stream copy if requested values
+        /// match the original source. Defaults to true.
+        /// </param>
+        /// <param name='audioSampleRate'>
+        /// Optional. Specify a specific audio sample rate, e.g. 44100
+        /// </param>
+        /// <param name='audioBitRate'>
+        /// Optional. Specify an audio bitrate to encode to, e.g. 128000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='audioChannels'>
+        /// Optional. Specify a specific number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='maxAudioChannels'>
+        /// Optional. Specify a maximum number of audio channels to encode to,
+        /// e.g. 2
+        /// </param>
+        /// <param name='staticParameter'>
+        /// Optional. If true, the original file will be streamed statically
+        /// without any encoding. Use either no url extension or the original
+        /// file extension. true/false
+        /// </param>
+        /// <param name='profile'>
+        /// Optional. Specify a specific h264 profile, e.g. main, baseline,
+        /// high.
+        /// </param>
+        /// <param name='level'>
+        /// Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
+        /// </param>
+        /// <param name='framerate'>
+        /// Optional. A specific video framerate to encode to, e.g. 23.976.
+        /// Generally this should be omitted unless the device has specific
+        /// requirements.
+        /// </param>
+        /// <param name='maxFramerate'>
+        /// Optional. A specific maximum video framerate to encode to, e.g.
+        /// 23.976. Generally this should be omitted unless the device has
+        /// specific requirements.
+        /// </param>
+        /// <param name='copyTimestamps'>
+        /// Whether or not to copy timestamps when transcoding with an offset.
+        /// Defaults to false.
+        /// </param>
+        /// <param name='startTimeTicks'>
+        /// Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
+        /// </param>
+        /// <param name='width'>
+        /// Optional. The fixed horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='height'>
+        /// Optional. The fixed vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='maxWidth'>
+        /// Optional. The maximum horizontal resolution of the encoded video.
+        /// </param>
+        /// <param name='maxHeight'>
+        /// Optional. The maximum vertical resolution of the encoded video.
+        /// </param>
+        /// <param name='videoBitRate'>
+        /// Optional. Specify a video bitrate to encode to, e.g. 500000. If
+        /// omitted this will be left to encoder defaults.
+        /// </param>
+        /// <param name='subtitleStreamIndex'>
+        /// Optional. The index of the subtitle stream to use. If omitted no
+        /// subtitles will be used.
+        /// </param>
+        /// <param name='subtitleMethod'>
+        /// Optional. Specify the subtitle delivery method. Possible values
+        /// include: 'Encode', 'Embed', 'External', 'Hls', 'VideoSideData'
+        /// </param>
+        /// <param name='maxRefFrames'>
+        /// Optional.
+        /// </param>
+        /// <param name='maxVideoBitDepth'>
+        /// Optional.
+        /// </param>
+        /// <param name='videoCodec'>
+        /// Optional. Specify a video codec to encode to, e.g. h264. If omitted
+        /// the server will auto-select using the url's extension. Options:
+        /// h264, mpeg4, theora, vpx, wmv.
+        /// </param>
+        /// <param name='audioStreamIndex'>
+        /// Optional. The index of the audio stream to use. If omitted the
+        /// first audio stream will be used.
+        /// </param>
+        /// <param name='videoStreamIndex'>
+        /// Optional. The index of the video stream to use. If omitted the
+        /// first video stream will be used.
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse> HeadVideosByIdByStreamfilenameWithHttpMessagesAsync(string streamFileName, string id, string container, string deviceProfileId = default(string), string deviceId = default(string), string audioCodec = default(string), bool? enableAutoStreamCopy = default(bool?), int? audioSampleRate = default(int?), int? audioBitRate = default(int?), int? audioChannels = default(int?), int? maxAudioChannels = default(int?), bool? staticParameter = default(bool?), string profile = default(string), string level = default(string), double? framerate = default(double?), double? maxFramerate = default(double?), bool? copyTimestamps = default(bool?), long? startTimeTicks = default(long?), int? width = default(int?), int? height = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), int? videoBitRate = default(int?), int? subtitleStreamIndex = default(int?), string subtitleMethod = default(string), int? maxRefFrames = default(int?), int? maxVideoBitDepth = default(int?), string videoCodec = default(string), int? audioStreamIndex = default(int?), int? videoStreamIndex = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets a video stream using HTTP live streaming.

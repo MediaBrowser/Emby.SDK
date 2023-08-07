@@ -19,7 +19,6 @@ import ForgotPassword from '../model/ForgotPassword';
 import ForgotPasswordPin from '../model/ForgotPasswordPin';
 import NameIdPair from '../model/NameIdPair';
 import QueryResultUserDto from '../model/QueryResultUserDto';
-import UpdateUserEasyPassword from '../model/UpdateUserEasyPassword';
 import UpdateUserPassword from '../model/UpdateUserPassword';
 import UserDto from '../model/UserDto';
 import UsersForgotPasswordResult from '../model/UsersForgotPasswordResult';
@@ -29,7 +28,7 @@ import UsersUserPolicy from '../model/UsersUserPolicy';
 /**
 * UserService service.
 * @module EmbyClient.JavaScript.Beta/UserServiceApi
-* @version 4.8.0.39
+* @version 4.8.0.40
 */
 export default class UserServiceApi {
 
@@ -503,43 +502,6 @@ export default class UserServiceApi {
 
       return this.apiClient.callApi(
         '/Users/{Id}/Delete', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the postUsersByIdEasypassword operation.
-     * @callback module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersByIdEasypasswordCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Updates a user&#x27;s easy password
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersByIdEasypasswordCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    postUsersByIdEasypassword() {
-      let postBody = body;
-
-      let pathParams = {
-        'Id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = ['application/json', 'application/xml'];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/Users/{Id}/EasyPassword', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

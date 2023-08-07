@@ -57,9 +57,6 @@ public class UserDto {
   @SerializedName("HasConfiguredPassword")
   private Boolean hasConfiguredPassword = null;
 
-  @SerializedName("HasConfiguredEasyPassword")
-  private Boolean hasConfiguredEasyPassword = null;
-
   @SerializedName("EnableAutoLogin")
   private Boolean enableAutoLogin = null;
 
@@ -77,6 +74,9 @@ public class UserDto {
 
   @SerializedName("PrimaryImageAspectRatio")
   private Double primaryImageAspectRatio = null;
+
+  @SerializedName("HasConfiguredEasyPassword")
+  private Boolean hasConfiguredEasyPassword = null;
 
   public UserDto name(String name) {
     this.name = name;
@@ -276,24 +276,6 @@ public class UserDto {
     this.hasConfiguredPassword = hasConfiguredPassword;
   }
 
-  public UserDto hasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
-    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
-    return this;
-  }
-
-   /**
-   * Get hasConfiguredEasyPassword
-   * @return hasConfiguredEasyPassword
-  **/
-  @Schema(description = "")
-  public Boolean isHasConfiguredEasyPassword() {
-    return hasConfiguredEasyPassword;
-  }
-
-  public void setHasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
-    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
-  }
-
   public UserDto enableAutoLogin(Boolean enableAutoLogin) {
     this.enableAutoLogin = enableAutoLogin;
     return this;
@@ -402,6 +384,24 @@ public class UserDto {
     this.primaryImageAspectRatio = primaryImageAspectRatio;
   }
 
+  public UserDto hasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
+    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
+    return this;
+  }
+
+   /**
+   * Get hasConfiguredEasyPassword
+   * @return hasConfiguredEasyPassword
+  **/
+  @Schema(description = "")
+  public Boolean isHasConfiguredEasyPassword() {
+    return hasConfiguredEasyPassword;
+  }
+
+  public void setHasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
+    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -423,18 +423,18 @@ public class UserDto {
         Objects.equals(this.primaryImageTag, userDto.primaryImageTag) &&
         Objects.equals(this.hasPassword, userDto.hasPassword) &&
         Objects.equals(this.hasConfiguredPassword, userDto.hasConfiguredPassword) &&
-        Objects.equals(this.hasConfiguredEasyPassword, userDto.hasConfiguredEasyPassword) &&
         Objects.equals(this.enableAutoLogin, userDto.enableAutoLogin) &&
         Objects.equals(this.lastLoginDate, userDto.lastLoginDate) &&
         Objects.equals(this.lastActivityDate, userDto.lastActivityDate) &&
         Objects.equals(this._configuration, userDto._configuration) &&
         Objects.equals(this.policy, userDto.policy) &&
-        Objects.equals(this.primaryImageAspectRatio, userDto.primaryImageAspectRatio);
+        Objects.equals(this.primaryImageAspectRatio, userDto.primaryImageAspectRatio) &&
+        Objects.equals(this.hasConfiguredEasyPassword, userDto.hasConfiguredEasyPassword);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, hasConfiguredEasyPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio);
+    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio, hasConfiguredEasyPassword);
   }
 
 
@@ -454,13 +454,13 @@ public class UserDto {
     sb.append("    primaryImageTag: ").append(toIndentedString(primaryImageTag)).append("\n");
     sb.append("    hasPassword: ").append(toIndentedString(hasPassword)).append("\n");
     sb.append("    hasConfiguredPassword: ").append(toIndentedString(hasConfiguredPassword)).append("\n");
-    sb.append("    hasConfiguredEasyPassword: ").append(toIndentedString(hasConfiguredEasyPassword)).append("\n");
     sb.append("    enableAutoLogin: ").append(toIndentedString(enableAutoLogin)).append("\n");
     sb.append("    lastLoginDate: ").append(toIndentedString(lastLoginDate)).append("\n");
     sb.append("    lastActivityDate: ").append(toIndentedString(lastActivityDate)).append("\n");
     sb.append("    _configuration: ").append(toIndentedString(_configuration)).append("\n");
     sb.append("    policy: ").append(toIndentedString(policy)).append("\n");
     sb.append("    primaryImageAspectRatio: ").append(toIndentedString(primaryImageAspectRatio)).append("\n");
+    sb.append("    hasConfiguredEasyPassword: ").append(toIndentedString(hasConfiguredEasyPassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }

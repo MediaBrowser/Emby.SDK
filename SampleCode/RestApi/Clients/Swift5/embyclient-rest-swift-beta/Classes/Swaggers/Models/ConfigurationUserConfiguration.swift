@@ -16,7 +16,6 @@ public struct ConfigurationUserConfiguration: Codable {
     public var subtitleLanguagePreference: String?
     public var displayMissingEpisodes: Bool?
     public var subtitleMode: ConfigurationSubtitlePlaybackMode?
-    public var enableLocalPassword: Bool?
     public var orderedViews: [String]?
     public var latestItemsExcludes: [String]?
     public var myMediaExcludes: [String]?
@@ -26,14 +25,14 @@ public struct ConfigurationUserConfiguration: Codable {
     public var enableNextEpisodeAutoPlay: Bool?
     public var resumeRewindSeconds: Int?
     public var introSkipMode: ConfigurationSegmentSkipMode?
+    public var enableLocalPassword: Bool?
 
-    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: ConfigurationSubtitlePlaybackMode? = nil, enableLocalPassword: Bool? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: ConfigurationSegmentSkipMode? = nil) {
+    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: ConfigurationSubtitlePlaybackMode? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: ConfigurationSegmentSkipMode? = nil, enableLocalPassword: Bool? = nil) {
         self.audioLanguagePreference = audioLanguagePreference
         self.playDefaultAudioTrack = playDefaultAudioTrack
         self.subtitleLanguagePreference = subtitleLanguagePreference
         self.displayMissingEpisodes = displayMissingEpisodes
         self.subtitleMode = subtitleMode
-        self.enableLocalPassword = enableLocalPassword
         self.orderedViews = orderedViews
         self.latestItemsExcludes = latestItemsExcludes
         self.myMediaExcludes = myMediaExcludes
@@ -43,6 +42,7 @@ public struct ConfigurationUserConfiguration: Codable {
         self.enableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay
         self.resumeRewindSeconds = resumeRewindSeconds
         self.introSkipMode = introSkipMode
+        self.enableLocalPassword = enableLocalPassword
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -51,7 +51,6 @@ public struct ConfigurationUserConfiguration: Codable {
         case subtitleLanguagePreference = "SubtitleLanguagePreference"
         case displayMissingEpisodes = "DisplayMissingEpisodes"
         case subtitleMode = "SubtitleMode"
-        case enableLocalPassword = "EnableLocalPassword"
         case orderedViews = "OrderedViews"
         case latestItemsExcludes = "LatestItemsExcludes"
         case myMediaExcludes = "MyMediaExcludes"
@@ -61,6 +60,7 @@ public struct ConfigurationUserConfiguration: Codable {
         case enableNextEpisodeAutoPlay = "EnableNextEpisodeAutoPlay"
         case resumeRewindSeconds = "ResumeRewindSeconds"
         case introSkipMode = "IntroSkipMode"
+        case enableLocalPassword = "EnableLocalPassword"
     }
 
 }

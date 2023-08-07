@@ -16,7 +16,7 @@ import ConfigurationSubtitlePlaybackMode from './ConfigurationSubtitlePlaybackMo
 /**
 * The ConfigurationUserConfiguration model module.
 * @module model/ConfigurationUserConfiguration
-* @version 4.8.0.39
+* @version 4.8.0.40
 */
 export default class ConfigurationUserConfiguration {
     /**
@@ -58,9 +58,6 @@ export default class ConfigurationUserConfiguration {
             if (data.hasOwnProperty('SubtitleMode')) {
                 obj['SubtitleMode'] = ConfigurationSubtitlePlaybackMode.constructFromObject(data['SubtitleMode']);
             }
-            if (data.hasOwnProperty('EnableLocalPassword')) {
-                obj['EnableLocalPassword'] = ApiClient.convertToType(data['EnableLocalPassword'], 'Boolean');
-            }
             if (data.hasOwnProperty('OrderedViews')) {
                 obj['OrderedViews'] = ApiClient.convertToType(data['OrderedViews'], ['String']);
             }
@@ -88,6 +85,9 @@ export default class ConfigurationUserConfiguration {
             if (data.hasOwnProperty('IntroSkipMode')) {
                 obj['IntroSkipMode'] = ConfigurationSegmentSkipMode.constructFromObject(data['IntroSkipMode']);
             }
+            if (data.hasOwnProperty('EnableLocalPassword')) {
+                obj['EnableLocalPassword'] = ApiClient.convertToType(data['EnableLocalPassword'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -112,10 +112,6 @@ export default class ConfigurationUserConfiguration {
     * @member {module:model/ConfigurationSubtitlePlaybackMode} SubtitleMode
     */
     'SubtitleMode' = undefined;
-    /**
-    * @member {Boolean} EnableLocalPassword
-    */
-    'EnableLocalPassword' = undefined;
     /**
     * @member {Array.<String>} OrderedViews
     */
@@ -152,6 +148,10 @@ export default class ConfigurationUserConfiguration {
     * @member {module:model/ConfigurationSegmentSkipMode} IntroSkipMode
     */
     'IntroSkipMode' = undefined;
+    /**
+    * @member {Boolean} EnableLocalPassword
+    */
+    'EnableLocalPassword' = undefined;
 
 
 

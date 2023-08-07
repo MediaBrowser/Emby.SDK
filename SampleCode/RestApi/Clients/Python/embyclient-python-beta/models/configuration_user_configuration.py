@@ -27,7 +27,6 @@ class ConfigurationUserConfiguration(object):
         'subtitle_language_preference': 'str',
         'display_missing_episodes': 'bool',
         'subtitle_mode': 'ConfigurationSubtitlePlaybackMode',
-        'enable_local_password': 'bool',
         'ordered_views': 'list[str]',
         'latest_items_excludes': 'list[str]',
         'my_media_excludes': 'list[str]',
@@ -36,7 +35,8 @@ class ConfigurationUserConfiguration(object):
         'remember_subtitle_selections': 'bool',
         'enable_next_episode_auto_play': 'bool',
         'resume_rewind_seconds': 'int',
-        'intro_skip_mode': 'ConfigurationSegmentSkipMode'
+        'intro_skip_mode': 'ConfigurationSegmentSkipMode',
+        'enable_local_password': 'bool'
     }
 
     attribute_map = {
@@ -45,7 +45,6 @@ class ConfigurationUserConfiguration(object):
         'subtitle_language_preference': 'SubtitleLanguagePreference',
         'display_missing_episodes': 'DisplayMissingEpisodes',
         'subtitle_mode': 'SubtitleMode',
-        'enable_local_password': 'EnableLocalPassword',
         'ordered_views': 'OrderedViews',
         'latest_items_excludes': 'LatestItemsExcludes',
         'my_media_excludes': 'MyMediaExcludes',
@@ -54,17 +53,17 @@ class ConfigurationUserConfiguration(object):
         'remember_subtitle_selections': 'RememberSubtitleSelections',
         'enable_next_episode_auto_play': 'EnableNextEpisodeAutoPlay',
         'resume_rewind_seconds': 'ResumeRewindSeconds',
-        'intro_skip_mode': 'IntroSkipMode'
+        'intro_skip_mode': 'IntroSkipMode',
+        'enable_local_password': 'EnableLocalPassword'
     }
 
-    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, display_missing_episodes=None, subtitle_mode=None, enable_local_password=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None):  # noqa: E501
+    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None):  # noqa: E501
         """ConfigurationUserConfiguration - a model defined in Swagger"""  # noqa: E501
         self._audio_language_preference = None
         self._play_default_audio_track = None
         self._subtitle_language_preference = None
         self._display_missing_episodes = None
         self._subtitle_mode = None
-        self._enable_local_password = None
         self._ordered_views = None
         self._latest_items_excludes = None
         self._my_media_excludes = None
@@ -74,6 +73,7 @@ class ConfigurationUserConfiguration(object):
         self._enable_next_episode_auto_play = None
         self._resume_rewind_seconds = None
         self._intro_skip_mode = None
+        self._enable_local_password = None
         self.discriminator = None
         if audio_language_preference is not None:
             self.audio_language_preference = audio_language_preference
@@ -85,8 +85,6 @@ class ConfigurationUserConfiguration(object):
             self.display_missing_episodes = display_missing_episodes
         if subtitle_mode is not None:
             self.subtitle_mode = subtitle_mode
-        if enable_local_password is not None:
-            self.enable_local_password = enable_local_password
         if ordered_views is not None:
             self.ordered_views = ordered_views
         if latest_items_excludes is not None:
@@ -105,6 +103,8 @@ class ConfigurationUserConfiguration(object):
             self.resume_rewind_seconds = resume_rewind_seconds
         if intro_skip_mode is not None:
             self.intro_skip_mode = intro_skip_mode
+        if enable_local_password is not None:
+            self.enable_local_password = enable_local_password
 
     @property
     def audio_language_preference(self):
@@ -210,27 +210,6 @@ class ConfigurationUserConfiguration(object):
         """
 
         self._subtitle_mode = subtitle_mode
-
-    @property
-    def enable_local_password(self):
-        """Gets the enable_local_password of this ConfigurationUserConfiguration.  # noqa: E501
-
-
-        :return: The enable_local_password of this ConfigurationUserConfiguration.  # noqa: E501
-        :rtype: bool
-        """
-        return self._enable_local_password
-
-    @enable_local_password.setter
-    def enable_local_password(self, enable_local_password):
-        """Sets the enable_local_password of this ConfigurationUserConfiguration.
-
-
-        :param enable_local_password: The enable_local_password of this ConfigurationUserConfiguration.  # noqa: E501
-        :type: bool
-        """
-
-        self._enable_local_password = enable_local_password
 
     @property
     def ordered_views(self):
@@ -420,6 +399,27 @@ class ConfigurationUserConfiguration(object):
         """
 
         self._intro_skip_mode = intro_skip_mode
+
+    @property
+    def enable_local_password(self):
+        """Gets the enable_local_password of this ConfigurationUserConfiguration.  # noqa: E501
+
+
+        :return: The enable_local_password of this ConfigurationUserConfiguration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_local_password
+
+    @enable_local_password.setter
+    def enable_local_password(self, enable_local_password):
+        """Sets the enable_local_password of this ConfigurationUserConfiguration.
+
+
+        :param enable_local_password: The enable_local_password of this ConfigurationUserConfiguration.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_local_password = enable_local_password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

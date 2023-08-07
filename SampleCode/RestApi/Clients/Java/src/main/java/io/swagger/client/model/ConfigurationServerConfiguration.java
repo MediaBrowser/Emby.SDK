@@ -14,6 +14,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.ConfigurationImageSavingConvention;
 import io.swagger.client.model.ConfigurationPathSubstitution;
+import io.swagger.client.model.ConfigurationProxyHeaderMode;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -185,6 +186,9 @@ public class ConfigurationServerConfiguration {
 
   @SerializedName("MigratedToUserItemShares")
   private Boolean migratedToUserItemShares = null;
+
+  @SerializedName("ProxyHeaderMode")
+  private ConfigurationProxyHeaderMode proxyHeaderMode = null;
 
   @SerializedName("EnableDebugLevelLogging")
   private Boolean enableDebugLevelLogging = null;
@@ -1227,6 +1231,24 @@ public class ConfigurationServerConfiguration {
     this.migratedToUserItemShares = migratedToUserItemShares;
   }
 
+  public ConfigurationServerConfiguration proxyHeaderMode(ConfigurationProxyHeaderMode proxyHeaderMode) {
+    this.proxyHeaderMode = proxyHeaderMode;
+    return this;
+  }
+
+   /**
+   * Get proxyHeaderMode
+   * @return proxyHeaderMode
+  **/
+  @Schema(description = "")
+  public ConfigurationProxyHeaderMode getProxyHeaderMode() {
+    return proxyHeaderMode;
+  }
+
+  public void setProxyHeaderMode(ConfigurationProxyHeaderMode proxyHeaderMode) {
+    this.proxyHeaderMode = proxyHeaderMode;
+  }
+
   public ConfigurationServerConfiguration enableDebugLevelLogging(Boolean enableDebugLevelLogging) {
     this.enableDebugLevelLogging = enableDebugLevelLogging;
     return this;
@@ -1417,6 +1439,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.databaseAnalysisLimit, configurationServerConfiguration.databaseAnalysisLimit) &&
         Objects.equals(this.disableAsyncIO, configurationServerConfiguration.disableAsyncIO) &&
         Objects.equals(this.migratedToUserItemShares, configurationServerConfiguration.migratedToUserItemShares) &&
+        Objects.equals(this.proxyHeaderMode, configurationServerConfiguration.proxyHeaderMode) &&
         Objects.equals(this.enableDebugLevelLogging, configurationServerConfiguration.enableDebugLevelLogging) &&
         Objects.equals(this.revertDebugLogging, configurationServerConfiguration.revertDebugLogging) &&
         Objects.equals(this.enableAutoUpdate, configurationServerConfiguration.enableAutoUpdate) &&
@@ -1428,7 +1451,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1491,6 +1514,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
     sb.append("    migratedToUserItemShares: ").append(toIndentedString(migratedToUserItemShares)).append("\n");
+    sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");
     sb.append("    enableDebugLevelLogging: ").append(toIndentedString(enableDebugLevelLogging)).append("\n");
     sb.append("    revertDebugLogging: ").append(toIndentedString(revertDebugLogging)).append("\n");
     sb.append("    enableAutoUpdate: ").append(toIndentedString(enableAutoUpdate)).append("\n");

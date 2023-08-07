@@ -12,11 +12,12 @@
 import ApiClient from '../ApiClient';
 import ConfigurationImageSavingConvention from './ConfigurationImageSavingConvention';
 import ConfigurationPathSubstitution from './ConfigurationPathSubstitution';
+import ConfigurationProxyHeaderMode from './ConfigurationProxyHeaderMode';
 
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.39
+* @version 4.8.0.40
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -204,6 +205,9 @@ export default class ConfigurationServerConfiguration {
             }
             if (data.hasOwnProperty('MigratedToUserItemShares')) {
                 obj['MigratedToUserItemShares'] = ApiClient.convertToType(data['MigratedToUserItemShares'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ProxyHeaderMode')) {
+                obj['ProxyHeaderMode'] = ConfigurationProxyHeaderMode.constructFromObject(data['ProxyHeaderMode']);
             }
             if (data.hasOwnProperty('EnableDebugLevelLogging')) {
                 obj['EnableDebugLevelLogging'] = ApiClient.convertToType(data['EnableDebugLevelLogging'], 'Boolean');
@@ -446,6 +450,10 @@ export default class ConfigurationServerConfiguration {
     * @member {Boolean} MigratedToUserItemShares
     */
     'MigratedToUserItemShares' = undefined;
+    /**
+    * @member {module:model/ConfigurationProxyHeaderMode} ProxyHeaderMode
+    */
+    'ProxyHeaderMode' = undefined;
     /**
     * @member {Boolean} EnableDebugLevelLogging
     */

@@ -20,8 +20,7 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(UsersForgotPasswordAction.Adapter.class)
 public enum UsersForgotPasswordAction {
   CONTACTADMIN("ContactAdmin"),
-  PINCODE("PinCode"),
-  INNETWORKREQUIRED("InNetworkRequired");
+  PINCODE("PinCode");
 
   private String value;
 
