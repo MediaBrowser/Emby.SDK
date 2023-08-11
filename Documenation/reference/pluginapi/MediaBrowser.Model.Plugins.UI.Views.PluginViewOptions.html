@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DxPivotGridField
+    <title>Class PluginViewOptions
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DxPivotGridField
+    <meta name="title" content="Class PluginViewOptions
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    <meta property="docfx:uid" content="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions">
     
     <meta property="docfx:rel" content="../../">
     
@@ -147,36 +147,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions">
 <div class="refdoc">
   
   
-  <h1 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField" class="text-break">Class DxPivotGridField
+  <h1 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions" class="text-break">Class PluginViewOptions
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Options for Plugin Views</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">DxPivotGridField</span></div>
+    <div class="level1"><span class="xref">PluginViewOptions</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Web.GenericEdit.Elements.DxPivot.html">Emby.Web.GenericEdit.Elements.DxPivot</a></h6>
-  <h6><strong>Assembly</strong>: Emby.Web.GenericEdit.dll</h6>
-  <h5 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.html">MediaBrowser.Model.Plugins.UI.Views</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DxPivotGridField</code></pre>
+    <pre><code class="lang-csharp hljs">public class PluginViewOptions</code></pre>
   </div>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>To specify options for plugin views, implement the interface <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginViewWithOptions.html">IPluginViewWithOptions</a> in your
+Page, Dialog or Wizard view.</p>
+</div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_area_" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.area*"></a>
-  <h4 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_area" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.area">area</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_CompactViewAppearance_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.CompactViewAppearance*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_CompactViewAppearance" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.CompactViewAppearance">CompactViewAppearance</h4>
+  <div class="markdown level1 summary"><p>Gets or sets how a Page View should be presented in cases of limited screen space (like TV mode).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string area { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CompactViewAppearance CompactViewAppearance { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,20 +194,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.CompactViewAppearance.html">CompactViewAppearance</a></td>
+        <td><p>The compact view appearance.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_CompactViewAppearance_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Applies to</p>
+<ul><li></li></ul>
+</div>
   
   
-  <a id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_caption_" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.caption*"></a>
-  <h4 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_caption" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.caption">caption</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_DialogSize_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.DialogSize*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_DialogSize" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.DialogSize">DialogSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the preferred dialog size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string caption { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DialogSize DialogSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,20 +225,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.DialogSize.html">DialogSize</a></td>
+        <td><p>The preferred dialog display size.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_DialogSize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Please note that in case of TV or mobile display modes, dialogs may always be shown
+      as full-screen.</p>
+<p>The default is <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.DialogSize.html#MediaBrowser_Model_Plugins_UI_Views_Enums_DialogSize_Default">Default</a></p>
+<p>Applies to</p>
+<ul><li></li></ul>
+</div>
   
   
-  <a id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_dataField_" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.dataField*"></a>
-  <h4 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_dataField" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.dataField">dataField</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_HelpUrl_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.HelpUrl*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_HelpUrl" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.HelpUrl">HelpUrl</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a URL, pointing to help information for this specific view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string dataField { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Uri HelpUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,20 +259,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></td>
+        <td><p>The help URL.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_HelpUrl_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Applies to</p>
+<ul><li></li><li></li><li></li></ul>
+</div>
   
   
-  <a id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_dataType_" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.dataType*"></a>
-  <h4 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_dataType" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.dataType">dataType</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_QueryCloseAction_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.QueryCloseAction*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_QueryCloseAction" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.QueryCloseAction">QueryCloseAction</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the action to be taken when the plugin view is exited.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string dataType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public QueryCloseAction QueryCloseAction { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,20 +290,30 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.QueryCloseAction.html">QueryCloseAction</a></td>
+        <td><p>The query close action.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_QueryCloseAction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this to specify what should happen when the user exits a view by navigating back,
+      pressing cancel or mouse-clicking or tapping outside of a dialog.
+</p>
+<p>The default is <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.QueryCloseAction.html#MediaBrowser_Model_Plugins_UI_Views_Enums_QueryCloseAction_None">None</a></p>
+<p>Applies to</p>
+<ul><li></li><li></li></ul>
+</div>
   
   
-  <a id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_sortBy_" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.sortBy*"></a>
-  <h4 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_sortBy" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.sortBy">sortBy</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_WizardHidingBehavior_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.WizardHidingBehavior*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_WizardHidingBehavior" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.WizardHidingBehavior">WizardHidingBehavior</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the action to be taken when leaving a Wizard View.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string sortBy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public WizardHidingBehavior WizardHidingBehavior { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,64 +325,35 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.WizardHidingBehavior.html">WizardHidingBehavior</a></td>
+        <td><p>The wizard hiding behavior.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_sortOrder_" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.sortOrder*"></a>
-  <h4 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_sortOrder" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.sortOrder">sortOrder</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string sortOrder { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_summaryType_" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.summaryType*"></a>
-  <h4 id="Emby_Web_GenericEdit_Elements_DxPivot_DxPivotGridField_summaryType" data-uid="Emby.Web.GenericEdit.Elements.DxPivot.DxPivotGridField.summaryType">summaryType</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string summaryType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_WizardHidingBehavior_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this to specify what should happen when the user exits a wizard view by navigating away,
+      mouse-clicking or tapping outside of the wizard.
+</p>
+<p>Please note that it can make sense to use different values at different stages of
+      a wizard progress. For example, the initial wizard page should always be set to
+<a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.WizardHidingBehavior.html#MediaBrowser_Model_Plugins_UI_Views_Enums_WizardHidingBehavior_AutoCancel">AutoCancel</a> as there is not state that
+would need to be retained.
+</p>
+<p>The default is <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.WizardHidingBehavior.html#MediaBrowser_Model_Plugins_UI_Views_Enums_WizardHidingBehavior_AutoCancel">AutoCancel</a></p>
+<p>Applies to</p>
+<ul><li></li></ul>
+</div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginViewWithOptions.html">IPluginViewWithOptions</a></div>
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginPageView.html">IPluginPageView</a></div>
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginDialogView.html">IPluginDialogView</a></div>
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginWizardView.html">IPluginWizardView</a></div>
   </div>
 </div>
 </article>

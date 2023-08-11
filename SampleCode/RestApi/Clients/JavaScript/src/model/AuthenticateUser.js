@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The AuthenticateUser model module.
 * @module model/AuthenticateUser
-* @version 4.8.0.40
+* @version 4.8.0.41
 */
 export default class AuthenticateUser {
     /**

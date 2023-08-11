@@ -15,7 +15,7 @@ import LiveTVApiEpgRow from './LiveTVApiEpgRow';
 /**
 * The QueryResultLiveTVApiEpgRow model module.
 * @module model/QueryResultLiveTVApiEpgRow
-* @version 4.8.0.40
+* @version 4.8.0.41
 */
 export default class QueryResultLiveTVApiEpgRow {
     /**

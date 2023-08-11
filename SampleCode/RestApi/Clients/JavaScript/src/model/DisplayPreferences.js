@@ -15,7 +15,7 @@ import SortOrder from './SortOrder';
 /**
 * The DisplayPreferences model module.
 * @module model/DisplayPreferences
-* @version 4.8.0.40
+* @version 4.8.0.41
 */
 export default class DisplayPreferences {
     /**

@@ -15,7 +15,7 @@ import ProvidersTrailerInfo from './ProvidersTrailerInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersTrailerInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersTrailerInfo
-* @version 4.8.0.40
+* @version 4.8.0.41
 */
 export default class ProvidersRemoteSearchQueryProvidersTrailerInfo {
     /**
