@@ -34,8 +34,13 @@ namespace EmbyClient.Dotnet.Beta.Model
         [EnumMember(Value = "LanAddressesOnly")]
         LanAddressesOnly = 2,
         /// <summary>
+        /// Enum RemoteAddressesOnly for value: RemoteAddressesOnly
+        /// </summary>
+        [EnumMember(Value = "RemoteAddressesOnly")]
+        RemoteAddressesOnly = 3,
+        /// <summary>
         /// Enum AllAddresses for value: AllAddresses
         /// </summary>
         [EnumMember(Value = "AllAddresses")]
-        AllAddresses = 3    }
+        AllAddresses = 4    }
 }

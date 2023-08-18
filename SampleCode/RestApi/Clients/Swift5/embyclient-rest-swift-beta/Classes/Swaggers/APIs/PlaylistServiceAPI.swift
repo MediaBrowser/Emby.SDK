@@ -591,6 +591,7 @@ open class PlaylistServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
+    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -645,6 +646,7 @@ open class PlaylistServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
+    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -1095,6 +1097,7 @@ open class PlaylistServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
+    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -1149,6 +1152,7 @@ open class PlaylistServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
+    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,

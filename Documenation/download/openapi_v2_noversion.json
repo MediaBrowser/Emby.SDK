@@ -52358,6 +52358,12 @@
         "SeriesStudio": {
           "type": "string"
         },
+        "InheritedPrimaryImageItemId": {
+          "type": "string"
+        },
+        "InheritedPrimaryImageTag": {
+          "type": "string"
+        },
         "ParentThumbItemId": {
           "type": "string"
         },
@@ -57577,6 +57583,7 @@
       "enum": [
         "None",
         "LanAddressesOnly",
+        "RemoteAddressesOnly",
         "AllAddresses"
       ],
       "type": "string",

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The GeneralCommand model module.
 * @module model/GeneralCommand
-* @version 4.8.0.41
+* @version 4.8.0.42
 */
 export default class GeneralCommand {
     /**

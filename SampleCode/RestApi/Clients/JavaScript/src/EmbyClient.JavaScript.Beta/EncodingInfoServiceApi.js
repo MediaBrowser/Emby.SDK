@@ -17,7 +17,7 @@ import MediaEncodingConfigurationToneMappingToneMapOptionsVisibility from '../mo
 /**
 * EncodingInfoService service.
 * @module EmbyClient.JavaScript.Beta/EncodingInfoServiceApi
-* @version 4.8.0.41
+* @version 4.8.0.42
 */
 export default class EncodingInfoServiceApi {
 

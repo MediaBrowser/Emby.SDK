@@ -29,6 +29,12 @@ export default class ConfigurationProxyHeaderMode {
         lanAddressesOnly = "LanAddressesOnly";
 
         /**
+         * value: "RemoteAddressesOnly"
+         * @const
+         */
+        remoteAddressesOnly = "RemoteAddressesOnly";
+
+        /**
          * value: "AllAddresses"
          * @const
          */

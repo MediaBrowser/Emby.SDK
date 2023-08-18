@@ -11,5 +11,6 @@ import Foundation
 public enum ConfigurationProxyHeaderMode: String, Codable {
     case _none = "None"
     case lanAddressesOnly = "LanAddressesOnly"
+    case remoteAddressesOnly = "RemoteAddressesOnly"
     case allAddresses = "AllAddresses"
 }

@@ -15,7 +15,7 @@ import EmbyWebGenericEditEditorsEditorRoot from './EmbyWebGenericEditEditorsEdit
 /**
 * The EmbyWebGenericEditEditObjectContainer model module.
 * @module model/EmbyWebGenericEditEditObjectContainer
-* @version 4.8.0.41
+* @version 4.8.0.42
 */
 export default class EmbyWebGenericEditEditObjectContainer {
     /**

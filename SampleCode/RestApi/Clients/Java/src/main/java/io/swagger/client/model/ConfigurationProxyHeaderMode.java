@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 public enum ConfigurationProxyHeaderMode {
   NONE("None"),
   LANADDRESSESONLY("LanAddressesOnly"),
+  REMOTEADDRESSESONLY("RemoteAddressesOnly"),
   ALLADDRESSES("AllAddresses");
 
   private String value;

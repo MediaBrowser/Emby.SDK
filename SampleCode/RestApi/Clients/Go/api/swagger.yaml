@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.41
+  version: 4.8.0.42
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -57449,6 +57449,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -57501,6 +57502,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -57972,6 +57974,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -58024,6 +58027,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -58314,6 +58318,10 @@ components:
         ParentLogoImageTag:
           type: string
         SeriesStudio:
+          type: string
+        InheritedPrimaryImageItemId:
+          type: string
+        InheritedPrimaryImageTag:
           type: string
         ParentThumbItemId:
           type: string
@@ -58941,6 +58949,7 @@ components:
         - Taglines
         PreferredMetadataCountryCode: PreferredMetadataCountryCode
         CameraModel: CameraModel
+        InheritedPrimaryImageTag: InheritedPrimaryImageTag
         ChannelNumber: ChannelNumber
         UserData:
           UnplayedItemCount: 7
@@ -58993,6 +59002,7 @@ components:
         AlbumArtist: AlbumArtist
         ImageTags:
           key: ImageTags
+        InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
         OriginalTitle: OriginalTitle
         ForcedSortName: ForcedSortName
         CurrentProgram: null
@@ -60800,6 +60810,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -60852,6 +60863,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -64238,6 +64250,7 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
+            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -64290,6 +64303,7 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
+            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -64765,6 +64779,7 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
+            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -64817,6 +64832,7 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
+            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -65302,6 +65318,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -65354,6 +65371,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -65950,6 +65968,7 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
+            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -66002,6 +66021,7 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
+            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -66500,6 +66520,7 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
+            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -66552,6 +66573,7 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
+            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -67113,6 +67135,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -67165,6 +67188,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -68094,6 +68118,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -68146,6 +68171,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -68617,6 +68643,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -68669,6 +68696,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -70462,6 +70490,7 @@ components:
       enum:
       - None
       - LanAddressesOnly
+      - RemoteAddressesOnly
       - AllAddresses
       x-internal-ref-name: MediaBrowser.Model.Configuration.ProxyHeaderMode
     WakeOnLanInfo:
@@ -72152,6 +72181,7 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
+            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -72204,6 +72234,7 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
+            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -74616,6 +74647,7 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
+            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -74668,6 +74700,7 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
+            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -75139,6 +75172,7 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
+            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -75191,6 +75225,7 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
+            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -75682,6 +75717,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -75734,6 +75770,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -76205,6 +76242,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -76257,6 +76295,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -78105,6 +78144,7 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
+          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -78157,6 +78197,7 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
+          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null

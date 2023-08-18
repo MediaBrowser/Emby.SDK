@@ -15,7 +15,7 @@ import ProvidersGameInfo from './ProvidersGameInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersGameInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersGameInfo
-* @version 4.8.0.41
+* @version 4.8.0.42
 */
 export default class ProvidersRemoteSearchQueryProvidersGameInfo {
     /**

@@ -20,6 +20,7 @@ class ConfigurationProxyHeaderMode(object):
     """
     NONE = "None"
     LANADDRESSESONLY = "LanAddressesOnly"
+    REMOTEADDRESSESONLY = "RemoteAddressesOnly"
     ALLADDRESSES = "AllAddresses"
     """
     Attributes:

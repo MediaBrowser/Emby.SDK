@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.41"
+    "version": "4.8.0.42"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -52360,6 +52360,12 @@
         "SeriesStudio": {
           "type": "string"
         },
+        "InheritedPrimaryImageItemId": {
+          "type": "string"
+        },
+        "InheritedPrimaryImageTag": {
+          "type": "string"
+        },
         "ParentThumbItemId": {
           "type": "string"
         },
@@ -57579,6 +57585,7 @@
       "enum": [
         "None",
         "LanAddressesOnly",
+        "RemoteAddressesOnly",
         "AllAddresses"
       ],
       "type": "string",
