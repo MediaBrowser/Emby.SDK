@@ -15,7 +15,7 @@ import ImageType from './ImageType';
 /**
 * The ConfigurationImageOption model module.
 * @module model/ConfigurationImageOption
-* @version 4.8.0.42
+* @version 4.8.0.43
 */
 export default class ConfigurationImageOption {
     /**

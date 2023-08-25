@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.42
+ * OpenAPI spec version: 4.8.0.43
  * 
  *
  * NOTE: This file is auto generated.

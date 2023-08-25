@@ -15,7 +15,7 @@ import BaseItemDto from './BaseItemDto';
 /**
 * The LiveTVApiEpgRow model module.
 * @module model/LiveTVApiEpgRow
-* @version 4.8.0.42
+* @version 4.8.0.43
 */
 export default class LiveTVApiEpgRow {
     /**
