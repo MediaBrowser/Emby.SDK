@@ -7444,6 +7444,7 @@
   "MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders": "MediaBrowser.Controller.Library.ILibraryManager.yml",
   "MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders(MediaBrowser.Controller.Entities.User,System.Boolean)": "MediaBrowser.Controller.Library.ILibraryManager.yml",
   "MediaBrowser.Controller.Library.ILibraryManager.IgnoreFile(MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions)": "MediaBrowser.Controller.Library.ILibraryManager.yml",
+  "MediaBrowser.Controller.Library.ILibraryManager.IsAlphaNumericallyEquivalent(System.String,System.String)": "MediaBrowser.Controller.Library.ILibraryManager.yml",
   "MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile(MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Model.Configuration.LibraryOptions)": "MediaBrowser.Controller.Library.ILibraryManager.yml",
   "MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile(System.ReadOnlySpan{System.Char})": "MediaBrowser.Controller.Library.ILibraryManager.yml",
   "MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile(System.ReadOnlySpan{System.Char},MediaBrowser.Model.Configuration.LibraryOptions)": "MediaBrowser.Controller.Library.ILibraryManager.yml",

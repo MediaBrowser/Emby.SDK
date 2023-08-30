@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * DlnaServerService service.
 * @module EmbyClient.JavaScript.Beta/DlnaServerServiceApi
-* @version 4.8.0.43
+* @version 4.8.0.44
 */
 export default class DlnaServerServiceApi {
 

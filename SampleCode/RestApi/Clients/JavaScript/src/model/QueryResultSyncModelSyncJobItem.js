@@ -15,7 +15,7 @@ import SyncModelSyncJobItem from './SyncModelSyncJobItem';
 /**
 * The QueryResultSyncModelSyncJobItem model module.
 * @module model/QueryResultSyncModelSyncJobItem
-* @version 4.8.0.43
+* @version 4.8.0.44
 */
 export default class QueryResultSyncModelSyncJobItem {
     /**

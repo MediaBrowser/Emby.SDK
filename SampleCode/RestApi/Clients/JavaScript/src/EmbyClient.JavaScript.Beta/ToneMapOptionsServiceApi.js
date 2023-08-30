@@ -15,7 +15,7 @@ import EmbyWebGenericEditEditObjectContainer from '../model/EmbyWebGenericEditEd
 /**
 * ToneMapOptionsService service.
 * @module EmbyClient.JavaScript.Beta/ToneMapOptionsServiceApi
-* @version 4.8.0.43
+* @version 4.8.0.44
 */
 export default class ToneMapOptionsServiceApi {
 

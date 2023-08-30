@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The ProvidersArtistInfo model module.
 * @module model/ProvidersArtistInfo
-* @version 4.8.0.43
+* @version 4.8.0.44
 */
 export default class ProvidersArtistInfo {
     /**

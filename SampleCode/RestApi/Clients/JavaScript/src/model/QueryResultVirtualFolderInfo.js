@@ -15,7 +15,7 @@ import VirtualFolderInfo from './VirtualFolderInfo';
 /**
 * The QueryResultVirtualFolderInfo model module.
 * @module model/QueryResultVirtualFolderInfo
-* @version 4.8.0.43
+* @version 4.8.0.44
 */
 export default class QueryResultVirtualFolderInfo {
     /**

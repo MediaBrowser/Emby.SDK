@@ -18,7 +18,7 @@ import QueryResultDevicesDeviceInfo from '../model/QueryResultDevicesDeviceInfo'
 /**
 * DeviceService service.
 * @module EmbyClient.JavaScript.Beta/DeviceServiceApi
-* @version 4.8.0.43
+* @version 4.8.0.44
 */
 export default class DeviceServiceApi {
 

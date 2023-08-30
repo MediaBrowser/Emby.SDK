@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The ProvidersMusicVideoInfo model module.
 * @module model/ProvidersMusicVideoInfo
-* @version 4.8.0.43
+* @version 4.8.0.44
 */
 export default class ProvidersMusicVideoInfo {
     /**
