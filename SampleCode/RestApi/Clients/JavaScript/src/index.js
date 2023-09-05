@@ -187,6 +187,7 @@ import NameIdPair from './model/NameIdPair';
 import NameLongIdPair from './model/NameLongIdPair';
 import NameValuePair from './model/NameValuePair';
 import NetEndPointInfo from './model/NetEndPointInfo';
+import NetSocketsAddressFamily from './model/NetSocketsAddressFamily';
 import OperatingSystem from './model/OperatingSystem';
 import ParentalRating from './model/ParentalRating';
 import PersistenceIntroDebugInfo from './model/PersistenceIntroDebugInfo';
@@ -413,7 +414,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.44
+* @version 4.8.0.45
 */
 export {
     /**
@@ -1483,6 +1484,12 @@ export {
      * @property {module:model/NetEndPointInfo}
      */
     NetEndPointInfo,
+
+    /**
+     * The NetSocketsAddressFamily model constructor.
+     * @property {module:model/NetSocketsAddressFamily}
+     */
+    NetSocketsAddressFamily,
 
     /**
      * The OperatingSystem model constructor.

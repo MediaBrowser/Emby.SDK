@@ -46,6 +46,7 @@ class ConfigurationServerConfiguration(object):
         'image_saving_convention': 'ConfigurationImageSavingConvention',
         'enable_automatic_restart': 'bool',
         'server_name': 'str',
+        'preferred_detected_remote_address_family': 'NetSocketsAddressFamily',
         'wan_ddns': 'str',
         'ui_culture': 'str',
         'remote_client_bitrate_limit': 'int',
@@ -111,6 +112,7 @@ class ConfigurationServerConfiguration(object):
         'image_saving_convention': 'ImageSavingConvention',
         'enable_automatic_restart': 'EnableAutomaticRestart',
         'server_name': 'ServerName',
+        'preferred_detected_remote_address_family': 'PreferredDetectedRemoteAddressFamily',
         'wan_ddns': 'WanDdns',
         'ui_culture': 'UICulture',
         'remote_client_bitrate_limit': 'RemoteClientBitrateLimit',
@@ -151,7 +153,7 @@ class ConfigurationServerConfiguration(object):
         'cache_path': 'CachePath'
     }
 
-    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, channel_options_upgraded=None, playlists_upgraded_to_m3_u=None, timer_ids_upgraded=None, forced_sort_name_upgraded=None, inherited_parental_rating_value_upgraded=None, image_extractor_upgraded=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
+    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, channel_options_upgraded=None, playlists_upgraded_to_m3_u=None, timer_ids_upgraded=None, forced_sort_name_upgraded=None, inherited_parental_rating_value_upgraded=None, image_extractor_upgraded=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
         """ConfigurationServerConfiguration - a model defined in Swagger"""  # noqa: E501
         self._enable_u_pn_p = None
         self._public_port = None
@@ -177,6 +179,7 @@ class ConfigurationServerConfiguration(object):
         self._image_saving_convention = None
         self._enable_automatic_restart = None
         self._server_name = None
+        self._preferred_detected_remote_address_family = None
         self._wan_ddns = None
         self._ui_culture = None
         self._remote_client_bitrate_limit = None
@@ -264,6 +267,8 @@ class ConfigurationServerConfiguration(object):
             self.enable_automatic_restart = enable_automatic_restart
         if server_name is not None:
             self.server_name = server_name
+        if preferred_detected_remote_address_family is not None:
+            self.preferred_detected_remote_address_family = preferred_detected_remote_address_family
         if wan_ddns is not None:
             self.wan_ddns = wan_ddns
         if ui_culture is not None:
@@ -844,6 +849,27 @@ class ConfigurationServerConfiguration(object):
         """
 
         self._server_name = server_name
+
+    @property
+    def preferred_detected_remote_address_family(self):
+        """Gets the preferred_detected_remote_address_family of this ConfigurationServerConfiguration.  # noqa: E501
+
+
+        :return: The preferred_detected_remote_address_family of this ConfigurationServerConfiguration.  # noqa: E501
+        :rtype: NetSocketsAddressFamily
+        """
+        return self._preferred_detected_remote_address_family
+
+    @preferred_detected_remote_address_family.setter
+    def preferred_detected_remote_address_family(self, preferred_detected_remote_address_family):
+        """Sets the preferred_detected_remote_address_family of this ConfigurationServerConfiguration.
+
+
+        :param preferred_detected_remote_address_family: The preferred_detected_remote_address_family of this ConfigurationServerConfiguration.  # noqa: E501
+        :type: NetSocketsAddressFamily
+        """
+
+        self._preferred_detected_remote_address_family = preferred_detected_remote_address_family
 
     @property
     def wan_ddns(self):

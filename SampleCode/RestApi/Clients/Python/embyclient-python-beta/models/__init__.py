@@ -185,6 +185,7 @@ from embyclient-python-beta.models.name_id_pair import NameIdPair
 from embyclient-python-beta.models.name_long_id_pair import NameLongIdPair
 from embyclient-python-beta.models.name_value_pair import NameValuePair
 from embyclient-python-beta.models.net_end_point_info import NetEndPointInfo
+from embyclient-python-beta.models.net_sockets_address_family import NetSocketsAddressFamily
 from embyclient-python-beta.models.operating_system import OperatingSystem
 from embyclient-python-beta.models.parental_rating import ParentalRating
 from embyclient-python-beta.models.persistence_intro_debug_info import PersistenceIntroDebugInfo

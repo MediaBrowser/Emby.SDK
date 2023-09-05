@@ -45,6 +45,9 @@ public class EmbyNotificationsUserNotificationInfo {
   @SerializedName("UserIds")
   private List<String> userIds = null;
 
+  @SerializedName("DeviceIds")
+  private List<String> deviceIds = null;
+
   @SerializedName("LibraryIds")
   private List<String> libraryIds = null;
 
@@ -194,6 +197,32 @@ public class EmbyNotificationsUserNotificationInfo {
     this.userIds = userIds;
   }
 
+  public EmbyNotificationsUserNotificationInfo deviceIds(List<String> deviceIds) {
+    this.deviceIds = deviceIds;
+    return this;
+  }
+
+  public EmbyNotificationsUserNotificationInfo addDeviceIdsItem(String deviceIdsItem) {
+    if (this.deviceIds == null) {
+      this.deviceIds = new ArrayList<String>();
+    }
+    this.deviceIds.add(deviceIdsItem);
+    return this;
+  }
+
+   /**
+   * Get deviceIds
+   * @return deviceIds
+  **/
+  @Schema(description = "")
+  public List<String> getDeviceIds() {
+    return deviceIds;
+  }
+
+  public void setDeviceIds(List<String> deviceIds) {
+    this.deviceIds = deviceIds;
+  }
+
   public EmbyNotificationsUserNotificationInfo libraryIds(List<String> libraryIds) {
     this.libraryIds = libraryIds;
     return this;
@@ -325,6 +354,7 @@ public class EmbyNotificationsUserNotificationInfo {
         Objects.equals(this.id, embyNotificationsUserNotificationInfo.id) &&
         Objects.equals(this.enabled, embyNotificationsUserNotificationInfo.enabled) &&
         Objects.equals(this.userIds, embyNotificationsUserNotificationInfo.userIds) &&
+        Objects.equals(this.deviceIds, embyNotificationsUserNotificationInfo.deviceIds) &&
         Objects.equals(this.libraryIds, embyNotificationsUserNotificationInfo.libraryIds) &&
         Objects.equals(this.eventIds, embyNotificationsUserNotificationInfo.eventIds) &&
         Objects.equals(this.userId, embyNotificationsUserNotificationInfo.userId) &&
@@ -334,7 +364,7 @@ public class EmbyNotificationsUserNotificationInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(notifierKey, setupModuleUrl, serviceName, friendlyName, id, enabled, userIds, libraryIds, eventIds, userId, isSelfNotification, options);
+    return Objects.hash(notifierKey, setupModuleUrl, serviceName, friendlyName, id, enabled, userIds, deviceIds, libraryIds, eventIds, userId, isSelfNotification, options);
   }
 
 
@@ -350,6 +380,7 @@ public class EmbyNotificationsUserNotificationInfo {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    userIds: ").append(toIndentedString(userIds)).append("\n");
+    sb.append("    deviceIds: ").append(toIndentedString(deviceIds)).append("\n");
     sb.append("    libraryIds: ").append(toIndentedString(libraryIds)).append("\n");
     sb.append("    eventIds: ").append(toIndentedString(eventIds)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");

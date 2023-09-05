@@ -106,8 +106,8 @@ type BaseItemDto struct {
 	BackdropImageTags []string `json:"BackdropImageTags,omitempty"`
 	ParentLogoImageTag string `json:"ParentLogoImageTag,omitempty"`
 	SeriesStudio string `json:"SeriesStudio,omitempty"`
-	InheritedPrimaryImageItemId string `json:"InheritedPrimaryImageItemId,omitempty"`
-	InheritedPrimaryImageTag string `json:"InheritedPrimaryImageTag,omitempty"`
+	PrimaryImageItemId string `json:"PrimaryImageItemId,omitempty"`
+	PrimaryImageTag string `json:"PrimaryImageTag,omitempty"`
 	ParentThumbItemId string `json:"ParentThumbItemId,omitempty"`
 	ParentThumbImageTag string `json:"ParentThumbImageTag,omitempty"`
 	Chapters []ChapterInfo `json:"Chapters,omitempty"`

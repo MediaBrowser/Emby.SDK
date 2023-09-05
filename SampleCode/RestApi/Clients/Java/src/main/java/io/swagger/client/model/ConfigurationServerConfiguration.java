@@ -15,6 +15,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.ConfigurationImageSavingConvention;
 import io.swagger.client.model.ConfigurationPathSubstitution;
 import io.swagger.client.model.ConfigurationProxyHeaderMode;
+import io.swagger.client.model.NetSocketsAddressFamily;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -96,6 +97,9 @@ public class ConfigurationServerConfiguration {
 
   @SerializedName("ServerName")
   private String serverName = null;
+
+  @SerializedName("PreferredDetectedRemoteAddressFamily")
+  private NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = null;
 
   @SerializedName("WanDdns")
   private String wanDdns = null;
@@ -649,6 +653,24 @@ public class ConfigurationServerConfiguration {
 
   public void setServerName(String serverName) {
     this.serverName = serverName;
+  }
+
+  public ConfigurationServerConfiguration preferredDetectedRemoteAddressFamily(NetSocketsAddressFamily preferredDetectedRemoteAddressFamily) {
+    this.preferredDetectedRemoteAddressFamily = preferredDetectedRemoteAddressFamily;
+    return this;
+  }
+
+   /**
+   * Get preferredDetectedRemoteAddressFamily
+   * @return preferredDetectedRemoteAddressFamily
+  **/
+  @Schema(description = "")
+  public NetSocketsAddressFamily getPreferredDetectedRemoteAddressFamily() {
+    return preferredDetectedRemoteAddressFamily;
+  }
+
+  public void setPreferredDetectedRemoteAddressFamily(NetSocketsAddressFamily preferredDetectedRemoteAddressFamily) {
+    this.preferredDetectedRemoteAddressFamily = preferredDetectedRemoteAddressFamily;
   }
 
   public ConfigurationServerConfiguration wanDdns(String wanDdns) {
@@ -1409,6 +1431,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.imageSavingConvention, configurationServerConfiguration.imageSavingConvention) &&
         Objects.equals(this.enableAutomaticRestart, configurationServerConfiguration.enableAutomaticRestart) &&
         Objects.equals(this.serverName, configurationServerConfiguration.serverName) &&
+        Objects.equals(this.preferredDetectedRemoteAddressFamily, configurationServerConfiguration.preferredDetectedRemoteAddressFamily) &&
         Objects.equals(this.wanDdns, configurationServerConfiguration.wanDdns) &&
         Objects.equals(this.uiCulture, configurationServerConfiguration.uiCulture) &&
         Objects.equals(this.remoteClientBitrateLimit, configurationServerConfiguration.remoteClientBitrateLimit) &&
@@ -1451,7 +1474,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1484,6 +1507,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    imageSavingConvention: ").append(toIndentedString(imageSavingConvention)).append("\n");
     sb.append("    enableAutomaticRestart: ").append(toIndentedString(enableAutomaticRestart)).append("\n");
     sb.append("    serverName: ").append(toIndentedString(serverName)).append("\n");
+    sb.append("    preferredDetectedRemoteAddressFamily: ").append(toIndentedString(preferredDetectedRemoteAddressFamily)).append("\n");
     sb.append("    wanDdns: ").append(toIndentedString(wanDdns)).append("\n");
     sb.append("    uiCulture: ").append(toIndentedString(uiCulture)).append("\n");
     sb.append("    remoteClientBitrateLimit: ").append(toIndentedString(remoteClientBitrateLimit)).append("\n");

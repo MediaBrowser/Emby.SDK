@@ -31,6 +31,7 @@ type ConfigurationServerConfiguration struct {
 	ImageSavingConvention *ConfigurationImageSavingConvention `json:"ImageSavingConvention,omitempty"`
 	EnableAutomaticRestart bool `json:"EnableAutomaticRestart,omitempty"`
 	ServerName string `json:"ServerName,omitempty"`
+	PreferredDetectedRemoteAddressFamily *NetSocketsAddressFamily `json:"PreferredDetectedRemoteAddressFamily,omitempty"`
 	WanDdns string `json:"WanDdns,omitempty"`
 	UICulture string `json:"UICulture,omitempty"`
 	RemoteClientBitrateLimit int32 `json:"RemoteClientBitrateLimit,omitempty"`

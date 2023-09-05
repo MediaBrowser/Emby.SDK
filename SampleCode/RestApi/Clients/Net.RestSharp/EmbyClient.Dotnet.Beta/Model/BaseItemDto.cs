@@ -122,8 +122,8 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="backdropImageTags">backdropImageTags.</param>
         /// <param name="parentLogoImageTag">parentLogoImageTag.</param>
         /// <param name="seriesStudio">seriesStudio.</param>
-        /// <param name="inheritedPrimaryImageItemId">inheritedPrimaryImageItemId.</param>
-        /// <param name="inheritedPrimaryImageTag">inheritedPrimaryImageTag.</param>
+        /// <param name="primaryImageItemId">primaryImageItemId.</param>
+        /// <param name="primaryImageTag">primaryImageTag.</param>
         /// <param name="parentThumbItemId">parentThumbItemId.</param>
         /// <param name="parentThumbImageTag">parentThumbImageTag.</param>
         /// <param name="chapters">chapters.</param>
@@ -178,7 +178,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="listingsChannelName">listingsChannelName.</param>
         /// <param name="listingsChannelNumber">listingsChannelNumber.</param>
         /// <param name="affiliateCallSign">affiliateCallSign.</param>
-        public BaseItemDto(string name = default(string), string originalTitle = default(string), string serverId = default(string), string id = default(string), string guid = default(string), string etag = default(string), string prefix = default(string), string playlistItemId = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), string extraType = default(string), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), bool? canDelete = default(bool?), bool? canDownload = default(bool?), bool? supportsResume = default(bool?), string presentationUniqueKey = default(string), string preferredMetadataLanguage = default(string), string preferredMetadataCountryCode = default(string), bool? supportsSync = default(bool?), bool? canManageAccess = default(bool?), bool? canMakePrivate = default(bool?), bool? canMakePublic = default(bool?), string container = default(string), string sortName = default(string), string forcedSortName = default(string), Video3DFormat video3DFormat = default(Video3DFormat), DateTimeOffset? premiereDate = default(DateTimeOffset?), List<ExternalUrl> externalUrls = default(List<ExternalUrl>), List<MediaSourceInfo> mediaSources = default(List<MediaSourceInfo>), float? criticRating = default(float?), long? gameSystemId = default(long?), bool? asSeries = default(bool?), string gameSystem = default(string), List<string> productionLocations = default(List<string>), string path = default(string), string officialRating = default(string), string customRating = default(string), string channelId = default(string), string channelName = default(string), string overview = default(string), List<string> taglines = default(List<string>), List<string> genres = default(List<string>), float? communityRating = default(float?), long? runTimeTicks = default(long?), long? size = default(long?), string fileName = default(string), int? bitrate = default(int?), int? productionYear = default(int?), string number = default(string), string channelNumber = default(string), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), List<MediaUrl> remoteTrailers = default(List<MediaUrl>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), bool? isFolder = default(bool?), string parentId = default(string), string type = default(string), List<BaseItemPerson> people = default(List<BaseItemPerson>), List<NameLongIdPair> studios = default(List<NameLongIdPair>), List<NameLongIdPair> genreItems = default(List<NameLongIdPair>), List<NameLongIdPair> tagItems = default(List<NameLongIdPair>), string parentLogoItemId = default(string), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), int? localTrailerCount = default(int?), UserItemDataDto userData = default(UserItemDataDto), int? recursiveItemCount = default(int?), int? childCount = default(int?), string seriesName = default(string), string seriesId = default(string), string seasonId = default(string), int? specialFeatureCount = default(int?), string displayPreferencesId = default(string), string status = default(string), List<DayOfWeek> airDays = default(List<DayOfWeek>), List<string> tags = default(List<string>), double? primaryImageAspectRatio = default(double?), List<string> artists = default(List<string>), List<NameIdPair> artistItems = default(List<NameIdPair>), List<NameIdPair> composers = default(List<NameIdPair>), string album = default(string), string collectionType = default(string), string displayOrder = default(string), string albumId = default(string), string albumPrimaryImageTag = default(string), string seriesPrimaryImageTag = default(string), string albumArtist = default(string), List<NameIdPair> albumArtists = default(List<NameIdPair>), string seasonName = default(string), List<MediaStream> mediaStreams = default(List<MediaStream>), int? partCount = default(int?), Dictionary<string, string> imageTags = default(Dictionary<string, string>), List<string> backdropImageTags = default(List<string>), string parentLogoImageTag = default(string), string seriesStudio = default(string), string inheritedPrimaryImageItemId = default(string), string inheritedPrimaryImageTag = default(string), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), List<ChapterInfo> chapters = default(List<ChapterInfo>), LocationType locationType = default(LocationType), string mediaType = default(string), DateTimeOffset? endDate = default(DateTimeOffset?), List<MetadataFields> lockedFields = default(List<MetadataFields>), bool? lockData = default(bool?), int? width = default(int?), int? height = default(int?), string cameraMake = default(string), string cameraModel = default(string), string software = default(string), double? exposureTime = default(double?), double? focalLength = default(double?), DrawingImageOrientation imageOrientation = default(DrawingImageOrientation), double? aperture = default(double?), double? shutterSpeed = default(double?), double? latitude = default(double?), double? longitude = default(double?), double? altitude = default(double?), int? isoSpeedRating = default(int?), string seriesTimerId = default(string), string channelPrimaryImageTag = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), double? completionPercentage = default(double?), bool? isRepeat = default(bool?), bool? isNew = default(bool?), string episodeTitle = default(string), bool? isMovie = default(bool?), bool? isSports = default(bool?), bool? isSeries = default(bool?), bool? isLive = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isPremiere = default(bool?), LiveTvTimerType timerType = default(LiveTvTimerType), bool? disabled = default(bool?), string managementId = default(string), string timerId = default(string), BaseItemDto currentProgram = default(BaseItemDto), int? movieCount = default(int?), int? seriesCount = default(int?), int? albumCount = default(int?), int? songCount = default(int?), int? musicVideoCount = default(int?), List<string> subviews = default(List<string>), string listingsProviderId = default(string), string listingsChannelId = default(string), string listingsPath = default(string), string listingsId = default(string), string listingsChannelName = default(string), string listingsChannelNumber = default(string), string affiliateCallSign = default(string))
+        public BaseItemDto(string name = default(string), string originalTitle = default(string), string serverId = default(string), string id = default(string), string guid = default(string), string etag = default(string), string prefix = default(string), string playlistItemId = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), string extraType = default(string), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), bool? canDelete = default(bool?), bool? canDownload = default(bool?), bool? supportsResume = default(bool?), string presentationUniqueKey = default(string), string preferredMetadataLanguage = default(string), string preferredMetadataCountryCode = default(string), bool? supportsSync = default(bool?), bool? canManageAccess = default(bool?), bool? canMakePrivate = default(bool?), bool? canMakePublic = default(bool?), string container = default(string), string sortName = default(string), string forcedSortName = default(string), Video3DFormat video3DFormat = default(Video3DFormat), DateTimeOffset? premiereDate = default(DateTimeOffset?), List<ExternalUrl> externalUrls = default(List<ExternalUrl>), List<MediaSourceInfo> mediaSources = default(List<MediaSourceInfo>), float? criticRating = default(float?), long? gameSystemId = default(long?), bool? asSeries = default(bool?), string gameSystem = default(string), List<string> productionLocations = default(List<string>), string path = default(string), string officialRating = default(string), string customRating = default(string), string channelId = default(string), string channelName = default(string), string overview = default(string), List<string> taglines = default(List<string>), List<string> genres = default(List<string>), float? communityRating = default(float?), long? runTimeTicks = default(long?), long? size = default(long?), string fileName = default(string), int? bitrate = default(int?), int? productionYear = default(int?), string number = default(string), string channelNumber = default(string), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), List<MediaUrl> remoteTrailers = default(List<MediaUrl>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), bool? isFolder = default(bool?), string parentId = default(string), string type = default(string), List<BaseItemPerson> people = default(List<BaseItemPerson>), List<NameLongIdPair> studios = default(List<NameLongIdPair>), List<NameLongIdPair> genreItems = default(List<NameLongIdPair>), List<NameLongIdPair> tagItems = default(List<NameLongIdPair>), string parentLogoItemId = default(string), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), int? localTrailerCount = default(int?), UserItemDataDto userData = default(UserItemDataDto), int? recursiveItemCount = default(int?), int? childCount = default(int?), string seriesName = default(string), string seriesId = default(string), string seasonId = default(string), int? specialFeatureCount = default(int?), string displayPreferencesId = default(string), string status = default(string), List<DayOfWeek> airDays = default(List<DayOfWeek>), List<string> tags = default(List<string>), double? primaryImageAspectRatio = default(double?), List<string> artists = default(List<string>), List<NameIdPair> artistItems = default(List<NameIdPair>), List<NameIdPair> composers = default(List<NameIdPair>), string album = default(string), string collectionType = default(string), string displayOrder = default(string), string albumId = default(string), string albumPrimaryImageTag = default(string), string seriesPrimaryImageTag = default(string), string albumArtist = default(string), List<NameIdPair> albumArtists = default(List<NameIdPair>), string seasonName = default(string), List<MediaStream> mediaStreams = default(List<MediaStream>), int? partCount = default(int?), Dictionary<string, string> imageTags = default(Dictionary<string, string>), List<string> backdropImageTags = default(List<string>), string parentLogoImageTag = default(string), string seriesStudio = default(string), string primaryImageItemId = default(string), string primaryImageTag = default(string), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), List<ChapterInfo> chapters = default(List<ChapterInfo>), LocationType locationType = default(LocationType), string mediaType = default(string), DateTimeOffset? endDate = default(DateTimeOffset?), List<MetadataFields> lockedFields = default(List<MetadataFields>), bool? lockData = default(bool?), int? width = default(int?), int? height = default(int?), string cameraMake = default(string), string cameraModel = default(string), string software = default(string), double? exposureTime = default(double?), double? focalLength = default(double?), DrawingImageOrientation imageOrientation = default(DrawingImageOrientation), double? aperture = default(double?), double? shutterSpeed = default(double?), double? latitude = default(double?), double? longitude = default(double?), double? altitude = default(double?), int? isoSpeedRating = default(int?), string seriesTimerId = default(string), string channelPrimaryImageTag = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), double? completionPercentage = default(double?), bool? isRepeat = default(bool?), bool? isNew = default(bool?), string episodeTitle = default(string), bool? isMovie = default(bool?), bool? isSports = default(bool?), bool? isSeries = default(bool?), bool? isLive = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isPremiere = default(bool?), LiveTvTimerType timerType = default(LiveTvTimerType), bool? disabled = default(bool?), string managementId = default(string), string timerId = default(string), BaseItemDto currentProgram = default(BaseItemDto), int? movieCount = default(int?), int? seriesCount = default(int?), int? albumCount = default(int?), int? songCount = default(int?), int? musicVideoCount = default(int?), List<string> subviews = default(List<string>), string listingsProviderId = default(string), string listingsChannelId = default(string), string listingsPath = default(string), string listingsId = default(string), string listingsChannelName = default(string), string listingsChannelNumber = default(string), string affiliateCallSign = default(string))
         {
             this.Name = name;
             this.OriginalTitle = originalTitle;
@@ -276,8 +276,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.BackdropImageTags = backdropImageTags;
             this.ParentLogoImageTag = parentLogoImageTag;
             this.SeriesStudio = seriesStudio;
-            this.InheritedPrimaryImageItemId = inheritedPrimaryImageItemId;
-            this.InheritedPrimaryImageTag = inheritedPrimaryImageTag;
+            this.PrimaryImageItemId = primaryImageItemId;
+            this.PrimaryImageTag = primaryImageTag;
             this.ParentThumbItemId = parentThumbItemId;
             this.ParentThumbImageTag = parentThumbImageTag;
             this.Chapters = chapters;
@@ -911,16 +911,16 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string SeriesStudio { get; set; }
 
         /// <summary>
-        /// Gets or Sets InheritedPrimaryImageItemId
+        /// Gets or Sets PrimaryImageItemId
         /// </summary>
-        [DataMember(Name="InheritedPrimaryImageItemId", EmitDefaultValue=false)]
-        public string InheritedPrimaryImageItemId { get; set; }
+        [DataMember(Name="PrimaryImageItemId", EmitDefaultValue=false)]
+        public string PrimaryImageItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets InheritedPrimaryImageTag
+        /// Gets or Sets PrimaryImageTag
         /// </summary>
-        [DataMember(Name="InheritedPrimaryImageTag", EmitDefaultValue=false)]
-        public string InheritedPrimaryImageTag { get; set; }
+        [DataMember(Name="PrimaryImageTag", EmitDefaultValue=false)]
+        public string PrimaryImageTag { get; set; }
 
         /// <summary>
         /// Gets or Sets ParentThumbItemId
@@ -1350,8 +1350,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  BackdropImageTags: ").Append(BackdropImageTags).Append("\n");
             sb.Append("  ParentLogoImageTag: ").Append(ParentLogoImageTag).Append("\n");
             sb.Append("  SeriesStudio: ").Append(SeriesStudio).Append("\n");
-            sb.Append("  InheritedPrimaryImageItemId: ").Append(InheritedPrimaryImageItemId).Append("\n");
-            sb.Append("  InheritedPrimaryImageTag: ").Append(InheritedPrimaryImageTag).Append("\n");
+            sb.Append("  PrimaryImageItemId: ").Append(PrimaryImageItemId).Append("\n");
+            sb.Append("  PrimaryImageTag: ").Append(PrimaryImageTag).Append("\n");
             sb.Append("  ParentThumbItemId: ").Append(ParentThumbItemId).Append("\n");
             sb.Append("  ParentThumbImageTag: ").Append(ParentThumbImageTag).Append("\n");
             sb.Append("  Chapters: ").Append(Chapters).Append("\n");
@@ -1941,14 +1941,14 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.SeriesStudio.Equals(input.SeriesStudio))
                 ) && 
                 (
-                    this.InheritedPrimaryImageItemId == input.InheritedPrimaryImageItemId ||
-                    (this.InheritedPrimaryImageItemId != null &&
-                    this.InheritedPrimaryImageItemId.Equals(input.InheritedPrimaryImageItemId))
+                    this.PrimaryImageItemId == input.PrimaryImageItemId ||
+                    (this.PrimaryImageItemId != null &&
+                    this.PrimaryImageItemId.Equals(input.PrimaryImageItemId))
                 ) && 
                 (
-                    this.InheritedPrimaryImageTag == input.InheritedPrimaryImageTag ||
-                    (this.InheritedPrimaryImageTag != null &&
-                    this.InheritedPrimaryImageTag.Equals(input.InheritedPrimaryImageTag))
+                    this.PrimaryImageTag == input.PrimaryImageTag ||
+                    (this.PrimaryImageTag != null &&
+                    this.PrimaryImageTag.Equals(input.PrimaryImageTag))
                 ) && 
                 (
                     this.ParentThumbItemId == input.ParentThumbItemId ||
@@ -2426,10 +2426,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ParentLogoImageTag.GetHashCode();
                 if (this.SeriesStudio != null)
                     hashCode = hashCode * 59 + this.SeriesStudio.GetHashCode();
-                if (this.InheritedPrimaryImageItemId != null)
-                    hashCode = hashCode * 59 + this.InheritedPrimaryImageItemId.GetHashCode();
-                if (this.InheritedPrimaryImageTag != null)
-                    hashCode = hashCode * 59 + this.InheritedPrimaryImageTag.GetHashCode();
+                if (this.PrimaryImageItemId != null)
+                    hashCode = hashCode * 59 + this.PrimaryImageItemId.GetHashCode();
+                if (this.PrimaryImageTag != null)
+                    hashCode = hashCode * 59 + this.PrimaryImageTag.GetHashCode();
                 if (this.ParentThumbItemId != null)
                     hashCode = hashCode * 59 + this.ParentThumbItemId.GetHashCode();
                 if (this.ParentThumbImageTag != null)

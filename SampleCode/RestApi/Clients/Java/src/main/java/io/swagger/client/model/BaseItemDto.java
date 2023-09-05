@@ -330,11 +330,11 @@ public class BaseItemDto {
   @SerializedName("SeriesStudio")
   private String seriesStudio = null;
 
-  @SerializedName("InheritedPrimaryImageItemId")
-  private String inheritedPrimaryImageItemId = null;
+  @SerializedName("PrimaryImageItemId")
+  private String primaryImageItemId = null;
 
-  @SerializedName("InheritedPrimaryImageTag")
-  private String inheritedPrimaryImageTag = null;
+  @SerializedName("PrimaryImageTag")
+  private String primaryImageTag = null;
 
   @SerializedName("ParentThumbItemId")
   private String parentThumbItemId = null;
@@ -2386,40 +2386,40 @@ public class BaseItemDto {
     this.seriesStudio = seriesStudio;
   }
 
-  public BaseItemDto inheritedPrimaryImageItemId(String inheritedPrimaryImageItemId) {
-    this.inheritedPrimaryImageItemId = inheritedPrimaryImageItemId;
+  public BaseItemDto primaryImageItemId(String primaryImageItemId) {
+    this.primaryImageItemId = primaryImageItemId;
     return this;
   }
 
    /**
-   * Get inheritedPrimaryImageItemId
-   * @return inheritedPrimaryImageItemId
+   * Get primaryImageItemId
+   * @return primaryImageItemId
   **/
   @Schema(description = "")
-  public String getInheritedPrimaryImageItemId() {
-    return inheritedPrimaryImageItemId;
+  public String getPrimaryImageItemId() {
+    return primaryImageItemId;
   }
 
-  public void setInheritedPrimaryImageItemId(String inheritedPrimaryImageItemId) {
-    this.inheritedPrimaryImageItemId = inheritedPrimaryImageItemId;
+  public void setPrimaryImageItemId(String primaryImageItemId) {
+    this.primaryImageItemId = primaryImageItemId;
   }
 
-  public BaseItemDto inheritedPrimaryImageTag(String inheritedPrimaryImageTag) {
-    this.inheritedPrimaryImageTag = inheritedPrimaryImageTag;
+  public BaseItemDto primaryImageTag(String primaryImageTag) {
+    this.primaryImageTag = primaryImageTag;
     return this;
   }
 
    /**
-   * Get inheritedPrimaryImageTag
-   * @return inheritedPrimaryImageTag
+   * Get primaryImageTag
+   * @return primaryImageTag
   **/
   @Schema(description = "")
-  public String getInheritedPrimaryImageTag() {
-    return inheritedPrimaryImageTag;
+  public String getPrimaryImageTag() {
+    return primaryImageTag;
   }
 
-  public void setInheritedPrimaryImageTag(String inheritedPrimaryImageTag) {
-    this.inheritedPrimaryImageTag = inheritedPrimaryImageTag;
+  public void setPrimaryImageTag(String primaryImageTag) {
+    this.primaryImageTag = primaryImageTag;
   }
 
   public BaseItemDto parentThumbItemId(String parentThumbItemId) {
@@ -3524,8 +3524,8 @@ public class BaseItemDto {
         Objects.equals(this.backdropImageTags, baseItemDto.backdropImageTags) &&
         Objects.equals(this.parentLogoImageTag, baseItemDto.parentLogoImageTag) &&
         Objects.equals(this.seriesStudio, baseItemDto.seriesStudio) &&
-        Objects.equals(this.inheritedPrimaryImageItemId, baseItemDto.inheritedPrimaryImageItemId) &&
-        Objects.equals(this.inheritedPrimaryImageTag, baseItemDto.inheritedPrimaryImageTag) &&
+        Objects.equals(this.primaryImageItemId, baseItemDto.primaryImageItemId) &&
+        Objects.equals(this.primaryImageTag, baseItemDto.primaryImageTag) &&
         Objects.equals(this.parentThumbItemId, baseItemDto.parentThumbItemId) &&
         Objects.equals(this.parentThumbImageTag, baseItemDto.parentThumbImageTag) &&
         Objects.equals(this.chapters, baseItemDto.chapters) &&
@@ -3584,7 +3584,7 @@ public class BaseItemDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, canManageAccess, canMakePrivate, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, inheritedPrimaryImageItemId, inheritedPrimaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
+    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, canManageAccess, canMakePrivate, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
   }
 
 
@@ -3689,8 +3689,8 @@ public class BaseItemDto {
     sb.append("    backdropImageTags: ").append(toIndentedString(backdropImageTags)).append("\n");
     sb.append("    parentLogoImageTag: ").append(toIndentedString(parentLogoImageTag)).append("\n");
     sb.append("    seriesStudio: ").append(toIndentedString(seriesStudio)).append("\n");
-    sb.append("    inheritedPrimaryImageItemId: ").append(toIndentedString(inheritedPrimaryImageItemId)).append("\n");
-    sb.append("    inheritedPrimaryImageTag: ").append(toIndentedString(inheritedPrimaryImageTag)).append("\n");
+    sb.append("    primaryImageItemId: ").append(toIndentedString(primaryImageItemId)).append("\n");
+    sb.append("    primaryImageTag: ").append(toIndentedString(primaryImageTag)).append("\n");
     sb.append("    parentThumbItemId: ").append(toIndentedString(parentThumbItemId)).append("\n");
     sb.append("    parentThumbImageTag: ").append(toIndentedString(parentThumbImageTag)).append("\n");
     sb.append("    chapters: ").append(toIndentedString(chapters)).append("\n");

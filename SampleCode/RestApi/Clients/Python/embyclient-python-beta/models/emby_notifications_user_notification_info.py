@@ -29,6 +29,7 @@ class EmbyNotificationsUserNotificationInfo(object):
         'id': 'str',
         'enabled': 'bool',
         'user_ids': 'list[str]',
+        'device_ids': 'list[str]',
         'library_ids': 'list[str]',
         'event_ids': 'list[str]',
         'user_id': 'str',
@@ -44,6 +45,7 @@ class EmbyNotificationsUserNotificationInfo(object):
         'id': 'Id',
         'enabled': 'Enabled',
         'user_ids': 'UserIds',
+        'device_ids': 'DeviceIds',
         'library_ids': 'LibraryIds',
         'event_ids': 'EventIds',
         'user_id': 'UserId',
@@ -51,7 +53,7 @@ class EmbyNotificationsUserNotificationInfo(object):
         'options': 'Options'
     }
 
-    def __init__(self, notifier_key=None, setup_module_url=None, service_name=None, friendly_name=None, id=None, enabled=None, user_ids=None, library_ids=None, event_ids=None, user_id=None, is_self_notification=None, options=None):  # noqa: E501
+    def __init__(self, notifier_key=None, setup_module_url=None, service_name=None, friendly_name=None, id=None, enabled=None, user_ids=None, device_ids=None, library_ids=None, event_ids=None, user_id=None, is_self_notification=None, options=None):  # noqa: E501
         """EmbyNotificationsUserNotificationInfo - a model defined in Swagger"""  # noqa: E501
         self._notifier_key = None
         self._setup_module_url = None
@@ -60,6 +62,7 @@ class EmbyNotificationsUserNotificationInfo(object):
         self._id = None
         self._enabled = None
         self._user_ids = None
+        self._device_ids = None
         self._library_ids = None
         self._event_ids = None
         self._user_id = None
@@ -80,6 +83,8 @@ class EmbyNotificationsUserNotificationInfo(object):
             self.enabled = enabled
         if user_ids is not None:
             self.user_ids = user_ids
+        if device_ids is not None:
+            self.device_ids = device_ids
         if library_ids is not None:
             self.library_ids = library_ids
         if event_ids is not None:
@@ -237,6 +242,27 @@ class EmbyNotificationsUserNotificationInfo(object):
         """
 
         self._user_ids = user_ids
+
+    @property
+    def device_ids(self):
+        """Gets the device_ids of this EmbyNotificationsUserNotificationInfo.  # noqa: E501
+
+
+        :return: The device_ids of this EmbyNotificationsUserNotificationInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._device_ids
+
+    @device_ids.setter
+    def device_ids(self, device_ids):
+        """Sets the device_ids of this EmbyNotificationsUserNotificationInfo.
+
+
+        :param device_ids: The device_ids of this EmbyNotificationsUserNotificationInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._device_ids = device_ids
 
     @property
     def library_ids(self):

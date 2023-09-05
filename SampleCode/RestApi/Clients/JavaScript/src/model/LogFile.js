@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LogFile model module.
 * @module model/LogFile
-* @version 4.8.0.44
+* @version 4.8.0.45
 */
 export default class LogFile {
     /**

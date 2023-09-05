@@ -14,6 +14,7 @@ type EmbyNotificationsUserNotificationInfo struct {
 	Id string `json:"Id,omitempty"`
 	Enabled bool `json:"Enabled,omitempty"`
 	UserIds []string `json:"UserIds,omitempty"`
+	DeviceIds []string `json:"DeviceIds,omitempty"`
 	LibraryIds []string `json:"LibraryIds,omitempty"`
 	EventIds []string `json:"EventIds,omitempty"`
 	UserId string `json:"UserId,omitempty"`

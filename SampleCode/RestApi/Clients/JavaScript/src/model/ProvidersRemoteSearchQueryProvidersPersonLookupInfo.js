@@ -15,7 +15,7 @@ import ProvidersPersonLookupInfo from './ProvidersPersonLookupInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersPersonLookupInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersPersonLookupInfo
-* @version 4.8.0.44
+* @version 4.8.0.45
 */
 export default class ProvidersRemoteSearchQueryProvidersPersonLookupInfo {
     /**

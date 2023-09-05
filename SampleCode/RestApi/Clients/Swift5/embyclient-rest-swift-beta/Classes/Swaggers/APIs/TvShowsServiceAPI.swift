@@ -711,10 +711,12 @@ open class TvShowsServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -814,7 +816,6 @@ open class TvShowsServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -869,7 +870,6 @@ open class TvShowsServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -1217,10 +1217,12 @@ open class TvShowsServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -1320,7 +1322,6 @@ open class TvShowsServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -1375,7 +1376,6 @@ open class TvShowsServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -1801,10 +1801,12 @@ open class TvShowsServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -1904,7 +1906,6 @@ open class TvShowsServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -1959,7 +1960,6 @@ open class TvShowsServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -2307,10 +2307,12 @@ open class TvShowsServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -2410,7 +2412,6 @@ open class TvShowsServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -2465,7 +2466,6 @@ open class TvShowsServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -2888,10 +2888,12 @@ open class TvShowsServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -2991,7 +2993,6 @@ open class TvShowsServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -3046,7 +3047,6 @@ open class TvShowsServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -3394,10 +3394,12 @@ open class TvShowsServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -3497,7 +3499,6 @@ open class TvShowsServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -3552,7 +3553,6 @@ open class TvShowsServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,

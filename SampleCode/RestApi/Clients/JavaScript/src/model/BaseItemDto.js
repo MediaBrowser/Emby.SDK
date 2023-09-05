@@ -30,7 +30,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.8.0.44
+* @version 4.8.0.45
 */
 export default class BaseItemDto {
     /**
@@ -345,11 +345,11 @@ export default class BaseItemDto {
             if (data.hasOwnProperty('SeriesStudio')) {
                 obj['SeriesStudio'] = ApiClient.convertToType(data['SeriesStudio'], 'String');
             }
-            if (data.hasOwnProperty('InheritedPrimaryImageItemId')) {
-                obj['InheritedPrimaryImageItemId'] = ApiClient.convertToType(data['InheritedPrimaryImageItemId'], 'String');
+            if (data.hasOwnProperty('PrimaryImageItemId')) {
+                obj['PrimaryImageItemId'] = ApiClient.convertToType(data['PrimaryImageItemId'], 'String');
             }
-            if (data.hasOwnProperty('InheritedPrimaryImageTag')) {
-                obj['InheritedPrimaryImageTag'] = ApiClient.convertToType(data['InheritedPrimaryImageTag'], 'String');
+            if (data.hasOwnProperty('PrimaryImageTag')) {
+                obj['PrimaryImageTag'] = ApiClient.convertToType(data['PrimaryImageTag'], 'String');
             }
             if (data.hasOwnProperty('ParentThumbItemId')) {
                 obj['ParentThumbItemId'] = ApiClient.convertToType(data['ParentThumbItemId'], 'String');
@@ -902,13 +902,13 @@ export default class BaseItemDto {
     */
     'SeriesStudio' = undefined;
     /**
-    * @member {String} InheritedPrimaryImageItemId
+    * @member {String} PrimaryImageItemId
     */
-    'InheritedPrimaryImageItemId' = undefined;
+    'PrimaryImageItemId' = undefined;
     /**
-    * @member {String} InheritedPrimaryImageTag
+    * @member {String} PrimaryImageTag
     */
-    'InheritedPrimaryImageTag' = undefined;
+    'PrimaryImageTag' = undefined;
     /**
     * @member {String} ParentThumbItemId
     */

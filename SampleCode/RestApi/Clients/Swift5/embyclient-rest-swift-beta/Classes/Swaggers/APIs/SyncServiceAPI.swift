@@ -515,10 +515,12 @@ open class SyncServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -618,7 +620,6 @@ open class SyncServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -673,7 +674,6 @@ open class SyncServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -1043,10 +1043,12 @@ open class SyncServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -1146,7 +1148,6 @@ open class SyncServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -1201,7 +1202,6 @@ open class SyncServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,

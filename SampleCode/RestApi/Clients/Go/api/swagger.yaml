@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.44
+  version: 4.8.0.45
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -57333,10 +57333,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -57449,7 +57451,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -57502,7 +57503,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -57858,10 +57858,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -57974,7 +57976,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -58027,7 +58028,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -58319,9 +58319,9 @@ components:
           type: string
         SeriesStudio:
           type: string
-        InheritedPrimaryImageItemId:
+        PrimaryImageItemId:
           type: string
-        InheritedPrimaryImageTag:
+        PrimaryImageTag:
           type: string
         ParentThumbItemId:
           type: string
@@ -58833,10 +58833,12 @@ components:
         - null
         - null
         FileName: FileName
+        PrimaryImageTag: PrimaryImageTag
         Prefix: Prefix
         CanDownload: true
         IsMovie: true
         SeriesCount: 7
+        PrimaryImageItemId: PrimaryImageItemId
         ListingsChannelId: ListingsChannelId
         SeriesStudio: SeriesStudio
         IsLive: true
@@ -58949,7 +58951,6 @@ components:
         - Taglines
         PreferredMetadataCountryCode: PreferredMetadataCountryCode
         CameraModel: CameraModel
-        InheritedPrimaryImageTag: InheritedPrimaryImageTag
         ChannelNumber: ChannelNumber
         UserData:
           UnplayedItemCount: 7
@@ -59002,7 +59003,6 @@ components:
         AlbumArtist: AlbumArtist
         ImageTags:
           key: ImageTags
-        InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
         OriginalTitle: OriginalTitle
         ForcedSortName: ForcedSortName
         CurrentProgram: null
@@ -60694,10 +60694,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -60810,7 +60812,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -60863,7 +60864,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -64134,10 +64134,12 @@ components:
             - null
             - null
             FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
             Prefix: Prefix
             CanDownload: true
             IsMovie: true
             SeriesCount: 7
+            PrimaryImageItemId: PrimaryImageItemId
             ListingsChannelId: ListingsChannelId
             SeriesStudio: SeriesStudio
             IsLive: true
@@ -64250,7 +64252,6 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
-            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -64303,7 +64304,6 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
-            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -64663,10 +64663,12 @@ components:
             - null
             - null
             FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
             Prefix: Prefix
             CanDownload: true
             IsMovie: true
             SeriesCount: 7
+            PrimaryImageItemId: PrimaryImageItemId
             ListingsChannelId: ListingsChannelId
             SeriesStudio: SeriesStudio
             IsLive: true
@@ -64779,7 +64781,6 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
-            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -64832,7 +64833,6 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
-            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -65202,10 +65202,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -65318,7 +65320,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -65371,7 +65372,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -65852,10 +65852,12 @@ components:
             - null
             - null
             FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
             Prefix: Prefix
             CanDownload: true
             IsMovie: true
             SeriesCount: 7
+            PrimaryImageItemId: PrimaryImageItemId
             ListingsChannelId: ListingsChannelId
             SeriesStudio: SeriesStudio
             IsLive: true
@@ -65968,7 +65970,6 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
-            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -66021,7 +66022,6 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
-            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -66404,10 +66404,12 @@ components:
             - null
             - null
             FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
             Prefix: Prefix
             CanDownload: true
             IsMovie: true
             SeriesCount: 7
+            PrimaryImageItemId: PrimaryImageItemId
             ListingsChannelId: ListingsChannelId
             SeriesStudio: SeriesStudio
             IsLive: true
@@ -66520,7 +66522,6 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
-            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -66573,7 +66574,6 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
-            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -67019,10 +67019,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -67135,7 +67137,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -67188,7 +67189,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -68002,10 +68002,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -68118,7 +68120,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -68171,7 +68172,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -68527,10 +68527,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -68643,7 +68645,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -68696,7 +68697,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -70298,6 +70298,8 @@ components:
           type: boolean
         ServerName:
           type: string
+        PreferredDetectedRemoteAddressFamily:
+          $ref: '#/components/schemas/Net.Sockets.AddressFamily'
         WanDdns:
           type: string
         UICulture:
@@ -70433,6 +70435,7 @@ components:
         EnableCaseSensitiveItemIds: true
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
+        PreferredDetectedRemoteAddressFamily: Unspecified
         TimerIdsUpgraded: true
         SimultaneousStreamLimit: 9
         PathSubstitutions:
@@ -70474,6 +70477,43 @@ components:
       - Legacy
       - Compatible
       x-internal-ref-name: MediaBrowser.Model.Configuration.ImageSavingConvention
+    Net.Sockets.AddressFamily:
+      type: string
+      enum:
+      - Unspecified
+      - Unix
+      - InterNetwork
+      - ImpLink
+      - Pup
+      - Chaos
+      - NS
+      - Ipx
+      - Osi
+      - Iso
+      - Ecma
+      - DataKit
+      - Ccitt
+      - Sna
+      - DecNet
+      - DataLink
+      - Lat
+      - HyperChannel
+      - AppleTalk
+      - NetBios
+      - VoiceView
+      - FireFox
+      - Banyan
+      - Atm
+      - InterNetworkV6
+      - Cluster
+      - Ieee12844
+      - Irda
+      - NetworkDesigners
+      - Max
+      - Packet
+      - ControllerAreaNetwork
+      - Unknown
+      x-internal-ref-name: System.Net.Sockets.AddressFamily
     Configuration.PathSubstitution:
       type: object
       properties:
@@ -72065,10 +72105,12 @@ components:
             - null
             - null
             FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
             Prefix: Prefix
             CanDownload: true
             IsMovie: true
             SeriesCount: 7
+            PrimaryImageItemId: PrimaryImageItemId
             ListingsChannelId: ListingsChannelId
             SeriesStudio: SeriesStudio
             IsLive: true
@@ -72181,7 +72223,6 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
-            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -72234,7 +72275,6 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
-            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -74531,10 +74571,12 @@ components:
             - null
             - null
             FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
             Prefix: Prefix
             CanDownload: true
             IsMovie: true
             SeriesCount: 7
+            PrimaryImageItemId: PrimaryImageItemId
             ListingsChannelId: ListingsChannelId
             SeriesStudio: SeriesStudio
             IsLive: true
@@ -74647,7 +74689,6 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
-            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -74700,7 +74741,6 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
-            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -75056,10 +75096,12 @@ components:
             - null
             - null
             FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
             Prefix: Prefix
             CanDownload: true
             IsMovie: true
             SeriesCount: 7
+            PrimaryImageItemId: PrimaryImageItemId
             ListingsChannelId: ListingsChannelId
             SeriesStudio: SeriesStudio
             IsLive: true
@@ -75172,7 +75214,6 @@ components:
             - Taglines
             PreferredMetadataCountryCode: PreferredMetadataCountryCode
             CameraModel: CameraModel
-            InheritedPrimaryImageTag: InheritedPrimaryImageTag
             ChannelNumber: ChannelNumber
             UserData:
               UnplayedItemCount: 7
@@ -75225,7 +75266,6 @@ components:
             AlbumArtist: AlbumArtist
             ImageTags:
               key: ImageTags
-            InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
             OriginalTitle: OriginalTitle
             ForcedSortName: ForcedSortName
             CurrentProgram: null
@@ -75601,10 +75641,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -75717,7 +75759,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -75770,7 +75811,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -76126,10 +76166,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -76242,7 +76284,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -76295,7 +76336,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null
@@ -77410,6 +77450,10 @@ components:
           type: array
           items:
             type: string
+        DeviceIds:
+          type: array
+          items:
+            type: string
         LibraryIds:
           type: array
           items:
@@ -77432,20 +77476,23 @@ components:
         - LibraryIds
         Options:
           key: Options
+        FriendlyName: FriendlyName
+        NotifierKey: NotifierKey
+        SetupModuleUrl: SetupModuleUrl
+        Enabled: true
+        IsSelfNotification: true
+        DeviceIds:
+        - DeviceIds
+        - DeviceIds
         EventIds:
         - EventIds
         - EventIds
         ServiceName: ServiceName
-        FriendlyName: FriendlyName
         UserId: UserId
-        NotifierKey: NotifierKey
-        SetupModuleUrl: SetupModuleUrl
-        Enabled: true
         Id: Id
         UserIds:
         - UserIds
         - UserIds
-        IsSelfNotification: true
       x-internal-ref-name: Emby.Notifications.UserNotificationInfo
     Playlists.AddToPlaylistResult:
       type: object
@@ -78028,10 +78075,12 @@ components:
           - null
           - null
           FileName: FileName
+          PrimaryImageTag: PrimaryImageTag
           Prefix: Prefix
           CanDownload: true
           IsMovie: true
           SeriesCount: 7
+          PrimaryImageItemId: PrimaryImageItemId
           ListingsChannelId: ListingsChannelId
           SeriesStudio: SeriesStudio
           IsLive: true
@@ -78144,7 +78193,6 @@ components:
           - Taglines
           PreferredMetadataCountryCode: PreferredMetadataCountryCode
           CameraModel: CameraModel
-          InheritedPrimaryImageTag: InheritedPrimaryImageTag
           ChannelNumber: ChannelNumber
           UserData:
             UnplayedItemCount: 7
@@ -78197,7 +78245,6 @@ components:
           AlbumArtist: AlbumArtist
           ImageTags:
             key: ImageTags
-          InheritedPrimaryImageItemId: InheritedPrimaryImageItemId
           OriginalTitle: OriginalTitle
           ForcedSortName: ForcedSortName
           CurrentProgram: null

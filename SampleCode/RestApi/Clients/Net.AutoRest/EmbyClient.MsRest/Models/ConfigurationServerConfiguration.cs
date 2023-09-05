@@ -28,9 +28,17 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         /// <param name="imageSavingConvention">Possible values include:
         /// 'Legacy', 'Compatible'</param>
+        /// <param name="preferredDetectedRemoteAddressFamily">Possible values
+        /// include: 'Unspecified', 'Unix', 'InterNetwork', 'ImpLink', 'Pup',
+        /// 'Chaos', 'NS', 'Ipx', 'Osi', 'Iso', 'Ecma', 'DataKit', 'Ccitt',
+        /// 'Sna', 'DecNet', 'DataLink', 'Lat', 'HyperChannel', 'AppleTalk',
+        /// 'NetBios', 'VoiceView', 'FireFox', 'Banyan', 'Atm',
+        /// 'InterNetworkV6', 'Cluster', 'Ieee12844', 'Irda',
+        /// 'NetworkDesigners', 'Max', 'Packet', 'ControllerAreaNetwork',
+        /// 'Unknown'</param>
         /// <param name="proxyHeaderMode">Possible values include: 'None',
         /// 'LanAddressesOnly', 'RemoteAddressesOnly', 'AllAddresses'</param>
-        public ConfigurationServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), IList<string> sortRemoveWords = default(IList<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), string imageSavingConvention = default(string), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), IList<string> localNetworkSubnets = default(IList<string>), IList<string> localNetworkAddresses = default(IList<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), IList<string> remoteIPFilter = default(IList<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), IList<ConfigurationPathSubstitution> pathSubstitutions = default(IList<ConfigurationPathSubstitution>), IList<string> uninstalledPlugins = default(IList<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? channelOptionsUpgraded = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? timerIdsUpgraded = default(bool?), bool? forcedSortNameUpgraded = default(bool?), bool? inheritedParentalRatingValueUpgraded = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares = default(bool?), string proxyHeaderMode = default(string), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ConfigurationServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), IList<string> sortRemoveWords = default(IList<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), string imageSavingConvention = default(string), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), string preferredDetectedRemoteAddressFamily = default(string), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), IList<string> localNetworkSubnets = default(IList<string>), IList<string> localNetworkAddresses = default(IList<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), IList<string> remoteIPFilter = default(IList<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), IList<ConfigurationPathSubstitution> pathSubstitutions = default(IList<ConfigurationPathSubstitution>), IList<string> uninstalledPlugins = default(IList<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? channelOptionsUpgraded = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? timerIdsUpgraded = default(bool?), bool? forcedSortNameUpgraded = default(bool?), bool? inheritedParentalRatingValueUpgraded = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares = default(bool?), string proxyHeaderMode = default(string), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             EnableUPnP = enableUPnP;
             PublicPort = publicPort;
@@ -56,6 +64,7 @@ namespace EmbyClient.MsRest.Models
             ImageSavingConvention = imageSavingConvention;
             EnableAutomaticRestart = enableAutomaticRestart;
             ServerName = serverName;
+            PreferredDetectedRemoteAddressFamily = preferredDetectedRemoteAddressFamily;
             WanDdns = wanDdns;
             UICulture = uICulture;
             RemoteClientBitrateLimit = remoteClientBitrateLimit;
@@ -222,6 +231,18 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "ServerName")]
         public string ServerName { get; set; }
+
+        /// <summary>
+        /// Gets or sets possible values include: 'Unspecified', 'Unix',
+        /// 'InterNetwork', 'ImpLink', 'Pup', 'Chaos', 'NS', 'Ipx', 'Osi',
+        /// 'Iso', 'Ecma', 'DataKit', 'Ccitt', 'Sna', 'DecNet', 'DataLink',
+        /// 'Lat', 'HyperChannel', 'AppleTalk', 'NetBios', 'VoiceView',
+        /// 'FireFox', 'Banyan', 'Atm', 'InterNetworkV6', 'Cluster',
+        /// 'Ieee12844', 'Irda', 'NetworkDesigners', 'Max', 'Packet',
+        /// 'ControllerAreaNetwork', 'Unknown'
+        /// </summary>
+        [JsonProperty(PropertyName = "PreferredDetectedRemoteAddressFamily")]
+        public string PreferredDetectedRemoteAddressFamily { get; set; }
 
         /// <summary>
         /// </summary>

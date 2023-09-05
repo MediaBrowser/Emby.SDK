@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.44"
+    "version": "4.8.0.45"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -52360,10 +52360,10 @@
         "SeriesStudio": {
           "type": "string"
         },
-        "InheritedPrimaryImageItemId": {
+        "PrimaryImageItemId": {
           "type": "string"
         },
-        "InheritedPrimaryImageTag": {
+        "PrimaryImageTag": {
           "type": "string"
         },
         "ParentThumbItemId": {
@@ -57423,6 +57423,9 @@
         "ServerName": {
           "type": "string"
         },
+        "PreferredDetectedRemoteAddressFamily": {
+          "$ref": "#/definitions/Net.Sockets.AddressFamily"
+        },
         "WanDdns": {
           "type": "string"
         },
@@ -57568,6 +57571,45 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Configuration.ImageSavingConvention"
+    },
+    "Net.Sockets.AddressFamily": {
+      "enum": [
+        "Unspecified",
+        "Unix",
+        "InterNetwork",
+        "ImpLink",
+        "Pup",
+        "Chaos",
+        "NS",
+        "Ipx",
+        "Osi",
+        "Iso",
+        "Ecma",
+        "DataKit",
+        "Ccitt",
+        "Sna",
+        "DecNet",
+        "DataLink",
+        "Lat",
+        "HyperChannel",
+        "AppleTalk",
+        "NetBios",
+        "VoiceView",
+        "FireFox",
+        "Banyan",
+        "Atm",
+        "InterNetworkV6",
+        "Cluster",
+        "Ieee12844",
+        "Irda",
+        "NetworkDesigners",
+        "Max",
+        "Packet",
+        "ControllerAreaNetwork",
+        "Unknown"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "System.Net.Sockets.AddressFamily"
     },
     "Configuration.PathSubstitution": {
       "type": "object",
@@ -60659,6 +60701,12 @@
           "type": "boolean"
         },
         "UserIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "DeviceIds": {
           "type": "array",
           "items": {
             "type": "string"

@@ -17,7 +17,7 @@ import Version from './Version';
 /**
 * The MediaEncodingCodecsCommonInterfacesICodecDeviceInfo model module.
 * @module model/MediaEncodingCodecsCommonInterfacesICodecDeviceInfo
-* @version 4.8.0.44
+* @version 4.8.0.45
 */
 export default class MediaEncodingCodecsCommonInterfacesICodecDeviceInfo {
     /**

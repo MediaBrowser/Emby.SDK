@@ -69,6 +69,7 @@ open class ConfigurationServiceAPI {
   "EnableCaseSensitiveItemIds" : true,
   "EnablePeopleLetterSubFolders" : true,
   "DisableAsyncIO" : true,
+  "PreferredDetectedRemoteAddressFamily" : "Unspecified",
   "TimerIdsUpgraded" : true,
   "SimultaneousStreamLimit" : 9,
   "PathSubstitutions" : [ {

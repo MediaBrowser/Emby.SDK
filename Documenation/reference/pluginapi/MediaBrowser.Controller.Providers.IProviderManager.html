@@ -595,31 +595,6 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Providers_IProviderManager_GetRefreshQueue_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.GetRefreshQueue*"></a>
-  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_GetRefreshQueue" data-uid="MediaBrowser.Controller.Providers.IProviderManager.GetRefreshQueue">GetRefreshQueue()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Dictionary&lt;long, long&gt; GetRefreshQueue()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Providers_IProviderManager_GetRemoteImageProviderInfo_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.GetRemoteImageProviderInfo*"></a>
   <h4 id="MediaBrowser_Controller_Providers_IProviderManager_GetRemoteImageProviderInfo_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.GetRemoteImageProviderInfo(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions)">GetRemoteImageProviderInfo(BaseItem, LibraryOptions)</h4>
   <div class="markdown level1 summary"><p>Gets the image providers.</p>
@@ -1047,48 +1022,6 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Providers_IProviderManager_ProcessQueue_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.ProcessQueue*"></a>
-  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_ProcessQueue_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.ProcessQueue(System.Threading.CancellationToken)">ProcessQueue(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ProcessQueue(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Providers_IProviderManager_QueueRefresh_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.QueueRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Providers_IProviderManager_QueueRefresh_System_Int64_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_RefreshPriority_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.QueueRefresh(System.Int64,MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Providers.RefreshPriority)">QueueRefresh(Int64, MetadataRefreshOptions, RefreshPriority)</h4>
   <div class="markdown level1 summary"><p>Queues the refresh.</p>
@@ -1289,13 +1222,13 @@
   
   
   <a id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage*"></a>
-  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Configuration_LibraryOptions_System_IO_Stream_System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions,System.IO.Stream,System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Boolean,System.Threading.CancellationToken)">SaveImage(BaseItem, LibraryOptions, Stream, ReadOnlyMemory&lt;Char&gt;, ImageType, Nullable&lt;Int32&gt;, Boolean, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Configuration_LibraryOptions_System_IO_Stream_System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Int64___System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions,System.IO.Stream,System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Int64[],System.Threading.CancellationToken)">SaveImage(BaseItem, LibraryOptions, Stream, ReadOnlyMemory&lt;Char&gt;, ImageType, Nullable&lt;Int32&gt;, Int64[], CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Saves the image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SaveImage(BaseItem item, LibraryOptions libraryOptions, Stream source, ReadOnlyMemory&lt;char&gt; mimeType, ImageType type, int? imageIndex, bool isFallbackImage, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task SaveImage(BaseItem item, LibraryOptions libraryOptions, Stream source, ReadOnlyMemory&lt;char&gt; mimeType, ImageType type, int? imageIndex, long[] generatedFromItemIds, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1338,8 +1271,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">isFallbackImage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="parametername">generatedFromItemIds</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1367,13 +1300,13 @@
   
   
   <a id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage*"></a>
-  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Configuration_LibraryOptions_System_String_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions,System.String,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Boolean,System.Threading.CancellationToken)">SaveImage(BaseItem, LibraryOptions, String, ImageType, Nullable&lt;Int32&gt;, Boolean, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Configuration_LibraryOptions_System_String_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Int64___System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions,System.String,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Int64[],System.Threading.CancellationToken)">SaveImage(BaseItem, LibraryOptions, String, ImageType, Nullable&lt;Int32&gt;, Int64[], CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Saves the image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SaveImage(BaseItem item, LibraryOptions libraryOptions, string url, ImageType type, int? imageIndex, bool isFallbackImage, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task SaveImage(BaseItem item, LibraryOptions libraryOptions, string url, ImageType type, int? imageIndex, long[] generatedFromItemIds, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1411,8 +1344,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">isFallbackImage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="parametername">generatedFromItemIds</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1440,13 +1373,13 @@
   
   
   <a id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage*"></a>
-  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Configuration_LibraryOptions_System_String_System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions,System.String,System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Boolean,System.Threading.CancellationToken)">SaveImage(BaseItem, LibraryOptions, String, ReadOnlyMemory&lt;Char&gt;, ImageType, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Boolean, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_SaveImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Configuration_LibraryOptions_System_String_System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Int64___System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.SaveImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions,System.String,System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Int64[],System.Threading.CancellationToken)">SaveImage(BaseItem, LibraryOptions, String, ReadOnlyMemory&lt;Char&gt;, ImageType, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Int64[], CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Saves the image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SaveImage(BaseItem item, LibraryOptions libraryOptions, string source, ReadOnlyMemory&lt;char&gt; mimeType, ImageType type, int? imageIndex, bool? saveLocallyWithMedia, bool isFallbackImage, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task SaveImage(BaseItem item, LibraryOptions libraryOptions, string source, ReadOnlyMemory&lt;char&gt; mimeType, ImageType type, int? imageIndex, bool? saveLocallyWithMedia, long[] generatedFromItemIds, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1494,8 +1427,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">isFallbackImage</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="parametername">generatedFromItemIds</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1679,14 +1612,36 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Providers_IProviderManager_StartProcessingRefreshQueue_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.StartProcessingRefreshQueue*"></a>
-  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_StartProcessingRefreshQueue" data-uid="MediaBrowser.Controller.Providers.IProviderManager.StartProcessingRefreshQueue">StartProcessingRefreshQueue()</h4>
+  <a id="MediaBrowser_Controller_Providers_IProviderManager_WaitForRefreshQueue_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.WaitForRefreshQueue*"></a>
+  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_WaitForRefreshQueue_System_IProgress_System_Double__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.WaitForRefreshQueue(System.IProgress{System.Double},System.Threading.CancellationToken)">WaitForRefreshQueue(IProgress&lt;Double&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task StartProcessingRefreshQueue()</code></pre>
+    <pre><code class="lang-csharp hljs">Task WaitForRefreshQueue(IProgress&lt;double&gt; progress, CancellationToken cancellationToken)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="parametername">progress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>

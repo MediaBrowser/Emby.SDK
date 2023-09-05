@@ -26,7 +26,7 @@ namespace EmbyClient.MsRest.Models
         /// Initializes a new instance of the
         /// EmbyNotificationsUserNotificationInfo class.
         /// </summary>
-        public EmbyNotificationsUserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), IList<string> userIds = default(IList<string>), IList<string> libraryIds = default(IList<string>), IList<string> eventIds = default(IList<string>), string userId = default(string), bool? isSelfNotification = default(bool?), IDictionary<string, string> options = default(IDictionary<string, string>))
+        public EmbyNotificationsUserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), IList<string> userIds = default(IList<string>), IList<string> deviceIds = default(IList<string>), IList<string> libraryIds = default(IList<string>), IList<string> eventIds = default(IList<string>), string userId = default(string), bool? isSelfNotification = default(bool?), IDictionary<string, string> options = default(IDictionary<string, string>))
         {
             NotifierKey = notifierKey;
             SetupModuleUrl = setupModuleUrl;
@@ -35,6 +35,7 @@ namespace EmbyClient.MsRest.Models
             Id = id;
             Enabled = enabled;
             UserIds = userIds;
+            DeviceIds = deviceIds;
             LibraryIds = libraryIds;
             EventIds = eventIds;
             UserId = userId;
@@ -82,6 +83,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "UserIds")]
         public IList<string> UserIds { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "DeviceIds")]
+        public IList<string> DeviceIds { get; set; }
 
         /// <summary>
         /// </summary>

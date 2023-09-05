@@ -37,16 +37,17 @@ open class UserNotificationsServiceAPI {
   "Options" : {
     "key" : "Options"
   },
-  "EventIds" : [ "EventIds", "EventIds" ],
-  "ServiceName" : "ServiceName",
   "FriendlyName" : "FriendlyName",
-  "UserId" : "UserId",
   "NotifierKey" : "NotifierKey",
   "SetupModuleUrl" : "SetupModuleUrl",
   "Enabled" : true,
+  "IsSelfNotification" : true,
+  "DeviceIds" : [ "DeviceIds", "DeviceIds" ],
+  "EventIds" : [ "EventIds", "EventIds" ],
+  "ServiceName" : "ServiceName",
+  "UserId" : "UserId",
   "Id" : "Id",
-  "UserIds" : [ "UserIds", "UserIds" ],
-  "IsSelfNotification" : true
+  "UserIds" : [ "UserIds", "UserIds" ]
 }}]
 
      - returns: RequestBuilder<EmbyNotificationsUserNotificationInfo> 

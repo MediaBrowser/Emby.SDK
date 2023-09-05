@@ -18,13 +18,14 @@ public struct EmbyNotificationsUserNotificationInfo: Codable {
     public var _id: String?
     public var enabled: Bool?
     public var userIds: [String]?
+    public var deviceIds: [String]?
     public var libraryIds: [String]?
     public var eventIds: [String]?
     public var userId: String?
     public var isSelfNotification: Bool?
     public var options: [String:String]?
 
-    public init(notifierKey: String? = nil, setupModuleUrl: String? = nil, serviceName: String? = nil, friendlyName: String? = nil, _id: String? = nil, enabled: Bool? = nil, userIds: [String]? = nil, libraryIds: [String]? = nil, eventIds: [String]? = nil, userId: String? = nil, isSelfNotification: Bool? = nil, options: [String:String]? = nil) {
+    public init(notifierKey: String? = nil, setupModuleUrl: String? = nil, serviceName: String? = nil, friendlyName: String? = nil, _id: String? = nil, enabled: Bool? = nil, userIds: [String]? = nil, deviceIds: [String]? = nil, libraryIds: [String]? = nil, eventIds: [String]? = nil, userId: String? = nil, isSelfNotification: Bool? = nil, options: [String:String]? = nil) {
         self.notifierKey = notifierKey
         self.setupModuleUrl = setupModuleUrl
         self.serviceName = serviceName
@@ -32,6 +33,7 @@ public struct EmbyNotificationsUserNotificationInfo: Codable {
         self._id = _id
         self.enabled = enabled
         self.userIds = userIds
+        self.deviceIds = deviceIds
         self.libraryIds = libraryIds
         self.eventIds = eventIds
         self.userId = userId
@@ -47,6 +49,7 @@ public struct EmbyNotificationsUserNotificationInfo: Codable {
         case _id = "Id"
         case enabled = "Enabled"
         case userIds = "UserIds"
+        case deviceIds = "DeviceIds"
         case libraryIds = "LibraryIds"
         case eventIds = "EventIds"
         case userId = "UserId"

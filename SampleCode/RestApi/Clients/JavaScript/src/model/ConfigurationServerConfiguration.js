@@ -13,11 +13,12 @@ import ApiClient from '../ApiClient';
 import ConfigurationImageSavingConvention from './ConfigurationImageSavingConvention';
 import ConfigurationPathSubstitution from './ConfigurationPathSubstitution';
 import ConfigurationProxyHeaderMode from './ConfigurationProxyHeaderMode';
+import NetSocketsAddressFamily from './NetSocketsAddressFamily';
 
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.44
+* @version 4.8.0.45
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -115,6 +116,9 @@ export default class ConfigurationServerConfiguration {
             }
             if (data.hasOwnProperty('ServerName')) {
                 obj['ServerName'] = ApiClient.convertToType(data['ServerName'], 'String');
+            }
+            if (data.hasOwnProperty('PreferredDetectedRemoteAddressFamily')) {
+                obj['PreferredDetectedRemoteAddressFamily'] = NetSocketsAddressFamily.constructFromObject(data['PreferredDetectedRemoteAddressFamily']);
             }
             if (data.hasOwnProperty('WanDdns')) {
                 obj['WanDdns'] = ApiClient.convertToType(data['WanDdns'], 'String');
@@ -330,6 +334,10 @@ export default class ConfigurationServerConfiguration {
     * @member {String} ServerName
     */
     'ServerName' = undefined;
+    /**
+    * @member {module:model/NetSocketsAddressFamily} PreferredDetectedRemoteAddressFamily
+    */
+    'PreferredDetectedRemoteAddressFamily' = undefined;
     /**
     * @member {String} WanDdns
     */

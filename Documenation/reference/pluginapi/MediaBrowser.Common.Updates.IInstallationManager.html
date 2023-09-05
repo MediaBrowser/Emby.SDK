@@ -337,13 +337,13 @@
   
   
   <a id="MediaBrowser_Common_Updates_IInstallationManager_GetLatestCompatibleVersion_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetLatestCompatibleVersion*"></a>
-  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetLatestCompatibleVersion_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_Version_MediaBrowser_Model_Updates_PackageVersionClass_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetLatestCompatibleVersion(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},System.Version,MediaBrowser.Model.Updates.PackageVersionClass)">GetLatestCompatibleVersion(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, Version, PackageVersionClass)</h4>
+  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetLatestCompatibleVersion_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_Version_MediaBrowser_Model_Updates_PackageVersionClass_System_Threading_CancellationToken_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetLatestCompatibleVersion(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},System.Version,MediaBrowser.Model.Updates.PackageVersionClass,System.Threading.CancellationToken)">GetLatestCompatibleVersion(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, Version, PackageVersionClass, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets the latest compatible version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;PackageVersionInfo&gt; GetLatestCompatibleVersion(ReadOnlyMemory&lt;char&gt; name, ReadOnlyMemory&lt;char&gt; guid, Version currentServerVersion, PackageVersionClass classification = PackageVersionClass.Release)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;PackageVersionInfo&gt; GetLatestCompatibleVersion(ReadOnlyMemory&lt;char&gt; name, ReadOnlyMemory&lt;char&gt; guid, Version currentServerVersion, PackageVersionClass classification, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,6 +379,11 @@
         <td><p>The classification.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -400,13 +405,13 @@
   
   
   <a id="MediaBrowser_Common_Updates_IInstallationManager_GetPackage_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetPackage*"></a>
-  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetPackage_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Updates_PackageVersionClass_System_Version_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetPackage(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Updates.PackageVersionClass,System.Version)">GetPackage(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, PackageVersionClass, Version)</h4>
+  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetPackage_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Updates_PackageVersionClass_System_Version_System_Threading_CancellationToken_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetPackage(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Updates.PackageVersionClass,System.Version,System.Threading.CancellationToken)">GetPackage(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, PackageVersionClass, Version, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets the package.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;PackageVersionInfo&gt; GetPackage(ReadOnlyMemory&lt;char&gt; name, ReadOnlyMemory&lt;char&gt; guid, PackageVersionClass classification, Version version)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;PackageVersionInfo&gt; GetPackage(ReadOnlyMemory&lt;char&gt; name, ReadOnlyMemory&lt;char&gt; guid, PackageVersionClass classification, Version version, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -441,6 +446,11 @@
         <td><span class="parametername">version</span></td>
         <td><p>The version.</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

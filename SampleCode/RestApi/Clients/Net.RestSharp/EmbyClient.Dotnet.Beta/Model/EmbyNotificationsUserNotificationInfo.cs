@@ -33,12 +33,13 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="id">id.</param>
         /// <param name="enabled">enabled.</param>
         /// <param name="userIds">userIds.</param>
+        /// <param name="deviceIds">deviceIds.</param>
         /// <param name="libraryIds">libraryIds.</param>
         /// <param name="eventIds">eventIds.</param>
         /// <param name="userId">userId.</param>
         /// <param name="isSelfNotification">isSelfNotification.</param>
         /// <param name="options">options.</param>
-        public EmbyNotificationsUserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), bool? isSelfNotification = default(bool?), Dictionary<string, string> options = default(Dictionary<string, string>))
+        public EmbyNotificationsUserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> deviceIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), bool? isSelfNotification = default(bool?), Dictionary<string, string> options = default(Dictionary<string, string>))
         {
             this.NotifierKey = notifierKey;
             this.SetupModuleUrl = setupModuleUrl;
@@ -47,6 +48,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.Id = id;
             this.Enabled = enabled;
             this.UserIds = userIds;
+            this.DeviceIds = deviceIds;
             this.LibraryIds = libraryIds;
             this.EventIds = eventIds;
             this.UserId = userId;
@@ -97,6 +99,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public List<string> UserIds { get; set; }
 
         /// <summary>
+        /// Gets or Sets DeviceIds
+        /// </summary>
+        [DataMember(Name="DeviceIds", EmitDefaultValue=false)]
+        public List<string> DeviceIds { get; set; }
+
+        /// <summary>
         /// Gets or Sets LibraryIds
         /// </summary>
         [DataMember(Name="LibraryIds", EmitDefaultValue=false)]
@@ -141,6 +149,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
+            sb.Append("  DeviceIds: ").Append(DeviceIds).Append("\n");
             sb.Append("  LibraryIds: ").Append(LibraryIds).Append("\n");
             sb.Append("  EventIds: ").Append(EventIds).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
@@ -217,6 +226,12 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.UserIds.SequenceEqual(input.UserIds)
                 ) && 
                 (
+                    this.DeviceIds == input.DeviceIds ||
+                    this.DeviceIds != null &&
+                    input.DeviceIds != null &&
+                    this.DeviceIds.SequenceEqual(input.DeviceIds)
+                ) && 
+                (
                     this.LibraryIds == input.LibraryIds ||
                     this.LibraryIds != null &&
                     input.LibraryIds != null &&
@@ -269,6 +284,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.UserIds != null)
                     hashCode = hashCode * 59 + this.UserIds.GetHashCode();
+                if (this.DeviceIds != null)
+                    hashCode = hashCode * 59 + this.DeviceIds.GetHashCode();
                 if (this.LibraryIds != null)
                     hashCode = hashCode * 59 + this.LibraryIds.GetHashCode();
                 if (this.EventIds != null)

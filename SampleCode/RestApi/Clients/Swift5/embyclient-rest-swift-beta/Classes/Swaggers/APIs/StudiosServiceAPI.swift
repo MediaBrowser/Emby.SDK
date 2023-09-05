@@ -465,10 +465,12 @@ open class StudiosServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -568,7 +570,6 @@ open class StudiosServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -623,7 +624,6 @@ open class StudiosServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -971,10 +971,12 @@ open class StudiosServiceAPI {
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 7,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
@@ -1074,7 +1076,6 @@ open class StudiosServiceAPI {
     "Taglines" : [ "Taglines", "Taglines" ],
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
-    "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
       "UnplayedItemCount" : 7,
@@ -1129,7 +1130,6 @@ open class StudiosServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
-    "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
     "OriginalTitle" : "OriginalTitle",
     "ForcedSortName" : "ForcedSortName",
     "SupportsResume" : true,
@@ -1703,10 +1703,12 @@ open class StudiosServiceAPI {
   "ListingsPath" : "ListingsPath",
   "MediaStreams" : [ null, null ],
   "FileName" : "FileName",
+  "PrimaryImageTag" : "PrimaryImageTag",
   "Prefix" : "Prefix",
   "CanDownload" : true,
   "IsMovie" : true,
   "SeriesCount" : 7,
+  "PrimaryImageItemId" : "PrimaryImageItemId",
   "ListingsChannelId" : "ListingsChannelId",
   "SeriesStudio" : "SeriesStudio",
   "IsLive" : true,
@@ -1806,7 +1808,6 @@ open class StudiosServiceAPI {
   "Taglines" : [ "Taglines", "Taglines" ],
   "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
   "CameraModel" : "CameraModel",
-  "InheritedPrimaryImageTag" : "InheritedPrimaryImageTag",
   "ChannelNumber" : "ChannelNumber",
   "UserData" : {
     "UnplayedItemCount" : 7,
@@ -1861,7 +1862,6 @@ open class StudiosServiceAPI {
   "ImageTags" : {
     "key" : "ImageTags"
   },
-  "InheritedPrimaryImageItemId" : "InheritedPrimaryImageItemId",
   "OriginalTitle" : "OriginalTitle",
   "ForcedSortName" : "ForcedSortName",
   "SupportsResume" : true,
