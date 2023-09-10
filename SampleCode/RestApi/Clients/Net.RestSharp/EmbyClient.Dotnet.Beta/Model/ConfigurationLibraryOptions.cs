@@ -44,6 +44,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="importMissingEpisodes">importMissingEpisodes.</param>
         /// <param name="importPlaylists">importPlaylists.</param>
         /// <param name="enableAutomaticSeriesGrouping">enableAutomaticSeriesGrouping.</param>
+        /// <param name="shareEmbeddedMusicAlbumImages">shareEmbeddedMusicAlbumImages.</param>
         /// <param name="enableEmbeddedTitles">enableEmbeddedTitles.</param>
         /// <param name="enableAudioResume">enableAudioResume.</param>
         /// <param name="automaticRefreshIntervalDays">automaticRefreshIntervalDays.</param>
@@ -52,7 +53,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="preferredImageLanguage">preferredImageLanguage.</param>
         /// <param name="contentType">contentType.</param>
         /// <param name="metadataCountryCode">metadataCountryCode.</param>
-        /// <param name="seasonZeroDisplayName">seasonZeroDisplayName.</param>
         /// <param name="name">name.</param>
         /// <param name="metadataSavers">metadataSavers.</param>
         /// <param name="disabledLocalMetadataReaders">disabledLocalMetadataReaders.</param>
@@ -82,7 +82,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="minResumeDurationSeconds">minResumeDurationSeconds.</param>
         /// <param name="thumbnailImagesIntervalSeconds">thumbnailImagesIntervalSeconds.</param>
         /// <param name="sampleIgnoreSize">sampleIgnoreSize.</param>
-        public ConfigurationLibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), List<ConfigurationMediaPathInfo> pathInfos = default(List<ConfigurationMediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), List<string> ignoreFileExtensions = default(List<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importMissingEpisodes = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), string seasonZeroDisplayName = default(string), string name = default(string), List<string> metadataSavers = default(List<string>), List<string> disabledLocalMetadataReaders = default(List<string>), List<string> localMetadataReaderOrder = default(List<string>), List<string> disabledLyricsFetchers = default(List<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), List<string> lyricsFetcherOrder = default(List<string>), List<string> lyricsDownloadLanguages = default(List<string>), List<string> disabledSubtitleFetchers = default(List<string>), List<string> subtitleFetcherOrder = default(List<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), List<string> subtitleDownloadLanguages = default(List<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), List<ConfigurationTypeOptions> typeOptions = default(List<ConfigurationTypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
+        public ConfigurationLibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), List<ConfigurationMediaPathInfo> pathInfos = default(List<ConfigurationMediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), List<string> ignoreFileExtensions = default(List<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importMissingEpisodes = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? shareEmbeddedMusicAlbumImages = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), string name = default(string), List<string> metadataSavers = default(List<string>), List<string> disabledLocalMetadataReaders = default(List<string>), List<string> localMetadataReaderOrder = default(List<string>), List<string> disabledLyricsFetchers = default(List<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), List<string> lyricsFetcherOrder = default(List<string>), List<string> lyricsDownloadLanguages = default(List<string>), List<string> disabledSubtitleFetchers = default(List<string>), List<string> subtitleFetcherOrder = default(List<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), List<string> subtitleDownloadLanguages = default(List<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), List<ConfigurationTypeOptions> typeOptions = default(List<ConfigurationTypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
         {
             this.EnableArchiveMediaFiles = enableArchiveMediaFiles;
             this.EnablePhotos = enablePhotos;
@@ -102,6 +102,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.ImportMissingEpisodes = importMissingEpisodes;
             this.ImportPlaylists = importPlaylists;
             this.EnableAutomaticSeriesGrouping = enableAutomaticSeriesGrouping;
+            this.ShareEmbeddedMusicAlbumImages = shareEmbeddedMusicAlbumImages;
             this.EnableEmbeddedTitles = enableEmbeddedTitles;
             this.EnableAudioResume = enableAudioResume;
             this.AutomaticRefreshIntervalDays = automaticRefreshIntervalDays;
@@ -110,7 +111,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.PreferredImageLanguage = preferredImageLanguage;
             this.ContentType = contentType;
             this.MetadataCountryCode = metadataCountryCode;
-            this.SeasonZeroDisplayName = seasonZeroDisplayName;
             this.Name = name;
             this.MetadataSavers = metadataSavers;
             this.DisabledLocalMetadataReaders = disabledLocalMetadataReaders;
@@ -251,6 +251,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? EnableAutomaticSeriesGrouping { get; set; }
 
         /// <summary>
+        /// Gets or Sets ShareEmbeddedMusicAlbumImages
+        /// </summary>
+        [DataMember(Name="ShareEmbeddedMusicAlbumImages", EmitDefaultValue=false)]
+        public bool? ShareEmbeddedMusicAlbumImages { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnableEmbeddedTitles
         /// </summary>
         [DataMember(Name="EnableEmbeddedTitles", EmitDefaultValue=false)]
@@ -297,12 +303,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="MetadataCountryCode", EmitDefaultValue=false)]
         public string MetadataCountryCode { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SeasonZeroDisplayName
-        /// </summary>
-        [DataMember(Name="SeasonZeroDisplayName", EmitDefaultValue=false)]
-        public string SeasonZeroDisplayName { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -504,6 +504,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  ImportMissingEpisodes: ").Append(ImportMissingEpisodes).Append("\n");
             sb.Append("  ImportPlaylists: ").Append(ImportPlaylists).Append("\n");
             sb.Append("  EnableAutomaticSeriesGrouping: ").Append(EnableAutomaticSeriesGrouping).Append("\n");
+            sb.Append("  ShareEmbeddedMusicAlbumImages: ").Append(ShareEmbeddedMusicAlbumImages).Append("\n");
             sb.Append("  EnableEmbeddedTitles: ").Append(EnableEmbeddedTitles).Append("\n");
             sb.Append("  EnableAudioResume: ").Append(EnableAudioResume).Append("\n");
             sb.Append("  AutomaticRefreshIntervalDays: ").Append(AutomaticRefreshIntervalDays).Append("\n");
@@ -512,7 +513,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  PreferredImageLanguage: ").Append(PreferredImageLanguage).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
-            sb.Append("  SeasonZeroDisplayName: ").Append(SeasonZeroDisplayName).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MetadataSavers: ").Append(MetadataSavers).Append("\n");
             sb.Append("  DisabledLocalMetadataReaders: ").Append(DisabledLocalMetadataReaders).Append("\n");
@@ -669,6 +669,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.EnableAutomaticSeriesGrouping.Equals(input.EnableAutomaticSeriesGrouping))
                 ) && 
                 (
+                    this.ShareEmbeddedMusicAlbumImages == input.ShareEmbeddedMusicAlbumImages ||
+                    (this.ShareEmbeddedMusicAlbumImages != null &&
+                    this.ShareEmbeddedMusicAlbumImages.Equals(input.ShareEmbeddedMusicAlbumImages))
+                ) && 
+                (
                     this.EnableEmbeddedTitles == input.EnableEmbeddedTitles ||
                     (this.EnableEmbeddedTitles != null &&
                     this.EnableEmbeddedTitles.Equals(input.EnableEmbeddedTitles))
@@ -707,11 +712,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.MetadataCountryCode == input.MetadataCountryCode ||
                     (this.MetadataCountryCode != null &&
                     this.MetadataCountryCode.Equals(input.MetadataCountryCode))
-                ) && 
-                (
-                    this.SeasonZeroDisplayName == input.SeasonZeroDisplayName ||
-                    (this.SeasonZeroDisplayName != null &&
-                    this.SeasonZeroDisplayName.Equals(input.SeasonZeroDisplayName))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -915,6 +915,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ImportPlaylists.GetHashCode();
                 if (this.EnableAutomaticSeriesGrouping != null)
                     hashCode = hashCode * 59 + this.EnableAutomaticSeriesGrouping.GetHashCode();
+                if (this.ShareEmbeddedMusicAlbumImages != null)
+                    hashCode = hashCode * 59 + this.ShareEmbeddedMusicAlbumImages.GetHashCode();
                 if (this.EnableEmbeddedTitles != null)
                     hashCode = hashCode * 59 + this.EnableEmbeddedTitles.GetHashCode();
                 if (this.EnableAudioResume != null)
@@ -931,8 +933,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ContentType.GetHashCode();
                 if (this.MetadataCountryCode != null)
                     hashCode = hashCode * 59 + this.MetadataCountryCode.GetHashCode();
-                if (this.SeasonZeroDisplayName != null)
-                    hashCode = hashCode * 59 + this.SeasonZeroDisplayName.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.MetadataSavers != null)

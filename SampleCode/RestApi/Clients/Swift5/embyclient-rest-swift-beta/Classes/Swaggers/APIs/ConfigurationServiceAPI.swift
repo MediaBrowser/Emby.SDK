@@ -57,7 +57,6 @@ open class ConfigurationServiceAPI {
   "DashboardSourcePath" : "DashboardSourcePath",
   "LogFileRetentionDays" : 4,
   "HttpsPortNumber" : 5,
-  "ChannelOptionsUpgraded" : true,
   "CertificatePassword" : "CertificatePassword",
   "InheritedParentalRatingValueUpgraded" : true,
   "MigratedToUserItemShares" : true,
@@ -70,7 +69,6 @@ open class ConfigurationServiceAPI {
   "EnablePeopleLetterSubFolders" : true,
   "DisableAsyncIO" : true,
   "PreferredDetectedRemoteAddressFamily" : "Unspecified",
-  "TimerIdsUpgraded" : true,
   "SimultaneousStreamLimit" : 9,
   "PathSubstitutions" : [ {
     "From" : "From",

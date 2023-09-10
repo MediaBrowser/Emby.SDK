@@ -78,6 +78,9 @@ public class ConfigurationLibraryOptions {
   @SerializedName("EnableAutomaticSeriesGrouping")
   private Boolean enableAutomaticSeriesGrouping = null;
 
+  @SerializedName("ShareEmbeddedMusicAlbumImages")
+  private Boolean shareEmbeddedMusicAlbumImages = null;
+
   @SerializedName("EnableEmbeddedTitles")
   private Boolean enableEmbeddedTitles = null;
 
@@ -101,9 +104,6 @@ public class ConfigurationLibraryOptions {
 
   @SerializedName("MetadataCountryCode")
   private String metadataCountryCode = null;
-
-  @SerializedName("SeasonZeroDisplayName")
-  private String seasonZeroDisplayName = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -532,6 +532,24 @@ public class ConfigurationLibraryOptions {
     this.enableAutomaticSeriesGrouping = enableAutomaticSeriesGrouping;
   }
 
+  public ConfigurationLibraryOptions shareEmbeddedMusicAlbumImages(Boolean shareEmbeddedMusicAlbumImages) {
+    this.shareEmbeddedMusicAlbumImages = shareEmbeddedMusicAlbumImages;
+    return this;
+  }
+
+   /**
+   * Get shareEmbeddedMusicAlbumImages
+   * @return shareEmbeddedMusicAlbumImages
+  **/
+  @Schema(description = "")
+  public Boolean isShareEmbeddedMusicAlbumImages() {
+    return shareEmbeddedMusicAlbumImages;
+  }
+
+  public void setShareEmbeddedMusicAlbumImages(Boolean shareEmbeddedMusicAlbumImages) {
+    this.shareEmbeddedMusicAlbumImages = shareEmbeddedMusicAlbumImages;
+  }
+
   public ConfigurationLibraryOptions enableEmbeddedTitles(Boolean enableEmbeddedTitles) {
     this.enableEmbeddedTitles = enableEmbeddedTitles;
     return this;
@@ -674,24 +692,6 @@ public class ConfigurationLibraryOptions {
 
   public void setMetadataCountryCode(String metadataCountryCode) {
     this.metadataCountryCode = metadataCountryCode;
-  }
-
-  public ConfigurationLibraryOptions seasonZeroDisplayName(String seasonZeroDisplayName) {
-    this.seasonZeroDisplayName = seasonZeroDisplayName;
-    return this;
-  }
-
-   /**
-   * Get seasonZeroDisplayName
-   * @return seasonZeroDisplayName
-  **/
-  @Schema(description = "")
-  public String getSeasonZeroDisplayName() {
-    return seasonZeroDisplayName;
-  }
-
-  public void setSeasonZeroDisplayName(String seasonZeroDisplayName) {
-    this.seasonZeroDisplayName = seasonZeroDisplayName;
   }
 
   public ConfigurationLibraryOptions name(String name) {
@@ -1324,6 +1324,7 @@ public class ConfigurationLibraryOptions {
         Objects.equals(this.importMissingEpisodes, configurationLibraryOptions.importMissingEpisodes) &&
         Objects.equals(this.importPlaylists, configurationLibraryOptions.importPlaylists) &&
         Objects.equals(this.enableAutomaticSeriesGrouping, configurationLibraryOptions.enableAutomaticSeriesGrouping) &&
+        Objects.equals(this.shareEmbeddedMusicAlbumImages, configurationLibraryOptions.shareEmbeddedMusicAlbumImages) &&
         Objects.equals(this.enableEmbeddedTitles, configurationLibraryOptions.enableEmbeddedTitles) &&
         Objects.equals(this.enableAudioResume, configurationLibraryOptions.enableAudioResume) &&
         Objects.equals(this.automaticRefreshIntervalDays, configurationLibraryOptions.automaticRefreshIntervalDays) &&
@@ -1332,7 +1333,6 @@ public class ConfigurationLibraryOptions {
         Objects.equals(this.preferredImageLanguage, configurationLibraryOptions.preferredImageLanguage) &&
         Objects.equals(this.contentType, configurationLibraryOptions.contentType) &&
         Objects.equals(this.metadataCountryCode, configurationLibraryOptions.metadataCountryCode) &&
-        Objects.equals(this.seasonZeroDisplayName, configurationLibraryOptions.seasonZeroDisplayName) &&
         Objects.equals(this.name, configurationLibraryOptions.name) &&
         Objects.equals(this.metadataSavers, configurationLibraryOptions.metadataSavers) &&
         Objects.equals(this.disabledLocalMetadataReaders, configurationLibraryOptions.disabledLocalMetadataReaders) &&
@@ -1366,7 +1366,7 @@ public class ConfigurationLibraryOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importMissingEpisodes, importPlaylists, enableAutomaticSeriesGrouping, enableEmbeddedTitles, enableAudioResume, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, seasonZeroDisplayName, name, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
+    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importMissingEpisodes, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, name, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
   }
 
 
@@ -1393,6 +1393,7 @@ public class ConfigurationLibraryOptions {
     sb.append("    importMissingEpisodes: ").append(toIndentedString(importMissingEpisodes)).append("\n");
     sb.append("    importPlaylists: ").append(toIndentedString(importPlaylists)).append("\n");
     sb.append("    enableAutomaticSeriesGrouping: ").append(toIndentedString(enableAutomaticSeriesGrouping)).append("\n");
+    sb.append("    shareEmbeddedMusicAlbumImages: ").append(toIndentedString(shareEmbeddedMusicAlbumImages)).append("\n");
     sb.append("    enableEmbeddedTitles: ").append(toIndentedString(enableEmbeddedTitles)).append("\n");
     sb.append("    enableAudioResume: ").append(toIndentedString(enableAudioResume)).append("\n");
     sb.append("    automaticRefreshIntervalDays: ").append(toIndentedString(automaticRefreshIntervalDays)).append("\n");
@@ -1401,7 +1402,6 @@ public class ConfigurationLibraryOptions {
     sb.append("    preferredImageLanguage: ").append(toIndentedString(preferredImageLanguage)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    metadataCountryCode: ").append(toIndentedString(metadataCountryCode)).append("\n");
-    sb.append("    seasonZeroDisplayName: ").append(toIndentedString(seasonZeroDisplayName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    metadataSavers: ").append(toIndentedString(metadataSavers)).append("\n");
     sb.append("    disabledLocalMetadataReaders: ").append(toIndentedString(disabledLocalMetadataReaders)).append("\n");

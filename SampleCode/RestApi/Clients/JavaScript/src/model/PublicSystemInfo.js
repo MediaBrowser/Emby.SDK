@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PublicSystemInfo model module.
 * @module model/PublicSystemInfo
-* @version 4.8.0.45
+* @version 4.8.0.46
 */
 export default class PublicSystemInfo {
     /**

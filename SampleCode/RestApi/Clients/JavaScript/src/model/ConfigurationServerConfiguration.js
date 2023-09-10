@@ -18,7 +18,7 @@ import NetSocketsAddressFamily from './NetSocketsAddressFamily';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.45
+* @version 4.8.0.46
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -177,14 +177,8 @@ export default class ConfigurationServerConfiguration {
             if (data.hasOwnProperty('EnableSqLiteMmio')) {
                 obj['EnableSqLiteMmio'] = ApiClient.convertToType(data['EnableSqLiteMmio'], 'Boolean');
             }
-            if (data.hasOwnProperty('ChannelOptionsUpgraded')) {
-                obj['ChannelOptionsUpgraded'] = ApiClient.convertToType(data['ChannelOptionsUpgraded'], 'Boolean');
-            }
             if (data.hasOwnProperty('PlaylistsUpgradedToM3U')) {
                 obj['PlaylistsUpgradedToM3U'] = ApiClient.convertToType(data['PlaylistsUpgradedToM3U'], 'Boolean');
-            }
-            if (data.hasOwnProperty('TimerIdsUpgraded')) {
-                obj['TimerIdsUpgraded'] = ApiClient.convertToType(data['TimerIdsUpgraded'], 'Boolean');
             }
             if (data.hasOwnProperty('ForcedSortNameUpgraded')) {
                 obj['ForcedSortNameUpgraded'] = ApiClient.convertToType(data['ForcedSortNameUpgraded'], 'Boolean');
@@ -415,17 +409,9 @@ export default class ConfigurationServerConfiguration {
     */
     'EnableSqLiteMmio' = undefined;
     /**
-    * @member {Boolean} ChannelOptionsUpgraded
-    */
-    'ChannelOptionsUpgraded' = undefined;
-    /**
     * @member {Boolean} PlaylistsUpgradedToM3U
     */
     'PlaylistsUpgradedToM3U' = undefined;
-    /**
-    * @member {Boolean} TimerIdsUpgraded
-    */
-    'TimerIdsUpgraded' = undefined;
     /**
     * @member {Boolean} ForcedSortNameUpgraded
     */

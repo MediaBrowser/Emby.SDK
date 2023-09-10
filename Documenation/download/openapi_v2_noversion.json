@@ -24230,8 +24230,7 @@
             "in": "path",
             "name": "Id",
             "required": true,
-            "type": "string",
-            "format": "guid"
+            "type": "string"
           },
           {
             "in": "body",
@@ -54233,7 +54232,6 @@
       "type": "object",
       "properties": {
         "LocalUserId": {
-          "format": "guid",
           "type": "string"
         },
         "AccessToken": {
@@ -55494,6 +55492,9 @@
         "EnableAutomaticSeriesGrouping": {
           "type": "boolean"
         },
+        "ShareEmbeddedMusicAlbumImages": {
+          "type": "boolean"
+        },
         "EnableEmbeddedTitles": {
           "type": "boolean"
         },
@@ -55518,9 +55519,6 @@
           "type": "string"
         },
         "MetadataCountryCode": {
-          "type": "string"
-        },
-        "SeasonZeroDisplayName": {
           "type": "string"
         },
         "Name": {
@@ -57500,13 +57498,7 @@
         "EnableSqLiteMmio": {
           "type": "boolean"
         },
-        "ChannelOptionsUpgraded": {
-          "type": "boolean"
-        },
         "PlaylistsUpgradedToM3U": {
-          "type": "boolean"
-        },
-        "TimerIdsUpgraded": {
           "type": "boolean"
         },
         "ForcedSortNameUpgraded": {
@@ -57994,7 +57986,6 @@
           "$ref": "#/definitions/Connect.UserLinkType"
         },
         "Id": {
-          "format": "guid",
           "type": "string"
         },
         "PrimaryImageTag": {

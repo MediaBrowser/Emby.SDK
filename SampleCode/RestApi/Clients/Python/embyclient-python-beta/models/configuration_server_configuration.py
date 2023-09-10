@@ -66,9 +66,7 @@ class ConfigurationServerConfiguration(object):
         'simultaneous_stream_limit': 'int',
         'database_cache_size_mb': 'int',
         'enable_sq_lite_mmio': 'bool',
-        'channel_options_upgraded': 'bool',
         'playlists_upgraded_to_m3_u': 'bool',
-        'timer_ids_upgraded': 'bool',
         'forced_sort_name_upgraded': 'bool',
         'inherited_parental_rating_value_upgraded': 'bool',
         'image_extractor_upgraded': 'bool',
@@ -132,9 +130,7 @@ class ConfigurationServerConfiguration(object):
         'simultaneous_stream_limit': 'SimultaneousStreamLimit',
         'database_cache_size_mb': 'DatabaseCacheSizeMB',
         'enable_sq_lite_mmio': 'EnableSqLiteMmio',
-        'channel_options_upgraded': 'ChannelOptionsUpgraded',
         'playlists_upgraded_to_m3_u': 'PlaylistsUpgradedToM3U',
-        'timer_ids_upgraded': 'TimerIdsUpgraded',
         'forced_sort_name_upgraded': 'ForcedSortNameUpgraded',
         'inherited_parental_rating_value_upgraded': 'InheritedParentalRatingValueUpgraded',
         'image_extractor_upgraded': 'ImageExtractorUpgraded',
@@ -153,7 +149,7 @@ class ConfigurationServerConfiguration(object):
         'cache_path': 'CachePath'
     }
 
-    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, channel_options_upgraded=None, playlists_upgraded_to_m3_u=None, timer_ids_upgraded=None, forced_sort_name_upgraded=None, inherited_parental_rating_value_upgraded=None, image_extractor_upgraded=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
+    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, forced_sort_name_upgraded=None, inherited_parental_rating_value_upgraded=None, image_extractor_upgraded=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
         """ConfigurationServerConfiguration - a model defined in Swagger"""  # noqa: E501
         self._enable_u_pn_p = None
         self._public_port = None
@@ -199,9 +195,7 @@ class ConfigurationServerConfiguration(object):
         self._simultaneous_stream_limit = None
         self._database_cache_size_mb = None
         self._enable_sq_lite_mmio = None
-        self._channel_options_upgraded = None
         self._playlists_upgraded_to_m3_u = None
-        self._timer_ids_upgraded = None
         self._forced_sort_name_upgraded = None
         self._inherited_parental_rating_value_upgraded = None
         self._image_extractor_upgraded = None
@@ -307,12 +301,8 @@ class ConfigurationServerConfiguration(object):
             self.database_cache_size_mb = database_cache_size_mb
         if enable_sq_lite_mmio is not None:
             self.enable_sq_lite_mmio = enable_sq_lite_mmio
-        if channel_options_upgraded is not None:
-            self.channel_options_upgraded = channel_options_upgraded
         if playlists_upgraded_to_m3_u is not None:
             self.playlists_upgraded_to_m3_u = playlists_upgraded_to_m3_u
-        if timer_ids_upgraded is not None:
-            self.timer_ids_upgraded = timer_ids_upgraded
         if forced_sort_name_upgraded is not None:
             self.forced_sort_name_upgraded = forced_sort_name_upgraded
         if inherited_parental_rating_value_upgraded is not None:
@@ -1271,27 +1261,6 @@ class ConfigurationServerConfiguration(object):
         self._enable_sq_lite_mmio = enable_sq_lite_mmio
 
     @property
-    def channel_options_upgraded(self):
-        """Gets the channel_options_upgraded of this ConfigurationServerConfiguration.  # noqa: E501
-
-
-        :return: The channel_options_upgraded of this ConfigurationServerConfiguration.  # noqa: E501
-        :rtype: bool
-        """
-        return self._channel_options_upgraded
-
-    @channel_options_upgraded.setter
-    def channel_options_upgraded(self, channel_options_upgraded):
-        """Sets the channel_options_upgraded of this ConfigurationServerConfiguration.
-
-
-        :param channel_options_upgraded: The channel_options_upgraded of this ConfigurationServerConfiguration.  # noqa: E501
-        :type: bool
-        """
-
-        self._channel_options_upgraded = channel_options_upgraded
-
-    @property
     def playlists_upgraded_to_m3_u(self):
         """Gets the playlists_upgraded_to_m3_u of this ConfigurationServerConfiguration.  # noqa: E501
 
@@ -1311,27 +1280,6 @@ class ConfigurationServerConfiguration(object):
         """
 
         self._playlists_upgraded_to_m3_u = playlists_upgraded_to_m3_u
-
-    @property
-    def timer_ids_upgraded(self):
-        """Gets the timer_ids_upgraded of this ConfigurationServerConfiguration.  # noqa: E501
-
-
-        :return: The timer_ids_upgraded of this ConfigurationServerConfiguration.  # noqa: E501
-        :rtype: bool
-        """
-        return self._timer_ids_upgraded
-
-    @timer_ids_upgraded.setter
-    def timer_ids_upgraded(self, timer_ids_upgraded):
-        """Sets the timer_ids_upgraded of this ConfigurationServerConfiguration.
-
-
-        :param timer_ids_upgraded: The timer_ids_upgraded of this ConfigurationServerConfiguration.  # noqa: E501
-        :type: bool
-        """
-
-        self._timer_ids_upgraded = timer_ids_upgraded
 
     @property
     def forced_sort_name_upgraded(self):

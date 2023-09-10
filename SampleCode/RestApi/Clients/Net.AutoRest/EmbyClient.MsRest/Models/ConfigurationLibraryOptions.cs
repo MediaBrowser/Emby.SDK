@@ -26,7 +26,7 @@ namespace EmbyClient.MsRest.Models
         /// Initializes a new instance of the ConfigurationLibraryOptions
         /// class.
         /// </summary>
-        public ConfigurationLibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), IList<ConfigurationMediaPathInfo> pathInfos = default(IList<ConfigurationMediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), IList<string> ignoreFileExtensions = default(IList<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importMissingEpisodes = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), string seasonZeroDisplayName = default(string), string name = default(string), IList<string> metadataSavers = default(IList<string>), IList<string> disabledLocalMetadataReaders = default(IList<string>), IList<string> localMetadataReaderOrder = default(IList<string>), IList<string> disabledLyricsFetchers = default(IList<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), IList<string> lyricsFetcherOrder = default(IList<string>), IList<string> lyricsDownloadLanguages = default(IList<string>), IList<string> disabledSubtitleFetchers = default(IList<string>), IList<string> subtitleFetcherOrder = default(IList<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), IList<string> subtitleDownloadLanguages = default(IList<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), IList<ConfigurationTypeOptions> typeOptions = default(IList<ConfigurationTypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
+        public ConfigurationLibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), IList<ConfigurationMediaPathInfo> pathInfos = default(IList<ConfigurationMediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), IList<string> ignoreFileExtensions = default(IList<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importMissingEpisodes = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? shareEmbeddedMusicAlbumImages = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), string name = default(string), IList<string> metadataSavers = default(IList<string>), IList<string> disabledLocalMetadataReaders = default(IList<string>), IList<string> localMetadataReaderOrder = default(IList<string>), IList<string> disabledLyricsFetchers = default(IList<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), IList<string> lyricsFetcherOrder = default(IList<string>), IList<string> lyricsDownloadLanguages = default(IList<string>), IList<string> disabledSubtitleFetchers = default(IList<string>), IList<string> subtitleFetcherOrder = default(IList<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), IList<string> subtitleDownloadLanguages = default(IList<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), IList<ConfigurationTypeOptions> typeOptions = default(IList<ConfigurationTypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
         {
             EnableArchiveMediaFiles = enableArchiveMediaFiles;
             EnablePhotos = enablePhotos;
@@ -46,6 +46,7 @@ namespace EmbyClient.MsRest.Models
             ImportMissingEpisodes = importMissingEpisodes;
             ImportPlaylists = importPlaylists;
             EnableAutomaticSeriesGrouping = enableAutomaticSeriesGrouping;
+            ShareEmbeddedMusicAlbumImages = shareEmbeddedMusicAlbumImages;
             EnableEmbeddedTitles = enableEmbeddedTitles;
             EnableAudioResume = enableAudioResume;
             AutomaticRefreshIntervalDays = automaticRefreshIntervalDays;
@@ -54,7 +55,6 @@ namespace EmbyClient.MsRest.Models
             PreferredImageLanguage = preferredImageLanguage;
             ContentType = contentType;
             MetadataCountryCode = metadataCountryCode;
-            SeasonZeroDisplayName = seasonZeroDisplayName;
             Name = name;
             MetadataSavers = metadataSavers;
             DisabledLocalMetadataReaders = disabledLocalMetadataReaders;
@@ -184,6 +184,11 @@ namespace EmbyClient.MsRest.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "ShareEmbeddedMusicAlbumImages")]
+        public bool? ShareEmbeddedMusicAlbumImages { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "EnableEmbeddedTitles")]
         public bool? EnableEmbeddedTitles { get; set; }
 
@@ -221,11 +226,6 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "MetadataCountryCode")]
         public string MetadataCountryCode { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [JsonProperty(PropertyName = "SeasonZeroDisplayName")]
-        public string SeasonZeroDisplayName { get; set; }
 
         /// <summary>
         /// </summary>

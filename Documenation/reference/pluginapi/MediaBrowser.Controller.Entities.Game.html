@@ -825,6 +825,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RequiresRefresh_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.RequiresRefresh(IDirectoryService)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AfterMetadataRefresh">BaseItem.AfterMetadataRefresh()</a>
     </div>
     <div>
@@ -1373,13 +1376,13 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_Game_GetUserDataKey_" data-uid="MediaBrowser.Controller.Entities.Game.GetUserDataKey*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Game_GetUserDataKey" data-uid="MediaBrowser.Controller.Entities.Game.GetUserDataKey">GetUserDataKey()</h4>
+  <a id="MediaBrowser_Controller_Entities_Game_GetUserDataKeyInternal_" data-uid="MediaBrowser.Controller.Entities.Game.GetUserDataKeyInternal*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Game_GetUserDataKeyInternal" data-uid="MediaBrowser.Controller.Entities.Game.GetUserDataKeyInternal">GetUserDataKeyInternal()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string GetUserDataKey()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override string GetUserDataKeyInternal()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1397,7 +1400,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal">BaseItem.GetUserDataKeyInternal()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>

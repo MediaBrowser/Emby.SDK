@@ -25,6 +25,7 @@ type ConfigurationLibraryOptions struct {
 	ImportMissingEpisodes bool `json:"ImportMissingEpisodes,omitempty"`
 	ImportPlaylists bool `json:"ImportPlaylists,omitempty"`
 	EnableAutomaticSeriesGrouping bool `json:"EnableAutomaticSeriesGrouping,omitempty"`
+	ShareEmbeddedMusicAlbumImages bool `json:"ShareEmbeddedMusicAlbumImages,omitempty"`
 	EnableEmbeddedTitles bool `json:"EnableEmbeddedTitles,omitempty"`
 	EnableAudioResume bool `json:"EnableAudioResume,omitempty"`
 	AutomaticRefreshIntervalDays int32 `json:"AutomaticRefreshIntervalDays,omitempty"`
@@ -33,7 +34,6 @@ type ConfigurationLibraryOptions struct {
 	PreferredImageLanguage string `json:"PreferredImageLanguage,omitempty"`
 	ContentType string `json:"ContentType,omitempty"`
 	MetadataCountryCode string `json:"MetadataCountryCode,omitempty"`
-	SeasonZeroDisplayName string `json:"SeasonZeroDisplayName,omitempty"`
 	Name string `json:"Name,omitempty"`
 	MetadataSavers []string `json:"MetadataSavers,omitempty"`
 	DisabledLocalMetadataReaders []string `json:"DisabledLocalMetadataReaders,omitempty"`

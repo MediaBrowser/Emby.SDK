@@ -135,6 +135,7 @@ open class LibraryStructureServiceAPI {
       "EnableAudioResume" : true,
       "MusicFolderStructure" : "MusicFolderStructure",
       "IgnoreHiddenFiles" : true,
+      "ShareEmbeddedMusicAlbumImages" : true,
       "TypeOptions" : [ {
         "Type" : "Type",
         "MetadataFetcherOrder" : [ "MetadataFetcherOrder", "MetadataFetcherOrder" ],
@@ -180,7 +181,6 @@ open class LibraryStructureServiceAPI {
       "LocalMetadataReaderOrder" : [ "LocalMetadataReaderOrder", "LocalMetadataReaderOrder" ],
       "LyricsFetcherOrder" : [ "LyricsFetcherOrder", "LyricsFetcherOrder" ],
       "IgnoreFileExtensions" : [ "IgnoreFileExtensions", "IgnoreFileExtensions" ],
-      "SeasonZeroDisplayName" : "SeasonZeroDisplayName",
       "CollapseSingleItemFolders" : true,
       "EnableMarkerDetectionDuringLibraryScan" : true,
       "EnableEmbeddedTitles" : true,
@@ -239,6 +239,7 @@ open class LibraryStructureServiceAPI {
       "EnableAudioResume" : true,
       "MusicFolderStructure" : "MusicFolderStructure",
       "IgnoreHiddenFiles" : true,
+      "ShareEmbeddedMusicAlbumImages" : true,
       "TypeOptions" : [ {
         "Type" : "Type",
         "MetadataFetcherOrder" : [ "MetadataFetcherOrder", "MetadataFetcherOrder" ],
@@ -284,7 +285,6 @@ open class LibraryStructureServiceAPI {
       "LocalMetadataReaderOrder" : [ "LocalMetadataReaderOrder", "LocalMetadataReaderOrder" ],
       "LyricsFetcherOrder" : [ "LyricsFetcherOrder", "LyricsFetcherOrder" ],
       "IgnoreFileExtensions" : [ "IgnoreFileExtensions", "IgnoreFileExtensions" ],
-      "SeasonZeroDisplayName" : "SeasonZeroDisplayName",
       "CollapseSingleItemFolders" : true,
       "EnableMarkerDetectionDuringLibraryScan" : true,
       "EnableEmbeddedTitles" : true,

@@ -40,6 +40,7 @@ class ConfigurationLibraryOptions(object):
         'import_missing_episodes': 'bool',
         'import_playlists': 'bool',
         'enable_automatic_series_grouping': 'bool',
+        'share_embedded_music_album_images': 'bool',
         'enable_embedded_titles': 'bool',
         'enable_audio_resume': 'bool',
         'automatic_refresh_interval_days': 'int',
@@ -48,7 +49,6 @@ class ConfigurationLibraryOptions(object):
         'preferred_image_language': 'str',
         'content_type': 'str',
         'metadata_country_code': 'str',
-        'season_zero_display_name': 'str',
         'name': 'str',
         'metadata_savers': 'list[str]',
         'disabled_local_metadata_readers': 'list[str]',
@@ -99,6 +99,7 @@ class ConfigurationLibraryOptions(object):
         'import_missing_episodes': 'ImportMissingEpisodes',
         'import_playlists': 'ImportPlaylists',
         'enable_automatic_series_grouping': 'EnableAutomaticSeriesGrouping',
+        'share_embedded_music_album_images': 'ShareEmbeddedMusicAlbumImages',
         'enable_embedded_titles': 'EnableEmbeddedTitles',
         'enable_audio_resume': 'EnableAudioResume',
         'automatic_refresh_interval_days': 'AutomaticRefreshIntervalDays',
@@ -107,7 +108,6 @@ class ConfigurationLibraryOptions(object):
         'preferred_image_language': 'PreferredImageLanguage',
         'content_type': 'ContentType',
         'metadata_country_code': 'MetadataCountryCode',
-        'season_zero_display_name': 'SeasonZeroDisplayName',
         'name': 'Name',
         'metadata_savers': 'MetadataSavers',
         'disabled_local_metadata_readers': 'DisabledLocalMetadataReaders',
@@ -139,7 +139,7 @@ class ConfigurationLibraryOptions(object):
         'sample_ignore_size': 'SampleIgnoreSize'
     }
 
-    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_missing_episodes=None, import_playlists=None, enable_automatic_series_grouping=None, enable_embedded_titles=None, enable_audio_resume=None, automatic_refresh_interval_days=None, placeholder_metadata_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, season_zero_display_name=None, name=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, type_options=None, collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
+    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_missing_episodes=None, import_playlists=None, enable_automatic_series_grouping=None, share_embedded_music_album_images=None, enable_embedded_titles=None, enable_audio_resume=None, automatic_refresh_interval_days=None, placeholder_metadata_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, name=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, type_options=None, collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
         """ConfigurationLibraryOptions - a model defined in Swagger"""  # noqa: E501
         self._enable_archive_media_files = None
         self._enable_photos = None
@@ -159,6 +159,7 @@ class ConfigurationLibraryOptions(object):
         self._import_missing_episodes = None
         self._import_playlists = None
         self._enable_automatic_series_grouping = None
+        self._share_embedded_music_album_images = None
         self._enable_embedded_titles = None
         self._enable_audio_resume = None
         self._automatic_refresh_interval_days = None
@@ -167,7 +168,6 @@ class ConfigurationLibraryOptions(object):
         self._preferred_image_language = None
         self._content_type = None
         self._metadata_country_code = None
-        self._season_zero_display_name = None
         self._name = None
         self._metadata_savers = None
         self._disabled_local_metadata_readers = None
@@ -234,6 +234,8 @@ class ConfigurationLibraryOptions(object):
             self.import_playlists = import_playlists
         if enable_automatic_series_grouping is not None:
             self.enable_automatic_series_grouping = enable_automatic_series_grouping
+        if share_embedded_music_album_images is not None:
+            self.share_embedded_music_album_images = share_embedded_music_album_images
         if enable_embedded_titles is not None:
             self.enable_embedded_titles = enable_embedded_titles
         if enable_audio_resume is not None:
@@ -250,8 +252,6 @@ class ConfigurationLibraryOptions(object):
             self.content_type = content_type
         if metadata_country_code is not None:
             self.metadata_country_code = metadata_country_code
-        if season_zero_display_name is not None:
-            self.season_zero_display_name = season_zero_display_name
         if name is not None:
             self.name = name
         if metadata_savers is not None:
@@ -690,6 +690,27 @@ class ConfigurationLibraryOptions(object):
         self._enable_automatic_series_grouping = enable_automatic_series_grouping
 
     @property
+    def share_embedded_music_album_images(self):
+        """Gets the share_embedded_music_album_images of this ConfigurationLibraryOptions.  # noqa: E501
+
+
+        :return: The share_embedded_music_album_images of this ConfigurationLibraryOptions.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_embedded_music_album_images
+
+    @share_embedded_music_album_images.setter
+    def share_embedded_music_album_images(self, share_embedded_music_album_images):
+        """Sets the share_embedded_music_album_images of this ConfigurationLibraryOptions.
+
+
+        :param share_embedded_music_album_images: The share_embedded_music_album_images of this ConfigurationLibraryOptions.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_embedded_music_album_images = share_embedded_music_album_images
+
+    @property
     def enable_embedded_titles(self):
         """Gets the enable_embedded_titles of this ConfigurationLibraryOptions.  # noqa: E501
 
@@ -856,27 +877,6 @@ class ConfigurationLibraryOptions(object):
         """
 
         self._metadata_country_code = metadata_country_code
-
-    @property
-    def season_zero_display_name(self):
-        """Gets the season_zero_display_name of this ConfigurationLibraryOptions.  # noqa: E501
-
-
-        :return: The season_zero_display_name of this ConfigurationLibraryOptions.  # noqa: E501
-        :rtype: str
-        """
-        return self._season_zero_display_name
-
-    @season_zero_display_name.setter
-    def season_zero_display_name(self, season_zero_display_name):
-        """Sets the season_zero_display_name of this ConfigurationLibraryOptions.
-
-
-        :param season_zero_display_name: The season_zero_display_name of this ConfigurationLibraryOptions.  # noqa: E501
-        :type: str
-        """
-
-        self._season_zero_display_name = season_zero_display_name
 
     @property
     def name(self):

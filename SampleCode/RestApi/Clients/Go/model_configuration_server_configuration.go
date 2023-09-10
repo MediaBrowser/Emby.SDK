@@ -51,9 +51,7 @@ type ConfigurationServerConfiguration struct {
 	SimultaneousStreamLimit int32 `json:"SimultaneousStreamLimit,omitempty"`
 	DatabaseCacheSizeMB int32 `json:"DatabaseCacheSizeMB,omitempty"`
 	EnableSqLiteMmio bool `json:"EnableSqLiteMmio,omitempty"`
-	ChannelOptionsUpgraded bool `json:"ChannelOptionsUpgraded,omitempty"`
 	PlaylistsUpgradedToM3U bool `json:"PlaylistsUpgradedToM3U,omitempty"`
-	TimerIdsUpgraded bool `json:"TimerIdsUpgraded,omitempty"`
 	ForcedSortNameUpgraded bool `json:"ForcedSortNameUpgraded,omitempty"`
 	InheritedParentalRatingValueUpgraded bool `json:"InheritedParentalRatingValueUpgraded,omitempty"`
 	ImageExtractorUpgraded bool `json:"ImageExtractorUpgraded,omitempty"`

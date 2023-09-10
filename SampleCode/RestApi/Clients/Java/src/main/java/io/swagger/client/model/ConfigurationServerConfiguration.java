@@ -158,14 +158,8 @@ public class ConfigurationServerConfiguration {
   @SerializedName("EnableSqLiteMmio")
   private Boolean enableSqLiteMmio = null;
 
-  @SerializedName("ChannelOptionsUpgraded")
-  private Boolean channelOptionsUpgraded = null;
-
   @SerializedName("PlaylistsUpgradedToM3U")
   private Boolean playlistsUpgradedToM3U = null;
-
-  @SerializedName("TimerIdsUpgraded")
-  private Boolean timerIdsUpgraded = null;
 
   @SerializedName("ForcedSortNameUpgraded")
   private Boolean forcedSortNameUpgraded = null;
@@ -1055,24 +1049,6 @@ public class ConfigurationServerConfiguration {
     this.enableSqLiteMmio = enableSqLiteMmio;
   }
 
-  public ConfigurationServerConfiguration channelOptionsUpgraded(Boolean channelOptionsUpgraded) {
-    this.channelOptionsUpgraded = channelOptionsUpgraded;
-    return this;
-  }
-
-   /**
-   * Get channelOptionsUpgraded
-   * @return channelOptionsUpgraded
-  **/
-  @Schema(description = "")
-  public Boolean isChannelOptionsUpgraded() {
-    return channelOptionsUpgraded;
-  }
-
-  public void setChannelOptionsUpgraded(Boolean channelOptionsUpgraded) {
-    this.channelOptionsUpgraded = channelOptionsUpgraded;
-  }
-
   public ConfigurationServerConfiguration playlistsUpgradedToM3U(Boolean playlistsUpgradedToM3U) {
     this.playlistsUpgradedToM3U = playlistsUpgradedToM3U;
     return this;
@@ -1089,24 +1065,6 @@ public class ConfigurationServerConfiguration {
 
   public void setPlaylistsUpgradedToM3U(Boolean playlistsUpgradedToM3U) {
     this.playlistsUpgradedToM3U = playlistsUpgradedToM3U;
-  }
-
-  public ConfigurationServerConfiguration timerIdsUpgraded(Boolean timerIdsUpgraded) {
-    this.timerIdsUpgraded = timerIdsUpgraded;
-    return this;
-  }
-
-   /**
-   * Get timerIdsUpgraded
-   * @return timerIdsUpgraded
-  **/
-  @Schema(description = "")
-  public Boolean isTimerIdsUpgraded() {
-    return timerIdsUpgraded;
-  }
-
-  public void setTimerIdsUpgraded(Boolean timerIdsUpgraded) {
-    this.timerIdsUpgraded = timerIdsUpgraded;
   }
 
   public ConfigurationServerConfiguration forcedSortNameUpgraded(Boolean forcedSortNameUpgraded) {
@@ -1451,9 +1409,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.simultaneousStreamLimit, configurationServerConfiguration.simultaneousStreamLimit) &&
         Objects.equals(this.databaseCacheSizeMB, configurationServerConfiguration.databaseCacheSizeMB) &&
         Objects.equals(this.enableSqLiteMmio, configurationServerConfiguration.enableSqLiteMmio) &&
-        Objects.equals(this.channelOptionsUpgraded, configurationServerConfiguration.channelOptionsUpgraded) &&
         Objects.equals(this.playlistsUpgradedToM3U, configurationServerConfiguration.playlistsUpgradedToM3U) &&
-        Objects.equals(this.timerIdsUpgraded, configurationServerConfiguration.timerIdsUpgraded) &&
         Objects.equals(this.forcedSortNameUpgraded, configurationServerConfiguration.forcedSortNameUpgraded) &&
         Objects.equals(this.inheritedParentalRatingValueUpgraded, configurationServerConfiguration.inheritedParentalRatingValueUpgraded) &&
         Objects.equals(this.imageExtractorUpgraded, configurationServerConfiguration.imageExtractorUpgraded) &&
@@ -1474,7 +1430,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, channelOptionsUpgraded, playlistsUpgradedToM3U, timerIdsUpgraded, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1527,9 +1483,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    simultaneousStreamLimit: ").append(toIndentedString(simultaneousStreamLimit)).append("\n");
     sb.append("    databaseCacheSizeMB: ").append(toIndentedString(databaseCacheSizeMB)).append("\n");
     sb.append("    enableSqLiteMmio: ").append(toIndentedString(enableSqLiteMmio)).append("\n");
-    sb.append("    channelOptionsUpgraded: ").append(toIndentedString(channelOptionsUpgraded)).append("\n");
     sb.append("    playlistsUpgradedToM3U: ").append(toIndentedString(playlistsUpgradedToM3U)).append("\n");
-    sb.append("    timerIdsUpgraded: ").append(toIndentedString(timerIdsUpgraded)).append("\n");
     sb.append("    forcedSortNameUpgraded: ").append(toIndentedString(forcedSortNameUpgraded)).append("\n");
     sb.append("    inheritedParentalRatingValueUpgraded: ").append(toIndentedString(inheritedParentalRatingValueUpgraded)).append("\n");
     sb.append("    imageExtractorUpgraded: ").append(toIndentedString(imageExtractorUpgraded)).append("\n");

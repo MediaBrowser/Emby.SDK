@@ -253,9 +253,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsResolvedToFolder">BaseItem.IsResolvedToFolder</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsUserData">BaseItem.SupportsUserData</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPlaceHolder">BaseItem.IsPlaceHolder</a>
     </div>
     <div>
@@ -800,6 +797,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RequiresRefresh_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.RequiresRefresh(IDirectoryService)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AfterMetadataRefresh">BaseItem.AfterMetadataRefresh()</a>
@@ -1766,6 +1766,34 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsThemeMedia">BaseItem.SupportsThemeMedia</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_LiveTvProgram_SupportsUserData_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.SupportsUserData*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_LiveTvProgram_SupportsUserData" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.SupportsUserData">SupportsUserData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsUserData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsUserData">BaseItem.SupportsUserData</a></div>
   <h3 id="methods">Methods
   </h3>
   
@@ -1993,13 +2021,13 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a></div>
   
   
-  <a id="MediaBrowser_Controller_LiveTv_LiveTvProgram_GetUserDataKey_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.GetUserDataKey*"></a>
-  <h4 id="MediaBrowser_Controller_LiveTv_LiveTvProgram_GetUserDataKey" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.GetUserDataKey">GetUserDataKey()</h4>
+  <a id="MediaBrowser_Controller_LiveTv_LiveTvProgram_GetUserDataKeyInternal_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.GetUserDataKeyInternal*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_LiveTvProgram_GetUserDataKeyInternal" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.GetUserDataKeyInternal">GetUserDataKeyInternal()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string GetUserDataKey()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override string GetUserDataKeyInternal()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2017,7 +2045,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal">BaseItem.GetUserDataKeyInternal()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>

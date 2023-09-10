@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.45
+  version: 4.8.0.46
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -29014,7 +29014,6 @@ paths:
         explode: false
         schema:
           type: string
-          format: guid
       requestBody:
         description: "UserDto: "
         content:
@@ -61565,7 +61564,6 @@ components:
       properties:
         LocalUserId:
           type: string
-          format: guid
         AccessToken:
           type: string
       example:
@@ -63040,6 +63038,8 @@ components:
           type: boolean
         EnableAutomaticSeriesGrouping:
           type: boolean
+        ShareEmbeddedMusicAlbumImages:
+          type: boolean
         EnableEmbeddedTitles:
           type: boolean
         EnableAudioResume:
@@ -63057,8 +63057,6 @@ components:
         ContentType:
           type: string
         MetadataCountryCode:
-          type: string
-        SeasonZeroDisplayName:
           type: string
         Name:
           type: string
@@ -63168,6 +63166,7 @@ components:
         EnableAudioResume: true
         MusicFolderStructure: MusicFolderStructure
         IgnoreHiddenFiles: true
+        ShareEmbeddedMusicAlbumImages: true
         TypeOptions:
         - Type: Type
           MetadataFetcherOrder:
@@ -63241,7 +63240,6 @@ components:
         IgnoreFileExtensions:
         - IgnoreFileExtensions
         - IgnoreFileExtensions
-        SeasonZeroDisplayName: SeasonZeroDisplayName
         CollapseSingleItemFolders: true
         EnableMarkerDetectionDuringLibraryScan: true
         EnableEmbeddedTitles: true
@@ -70352,11 +70350,7 @@ components:
           format: int32
         EnableSqLiteMmio:
           type: boolean
-        ChannelOptionsUpgraded:
-          type: boolean
         PlaylistsUpgradedToM3U:
-          type: boolean
-        TimerIdsUpgraded:
           type: boolean
         ForcedSortNameUpgraded:
           type: boolean
@@ -70423,7 +70417,6 @@ components:
         DashboardSourcePath: DashboardSourcePath
         LogFileRetentionDays: 4
         HttpsPortNumber: 5
-        ChannelOptionsUpgraded: true
         CertificatePassword: CertificatePassword
         InheritedParentalRatingValueUpgraded: true
         MigratedToUserItemShares: true
@@ -70436,7 +70429,6 @@ components:
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
         PreferredDetectedRemoteAddressFamily: Unspecified
-        TimerIdsUpgraded: true
         SimultaneousStreamLimit: 9
         PathSubstitutions:
         - From: From
@@ -70913,7 +70905,6 @@ components:
           $ref: '#/components/schemas/Connect.UserLinkType'
         Id:
           type: string
-          format: guid
         PrimaryImageTag:
           type: string
         HasPassword:
@@ -76933,6 +76924,7 @@ components:
             EnableAudioResume: true
             MusicFolderStructure: MusicFolderStructure
             IgnoreHiddenFiles: true
+            ShareEmbeddedMusicAlbumImages: true
             TypeOptions:
             - Type: Type
               MetadataFetcherOrder:
@@ -77006,7 +76998,6 @@ components:
             IgnoreFileExtensions:
             - IgnoreFileExtensions
             - IgnoreFileExtensions
-            SeasonZeroDisplayName: SeasonZeroDisplayName
             CollapseSingleItemFolders: true
             EnableMarkerDetectionDuringLibraryScan: true
             EnableEmbeddedTitles: true
@@ -77069,6 +77060,7 @@ components:
             EnableAudioResume: true
             MusicFolderStructure: MusicFolderStructure
             IgnoreHiddenFiles: true
+            ShareEmbeddedMusicAlbumImages: true
             TypeOptions:
             - Type: Type
               MetadataFetcherOrder:
@@ -77142,7 +77134,6 @@ components:
             IgnoreFileExtensions:
             - IgnoreFileExtensions
             - IgnoreFileExtensions
-            SeasonZeroDisplayName: SeasonZeroDisplayName
             CollapseSingleItemFolders: true
             EnableMarkerDetectionDuringLibraryScan: true
             EnableEmbeddedTitles: true
@@ -77233,6 +77224,7 @@ components:
           EnableAudioResume: true
           MusicFolderStructure: MusicFolderStructure
           IgnoreHiddenFiles: true
+          ShareEmbeddedMusicAlbumImages: true
           TypeOptions:
           - Type: Type
             MetadataFetcherOrder:
@@ -77306,7 +77298,6 @@ components:
           IgnoreFileExtensions:
           - IgnoreFileExtensions
           - IgnoreFileExtensions
-          SeasonZeroDisplayName: SeasonZeroDisplayName
           CollapseSingleItemFolders: true
           EnableMarkerDetectionDuringLibraryScan: true
           EnableEmbeddedTitles: true

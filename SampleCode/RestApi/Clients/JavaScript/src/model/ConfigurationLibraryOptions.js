@@ -16,7 +16,7 @@ import ConfigurationTypeOptions from './ConfigurationTypeOptions';
 /**
 * The ConfigurationLibraryOptions model module.
 * @module model/ConfigurationLibraryOptions
-* @version 4.8.0.45
+* @version 4.8.0.46
 */
 export default class ConfigurationLibraryOptions {
     /**
@@ -97,6 +97,9 @@ export default class ConfigurationLibraryOptions {
             if (data.hasOwnProperty('EnableAutomaticSeriesGrouping')) {
                 obj['EnableAutomaticSeriesGrouping'] = ApiClient.convertToType(data['EnableAutomaticSeriesGrouping'], 'Boolean');
             }
+            if (data.hasOwnProperty('ShareEmbeddedMusicAlbumImages')) {
+                obj['ShareEmbeddedMusicAlbumImages'] = ApiClient.convertToType(data['ShareEmbeddedMusicAlbumImages'], 'Boolean');
+            }
             if (data.hasOwnProperty('EnableEmbeddedTitles')) {
                 obj['EnableEmbeddedTitles'] = ApiClient.convertToType(data['EnableEmbeddedTitles'], 'Boolean');
             }
@@ -120,9 +123,6 @@ export default class ConfigurationLibraryOptions {
             }
             if (data.hasOwnProperty('MetadataCountryCode')) {
                 obj['MetadataCountryCode'] = ApiClient.convertToType(data['MetadataCountryCode'], 'String');
-            }
-            if (data.hasOwnProperty('SeasonZeroDisplayName')) {
-                obj['SeasonZeroDisplayName'] = ApiClient.convertToType(data['SeasonZeroDisplayName'], 'String');
             }
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
@@ -288,6 +288,10 @@ export default class ConfigurationLibraryOptions {
     */
     'EnableAutomaticSeriesGrouping' = undefined;
     /**
+    * @member {Boolean} ShareEmbeddedMusicAlbumImages
+    */
+    'ShareEmbeddedMusicAlbumImages' = undefined;
+    /**
     * @member {Boolean} EnableEmbeddedTitles
     */
     'EnableEmbeddedTitles' = undefined;
@@ -319,10 +323,6 @@ export default class ConfigurationLibraryOptions {
     * @member {String} MetadataCountryCode
     */
     'MetadataCountryCode' = undefined;
-    /**
-    * @member {String} SeasonZeroDisplayName
-    */
-    'SeasonZeroDisplayName' = undefined;
     /**
     * @member {String} Name
     */

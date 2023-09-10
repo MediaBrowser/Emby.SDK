@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.45"
+    "version": "4.8.0.46"
   },
   "servers": [
     {
@@ -35547,8 +35547,7 @@
             "required": true,
             "style": "simple",
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           }
         ],
@@ -74755,8 +74754,7 @@
         "type": "object",
         "properties": {
           "LocalUserId": {
-            "type": "string",
-            "format": "guid"
+            "type": "string"
           },
           "AccessToken": {
             "type": "string"
@@ -76022,6 +76020,9 @@
           "EnableAutomaticSeriesGrouping": {
             "type": "boolean"
           },
+          "ShareEmbeddedMusicAlbumImages": {
+            "type": "boolean"
+          },
           "EnableEmbeddedTitles": {
             "type": "boolean"
           },
@@ -76046,9 +76047,6 @@
             "type": "string"
           },
           "MetadataCountryCode": {
-            "type": "string"
-          },
-          "SeasonZeroDisplayName": {
             "type": "string"
           },
           "Name": {
@@ -78057,13 +78055,7 @@
           "EnableSqLiteMmio": {
             "type": "boolean"
           },
-          "ChannelOptionsUpgraded": {
-            "type": "boolean"
-          },
           "PlaylistsUpgradedToM3U": {
-            "type": "boolean"
-          },
-          "TimerIdsUpgraded": {
             "type": "boolean"
           },
           "ForcedSortNameUpgraded": {
@@ -78553,8 +78545,7 @@
             "$ref": "#/components/schemas/Connect.UserLinkType"
           },
           "Id": {
-            "type": "string",
-            "format": "guid"
+            "type": "string"
           },
           "PrimaryImageTag": {
             "type": "string"
