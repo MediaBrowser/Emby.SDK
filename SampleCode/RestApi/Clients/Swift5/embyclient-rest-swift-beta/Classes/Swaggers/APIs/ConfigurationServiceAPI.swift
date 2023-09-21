@@ -84,6 +84,7 @@ open class ConfigurationServiceAPI {
   "EnableDashboardResponseCaching" : true,
   "ForcedSortNameUpgraded" : true,
   "EnableRemoteAccess" : true,
+  "EnableFks" : true,
   "CertificatePath" : "CertificatePath",
   "CollapseVideoFolders" : true,
   "AutoRunWebApp" : true,

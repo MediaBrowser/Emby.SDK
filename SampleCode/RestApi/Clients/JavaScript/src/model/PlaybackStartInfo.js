@@ -19,7 +19,7 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlaybackStartInfo model module.
 * @module model/PlaybackStartInfo
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class PlaybackStartInfo {
     /**

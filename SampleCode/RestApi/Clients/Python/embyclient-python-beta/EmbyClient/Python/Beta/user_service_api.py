@@ -422,6 +422,7 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: list[NameIdPair]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -448,12 +449,13 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: list[NameIdPair]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater']  # noqa: E501
+        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater', 'sort_order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -484,6 +486,8 @@ class UserServiceApi(object):
             query_params.append(('Limit', params['limit']))  # noqa: E501
         if 'name_starts_with_or_greater' in params:
             query_params.append(('NameStartsWithOrGreater', params['name_starts_with_or_greater']))  # noqa: E501
+        if 'sort_order' in params:
+            query_params.append(('SortOrder', params['sort_order']))  # noqa: E501
 
         header_params = {}
 
@@ -616,6 +620,7 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: QueryResultUserDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -642,12 +647,13 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: QueryResultUserDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater']  # noqa: E501
+        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater', 'sort_order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -678,6 +684,8 @@ class UserServiceApi(object):
             query_params.append(('Limit', params['limit']))  # noqa: E501
         if 'name_starts_with_or_greater' in params:
             query_params.append(('NameStartsWithOrGreater', params['name_starts_with_or_greater']))  # noqa: E501
+        if 'sort_order' in params:
+            query_params.append(('SortOrder', params['sort_order']))  # noqa: E501
 
         header_params = {}
 

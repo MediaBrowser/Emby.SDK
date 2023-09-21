@@ -18,7 +18,7 @@ import QueryResultDevicesDeviceInfo from '../model/QueryResultDevicesDeviceInfo'
 /**
 * DeviceService service.
 * @module EmbyClient.JavaScript.Beta/DeviceServiceApi
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class DeviceServiceApi {
 
@@ -81,15 +81,18 @@ export default class DeviceServiceApi {
     /**
      * Gets all devices
      * Requires authentication as administrator
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/DeviceServiceApi~getDevicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultDevicesDeviceInfo}
      */
     getDevices() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'SortOrder': opts['sortOrder']
       };
       let headerParams = {
       };

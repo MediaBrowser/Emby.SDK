@@ -21,8 +21,9 @@ public struct DevicesDeviceInfo: Codable {
     public var lastUserId: String?
     public var dateLastActivity: Date?
     public var iconUrl: String?
+    public var ipAddress: String?
 
-    public init(name: String? = nil, _id: String? = nil, internalId: Int64? = nil, reportedDeviceId: String? = nil, lastUserName: String? = nil, appName: String? = nil, appVersion: String? = nil, lastUserId: String? = nil, dateLastActivity: Date? = nil, iconUrl: String? = nil) {
+    public init(name: String? = nil, _id: String? = nil, internalId: Int64? = nil, reportedDeviceId: String? = nil, lastUserName: String? = nil, appName: String? = nil, appVersion: String? = nil, lastUserId: String? = nil, dateLastActivity: Date? = nil, iconUrl: String? = nil, ipAddress: String? = nil) {
         self.name = name
         self._id = _id
         self.internalId = internalId
@@ -33,6 +34,7 @@ public struct DevicesDeviceInfo: Codable {
         self.lastUserId = lastUserId
         self.dateLastActivity = dateLastActivity
         self.iconUrl = iconUrl
+        self.ipAddress = ipAddress
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -46,6 +48,7 @@ public struct DevicesDeviceInfo: Codable {
         case lastUserId = "LastUserId"
         case dateLastActivity = "DateLastActivity"
         case iconUrl = "IconUrl"
+        case ipAddress = "IpAddress"
     }
 
 }

@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class LiveTvServiceApi {
 
@@ -487,6 +487,7 @@ export default class LiveTvServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -657,6 +658,7 @@ export default class LiveTvServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -786,6 +788,7 @@ export default class LiveTvServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -1402,6 +1405,7 @@ export default class LiveTvServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -1588,6 +1592,7 @@ export default class LiveTvServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -2524,6 +2529,7 @@ export default class LiveTvServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],

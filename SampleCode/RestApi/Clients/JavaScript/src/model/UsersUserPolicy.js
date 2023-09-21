@@ -16,7 +16,7 @@ import ConfigurationUnratedItem from './ConfigurationUnratedItem';
 /**
 * The UsersUserPolicy model module.
 * @module model/UsersUserPolicy
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class UsersUserPolicy {
     /**
@@ -174,6 +174,9 @@ export default class UsersUserPolicy {
             }
             if (data.hasOwnProperty('EnableAllDevices')) {
                 obj['EnableAllDevices'] = ApiClient.convertToType(data['EnableAllDevices'], 'Boolean');
+            }
+            if (data.hasOwnProperty('AllowCameraUpload')) {
+                obj['AllowCameraUpload'] = ApiClient.convertToType(data['AllowCameraUpload'], 'Boolean');
             }
         }
         return obj;
@@ -355,6 +358,10 @@ export default class UsersUserPolicy {
     * @member {Boolean} EnableAllDevices
     */
     'EnableAllDevices' = undefined;
+    /**
+    * @member {Boolean} AllowCameraUpload
+    */
+    'AllowCameraUpload' = undefined;
 
 
 

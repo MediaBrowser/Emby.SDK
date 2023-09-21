@@ -13,6 +13,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -106,9 +107,16 @@ func (a *DeviceServiceApiService) DeleteDevices(ctx context.Context, id string) 
 DeviceServiceApiService Gets all devices
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param optional nil or *DeviceServiceApiGetDevicesOpts - Optional Parameters:
+     * @param "SortOrder" (optional.String) -  Sort Order - Ascending,Descending
 @return QueryResultDevicesDeviceInfo
 */
-func (a *DeviceServiceApiService) GetDevices(ctx context.Context) (QueryResultDevicesDeviceInfo, *http.Response, error) {
+
+type DeviceServiceApiGetDevicesOpts struct {
+    SortOrder optional.String
+}
+
+func (a *DeviceServiceApiService) GetDevices(ctx context.Context, localVarOptionals *DeviceServiceApiGetDevicesOpts) (QueryResultDevicesDeviceInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -124,6 +132,9 @@ func (a *DeviceServiceApiService) GetDevices(ctx context.Context) (QueryResultDe
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.SortOrder.IsSet() {
+		localVarQueryParams.Add("SortOrder", parameterToString(localVarOptionals.SortOrder.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 

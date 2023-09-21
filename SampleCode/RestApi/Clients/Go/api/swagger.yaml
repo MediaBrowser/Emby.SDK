@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.46
+  version: 4.8.0.47
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -804,6 +804,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -1655,6 +1664,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -2495,6 +2513,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -3525,6 +3552,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -3688,6 +3724,15 @@ paths:
       summary: Gets all devices
       description: Requires authentication as administrator
       operationId: getDevices
+      parameters:
+      - name: SortOrder
+        in: query
+        description: "Sort Order - Ascending,Descending"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
       responses:
         "200":
           description: Operation successful. Returning a QueryResult<DeviceInfo> object.
@@ -3744,6 +3789,860 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+  /ExtendedVideoTypes:
+    summary: Gets items based on a query.
+    get:
+      tags:
+      - TagService
+      summary: Gets items based on a query.
+      description: Requires authentication as user
+      operationId: getExtendedvideotypes
+      parameters:
+      - name: ArtistType
+        in: query
+        description: Artist or AlbumArtist
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MaxOfficialRating
+        in: query
+        description: "Optional filter by maximum official rating (PG, PG-13, TV-MA,\
+          \ etc)."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: HasThemeSong
+        in: query
+        description: Optional filter by items with theme songs.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasThemeVideo
+        in: query
+        description: Optional filter by items with theme videos.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasSubtitles
+        in: query
+        description: Optional filter by items with subtitles.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasSpecialFeature
+        in: query
+        description: Optional filter by items with special features.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasTrailer
+        in: query
+        description: Optional filter by items with trailers.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: AdjacentTo
+        in: query
+        description: Optional. Return items that are siblings of a supplied item.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MinIndexNumber
+        in: query
+        description: Optional filter by minimum index number.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: MinPlayers
+        in: query
+        description: Optional filter by minimum number of game players.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: MaxPlayers
+        in: query
+        description: Optional filter by maximum number of game players.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: ParentIndexNumber
+        in: query
+        description: Optional filter by parent index number.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: HasParentalRating
+        in: query
+        description: Optional filter by items that have or do not have a parental
+          rating
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsHD
+        in: query
+        description: Optional filter by items that are HD or not.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: LocationTypes
+        in: query
+        description: "Optional. If specified, results will be filtered based on LocationType.\
+          \ This allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeLocationTypes
+        in: query
+        description: "Optional. If specified, results will be filtered based on LocationType.\
+          \ This allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: IsMissing
+        in: query
+        description: Optional filter by items that are missing episodes or not.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsUnaired
+        in: query
+        description: Optional filter by items that are unaired episodes or not.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: MinCommunityRating
+        in: query
+        description: Optional filter by minimum community rating.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: number
+          format: double
+          nullable: true
+      - name: MinCriticRating
+        in: query
+        description: Optional filter by minimum critic rating.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: number
+          format: double
+          nullable: true
+      - name: AiredDuringSeason
+        in: query
+        description: "Gets all episodes that aired during a season, including specials."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: MinPremiereDate
+        in: query
+        description: Optional. The minimum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MinDateLastSaved
+        in: query
+        description: Optional. The minimum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MinDateLastSavedForUser
+        in: query
+        description: Optional. The minimum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MaxPremiereDate
+        in: query
+        description: Optional. The maximum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: HasOverview
+        in: query
+        description: Optional filter by items that have an overview or not.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasImdbId
+        in: query
+        description: Optional filter by items that have an imdb id or not.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasTmdbId
+        in: query
+        description: Optional filter by items that have a tmdb id or not.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasTvdbId
+        in: query
+        description: Optional filter by items that have a tvdb id or not.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ExcludeItemIds
+        in: query
+        description: "Optional. If specified, results will be filtered by exxcluding\
+          \ item ids. This allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: StartIndex
+        in: query
+        description: Optional. The record index to start at. All items with a lower
+          index will be dropped from the results.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: Limit
+        in: query
+        description: Optional. The maximum number of records to return
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: Recursive
+        in: query
+        description: "When searching within folders, this determines whether or not\
+          \ the search will be recursive. true/false"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      - name: SearchTerm
+        in: query
+        description: Enter a search term to perform a search request
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: SortOrder
+        in: query
+        description: "Sort Order - Ascending,Descending"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: ParentId
+        in: query
+        description: Specify this to localize the search to a specific item or folder.
+          Omit to use the root
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: Fields
+        in: query
+        description: "Optional. Specify additional fields of information to return\
+          \ in the output. This allows multiple, comma delimeted. Options: Budget,\
+          \ Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams,\
+          \ Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio,\
+          \ Revenue, SortName, Studios, Taglines"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeItemTypes
+        in: query
+        description: "Optional. If specified, results will be filtered based on item\
+          \ type. This allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: IncludeItemTypes
+        in: query
+        description: "Optional. If specified, results will be filtered based on item\
+          \ type. This allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AnyProviderIdEquals
+        in: query
+        description: "Optional. If specified, result will be filtered to contain only\
+          \ items which match at least one of the specified IDs. Each provider ID\
+          \ must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple,\
+          \ comma delimeted value pairs."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Filters
+        in: query
+        description: "Optional. Specify additional filters to apply. This allows multiple,\
+          \ comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed,\
+          \ IsFavorite, IsResumable, Likes, Dislikes"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: IsFavorite
+        in: query
+        description: "Optional filter by items that are marked as favorite, or not."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsMovie
+        in: query
+        description: Optional filter for movies.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsSeries
+        in: query
+        description: Optional filter for series.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsFolder
+        in: query
+        description: Optional filter for folders.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsNews
+        in: query
+        description: Optional filter for news.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsKids
+        in: query
+        description: Optional filter for kids.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsSports
+        in: query
+        description: Optional filter for sports.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ProjectToMedia
+        in: query
+        description: ProjectToMedia
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      - name: MediaTypes
+        in: query
+        description: "Optional filter by MediaType. Allows multiple, comma delimited."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ImageTypes
+        in: query
+        description: "Optional. If specified, results will be filtered based on those\
+          \ containing image types. This allows multiple, comma delimited."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: SortBy
+        in: query
+        description: "Optional. Specify one or more sort orders, comma delimeted.\
+          \ Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating,\
+          \ DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName,\
+          \ Random, Revenue, Runtime"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: IsPlayed
+        in: query
+        description: "Optional filter by items that are played, or not."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: Genres
+        in: query
+        description: "Optional. If specified, results will be filtered based on genre.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: OfficialRatings
+        in: query
+        description: "Optional. If specified, results will be filtered based on OfficialRating.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Years
+        in: query
+        description: "Optional. If specified, results will be filtered based on production\
+          \ year. This allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EnableImages
+        in: query
+        description: "Optional, include image information in output"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: EnableUserData
+        in: query
+        description: "Optional, include user data"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: ImageTypeLimit
+        in: query
+        description: "Optional, the max number of images to return, per image type"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: EnableImageTypes
+        in: query
+        description: Optional. The image types to include in the output.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: Person
+        in: query
+        description: "Optional. If specified, results will be filtered to include\
+          \ only those containing the specified person."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: PersonIds
+        in: query
+        description: "Optional. If specified, results will be filtered to include\
+          \ only those containing the specified person."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: PersonTypes
+        in: query
+        description: "Optional. If specified, along with Person, results will be filtered\
+          \ to include only those containing the specified person and PersonType.\
+          \ Allows multiple, comma-delimited"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: Studios
+        in: query
+        description: "Optional. If specified, results will be filtered based on studio.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: StudioIds
+        in: query
+        description: "Optional. If specified, results will be filtered based on studio.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Artists
+        in: query
+        description: "Optional. If specified, results will be filtered based on artist.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ArtistIds
+        in: query
+        description: "Optional. If specified, results will be filtered based on artist.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Albums
+        in: query
+        description: "Optional. If specified, results will be filtered based on album.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Ids
+        in: query
+        description: "Optional. If specific items are needed, specify a list of item\
+          \ id's to retrieve. This allows multiple, comma delimited."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: VideoTypes
+        in: query
+        description: "Optional filter by VideoType (videofile, dvd, bluray, iso).\
+          \ Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Containers
+        in: query
+        description: "Optional filter by Container. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AudioCodecs
+        in: query
+        description: "Optional filter by AudioCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AudioLayouts
+        in: query
+        description: "Optional filter by AudioLayout. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: VideoCodecs
+        in: query
+        description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: SubtitleCodecs
+        in: query
+        description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: Path
+        in: query
+        description: Optional filter by Path.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: UserId
+        in: query
+        description: User Id
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+          format: guid
+      - name: MinOfficialRating
+        in: query
+        description: "Optional filter by minimum official rating (PG, PG-13, TV-MA,\
+          \ etc)."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: IsLocked
+        in: query
+        description: Optional filter by items that are locked.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsPlaceHolder
+        in: query
+        description: Optional filter by items that are placeholders
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: HasOfficialRating
+        in: query
+        description: Optional filter by items that have official ratings
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: GroupItemsIntoCollections
+        in: query
+        description: Whether or not to hide items behind their boxsets.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      - name: Is3D
+        in: query
+        description: "Optional filter by items that are 3D, or not."
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: SeriesStatus
+        in: query
+        description: "Optional filter by Series Status. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: NameStartsWithOrGreater
+        in: query
+        description: Optional filter by items whose name is sorted equally or greater
+          than a given input string.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: ArtistStartsWithOrGreater
+        in: query
+        description: Optional filter by items whose name is sorted equally or greater
+          than a given input string.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: AlbumArtistStartsWithOrGreater
+        in: query
+        description: Optional filter by items whose name is sorted equally or greater
+          than a given input string.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: NameStartsWith
+        in: query
+        description: Optional filter by items whose name is sorted equally than a
+          given input string.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: NameLessThan
+        in: query
+        description: Optional filter by items whose name is equally or lesser than
+          a given input string.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Returning a QueryResult<TagItem> object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResult_UserLibrary.TagItem'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/QueryResult_UserLibrary.TagItem'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Features:
     summary: Gets a list of installed features
     get:
@@ -4469,6 +5368,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -5323,6 +6231,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -6167,6 +7084,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -7050,6 +7976,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -7898,6 +8833,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -8739,6 +9683,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -9713,6 +10666,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -10777,6 +11739,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -11625,6 +12596,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -12466,6 +13446,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -13368,6 +14357,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -14211,6 +15209,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -15062,6 +16069,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -15902,6 +16918,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -17169,6 +18194,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -18010,6 +19044,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -20664,6 +21707,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -22005,6 +23057,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -23781,6 +24842,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -24667,6 +25737,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -25538,6 +26617,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -26419,6 +27507,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -28851,6 +29948,14 @@ paths:
         explode: false
         schema:
           type: string
+      - name: SortOrder
+        in: query
+        description: "Sort Order - Ascending,Descending"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
       responses:
         "200":
           description: Operation successful. Returning a QueryResult<UserDto> object.
@@ -28926,6 +30031,14 @@ paths:
         in: query
         description: Optional filter by items whose name is sorted equally or greater
           than a given input string.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: SortOrder
+        in: query
+        description: "Sort Order - Ascending,Descending"
         required: false
         style: form
         explode: false
@@ -36367,6 +37480,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -39808,6 +40930,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -41971,6 +43102,15 @@ paths:
       - name: VideoCodecs
         in: query
         description: "Optional filter by VideoCodec. Allows multiple, comma delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
         required: false
         style: form
         explode: true
@@ -50426,6 +51566,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExtendedVideoTypes
+        in: query
+        description: "Optional filter by ExtendedVideoType. Allows multiple, comma\
+          \ delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: SubtitleCodecs
         in: query
         description: "Optional filter by SubtitleCodec. Allows multiple, comma delimeted."
@@ -57030,12 +58179,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57045,6 +58194,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -57082,12 +58232,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57097,6 +58247,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -57177,12 +58328,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57192,6 +58343,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -57229,12 +58381,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57244,6 +58396,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -57555,12 +58708,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57570,6 +58723,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -57607,12 +58761,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57622,6 +58776,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -57702,12 +58857,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57717,6 +58872,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -57754,12 +58910,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -57769,6 +58925,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -58530,12 +59687,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -58545,6 +59702,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -58582,12 +59740,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -58597,6 +59755,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -58677,12 +59836,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -58692,6 +59851,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -58729,12 +59889,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -58744,6 +59904,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -59151,12 +60312,12 @@ components:
           SampleRate: 1
           IsAnamorphic: true
           PixelFormat: PixelFormat
-          ExtendedVideoSubtype: None
           AttachmentSize: 5
           SubtitleLocationType: InternalStream
           RefFrames: 2
           IsAVC: true
           ColorTransfer: ColorTransfer
+          ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
           IsExternalUrl: true
           DisplayTitle: DisplayTitle
           IsForced: true
@@ -59166,6 +60327,7 @@ components:
           StreamStartTimeTicks: 7
           IsExternal: true
           Level: 4.965218492984954
+          ExtendedVideoSubType: None
           Channels: 7
           Profile: Profile
           MimeType: MimeType
@@ -59203,12 +60365,12 @@ components:
           SampleRate: 1
           IsAnamorphic: true
           PixelFormat: PixelFormat
-          ExtendedVideoSubtype: None
           AttachmentSize: 5
           SubtitleLocationType: InternalStream
           RefFrames: 2
           IsAVC: true
           ColorTransfer: ColorTransfer
+          ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
           IsExternalUrl: true
           DisplayTitle: DisplayTitle
           IsForced: true
@@ -59218,6 +60380,7 @@ components:
           StreamStartTimeTicks: 7
           IsExternal: true
           Level: 4.965218492984954
+          ExtendedVideoSubType: None
           Channels: 7
           Profile: Profile
           MimeType: MimeType
@@ -59426,8 +60589,10 @@ components:
           nullable: true
         ExtendedVideoType:
           $ref: '#/components/schemas/ExtendedVideoTypes'
-        ExtendedVideoSubtype:
+        ExtendedVideoSubType:
           $ref: '#/components/schemas/ExtendedVideoSubTypes'
+        ExtendedVideoSubTypeDescription:
+          type: string
         ItemId:
           type: string
         ServerId:
@@ -59451,12 +60616,12 @@ components:
         SampleRate: 1
         IsAnamorphic: true
         PixelFormat: PixelFormat
-        ExtendedVideoSubtype: None
         AttachmentSize: 5
         SubtitleLocationType: InternalStream
         RefFrames: 2
         IsAVC: true
         ColorTransfer: ColorTransfer
+        ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
         IsExternalUrl: true
         DisplayTitle: DisplayTitle
         IsForced: true
@@ -59466,6 +60631,7 @@ components:
         StreamStartTimeTicks: 7
         IsExternal: true
         Level: 4.965218492984954
+        ExtendedVideoSubType: None
         Channels: 7
         Profile: Profile
         MimeType: MimeType
@@ -59824,6 +60990,7 @@ components:
           InternalId: 0
           LastUserName: LastUserName
           LastUserId: LastUserId
+          IpAddress: IpAddress
           Id: Id
           DateLastActivity: 2000-01-23T04:56:07.000+00:00
           ReportedDeviceId: ReportedDeviceId
@@ -59834,6 +61001,7 @@ components:
           InternalId: 0
           LastUserName: LastUserName
           LastUserId: LastUserId
+          IpAddress: IpAddress
           Id: Id
           DateLastActivity: 2000-01-23T04:56:07.000+00:00
           ReportedDeviceId: ReportedDeviceId
@@ -59864,12 +61032,15 @@ components:
           format: date-time
         IconUrl:
           type: string
+        IpAddress:
+          type: string
       example:
         AppVersion: AppVersion
         IconUrl: IconUrl
         InternalId: 0
         LastUserName: LastUserName
         LastUserId: LastUserId
+        IpAddress: IpAddress
         Id: Id
         DateLastActivity: 2000-01-23T04:56:07.000+00:00
         ReportedDeviceId: ReportedDeviceId
@@ -60391,12 +61562,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -60406,6 +61577,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -60443,12 +61615,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -60458,6 +61630,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -60538,12 +61711,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -60553,6 +61726,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -60590,12 +61764,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -60605,6 +61779,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -63453,12 +64628,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -63468,6 +64643,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -63505,12 +64681,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -63520,6 +64696,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -63830,12 +65007,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -63845,6 +65022,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -63882,12 +65060,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -63897,6 +65075,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -63977,12 +65156,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -63992,6 +65171,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -64029,12 +65209,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -64044,6 +65224,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -64359,12 +65540,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -64374,6 +65555,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -64411,12 +65593,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -64426,6 +65608,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -64506,12 +65689,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -64521,6 +65704,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -64558,12 +65742,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -64573,6 +65757,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -64898,12 +66083,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -64913,6 +66098,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -64950,12 +66136,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -64965,6 +66151,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -65045,12 +66232,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -65060,6 +66247,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -65097,12 +66285,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -65112,6 +66300,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -65548,12 +66737,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -65563,6 +66752,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -65600,12 +66790,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -65615,6 +66805,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -65695,12 +66886,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -65710,6 +66901,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -65747,12 +66939,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -65762,6 +66954,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -66100,12 +67293,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -66115,6 +67308,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -66152,12 +67346,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -66167,6 +67361,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -66247,12 +67442,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -66262,6 +67457,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -66299,12 +67495,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -66314,6 +67510,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -66715,12 +67912,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -66730,6 +67927,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -66767,12 +67965,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -66782,6 +67980,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -66862,12 +68061,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -66877,6 +68076,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -66914,12 +68114,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -66929,6 +68129,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -67698,12 +68899,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -67713,6 +68914,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -67750,12 +68952,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -67765,6 +68967,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -67845,12 +69048,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -67860,6 +69063,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -67897,12 +69101,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -67912,6 +69116,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -68223,12 +69428,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -68238,6 +69443,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -68275,12 +69481,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -68290,6 +69496,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -68370,12 +69577,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -68385,6 +69592,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -68422,12 +69630,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -68437,6 +69645,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69091,12 +70300,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69106,6 +70315,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69143,12 +70353,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69158,6 +70368,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69263,12 +70474,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69278,6 +70489,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69315,12 +70527,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69330,6 +70542,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69477,12 +70690,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -69492,6 +70705,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -69529,12 +70743,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -69544,6 +70758,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -69741,12 +70956,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69756,6 +70971,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69793,12 +71009,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69808,6 +71024,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69913,12 +71130,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69928,6 +71145,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -69965,12 +71183,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -69980,6 +71198,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -70369,6 +71588,8 @@ components:
           type: boolean
         MigratedToUserItemShares:
           type: boolean
+        EnableFks:
+          type: boolean
         ProxyHeaderMode:
           $ref: '#/components/schemas/Configuration.ProxyHeaderMode'
         EnableDebugLevelLogging:
@@ -70444,6 +71665,7 @@ components:
         EnableDashboardResponseCaching: true
         ForcedSortNameUpgraded: true
         EnableRemoteAccess: true
+        EnableFks: true
         CertificatePath: CertificatePath
         CollapseVideoFolders: true
         AutoRunWebApp: true
@@ -70995,6 +72217,7 @@ components:
           BlockedTags:
           - BlockedTags
           - BlockedTags
+          AllowCameraUpload: true
           IsHiddenRemotely: true
           EnabledDevices:
           - EnabledDevices
@@ -71247,6 +72470,8 @@ components:
             type: string
         EnableAllDevices:
           type: boolean
+        AllowCameraUpload:
+          type: boolean
       example:
         AllowTagOrRating: true
         EnableContentDeletion: true
@@ -71309,6 +72534,7 @@ components:
         BlockedTags:
         - BlockedTags
         - BlockedTags
+        AllowCameraUpload: true
         IsHiddenRemotely: true
         EnabledDevices:
         - EnabledDevices
@@ -71438,6 +72664,7 @@ components:
             BlockedTags:
             - BlockedTags
             - BlockedTags
+            AllowCameraUpload: true
             IsHiddenRemotely: true
             EnabledDevices:
             - EnabledDevices
@@ -71547,6 +72774,7 @@ components:
             BlockedTags:
             - BlockedTags
             - BlockedTags
+            AllowCameraUpload: true
             IsHiddenRemotely: true
             EnabledDevices:
             - EnabledDevices
@@ -71677,6 +72905,7 @@ components:
             BlockedTags:
             - BlockedTags
             - BlockedTags
+            AllowCameraUpload: true
             IsHiddenRemotely: true
             EnabledDevices:
             - EnabledDevices
@@ -71794,12 +73023,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -71809,6 +73038,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -71846,12 +73076,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -71861,6 +73091,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -71941,12 +73172,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -71956,6 +73187,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -71993,12 +73225,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -72008,6 +73240,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74260,12 +75493,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74275,6 +75508,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74312,12 +75546,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74327,6 +75561,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74407,12 +75642,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74422,6 +75657,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74459,12 +75695,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74474,6 +75710,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74785,12 +76022,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74800,6 +76037,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74837,12 +76075,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74852,6 +76090,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74932,12 +76171,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74947,6 +76186,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -74984,12 +76224,12 @@ components:
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
-                ExtendedVideoSubtype: None
                 AttachmentSize: 5
                 SubtitleLocationType: InternalStream
                 RefFrames: 2
                 IsAVC: true
                 ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
                 IsExternalUrl: true
                 DisplayTitle: DisplayTitle
                 IsForced: true
@@ -74999,6 +76239,7 @@ components:
                 StreamStartTimeTicks: 7
                 IsExternal: true
                 Level: 4.965218492984954
+                ExtendedVideoSubType: None
                 Channels: 7
                 Profile: Profile
                 MimeType: MimeType
@@ -75330,12 +76571,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -75345,6 +76586,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -75382,12 +76624,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -75397,6 +76639,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -75477,12 +76720,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -75492,6 +76735,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -75529,12 +76773,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -75544,6 +76788,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -75855,12 +77100,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -75870,6 +77115,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -75907,12 +77153,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -75922,6 +77168,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -76002,12 +77249,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -76017,6 +77264,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -76054,12 +77302,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -76069,6 +77317,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -76523,12 +77772,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -76538,6 +77787,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -76575,12 +77825,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -76590,6 +77840,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -76670,12 +77921,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -76685,6 +77936,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -76722,12 +77974,12 @@ components:
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
-            ExtendedVideoSubtype: None
             AttachmentSize: 5
             SubtitleLocationType: InternalStream
             RefFrames: 2
             IsAVC: true
             ColorTransfer: ColorTransfer
+            ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
             IsExternalUrl: true
             DisplayTitle: DisplayTitle
             IsForced: true
@@ -76737,6 +77989,7 @@ components:
             StreamStartTimeTicks: 7
             IsExternal: true
             Level: 4.965218492984954
+            ExtendedVideoSubType: None
             Channels: 7
             Profile: Profile
             MimeType: MimeType
@@ -77764,12 +79017,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -77779,6 +79032,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -77816,12 +79070,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -77831,6 +79085,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -77911,12 +79166,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -77926,6 +79181,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType
@@ -77963,12 +79219,12 @@ components:
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
-              ExtendedVideoSubtype: None
               AttachmentSize: 5
               SubtitleLocationType: InternalStream
               RefFrames: 2
               IsAVC: true
               ColorTransfer: ColorTransfer
+              ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
               IsExternalUrl: true
               DisplayTitle: DisplayTitle
               IsForced: true
@@ -77978,6 +79234,7 @@ components:
               StreamStartTimeTicks: 7
               IsExternal: true
               Level: 4.965218492984954
+              ExtendedVideoSubType: None
               Channels: 7
               Profile: Profile
               MimeType: MimeType

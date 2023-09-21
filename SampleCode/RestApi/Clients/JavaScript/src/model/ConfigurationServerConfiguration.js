@@ -18,7 +18,7 @@ import NetSocketsAddressFamily from './NetSocketsAddressFamily';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -203,6 +203,9 @@ export default class ConfigurationServerConfiguration {
             }
             if (data.hasOwnProperty('MigratedToUserItemShares')) {
                 obj['MigratedToUserItemShares'] = ApiClient.convertToType(data['MigratedToUserItemShares'], 'Boolean');
+            }
+            if (data.hasOwnProperty('EnableFks')) {
+                obj['EnableFks'] = ApiClient.convertToType(data['EnableFks'], 'Boolean');
             }
             if (data.hasOwnProperty('ProxyHeaderMode')) {
                 obj['ProxyHeaderMode'] = ConfigurationProxyHeaderMode.constructFromObject(data['ProxyHeaderMode']);
@@ -444,6 +447,10 @@ export default class ConfigurationServerConfiguration {
     * @member {Boolean} MigratedToUserItemShares
     */
     'MigratedToUserItemShares' = undefined;
+    /**
+    * @member {Boolean} EnableFks
+    */
+    'EnableFks' = undefined;
     /**
     * @member {module:model/ConfigurationProxyHeaderMode} ProxyHeaderMode
     */

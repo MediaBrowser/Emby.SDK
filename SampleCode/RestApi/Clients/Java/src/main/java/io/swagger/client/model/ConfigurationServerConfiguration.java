@@ -185,6 +185,9 @@ public class ConfigurationServerConfiguration {
   @SerializedName("MigratedToUserItemShares")
   private Boolean migratedToUserItemShares = null;
 
+  @SerializedName("EnableFks")
+  private Boolean enableFks = null;
+
   @SerializedName("ProxyHeaderMode")
   private ConfigurationProxyHeaderMode proxyHeaderMode = null;
 
@@ -1211,6 +1214,24 @@ public class ConfigurationServerConfiguration {
     this.migratedToUserItemShares = migratedToUserItemShares;
   }
 
+  public ConfigurationServerConfiguration enableFks(Boolean enableFks) {
+    this.enableFks = enableFks;
+    return this;
+  }
+
+   /**
+   * Get enableFks
+   * @return enableFks
+  **/
+  @Schema(description = "")
+  public Boolean isEnableFks() {
+    return enableFks;
+  }
+
+  public void setEnableFks(Boolean enableFks) {
+    this.enableFks = enableFks;
+  }
+
   public ConfigurationServerConfiguration proxyHeaderMode(ConfigurationProxyHeaderMode proxyHeaderMode) {
     this.proxyHeaderMode = proxyHeaderMode;
     return this;
@@ -1418,6 +1439,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.databaseAnalysisLimit, configurationServerConfiguration.databaseAnalysisLimit) &&
         Objects.equals(this.disableAsyncIO, configurationServerConfiguration.disableAsyncIO) &&
         Objects.equals(this.migratedToUserItemShares, configurationServerConfiguration.migratedToUserItemShares) &&
+        Objects.equals(this.enableFks, configurationServerConfiguration.enableFks) &&
         Objects.equals(this.proxyHeaderMode, configurationServerConfiguration.proxyHeaderMode) &&
         Objects.equals(this.enableDebugLevelLogging, configurationServerConfiguration.enableDebugLevelLogging) &&
         Objects.equals(this.revertDebugLogging, configurationServerConfiguration.revertDebugLogging) &&
@@ -1430,7 +1452,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableFks, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1492,6 +1514,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
     sb.append("    migratedToUserItemShares: ").append(toIndentedString(migratedToUserItemShares)).append("\n");
+    sb.append("    enableFks: ").append(toIndentedString(enableFks)).append("\n");
     sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");
     sb.append("    enableDebugLevelLogging: ").append(toIndentedString(enableDebugLevelLogging)).append("\n");
     sb.append("    revertDebugLogging: ").append(toIndentedString(revertDebugLogging)).append("\n");

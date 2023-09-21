@@ -114,7 +114,8 @@ public class UserServiceApiTest {
         Integer startIndex = null;
         Integer limit = null;
         String nameStartsWithOrGreater = null;
-        List<NameIdPair> response = api.getUsersPrefixes(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+        String sortOrder = null;
+        List<NameIdPair> response = api.getUsersPrefixes(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
 
         // TODO: test validations
     }
@@ -147,7 +148,8 @@ public class UserServiceApiTest {
         Integer startIndex = null;
         Integer limit = null;
         String nameStartsWithOrGreater = null;
-        QueryResultUserDto response = api.getUsersQuery(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+        String sortOrder = null;
+        QueryResultUserDto response = api.getUsersQuery(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
 
         // TODO: test validations
     }

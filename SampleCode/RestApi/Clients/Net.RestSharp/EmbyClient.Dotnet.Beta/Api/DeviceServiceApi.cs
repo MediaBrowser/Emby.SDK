@@ -46,8 +46,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultDevicesDeviceInfo</returns>
-        QueryResultDevicesDeviceInfo GetDevices ();
+        QueryResultDevicesDeviceInfo GetDevices (string sortOrder);
 
         /// <summary>
         /// Gets all devices
@@ -56,8 +57,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultDevicesDeviceInfo</returns>
-        ApiResponse<QueryResultDevicesDeviceInfo> GetDevicesWithHttpInfo ();
+        ApiResponse<QueryResultDevicesDeviceInfo> GetDevicesWithHttpInfo (string sortOrder);
         /// <summary>
         /// Gets camera upload history for a device
         /// </summary>
@@ -220,8 +222,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultDevicesDeviceInfo</returns>
-        System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync ();
+        System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync (string sortOrder);
 
         /// <summary>
         /// Gets all devices
@@ -230,8 +233,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultDevicesDeviceInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo (string sortOrder);
         /// <summary>
         /// Gets camera upload history for a device
         /// </summary>
@@ -628,10 +632,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultDevicesDeviceInfo</returns>
-        public QueryResultDevicesDeviceInfo GetDevices ()
+        public QueryResultDevicesDeviceInfo GetDevices (string sortOrder)
         {
-             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = GetDevicesWithHttpInfo();
+             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = GetDevicesWithHttpInfo(sortOrder);
              return localVarResponse.Data;
         }
 
@@ -639,8 +644,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultDevicesDeviceInfo</returns>
-        public ApiResponse< QueryResultDevicesDeviceInfo > GetDevicesWithHttpInfo ()
+        public ApiResponse< QueryResultDevicesDeviceInfo > GetDevicesWithHttpInfo (string sortOrder)
         {
 
             var localVarPath = "/Devices";
@@ -665,6 +671,7 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -699,10 +706,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultDevicesDeviceInfo</returns>
-        public async System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync ()
+        public async System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync (string sortOrder)
         {
-             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = await GetDevicesAsyncWithHttpInfo();
+             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = await GetDevicesAsyncWithHttpInfo(sortOrder);
              return localVarResponse.Data;
 
         }
@@ -711,8 +719,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Beta.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultDevicesDeviceInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo (string sortOrder)
         {
 
             var localVarPath = "/Devices";
@@ -737,6 +746,7 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {

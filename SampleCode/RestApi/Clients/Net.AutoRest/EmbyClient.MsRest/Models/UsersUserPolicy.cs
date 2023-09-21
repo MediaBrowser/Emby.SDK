@@ -24,7 +24,7 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the UsersUserPolicy class.
         /// </summary>
-        public UsersUserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), IList<string> blockedTags = default(IList<string>), bool? isTagBlockingModeInclusive = default(bool?), IList<string> includeTags = default(IList<string>), bool? enableUserPreferenceAccess = default(bool?), IList<ConfigurationAccessSchedule> accessSchedules = default(IList<ConfigurationAccessSchedule>), IList<string> blockUnratedItems = default(IList<string>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), IList<string> restrictedFeatures = default(IList<string>), IList<string> enableContentDeletionFromFolders = default(IList<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), IList<string> enabledChannels = default(IList<string>), bool? enableAllChannels = default(bool?), IList<string> enabledFolders = default(IList<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), IList<string> blockedMediaFolders = default(IList<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), IList<string> excludedSubFolders = default(IList<string>), int? simultaneousStreamLimit = default(int?), IList<string> enabledDevices = default(IList<string>), bool? enableAllDevices = default(bool?))
+        public UsersUserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), IList<string> blockedTags = default(IList<string>), bool? isTagBlockingModeInclusive = default(bool?), IList<string> includeTags = default(IList<string>), bool? enableUserPreferenceAccess = default(bool?), IList<ConfigurationAccessSchedule> accessSchedules = default(IList<ConfigurationAccessSchedule>), IList<string> blockUnratedItems = default(IList<string>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), IList<string> restrictedFeatures = default(IList<string>), IList<string> enableContentDeletionFromFolders = default(IList<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), IList<string> enabledChannels = default(IList<string>), bool? enableAllChannels = default(bool?), IList<string> enabledFolders = default(IList<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), IList<string> blockedMediaFolders = default(IList<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), IList<string> excludedSubFolders = default(IList<string>), int? simultaneousStreamLimit = default(int?), IList<string> enabledDevices = default(IList<string>), bool? enableAllDevices = default(bool?), bool? allowCameraUpload = default(bool?))
         {
             IsAdministrator = isAdministrator;
             IsHidden = isHidden;
@@ -70,6 +70,7 @@ namespace EmbyClient.MsRest.Models
             SimultaneousStreamLimit = simultaneousStreamLimit;
             EnabledDevices = enabledDevices;
             EnableAllDevices = enableAllDevices;
+            AllowCameraUpload = allowCameraUpload;
             CustomInit();
         }
 
@@ -297,6 +298,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "EnableAllDevices")]
         public bool? EnableAllDevices { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "AllowCameraUpload")]
+        public bool? AllowCameraUpload { get; set; }
 
     }
 }

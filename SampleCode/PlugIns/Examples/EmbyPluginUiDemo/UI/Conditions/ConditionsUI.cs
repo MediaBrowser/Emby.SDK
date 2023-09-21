@@ -39,6 +39,12 @@ namespace EmbyPluginUiDemo.UI.Conditions
         [VisibleCondition(nameof(SimpleBoolValue), SimpleCondition.IsTrue)]
         public string DemoName1 { get; set; } = "GenericEdit Demo";
 
+        [DisplayName("Enum with Description Attributes")]
+        [Description("When the enum members are decorated with Description attributes those are automatically evalutated "
+                     + "to generate nice display text for the select options.")]
+        [VisibleCondition(nameof(SimpleBoolValue), SimpleCondition.IsTrue)]
+        public VideoMediaTypes SimpleEnumSelect1 { get; set; }
+
         public SpacerItem Spacer2 { get; set; } = new SpacerItem();
 
         public CaptionItem CaptionSimple2 { get; set; } = new CaptionItem("Simple Enable/Disable Condition");

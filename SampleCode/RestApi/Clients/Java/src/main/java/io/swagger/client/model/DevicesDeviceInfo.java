@@ -51,6 +51,9 @@ public class DevicesDeviceInfo {
   @SerializedName("IconUrl")
   private String iconUrl = null;
 
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
+
   public DevicesDeviceInfo name(String name) {
     this.name = name;
     return this;
@@ -231,6 +234,24 @@ public class DevicesDeviceInfo {
     this.iconUrl = iconUrl;
   }
 
+  public DevicesDeviceInfo ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Get ipAddress
+   * @return ipAddress
+  **/
+  @Schema(description = "")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -250,12 +271,13 @@ public class DevicesDeviceInfo {
         Objects.equals(this.appVersion, devicesDeviceInfo.appVersion) &&
         Objects.equals(this.lastUserId, devicesDeviceInfo.lastUserId) &&
         Objects.equals(this.dateLastActivity, devicesDeviceInfo.dateLastActivity) &&
-        Objects.equals(this.iconUrl, devicesDeviceInfo.iconUrl);
+        Objects.equals(this.iconUrl, devicesDeviceInfo.iconUrl) &&
+        Objects.equals(this.ipAddress, devicesDeviceInfo.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, id, internalId, reportedDeviceId, lastUserName, appName, appVersion, lastUserId, dateLastActivity, iconUrl);
+    return Objects.hash(name, id, internalId, reportedDeviceId, lastUserName, appName, appVersion, lastUserId, dateLastActivity, iconUrl, ipAddress);
   }
 
 
@@ -274,6 +296,7 @@ public class DevicesDeviceInfo {
     sb.append("    lastUserId: ").append(toIndentedString(lastUserId)).append("\n");
     sb.append("    dateLastActivity: ").append(toIndentedString(dateLastActivity)).append("\n");
     sb.append("    iconUrl: ").append(toIndentedString(iconUrl)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

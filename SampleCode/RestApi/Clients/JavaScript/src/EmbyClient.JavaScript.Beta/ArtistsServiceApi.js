@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ArtistsService service.
 * @module EmbyClient.JavaScript.Beta/ArtistsServiceApi
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class ArtistsServiceApi {
 
@@ -128,6 +128,7 @@ export default class ArtistsServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -257,6 +258,7 @@ export default class ArtistsServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],

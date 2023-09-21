@@ -378,6 +378,7 @@ Requires authentication as administrator
      * @param "StartIndex" (optional.Int32) -  Optional. The record index to start at. All items with a lower index will be dropped from the results.
      * @param "Limit" (optional.Int32) -  Optional. The maximum number of records to return
      * @param "NameStartsWithOrGreater" (optional.String) -  Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param "SortOrder" (optional.String) -  Sort Order - Ascending,Descending
 @return []NameIdPair
 */
 
@@ -387,6 +388,7 @@ type UserServiceApiGetUsersPrefixesOpts struct {
     StartIndex optional.Int32
     Limit optional.Int32
     NameStartsWithOrGreater optional.String
+    SortOrder optional.String
 }
 
 func (a *UserServiceApiService) GetUsersPrefixes(ctx context.Context, localVarOptionals *UserServiceApiGetUsersPrefixesOpts) ([]NameIdPair, *http.Response, error) {
@@ -419,6 +421,9 @@ func (a *UserServiceApiService) GetUsersPrefixes(ctx context.Context, localVarOp
 	}
 	if localVarOptionals != nil && localVarOptionals.NameStartsWithOrGreater.IsSet() {
 		localVarQueryParams.Add("NameStartsWithOrGreater", parameterToString(localVarOptionals.NameStartsWithOrGreater.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.SortOrder.IsSet() {
+		localVarQueryParams.Add("SortOrder", parameterToString(localVarOptionals.SortOrder.Value(), ""))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
@@ -600,6 +605,7 @@ Requires authentication as administrator
      * @param "StartIndex" (optional.Int32) -  Optional. The record index to start at. All items with a lower index will be dropped from the results.
      * @param "Limit" (optional.Int32) -  Optional. The maximum number of records to return
      * @param "NameStartsWithOrGreater" (optional.String) -  Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param "SortOrder" (optional.String) -  Sort Order - Ascending,Descending
 @return QueryResultUserDto
 */
 
@@ -609,6 +615,7 @@ type UserServiceApiGetUsersQueryOpts struct {
     StartIndex optional.Int32
     Limit optional.Int32
     NameStartsWithOrGreater optional.String
+    SortOrder optional.String
 }
 
 func (a *UserServiceApiService) GetUsersQuery(ctx context.Context, localVarOptionals *UserServiceApiGetUsersQueryOpts) (QueryResultUserDto, *http.Response, error) {
@@ -641,6 +648,9 @@ func (a *UserServiceApiService) GetUsersQuery(ctx context.Context, localVarOptio
 	}
 	if localVarOptionals != nil && localVarOptionals.NameStartsWithOrGreater.IsSet() {
 		localVarQueryParams.Add("NameStartsWithOrGreater", parameterToString(localVarOptionals.NameStartsWithOrGreater.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.SortOrder.IsSet() {
+		localVarQueryParams.Add("SortOrder", parameterToString(localVarOptionals.SortOrder.Value(), ""))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}

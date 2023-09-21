@@ -6,6 +6,7 @@
     using EmbyPluginUiDemo.Storage;
     using EmbyPluginUiDemo.UI.Basics;
     using EmbyPluginUiDemo.UI.CalcDialog;
+    using EmbyPluginUiDemo.UI.ChildCollections;
     using EmbyPluginUiDemo.UI.Conditions;
     using EmbyPluginUiDemo.UI.Constraints;
     using EmbyPluginUiDemo.UI.Lists;
@@ -49,6 +50,7 @@
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(StatesPageView), "States", e => new StatesPageView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(ConstraintsPageView), "Constraints", e => new ConstraintsPageView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(NestingPageView), "Nested Objects", e => new NestingPageView(pluginInfo)));
+            this.tabPages.Add(new TabPageController(pluginInfo, nameof(ChildCollectionsView), "Child Collections", e => new ChildCollectionsView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(ConditionsPageView), "Conditions", e => new ConditionsPageView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(CalcPageView), "Postback", e => new CalcPageView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(ValidationPageView), "Validation", e => new ValidationPageView(pluginInfo)));

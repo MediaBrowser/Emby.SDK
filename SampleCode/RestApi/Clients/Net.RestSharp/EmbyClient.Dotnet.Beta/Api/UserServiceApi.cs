@@ -118,8 +118,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>List&lt;NameIdPair&gt;</returns>
-        List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -133,8 +134,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of List&lt;NameIdPair&gt;</returns>
-        ApiResponse<List<NameIdPair>> GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        ApiResponse<List<NameIdPair>> GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
@@ -166,8 +168,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultUserDto</returns>
-        QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -181,8 +184,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultUserDto</returns>
-        ApiResponse<QueryResultUserDto> GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        ApiResponse<QueryResultUserDto> GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Authenticates a user
         /// </summary>
@@ -555,8 +559,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of List&lt;NameIdPair&gt;</returns>
-        System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -570,8 +575,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;NameIdPair&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
@@ -603,8 +609,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultUserDto</returns>
-        System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -618,8 +625,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Authenticates a user
         /// </summary>
@@ -1636,10 +1644,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>List&lt;NameIdPair&gt;</returns>
-        public List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<List<NameIdPair>> localVarResponse = GetUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<List<NameIdPair>> localVarResponse = GetUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -1652,8 +1661,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of List&lt;NameIdPair&gt;</returns>
-        public ApiResponse< List<NameIdPair> > GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public ApiResponse< List<NameIdPair> > GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Prefixes";
@@ -1683,6 +1693,7 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1722,10 +1733,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of List&lt;NameIdPair&gt;</returns>
-        public async System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<List<NameIdPair>> localVarResponse = await GetUsersPrefixesAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<List<NameIdPair>> localVarResponse = await GetUsersPrefixesAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -1739,8 +1751,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;NameIdPair&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Prefixes";
@@ -1770,6 +1783,7 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1952,10 +1966,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultUserDto</returns>
-        public QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<QueryResultUserDto> localVarResponse = GetUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<QueryResultUserDto> localVarResponse = GetUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -1968,8 +1983,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultUserDto</returns>
-        public ApiResponse< QueryResultUserDto > GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public ApiResponse< QueryResultUserDto > GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Query";
@@ -1999,6 +2015,7 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -2038,10 +2055,11 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultUserDto</returns>
-        public async System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<QueryResultUserDto> localVarResponse = await GetUsersQueryAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<QueryResultUserDto> localVarResponse = await GetUsersQueryAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -2055,8 +2073,9 @@ namespace EmbyClient.Dotnet.Beta.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Query";
@@ -2086,6 +2105,7 @@ namespace EmbyClient.Dotnet.Beta.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {

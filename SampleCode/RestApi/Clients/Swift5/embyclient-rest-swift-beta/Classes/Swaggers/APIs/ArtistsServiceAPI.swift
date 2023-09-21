@@ -88,6 +88,7 @@ open class ArtistsServiceAPI {
      - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
      - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
      - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
      - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
      - parameter path: (query) Optional filter by Path. (optional)
      - parameter userId: (query) User Id (optional)
@@ -105,8 +106,8 @@ open class ArtistsServiceAPI {
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArtists(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getArtistsWithRequestBuilder(artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
+    open class func getArtists(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
+        getArtistsWithRequestBuilder(artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -174,12 +175,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -189,6 +190,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -226,12 +228,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -241,6 +243,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -319,12 +322,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -334,6 +337,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -371,12 +375,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -386,6 +390,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -680,12 +685,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -695,6 +700,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -732,12 +738,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -747,6 +753,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -825,12 +832,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -840,6 +847,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -877,12 +885,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -892,6 +900,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1217,6 +1226,7 @@ open class ArtistsServiceAPI {
      - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
      - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
      - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
      - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
      - parameter path: (query) Optional filter by Path. (optional)
      - parameter userId: (query) User Id (optional)
@@ -1235,7 +1245,7 @@ open class ArtistsServiceAPI {
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
      */
-    open class func getArtistsWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getArtistsWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
         let path = "/Artists"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -1316,6 +1326,7 @@ open class ArtistsServiceAPI {
                         "AudioCodecs": audioCodecs, 
                         "AudioLayouts": audioLayouts, 
                         "VideoCodecs": videoCodecs, 
+                        "ExtendedVideoTypes": extendedVideoTypes, 
                         "SubtitleCodecs": subtitleCodecs, 
                         "Path": path, 
                         "UserId": userId, 
@@ -1416,6 +1427,7 @@ open class ArtistsServiceAPI {
      - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
      - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
      - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
      - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
      - parameter path: (query) Optional filter by Path. (optional)
      - parameter userId: (query) User Id (optional)
@@ -1433,8 +1445,8 @@ open class ArtistsServiceAPI {
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArtistsAlbumartists(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getArtistsAlbumartistsWithRequestBuilder(artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
+    open class func getArtistsAlbumartists(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
+        getArtistsAlbumartistsWithRequestBuilder(artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -1502,12 +1514,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -1517,6 +1529,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1554,12 +1567,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -1569,6 +1582,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1647,12 +1661,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -1662,6 +1676,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1699,12 +1714,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -1714,6 +1729,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2008,12 +2024,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -2023,6 +2039,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2060,12 +2077,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -2075,6 +2092,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2153,12 +2171,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -2168,6 +2186,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2205,12 +2224,12 @@ open class ArtistsServiceAPI {
         "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "ExtendedVideoSubtype" : "None",
         "AttachmentSize" : 5,
         "SubtitleLocationType" : "InternalStream",
         "RefFrames" : 2,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
@@ -2220,6 +2239,7 @@ open class ArtistsServiceAPI {
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
         "Level" : 4.965218492984954,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 7,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2545,6 +2565,7 @@ open class ArtistsServiceAPI {
      - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
      - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
      - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
      - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
      - parameter path: (query) Optional filter by Path. (optional)
      - parameter userId: (query) User Id (optional)
@@ -2563,7 +2584,7 @@ open class ArtistsServiceAPI {
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
      */
-    open class func getArtistsAlbumartistsWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getArtistsAlbumartistsWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
         let path = "/Artists/AlbumArtists"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -2644,6 +2665,7 @@ open class ArtistsServiceAPI {
                         "AudioCodecs": audioCodecs, 
                         "AudioLayouts": audioLayouts, 
                         "VideoCodecs": videoCodecs, 
+                        "ExtendedVideoTypes": extendedVideoTypes, 
                         "SubtitleCodecs": subtitleCodecs, 
                         "Path": path, 
                         "UserId": userId, 
@@ -2740,12 +2762,12 @@ open class ArtistsServiceAPI {
       "SampleRate" : 1,
       "IsAnamorphic" : true,
       "PixelFormat" : "PixelFormat",
-      "ExtendedVideoSubtype" : "None",
       "AttachmentSize" : 5,
       "SubtitleLocationType" : "InternalStream",
       "RefFrames" : 2,
       "IsAVC" : true,
       "ColorTransfer" : "ColorTransfer",
+      "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
       "IsExternalUrl" : true,
       "DisplayTitle" : "DisplayTitle",
       "IsForced" : true,
@@ -2755,6 +2777,7 @@ open class ArtistsServiceAPI {
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
       "Level" : 4.965218492984954,
+      "ExtendedVideoSubType" : "None",
       "Channels" : 7,
       "Profile" : "Profile",
       "MimeType" : "MimeType",
@@ -2792,12 +2815,12 @@ open class ArtistsServiceAPI {
       "SampleRate" : 1,
       "IsAnamorphic" : true,
       "PixelFormat" : "PixelFormat",
-      "ExtendedVideoSubtype" : "None",
       "AttachmentSize" : 5,
       "SubtitleLocationType" : "InternalStream",
       "RefFrames" : 2,
       "IsAVC" : true,
       "ColorTransfer" : "ColorTransfer",
+      "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
       "IsExternalUrl" : true,
       "DisplayTitle" : "DisplayTitle",
       "IsForced" : true,
@@ -2807,6 +2830,7 @@ open class ArtistsServiceAPI {
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
       "Level" : 4.965218492984954,
+      "ExtendedVideoSubType" : "None",
       "Channels" : 7,
       "Profile" : "Profile",
       "MimeType" : "MimeType",
@@ -2885,12 +2909,12 @@ open class ArtistsServiceAPI {
       "SampleRate" : 1,
       "IsAnamorphic" : true,
       "PixelFormat" : "PixelFormat",
-      "ExtendedVideoSubtype" : "None",
       "AttachmentSize" : 5,
       "SubtitleLocationType" : "InternalStream",
       "RefFrames" : 2,
       "IsAVC" : true,
       "ColorTransfer" : "ColorTransfer",
+      "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
       "IsExternalUrl" : true,
       "DisplayTitle" : "DisplayTitle",
       "IsForced" : true,
@@ -2900,6 +2924,7 @@ open class ArtistsServiceAPI {
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
       "Level" : 4.965218492984954,
+      "ExtendedVideoSubType" : "None",
       "Channels" : 7,
       "Profile" : "Profile",
       "MimeType" : "MimeType",
@@ -2937,12 +2962,12 @@ open class ArtistsServiceAPI {
       "SampleRate" : 1,
       "IsAnamorphic" : true,
       "PixelFormat" : "PixelFormat",
-      "ExtendedVideoSubtype" : "None",
       "AttachmentSize" : 5,
       "SubtitleLocationType" : "InternalStream",
       "RefFrames" : 2,
       "IsAVC" : true,
       "ColorTransfer" : "ColorTransfer",
+      "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
       "IsExternalUrl" : true,
       "DisplayTitle" : "DisplayTitle",
       "IsForced" : true,
@@ -2952,6 +2977,7 @@ open class ArtistsServiceAPI {
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
       "Level" : 4.965218492984954,
+      "ExtendedVideoSubType" : "None",
       "Channels" : 7,
       "Profile" : "Profile",
       "MimeType" : "MimeType",

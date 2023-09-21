@@ -28,7 +28,7 @@ import UsersUserPolicy from '../model/UsersUserPolicy';
 /**
 * UserService service.
 * @module EmbyClient.JavaScript.Beta/UserServiceApi
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class UserServiceApi {
 
@@ -220,7 +220,8 @@ export default class UserServiceApi {
         'IsDisabled': opts['isDisabled'],
         'StartIndex': opts['startIndex'],
         'Limit': opts['limit'],
-        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater']
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'SortOrder': opts['sortOrder']
       };
       let headerParams = {
       };
@@ -301,7 +302,8 @@ export default class UserServiceApi {
         'IsDisabled': opts['isDisabled'],
         'StartIndex': opts['startIndex'],
         'Limit': opts['limit'],
-        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater']
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'SortOrder': opts['sortOrder']
       };
       let headerParams = {
       };

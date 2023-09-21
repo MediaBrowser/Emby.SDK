@@ -51,4 +51,5 @@ type UsersUserPolicy struct {
 	SimultaneousStreamLimit int32 `json:"SimultaneousStreamLimit,omitempty"`
 	EnabledDevices []string `json:"EnabledDevices,omitempty"`
 	EnableAllDevices bool `json:"EnableAllDevices,omitempty"`
+	AllowCameraUpload bool `json:"AllowCameraUpload,omitempty"`
 }

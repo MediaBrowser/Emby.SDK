@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The DevicesDeviceInfo model module.
 * @module model/DevicesDeviceInfo
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class DevicesDeviceInfo {
     /**
@@ -71,6 +71,9 @@ export default class DevicesDeviceInfo {
             if (data.hasOwnProperty('IconUrl')) {
                 obj['IconUrl'] = ApiClient.convertToType(data['IconUrl'], 'String');
             }
+            if (data.hasOwnProperty('IpAddress')) {
+                obj['IpAddress'] = ApiClient.convertToType(data['IpAddress'], 'String');
+            }
         }
         return obj;
     }
@@ -115,6 +118,10 @@ export default class DevicesDeviceInfo {
     * @member {String} IconUrl
     */
     'IconUrl' = undefined;
+    /**
+    * @member {String} IpAddress
+    */
+    'IpAddress' = undefined;
 
 
 

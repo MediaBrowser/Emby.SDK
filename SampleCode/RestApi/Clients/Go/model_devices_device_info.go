@@ -20,4 +20,5 @@ type DevicesDeviceInfo struct {
 	LastUserId string `json:"LastUserId,omitempty"`
 	DateLastActivity time.Time `json:"DateLastActivity,omitempty"`
 	IconUrl string `json:"IconUrl,omitempty"`
+	IpAddress string `json:"IpAddress,omitempty"`
 }

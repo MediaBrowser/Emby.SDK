@@ -79,6 +79,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="databaseAnalysisLimit">databaseAnalysisLimit.</param>
         /// <param name="disableAsyncIO">disableAsyncIO.</param>
         /// <param name="migratedToUserItemShares">migratedToUserItemShares.</param>
+        /// <param name="enableFks">enableFks.</param>
         /// <param name="proxyHeaderMode">proxyHeaderMode.</param>
         /// <param name="enableDebugLevelLogging">enableDebugLevelLogging.</param>
         /// <param name="revertDebugLogging">revertDebugLogging.</param>
@@ -87,7 +88,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="runAtStartup">runAtStartup.</param>
         /// <param name="isStartupWizardCompleted">isStartupWizardCompleted.</param>
         /// <param name="cachePath">cachePath.</param>
-        public ConfigurationServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ConfigurationImageSavingConvention imageSavingConvention = default(ConfigurationImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<ConfigurationPathSubstitution> pathSubstitutions = default(List<ConfigurationPathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? forcedSortNameUpgraded = default(bool?), bool? inheritedParentalRatingValueUpgraded = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares = default(bool?), ConfigurationProxyHeaderMode proxyHeaderMode = default(ConfigurationProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ConfigurationServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ConfigurationImageSavingConvention imageSavingConvention = default(ConfigurationImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<ConfigurationPathSubstitution> pathSubstitutions = default(List<ConfigurationPathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? forcedSortNameUpgraded = default(bool?), bool? inheritedParentalRatingValueUpgraded = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares = default(bool?), bool? enableFks = default(bool?), ConfigurationProxyHeaderMode proxyHeaderMode = default(ConfigurationProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             this.EnableUPnP = enableUPnP;
             this.PublicPort = publicPort;
@@ -142,6 +143,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.DatabaseAnalysisLimit = databaseAnalysisLimit;
             this.DisableAsyncIO = disableAsyncIO;
             this.MigratedToUserItemShares = migratedToUserItemShares;
+            this.EnableFks = enableFks;
             this.ProxyHeaderMode = proxyHeaderMode;
             this.EnableDebugLevelLogging = enableDebugLevelLogging;
             this.RevertDebugLogging = revertDebugLogging;
@@ -471,6 +473,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public bool? MigratedToUserItemShares { get; set; }
 
         /// <summary>
+        /// Gets or Sets EnableFks
+        /// </summary>
+        [DataMember(Name="EnableFks", EmitDefaultValue=false)]
+        public bool? EnableFks { get; set; }
+
+        /// <summary>
         /// Gets or Sets ProxyHeaderMode
         /// </summary>
         [DataMember(Name="ProxyHeaderMode", EmitDefaultValue=false)]
@@ -579,6 +587,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  DatabaseAnalysisLimit: ").Append(DatabaseAnalysisLimit).Append("\n");
             sb.Append("  DisableAsyncIO: ").Append(DisableAsyncIO).Append("\n");
             sb.Append("  MigratedToUserItemShares: ").Append(MigratedToUserItemShares).Append("\n");
+            sb.Append("  EnableFks: ").Append(EnableFks).Append("\n");
             sb.Append("  ProxyHeaderMode: ").Append(ProxyHeaderMode).Append("\n");
             sb.Append("  EnableDebugLevelLogging: ").Append(EnableDebugLevelLogging).Append("\n");
             sb.Append("  RevertDebugLogging: ").Append(RevertDebugLogging).Append("\n");
@@ -893,6 +902,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.MigratedToUserItemShares.Equals(input.MigratedToUserItemShares))
                 ) && 
                 (
+                    this.EnableFks == input.EnableFks ||
+                    (this.EnableFks != null &&
+                    this.EnableFks.Equals(input.EnableFks))
+                ) && 
+                (
                     this.ProxyHeaderMode == input.ProxyHeaderMode ||
                     (this.ProxyHeaderMode != null &&
                     this.ProxyHeaderMode.Equals(input.ProxyHeaderMode))
@@ -1049,6 +1063,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.DisableAsyncIO.GetHashCode();
                 if (this.MigratedToUserItemShares != null)
                     hashCode = hashCode * 59 + this.MigratedToUserItemShares.GetHashCode();
+                if (this.EnableFks != null)
+                    hashCode = hashCode * 59 + this.EnableFks.GetHashCode();
                 if (this.ProxyHeaderMode != null)
                     hashCode = hashCode * 59 + this.ProxyHeaderMode.GetHashCode();
                 if (this.EnableDebugLevelLogging != null)

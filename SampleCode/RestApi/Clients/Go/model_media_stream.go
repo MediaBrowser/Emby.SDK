@@ -53,7 +53,8 @@ type MediaStream struct {
 	Level float64 `json:"Level,omitempty"`
 	IsAnamorphic bool `json:"IsAnamorphic,omitempty"`
 	ExtendedVideoType *ExtendedVideoTypes `json:"ExtendedVideoType,omitempty"`
-	ExtendedVideoSubtype *ExtendedVideoSubTypes `json:"ExtendedVideoSubtype,omitempty"`
+	ExtendedVideoSubType *ExtendedVideoSubTypes `json:"ExtendedVideoSubType,omitempty"`
+	ExtendedVideoSubTypeDescription string `json:"ExtendedVideoSubTypeDescription,omitempty"`
 	ItemId string `json:"ItemId,omitempty"`
 	ServerId string `json:"ServerId,omitempty"`
 	AttachmentSize int32 `json:"AttachmentSize,omitempty"`

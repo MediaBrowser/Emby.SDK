@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ItemsService service.
 * @module EmbyClient.JavaScript.Beta/ItemsServiceApi
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class ItemsServiceApi {
 
@@ -127,6 +127,7 @@ export default class ItemsServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -257,6 +258,7 @@ export default class ItemsServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'MinOfficialRating': opts['minOfficialRating'],
@@ -386,6 +388,7 @@ export default class ItemsServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'MinOfficialRating': opts['minOfficialRating'],

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ForgotPassword model module.
 * @module model/ForgotPassword
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class ForgotPassword {
     /**

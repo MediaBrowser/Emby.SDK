@@ -58,10 +58,11 @@ open class DeviceServiceAPI {
     /**
      Gets all devices
 
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDevices(completion: @escaping ((_ data: QueryResultDevicesDeviceInfo?,_ error: Error?) -> Void)) {
-        getDevicesWithRequestBuilder().execute { (response, error) -> Void in
+    open class func getDevices(sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultDevicesDeviceInfo?,_ error: Error?) -> Void)) {
+        getDevicesWithRequestBuilder(sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -85,6 +86,7 @@ open class DeviceServiceAPI {
     "InternalId" : 0,
     "LastUserName" : "LastUserName",
     "LastUserId" : "LastUserId",
+    "IpAddress" : "IpAddress",
     "Id" : "Id",
     "DateLastActivity" : "2000-01-23T04:56:07.000+00:00",
     "ReportedDeviceId" : "ReportedDeviceId",
@@ -96,6 +98,7 @@ open class DeviceServiceAPI {
     "InternalId" : 0,
     "LastUserName" : "LastUserName",
     "LastUserId" : "LastUserId",
+    "IpAddress" : "IpAddress",
     "Id" : "Id",
     "DateLastActivity" : "2000-01-23T04:56:07.000+00:00",
     "ReportedDeviceId" : "ReportedDeviceId",
@@ -103,14 +106,18 @@ open class DeviceServiceAPI {
     "AppName" : "AppName"
   } ]
 }}]
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
 
      - returns: RequestBuilder<QueryResultDevicesDeviceInfo> 
      */
-    open class func getDevicesWithRequestBuilder() -> RequestBuilder<QueryResultDevicesDeviceInfo> {
+    open class func getDevicesWithRequestBuilder(sortOrder: String? = nil) -> RequestBuilder<QueryResultDevicesDeviceInfo> {
         let path = "/Devices"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "SortOrder": sortOrder
+        ])
 
 
         let requestBuilder: RequestBuilder<QueryResultDevicesDeviceInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
@@ -196,6 +203,7 @@ open class DeviceServiceAPI {
   "InternalId" : 0,
   "LastUserName" : "LastUserName",
   "LastUserId" : "LastUserId",
+  "IpAddress" : "IpAddress",
   "Id" : "Id",
   "DateLastActivity" : "2000-01-23T04:56:07.000+00:00",
   "ReportedDeviceId" : "ReportedDeviceId",

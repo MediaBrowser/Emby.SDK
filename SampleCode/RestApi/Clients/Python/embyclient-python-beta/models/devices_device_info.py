@@ -31,7 +31,8 @@ class DevicesDeviceInfo(object):
         'app_version': 'str',
         'last_user_id': 'str',
         'date_last_activity': 'datetime',
-        'icon_url': 'str'
+        'icon_url': 'str',
+        'ip_address': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class DevicesDeviceInfo(object):
         'app_version': 'AppVersion',
         'last_user_id': 'LastUserId',
         'date_last_activity': 'DateLastActivity',
-        'icon_url': 'IconUrl'
+        'icon_url': 'IconUrl',
+        'ip_address': 'IpAddress'
     }
 
-    def __init__(self, name=None, id=None, internal_id=None, reported_device_id=None, last_user_name=None, app_name=None, app_version=None, last_user_id=None, date_last_activity=None, icon_url=None):  # noqa: E501
+    def __init__(self, name=None, id=None, internal_id=None, reported_device_id=None, last_user_name=None, app_name=None, app_version=None, last_user_id=None, date_last_activity=None, icon_url=None, ip_address=None):  # noqa: E501
         """DevicesDeviceInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._id = None
@@ -59,6 +61,7 @@ class DevicesDeviceInfo(object):
         self._last_user_id = None
         self._date_last_activity = None
         self._icon_url = None
+        self._ip_address = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -80,6 +83,8 @@ class DevicesDeviceInfo(object):
             self.date_last_activity = date_last_activity
         if icon_url is not None:
             self.icon_url = icon_url
+        if ip_address is not None:
+            self.ip_address = ip_address
 
     @property
     def name(self):
@@ -290,6 +295,27 @@ class DevicesDeviceInfo(object):
         """
 
         self._icon_url = icon_url
+
+    @property
+    def ip_address(self):
+        """Gets the ip_address of this DevicesDeviceInfo.  # noqa: E501
+
+
+        :return: The ip_address of this DevicesDeviceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._ip_address
+
+    @ip_address.setter
+    def ip_address(self, ip_address):
+        """Sets the ip_address of this DevicesDeviceInfo.
+
+
+        :param ip_address: The ip_address of this DevicesDeviceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._ip_address = ip_address
 
     def to_dict(self):
         """Returns the model properties as a dict"""

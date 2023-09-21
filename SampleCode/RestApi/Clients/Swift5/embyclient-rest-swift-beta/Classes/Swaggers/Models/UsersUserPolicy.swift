@@ -55,8 +55,9 @@ public struct UsersUserPolicy: Codable {
     public var simultaneousStreamLimit: Int?
     public var enabledDevices: [String]?
     public var enableAllDevices: Bool?
+    public var allowCameraUpload: Bool?
 
-    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, lockedOutDate: Int64? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [ConfigurationAccessSchedule]? = nil, blockUnratedItems: [ConfigurationUnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, restrictedFeatures: [String]? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil) {
+    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, lockedOutDate: Int64? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [ConfigurationAccessSchedule]? = nil, blockUnratedItems: [ConfigurationUnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, restrictedFeatures: [String]? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil, allowCameraUpload: Bool? = nil) {
         self.isAdministrator = isAdministrator
         self.isHidden = isHidden
         self.isHiddenRemotely = isHiddenRemotely
@@ -101,6 +102,7 @@ public struct UsersUserPolicy: Codable {
         self.simultaneousStreamLimit = simultaneousStreamLimit
         self.enabledDevices = enabledDevices
         self.enableAllDevices = enableAllDevices
+        self.allowCameraUpload = allowCameraUpload
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -148,6 +150,7 @@ public struct UsersUserPolicy: Codable {
         case simultaneousStreamLimit = "SimultaneousStreamLimit"
         case enabledDevices = "EnabledDevices"
         case enableAllDevices = "EnableAllDevices"
+        case allowCameraUpload = "AllowCameraUpload"
     }
 
 }

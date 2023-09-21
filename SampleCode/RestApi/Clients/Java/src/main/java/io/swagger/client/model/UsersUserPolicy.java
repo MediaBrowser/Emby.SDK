@@ -156,6 +156,9 @@ public class UsersUserPolicy {
   @SerializedName("EnableAllDevices")
   private Boolean enableAllDevices = null;
 
+  @SerializedName("AllowCameraUpload")
+  private Boolean allowCameraUpload = null;
+
   public UsersUserPolicy isAdministrator(Boolean isAdministrator) {
     this.isAdministrator = isAdministrator;
     return this;
@@ -1036,6 +1039,24 @@ public class UsersUserPolicy {
     this.enableAllDevices = enableAllDevices;
   }
 
+  public UsersUserPolicy allowCameraUpload(Boolean allowCameraUpload) {
+    this.allowCameraUpload = allowCameraUpload;
+    return this;
+  }
+
+   /**
+   * Get allowCameraUpload
+   * @return allowCameraUpload
+  **/
+  @Schema(description = "")
+  public Boolean isAllowCameraUpload() {
+    return allowCameraUpload;
+  }
+
+  public void setAllowCameraUpload(Boolean allowCameraUpload) {
+    this.allowCameraUpload = allowCameraUpload;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1089,12 +1110,13 @@ public class UsersUserPolicy {
         Objects.equals(this.excludedSubFolders, usersUserPolicy.excludedSubFolders) &&
         Objects.equals(this.simultaneousStreamLimit, usersUserPolicy.simultaneousStreamLimit) &&
         Objects.equals(this.enabledDevices, usersUserPolicy.enabledDevices) &&
-        Objects.equals(this.enableAllDevices, usersUserPolicy.enableAllDevices);
+        Objects.equals(this.enableAllDevices, usersUserPolicy.enableAllDevices) &&
+        Objects.equals(this.allowCameraUpload, usersUserPolicy.allowCameraUpload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices);
+    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices, allowCameraUpload);
   }
 
 
@@ -1147,6 +1169,7 @@ public class UsersUserPolicy {
     sb.append("    simultaneousStreamLimit: ").append(toIndentedString(simultaneousStreamLimit)).append("\n");
     sb.append("    enabledDevices: ").append(toIndentedString(enabledDevices)).append("\n");
     sb.append("    enableAllDevices: ").append(toIndentedString(enableAllDevices)).append("\n");
+    sb.append("    allowCameraUpload: ").append(toIndentedString(allowCameraUpload)).append("\n");
     sb.append("}");
     return sb.toString();
   }

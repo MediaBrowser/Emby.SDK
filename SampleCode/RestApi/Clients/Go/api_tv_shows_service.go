@@ -107,6 +107,7 @@ Requires authentication as user
      * @param "AudioCodecs" (optional.String) -  Optional filter by AudioCodec. Allows multiple, comma delimeted.
      * @param "AudioLayouts" (optional.String) -  Optional filter by AudioLayout. Allows multiple, comma delimeted.
      * @param "VideoCodecs" (optional.String) -  Optional filter by VideoCodec. Allows multiple, comma delimeted.
+     * @param "ExtendedVideoTypes" (optional.String) -  Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
      * @param "SubtitleCodecs" (optional.String) -  Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
      * @param "Path" (optional.String) -  Optional filter by Path.
      * @param "UserId" (optional.String) -  User Id
@@ -204,6 +205,7 @@ type TvShowsServiceApiGetShowsByIdEpisodesOpts struct {
     AudioCodecs optional.String
     AudioLayouts optional.String
     VideoCodecs optional.String
+    ExtendedVideoTypes optional.String
     SubtitleCodecs optional.String
     Path optional.String
     UserId optional.String
@@ -471,6 +473,9 @@ func (a *TvShowsServiceApiService) GetShowsByIdEpisodes(ctx context.Context, id 
 	}
 	if localVarOptionals != nil && localVarOptionals.VideoCodecs.IsSet() {
 		localVarQueryParams.Add("VideoCodecs", parameterToString(localVarOptionals.VideoCodecs.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExtendedVideoTypes.IsSet() {
+		localVarQueryParams.Add("ExtendedVideoTypes", parameterToString(localVarOptionals.ExtendedVideoTypes.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleCodecs.IsSet() {
 		localVarQueryParams.Add("SubtitleCodecs", parameterToString(localVarOptionals.SubtitleCodecs.Value(), ""))

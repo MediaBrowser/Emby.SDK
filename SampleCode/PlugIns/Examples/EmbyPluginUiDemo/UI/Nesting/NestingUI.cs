@@ -43,22 +43,5 @@ namespace EmbyPluginUiDemo.UI.Nesting
         public ChildOptionExample ChildOption2 { get; set; } = new ChildOptionExample();
 
         public SpacerItem Spacer2 { get; set; } = new SpacerItem();
-
-        public CaptionItem CaptionCollection { get; set; } = new CaptionItem("Child Object Collections");
-
-        public LabelItem LabelCollection { get; set; } = new LabelItem("When the repetition count is not fixed, it is also "
-                                                                       + "possible to use an EditableObject collection to have"
-                                                                       + "a dynamic number of child options. The members of the "
-                                                                       + "collection are not even required to be of the same type.");
-
-        [DisplayName("Collection of 3 Child Options")]
-        public EditableObjectCollection Collection { get; set; } = new EditableObjectCollection
-                                                                   {
-                                                                       new ChildOptionExample(),
-                                                                       new ChildOptionExample(),
-                                                                       new ChildOptionExample(),
-                                                                   };
-
-        public SpacerItem Spacer3 { get; set; } = new SpacerItem();
     }
 }

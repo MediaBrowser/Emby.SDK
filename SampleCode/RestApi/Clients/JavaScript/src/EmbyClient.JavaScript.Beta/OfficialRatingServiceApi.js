@@ -15,7 +15,7 @@ import QueryResultUserLibraryOfficialRatingItem from '../model/QueryResultUserLi
 /**
 * OfficialRatingService service.
 * @module EmbyClient.JavaScript.Beta/OfficialRatingServiceApi
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class OfficialRatingServiceApi {
 
@@ -127,6 +127,7 @@ export default class OfficialRatingServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],

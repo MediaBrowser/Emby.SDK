@@ -36,7 +36,8 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="lastUserId">lastUserId.</param>
         /// <param name="dateLastActivity">dateLastActivity.</param>
         /// <param name="iconUrl">iconUrl.</param>
-        public DevicesDeviceInfo(string name = default(string), string id = default(string), long? internalId = default(long?), string reportedDeviceId = default(string), string lastUserName = default(string), string appName = default(string), string appVersion = default(string), string lastUserId = default(string), DateTimeOffset? dateLastActivity = default(DateTimeOffset?), string iconUrl = default(string))
+        /// <param name="ipAddress">ipAddress.</param>
+        public DevicesDeviceInfo(string name = default(string), string id = default(string), long? internalId = default(long?), string reportedDeviceId = default(string), string lastUserName = default(string), string appName = default(string), string appVersion = default(string), string lastUserId = default(string), DateTimeOffset? dateLastActivity = default(DateTimeOffset?), string iconUrl = default(string), string ipAddress = default(string))
         {
             this.Name = name;
             this.Id = id;
@@ -48,6 +49,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.LastUserId = lastUserId;
             this.DateLastActivity = dateLastActivity;
             this.IconUrl = iconUrl;
+            this.IpAddress = ipAddress;
         }
         
         /// <summary>
@@ -111,6 +113,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         public string IconUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets IpAddress
+        /// </summary>
+        [DataMember(Name="IpAddress", EmitDefaultValue=false)]
+        public string IpAddress { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -128,6 +136,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  LastUserId: ").Append(LastUserId).Append("\n");
             sb.Append("  DateLastActivity: ").Append(DateLastActivity).Append("\n");
             sb.Append("  IconUrl: ").Append(IconUrl).Append("\n");
+            sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +220,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.IconUrl == input.IconUrl ||
                     (this.IconUrl != null &&
                     this.IconUrl.Equals(input.IconUrl))
+                ) && 
+                (
+                    this.IpAddress == input.IpAddress ||
+                    (this.IpAddress != null &&
+                    this.IpAddress.Equals(input.IpAddress))
                 );
         }
 
@@ -243,6 +257,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.DateLastActivity.GetHashCode();
                 if (this.IconUrl != null)
                     hashCode = hashCode * 59 + this.IconUrl.GetHashCode();
+                if (this.IpAddress != null)
+                    hashCode = hashCode * 59 + this.IpAddress.GetHashCode();
                 return hashCode;
             }
         }

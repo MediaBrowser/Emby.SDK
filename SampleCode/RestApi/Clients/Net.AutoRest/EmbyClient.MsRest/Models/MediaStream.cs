@@ -30,7 +30,7 @@ namespace EmbyClient.MsRest.Models
         /// 'Rtmp', 'Rtsp', 'Udp', 'Rtp', 'Ftp', 'Mms'</param>
         /// <param name="extendedVideoType">Possible values include: 'None',
         /// 'Hdr10', 'Hdr10Plus', 'HyperLogGamma', 'DolbyVision'</param>
-        /// <param name="extendedVideoSubtype">Possible values include: 'None',
+        /// <param name="extendedVideoSubType">Possible values include: 'None',
         /// 'Hdr10', 'HyperLogGamma', 'Hdr10Plus0', 'DoviProfile02',
         /// 'DoviProfile10', 'DoviProfile22', 'DoviProfile30', 'DoviProfile42',
         /// 'DoviProfile50', 'DoviProfile61', 'DoviProfile76', 'DoviProfile81',
@@ -38,7 +38,7 @@ namespace EmbyClient.MsRest.Models
         /// 'DoviProfile92'</param>
         /// <param name="subtitleLocationType">Possible values include:
         /// 'InternalStream', 'VideoSideData'</param>
-        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), int? height = default(int?), int? width = default(int?), double? averageFrameRate = default(double?), double? realFrameRate = default(double?), string profile = default(string), string type = default(string), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), string deliveryMethod = default(string), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), string protocol = default(string), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), string extendedVideoType = default(string), string extendedVideoSubtype = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), string subtitleLocationType = default(string))
+        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), int? height = default(int?), int? width = default(int?), double? averageFrameRate = default(double?), double? realFrameRate = default(double?), string profile = default(string), string type = default(string), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), string deliveryMethod = default(string), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), string protocol = default(string), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), string extendedVideoType = default(string), string extendedVideoSubType = default(string), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), string subtitleLocationType = default(string))
         {
             Codec = codec;
             CodecTag = codecTag;
@@ -86,7 +86,8 @@ namespace EmbyClient.MsRest.Models
             Level = level;
             IsAnamorphic = isAnamorphic;
             ExtendedVideoType = extendedVideoType;
-            ExtendedVideoSubtype = extendedVideoSubtype;
+            ExtendedVideoSubType = extendedVideoSubType;
+            ExtendedVideoSubTypeDescription = extendedVideoSubTypeDescription;
             ItemId = itemId;
             ServerId = serverId;
             AttachmentSize = attachmentSize;
@@ -345,8 +346,13 @@ namespace EmbyClient.MsRest.Models
         /// 'DoviProfile61', 'DoviProfile76', 'DoviProfile81', 'DoviProfile82',
         /// 'DoviProfile83', 'DoviProfile84', 'DoviProfile85', 'DoviProfile92'
         /// </summary>
-        [JsonProperty(PropertyName = "ExtendedVideoSubtype")]
-        public string ExtendedVideoSubtype { get; set; }
+        [JsonProperty(PropertyName = "ExtendedVideoSubType")]
+        public string ExtendedVideoSubType { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ExtendedVideoSubTypeDescription")]
+        public string ExtendedVideoSubTypeDescription { get; set; }
 
         /// <summary>
         /// </summary>

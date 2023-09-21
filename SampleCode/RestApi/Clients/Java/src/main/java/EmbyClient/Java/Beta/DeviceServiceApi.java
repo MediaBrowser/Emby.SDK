@@ -173,12 +173,13 @@ public class DeviceServiceApi {
     }
     /**
      * Build call for getDevices
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getDevicesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getDevicesCall(String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -186,6 +187,8 @@ public class DeviceServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -220,9 +223,9 @@ public class DeviceServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getDevicesValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getDevicesValidateBeforeCall(String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getDevicesCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDevicesCall(sortOrder, progressListener, progressRequestListener);
         return call;
 
         
@@ -234,22 +237,24 @@ public class DeviceServiceApi {
     /**
      * Gets all devices
      * Requires authentication as administrator
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return QueryResultDevicesDeviceInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultDevicesDeviceInfo getDevices() throws ApiException {
-        ApiResponse<QueryResultDevicesDeviceInfo> resp = getDevicesWithHttpInfo();
+    public QueryResultDevicesDeviceInfo getDevices(String sortOrder) throws ApiException {
+        ApiResponse<QueryResultDevicesDeviceInfo> resp = getDevicesWithHttpInfo(sortOrder);
         return resp.getData();
     }
 
     /**
      * Gets all devices
      * Requires authentication as administrator
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return ApiResponse&lt;QueryResultDevicesDeviceInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultDevicesDeviceInfo> getDevicesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(null, null);
+    public ApiResponse<QueryResultDevicesDeviceInfo> getDevicesWithHttpInfo(String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(sortOrder, null, null);
         Type localVarReturnType = new TypeToken<QueryResultDevicesDeviceInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -257,11 +262,12 @@ public class DeviceServiceApi {
     /**
      * Gets all devices (asynchronously)
      * Requires authentication as administrator
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDevicesAsync(final ApiCallback<QueryResultDevicesDeviceInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDevicesAsync(String sortOrder, final ApiCallback<QueryResultDevicesDeviceInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -282,7 +288,7 @@ public class DeviceServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(sortOrder, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<QueryResultDevicesDeviceInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

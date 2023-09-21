@@ -22,7 +22,7 @@ namespace EmbyClient.MsRest.Models
         /// <summary>
         /// Initializes a new instance of the DevicesDeviceInfo class.
         /// </summary>
-        public DevicesDeviceInfo(string name = default(string), string id = default(string), long? internalId = default(long?), string reportedDeviceId = default(string), string lastUserName = default(string), string appName = default(string), string appVersion = default(string), string lastUserId = default(string), System.DateTime? dateLastActivity = default(System.DateTime?), string iconUrl = default(string))
+        public DevicesDeviceInfo(string name = default(string), string id = default(string), long? internalId = default(long?), string reportedDeviceId = default(string), string lastUserName = default(string), string appName = default(string), string appVersion = default(string), string lastUserId = default(string), System.DateTime? dateLastActivity = default(System.DateTime?), string iconUrl = default(string), string ipAddress = default(string))
         {
             Name = name;
             Id = id;
@@ -34,6 +34,7 @@ namespace EmbyClient.MsRest.Models
             LastUserId = lastUserId;
             DateLastActivity = dateLastActivity;
             IconUrl = iconUrl;
+            IpAddress = ipAddress;
             CustomInit();
         }
 
@@ -91,6 +92,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "IconUrl")]
         public string IconUrl { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "IpAddress")]
+        public string IpAddress { get; set; }
 
     }
 }

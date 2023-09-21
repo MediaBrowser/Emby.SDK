@@ -205,12 +205,12 @@
   
   
   <a id="MediaBrowser_Common_Updates_GithubUpdater_CheckForUpdateResult_" data-uid="MediaBrowser.Common.Updates.GithubUpdater.CheckForUpdateResult*"></a>
-  <h4 id="MediaBrowser_Common_Updates_GithubUpdater_CheckForUpdateResult_System_String_System_String_System_Version_MediaBrowser_Model_Updates_PackageVersionClass_System_String_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="MediaBrowser.Common.Updates.GithubUpdater.CheckForUpdateResult(System.String,System.String,System.Version,MediaBrowser.Model.Updates.PackageVersionClass,System.String,System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)">CheckForUpdateResult(String, String, Version, PackageVersionClass, String, String, String, TimeSpan, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Common_Updates_GithubUpdater_CheckForUpdateResult_System_String_System_String_System_Version_MediaBrowser_Model_Updates_PackageVersionClass_System_String_System_String_System_String_System_TimeSpan_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Common.Updates.GithubUpdater.CheckForUpdateResult(System.String,System.String,System.Version,MediaBrowser.Model.Updates.PackageVersionClass,System.String,System.String,System.String,System.TimeSpan,System.Boolean,System.Threading.CancellationToken)">CheckForUpdateResult(String, String, Version, PackageVersionClass, String, String, String, TimeSpan, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async Task&lt;CheckForUpdateResult&gt; CheckForUpdateResult(string organzation, string repository, Version minVersion, PackageVersionClass updateLevel, string assetFilename, string packageName, string targetFilename, TimeSpan cacheLength, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;CheckForUpdateResult&gt; CheckForUpdateResult(string organzation, string repository, Version minVersion, PackageVersionClass updateLevel, string assetFilename, string packageName, string targetFilename, TimeSpan cacheLength, bool debugLoggingOnly, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,6 +260,11 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
         <td><span class="parametername">cacheLength</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">debugLoggingOnly</span></td>
         <td></td>
       </tr>
       <tr>

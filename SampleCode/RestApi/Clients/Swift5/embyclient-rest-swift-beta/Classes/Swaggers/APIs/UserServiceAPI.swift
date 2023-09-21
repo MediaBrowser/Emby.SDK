@@ -175,6 +175,7 @@ open class UserServiceAPI {
     "AuthenticationProviderId" : "AuthenticationProviderId",
     "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,
@@ -293,10 +294,11 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersPrefixes(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, completion: @escaping ((_ data: [NameIdPair]?,_ error: Error?) -> Void)) {
-        getUsersPrefixesWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater).execute { (response, error) -> Void in
+    open class func getUsersPrefixes(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: [NameIdPair]?,_ error: Error?) -> Void)) {
+        getUsersPrefixesWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater, sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -324,10 +326,11 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
 
      - returns: RequestBuilder<[NameIdPair]> 
      */
-    open class func getUsersPrefixesWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil) -> RequestBuilder<[NameIdPair]> {
+    open class func getUsersPrefixesWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil) -> RequestBuilder<[NameIdPair]> {
         let path = "/Users/Prefixes"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -337,7 +340,8 @@ open class UserServiceAPI {
                         "IsDisabled": isDisabled, 
                         "StartIndex": startIndex?.encodeToJSON(), 
                         "Limit": limit?.encodeToJSON(), 
-                        "NameStartsWithOrGreater": nameStartsWithOrGreater
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "SortOrder": sortOrder
         ])
 
 
@@ -414,6 +418,7 @@ open class UserServiceAPI {
     "AuthenticationProviderId" : "AuthenticationProviderId",
     "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,
@@ -502,6 +507,7 @@ open class UserServiceAPI {
     "AuthenticationProviderId" : "AuthenticationProviderId",
     "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,
@@ -570,10 +576,11 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersQuery(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, completion: @escaping ((_ data: QueryResultUserDto?,_ error: Error?) -> Void)) {
-        getUsersQueryWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater).execute { (response, error) -> Void in
+    open class func getUsersQuery(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultUserDto?,_ error: Error?) -> Void)) {
+        getUsersQueryWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater, sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -638,6 +645,7 @@ open class UserServiceAPI {
       "AuthenticationProviderId" : "AuthenticationProviderId",
       "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
@@ -726,6 +734,7 @@ open class UserServiceAPI {
       "AuthenticationProviderId" : "AuthenticationProviderId",
       "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
@@ -774,10 +783,11 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
 
      - returns: RequestBuilder<QueryResultUserDto> 
      */
-    open class func getUsersQueryWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil) -> RequestBuilder<QueryResultUserDto> {
+    open class func getUsersQueryWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil) -> RequestBuilder<QueryResultUserDto> {
         let path = "/Users/Query"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -787,7 +797,8 @@ open class UserServiceAPI {
                         "IsDisabled": isDisabled, 
                         "StartIndex": startIndex?.encodeToJSON(), 
                         "Limit": limit?.encodeToJSON(), 
-                        "NameStartsWithOrGreater": nameStartsWithOrGreater
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "SortOrder": sortOrder
         ])
 
 
@@ -867,6 +878,7 @@ open class UserServiceAPI {
       "AuthenticationProviderId" : "AuthenticationProviderId",
       "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
@@ -978,12 +990,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -993,6 +1005,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1030,12 +1043,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -1045,6 +1058,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1123,12 +1137,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -1138,6 +1152,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1175,12 +1190,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -1190,6 +1205,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1711,6 +1727,7 @@ open class UserServiceAPI {
       "AuthenticationProviderId" : "AuthenticationProviderId",
       "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
@@ -1822,12 +1839,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -1837,6 +1854,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1874,12 +1892,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -1889,6 +1907,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1967,12 +1986,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -1982,6 +2001,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -2019,12 +2039,12 @@ open class UserServiceAPI {
           "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "ExtendedVideoSubtype" : "None",
           "AttachmentSize" : 5,
           "SubtitleLocationType" : "InternalStream",
           "RefFrames" : 2,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
@@ -2034,6 +2054,7 @@ open class UserServiceAPI {
           "StreamStartTimeTicks" : 7,
           "IsExternal" : true,
           "Level" : 4.965218492984954,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 7,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -2879,6 +2900,7 @@ open class UserServiceAPI {
     "AuthenticationProviderId" : "AuthenticationProviderId",
     "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,

@@ -572,12 +572,13 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUsersPrefixesCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersPrefixesCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -595,6 +596,8 @@ public class UserServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("Limit", limit));
         if (nameStartsWithOrGreater != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("NameStartsWithOrGreater", nameStartsWithOrGreater));
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -629,9 +632,9 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersPrefixesValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersPrefixesValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getUsersPrefixesCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersPrefixesCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         return call;
 
         
@@ -648,11 +651,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return List&lt;NameIdPair&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<NameIdPair> getUsersPrefixes(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        ApiResponse<List<NameIdPair>> resp = getUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+    public List<NameIdPair> getUsersPrefixes(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        ApiResponse<List<NameIdPair>> resp = getUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
         return resp.getData();
     }
 
@@ -664,11 +668,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return ApiResponse&lt;List&lt;NameIdPair&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<NameIdPair>> getUsersPrefixesWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, null, null);
+    public ApiResponse<List<NameIdPair>> getUsersPrefixesWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, null, null);
         Type localVarReturnType = new TypeToken<List<NameIdPair>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -681,11 +686,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUsersPrefixesAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ApiCallback<List<NameIdPair>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersPrefixesAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ApiCallback<List<NameIdPair>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -706,7 +712,7 @@ public class UserServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<NameIdPair>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -842,12 +848,13 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUsersQueryCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersQueryCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -865,6 +872,8 @@ public class UserServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("Limit", limit));
         if (nameStartsWithOrGreater != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("NameStartsWithOrGreater", nameStartsWithOrGreater));
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -899,9 +908,9 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersQueryValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersQueryValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getUsersQueryCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersQueryCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         return call;
 
         
@@ -918,11 +927,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return QueryResultUserDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultUserDto getUsersQuery(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        ApiResponse<QueryResultUserDto> resp = getUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+    public QueryResultUserDto getUsersQuery(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        ApiResponse<QueryResultUserDto> resp = getUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
         return resp.getData();
     }
 
@@ -934,11 +944,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return ApiResponse&lt;QueryResultUserDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultUserDto> getUsersQueryWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, null, null);
+    public ApiResponse<QueryResultUserDto> getUsersQueryWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, null, null);
         Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -951,11 +962,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUsersQueryAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ApiCallback<QueryResultUserDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersQueryAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ApiCallback<QueryResultUserDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -976,7 +988,7 @@ public class UserServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

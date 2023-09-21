@@ -164,8 +164,11 @@ public class MediaStream {
   @SerializedName("ExtendedVideoType")
   private ExtendedVideoTypes extendedVideoType = null;
 
-  @SerializedName("ExtendedVideoSubtype")
-  private ExtendedVideoSubTypes extendedVideoSubtype = null;
+  @SerializedName("ExtendedVideoSubType")
+  private ExtendedVideoSubTypes extendedVideoSubType = null;
+
+  @SerializedName("ExtendedVideoSubTypeDescription")
+  private String extendedVideoSubTypeDescription = null;
 
   @SerializedName("ItemId")
   private String itemId = null;
@@ -1010,22 +1013,40 @@ public class MediaStream {
     this.extendedVideoType = extendedVideoType;
   }
 
-  public MediaStream extendedVideoSubtype(ExtendedVideoSubTypes extendedVideoSubtype) {
-    this.extendedVideoSubtype = extendedVideoSubtype;
+  public MediaStream extendedVideoSubType(ExtendedVideoSubTypes extendedVideoSubType) {
+    this.extendedVideoSubType = extendedVideoSubType;
     return this;
   }
 
    /**
-   * Get extendedVideoSubtype
-   * @return extendedVideoSubtype
+   * Get extendedVideoSubType
+   * @return extendedVideoSubType
   **/
   @Schema(description = "")
-  public ExtendedVideoSubTypes getExtendedVideoSubtype() {
-    return extendedVideoSubtype;
+  public ExtendedVideoSubTypes getExtendedVideoSubType() {
+    return extendedVideoSubType;
   }
 
-  public void setExtendedVideoSubtype(ExtendedVideoSubTypes extendedVideoSubtype) {
-    this.extendedVideoSubtype = extendedVideoSubtype;
+  public void setExtendedVideoSubType(ExtendedVideoSubTypes extendedVideoSubType) {
+    this.extendedVideoSubType = extendedVideoSubType;
+  }
+
+  public MediaStream extendedVideoSubTypeDescription(String extendedVideoSubTypeDescription) {
+    this.extendedVideoSubTypeDescription = extendedVideoSubTypeDescription;
+    return this;
+  }
+
+   /**
+   * Get extendedVideoSubTypeDescription
+   * @return extendedVideoSubTypeDescription
+  **/
+  @Schema(description = "")
+  public String getExtendedVideoSubTypeDescription() {
+    return extendedVideoSubTypeDescription;
+  }
+
+  public void setExtendedVideoSubTypeDescription(String extendedVideoSubTypeDescription) {
+    this.extendedVideoSubTypeDescription = extendedVideoSubTypeDescription;
   }
 
   public MediaStream itemId(String itemId) {
@@ -1174,7 +1195,8 @@ public class MediaStream {
         Objects.equals(this.level, mediaStream.level) &&
         Objects.equals(this.isAnamorphic, mediaStream.isAnamorphic) &&
         Objects.equals(this.extendedVideoType, mediaStream.extendedVideoType) &&
-        Objects.equals(this.extendedVideoSubtype, mediaStream.extendedVideoSubtype) &&
+        Objects.equals(this.extendedVideoSubType, mediaStream.extendedVideoSubType) &&
+        Objects.equals(this.extendedVideoSubTypeDescription, mediaStream.extendedVideoSubTypeDescription) &&
         Objects.equals(this.itemId, mediaStream.itemId) &&
         Objects.equals(this.serverId, mediaStream.serverId) &&
         Objects.equals(this.attachmentSize, mediaStream.attachmentSize) &&
@@ -1184,7 +1206,7 @@ public class MediaStream {
 
   @Override
   public int hashCode() {
-    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubtype, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
+    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
   }
 
 
@@ -1239,7 +1261,8 @@ public class MediaStream {
     sb.append("    level: ").append(toIndentedString(level)).append("\n");
     sb.append("    isAnamorphic: ").append(toIndentedString(isAnamorphic)).append("\n");
     sb.append("    extendedVideoType: ").append(toIndentedString(extendedVideoType)).append("\n");
-    sb.append("    extendedVideoSubtype: ").append(toIndentedString(extendedVideoSubtype)).append("\n");
+    sb.append("    extendedVideoSubType: ").append(toIndentedString(extendedVideoSubType)).append("\n");
+    sb.append("    extendedVideoSubTypeDescription: ").append(toIndentedString(extendedVideoSubTypeDescription)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
     sb.append("    attachmentSize: ").append(toIndentedString(attachmentSize)).append("\n");

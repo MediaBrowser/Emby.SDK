@@ -20,7 +20,7 @@ import SubtitleLocationType from './SubtitleLocationType';
 /**
 * The MediaStream model module.
 * @module model/MediaStream
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class MediaStream {
     /**
@@ -185,8 +185,11 @@ export default class MediaStream {
             if (data.hasOwnProperty('ExtendedVideoType')) {
                 obj['ExtendedVideoType'] = ExtendedVideoTypes.constructFromObject(data['ExtendedVideoType']);
             }
-            if (data.hasOwnProperty('ExtendedVideoSubtype')) {
-                obj['ExtendedVideoSubtype'] = ExtendedVideoSubTypes.constructFromObject(data['ExtendedVideoSubtype']);
+            if (data.hasOwnProperty('ExtendedVideoSubType')) {
+                obj['ExtendedVideoSubType'] = ExtendedVideoSubTypes.constructFromObject(data['ExtendedVideoSubType']);
+            }
+            if (data.hasOwnProperty('ExtendedVideoSubTypeDescription')) {
+                obj['ExtendedVideoSubTypeDescription'] = ApiClient.convertToType(data['ExtendedVideoSubTypeDescription'], 'String');
             }
             if (data.hasOwnProperty('ItemId')) {
                 obj['ItemId'] = ApiClient.convertToType(data['ItemId'], 'String');
@@ -392,9 +395,13 @@ export default class MediaStream {
     */
     'ExtendedVideoType' = undefined;
     /**
-    * @member {module:model/ExtendedVideoSubTypes} ExtendedVideoSubtype
+    * @member {module:model/ExtendedVideoSubTypes} ExtendedVideoSubType
     */
-    'ExtendedVideoSubtype' = undefined;
+    'ExtendedVideoSubType' = undefined;
+    /**
+    * @member {String} ExtendedVideoSubTypeDescription
+    */
+    'ExtendedVideoSubTypeDescription' = undefined;
     /**
     * @member {String} ItemId
     */

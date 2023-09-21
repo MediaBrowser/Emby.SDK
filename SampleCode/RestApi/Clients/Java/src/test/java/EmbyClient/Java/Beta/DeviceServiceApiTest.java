@@ -52,7 +52,8 @@ public class DeviceServiceApiTest {
      */
     @Test
     public void getDevicesTest() throws Exception {
-        QueryResultDevicesDeviceInfo response = api.getDevices();
+        String sortOrder = null;
+        QueryResultDevicesDeviceInfo response = api.getDevices(sortOrder);
 
         // TODO: test validations
     }

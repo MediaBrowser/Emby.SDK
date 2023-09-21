@@ -17,7 +17,7 @@ import UserLibraryAddTags from '../model/UserLibraryAddTags';
 /**
 * TagService service.
 * @module EmbyClient.JavaScript.Beta/TagServiceApi
-* @version 4.8.0.46
+* @version 4.8.0.47
 */
 export default class TagServiceApi {
 
@@ -129,6 +129,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -258,6 +259,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -387,6 +389,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -516,6 +519,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -544,6 +548,136 @@ export default class TagServiceApi {
 
       return this.apiClient.callApi(
         '/Containers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getExtendedvideotypes operation.
+     * @callback module:EmbyClient.JavaScript.Beta/TagServiceApi~getExtendedvideotypesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/QueryResultUserLibraryTagItem} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets items based on a query.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript.Beta/TagServiceApi~getExtendedvideotypesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/QueryResultUserLibraryTagItem}
+     */
+    getExtendedvideotypes() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'ArtistType': opts['artistType'],
+        'MaxOfficialRating': opts['maxOfficialRating'],
+        'HasThemeSong': opts['hasThemeSong'],
+        'HasThemeVideo': opts['hasThemeVideo'],
+        'HasSubtitles': opts['hasSubtitles'],
+        'HasSpecialFeature': opts['hasSpecialFeature'],
+        'HasTrailer': opts['hasTrailer'],
+        'AdjacentTo': opts['adjacentTo'],
+        'MinIndexNumber': opts['minIndexNumber'],
+        'MinPlayers': opts['minPlayers'],
+        'MaxPlayers': opts['maxPlayers'],
+        'ParentIndexNumber': opts['parentIndexNumber'],
+        'HasParentalRating': opts['hasParentalRating'],
+        'IsHD': opts['isHD'],
+        'LocationTypes': opts['locationTypes'],
+        'ExcludeLocationTypes': opts['excludeLocationTypes'],
+        'IsMissing': opts['isMissing'],
+        'IsUnaired': opts['isUnaired'],
+        'MinCommunityRating': opts['minCommunityRating'],
+        'MinCriticRating': opts['minCriticRating'],
+        'AiredDuringSeason': opts['airedDuringSeason'],
+        'MinPremiereDate': opts['minPremiereDate'],
+        'MinDateLastSaved': opts['minDateLastSaved'],
+        'MinDateLastSavedForUser': opts['minDateLastSavedForUser'],
+        'MaxPremiereDate': opts['maxPremiereDate'],
+        'HasOverview': opts['hasOverview'],
+        'HasImdbId': opts['hasImdbId'],
+        'HasTmdbId': opts['hasTmdbId'],
+        'HasTvdbId': opts['hasTvdbId'],
+        'ExcludeItemIds': opts['excludeItemIds'],
+        'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'Recursive': opts['recursive'],
+        'SearchTerm': opts['searchTerm'],
+        'SortOrder': opts['sortOrder'],
+        'ParentId': opts['parentId'],
+        'Fields': opts['fields'],
+        'ExcludeItemTypes': opts['excludeItemTypes'],
+        'IncludeItemTypes': opts['includeItemTypes'],
+        'AnyProviderIdEquals': opts['anyProviderIdEquals'],
+        'Filters': opts['filters'],
+        'IsFavorite': opts['isFavorite'],
+        'IsMovie': opts['isMovie'],
+        'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
+        'IsNews': opts['isNews'],
+        'IsKids': opts['isKids'],
+        'IsSports': opts['isSports'],
+        'ProjectToMedia': opts['projectToMedia'],
+        'MediaTypes': opts['mediaTypes'],
+        'ImageTypes': opts['imageTypes'],
+        'SortBy': opts['sortBy'],
+        'IsPlayed': opts['isPlayed'],
+        'Genres': opts['genres'],
+        'OfficialRatings': opts['officialRatings'],
+        'Tags': opts['tags'],
+        'Years': opts['years'],
+        'EnableImages': opts['enableImages'],
+        'EnableUserData': opts['enableUserData'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'Person': opts['person'],
+        'PersonIds': opts['personIds'],
+        'PersonTypes': opts['personTypes'],
+        'Studios': opts['studios'],
+        'StudioIds': opts['studioIds'],
+        'Artists': opts['artists'],
+        'ArtistIds': opts['artistIds'],
+        'Albums': opts['albums'],
+        'Ids': opts['ids'],
+        'VideoTypes': opts['videoTypes'],
+        'Containers': opts['containers'],
+        'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
+        'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
+        'SubtitleCodecs': opts['subtitleCodecs'],
+        'Path': opts['path'],
+        'UserId': opts['userId'],
+        'MinOfficialRating': opts['minOfficialRating'],
+        'IsLocked': opts['isLocked'],
+        'IsPlaceHolder': opts['isPlaceHolder'],
+        'HasOfficialRating': opts['hasOfficialRating'],
+        'GroupItemsIntoCollections': opts['groupItemsIntoCollections'],
+        'Is3D': opts['is3D'],
+        'SeriesStatus': opts['seriesStatus'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'ArtistStartsWithOrGreater': opts['artistStartsWithOrGreater'],
+        'AlbumArtistStartsWithOrGreater': opts['albumArtistStartsWithOrGreater'],
+        'NameStartsWith': opts['nameStartsWith'],
+        'NameLessThan': opts['nameLessThan']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = QueryResultUserLibraryTagItem;
+
+      return this.apiClient.callApi(
+        '/ExtendedVideoTypes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -645,6 +779,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -774,6 +909,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -903,6 +1039,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -1032,6 +1169,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -1161,6 +1299,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -1290,6 +1429,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -1419,6 +1559,7 @@ export default class TagServiceApi {
         'AudioCodecs': opts['audioCodecs'],
         'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
