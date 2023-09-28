@@ -10,12 +10,15 @@ type ConfigurationUserConfiguration struct {
 	AudioLanguagePreference string `json:"AudioLanguagePreference,omitempty"`
 	PlayDefaultAudioTrack bool `json:"PlayDefaultAudioTrack,omitempty"`
 	SubtitleLanguagePreference string `json:"SubtitleLanguagePreference,omitempty"`
+	ProfilePin string `json:"ProfilePin,omitempty"`
 	DisplayMissingEpisodes bool `json:"DisplayMissingEpisodes,omitempty"`
 	SubtitleMode *ConfigurationSubtitlePlaybackMode `json:"SubtitleMode,omitempty"`
 	OrderedViews []string `json:"OrderedViews,omitempty"`
 	LatestItemsExcludes []string `json:"LatestItemsExcludes,omitempty"`
 	MyMediaExcludes []string `json:"MyMediaExcludes,omitempty"`
 	HidePlayedInLatest bool `json:"HidePlayedInLatest,omitempty"`
+	HidePlayedInMoreLikeThis bool `json:"HidePlayedInMoreLikeThis,omitempty"`
+	HidePlayedInSuggestions bool `json:"HidePlayedInSuggestions,omitempty"`
 	RememberAudioSelections bool `json:"RememberAudioSelections,omitempty"`
 	RememberSubtitleSelections bool `json:"RememberSubtitleSelections,omitempty"`
 	EnableNextEpisodeAutoPlay bool `json:"EnableNextEpisodeAutoPlay,omitempty"`

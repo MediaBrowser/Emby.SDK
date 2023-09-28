@@ -17,7 +17,7 @@ import DlnaTranscodeSeekInfo from './DlnaTranscodeSeekInfo';
 /**
 * The DlnaTranscodingProfile model module.
 * @module model/DlnaTranscodingProfile
-* @version 4.8.0.47
+* @version 4.8.0.48
 */
 export default class DlnaTranscodingProfile {
     /**
@@ -95,6 +95,12 @@ export default class DlnaTranscodingProfile {
             if (data.hasOwnProperty('MaxManifestSubtitles')) {
                 obj['MaxManifestSubtitles'] = ApiClient.convertToType(data['MaxManifestSubtitles'], 'Number');
             }
+            if (data.hasOwnProperty('MaxWidth')) {
+                obj['MaxWidth'] = ApiClient.convertToType(data['MaxWidth'], 'Number');
+            }
+            if (data.hasOwnProperty('MaxHeight')) {
+                obj['MaxHeight'] = ApiClient.convertToType(data['MaxHeight'], 'Number');
+            }
         }
         return obj;
     }
@@ -167,6 +173,14 @@ export default class DlnaTranscodingProfile {
     * @member {Number} MaxManifestSubtitles
     */
     'MaxManifestSubtitles' = undefined;
+    /**
+    * @member {Number} MaxWidth
+    */
+    'MaxWidth' = undefined;
+    /**
+    * @member {Number} MaxHeight
+    */
+    'MaxHeight' = undefined;
 
 
 

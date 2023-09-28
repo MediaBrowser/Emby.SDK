@@ -38,7 +38,9 @@ class DlnaTranscodingProfile(object):
         'break_on_non_key_frames': 'bool',
         'allow_interlaced_video_stream_copy': 'bool',
         'manifest_subtitles': 'str',
-        'max_manifest_subtitles': 'int'
+        'max_manifest_subtitles': 'int',
+        'max_width': 'int',
+        'max_height': 'int'
     }
 
     attribute_map = {
@@ -58,10 +60,12 @@ class DlnaTranscodingProfile(object):
         'break_on_non_key_frames': 'BreakOnNonKeyFrames',
         'allow_interlaced_video_stream_copy': 'AllowInterlacedVideoStreamCopy',
         'manifest_subtitles': 'ManifestSubtitles',
-        'max_manifest_subtitles': 'MaxManifestSubtitles'
+        'max_manifest_subtitles': 'MaxManifestSubtitles',
+        'max_width': 'MaxWidth',
+        'max_height': 'MaxHeight'
     }
 
-    def __init__(self, container=None, type=None, video_codec=None, audio_codec=None, protocol=None, estimate_content_length=None, enable_mpegts_m2_ts_mode=None, transcode_seek_info=None, copy_timestamps=None, context=None, max_audio_channels=None, min_segments=None, segment_length=None, break_on_non_key_frames=None, allow_interlaced_video_stream_copy=None, manifest_subtitles=None, max_manifest_subtitles=None):  # noqa: E501
+    def __init__(self, container=None, type=None, video_codec=None, audio_codec=None, protocol=None, estimate_content_length=None, enable_mpegts_m2_ts_mode=None, transcode_seek_info=None, copy_timestamps=None, context=None, max_audio_channels=None, min_segments=None, segment_length=None, break_on_non_key_frames=None, allow_interlaced_video_stream_copy=None, manifest_subtitles=None, max_manifest_subtitles=None, max_width=None, max_height=None):  # noqa: E501
         """DlnaTranscodingProfile - a model defined in Swagger"""  # noqa: E501
         self._container = None
         self._type = None
@@ -80,6 +84,8 @@ class DlnaTranscodingProfile(object):
         self._allow_interlaced_video_stream_copy = None
         self._manifest_subtitles = None
         self._max_manifest_subtitles = None
+        self._max_width = None
+        self._max_height = None
         self.discriminator = None
         if container is not None:
             self.container = container
@@ -115,6 +121,10 @@ class DlnaTranscodingProfile(object):
             self.manifest_subtitles = manifest_subtitles
         if max_manifest_subtitles is not None:
             self.max_manifest_subtitles = max_manifest_subtitles
+        if max_width is not None:
+            self.max_width = max_width
+        if max_height is not None:
+            self.max_height = max_height
 
     @property
     def container(self):
@@ -472,6 +482,48 @@ class DlnaTranscodingProfile(object):
         """
 
         self._max_manifest_subtitles = max_manifest_subtitles
+
+    @property
+    def max_width(self):
+        """Gets the max_width of this DlnaTranscodingProfile.  # noqa: E501
+
+
+        :return: The max_width of this DlnaTranscodingProfile.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_width
+
+    @max_width.setter
+    def max_width(self, max_width):
+        """Sets the max_width of this DlnaTranscodingProfile.
+
+
+        :param max_width: The max_width of this DlnaTranscodingProfile.  # noqa: E501
+        :type: int
+        """
+
+        self._max_width = max_width
+
+    @property
+    def max_height(self):
+        """Gets the max_height of this DlnaTranscodingProfile.  # noqa: E501
+
+
+        :return: The max_height of this DlnaTranscodingProfile.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_height
+
+    @max_height.setter
+    def max_height(self, max_height):
+        """Sets the max_height of this DlnaTranscodingProfile.
+
+
+        :param max_height: The max_height of this DlnaTranscodingProfile.  # noqa: E501
+        :type: int
+        """
+
+        self._max_height = max_height
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ArtistsService service.
 * @module EmbyClient.JavaScript.Beta/ArtistsServiceApi
-* @version 4.8.0.47
+* @version 4.8.0.48
 */
 export default class ArtistsServiceApi {
 
@@ -62,6 +62,10 @@ export default class ArtistsServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
@@ -101,6 +105,10 @@ export default class ArtistsServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
         'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
@@ -192,6 +200,10 @@ export default class ArtistsServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
@@ -231,6 +243,10 @@ export default class ArtistsServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
         'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],

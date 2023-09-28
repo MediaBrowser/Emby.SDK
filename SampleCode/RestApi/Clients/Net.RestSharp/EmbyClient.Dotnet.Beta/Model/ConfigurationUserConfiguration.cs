@@ -29,29 +29,35 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="audioLanguagePreference">audioLanguagePreference.</param>
         /// <param name="playDefaultAudioTrack">playDefaultAudioTrack.</param>
         /// <param name="subtitleLanguagePreference">subtitleLanguagePreference.</param>
+        /// <param name="profilePin">profilePin.</param>
         /// <param name="displayMissingEpisodes">displayMissingEpisodes.</param>
         /// <param name="subtitleMode">subtitleMode.</param>
         /// <param name="orderedViews">orderedViews.</param>
         /// <param name="latestItemsExcludes">latestItemsExcludes.</param>
         /// <param name="myMediaExcludes">myMediaExcludes.</param>
         /// <param name="hidePlayedInLatest">hidePlayedInLatest.</param>
+        /// <param name="hidePlayedInMoreLikeThis">hidePlayedInMoreLikeThis.</param>
+        /// <param name="hidePlayedInSuggestions">hidePlayedInSuggestions.</param>
         /// <param name="rememberAudioSelections">rememberAudioSelections.</param>
         /// <param name="rememberSubtitleSelections">rememberSubtitleSelections.</param>
         /// <param name="enableNextEpisodeAutoPlay">enableNextEpisodeAutoPlay.</param>
         /// <param name="resumeRewindSeconds">resumeRewindSeconds.</param>
         /// <param name="introSkipMode">introSkipMode.</param>
         /// <param name="enableLocalPassword">enableLocalPassword.</param>
-        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), bool? displayMissingEpisodes = default(bool?), ConfigurationSubtitlePlaybackMode subtitleMode = default(ConfigurationSubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), ConfigurationSegmentSkipMode introSkipMode = default(ConfigurationSegmentSkipMode), bool? enableLocalPassword = default(bool?))
+        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), ConfigurationSubtitlePlaybackMode subtitleMode = default(ConfigurationSubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), ConfigurationSegmentSkipMode introSkipMode = default(ConfigurationSegmentSkipMode), bool? enableLocalPassword = default(bool?))
         {
             this.AudioLanguagePreference = audioLanguagePreference;
             this.PlayDefaultAudioTrack = playDefaultAudioTrack;
             this.SubtitleLanguagePreference = subtitleLanguagePreference;
+            this.ProfilePin = profilePin;
             this.DisplayMissingEpisodes = displayMissingEpisodes;
             this.SubtitleMode = subtitleMode;
             this.OrderedViews = orderedViews;
             this.LatestItemsExcludes = latestItemsExcludes;
             this.MyMediaExcludes = myMediaExcludes;
             this.HidePlayedInLatest = hidePlayedInLatest;
+            this.HidePlayedInMoreLikeThis = hidePlayedInMoreLikeThis;
+            this.HidePlayedInSuggestions = hidePlayedInSuggestions;
             this.RememberAudioSelections = rememberAudioSelections;
             this.RememberSubtitleSelections = rememberSubtitleSelections;
             this.EnableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay;
@@ -77,6 +83,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="SubtitleLanguagePreference", EmitDefaultValue=false)]
         public string SubtitleLanguagePreference { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ProfilePin
+        /// </summary>
+        [DataMember(Name="ProfilePin", EmitDefaultValue=false)]
+        public string ProfilePin { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayMissingEpisodes
@@ -113,6 +125,18 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="HidePlayedInLatest", EmitDefaultValue=false)]
         public bool? HidePlayedInLatest { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HidePlayedInMoreLikeThis
+        /// </summary>
+        [DataMember(Name="HidePlayedInMoreLikeThis", EmitDefaultValue=false)]
+        public bool? HidePlayedInMoreLikeThis { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HidePlayedInSuggestions
+        /// </summary>
+        [DataMember(Name="HidePlayedInSuggestions", EmitDefaultValue=false)]
+        public bool? HidePlayedInSuggestions { get; set; }
 
         /// <summary>
         /// Gets or Sets RememberAudioSelections
@@ -161,12 +185,15 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  AudioLanguagePreference: ").Append(AudioLanguagePreference).Append("\n");
             sb.Append("  PlayDefaultAudioTrack: ").Append(PlayDefaultAudioTrack).Append("\n");
             sb.Append("  SubtitleLanguagePreference: ").Append(SubtitleLanguagePreference).Append("\n");
+            sb.Append("  ProfilePin: ").Append(ProfilePin).Append("\n");
             sb.Append("  DisplayMissingEpisodes: ").Append(DisplayMissingEpisodes).Append("\n");
             sb.Append("  SubtitleMode: ").Append(SubtitleMode).Append("\n");
             sb.Append("  OrderedViews: ").Append(OrderedViews).Append("\n");
             sb.Append("  LatestItemsExcludes: ").Append(LatestItemsExcludes).Append("\n");
             sb.Append("  MyMediaExcludes: ").Append(MyMediaExcludes).Append("\n");
             sb.Append("  HidePlayedInLatest: ").Append(HidePlayedInLatest).Append("\n");
+            sb.Append("  HidePlayedInMoreLikeThis: ").Append(HidePlayedInMoreLikeThis).Append("\n");
+            sb.Append("  HidePlayedInSuggestions: ").Append(HidePlayedInSuggestions).Append("\n");
             sb.Append("  RememberAudioSelections: ").Append(RememberAudioSelections).Append("\n");
             sb.Append("  RememberSubtitleSelections: ").Append(RememberSubtitleSelections).Append("\n");
             sb.Append("  EnableNextEpisodeAutoPlay: ").Append(EnableNextEpisodeAutoPlay).Append("\n");
@@ -223,6 +250,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.SubtitleLanguagePreference.Equals(input.SubtitleLanguagePreference))
                 ) && 
                 (
+                    this.ProfilePin == input.ProfilePin ||
+                    (this.ProfilePin != null &&
+                    this.ProfilePin.Equals(input.ProfilePin))
+                ) && 
+                (
                     this.DisplayMissingEpisodes == input.DisplayMissingEpisodes ||
                     (this.DisplayMissingEpisodes != null &&
                     this.DisplayMissingEpisodes.Equals(input.DisplayMissingEpisodes))
@@ -254,6 +286,16 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.HidePlayedInLatest == input.HidePlayedInLatest ||
                     (this.HidePlayedInLatest != null &&
                     this.HidePlayedInLatest.Equals(input.HidePlayedInLatest))
+                ) && 
+                (
+                    this.HidePlayedInMoreLikeThis == input.HidePlayedInMoreLikeThis ||
+                    (this.HidePlayedInMoreLikeThis != null &&
+                    this.HidePlayedInMoreLikeThis.Equals(input.HidePlayedInMoreLikeThis))
+                ) && 
+                (
+                    this.HidePlayedInSuggestions == input.HidePlayedInSuggestions ||
+                    (this.HidePlayedInSuggestions != null &&
+                    this.HidePlayedInSuggestions.Equals(input.HidePlayedInSuggestions))
                 ) && 
                 (
                     this.RememberAudioSelections == input.RememberAudioSelections ||
@@ -302,6 +344,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.PlayDefaultAudioTrack.GetHashCode();
                 if (this.SubtitleLanguagePreference != null)
                     hashCode = hashCode * 59 + this.SubtitleLanguagePreference.GetHashCode();
+                if (this.ProfilePin != null)
+                    hashCode = hashCode * 59 + this.ProfilePin.GetHashCode();
                 if (this.DisplayMissingEpisodes != null)
                     hashCode = hashCode * 59 + this.DisplayMissingEpisodes.GetHashCode();
                 if (this.SubtitleMode != null)
@@ -314,6 +358,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.MyMediaExcludes.GetHashCode();
                 if (this.HidePlayedInLatest != null)
                     hashCode = hashCode * 59 + this.HidePlayedInLatest.GetHashCode();
+                if (this.HidePlayedInMoreLikeThis != null)
+                    hashCode = hashCode * 59 + this.HidePlayedInMoreLikeThis.GetHashCode();
+                if (this.HidePlayedInSuggestions != null)
+                    hashCode = hashCode * 59 + this.HidePlayedInSuggestions.GetHashCode();
                 if (this.RememberAudioSelections != null)
                     hashCode = hashCode * 59 + this.RememberAudioSelections.GetHashCode();
                 if (this.RememberSubtitleSelections != null)

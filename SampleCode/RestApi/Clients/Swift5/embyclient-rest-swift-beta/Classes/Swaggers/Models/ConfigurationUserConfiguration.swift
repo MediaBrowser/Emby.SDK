@@ -14,12 +14,15 @@ public struct ConfigurationUserConfiguration: Codable {
     public var audioLanguagePreference: String?
     public var playDefaultAudioTrack: Bool?
     public var subtitleLanguagePreference: String?
+    public var profilePin: String?
     public var displayMissingEpisodes: Bool?
     public var subtitleMode: ConfigurationSubtitlePlaybackMode?
     public var orderedViews: [String]?
     public var latestItemsExcludes: [String]?
     public var myMediaExcludes: [String]?
     public var hidePlayedInLatest: Bool?
+    public var hidePlayedInMoreLikeThis: Bool?
+    public var hidePlayedInSuggestions: Bool?
     public var rememberAudioSelections: Bool?
     public var rememberSubtitleSelections: Bool?
     public var enableNextEpisodeAutoPlay: Bool?
@@ -27,16 +30,19 @@ public struct ConfigurationUserConfiguration: Codable {
     public var introSkipMode: ConfigurationSegmentSkipMode?
     public var enableLocalPassword: Bool?
 
-    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: ConfigurationSubtitlePlaybackMode? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: ConfigurationSegmentSkipMode? = nil, enableLocalPassword: Bool? = nil) {
+    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, profilePin: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: ConfigurationSubtitlePlaybackMode? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, hidePlayedInMoreLikeThis: Bool? = nil, hidePlayedInSuggestions: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: ConfigurationSegmentSkipMode? = nil, enableLocalPassword: Bool? = nil) {
         self.audioLanguagePreference = audioLanguagePreference
         self.playDefaultAudioTrack = playDefaultAudioTrack
         self.subtitleLanguagePreference = subtitleLanguagePreference
+        self.profilePin = profilePin
         self.displayMissingEpisodes = displayMissingEpisodes
         self.subtitleMode = subtitleMode
         self.orderedViews = orderedViews
         self.latestItemsExcludes = latestItemsExcludes
         self.myMediaExcludes = myMediaExcludes
         self.hidePlayedInLatest = hidePlayedInLatest
+        self.hidePlayedInMoreLikeThis = hidePlayedInMoreLikeThis
+        self.hidePlayedInSuggestions = hidePlayedInSuggestions
         self.rememberAudioSelections = rememberAudioSelections
         self.rememberSubtitleSelections = rememberSubtitleSelections
         self.enableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay
@@ -49,12 +55,15 @@ public struct ConfigurationUserConfiguration: Codable {
         case audioLanguagePreference = "AudioLanguagePreference"
         case playDefaultAudioTrack = "PlayDefaultAudioTrack"
         case subtitleLanguagePreference = "SubtitleLanguagePreference"
+        case profilePin = "ProfilePin"
         case displayMissingEpisodes = "DisplayMissingEpisodes"
         case subtitleMode = "SubtitleMode"
         case orderedViews = "OrderedViews"
         case latestItemsExcludes = "LatestItemsExcludes"
         case myMediaExcludes = "MyMediaExcludes"
         case hidePlayedInLatest = "HidePlayedInLatest"
+        case hidePlayedInMoreLikeThis = "HidePlayedInMoreLikeThis"
+        case hidePlayedInSuggestions = "HidePlayedInSuggestions"
         case rememberAudioSelections = "RememberAudioSelections"
         case rememberSubtitleSelections = "RememberSubtitleSelections"
         case enableNextEpisodeAutoPlay = "EnableNextEpisodeAutoPlay"

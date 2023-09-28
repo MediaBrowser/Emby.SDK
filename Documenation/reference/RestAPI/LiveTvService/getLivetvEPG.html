@@ -189,25 +189,157 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">UserId</span></td>
+        <td><span class="parametername">IsLiked</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional filter by user and attach user data.</p>
+        <td><p>Filter by channels that are liked, or not.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">GenreIds</span></td>
+        <td><span class="parametername">IsDisliked</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>The genres to return guide information for.</p>
+        <td><p>Filter by channels that are disliked, or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">EnableFavoriteSorting</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Incorporate favorite and like status into channel sorting.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AddCurrentProgram</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Adds current program info to each channel</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ChannelIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>The channels to return guide information for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ArtistType</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Artist or AlbumArtist</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxOfficialRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasThemeSong</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with theme songs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasThemeVideo</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with theme videos.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasSubtitles</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with subtitles.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasSpecialFeature</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with special features.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasTrailer</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with trailers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AdjacentTo</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Return items that are siblings of a supplied item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinIndexNumber</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum index number.</p>
 </td>
       </tr>
       <tr>
@@ -255,6 +387,237 @@
 </td>
       </tr>
       <tr>
+        <td><span class="parametername">MinPlayers</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum number of game players.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxPlayers</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by maximum number of game players.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ParentIndexNumber</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by parent index number.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasParentalRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have or do not have a parental rating</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsHD</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are HD or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">LocationTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExcludeLocationTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsMissing</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are missing episodes or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsUnaired</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are unaired episodes or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinCommunityRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum community rating.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinCriticRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum critic rating.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AiredDuringSeason</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Gets all episodes that aired during a season, including specials.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinPremiereDate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The minimum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinDateLastSaved</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The minimum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinDateLastSavedForUser</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The minimum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxPremiereDate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasOverview</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have an overview or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasImdbId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have an imdb id or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasTmdbId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have a tmdb id or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasTvdbId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have a tvdb id or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExcludeItemIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="parametername">StartIndex</span></td>
         <td>query</td>
         <td>
@@ -263,6 +626,127 @@
         </td>
         <td></td>
         <td><p>Optional. The record index to start at. All items with a lower index will be dropped from the results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Limit</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum number of records to return</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Recursive</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>When searching within folders, this determines whether or not the search will be recursive. true/false</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SearchTerm</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Enter a search term to perform a search request</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SortOrder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Sort Order - Ascending,Descending</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ParentId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Specify this to localize the search to a specific item or folder. Omit to use the root</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Fields</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExcludeItemTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IncludeItemTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AnyProviderIdEquals</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Filters</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsFavorite</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are marked as favorite, or not.</p>
 </td>
       </tr>
       <tr>
@@ -285,6 +769,17 @@
         </td>
         <td></td>
         <td><p>Optional filter for series.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsFolder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter for folders.</p>
 </td>
       </tr>
       <tr>
@@ -321,58 +816,146 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">Limit</span></td>
+        <td><span class="parametername">IsNew</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional. The maximum number of records to return</p>
+        <td><p>Optional filter for IsNew.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">IsFavorite</span></td>
+        <td><span class="parametername">IsPremiere</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Filter by channels that are favorites, or not.</p>
+        <td><p>Optional filter for IsPremiere.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">IsLiked</span></td>
+        <td><span class="parametername">IsNewOrPremiere</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Filter by channels that are liked, or not.</p>
+        <td><p>Optional filter for IsNewOrPremiere.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">IsDisliked</span></td>
+        <td><span class="parametername">IsRepeat</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Filter by channels that are disliked, or not.</p>
+        <td><p>Optional filter for IsRepeat.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">EnableFavoriteSorting</span></td>
+        <td><span class="parametername">ProjectToMedia</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Incorporate favorite and like status into channel sorting.</p>
+        <td><p>ProjectToMedia</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MediaTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by MediaType. Allows multiple, comma delimited.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ImageTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SortBy</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsPlayed</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are played, or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Genres</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">OfficialRatings</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Tags</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Years</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.</p>
 </td>
       </tr>
       <tr>
@@ -384,6 +967,17 @@
         </td>
         <td></td>
         <td><p>Optional, include image information in output</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">EnableUserData</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional, include user data</p>
 </td>
       </tr>
       <tr>
@@ -409,47 +1003,333 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">Fields</span></td>
+        <td><span class="parametername">Person</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines</p>
+        <td><p>Optional. If specified, results will be filtered to include only those containing the specified person.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">AddCurrentProgram</span></td>
+        <td><span class="parametername">PersonIds</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional. Adds current program info to each channel</p>
+        <td><p>Optional. If specified, results will be filtered to include only those containing the specified person.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">EnableUserData</span></td>
+        <td><span class="parametername">PersonTypes</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional, include user data</p>
+        <td><p>Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">ChannelIds</span></td>
+        <td><span class="parametername">Studios</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>The channels to return guide information for.</p>
+        <td><p>Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">StudioIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Artists</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ArtistIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Albums</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Ids</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">VideoTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Containers</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by Container. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioCodecs</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by AudioCodec. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioLayouts</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by AudioLayout. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">VideoCodecs</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by VideoCodec. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExtendedVideoTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SubtitleCodecs</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by SubtitleCodec. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Path</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by Path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">UserId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>User Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinOfficialRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsLocked</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are locked.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsPlaceHolder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are placeholders</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasOfficialRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have official ratings</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">GroupItemsIntoCollections</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Whether or not to hide items behind their boxsets.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Is3D</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are 3D, or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SeriesStatus</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by Series Status. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">NameStartsWithOrGreater</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ArtistStartsWithOrGreater</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AlbumArtistStartsWithOrGreater</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">NameStartsWith</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">NameLessThan</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is equally or lesser than a given input string.</p>
 </td>
       </tr>
     </tbody>

@@ -196,6 +196,9 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
     "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
@@ -439,6 +442,9 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
     "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
@@ -528,6 +534,9 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
     "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
@@ -666,6 +675,9 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
       "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
@@ -755,6 +767,9 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
       "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
@@ -899,6 +914,9 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
       "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
@@ -1748,6 +1766,9 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
       "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
@@ -2505,6 +2526,53 @@ open class UserServiceAPI {
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
     /**
+     Updates a user configuration
+
+     - parameter body: (body) Binary stream 
+     - parameter _id: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByIdConfigurationPartial(body: Object, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByIdConfigurationPartialWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates a user configuration
+     - POST /Users/{Id}/Configuration/Partial
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) Binary stream 
+     - parameter _id: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByIdConfigurationPartialWithRequestBuilder(body: Object, _id: String) -> RequestBuilder<Void> {
+        var path = "/Users/{Id}/Configuration/Partial"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
      Deletes a user
 
      - parameter _id: (path)  
@@ -2921,6 +2989,9 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
     "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",

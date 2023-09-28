@@ -28,8 +28,10 @@ public struct DlnaTranscodingProfile: Codable {
     public var allowInterlacedVideoStreamCopy: Bool?
     public var manifestSubtitles: String?
     public var maxManifestSubtitles: Int?
+    public var maxWidth: Int?
+    public var maxHeight: Int?
 
-    public init(container: String? = nil, type: DlnaDlnaProfileType? = nil, videoCodec: String? = nil, audioCodec: String? = nil, _protocol: String? = nil, estimateContentLength: Bool? = nil, enableMpegtsM2TsMode: Bool? = nil, transcodeSeekInfo: DlnaTranscodeSeekInfo? = nil, copyTimestamps: Bool? = nil, context: DlnaEncodingContext? = nil, maxAudioChannels: String? = nil, minSegments: Int? = nil, segmentLength: Int? = nil, breakOnNonKeyFrames: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, manifestSubtitles: String? = nil, maxManifestSubtitles: Int? = nil) {
+    public init(container: String? = nil, type: DlnaDlnaProfileType? = nil, videoCodec: String? = nil, audioCodec: String? = nil, _protocol: String? = nil, estimateContentLength: Bool? = nil, enableMpegtsM2TsMode: Bool? = nil, transcodeSeekInfo: DlnaTranscodeSeekInfo? = nil, copyTimestamps: Bool? = nil, context: DlnaEncodingContext? = nil, maxAudioChannels: String? = nil, minSegments: Int? = nil, segmentLength: Int? = nil, breakOnNonKeyFrames: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, manifestSubtitles: String? = nil, maxManifestSubtitles: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil) {
         self.container = container
         self.type = type
         self.videoCodec = videoCodec
@@ -47,6 +49,8 @@ public struct DlnaTranscodingProfile: Codable {
         self.allowInterlacedVideoStreamCopy = allowInterlacedVideoStreamCopy
         self.manifestSubtitles = manifestSubtitles
         self.maxManifestSubtitles = maxManifestSubtitles
+        self.maxWidth = maxWidth
+        self.maxHeight = maxHeight
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -67,6 +71,8 @@ public struct DlnaTranscodingProfile: Codable {
         case allowInterlacedVideoStreamCopy = "AllowInterlacedVideoStreamCopy"
         case manifestSubtitles = "ManifestSubtitles"
         case maxManifestSubtitles = "MaxManifestSubtitles"
+        case maxWidth = "MaxWidth"
+        case maxHeight = "MaxHeight"
     }
 
 }

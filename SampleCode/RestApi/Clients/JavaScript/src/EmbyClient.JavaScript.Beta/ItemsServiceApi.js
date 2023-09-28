@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ItemsService service.
 * @module EmbyClient.JavaScript.Beta/ItemsServiceApi
-* @version 4.8.0.47
+* @version 4.8.0.48
 */
 export default class ItemsServiceApi {
 
@@ -61,6 +61,10 @@ export default class ItemsServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
@@ -100,6 +104,10 @@ export default class ItemsServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
         'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
@@ -192,6 +200,10 @@ export default class ItemsServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
@@ -231,6 +243,10 @@ export default class ItemsServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
         'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
@@ -322,6 +338,10 @@ export default class ItemsServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
@@ -361,6 +381,10 @@ export default class ItemsServiceApi {
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
         'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],

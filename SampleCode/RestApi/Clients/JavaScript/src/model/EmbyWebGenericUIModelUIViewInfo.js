@@ -18,7 +18,7 @@ import GenericEditIEditObjectContainer from './GenericEditIEditObjectContainer';
 /**
 * The EmbyWebGenericUIModelUIViewInfo model module.
 * @module model/EmbyWebGenericUIModelUIViewInfo
-* @version 4.8.0.47
+* @version 4.8.0.48
 */
 export default class EmbyWebGenericUIModelUIViewInfo {
     /**

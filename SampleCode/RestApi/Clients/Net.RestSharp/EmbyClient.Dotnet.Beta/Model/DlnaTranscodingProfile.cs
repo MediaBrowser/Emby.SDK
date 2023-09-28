@@ -43,7 +43,9 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="allowInterlacedVideoStreamCopy">allowInterlacedVideoStreamCopy.</param>
         /// <param name="manifestSubtitles">manifestSubtitles.</param>
         /// <param name="maxManifestSubtitles">maxManifestSubtitles.</param>
-        public DlnaTranscodingProfile(string container = default(string), DlnaDlnaProfileType type = default(DlnaDlnaProfileType), string videoCodec = default(string), string audioCodec = default(string), string protocol = default(string), bool? estimateContentLength = default(bool?), bool? enableMpegtsM2TsMode = default(bool?), DlnaTranscodeSeekInfo transcodeSeekInfo = default(DlnaTranscodeSeekInfo), bool? copyTimestamps = default(bool?), DlnaEncodingContext context = default(DlnaEncodingContext), string maxAudioChannels = default(string), int? minSegments = default(int?), int? segmentLength = default(int?), bool? breakOnNonKeyFrames = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), string manifestSubtitles = default(string), int? maxManifestSubtitles = default(int?))
+        /// <param name="maxWidth">maxWidth.</param>
+        /// <param name="maxHeight">maxHeight.</param>
+        public DlnaTranscodingProfile(string container = default(string), DlnaDlnaProfileType type = default(DlnaDlnaProfileType), string videoCodec = default(string), string audioCodec = default(string), string protocol = default(string), bool? estimateContentLength = default(bool?), bool? enableMpegtsM2TsMode = default(bool?), DlnaTranscodeSeekInfo transcodeSeekInfo = default(DlnaTranscodeSeekInfo), bool? copyTimestamps = default(bool?), DlnaEncodingContext context = default(DlnaEncodingContext), string maxAudioChannels = default(string), int? minSegments = default(int?), int? segmentLength = default(int?), bool? breakOnNonKeyFrames = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), string manifestSubtitles = default(string), int? maxManifestSubtitles = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?))
         {
             this.Container = container;
             this.Type = type;
@@ -62,6 +64,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.AllowInterlacedVideoStreamCopy = allowInterlacedVideoStreamCopy;
             this.ManifestSubtitles = manifestSubtitles;
             this.MaxManifestSubtitles = maxManifestSubtitles;
+            this.MaxWidth = maxWidth;
+            this.MaxHeight = maxHeight;
         }
         
         /// <summary>
@@ -167,6 +171,18 @@ namespace EmbyClient.Dotnet.Beta.Model
         public int? MaxManifestSubtitles { get; set; }
 
         /// <summary>
+        /// Gets or Sets MaxWidth
+        /// </summary>
+        [DataMember(Name="MaxWidth", EmitDefaultValue=false)]
+        public int? MaxWidth { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MaxHeight
+        /// </summary>
+        [DataMember(Name="MaxHeight", EmitDefaultValue=false)]
+        public int? MaxHeight { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -191,6 +207,8 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  AllowInterlacedVideoStreamCopy: ").Append(AllowInterlacedVideoStreamCopy).Append("\n");
             sb.Append("  ManifestSubtitles: ").Append(ManifestSubtitles).Append("\n");
             sb.Append("  MaxManifestSubtitles: ").Append(MaxManifestSubtitles).Append("\n");
+            sb.Append("  MaxWidth: ").Append(MaxWidth).Append("\n");
+            sb.Append("  MaxHeight: ").Append(MaxHeight).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -309,6 +327,16 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.MaxManifestSubtitles == input.MaxManifestSubtitles ||
                     (this.MaxManifestSubtitles != null &&
                     this.MaxManifestSubtitles.Equals(input.MaxManifestSubtitles))
+                ) && 
+                (
+                    this.MaxWidth == input.MaxWidth ||
+                    (this.MaxWidth != null &&
+                    this.MaxWidth.Equals(input.MaxWidth))
+                ) && 
+                (
+                    this.MaxHeight == input.MaxHeight ||
+                    (this.MaxHeight != null &&
+                    this.MaxHeight.Equals(input.MaxHeight))
                 );
         }
 
@@ -355,6 +383,10 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ManifestSubtitles.GetHashCode();
                 if (this.MaxManifestSubtitles != null)
                     hashCode = hashCode * 59 + this.MaxManifestSubtitles.GetHashCode();
+                if (this.MaxWidth != null)
+                    hashCode = hashCode * 59 + this.MaxWidth.GetHashCode();
+                if (this.MaxHeight != null)
+                    hashCode = hashCode * 59 + this.MaxHeight.GetHashCode();
                 return hashCode;
             }
         }

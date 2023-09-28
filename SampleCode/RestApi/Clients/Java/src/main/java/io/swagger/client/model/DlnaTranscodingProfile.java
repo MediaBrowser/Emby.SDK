@@ -74,6 +74,12 @@ public class DlnaTranscodingProfile {
   @SerializedName("MaxManifestSubtitles")
   private Integer maxManifestSubtitles = null;
 
+  @SerializedName("MaxWidth")
+  private Integer maxWidth = null;
+
+  @SerializedName("MaxHeight")
+  private Integer maxHeight = null;
+
   public DlnaTranscodingProfile container(String container) {
     this.container = container;
     return this;
@@ -380,6 +386,42 @@ public class DlnaTranscodingProfile {
     this.maxManifestSubtitles = maxManifestSubtitles;
   }
 
+  public DlnaTranscodingProfile maxWidth(Integer maxWidth) {
+    this.maxWidth = maxWidth;
+    return this;
+  }
+
+   /**
+   * Get maxWidth
+   * @return maxWidth
+  **/
+  @Schema(description = "")
+  public Integer getMaxWidth() {
+    return maxWidth;
+  }
+
+  public void setMaxWidth(Integer maxWidth) {
+    this.maxWidth = maxWidth;
+  }
+
+  public DlnaTranscodingProfile maxHeight(Integer maxHeight) {
+    this.maxHeight = maxHeight;
+    return this;
+  }
+
+   /**
+   * Get maxHeight
+   * @return maxHeight
+  **/
+  @Schema(description = "")
+  public Integer getMaxHeight() {
+    return maxHeight;
+  }
+
+  public void setMaxHeight(Integer maxHeight) {
+    this.maxHeight = maxHeight;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -406,12 +448,14 @@ public class DlnaTranscodingProfile {
         Objects.equals(this.breakOnNonKeyFrames, dlnaTranscodingProfile.breakOnNonKeyFrames) &&
         Objects.equals(this.allowInterlacedVideoStreamCopy, dlnaTranscodingProfile.allowInterlacedVideoStreamCopy) &&
         Objects.equals(this.manifestSubtitles, dlnaTranscodingProfile.manifestSubtitles) &&
-        Objects.equals(this.maxManifestSubtitles, dlnaTranscodingProfile.maxManifestSubtitles);
+        Objects.equals(this.maxManifestSubtitles, dlnaTranscodingProfile.maxManifestSubtitles) &&
+        Objects.equals(this.maxWidth, dlnaTranscodingProfile.maxWidth) &&
+        Objects.equals(this.maxHeight, dlnaTranscodingProfile.maxHeight);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(container, type, videoCodec, audioCodec, protocol, estimateContentLength, enableMpegtsM2TsMode, transcodeSeekInfo, copyTimestamps, context, maxAudioChannels, minSegments, segmentLength, breakOnNonKeyFrames, allowInterlacedVideoStreamCopy, manifestSubtitles, maxManifestSubtitles);
+    return Objects.hash(container, type, videoCodec, audioCodec, protocol, estimateContentLength, enableMpegtsM2TsMode, transcodeSeekInfo, copyTimestamps, context, maxAudioChannels, minSegments, segmentLength, breakOnNonKeyFrames, allowInterlacedVideoStreamCopy, manifestSubtitles, maxManifestSubtitles, maxWidth, maxHeight);
   }
 
 
@@ -437,6 +481,8 @@ public class DlnaTranscodingProfile {
     sb.append("    allowInterlacedVideoStreamCopy: ").append(toIndentedString(allowInterlacedVideoStreamCopy)).append("\n");
     sb.append("    manifestSubtitles: ").append(toIndentedString(manifestSubtitles)).append("\n");
     sb.append("    maxManifestSubtitles: ").append(toIndentedString(maxManifestSubtitles)).append("\n");
+    sb.append("    maxWidth: ").append(toIndentedString(maxWidth)).append("\n");
+    sb.append("    maxHeight: ").append(toIndentedString(maxHeight)).append("\n");
     sb.append("}");
     return sb.toString();
   }

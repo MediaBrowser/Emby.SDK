@@ -28,7 +28,7 @@ import UsersUserPolicy from '../model/UsersUserPolicy';
 /**
 * UserService service.
 * @module EmbyClient.JavaScript.Beta/UserServiceApi
-* @version 4.8.0.47
+* @version 4.8.0.48
 */
 export default class UserServiceApi {
 
@@ -467,6 +467,43 @@ export default class UserServiceApi {
 
       return this.apiClient.callApi(
         '/Users/{Id}/Configuration', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postUsersByIdConfigurationPartial operation.
+     * @callback module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersByIdConfigurationPartialCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates a user configuration
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersByIdConfigurationPartialCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postUsersByIdConfigurationPartial() {
+      let postBody = body;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/octet-stream'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{Id}/Configuration/Partial', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -30,17 +30,20 @@ namespace EmbyClient.MsRest.Models
         /// 'Always', 'OnlyForced', 'None', 'Smart'</param>
         /// <param name="introSkipMode">Possible values include: 'ShowButton',
         /// 'AutoSkip', 'None'</param>
-        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), bool? displayMissingEpisodes = default(bool?), string subtitleMode = default(string), IList<string> orderedViews = default(IList<string>), IList<string> latestItemsExcludes = default(IList<string>), IList<string> myMediaExcludes = default(IList<string>), bool? hidePlayedInLatest = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), string introSkipMode = default(string), bool? enableLocalPassword = default(bool?))
+        public ConfigurationUserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), string subtitleMode = default(string), IList<string> orderedViews = default(IList<string>), IList<string> latestItemsExcludes = default(IList<string>), IList<string> myMediaExcludes = default(IList<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), string introSkipMode = default(string), bool? enableLocalPassword = default(bool?))
         {
             AudioLanguagePreference = audioLanguagePreference;
             PlayDefaultAudioTrack = playDefaultAudioTrack;
             SubtitleLanguagePreference = subtitleLanguagePreference;
+            ProfilePin = profilePin;
             DisplayMissingEpisodes = displayMissingEpisodes;
             SubtitleMode = subtitleMode;
             OrderedViews = orderedViews;
             LatestItemsExcludes = latestItemsExcludes;
             MyMediaExcludes = myMediaExcludes;
             HidePlayedInLatest = hidePlayedInLatest;
+            HidePlayedInMoreLikeThis = hidePlayedInMoreLikeThis;
+            HidePlayedInSuggestions = hidePlayedInSuggestions;
             RememberAudioSelections = rememberAudioSelections;
             RememberSubtitleSelections = rememberSubtitleSelections;
             EnableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay;
@@ -69,6 +72,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "SubtitleLanguagePreference")]
         public string SubtitleLanguagePreference { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "ProfilePin")]
+        public string ProfilePin { get; set; }
 
         /// <summary>
         /// </summary>
@@ -101,6 +109,16 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "HidePlayedInLatest")]
         public bool? HidePlayedInLatest { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "HidePlayedInMoreLikeThis")]
+        public bool? HidePlayedInMoreLikeThis { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "HidePlayedInSuggestions")]
+        public bool? HidePlayedInSuggestions { get; set; }
 
         /// <summary>
         /// </summary>

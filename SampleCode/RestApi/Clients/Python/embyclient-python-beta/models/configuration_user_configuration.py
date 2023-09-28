@@ -25,12 +25,15 @@ class ConfigurationUserConfiguration(object):
         'audio_language_preference': 'str',
         'play_default_audio_track': 'bool',
         'subtitle_language_preference': 'str',
+        'profile_pin': 'str',
         'display_missing_episodes': 'bool',
         'subtitle_mode': 'ConfigurationSubtitlePlaybackMode',
         'ordered_views': 'list[str]',
         'latest_items_excludes': 'list[str]',
         'my_media_excludes': 'list[str]',
         'hide_played_in_latest': 'bool',
+        'hide_played_in_more_like_this': 'bool',
+        'hide_played_in_suggestions': 'bool',
         'remember_audio_selections': 'bool',
         'remember_subtitle_selections': 'bool',
         'enable_next_episode_auto_play': 'bool',
@@ -43,12 +46,15 @@ class ConfigurationUserConfiguration(object):
         'audio_language_preference': 'AudioLanguagePreference',
         'play_default_audio_track': 'PlayDefaultAudioTrack',
         'subtitle_language_preference': 'SubtitleLanguagePreference',
+        'profile_pin': 'ProfilePin',
         'display_missing_episodes': 'DisplayMissingEpisodes',
         'subtitle_mode': 'SubtitleMode',
         'ordered_views': 'OrderedViews',
         'latest_items_excludes': 'LatestItemsExcludes',
         'my_media_excludes': 'MyMediaExcludes',
         'hide_played_in_latest': 'HidePlayedInLatest',
+        'hide_played_in_more_like_this': 'HidePlayedInMoreLikeThis',
+        'hide_played_in_suggestions': 'HidePlayedInSuggestions',
         'remember_audio_selections': 'RememberAudioSelections',
         'remember_subtitle_selections': 'RememberSubtitleSelections',
         'enable_next_episode_auto_play': 'EnableNextEpisodeAutoPlay',
@@ -57,17 +63,20 @@ class ConfigurationUserConfiguration(object):
         'enable_local_password': 'EnableLocalPassword'
     }
 
-    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None):  # noqa: E501
+    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, profile_pin=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, hide_played_in_more_like_this=None, hide_played_in_suggestions=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None):  # noqa: E501
         """ConfigurationUserConfiguration - a model defined in Swagger"""  # noqa: E501
         self._audio_language_preference = None
         self._play_default_audio_track = None
         self._subtitle_language_preference = None
+        self._profile_pin = None
         self._display_missing_episodes = None
         self._subtitle_mode = None
         self._ordered_views = None
         self._latest_items_excludes = None
         self._my_media_excludes = None
         self._hide_played_in_latest = None
+        self._hide_played_in_more_like_this = None
+        self._hide_played_in_suggestions = None
         self._remember_audio_selections = None
         self._remember_subtitle_selections = None
         self._enable_next_episode_auto_play = None
@@ -81,6 +90,8 @@ class ConfigurationUserConfiguration(object):
             self.play_default_audio_track = play_default_audio_track
         if subtitle_language_preference is not None:
             self.subtitle_language_preference = subtitle_language_preference
+        if profile_pin is not None:
+            self.profile_pin = profile_pin
         if display_missing_episodes is not None:
             self.display_missing_episodes = display_missing_episodes
         if subtitle_mode is not None:
@@ -93,6 +104,10 @@ class ConfigurationUserConfiguration(object):
             self.my_media_excludes = my_media_excludes
         if hide_played_in_latest is not None:
             self.hide_played_in_latest = hide_played_in_latest
+        if hide_played_in_more_like_this is not None:
+            self.hide_played_in_more_like_this = hide_played_in_more_like_this
+        if hide_played_in_suggestions is not None:
+            self.hide_played_in_suggestions = hide_played_in_suggestions
         if remember_audio_selections is not None:
             self.remember_audio_selections = remember_audio_selections
         if remember_subtitle_selections is not None:
@@ -168,6 +183,27 @@ class ConfigurationUserConfiguration(object):
         """
 
         self._subtitle_language_preference = subtitle_language_preference
+
+    @property
+    def profile_pin(self):
+        """Gets the profile_pin of this ConfigurationUserConfiguration.  # noqa: E501
+
+
+        :return: The profile_pin of this ConfigurationUserConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._profile_pin
+
+    @profile_pin.setter
+    def profile_pin(self, profile_pin):
+        """Sets the profile_pin of this ConfigurationUserConfiguration.
+
+
+        :param profile_pin: The profile_pin of this ConfigurationUserConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._profile_pin = profile_pin
 
     @property
     def display_missing_episodes(self):
@@ -294,6 +330,48 @@ class ConfigurationUserConfiguration(object):
         """
 
         self._hide_played_in_latest = hide_played_in_latest
+
+    @property
+    def hide_played_in_more_like_this(self):
+        """Gets the hide_played_in_more_like_this of this ConfigurationUserConfiguration.  # noqa: E501
+
+
+        :return: The hide_played_in_more_like_this of this ConfigurationUserConfiguration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hide_played_in_more_like_this
+
+    @hide_played_in_more_like_this.setter
+    def hide_played_in_more_like_this(self, hide_played_in_more_like_this):
+        """Sets the hide_played_in_more_like_this of this ConfigurationUserConfiguration.
+
+
+        :param hide_played_in_more_like_this: The hide_played_in_more_like_this of this ConfigurationUserConfiguration.  # noqa: E501
+        :type: bool
+        """
+
+        self._hide_played_in_more_like_this = hide_played_in_more_like_this
+
+    @property
+    def hide_played_in_suggestions(self):
+        """Gets the hide_played_in_suggestions of this ConfigurationUserConfiguration.  # noqa: E501
+
+
+        :return: The hide_played_in_suggestions of this ConfigurationUserConfiguration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hide_played_in_suggestions
+
+    @hide_played_in_suggestions.setter
+    def hide_played_in_suggestions(self, hide_played_in_suggestions):
+        """Sets the hide_played_in_suggestions of this ConfigurationUserConfiguration.
+
+
+        :param hide_played_in_suggestions: The hide_played_in_suggestions of this ConfigurationUserConfiguration.  # noqa: E501
+        :type: bool
+        """
+
+        self._hide_played_in_suggestions = hide_played_in_suggestions
 
     @property
     def remember_audio_selections(self):

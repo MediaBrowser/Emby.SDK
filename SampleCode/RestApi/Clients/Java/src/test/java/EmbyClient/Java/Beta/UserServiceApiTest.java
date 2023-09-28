@@ -218,6 +218,22 @@ public class UserServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Updates a user configuration
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByIdConfigurationPartialTest() throws Exception {
+        Object body = null;
+        String id = null;
+        api.postUsersByIdConfigurationPartial(body, id);
+
+        // TODO: test validations
+    }
+    /**
      * Deletes a user
      *
      * Requires authentication as administrator

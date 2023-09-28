@@ -33,6 +33,9 @@ public class ConfigurationUserConfiguration {
   @SerializedName("SubtitleLanguagePreference")
   private String subtitleLanguagePreference = null;
 
+  @SerializedName("ProfilePin")
+  private String profilePin = null;
+
   @SerializedName("DisplayMissingEpisodes")
   private Boolean displayMissingEpisodes = null;
 
@@ -50,6 +53,12 @@ public class ConfigurationUserConfiguration {
 
   @SerializedName("HidePlayedInLatest")
   private Boolean hidePlayedInLatest = null;
+
+  @SerializedName("HidePlayedInMoreLikeThis")
+  private Boolean hidePlayedInMoreLikeThis = null;
+
+  @SerializedName("HidePlayedInSuggestions")
+  private Boolean hidePlayedInSuggestions = null;
 
   @SerializedName("RememberAudioSelections")
   private Boolean rememberAudioSelections = null;
@@ -121,6 +130,24 @@ public class ConfigurationUserConfiguration {
 
   public void setSubtitleLanguagePreference(String subtitleLanguagePreference) {
     this.subtitleLanguagePreference = subtitleLanguagePreference;
+  }
+
+  public ConfigurationUserConfiguration profilePin(String profilePin) {
+    this.profilePin = profilePin;
+    return this;
+  }
+
+   /**
+   * Get profilePin
+   * @return profilePin
+  **/
+  @Schema(description = "")
+  public String getProfilePin() {
+    return profilePin;
+  }
+
+  public void setProfilePin(String profilePin) {
+    this.profilePin = profilePin;
   }
 
   public ConfigurationUserConfiguration displayMissingEpisodes(Boolean displayMissingEpisodes) {
@@ -255,6 +282,42 @@ public class ConfigurationUserConfiguration {
     this.hidePlayedInLatest = hidePlayedInLatest;
   }
 
+  public ConfigurationUserConfiguration hidePlayedInMoreLikeThis(Boolean hidePlayedInMoreLikeThis) {
+    this.hidePlayedInMoreLikeThis = hidePlayedInMoreLikeThis;
+    return this;
+  }
+
+   /**
+   * Get hidePlayedInMoreLikeThis
+   * @return hidePlayedInMoreLikeThis
+  **/
+  @Schema(description = "")
+  public Boolean isHidePlayedInMoreLikeThis() {
+    return hidePlayedInMoreLikeThis;
+  }
+
+  public void setHidePlayedInMoreLikeThis(Boolean hidePlayedInMoreLikeThis) {
+    this.hidePlayedInMoreLikeThis = hidePlayedInMoreLikeThis;
+  }
+
+  public ConfigurationUserConfiguration hidePlayedInSuggestions(Boolean hidePlayedInSuggestions) {
+    this.hidePlayedInSuggestions = hidePlayedInSuggestions;
+    return this;
+  }
+
+   /**
+   * Get hidePlayedInSuggestions
+   * @return hidePlayedInSuggestions
+  **/
+  @Schema(description = "")
+  public Boolean isHidePlayedInSuggestions() {
+    return hidePlayedInSuggestions;
+  }
+
+  public void setHidePlayedInSuggestions(Boolean hidePlayedInSuggestions) {
+    this.hidePlayedInSuggestions = hidePlayedInSuggestions;
+  }
+
   public ConfigurationUserConfiguration rememberAudioSelections(Boolean rememberAudioSelections) {
     this.rememberAudioSelections = rememberAudioSelections;
     return this;
@@ -376,12 +439,15 @@ public class ConfigurationUserConfiguration {
     return Objects.equals(this.audioLanguagePreference, configurationUserConfiguration.audioLanguagePreference) &&
         Objects.equals(this.playDefaultAudioTrack, configurationUserConfiguration.playDefaultAudioTrack) &&
         Objects.equals(this.subtitleLanguagePreference, configurationUserConfiguration.subtitleLanguagePreference) &&
+        Objects.equals(this.profilePin, configurationUserConfiguration.profilePin) &&
         Objects.equals(this.displayMissingEpisodes, configurationUserConfiguration.displayMissingEpisodes) &&
         Objects.equals(this.subtitleMode, configurationUserConfiguration.subtitleMode) &&
         Objects.equals(this.orderedViews, configurationUserConfiguration.orderedViews) &&
         Objects.equals(this.latestItemsExcludes, configurationUserConfiguration.latestItemsExcludes) &&
         Objects.equals(this.myMediaExcludes, configurationUserConfiguration.myMediaExcludes) &&
         Objects.equals(this.hidePlayedInLatest, configurationUserConfiguration.hidePlayedInLatest) &&
+        Objects.equals(this.hidePlayedInMoreLikeThis, configurationUserConfiguration.hidePlayedInMoreLikeThis) &&
+        Objects.equals(this.hidePlayedInSuggestions, configurationUserConfiguration.hidePlayedInSuggestions) &&
         Objects.equals(this.rememberAudioSelections, configurationUserConfiguration.rememberAudioSelections) &&
         Objects.equals(this.rememberSubtitleSelections, configurationUserConfiguration.rememberSubtitleSelections) &&
         Objects.equals(this.enableNextEpisodeAutoPlay, configurationUserConfiguration.enableNextEpisodeAutoPlay) &&
@@ -392,7 +458,7 @@ public class ConfigurationUserConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, enableLocalPassword);
+    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, profilePin, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, hidePlayedInMoreLikeThis, hidePlayedInSuggestions, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, enableLocalPassword);
   }
 
 
@@ -404,12 +470,15 @@ public class ConfigurationUserConfiguration {
     sb.append("    audioLanguagePreference: ").append(toIndentedString(audioLanguagePreference)).append("\n");
     sb.append("    playDefaultAudioTrack: ").append(toIndentedString(playDefaultAudioTrack)).append("\n");
     sb.append("    subtitleLanguagePreference: ").append(toIndentedString(subtitleLanguagePreference)).append("\n");
+    sb.append("    profilePin: ").append(toIndentedString(profilePin)).append("\n");
     sb.append("    displayMissingEpisodes: ").append(toIndentedString(displayMissingEpisodes)).append("\n");
     sb.append("    subtitleMode: ").append(toIndentedString(subtitleMode)).append("\n");
     sb.append("    orderedViews: ").append(toIndentedString(orderedViews)).append("\n");
     sb.append("    latestItemsExcludes: ").append(toIndentedString(latestItemsExcludes)).append("\n");
     sb.append("    myMediaExcludes: ").append(toIndentedString(myMediaExcludes)).append("\n");
     sb.append("    hidePlayedInLatest: ").append(toIndentedString(hidePlayedInLatest)).append("\n");
+    sb.append("    hidePlayedInMoreLikeThis: ").append(toIndentedString(hidePlayedInMoreLikeThis)).append("\n");
+    sb.append("    hidePlayedInSuggestions: ").append(toIndentedString(hidePlayedInSuggestions)).append("\n");
     sb.append("    rememberAudioSelections: ").append(toIndentedString(rememberAudioSelections)).append("\n");
     sb.append("    rememberSubtitleSelections: ").append(toIndentedString(rememberSubtitleSelections)).append("\n");
     sb.append("    enableNextEpisodeAutoPlay: ").append(toIndentedString(enableNextEpisodeAutoPlay)).append("\n");

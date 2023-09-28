@@ -54,6 +54,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -187,6 +199,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -341,9 +365,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetArtists(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetArtists(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetArtistsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetArtistsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -383,6 +407,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -516,6 +552,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -673,9 +721,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetArtistsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetArtistsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetArtistsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetArtistsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -717,6 +765,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -850,6 +910,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -1004,9 +1076,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetAudiocodecs(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetAudiocodecs(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetAudiocodecsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetAudiocodecsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -1044,6 +1116,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -1178,6 +1262,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -1335,9 +1431,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetAudiocodecsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetAudiocodecsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetAudiocodecsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetAudiocodecsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -1379,6 +1475,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -1512,6 +1620,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -1666,9 +1786,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetAudiolayouts(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetAudiolayouts(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetAudiolayoutsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetAudiolayoutsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -1706,6 +1826,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -1840,6 +1972,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -1997,9 +2141,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetAudiolayoutsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetAudiolayoutsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetAudiolayoutsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetAudiolayoutsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -2193,6 +2337,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -2326,6 +2482,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -2480,9 +2648,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetContainers(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetContainers(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetContainersAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetContainersAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -2520,6 +2688,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -2654,6 +2834,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -2811,9 +3003,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetContainersAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetContainersAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetContainersWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetContainersWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -2932,6 +3124,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -3065,6 +3269,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -3219,9 +3435,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetExtendedvideotypes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetExtendedvideotypes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetExtendedvideotypesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetExtendedvideotypesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -3259,6 +3475,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -3393,6 +3621,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -3550,9 +3790,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetExtendedvideotypesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetExtendedvideotypesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetExtendedvideotypesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetExtendedvideotypesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -3629,6 +3869,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -3762,6 +4014,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -3916,9 +4180,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetGamegenres(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetGamegenres(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetGamegenresAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetGamegenresAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -3958,6 +4222,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -4091,6 +4367,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -4248,9 +4536,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetGamegenresAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetGamegenresAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetGamegenresWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetGamegenresWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -4293,6 +4581,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -4426,6 +4726,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -4580,9 +4892,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetGenres(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetGenres(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetGenresAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetGenresAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -4621,6 +4933,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -4755,6 +5079,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -4912,9 +5248,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetGenresAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetGenresAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetGenresWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetGenresWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -4957,6 +5293,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -5090,6 +5438,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -5244,9 +5604,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetItems(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetItems(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetItemsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetItemsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -5285,6 +5645,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -5419,6 +5791,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -5576,9 +5960,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetItemsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetItemsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetItemsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetItemsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -5657,6 +6041,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -5790,6 +6186,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -5944,9 +6352,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetItemtypes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetItemtypes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetItemtypesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetItemtypesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -5984,6 +6392,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -6118,6 +6538,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -6275,9 +6707,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetItemtypesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetItemtypesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetItemtypesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetItemtypesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -6320,6 +6752,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -6453,6 +6897,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -6607,9 +7063,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetMusicgenres(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetMusicgenres(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetMusicgenresAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetMusicgenresAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -6648,6 +7104,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -6782,6 +7250,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -6939,9 +7419,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetMusicgenresAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetMusicgenresAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetMusicgenresWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetMusicgenresWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -6983,6 +7463,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -7116,6 +7608,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -7270,9 +7774,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryOfficialRatingItem GetOfficialratings(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryOfficialRatingItem GetOfficialratings(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetOfficialratingsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetOfficialratingsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -7310,6 +7814,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -7444,6 +7960,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -7601,9 +8129,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryOfficialRatingItem> GetOfficialratingsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryOfficialRatingItem> GetOfficialratingsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetOfficialratingsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetOfficialratingsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -7772,6 +8300,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -7905,6 +8445,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -8059,9 +8611,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetPersons(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetPersons(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetPersonsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetPersonsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -8100,6 +8652,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -8234,6 +8798,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -8391,9 +8967,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetPersonsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetPersonsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetPersonsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetPersonsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -8621,6 +9197,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -8754,6 +9342,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -8908,9 +9508,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetStreamlanguages(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetStreamlanguages(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetStreamlanguagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetStreamlanguagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -8948,6 +9548,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -9082,6 +9694,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -9239,9 +9863,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetStreamlanguagesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetStreamlanguagesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetStreamlanguagesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetStreamlanguagesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -9284,6 +9908,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -9417,6 +10053,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -9571,9 +10219,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetStudios(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetStudios(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetStudiosAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetStudiosAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -9612,6 +10260,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -9746,6 +10406,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -9903,9 +10575,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetStudiosAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetStudiosAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetStudiosWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetStudiosWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -9947,6 +10619,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -10080,6 +10764,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -10234,9 +10930,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetSubtitlecodecs(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetSubtitlecodecs(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetSubtitlecodecsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetSubtitlecodecsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -10274,6 +10970,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -10408,6 +11116,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -10565,9 +11285,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetSubtitlecodecsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetSubtitlecodecsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetSubtitlecodecsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetSubtitlecodecsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -10677,6 +11397,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -10810,6 +11542,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -10964,9 +11708,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetTags(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetTags(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetTagsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetTagsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -11004,6 +11748,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -11138,6 +11894,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -11295,9 +12063,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetTagsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetTagsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetTagsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetTagsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -11340,6 +12108,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -11473,6 +12253,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -11627,9 +12419,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetTrailers(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetTrailers(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetTrailersAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetTrailersAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -11669,6 +12461,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -11802,6 +12606,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -11959,9 +12775,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetTrailersAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetTrailersAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetTrailersWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetTrailersWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -12003,6 +12819,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -12136,6 +12964,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -12290,9 +13130,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetVideocodecs(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetVideocodecs(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetVideocodecsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetVideocodecsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -12330,6 +13170,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -12464,6 +13316,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -12621,9 +13485,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetVideocodecsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetVideocodecsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetVideocodecsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetVideocodecsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -12665,6 +13529,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -12798,6 +13674,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -12952,9 +13840,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultUserLibraryTagItem GetYears(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultUserLibraryTagItem GetYears(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetYearsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetYearsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -12992,6 +13880,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -13126,6 +14026,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -13283,9 +14195,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultUserLibraryTagItem> GetYearsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultUserLibraryTagItem> GetYearsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetYearsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetYearsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -13658,6 +14570,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -13791,6 +14715,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -13945,9 +14881,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetArtistsAlbumartists(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetArtistsAlbumartists(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetArtistsAlbumartistsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetArtistsAlbumartistsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -13986,6 +14922,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -14120,6 +15068,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -14277,9 +15237,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetArtistsAlbumartistsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetArtistsAlbumartistsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetArtistsAlbumartistsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetArtistsAlbumartistsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -14321,6 +15281,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -14454,6 +15426,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -14608,9 +15592,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static IList<NameValuePair> GetArtistsPrefixes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static IList<NameValuePair> GetArtistsPrefixes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetArtistsPrefixesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetArtistsPrefixesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -14648,6 +15632,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -14782,6 +15778,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -14939,9 +15947,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<NameValuePair>> GetArtistsPrefixesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<NameValuePair>> GetArtistsPrefixesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetArtistsPrefixesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetArtistsPrefixesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -16731,6 +17739,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -16864,6 +17884,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -17018,9 +18050,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static IList<NameValuePair> GetItemsPrefixes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static IList<NameValuePair> GetItemsPrefixes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetItemsPrefixesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetItemsPrefixesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -17058,6 +18090,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -17192,6 +18236,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -17349,9 +18405,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<NameValuePair>> GetItemsPrefixesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<NameValuePair>> GetItemsPrefixesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetItemsPrefixesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetItemsPrefixesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -17881,6 +18937,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -18014,6 +19082,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -18168,9 +19248,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetLivetvChanneltags(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetLivetvChanneltags(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetLivetvChanneltagsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetLivetvChanneltagsAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -18209,6 +19289,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -18343,6 +19435,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -18500,9 +19604,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetLivetvChanneltagsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetLivetvChanneltagsAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetLivetvChanneltagsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetLivetvChanneltagsWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -19140,11 +20244,47 @@ namespace EmbyClient.MsRest
             /// <param name='type'>
             /// Optional filter by channel type. Possible values include: 'TV', 'Radio'
             /// </param>
-            /// <param name='userId'>
-            /// Optional filter by user and attach user data.
+            /// <param name='isLiked'>
+            /// Filter by channels that are liked, or not.
             /// </param>
-            /// <param name='genreIds'>
-            /// The genres to return guide information for.
+            /// <param name='isDisliked'>
+            /// Filter by channels that are disliked, or not.
+            /// </param>
+            /// <param name='enableFavoriteSorting'>
+            /// Incorporate favorite and like status into channel sorting.
+            /// </param>
+            /// <param name='addCurrentProgram'>
+            /// Optional. Adds current program info to each channel
+            /// </param>
+            /// <param name='channelIds'>
+            /// The channels to return guide information for.
+            /// </param>
+            /// <param name='artistType'>
+            /// Artist or AlbumArtist
+            /// </param>
+            /// <param name='maxOfficialRating'>
+            /// Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='hasThemeSong'>
+            /// Optional filter by items with theme songs.
+            /// </param>
+            /// <param name='hasThemeVideo'>
+            /// Optional filter by items with theme videos.
+            /// </param>
+            /// <param name='hasSubtitles'>
+            /// Optional filter by items with subtitles.
+            /// </param>
+            /// <param name='hasSpecialFeature'>
+            /// Optional filter by items with special features.
+            /// </param>
+            /// <param name='hasTrailer'>
+            /// Optional filter by items with trailers.
+            /// </param>
+            /// <param name='adjacentTo'>
+            /// Optional. Return items that are siblings of a supplied item.
+            /// </param>
+            /// <param name='minIndexNumber'>
+            /// Optional filter by minimum index number.
             /// </param>
             /// <param name='minStartDate'>
             /// Optional. The minimum premiere date. Format = ISO
@@ -19158,15 +20298,130 @@ namespace EmbyClient.MsRest
             /// <param name='maxEndDate'>
             /// Optional. The maximum premiere date. Format = ISO
             /// </param>
+            /// <param name='minPlayers'>
+            /// Optional filter by minimum number of game players.
+            /// </param>
+            /// <param name='maxPlayers'>
+            /// Optional filter by maximum number of game players.
+            /// </param>
+            /// <param name='parentIndexNumber'>
+            /// Optional filter by parent index number.
+            /// </param>
+            /// <param name='hasParentalRating'>
+            /// Optional filter by items that have or do not have a parental rating
+            /// </param>
+            /// <param name='isHD'>
+            /// Optional filter by items that are HD or not.
+            /// </param>
+            /// <param name='locationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='excludeLocationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='isMissing'>
+            /// Optional filter by items that are missing episodes or not.
+            /// </param>
+            /// <param name='isUnaired'>
+            /// Optional filter by items that are unaired episodes or not.
+            /// </param>
+            /// <param name='minCommunityRating'>
+            /// Optional filter by minimum community rating.
+            /// </param>
+            /// <param name='minCriticRating'>
+            /// Optional filter by minimum critic rating.
+            /// </param>
+            /// <param name='airedDuringSeason'>
+            /// Gets all episodes that aired during a season, including specials.
+            /// </param>
+            /// <param name='minPremiereDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSaved'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSavedForUser'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxPremiereDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='hasOverview'>
+            /// Optional filter by items that have an overview or not.
+            /// </param>
+            /// <param name='hasImdbId'>
+            /// Optional filter by items that have an imdb id or not.
+            /// </param>
+            /// <param name='hasTmdbId'>
+            /// Optional filter by items that have a tmdb id or not.
+            /// </param>
+            /// <param name='hasTvdbId'>
+            /// Optional filter by items that have a tvdb id or not.
+            /// </param>
+            /// <param name='excludeItemIds'>
+            /// Optional. If specified, results will be filtered by exxcluding item ids.
+            /// This allows multiple, comma delimeted.
+            /// </param>
             /// <param name='startIndex'>
             /// Optional. The record index to start at. All items with a lower index will
             /// be dropped from the results.
+            /// </param>
+            /// <param name='limit'>
+            /// Optional. The maximum number of records to return
+            /// </param>
+            /// <param name='recursive'>
+            /// When searching within folders, this determines whether or not the search
+            /// will be recursive. true/false
+            /// </param>
+            /// <param name='searchTerm'>
+            /// Enter a search term to perform a search request
+            /// </param>
+            /// <param name='sortOrder'>
+            /// Sort Order - Ascending,Descending
+            /// </param>
+            /// <param name='parentId'>
+            /// Specify this to localize the search to a specific item or folder. Omit to
+            /// use the root
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines
+            /// </param>
+            /// <param name='excludeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='includeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='anyProviderIdEquals'>
+            /// Optional. If specified, result will be filtered to contain only items which
+            /// match at least one of the specified IDs. Each provider ID must be in the
+            /// form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted
+            /// value pairs.
+            /// </param>
+            /// <param name='filters'>
+            /// Optional. Specify additional filters to apply. This allows multiple, comma
+            /// delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed,
+            /// IsFavorite, IsResumable, Likes, Dislikes
+            /// </param>
+            /// <param name='isFavorite'>
+            /// Optional filter by items that are marked as favorite, or not.
             /// </param>
             /// <param name='isMovie'>
             /// Optional filter for movies.
             /// </param>
             /// <param name='isSeries'>
             /// Optional filter for series.
+            /// </param>
+            /// <param name='isFolder'>
+            /// Optional filter for folders.
             /// </param>
             /// <param name='isNews'>
             /// Optional filter for news.
@@ -19177,23 +20432,58 @@ namespace EmbyClient.MsRest
             /// <param name='isSports'>
             /// Optional filter for sports.
             /// </param>
-            /// <param name='limit'>
-            /// Optional. The maximum number of records to return
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
             /// </param>
-            /// <param name='isFavorite'>
-            /// Filter by channels that are favorites, or not.
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
             /// </param>
-            /// <param name='isLiked'>
-            /// Filter by channels that are liked, or not.
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
             /// </param>
-            /// <param name='isDisliked'>
-            /// Filter by channels that are disliked, or not.
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
-            /// <param name='enableFavoriteSorting'>
-            /// Incorporate favorite and like status into channel sorting.
+            /// <param name='projectToMedia'>
+            /// ProjectToMedia
+            /// </param>
+            /// <param name='mediaTypes'>
+            /// Optional filter by MediaType. Allows multiple, comma delimited.
+            /// </param>
+            /// <param name='imageTypes'>
+            /// Optional. If specified, results will be filtered based on those containing
+            /// image types. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='sortBy'>
+            /// Optional. Specify one or more sort orders, comma delimeted. Options: Album,
+            /// AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated,
+            /// DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random,
+            /// Revenue, Runtime
+            /// </param>
+            /// <param name='isPlayed'>
+            /// Optional filter by items that are played, or not.
+            /// </param>
+            /// <param name='genres'>
+            /// Optional. If specified, results will be filtered based on genre. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='officialRatings'>
+            /// Optional. If specified, results will be filtered based on OfficialRating.
+            /// This allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='tags'>
+            /// Optional. If specified, results will be filtered based on tag. This allows
+            /// multiple, pipe delimeted.
+            /// </param>
+            /// <param name='years'>
+            /// Optional. If specified, results will be filtered based on production year.
+            /// This allows multiple, comma delimeted.
             /// </param>
             /// <param name='enableImages'>
             /// Optional, include image information in output
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
             /// </param>
             /// <param name='imageTypeLimit'>
             /// Optional, the max number of images to return, per image type
@@ -19201,25 +20491,115 @@ namespace EmbyClient.MsRest
             /// <param name='enableImageTypes'>
             /// Optional. The image types to include in the output.
             /// </param>
-            /// <param name='fields'>
-            /// Optional. Specify additional fields of information to return in the output.
-            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
-            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
-            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
-            /// SortName, Studios, Taglines
+            /// <param name='person'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
             /// </param>
-            /// <param name='addCurrentProgram'>
-            /// Optional. Adds current program info to each channel
+            /// <param name='personIds'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
             /// </param>
-            /// <param name='enableUserData'>
-            /// Optional, include user data
+            /// <param name='personTypes'>
+            /// Optional. If specified, along with Person, results will be filtered to
+            /// include only those containing the specified person and PersonType. Allows
+            /// multiple, comma-delimited
             /// </param>
-            /// <param name='channelIds'>
-            /// The channels to return guide information for.
+            /// <param name='studios'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
             /// </param>
-            public static QueryResultLiveTVApiEpgRow GetLivetvEPG(this IRestClient operations, string type = default(string), string userId = default(string), string genreIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? startIndex = default(int?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), int? limit = default(int?), bool? isFavorite = default(bool?), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string fields = default(string), bool? addCurrentProgram = default(bool?), bool? enableUserData = default(bool?), string channelIds = default(string))
+            /// <param name='studioIds'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artists'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artistIds'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='albums'>
+            /// Optional. If specified, results will be filtered based on album. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='ids'>
+            /// Optional. If specific items are needed, specify a list of item id's to
+            /// retrieve. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='videoTypes'>
+            /// Optional filter by VideoType (videofile, dvd, bluray, iso). Allows
+            /// multiple, comma delimeted.
+            /// </param>
+            /// <param name='containers'>
+            /// Optional filter by Container. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioCodecs'>
+            /// Optional filter by AudioCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioLayouts'>
+            /// Optional filter by AudioLayout. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='videoCodecs'>
+            /// Optional filter by VideoCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='extendedVideoTypes'>
+            /// Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='subtitleCodecs'>
+            /// Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='path'>
+            /// Optional filter by Path.
+            /// </param>
+            /// <param name='userId'>
+            /// User Id
+            /// </param>
+            /// <param name='minOfficialRating'>
+            /// Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='isLocked'>
+            /// Optional filter by items that are locked.
+            /// </param>
+            /// <param name='isPlaceHolder'>
+            /// Optional filter by items that are placeholders
+            /// </param>
+            /// <param name='hasOfficialRating'>
+            /// Optional filter by items that have official ratings
+            /// </param>
+            /// <param name='groupItemsIntoCollections'>
+            /// Whether or not to hide items behind their boxsets.
+            /// </param>
+            /// <param name='is3D'>
+            /// Optional filter by items that are 3D, or not.
+            /// </param>
+            /// <param name='seriesStatus'>
+            /// Optional filter by Series Status. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='nameStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='artistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='albumArtistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='nameStartsWith'>
+            /// Optional filter by items whose name is sorted equally than a given input
+            /// string.
+            /// </param>
+            /// <param name='nameLessThan'>
+            /// Optional filter by items whose name is equally or lesser than a given input
+            /// string.
+            /// </param>
+            public static QueryResultLiveTVApiEpgRow GetLivetvEPG(this IRestClient operations, string type = default(string), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? addCurrentProgram = default(bool?), string channelIds = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetLivetvEPGAsync(type, userId, genreIds, minStartDate, maxStartDate, minEndDate, maxEndDate, startIndex, isMovie, isSeries, isNews, isKids, isSports, limit, isFavorite, isLiked, isDisliked, enableFavoriteSorting, enableImages, imageTypeLimit, enableImageTypes, fields, addCurrentProgram, enableUserData, channelIds).GetAwaiter().GetResult();
+                return operations.GetLivetvEPGAsync(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -19234,11 +20614,47 @@ namespace EmbyClient.MsRest
             /// <param name='type'>
             /// Optional filter by channel type. Possible values include: 'TV', 'Radio'
             /// </param>
-            /// <param name='userId'>
-            /// Optional filter by user and attach user data.
+            /// <param name='isLiked'>
+            /// Filter by channels that are liked, or not.
             /// </param>
-            /// <param name='genreIds'>
-            /// The genres to return guide information for.
+            /// <param name='isDisliked'>
+            /// Filter by channels that are disliked, or not.
+            /// </param>
+            /// <param name='enableFavoriteSorting'>
+            /// Incorporate favorite and like status into channel sorting.
+            /// </param>
+            /// <param name='addCurrentProgram'>
+            /// Optional. Adds current program info to each channel
+            /// </param>
+            /// <param name='channelIds'>
+            /// The channels to return guide information for.
+            /// </param>
+            /// <param name='artistType'>
+            /// Artist or AlbumArtist
+            /// </param>
+            /// <param name='maxOfficialRating'>
+            /// Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='hasThemeSong'>
+            /// Optional filter by items with theme songs.
+            /// </param>
+            /// <param name='hasThemeVideo'>
+            /// Optional filter by items with theme videos.
+            /// </param>
+            /// <param name='hasSubtitles'>
+            /// Optional filter by items with subtitles.
+            /// </param>
+            /// <param name='hasSpecialFeature'>
+            /// Optional filter by items with special features.
+            /// </param>
+            /// <param name='hasTrailer'>
+            /// Optional filter by items with trailers.
+            /// </param>
+            /// <param name='adjacentTo'>
+            /// Optional. Return items that are siblings of a supplied item.
+            /// </param>
+            /// <param name='minIndexNumber'>
+            /// Optional filter by minimum index number.
             /// </param>
             /// <param name='minStartDate'>
             /// Optional. The minimum premiere date. Format = ISO
@@ -19252,15 +20668,130 @@ namespace EmbyClient.MsRest
             /// <param name='maxEndDate'>
             /// Optional. The maximum premiere date. Format = ISO
             /// </param>
+            /// <param name='minPlayers'>
+            /// Optional filter by minimum number of game players.
+            /// </param>
+            /// <param name='maxPlayers'>
+            /// Optional filter by maximum number of game players.
+            /// </param>
+            /// <param name='parentIndexNumber'>
+            /// Optional filter by parent index number.
+            /// </param>
+            /// <param name='hasParentalRating'>
+            /// Optional filter by items that have or do not have a parental rating
+            /// </param>
+            /// <param name='isHD'>
+            /// Optional filter by items that are HD or not.
+            /// </param>
+            /// <param name='locationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='excludeLocationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='isMissing'>
+            /// Optional filter by items that are missing episodes or not.
+            /// </param>
+            /// <param name='isUnaired'>
+            /// Optional filter by items that are unaired episodes or not.
+            /// </param>
+            /// <param name='minCommunityRating'>
+            /// Optional filter by minimum community rating.
+            /// </param>
+            /// <param name='minCriticRating'>
+            /// Optional filter by minimum critic rating.
+            /// </param>
+            /// <param name='airedDuringSeason'>
+            /// Gets all episodes that aired during a season, including specials.
+            /// </param>
+            /// <param name='minPremiereDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSaved'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSavedForUser'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxPremiereDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='hasOverview'>
+            /// Optional filter by items that have an overview or not.
+            /// </param>
+            /// <param name='hasImdbId'>
+            /// Optional filter by items that have an imdb id or not.
+            /// </param>
+            /// <param name='hasTmdbId'>
+            /// Optional filter by items that have a tmdb id or not.
+            /// </param>
+            /// <param name='hasTvdbId'>
+            /// Optional filter by items that have a tvdb id or not.
+            /// </param>
+            /// <param name='excludeItemIds'>
+            /// Optional. If specified, results will be filtered by exxcluding item ids.
+            /// This allows multiple, comma delimeted.
+            /// </param>
             /// <param name='startIndex'>
             /// Optional. The record index to start at. All items with a lower index will
             /// be dropped from the results.
+            /// </param>
+            /// <param name='limit'>
+            /// Optional. The maximum number of records to return
+            /// </param>
+            /// <param name='recursive'>
+            /// When searching within folders, this determines whether or not the search
+            /// will be recursive. true/false
+            /// </param>
+            /// <param name='searchTerm'>
+            /// Enter a search term to perform a search request
+            /// </param>
+            /// <param name='sortOrder'>
+            /// Sort Order - Ascending,Descending
+            /// </param>
+            /// <param name='parentId'>
+            /// Specify this to localize the search to a specific item or folder. Omit to
+            /// use the root
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines
+            /// </param>
+            /// <param name='excludeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='includeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='anyProviderIdEquals'>
+            /// Optional. If specified, result will be filtered to contain only items which
+            /// match at least one of the specified IDs. Each provider ID must be in the
+            /// form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted
+            /// value pairs.
+            /// </param>
+            /// <param name='filters'>
+            /// Optional. Specify additional filters to apply. This allows multiple, comma
+            /// delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed,
+            /// IsFavorite, IsResumable, Likes, Dislikes
+            /// </param>
+            /// <param name='isFavorite'>
+            /// Optional filter by items that are marked as favorite, or not.
             /// </param>
             /// <param name='isMovie'>
             /// Optional filter for movies.
             /// </param>
             /// <param name='isSeries'>
             /// Optional filter for series.
+            /// </param>
+            /// <param name='isFolder'>
+            /// Optional filter for folders.
             /// </param>
             /// <param name='isNews'>
             /// Optional filter for news.
@@ -19271,23 +20802,58 @@ namespace EmbyClient.MsRest
             /// <param name='isSports'>
             /// Optional filter for sports.
             /// </param>
-            /// <param name='limit'>
-            /// Optional. The maximum number of records to return
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
             /// </param>
-            /// <param name='isFavorite'>
-            /// Filter by channels that are favorites, or not.
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
             /// </param>
-            /// <param name='isLiked'>
-            /// Filter by channels that are liked, or not.
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
             /// </param>
-            /// <param name='isDisliked'>
-            /// Filter by channels that are disliked, or not.
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
-            /// <param name='enableFavoriteSorting'>
-            /// Incorporate favorite and like status into channel sorting.
+            /// <param name='projectToMedia'>
+            /// ProjectToMedia
+            /// </param>
+            /// <param name='mediaTypes'>
+            /// Optional filter by MediaType. Allows multiple, comma delimited.
+            /// </param>
+            /// <param name='imageTypes'>
+            /// Optional. If specified, results will be filtered based on those containing
+            /// image types. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='sortBy'>
+            /// Optional. Specify one or more sort orders, comma delimeted. Options: Album,
+            /// AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated,
+            /// DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random,
+            /// Revenue, Runtime
+            /// </param>
+            /// <param name='isPlayed'>
+            /// Optional filter by items that are played, or not.
+            /// </param>
+            /// <param name='genres'>
+            /// Optional. If specified, results will be filtered based on genre. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='officialRatings'>
+            /// Optional. If specified, results will be filtered based on OfficialRating.
+            /// This allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='tags'>
+            /// Optional. If specified, results will be filtered based on tag. This allows
+            /// multiple, pipe delimeted.
+            /// </param>
+            /// <param name='years'>
+            /// Optional. If specified, results will be filtered based on production year.
+            /// This allows multiple, comma delimeted.
             /// </param>
             /// <param name='enableImages'>
             /// Optional, include image information in output
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
             /// </param>
             /// <param name='imageTypeLimit'>
             /// Optional, the max number of images to return, per image type
@@ -19295,28 +20861,118 @@ namespace EmbyClient.MsRest
             /// <param name='enableImageTypes'>
             /// Optional. The image types to include in the output.
             /// </param>
-            /// <param name='fields'>
-            /// Optional. Specify additional fields of information to return in the output.
-            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
-            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
-            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
-            /// SortName, Studios, Taglines
+            /// <param name='person'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
             /// </param>
-            /// <param name='addCurrentProgram'>
-            /// Optional. Adds current program info to each channel
+            /// <param name='personIds'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
             /// </param>
-            /// <param name='enableUserData'>
-            /// Optional, include user data
+            /// <param name='personTypes'>
+            /// Optional. If specified, along with Person, results will be filtered to
+            /// include only those containing the specified person and PersonType. Allows
+            /// multiple, comma-delimited
             /// </param>
-            /// <param name='channelIds'>
-            /// The channels to return guide information for.
+            /// <param name='studios'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='studioIds'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artists'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artistIds'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='albums'>
+            /// Optional. If specified, results will be filtered based on album. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='ids'>
+            /// Optional. If specific items are needed, specify a list of item id's to
+            /// retrieve. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='videoTypes'>
+            /// Optional filter by VideoType (videofile, dvd, bluray, iso). Allows
+            /// multiple, comma delimeted.
+            /// </param>
+            /// <param name='containers'>
+            /// Optional filter by Container. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioCodecs'>
+            /// Optional filter by AudioCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioLayouts'>
+            /// Optional filter by AudioLayout. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='videoCodecs'>
+            /// Optional filter by VideoCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='extendedVideoTypes'>
+            /// Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='subtitleCodecs'>
+            /// Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='path'>
+            /// Optional filter by Path.
+            /// </param>
+            /// <param name='userId'>
+            /// User Id
+            /// </param>
+            /// <param name='minOfficialRating'>
+            /// Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='isLocked'>
+            /// Optional filter by items that are locked.
+            /// </param>
+            /// <param name='isPlaceHolder'>
+            /// Optional filter by items that are placeholders
+            /// </param>
+            /// <param name='hasOfficialRating'>
+            /// Optional filter by items that have official ratings
+            /// </param>
+            /// <param name='groupItemsIntoCollections'>
+            /// Whether or not to hide items behind their boxsets.
+            /// </param>
+            /// <param name='is3D'>
+            /// Optional filter by items that are 3D, or not.
+            /// </param>
+            /// <param name='seriesStatus'>
+            /// Optional filter by Series Status. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='nameStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='artistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='albumArtistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='nameStartsWith'>
+            /// Optional filter by items whose name is sorted equally than a given input
+            /// string.
+            /// </param>
+            /// <param name='nameLessThan'>
+            /// Optional filter by items whose name is equally or lesser than a given input
+            /// string.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultLiveTVApiEpgRow> GetLivetvEPGAsync(this IRestClient operations, string type = default(string), string userId = default(string), string genreIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? startIndex = default(int?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), int? limit = default(int?), bool? isFavorite = default(bool?), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? enableImages = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string fields = default(string), bool? addCurrentProgram = default(bool?), bool? enableUserData = default(bool?), string channelIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultLiveTVApiEpgRow> GetLivetvEPGAsync(this IRestClient operations, string type = default(string), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? addCurrentProgram = default(bool?), string channelIds = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetLivetvEPGWithHttpMessagesAsync(type, userId, genreIds, minStartDate, maxStartDate, minEndDate, maxEndDate, startIndex, isMovie, isSeries, isNews, isKids, isSports, limit, isFavorite, isLiked, isDisliked, enableFavoriteSorting, enableImages, imageTypeLimit, enableImageTypes, fields, addCurrentProgram, enableUserData, channelIds, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetLivetvEPGWithHttpMessagesAsync(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -19374,6 +21030,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -19507,6 +21175,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -19661,9 +21341,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetLivetvChannels(this IRestClient operations, string type = default(string), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? addCurrentProgram = default(bool?), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetLivetvChannels(this IRestClient operations, string type = default(string), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? addCurrentProgram = default(bool?), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetLivetvChannelsAsync(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetLivetvChannelsAsync(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -19717,6 +21397,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -19851,6 +21543,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -20008,9 +21712,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetLivetvChannelsAsync(this IRestClient operations, string type = default(string), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? addCurrentProgram = default(bool?), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetLivetvChannelsAsync(this IRestClient operations, string type = default(string), bool? isLiked = default(bool?), bool? isDisliked = default(bool?), bool? enableFavoriteSorting = default(bool?), bool? addCurrentProgram = default(bool?), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetLivetvChannelsWithHttpMessagesAsync(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetLivetvChannelsWithHttpMessagesAsync(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -20201,6 +21905,18 @@ namespace EmbyClient.MsRest
             /// <param name='isSports'>
             /// Optional filter for sports.
             /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
+            /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
             /// </param>
@@ -20354,9 +22070,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static void GetLivetvPrograms(this IRestClient operations, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static void GetLivetvPrograms(this IRestClient operations, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                operations.GetLivetvProgramsAsync(channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                operations.GetLivetvProgramsAsync(channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -20544,6 +22260,18 @@ namespace EmbyClient.MsRest
             /// <param name='isSports'>
             /// Optional filter for sports.
             /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
+            /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
             /// </param>
@@ -20700,9 +22428,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task GetLivetvProgramsAsync(this IRestClient operations, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task GetLivetvProgramsAsync(this IRestClient operations, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                (await operations.GetLivetvProgramsWithHttpMessagesAsync(channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
+                (await operations.GetLivetvProgramsWithHttpMessagesAsync(channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
             }
 
             /// <summary>
@@ -20893,6 +22621,18 @@ namespace EmbyClient.MsRest
             /// <param name='isSports'>
             /// Optional filter for sports.
             /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
+            /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
             /// </param>
@@ -21046,9 +22786,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static void PostLivetvPrograms(this IRestClient operations, ApiBaseItemsRequest body, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static void PostLivetvPrograms(this IRestClient operations, ApiBaseItemsRequest body, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                operations.PostLivetvProgramsAsync(body, channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                operations.PostLivetvProgramsAsync(body, channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -21239,692 +22979,17 @@ namespace EmbyClient.MsRest
             /// <param name='isSports'>
             /// Optional filter for sports.
             /// </param>
-            /// <param name='projectToMedia'>
-            /// ProjectToMedia
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
             /// </param>
-            /// <param name='mediaTypes'>
-            /// Optional filter by MediaType. Allows multiple, comma delimited.
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
             /// </param>
-            /// <param name='imageTypes'>
-            /// Optional. If specified, results will be filtered based on those containing
-            /// image types. This allows multiple, comma delimited.
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
             /// </param>
-            /// <param name='sortBy'>
-            /// Optional. Specify one or more sort orders, comma delimeted. Options: Album,
-            /// AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated,
-            /// DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random,
-            /// Revenue, Runtime
-            /// </param>
-            /// <param name='isPlayed'>
-            /// Optional filter by items that are played, or not.
-            /// </param>
-            /// <param name='genres'>
-            /// Optional. If specified, results will be filtered based on genre. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='officialRatings'>
-            /// Optional. If specified, results will be filtered based on OfficialRating.
-            /// This allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='tags'>
-            /// Optional. If specified, results will be filtered based on tag. This allows
-            /// multiple, pipe delimeted.
-            /// </param>
-            /// <param name='years'>
-            /// Optional. If specified, results will be filtered based on production year.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='enableImages'>
-            /// Optional, include image information in output
-            /// </param>
-            /// <param name='enableUserData'>
-            /// Optional, include user data
-            /// </param>
-            /// <param name='imageTypeLimit'>
-            /// Optional, the max number of images to return, per image type
-            /// </param>
-            /// <param name='enableImageTypes'>
-            /// Optional. The image types to include in the output.
-            /// </param>
-            /// <param name='person'>
-            /// Optional. If specified, results will be filtered to include only those
-            /// containing the specified person.
-            /// </param>
-            /// <param name='personIds'>
-            /// Optional. If specified, results will be filtered to include only those
-            /// containing the specified person.
-            /// </param>
-            /// <param name='personTypes'>
-            /// Optional. If specified, along with Person, results will be filtered to
-            /// include only those containing the specified person and PersonType. Allows
-            /// multiple, comma-delimited
-            /// </param>
-            /// <param name='studios'>
-            /// Optional. If specified, results will be filtered based on studio. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='studioIds'>
-            /// Optional. If specified, results will be filtered based on studio. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='artists'>
-            /// Optional. If specified, results will be filtered based on artist. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='artistIds'>
-            /// Optional. If specified, results will be filtered based on artist. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='albums'>
-            /// Optional. If specified, results will be filtered based on album. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='ids'>
-            /// Optional. If specific items are needed, specify a list of item id's to
-            /// retrieve. This allows multiple, comma delimited.
-            /// </param>
-            /// <param name='videoTypes'>
-            /// Optional filter by VideoType (videofile, dvd, bluray, iso). Allows
-            /// multiple, comma delimeted.
-            /// </param>
-            /// <param name='containers'>
-            /// Optional filter by Container. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='audioCodecs'>
-            /// Optional filter by AudioCodec. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='audioLayouts'>
-            /// Optional filter by AudioLayout. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='videoCodecs'>
-            /// Optional filter by VideoCodec. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='extendedVideoTypes'>
-            /// Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='subtitleCodecs'>
-            /// Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='path'>
-            /// Optional filter by Path.
-            /// </param>
-            /// <param name='userId'>
-            /// User Id
-            /// </param>
-            /// <param name='minOfficialRating'>
-            /// Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
-            /// </param>
-            /// <param name='isLocked'>
-            /// Optional filter by items that are locked.
-            /// </param>
-            /// <param name='isPlaceHolder'>
-            /// Optional filter by items that are placeholders
-            /// </param>
-            /// <param name='hasOfficialRating'>
-            /// Optional filter by items that have official ratings
-            /// </param>
-            /// <param name='groupItemsIntoCollections'>
-            /// Whether or not to hide items behind their boxsets.
-            /// </param>
-            /// <param name='is3D'>
-            /// Optional filter by items that are 3D, or not.
-            /// </param>
-            /// <param name='seriesStatus'>
-            /// Optional filter by Series Status. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='nameStartsWithOrGreater'>
-            /// Optional filter by items whose name is sorted equally or greater than a
-            /// given input string.
-            /// </param>
-            /// <param name='artistStartsWithOrGreater'>
-            /// Optional filter by items whose name is sorted equally or greater than a
-            /// given input string.
-            /// </param>
-            /// <param name='albumArtistStartsWithOrGreater'>
-            /// Optional filter by items whose name is sorted equally or greater than a
-            /// given input string.
-            /// </param>
-            /// <param name='nameStartsWith'>
-            /// Optional filter by items whose name is sorted equally than a given input
-            /// string.
-            /// </param>
-            /// <param name='nameLessThan'>
-            /// Optional filter by items whose name is equally or lesser than a given input
-            /// string.
-            /// </param>
-            /// <param name='cancellationToken'>
-            /// The cancellation token.
-            /// </param>
-            public static async Task PostLivetvProgramsAsync(this IRestClient operations, ApiBaseItemsRequest body, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
-            {
-                (await operations.PostLivetvProgramsWithHttpMessagesAsync(body, channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
-            }
-
-            /// <summary>
-            /// Gets live tv recordings
-            /// </summary>
-            /// <remarks>
-            /// Requires authentication as user
-            /// </remarks>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='channelId'>
-            /// Optional filter by channel id.
-            /// </param>
-            /// <param name='status'>
-            /// Optional filter by recording status. Possible values include: 'New',
-            /// 'InProgress', 'Completed', 'Cancelled', 'ConflictedOk', 'ConflictedNotOk',
-            /// 'Error'
-            /// </param>
-            /// <param name='isInProgress'>
-            /// Optional filter by recordings that are in progress, or not.
-            /// </param>
-            /// <param name='seriesTimerId'>
-            /// Optional filter by recordings belonging to a series timer
-            /// </param>
-            /// <param name='artistType'>
-            /// Artist or AlbumArtist
-            /// </param>
-            /// <param name='maxOfficialRating'>
-            /// Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
-            /// </param>
-            /// <param name='hasThemeSong'>
-            /// Optional filter by items with theme songs.
-            /// </param>
-            /// <param name='hasThemeVideo'>
-            /// Optional filter by items with theme videos.
-            /// </param>
-            /// <param name='hasSubtitles'>
-            /// Optional filter by items with subtitles.
-            /// </param>
-            /// <param name='hasSpecialFeature'>
-            /// Optional filter by items with special features.
-            /// </param>
-            /// <param name='hasTrailer'>
-            /// Optional filter by items with trailers.
-            /// </param>
-            /// <param name='adjacentTo'>
-            /// Optional. Return items that are siblings of a supplied item.
-            /// </param>
-            /// <param name='minIndexNumber'>
-            /// Optional filter by minimum index number.
-            /// </param>
-            /// <param name='minPlayers'>
-            /// Optional filter by minimum number of game players.
-            /// </param>
-            /// <param name='maxPlayers'>
-            /// Optional filter by maximum number of game players.
-            /// </param>
-            /// <param name='parentIndexNumber'>
-            /// Optional filter by parent index number.
-            /// </param>
-            /// <param name='hasParentalRating'>
-            /// Optional filter by items that have or do not have a parental rating
-            /// </param>
-            /// <param name='isHD'>
-            /// Optional filter by items that are HD or not.
-            /// </param>
-            /// <param name='locationTypes'>
-            /// Optional. If specified, results will be filtered based on LocationType.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='excludeLocationTypes'>
-            /// Optional. If specified, results will be filtered based on LocationType.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='isMissing'>
-            /// Optional filter by items that are missing episodes or not.
-            /// </param>
-            /// <param name='isUnaired'>
-            /// Optional filter by items that are unaired episodes or not.
-            /// </param>
-            /// <param name='minCommunityRating'>
-            /// Optional filter by minimum community rating.
-            /// </param>
-            /// <param name='minCriticRating'>
-            /// Optional filter by minimum critic rating.
-            /// </param>
-            /// <param name='airedDuringSeason'>
-            /// Gets all episodes that aired during a season, including specials.
-            /// </param>
-            /// <param name='minPremiereDate'>
-            /// Optional. The minimum premiere date. Format = ISO
-            /// </param>
-            /// <param name='minDateLastSaved'>
-            /// Optional. The minimum premiere date. Format = ISO
-            /// </param>
-            /// <param name='minDateLastSavedForUser'>
-            /// Optional. The minimum premiere date. Format = ISO
-            /// </param>
-            /// <param name='maxPremiereDate'>
-            /// Optional. The maximum premiere date. Format = ISO
-            /// </param>
-            /// <param name='hasOverview'>
-            /// Optional filter by items that have an overview or not.
-            /// </param>
-            /// <param name='hasImdbId'>
-            /// Optional filter by items that have an imdb id or not.
-            /// </param>
-            /// <param name='hasTmdbId'>
-            /// Optional filter by items that have a tmdb id or not.
-            /// </param>
-            /// <param name='hasTvdbId'>
-            /// Optional filter by items that have a tvdb id or not.
-            /// </param>
-            /// <param name='excludeItemIds'>
-            /// Optional. If specified, results will be filtered by exxcluding item ids.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='startIndex'>
-            /// Optional. The record index to start at. All items with a lower index will
-            /// be dropped from the results.
-            /// </param>
-            /// <param name='limit'>
-            /// Optional. The maximum number of records to return
-            /// </param>
-            /// <param name='recursive'>
-            /// When searching within folders, this determines whether or not the search
-            /// will be recursive. true/false
-            /// </param>
-            /// <param name='searchTerm'>
-            /// Enter a search term to perform a search request
-            /// </param>
-            /// <param name='sortOrder'>
-            /// Sort Order - Ascending,Descending
-            /// </param>
-            /// <param name='parentId'>
-            /// Specify this to localize the search to a specific item or folder. Omit to
-            /// use the root
-            /// </param>
-            /// <param name='fields'>
-            /// Optional. Specify additional fields of information to return in the output.
-            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
-            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
-            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
-            /// SortName, Studios, Taglines
-            /// </param>
-            /// <param name='excludeItemTypes'>
-            /// Optional. If specified, results will be filtered based on item type. This
-            /// allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='includeItemTypes'>
-            /// Optional. If specified, results will be filtered based on item type. This
-            /// allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='anyProviderIdEquals'>
-            /// Optional. If specified, result will be filtered to contain only items which
-            /// match at least one of the specified IDs. Each provider ID must be in the
-            /// form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted
-            /// value pairs.
-            /// </param>
-            /// <param name='filters'>
-            /// Optional. Specify additional filters to apply. This allows multiple, comma
-            /// delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed,
-            /// IsFavorite, IsResumable, Likes, Dislikes
-            /// </param>
-            /// <param name='isFavorite'>
-            /// Optional filter by items that are marked as favorite, or not.
-            /// </param>
-            /// <param name='isMovie'>
-            /// Optional filter for movies.
-            /// </param>
-            /// <param name='isSeries'>
-            /// Optional filter for series.
-            /// </param>
-            /// <param name='isFolder'>
-            /// Optional filter for folders.
-            /// </param>
-            /// <param name='isNews'>
-            /// Optional filter for news.
-            /// </param>
-            /// <param name='isKids'>
-            /// Optional filter for kids.
-            /// </param>
-            /// <param name='isSports'>
-            /// Optional filter for sports.
-            /// </param>
-            /// <param name='projectToMedia'>
-            /// ProjectToMedia
-            /// </param>
-            /// <param name='mediaTypes'>
-            /// Optional filter by MediaType. Allows multiple, comma delimited.
-            /// </param>
-            /// <param name='imageTypes'>
-            /// Optional. If specified, results will be filtered based on those containing
-            /// image types. This allows multiple, comma delimited.
-            /// </param>
-            /// <param name='sortBy'>
-            /// Optional. Specify one or more sort orders, comma delimeted. Options: Album,
-            /// AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated,
-            /// DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random,
-            /// Revenue, Runtime
-            /// </param>
-            /// <param name='isPlayed'>
-            /// Optional filter by items that are played, or not.
-            /// </param>
-            /// <param name='genres'>
-            /// Optional. If specified, results will be filtered based on genre. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='officialRatings'>
-            /// Optional. If specified, results will be filtered based on OfficialRating.
-            /// This allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='tags'>
-            /// Optional. If specified, results will be filtered based on tag. This allows
-            /// multiple, pipe delimeted.
-            /// </param>
-            /// <param name='years'>
-            /// Optional. If specified, results will be filtered based on production year.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='enableImages'>
-            /// Optional, include image information in output
-            /// </param>
-            /// <param name='enableUserData'>
-            /// Optional, include user data
-            /// </param>
-            /// <param name='imageTypeLimit'>
-            /// Optional, the max number of images to return, per image type
-            /// </param>
-            /// <param name='enableImageTypes'>
-            /// Optional. The image types to include in the output.
-            /// </param>
-            /// <param name='person'>
-            /// Optional. If specified, results will be filtered to include only those
-            /// containing the specified person.
-            /// </param>
-            /// <param name='personIds'>
-            /// Optional. If specified, results will be filtered to include only those
-            /// containing the specified person.
-            /// </param>
-            /// <param name='personTypes'>
-            /// Optional. If specified, along with Person, results will be filtered to
-            /// include only those containing the specified person and PersonType. Allows
-            /// multiple, comma-delimited
-            /// </param>
-            /// <param name='studios'>
-            /// Optional. If specified, results will be filtered based on studio. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='studioIds'>
-            /// Optional. If specified, results will be filtered based on studio. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='artists'>
-            /// Optional. If specified, results will be filtered based on artist. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='artistIds'>
-            /// Optional. If specified, results will be filtered based on artist. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='albums'>
-            /// Optional. If specified, results will be filtered based on album. This
-            /// allows multiple, pipe delimeted.
-            /// </param>
-            /// <param name='ids'>
-            /// Optional. If specific items are needed, specify a list of item id's to
-            /// retrieve. This allows multiple, comma delimited.
-            /// </param>
-            /// <param name='videoTypes'>
-            /// Optional filter by VideoType (videofile, dvd, bluray, iso). Allows
-            /// multiple, comma delimeted.
-            /// </param>
-            /// <param name='containers'>
-            /// Optional filter by Container. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='audioCodecs'>
-            /// Optional filter by AudioCodec. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='audioLayouts'>
-            /// Optional filter by AudioLayout. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='videoCodecs'>
-            /// Optional filter by VideoCodec. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='extendedVideoTypes'>
-            /// Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='subtitleCodecs'>
-            /// Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='path'>
-            /// Optional filter by Path.
-            /// </param>
-            /// <param name='userId'>
-            /// User Id
-            /// </param>
-            /// <param name='minOfficialRating'>
-            /// Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
-            /// </param>
-            /// <param name='isLocked'>
-            /// Optional filter by items that are locked.
-            /// </param>
-            /// <param name='isPlaceHolder'>
-            /// Optional filter by items that are placeholders
-            /// </param>
-            /// <param name='hasOfficialRating'>
-            /// Optional filter by items that have official ratings
-            /// </param>
-            /// <param name='groupItemsIntoCollections'>
-            /// Whether or not to hide items behind their boxsets.
-            /// </param>
-            /// <param name='is3D'>
-            /// Optional filter by items that are 3D, or not.
-            /// </param>
-            /// <param name='seriesStatus'>
-            /// Optional filter by Series Status. Allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='nameStartsWithOrGreater'>
-            /// Optional filter by items whose name is sorted equally or greater than a
-            /// given input string.
-            /// </param>
-            /// <param name='artistStartsWithOrGreater'>
-            /// Optional filter by items whose name is sorted equally or greater than a
-            /// given input string.
-            /// </param>
-            /// <param name='albumArtistStartsWithOrGreater'>
-            /// Optional filter by items whose name is sorted equally or greater than a
-            /// given input string.
-            /// </param>
-            /// <param name='nameStartsWith'>
-            /// Optional filter by items whose name is sorted equally than a given input
-            /// string.
-            /// </param>
-            /// <param name='nameLessThan'>
-            /// Optional filter by items whose name is equally or lesser than a given input
-            /// string.
-            /// </param>
-            public static void GetLivetvRecordings(this IRestClient operations, string channelId = default(string), string status = default(string), bool? isInProgress = default(bool?), string seriesTimerId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
-            {
-                operations.GetLivetvRecordingsAsync(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Gets live tv recordings
-            /// </summary>
-            /// <remarks>
-            /// Requires authentication as user
-            /// </remarks>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='channelId'>
-            /// Optional filter by channel id.
-            /// </param>
-            /// <param name='status'>
-            /// Optional filter by recording status. Possible values include: 'New',
-            /// 'InProgress', 'Completed', 'Cancelled', 'ConflictedOk', 'ConflictedNotOk',
-            /// 'Error'
-            /// </param>
-            /// <param name='isInProgress'>
-            /// Optional filter by recordings that are in progress, or not.
-            /// </param>
-            /// <param name='seriesTimerId'>
-            /// Optional filter by recordings belonging to a series timer
-            /// </param>
-            /// <param name='artistType'>
-            /// Artist or AlbumArtist
-            /// </param>
-            /// <param name='maxOfficialRating'>
-            /// Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
-            /// </param>
-            /// <param name='hasThemeSong'>
-            /// Optional filter by items with theme songs.
-            /// </param>
-            /// <param name='hasThemeVideo'>
-            /// Optional filter by items with theme videos.
-            /// </param>
-            /// <param name='hasSubtitles'>
-            /// Optional filter by items with subtitles.
-            /// </param>
-            /// <param name='hasSpecialFeature'>
-            /// Optional filter by items with special features.
-            /// </param>
-            /// <param name='hasTrailer'>
-            /// Optional filter by items with trailers.
-            /// </param>
-            /// <param name='adjacentTo'>
-            /// Optional. Return items that are siblings of a supplied item.
-            /// </param>
-            /// <param name='minIndexNumber'>
-            /// Optional filter by minimum index number.
-            /// </param>
-            /// <param name='minPlayers'>
-            /// Optional filter by minimum number of game players.
-            /// </param>
-            /// <param name='maxPlayers'>
-            /// Optional filter by maximum number of game players.
-            /// </param>
-            /// <param name='parentIndexNumber'>
-            /// Optional filter by parent index number.
-            /// </param>
-            /// <param name='hasParentalRating'>
-            /// Optional filter by items that have or do not have a parental rating
-            /// </param>
-            /// <param name='isHD'>
-            /// Optional filter by items that are HD or not.
-            /// </param>
-            /// <param name='locationTypes'>
-            /// Optional. If specified, results will be filtered based on LocationType.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='excludeLocationTypes'>
-            /// Optional. If specified, results will be filtered based on LocationType.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='isMissing'>
-            /// Optional filter by items that are missing episodes or not.
-            /// </param>
-            /// <param name='isUnaired'>
-            /// Optional filter by items that are unaired episodes or not.
-            /// </param>
-            /// <param name='minCommunityRating'>
-            /// Optional filter by minimum community rating.
-            /// </param>
-            /// <param name='minCriticRating'>
-            /// Optional filter by minimum critic rating.
-            /// </param>
-            /// <param name='airedDuringSeason'>
-            /// Gets all episodes that aired during a season, including specials.
-            /// </param>
-            /// <param name='minPremiereDate'>
-            /// Optional. The minimum premiere date. Format = ISO
-            /// </param>
-            /// <param name='minDateLastSaved'>
-            /// Optional. The minimum premiere date. Format = ISO
-            /// </param>
-            /// <param name='minDateLastSavedForUser'>
-            /// Optional. The minimum premiere date. Format = ISO
-            /// </param>
-            /// <param name='maxPremiereDate'>
-            /// Optional. The maximum premiere date. Format = ISO
-            /// </param>
-            /// <param name='hasOverview'>
-            /// Optional filter by items that have an overview or not.
-            /// </param>
-            /// <param name='hasImdbId'>
-            /// Optional filter by items that have an imdb id or not.
-            /// </param>
-            /// <param name='hasTmdbId'>
-            /// Optional filter by items that have a tmdb id or not.
-            /// </param>
-            /// <param name='hasTvdbId'>
-            /// Optional filter by items that have a tvdb id or not.
-            /// </param>
-            /// <param name='excludeItemIds'>
-            /// Optional. If specified, results will be filtered by exxcluding item ids.
-            /// This allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='startIndex'>
-            /// Optional. The record index to start at. All items with a lower index will
-            /// be dropped from the results.
-            /// </param>
-            /// <param name='limit'>
-            /// Optional. The maximum number of records to return
-            /// </param>
-            /// <param name='recursive'>
-            /// When searching within folders, this determines whether or not the search
-            /// will be recursive. true/false
-            /// </param>
-            /// <param name='searchTerm'>
-            /// Enter a search term to perform a search request
-            /// </param>
-            /// <param name='sortOrder'>
-            /// Sort Order - Ascending,Descending
-            /// </param>
-            /// <param name='parentId'>
-            /// Specify this to localize the search to a specific item or folder. Omit to
-            /// use the root
-            /// </param>
-            /// <param name='fields'>
-            /// Optional. Specify additional fields of information to return in the output.
-            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
-            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
-            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
-            /// SortName, Studios, Taglines
-            /// </param>
-            /// <param name='excludeItemTypes'>
-            /// Optional. If specified, results will be filtered based on item type. This
-            /// allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='includeItemTypes'>
-            /// Optional. If specified, results will be filtered based on item type. This
-            /// allows multiple, comma delimeted.
-            /// </param>
-            /// <param name='anyProviderIdEquals'>
-            /// Optional. If specified, result will be filtered to contain only items which
-            /// match at least one of the specified IDs. Each provider ID must be in the
-            /// form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted
-            /// value pairs.
-            /// </param>
-            /// <param name='filters'>
-            /// Optional. Specify additional filters to apply. This allows multiple, comma
-            /// delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed,
-            /// IsFavorite, IsResumable, Likes, Dislikes
-            /// </param>
-            /// <param name='isFavorite'>
-            /// Optional filter by items that are marked as favorite, or not.
-            /// </param>
-            /// <param name='isMovie'>
-            /// Optional filter for movies.
-            /// </param>
-            /// <param name='isSeries'>
-            /// Optional filter for series.
-            /// </param>
-            /// <param name='isFolder'>
-            /// Optional filter for folders.
-            /// </param>
-            /// <param name='isNews'>
-            /// Optional filter for news.
-            /// </param>
-            /// <param name='isKids'>
-            /// Optional filter for kids.
-            /// </param>
-            /// <param name='isSports'>
-            /// Optional filter for sports.
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -22082,9 +23147,744 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task GetLivetvRecordingsAsync(this IRestClient operations, string channelId = default(string), string status = default(string), bool? isInProgress = default(bool?), string seriesTimerId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task PostLivetvProgramsAsync(this IRestClient operations, ApiBaseItemsRequest body, string channelIds = default(string), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                (await operations.GetLivetvRecordingsWithHttpMessagesAsync(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
+                (await operations.PostLivetvProgramsWithHttpMessagesAsync(body, channelIds, minStartDate, maxStartDate, minEndDate, maxEndDate, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
+            }
+
+            /// <summary>
+            /// Gets live tv recordings
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as user
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='channelId'>
+            /// Optional filter by channel id.
+            /// </param>
+            /// <param name='status'>
+            /// Optional filter by recording status. Possible values include: 'New',
+            /// 'InProgress', 'Completed', 'Cancelled', 'ConflictedOk', 'ConflictedNotOk',
+            /// 'Error'
+            /// </param>
+            /// <param name='isInProgress'>
+            /// Optional filter by recordings that are in progress, or not.
+            /// </param>
+            /// <param name='seriesTimerId'>
+            /// Optional filter by recordings belonging to a series timer
+            /// </param>
+            /// <param name='artistType'>
+            /// Artist or AlbumArtist
+            /// </param>
+            /// <param name='maxOfficialRating'>
+            /// Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='hasThemeSong'>
+            /// Optional filter by items with theme songs.
+            /// </param>
+            /// <param name='hasThemeVideo'>
+            /// Optional filter by items with theme videos.
+            /// </param>
+            /// <param name='hasSubtitles'>
+            /// Optional filter by items with subtitles.
+            /// </param>
+            /// <param name='hasSpecialFeature'>
+            /// Optional filter by items with special features.
+            /// </param>
+            /// <param name='hasTrailer'>
+            /// Optional filter by items with trailers.
+            /// </param>
+            /// <param name='adjacentTo'>
+            /// Optional. Return items that are siblings of a supplied item.
+            /// </param>
+            /// <param name='minIndexNumber'>
+            /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minPlayers'>
+            /// Optional filter by minimum number of game players.
+            /// </param>
+            /// <param name='maxPlayers'>
+            /// Optional filter by maximum number of game players.
+            /// </param>
+            /// <param name='parentIndexNumber'>
+            /// Optional filter by parent index number.
+            /// </param>
+            /// <param name='hasParentalRating'>
+            /// Optional filter by items that have or do not have a parental rating
+            /// </param>
+            /// <param name='isHD'>
+            /// Optional filter by items that are HD or not.
+            /// </param>
+            /// <param name='locationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='excludeLocationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='isMissing'>
+            /// Optional filter by items that are missing episodes or not.
+            /// </param>
+            /// <param name='isUnaired'>
+            /// Optional filter by items that are unaired episodes or not.
+            /// </param>
+            /// <param name='minCommunityRating'>
+            /// Optional filter by minimum community rating.
+            /// </param>
+            /// <param name='minCriticRating'>
+            /// Optional filter by minimum critic rating.
+            /// </param>
+            /// <param name='airedDuringSeason'>
+            /// Gets all episodes that aired during a season, including specials.
+            /// </param>
+            /// <param name='minPremiereDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSaved'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSavedForUser'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxPremiereDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='hasOverview'>
+            /// Optional filter by items that have an overview or not.
+            /// </param>
+            /// <param name='hasImdbId'>
+            /// Optional filter by items that have an imdb id or not.
+            /// </param>
+            /// <param name='hasTmdbId'>
+            /// Optional filter by items that have a tmdb id or not.
+            /// </param>
+            /// <param name='hasTvdbId'>
+            /// Optional filter by items that have a tvdb id or not.
+            /// </param>
+            /// <param name='excludeItemIds'>
+            /// Optional. If specified, results will be filtered by exxcluding item ids.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='startIndex'>
+            /// Optional. The record index to start at. All items with a lower index will
+            /// be dropped from the results.
+            /// </param>
+            /// <param name='limit'>
+            /// Optional. The maximum number of records to return
+            /// </param>
+            /// <param name='recursive'>
+            /// When searching within folders, this determines whether or not the search
+            /// will be recursive. true/false
+            /// </param>
+            /// <param name='searchTerm'>
+            /// Enter a search term to perform a search request
+            /// </param>
+            /// <param name='sortOrder'>
+            /// Sort Order - Ascending,Descending
+            /// </param>
+            /// <param name='parentId'>
+            /// Specify this to localize the search to a specific item or folder. Omit to
+            /// use the root
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines
+            /// </param>
+            /// <param name='excludeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='includeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='anyProviderIdEquals'>
+            /// Optional. If specified, result will be filtered to contain only items which
+            /// match at least one of the specified IDs. Each provider ID must be in the
+            /// form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted
+            /// value pairs.
+            /// </param>
+            /// <param name='filters'>
+            /// Optional. Specify additional filters to apply. This allows multiple, comma
+            /// delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed,
+            /// IsFavorite, IsResumable, Likes, Dislikes
+            /// </param>
+            /// <param name='isFavorite'>
+            /// Optional filter by items that are marked as favorite, or not.
+            /// </param>
+            /// <param name='isMovie'>
+            /// Optional filter for movies.
+            /// </param>
+            /// <param name='isSeries'>
+            /// Optional filter for series.
+            /// </param>
+            /// <param name='isFolder'>
+            /// Optional filter for folders.
+            /// </param>
+            /// <param name='isNews'>
+            /// Optional filter for news.
+            /// </param>
+            /// <param name='isKids'>
+            /// Optional filter for kids.
+            /// </param>
+            /// <param name='isSports'>
+            /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
+            /// </param>
+            /// <param name='projectToMedia'>
+            /// ProjectToMedia
+            /// </param>
+            /// <param name='mediaTypes'>
+            /// Optional filter by MediaType. Allows multiple, comma delimited.
+            /// </param>
+            /// <param name='imageTypes'>
+            /// Optional. If specified, results will be filtered based on those containing
+            /// image types. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='sortBy'>
+            /// Optional. Specify one or more sort orders, comma delimeted. Options: Album,
+            /// AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated,
+            /// DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random,
+            /// Revenue, Runtime
+            /// </param>
+            /// <param name='isPlayed'>
+            /// Optional filter by items that are played, or not.
+            /// </param>
+            /// <param name='genres'>
+            /// Optional. If specified, results will be filtered based on genre. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='officialRatings'>
+            /// Optional. If specified, results will be filtered based on OfficialRating.
+            /// This allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='tags'>
+            /// Optional. If specified, results will be filtered based on tag. This allows
+            /// multiple, pipe delimeted.
+            /// </param>
+            /// <param name='years'>
+            /// Optional. If specified, results will be filtered based on production year.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='person'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
+            /// </param>
+            /// <param name='personIds'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
+            /// </param>
+            /// <param name='personTypes'>
+            /// Optional. If specified, along with Person, results will be filtered to
+            /// include only those containing the specified person and PersonType. Allows
+            /// multiple, comma-delimited
+            /// </param>
+            /// <param name='studios'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='studioIds'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artists'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artistIds'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='albums'>
+            /// Optional. If specified, results will be filtered based on album. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='ids'>
+            /// Optional. If specific items are needed, specify a list of item id's to
+            /// retrieve. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='videoTypes'>
+            /// Optional filter by VideoType (videofile, dvd, bluray, iso). Allows
+            /// multiple, comma delimeted.
+            /// </param>
+            /// <param name='containers'>
+            /// Optional filter by Container. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioCodecs'>
+            /// Optional filter by AudioCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioLayouts'>
+            /// Optional filter by AudioLayout. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='videoCodecs'>
+            /// Optional filter by VideoCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='extendedVideoTypes'>
+            /// Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='subtitleCodecs'>
+            /// Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='path'>
+            /// Optional filter by Path.
+            /// </param>
+            /// <param name='userId'>
+            /// User Id
+            /// </param>
+            /// <param name='minOfficialRating'>
+            /// Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='isLocked'>
+            /// Optional filter by items that are locked.
+            /// </param>
+            /// <param name='isPlaceHolder'>
+            /// Optional filter by items that are placeholders
+            /// </param>
+            /// <param name='hasOfficialRating'>
+            /// Optional filter by items that have official ratings
+            /// </param>
+            /// <param name='groupItemsIntoCollections'>
+            /// Whether or not to hide items behind their boxsets.
+            /// </param>
+            /// <param name='is3D'>
+            /// Optional filter by items that are 3D, or not.
+            /// </param>
+            /// <param name='seriesStatus'>
+            /// Optional filter by Series Status. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='nameStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='artistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='albumArtistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='nameStartsWith'>
+            /// Optional filter by items whose name is sorted equally than a given input
+            /// string.
+            /// </param>
+            /// <param name='nameLessThan'>
+            /// Optional filter by items whose name is equally or lesser than a given input
+            /// string.
+            /// </param>
+            public static void GetLivetvRecordings(this IRestClient operations, string channelId = default(string), string status = default(string), bool? isInProgress = default(bool?), string seriesTimerId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            {
+                operations.GetLivetvRecordingsAsync(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Gets live tv recordings
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as user
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='channelId'>
+            /// Optional filter by channel id.
+            /// </param>
+            /// <param name='status'>
+            /// Optional filter by recording status. Possible values include: 'New',
+            /// 'InProgress', 'Completed', 'Cancelled', 'ConflictedOk', 'ConflictedNotOk',
+            /// 'Error'
+            /// </param>
+            /// <param name='isInProgress'>
+            /// Optional filter by recordings that are in progress, or not.
+            /// </param>
+            /// <param name='seriesTimerId'>
+            /// Optional filter by recordings belonging to a series timer
+            /// </param>
+            /// <param name='artistType'>
+            /// Artist or AlbumArtist
+            /// </param>
+            /// <param name='maxOfficialRating'>
+            /// Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='hasThemeSong'>
+            /// Optional filter by items with theme songs.
+            /// </param>
+            /// <param name='hasThemeVideo'>
+            /// Optional filter by items with theme videos.
+            /// </param>
+            /// <param name='hasSubtitles'>
+            /// Optional filter by items with subtitles.
+            /// </param>
+            /// <param name='hasSpecialFeature'>
+            /// Optional filter by items with special features.
+            /// </param>
+            /// <param name='hasTrailer'>
+            /// Optional filter by items with trailers.
+            /// </param>
+            /// <param name='adjacentTo'>
+            /// Optional. Return items that are siblings of a supplied item.
+            /// </param>
+            /// <param name='minIndexNumber'>
+            /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minPlayers'>
+            /// Optional filter by minimum number of game players.
+            /// </param>
+            /// <param name='maxPlayers'>
+            /// Optional filter by maximum number of game players.
+            /// </param>
+            /// <param name='parentIndexNumber'>
+            /// Optional filter by parent index number.
+            /// </param>
+            /// <param name='hasParentalRating'>
+            /// Optional filter by items that have or do not have a parental rating
+            /// </param>
+            /// <param name='isHD'>
+            /// Optional filter by items that are HD or not.
+            /// </param>
+            /// <param name='locationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='excludeLocationTypes'>
+            /// Optional. If specified, results will be filtered based on LocationType.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='isMissing'>
+            /// Optional filter by items that are missing episodes or not.
+            /// </param>
+            /// <param name='isUnaired'>
+            /// Optional filter by items that are unaired episodes or not.
+            /// </param>
+            /// <param name='minCommunityRating'>
+            /// Optional filter by minimum community rating.
+            /// </param>
+            /// <param name='minCriticRating'>
+            /// Optional filter by minimum critic rating.
+            /// </param>
+            /// <param name='airedDuringSeason'>
+            /// Gets all episodes that aired during a season, including specials.
+            /// </param>
+            /// <param name='minPremiereDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSaved'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minDateLastSavedForUser'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxPremiereDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='hasOverview'>
+            /// Optional filter by items that have an overview or not.
+            /// </param>
+            /// <param name='hasImdbId'>
+            /// Optional filter by items that have an imdb id or not.
+            /// </param>
+            /// <param name='hasTmdbId'>
+            /// Optional filter by items that have a tmdb id or not.
+            /// </param>
+            /// <param name='hasTvdbId'>
+            /// Optional filter by items that have a tvdb id or not.
+            /// </param>
+            /// <param name='excludeItemIds'>
+            /// Optional. If specified, results will be filtered by exxcluding item ids.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='startIndex'>
+            /// Optional. The record index to start at. All items with a lower index will
+            /// be dropped from the results.
+            /// </param>
+            /// <param name='limit'>
+            /// Optional. The maximum number of records to return
+            /// </param>
+            /// <param name='recursive'>
+            /// When searching within folders, this determines whether or not the search
+            /// will be recursive. true/false
+            /// </param>
+            /// <param name='searchTerm'>
+            /// Enter a search term to perform a search request
+            /// </param>
+            /// <param name='sortOrder'>
+            /// Sort Order - Ascending,Descending
+            /// </param>
+            /// <param name='parentId'>
+            /// Specify this to localize the search to a specific item or folder. Omit to
+            /// use the root
+            /// </param>
+            /// <param name='fields'>
+            /// Optional. Specify additional fields of information to return in the output.
+            /// This allows multiple, comma delimeted. Options: Budget, Chapters,
+            /// DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview,
+            /// ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue,
+            /// SortName, Studios, Taglines
+            /// </param>
+            /// <param name='excludeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='includeItemTypes'>
+            /// Optional. If specified, results will be filtered based on item type. This
+            /// allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='anyProviderIdEquals'>
+            /// Optional. If specified, result will be filtered to contain only items which
+            /// match at least one of the specified IDs. Each provider ID must be in the
+            /// form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted
+            /// value pairs.
+            /// </param>
+            /// <param name='filters'>
+            /// Optional. Specify additional filters to apply. This allows multiple, comma
+            /// delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed,
+            /// IsFavorite, IsResumable, Likes, Dislikes
+            /// </param>
+            /// <param name='isFavorite'>
+            /// Optional filter by items that are marked as favorite, or not.
+            /// </param>
+            /// <param name='isMovie'>
+            /// Optional filter for movies.
+            /// </param>
+            /// <param name='isSeries'>
+            /// Optional filter for series.
+            /// </param>
+            /// <param name='isFolder'>
+            /// Optional filter for folders.
+            /// </param>
+            /// <param name='isNews'>
+            /// Optional filter for news.
+            /// </param>
+            /// <param name='isKids'>
+            /// Optional filter for kids.
+            /// </param>
+            /// <param name='isSports'>
+            /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
+            /// </param>
+            /// <param name='projectToMedia'>
+            /// ProjectToMedia
+            /// </param>
+            /// <param name='mediaTypes'>
+            /// Optional filter by MediaType. Allows multiple, comma delimited.
+            /// </param>
+            /// <param name='imageTypes'>
+            /// Optional. If specified, results will be filtered based on those containing
+            /// image types. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='sortBy'>
+            /// Optional. Specify one or more sort orders, comma delimeted. Options: Album,
+            /// AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated,
+            /// DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random,
+            /// Revenue, Runtime
+            /// </param>
+            /// <param name='isPlayed'>
+            /// Optional filter by items that are played, or not.
+            /// </param>
+            /// <param name='genres'>
+            /// Optional. If specified, results will be filtered based on genre. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='officialRatings'>
+            /// Optional. If specified, results will be filtered based on OfficialRating.
+            /// This allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='tags'>
+            /// Optional. If specified, results will be filtered based on tag. This allows
+            /// multiple, pipe delimeted.
+            /// </param>
+            /// <param name='years'>
+            /// Optional. If specified, results will be filtered based on production year.
+            /// This allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='enableImages'>
+            /// Optional, include image information in output
+            /// </param>
+            /// <param name='enableUserData'>
+            /// Optional, include user data
+            /// </param>
+            /// <param name='imageTypeLimit'>
+            /// Optional, the max number of images to return, per image type
+            /// </param>
+            /// <param name='enableImageTypes'>
+            /// Optional. The image types to include in the output.
+            /// </param>
+            /// <param name='person'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
+            /// </param>
+            /// <param name='personIds'>
+            /// Optional. If specified, results will be filtered to include only those
+            /// containing the specified person.
+            /// </param>
+            /// <param name='personTypes'>
+            /// Optional. If specified, along with Person, results will be filtered to
+            /// include only those containing the specified person and PersonType. Allows
+            /// multiple, comma-delimited
+            /// </param>
+            /// <param name='studios'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='studioIds'>
+            /// Optional. If specified, results will be filtered based on studio. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artists'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='artistIds'>
+            /// Optional. If specified, results will be filtered based on artist. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='albums'>
+            /// Optional. If specified, results will be filtered based on album. This
+            /// allows multiple, pipe delimeted.
+            /// </param>
+            /// <param name='ids'>
+            /// Optional. If specific items are needed, specify a list of item id's to
+            /// retrieve. This allows multiple, comma delimited.
+            /// </param>
+            /// <param name='videoTypes'>
+            /// Optional filter by VideoType (videofile, dvd, bluray, iso). Allows
+            /// multiple, comma delimeted.
+            /// </param>
+            /// <param name='containers'>
+            /// Optional filter by Container. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioCodecs'>
+            /// Optional filter by AudioCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='audioLayouts'>
+            /// Optional filter by AudioLayout. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='videoCodecs'>
+            /// Optional filter by VideoCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='extendedVideoTypes'>
+            /// Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='subtitleCodecs'>
+            /// Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='path'>
+            /// Optional filter by Path.
+            /// </param>
+            /// <param name='userId'>
+            /// User Id
+            /// </param>
+            /// <param name='minOfficialRating'>
+            /// Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+            /// </param>
+            /// <param name='isLocked'>
+            /// Optional filter by items that are locked.
+            /// </param>
+            /// <param name='isPlaceHolder'>
+            /// Optional filter by items that are placeholders
+            /// </param>
+            /// <param name='hasOfficialRating'>
+            /// Optional filter by items that have official ratings
+            /// </param>
+            /// <param name='groupItemsIntoCollections'>
+            /// Whether or not to hide items behind their boxsets.
+            /// </param>
+            /// <param name='is3D'>
+            /// Optional filter by items that are 3D, or not.
+            /// </param>
+            /// <param name='seriesStatus'>
+            /// Optional filter by Series Status. Allows multiple, comma delimeted.
+            /// </param>
+            /// <param name='nameStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='artistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='albumArtistStartsWithOrGreater'>
+            /// Optional filter by items whose name is sorted equally or greater than a
+            /// given input string.
+            /// </param>
+            /// <param name='nameStartsWith'>
+            /// Optional filter by items whose name is sorted equally than a given input
+            /// string.
+            /// </param>
+            /// <param name='nameLessThan'>
+            /// Optional filter by items whose name is equally or lesser than a given input
+            /// string.
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task GetLivetvRecordingsAsync(this IRestClient operations, string channelId = default(string), string status = default(string), bool? isInProgress = default(bool?), string seriesTimerId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            {
+                (await operations.GetLivetvRecordingsWithHttpMessagesAsync(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
             }
 
             /// <summary>
@@ -30106,6 +31906,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -30239,6 +32051,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -30393,9 +32217,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static IList<LiveTVApiTagItem> GetLivetvChanneltagsPrefixes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static IList<LiveTVApiTagItem> GetLivetvChanneltagsPrefixes(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetLivetvChanneltagsPrefixesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetLivetvChanneltagsPrefixesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -30433,6 +32257,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -30567,6 +32403,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -30724,9 +32572,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<LiveTVApiTagItem>> GetLivetvChanneltagsPrefixesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<LiveTVApiTagItem>> GetLivetvChanneltagsPrefixesAsync(this IRestClient operations, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetLivetvChanneltagsPrefixesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetLivetvChanneltagsPrefixesWithHttpMessagesAsync(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -33146,6 +34994,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -33279,6 +35139,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -33433,9 +35305,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static void GetShowsByIdEpisodes(this IRestClient operations, string id, int? season = default(int?), string seasonId = default(string), string startItemId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static void GetShowsByIdEpisodes(this IRestClient operations, string id, int? season = default(int?), string seasonId = default(string), string startItemId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                operations.GetShowsByIdEpisodesAsync(id, season, seasonId, startItemId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                operations.GetShowsByIdEpisodesAsync(id, season, seasonId, startItemId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -33485,6 +35357,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -33619,6 +35503,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -33776,9 +35672,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task GetShowsByIdEpisodesAsync(this IRestClient operations, string id, int? season = default(int?), string seasonId = default(string), string startItemId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task GetShowsByIdEpisodesAsync(this IRestClient operations, string id, int? season = default(int?), string seasonId = default(string), string startItemId = default(string), string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string userId = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                (await operations.GetShowsByIdEpisodesWithHttpMessagesAsync(id, season, seasonId, startItemId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
+                (await operations.GetShowsByIdEpisodesWithHttpMessagesAsync(id, season, seasonId, startItemId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false)).Dispose();
             }
 
             /// <summary>
@@ -35052,6 +36948,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -35185,6 +37093,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -35336,9 +37256,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetUsersByUseridItems(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetUsersByUseridItems(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetUsersByUseridItemsAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetUsersByUseridItemsAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -35380,6 +37300,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -35514,6 +37446,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -35668,9 +37612,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetUsersByUseridItemsAsync(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetUsersByUseridItemsAsync(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetUsersByUseridItemsWithHttpMessagesAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetUsersByUseridItemsWithHttpMessagesAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -42129,6 +44073,47 @@ namespace EmbyClient.MsRest
             }
 
             /// <summary>
+            /// Updates a user configuration
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as user
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='body'>
+            /// Binary stream
+            /// </param>
+            /// <param name='id'>
+            /// </param>
+            public static void PostUsersByIdConfigurationPartial(this IRestClient operations, string body, string id)
+            {
+                operations.PostUsersByIdConfigurationPartialAsync(body, id).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Updates a user configuration
+            /// </summary>
+            /// <remarks>
+            /// Requires authentication as user
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='body'>
+            /// Binary stream
+            /// </param>
+            /// <param name='id'>
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task PostUsersByIdConfigurationPartialAsync(this IRestClient operations, string body, string id, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                (await operations.PostUsersByIdConfigurationPartialWithHttpMessagesAsync(body, id, null, cancellationToken).ConfigureAwait(false)).Dispose();
+            }
+
+            /// <summary>
             /// Gets a typed user setting
             /// </summary>
             /// <remarks>
@@ -42256,6 +44241,18 @@ namespace EmbyClient.MsRest
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
             /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
             /// </param>
@@ -42389,6 +44386,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -42540,9 +44549,9 @@ namespace EmbyClient.MsRest
             /// Optional filter by items whose name is equally or lesser than a given input
             /// string.
             /// </param>
-            public static QueryResultBaseItemDto GetUsersByUseridItemsResume(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
+            public static QueryResultBaseItemDto GetUsersByUseridItemsResume(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string))
             {
-                return operations.GetUsersByUseridItemsResumeAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
+                return operations.GetUsersByUseridItemsResumeAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -42584,6 +44593,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='minIndexNumber'>
             /// Optional filter by minimum index number.
+            /// </param>
+            /// <param name='minStartDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxStartDate'>
+            /// Optional. The maximum premiere date. Format = ISO
+            /// </param>
+            /// <param name='minEndDate'>
+            /// Optional. The minimum premiere date. Format = ISO
+            /// </param>
+            /// <param name='maxEndDate'>
+            /// Optional. The maximum premiere date. Format = ISO
             /// </param>
             /// <param name='minPlayers'>
             /// Optional filter by minimum number of game players.
@@ -42718,6 +44739,18 @@ namespace EmbyClient.MsRest
             /// </param>
             /// <param name='isSports'>
             /// Optional filter for sports.
+            /// </param>
+            /// <param name='isNew'>
+            /// Optional filter for IsNew.
+            /// </param>
+            /// <param name='isPremiere'>
+            /// Optional filter for IsPremiere.
+            /// </param>
+            /// <param name='isNewOrPremiere'>
+            /// Optional filter for IsNewOrPremiere.
+            /// </param>
+            /// <param name='isRepeat'>
+            /// Optional filter for IsRepeat.
             /// </param>
             /// <param name='projectToMedia'>
             /// ProjectToMedia
@@ -42872,9 +44905,9 @@ namespace EmbyClient.MsRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<QueryResultBaseItemDto> GetUsersByUseridItemsResumeAsync(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<QueryResultBaseItemDto> GetUsersByUseridItemsResumeAsync(this IRestClient operations, string userId, string artistType = default(string), string maxOfficialRating = default(string), bool? hasThemeSong = default(bool?), bool? hasThemeVideo = default(bool?), bool? hasSubtitles = default(bool?), bool? hasSpecialFeature = default(bool?), bool? hasTrailer = default(bool?), string adjacentTo = default(string), int? minIndexNumber = default(int?), string minStartDate = default(string), string maxStartDate = default(string), string minEndDate = default(string), string maxEndDate = default(string), int? minPlayers = default(int?), int? maxPlayers = default(int?), int? parentIndexNumber = default(int?), bool? hasParentalRating = default(bool?), bool? isHD = default(bool?), string locationTypes = default(string), string excludeLocationTypes = default(string), bool? isMissing = default(bool?), bool? isUnaired = default(bool?), double? minCommunityRating = default(double?), double? minCriticRating = default(double?), int? airedDuringSeason = default(int?), string minPremiereDate = default(string), string minDateLastSaved = default(string), string minDateLastSavedForUser = default(string), string maxPremiereDate = default(string), bool? hasOverview = default(bool?), bool? hasImdbId = default(bool?), bool? hasTmdbId = default(bool?), bool? hasTvdbId = default(bool?), string excludeItemIds = default(string), int? startIndex = default(int?), int? limit = default(int?), bool? recursive = default(bool?), string searchTerm = default(string), string sortOrder = default(string), string parentId = default(string), string fields = default(string), string excludeItemTypes = default(string), string includeItemTypes = default(string), string anyProviderIdEquals = default(string), string filters = default(string), bool? isFavorite = default(bool?), bool? isMovie = default(bool?), bool? isSeries = default(bool?), bool? isFolder = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isSports = default(bool?), bool? isNew = default(bool?), bool? isPremiere = default(bool?), bool? isNewOrPremiere = default(bool?), bool? isRepeat = default(bool?), bool? projectToMedia = default(bool?), string mediaTypes = default(string), string imageTypes = default(string), string sortBy = default(string), bool? isPlayed = default(bool?), string genres = default(string), string officialRatings = default(string), string tags = default(string), string years = default(string), bool? enableImages = default(bool?), bool? enableUserData = default(bool?), int? imageTypeLimit = default(int?), string enableImageTypes = default(string), string person = default(string), string personIds = default(string), string personTypes = default(string), string studios = default(string), string studioIds = default(string), string artists = default(string), string artistIds = default(string), string albums = default(string), string ids = default(string), string videoTypes = default(string), string containers = default(string), string audioCodecs = default(string), string audioLayouts = default(string), string videoCodecs = default(string), string extendedVideoTypes = default(string), string subtitleCodecs = default(string), string path = default(string), string minOfficialRating = default(string), bool? isLocked = default(bool?), bool? isPlaceHolder = default(bool?), bool? hasOfficialRating = default(bool?), bool? groupItemsIntoCollections = default(bool?), bool? is3D = default(bool?), string seriesStatus = default(string), string nameStartsWithOrGreater = default(string), string artistStartsWithOrGreater = default(string), string albumArtistStartsWithOrGreater = default(string), string nameStartsWith = default(string), string nameLessThan = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetUsersByUseridItemsResumeWithHttpMessagesAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetUsersByUseridItemsResumeWithHttpMessagesAsync(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

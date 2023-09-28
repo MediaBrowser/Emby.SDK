@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.47"
+    "version": "4.8.0.48"
   },
   "servers": [
     {
@@ -125,6 +125,46 @@
               "type": "integer",
               "format": "int32",
               "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -533,6 +573,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -1110,6 +1194,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -1515,6 +1639,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -2092,6 +2260,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -2497,6 +2705,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -3312,6 +3564,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -3717,6 +4009,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -4408,6 +4744,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -4813,6 +5189,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -5452,6 +5872,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -5857,6 +6317,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -6438,6 +6942,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -6843,6 +7387,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -7424,6 +8012,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -7829,6 +8457,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -8456,6 +9128,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -8861,6 +9573,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -9442,6 +10198,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -9847,6 +10643,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -10424,6 +11264,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -10829,6 +11709,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -11587,6 +12511,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -11992,6 +12956,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -12882,6 +13890,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -13287,6 +14335,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -13868,6 +14960,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -14273,6 +15405,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -14850,6 +16026,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -15255,6 +16471,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -15908,6 +17168,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -16313,6 +17613,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -16894,6 +18238,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -17299,6 +18683,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -17876,6 +19304,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -18281,6 +19749,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -18858,6 +20370,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -19263,6 +20815,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -20379,6 +21975,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -20784,6 +22420,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -21361,6 +23041,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -21766,6 +23486,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -22315,8 +24079,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -25071,6 +26834,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -25476,6 +27279,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -26838,6 +28685,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -27243,6 +29130,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -28724,156 +30655,6 @@
             }
           },
           {
-            "name": "UserId",
-            "in": "query",
-            "description": "Optional filter by user and attach user data.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "GenreIds",
-            "in": "query",
-            "description": "The genres to return guide information for.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MinStartDate",
-            "in": "query",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MaxStartDate",
-            "in": "query",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MinEndDate",
-            "in": "query",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MaxEndDate",
-            "in": "query",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "StartIndex",
-            "in": "query",
-            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "IsMovie",
-            "in": "query",
-            "description": "Optional filter for movies.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "IsSeries",
-            "in": "query",
-            "description": "Optional filter for series.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "IsNews",
-            "in": "query",
-            "description": "Optional filter for news.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "IsKids",
-            "in": "query",
-            "description": "Optional filter for kids.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "IsSports",
-            "in": "query",
-            "description": "Optional filter for sports.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "Limit",
-            "in": "query",
-            "description": "Optional. The maximum number of records to return",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "IsFavorite",
-            "in": "query",
-            "description": "Filter by channels that are favorites, or not.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
             "name": "IsLiked",
             "in": "query",
             "description": "Filter by channels that are liked, or not.",
@@ -28906,48 +30687,6 @@
             }
           },
           {
-            "name": "EnableImages",
-            "in": "query",
-            "description": "Optional, include image information in output",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "ImageTypeLimit",
-            "in": "query",
-            "description": "Optional, the max number of images to return, per image type",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "EnableImageTypes",
-            "in": "query",
-            "description": "Optional. The image types to include in the output.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Fields",
-            "in": "query",
-            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "AddCurrentProgram",
             "in": "query",
             "description": "Optional. Adds current program info to each channel",
@@ -28955,17 +30694,6 @@
             "explode": false,
             "schema": {
               "type": "boolean"
-            }
-          },
-          {
-            "name": "EnableUserData",
-            "in": "query",
-            "description": "Optional, include user data",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
             }
           },
           {
@@ -28976,116 +30704,6 @@
             "explode": false,
             "schema": {
               "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a QueryResult<EpgRow> object.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QueryResult_LiveTV.Api.EpgRow"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/QueryResult_LiveTV.Api.EpgRow"
-                }
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      }
-    },
-    "/LiveTv/Channels": {
-      "summary": "Gets available live tv channels.",
-      "get": {
-        "tags": [
-          "LiveTvService"
-        ],
-        "summary": "Gets available live tv channels.",
-        "description": "Requires authentication as user",
-        "externalDocs": {
-          "description": "API Documentation: Item Information",
-          "url": "https://github.com/MediaBrowser/Emby/wiki/Item-Information"
-        },
-        "operationId": "getLivetvChannels",
-        "parameters": [
-          {
-            "name": "Type",
-            "in": "query",
-            "description": "Optional filter by channel type.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "$ref": "#/components/schemas/LiveTv.ChannelType"
-            }
-          },
-          {
-            "name": "IsLiked",
-            "in": "query",
-            "description": "Filter by channels that are liked, or not.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "IsDisliked",
-            "in": "query",
-            "description": "Filter by channels that are disliked, or not.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
-            "name": "EnableFavoriteSorting",
-            "in": "query",
-            "description": "Incorporate favorite and like status into channel sorting.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "AddCurrentProgram",
-            "in": "query",
-            "description": "Optional. Adds current program info to each channel",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "boolean"
             }
           },
           {
@@ -29183,6 +30801,46 @@
               "type": "integer",
               "format": "int32",
               "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -29591,6 +31249,1172 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ProjectToMedia",
+            "in": "query",
+            "description": "ProjectToMedia",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "MediaTypes",
+            "in": "query",
+            "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ImageTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortBy",
+            "in": "query",
+            "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsPlayed",
+            "in": "query",
+            "description": "Optional filter by items that are played, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Genres",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OfficialRatings",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tags",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Years",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EnableImages",
+            "in": "query",
+            "description": "Optional, include image information in output",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableUserData",
+            "in": "query",
+            "description": "Optional, include user data",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ImageTypeLimit",
+            "in": "query",
+            "description": "Optional, the max number of images to return, per image type",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableImageTypes",
+            "in": "query",
+            "description": "Optional. The image types to include in the output.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Person",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonTypes",
+            "in": "query",
+            "description": "Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Studios",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StudioIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Artists",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Albums",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ids",
+            "in": "query",
+            "description": "Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoTypes",
+            "in": "query",
+            "description": "Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Containers",
+            "in": "query",
+            "description": "Optional filter by Container. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodecs",
+            "in": "query",
+            "description": "Optional filter by AudioCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioLayouts",
+            "in": "query",
+            "description": "Optional filter by AudioLayout. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoCodecs",
+            "in": "query",
+            "description": "Optional filter by VideoCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExtendedVideoTypes",
+            "in": "query",
+            "description": "Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubtitleCodecs",
+            "in": "query",
+            "description": "Optional filter by SubtitleCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Path",
+            "in": "query",
+            "description": "Optional filter by Path.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "description": "User Id",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          },
+          {
+            "name": "MinOfficialRating",
+            "in": "query",
+            "description": "Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsLocked",
+            "in": "query",
+            "description": "Optional filter by items that are locked.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPlaceHolder",
+            "in": "query",
+            "description": "Optional filter by items that are placeholders",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasOfficialRating",
+            "in": "query",
+            "description": "Optional filter by items that have official ratings",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "GroupItemsIntoCollections",
+            "in": "query",
+            "description": "Whether or not to hide items behind their boxsets.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Is3D",
+            "in": "query",
+            "description": "Optional filter by items that are 3D, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SeriesStatus",
+            "in": "query",
+            "description": "Optional filter by Series Status. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AlbumArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWith",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameLessThan",
+            "in": "query",
+            "description": "Optional filter by items whose name is equally or lesser than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a QueryResult<EpgRow> object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult_LiveTV.Api.EpgRow"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult_LiveTV.Api.EpgRow"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/LiveTv/Channels": {
+      "summary": "Gets available live tv channels.",
+      "get": {
+        "tags": [
+          "LiveTvService"
+        ],
+        "summary": "Gets available live tv channels.",
+        "description": "Requires authentication as user",
+        "externalDocs": {
+          "description": "API Documentation: Item Information",
+          "url": "https://github.com/MediaBrowser/Emby/wiki/Item-Information"
+        },
+        "operationId": "getLivetvChannels",
+        "parameters": [
+          {
+            "name": "Type",
+            "in": "query",
+            "description": "Optional filter by channel type.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/LiveTv.ChannelType"
+            }
+          },
+          {
+            "name": "IsLiked",
+            "in": "query",
+            "description": "Filter by channels that are liked, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsDisliked",
+            "in": "query",
+            "description": "Filter by channels that are disliked, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableFavoriteSorting",
+            "in": "query",
+            "description": "Incorporate favorite and like status into channel sorting.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "AddCurrentProgram",
+            "in": "query",
+            "description": "Optional. Adds current program info to each channel",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "ArtistType",
+            "in": "query",
+            "description": "Artist or AlbumArtist",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxOfficialRating",
+            "in": "query",
+            "description": "Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HasThemeSong",
+            "in": "query",
+            "description": "Optional filter by items with theme songs.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasThemeVideo",
+            "in": "query",
+            "description": "Optional filter by items with theme videos.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSubtitles",
+            "in": "query",
+            "description": "Optional filter by items with subtitles.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSpecialFeature",
+            "in": "query",
+            "description": "Optional filter by items with special features.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTrailer",
+            "in": "query",
+            "description": "Optional filter by items with trailers.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AdjacentTo",
+            "in": "query",
+            "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinIndexNumber",
+            "in": "query",
+            "description": "Optional filter by minimum index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinPlayers",
+            "in": "query",
+            "description": "Optional filter by minimum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxPlayers",
+            "in": "query",
+            "description": "Optional filter by maximum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ParentIndexNumber",
+            "in": "query",
+            "description": "Optional filter by parent index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasParentalRating",
+            "in": "query",
+            "description": "Optional filter by items that have or do not have a parental rating",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsHD",
+            "in": "query",
+            "description": "Optional filter by items that are HD or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "LocationTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeLocationTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsMissing",
+            "in": "query",
+            "description": "Optional filter by items that are missing episodes or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsUnaired",
+            "in": "query",
+            "description": "Optional filter by items that are unaired episodes or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCommunityRating",
+            "in": "query",
+            "description": "Optional filter by minimum community rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCriticRating",
+            "in": "query",
+            "description": "Optional filter by minimum critic rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AiredDuringSeason",
+            "in": "query",
+            "description": "Gets all episodes that aired during a season, including specials.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinPremiereDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinDateLastSaved",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinDateLastSavedForUser",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxPremiereDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HasOverview",
+            "in": "query",
+            "description": "Optional filter by items that have an overview or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasImdbId",
+            "in": "query",
+            "description": "Optional filter by items that have an imdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTmdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tmdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTvdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tvdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ExcludeItemIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartIndex",
+            "in": "query",
+            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "description": "Optional. The maximum number of records to return",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Recursive",
+            "in": "query",
+            "description": "When searching within folders, this determines whether or not the search will be recursive. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "description": "Enter a search term to perform a search request",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortOrder",
+            "in": "query",
+            "description": "Sort Order - Ascending,Descending",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ParentId",
+            "in": "query",
+            "description": "Specify this to localize the search to a specific item or folder. Omit to use the root",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fields",
+            "in": "query",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AnyProviderIdEquals",
+            "in": "query",
+            "description": "Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filters",
+            "in": "query",
+            "description": "Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsFavorite",
+            "in": "query",
+            "description": "Optional filter by items that are marked as favorite, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsMovie",
+            "in": "query",
+            "description": "Optional filter for movies.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSeries",
+            "in": "query",
+            "description": "Optional filter for series.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsFolder",
+            "in": "query",
+            "description": "Optional filter for folders.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNews",
+            "in": "query",
+            "description": "Optional filter for news.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsKids",
+            "in": "query",
+            "description": "Optional filter for kids.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSports",
+            "in": "query",
+            "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -30631,6 +33455,50 @@
             }
           },
           {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "ProjectToMedia",
             "in": "query",
             "description": "ProjectToMedia",
@@ -31648,6 +34516,50 @@
             }
           },
           {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "ProjectToMedia",
             "in": "query",
             "description": "ProjectToMedia",
@@ -32262,6 +35174,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -32667,6 +35619,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -33984,8 +36980,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -37396,8 +40391,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -37549,8 +40543,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -37702,8 +40695,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -42110,8 +45102,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -43439,8 +46430,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -43656,8 +46646,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -45752,6 +48741,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -46157,6 +49186,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -48169,8 +51242,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -48322,8 +51394,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -49091,8 +52162,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -50449,6 +53519,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -50854,6 +53964,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -51395,8 +54549,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -51548,8 +54701,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -52633,8 +55785,7 @@
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string",
-              "format": "guid"
+              "type": "string"
             }
           },
           {
@@ -53337,6 +56488,46 @@
             }
           },
           {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "MinPlayers",
             "in": "query",
             "description": "Optional filter by minimum number of game players.",
@@ -53742,6 +56933,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -63919,6 +67154,69 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Users/{Id}/Configuration/Partial": {
+      "summary": "Updates a user configuration",
+      "post": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Updates a user configuration",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByIdConfigurationPartial",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Binary stream",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Users/{UserId}/TypedSettings/{Key}": {
       "summary": "Gets a typed user setting",
       "get": {
@@ -64159,6 +67457,46 @@
               "type": "integer",
               "format": "int32",
               "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -64567,6 +67905,50 @@
             "name": "IsSports",
             "in": "query",
             "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -76449,6 +79831,14 @@
           "MaxManifestSubtitles": {
             "type": "integer",
             "format": "int32"
+          },
+          "MaxWidth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MaxHeight": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dlna.TranscodingProfile"
@@ -79900,6 +83290,9 @@
           "SubtitleLanguagePreference": {
             "type": "string"
           },
+          "ProfilePin": {
+            "type": "string"
+          },
           "DisplayMissingEpisodes": {
             "type": "boolean"
           },
@@ -79925,6 +83318,12 @@
             }
           },
           "HidePlayedInLatest": {
+            "type": "boolean"
+          },
+          "HidePlayedInMoreLikeThis": {
+            "type": "boolean"
+          },
+          "HidePlayedInSuggestions": {
             "type": "boolean"
           },
           "RememberAudioSelections": {

@@ -28,7 +28,7 @@ namespace EmbyClient.MsRest.Models
         /// 'Bytes'</param>
         /// <param name="context">Possible values include: 'Streaming',
         /// 'Static'</param>
-        public DlnaTranscodingProfile(string container = default(string), string type = default(string), string videoCodec = default(string), string audioCodec = default(string), string protocol = default(string), bool? estimateContentLength = default(bool?), bool? enableMpegtsM2TsMode = default(bool?), string transcodeSeekInfo = default(string), bool? copyTimestamps = default(bool?), string context = default(string), string maxAudioChannels = default(string), int? minSegments = default(int?), int? segmentLength = default(int?), bool? breakOnNonKeyFrames = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), string manifestSubtitles = default(string), int? maxManifestSubtitles = default(int?))
+        public DlnaTranscodingProfile(string container = default(string), string type = default(string), string videoCodec = default(string), string audioCodec = default(string), string protocol = default(string), bool? estimateContentLength = default(bool?), bool? enableMpegtsM2TsMode = default(bool?), string transcodeSeekInfo = default(string), bool? copyTimestamps = default(bool?), string context = default(string), string maxAudioChannels = default(string), int? minSegments = default(int?), int? segmentLength = default(int?), bool? breakOnNonKeyFrames = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), string manifestSubtitles = default(string), int? maxManifestSubtitles = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?))
         {
             Container = container;
             Type = type;
@@ -47,6 +47,8 @@ namespace EmbyClient.MsRest.Models
             AllowInterlacedVideoStreamCopy = allowInterlacedVideoStreamCopy;
             ManifestSubtitles = manifestSubtitles;
             MaxManifestSubtitles = maxManifestSubtitles;
+            MaxWidth = maxWidth;
+            MaxHeight = maxHeight;
             CustomInit();
         }
 
@@ -142,6 +144,16 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "MaxManifestSubtitles")]
         public int? MaxManifestSubtitles { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "MaxWidth")]
+        public int? MaxWidth { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "MaxHeight")]
+        public int? MaxHeight { get; set; }
 
     }
 }

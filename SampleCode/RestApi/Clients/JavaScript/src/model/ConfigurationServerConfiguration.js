@@ -18,7 +18,7 @@ import NetSocketsAddressFamily from './NetSocketsAddressFamily';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.47
+* @version 4.8.0.48
 */
 export default class ConfigurationServerConfiguration {
     /**

@@ -16,7 +16,7 @@ import ConfigurationSubtitlePlaybackMode from './ConfigurationSubtitlePlaybackMo
 /**
 * The ConfigurationUserConfiguration model module.
 * @module model/ConfigurationUserConfiguration
-* @version 4.8.0.47
+* @version 4.8.0.48
 */
 export default class ConfigurationUserConfiguration {
     /**
@@ -52,6 +52,9 @@ export default class ConfigurationUserConfiguration {
             if (data.hasOwnProperty('SubtitleLanguagePreference')) {
                 obj['SubtitleLanguagePreference'] = ApiClient.convertToType(data['SubtitleLanguagePreference'], 'String');
             }
+            if (data.hasOwnProperty('ProfilePin')) {
+                obj['ProfilePin'] = ApiClient.convertToType(data['ProfilePin'], 'String');
+            }
             if (data.hasOwnProperty('DisplayMissingEpisodes')) {
                 obj['DisplayMissingEpisodes'] = ApiClient.convertToType(data['DisplayMissingEpisodes'], 'Boolean');
             }
@@ -69,6 +72,12 @@ export default class ConfigurationUserConfiguration {
             }
             if (data.hasOwnProperty('HidePlayedInLatest')) {
                 obj['HidePlayedInLatest'] = ApiClient.convertToType(data['HidePlayedInLatest'], 'Boolean');
+            }
+            if (data.hasOwnProperty('HidePlayedInMoreLikeThis')) {
+                obj['HidePlayedInMoreLikeThis'] = ApiClient.convertToType(data['HidePlayedInMoreLikeThis'], 'Boolean');
+            }
+            if (data.hasOwnProperty('HidePlayedInSuggestions')) {
+                obj['HidePlayedInSuggestions'] = ApiClient.convertToType(data['HidePlayedInSuggestions'], 'Boolean');
             }
             if (data.hasOwnProperty('RememberAudioSelections')) {
                 obj['RememberAudioSelections'] = ApiClient.convertToType(data['RememberAudioSelections'], 'Boolean');
@@ -105,6 +114,10 @@ export default class ConfigurationUserConfiguration {
     */
     'SubtitleLanguagePreference' = undefined;
     /**
+    * @member {String} ProfilePin
+    */
+    'ProfilePin' = undefined;
+    /**
     * @member {Boolean} DisplayMissingEpisodes
     */
     'DisplayMissingEpisodes' = undefined;
@@ -128,6 +141,14 @@ export default class ConfigurationUserConfiguration {
     * @member {Boolean} HidePlayedInLatest
     */
     'HidePlayedInLatest' = undefined;
+    /**
+    * @member {Boolean} HidePlayedInMoreLikeThis
+    */
+    'HidePlayedInMoreLikeThis' = undefined;
+    /**
+    * @member {Boolean} HidePlayedInSuggestions
+    */
+    'HidePlayedInSuggestions' = undefined;
     /**
     * @member {Boolean} RememberAudioSelections
     */

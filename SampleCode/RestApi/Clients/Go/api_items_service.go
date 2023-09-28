@@ -37,6 +37,10 @@ Requires authentication as user
      * @param "HasTrailer" (optional.Bool) -  Optional filter by items with trailers.
      * @param "AdjacentTo" (optional.String) -  Optional. Return items that are siblings of a supplied item.
      * @param "MinIndexNumber" (optional.Int32) -  Optional filter by minimum index number.
+     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "MinPlayers" (optional.Int32) -  Optional filter by minimum number of game players.
      * @param "MaxPlayers" (optional.Int32) -  Optional filter by maximum number of game players.
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
@@ -76,6 +80,10 @@ Requires authentication as user
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
+     * @param "IsNew" (optional.Bool) -  Optional filter for IsNew.
+     * @param "IsPremiere" (optional.Bool) -  Optional filter for IsPremiere.
+     * @param "IsNewOrPremiere" (optional.Bool) -  Optional filter for IsNewOrPremiere.
+     * @param "IsRepeat" (optional.Bool) -  Optional filter for IsRepeat.
      * @param "ProjectToMedia" (optional.Bool) -  ProjectToMedia
      * @param "MediaTypes" (optional.String) -  Optional filter by MediaType. Allows multiple, comma delimited.
      * @param "ImageTypes" (optional.String) -  Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
@@ -132,6 +140,10 @@ type ItemsServiceApiGetItemsOpts struct {
     HasTrailer optional.Bool
     AdjacentTo optional.String
     MinIndexNumber optional.Int32
+    MinStartDate optional.String
+    MaxStartDate optional.String
+    MinEndDate optional.String
+    MaxEndDate optional.String
     MinPlayers optional.Int32
     MaxPlayers optional.Int32
     ParentIndexNumber optional.Int32
@@ -171,6 +183,10 @@ type ItemsServiceApiGetItemsOpts struct {
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
+    IsNew optional.Bool
+    IsPremiere optional.Bool
+    IsNewOrPremiere optional.Bool
+    IsRepeat optional.Bool
     ProjectToMedia optional.Bool
     MediaTypes optional.String
     ImageTypes optional.String
@@ -258,6 +274,18 @@ func (a *ItemsServiceApiService) GetItems(ctx context.Context, localVarOptionals
 	}
 	if localVarOptionals != nil && localVarOptionals.MinIndexNumber.IsSet() {
 		localVarQueryParams.Add("MinIndexNumber", parameterToString(localVarOptionals.MinIndexNumber.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
+		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
+		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
+		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
+		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MinPlayers.IsSet() {
 		localVarQueryParams.Add("MinPlayers", parameterToString(localVarOptionals.MinPlayers.Value(), ""))
@@ -375,6 +403,18 @@ func (a *ItemsServiceApiService) GetItems(ctx context.Context, localVarOptionals
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSports.IsSet() {
 		localVarQueryParams.Add("IsSports", parameterToString(localVarOptionals.IsSports.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNew.IsSet() {
+		localVarQueryParams.Add("IsNew", parameterToString(localVarOptionals.IsNew.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsPremiere.IsSet() {
+		localVarQueryParams.Add("IsPremiere", parameterToString(localVarOptionals.IsPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNewOrPremiere.IsSet() {
+		localVarQueryParams.Add("IsNewOrPremiere", parameterToString(localVarOptionals.IsNewOrPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsRepeat.IsSet() {
+		localVarQueryParams.Add("IsRepeat", parameterToString(localVarOptionals.IsRepeat.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.ProjectToMedia.IsSet() {
 		localVarQueryParams.Add("ProjectToMedia", parameterToString(localVarOptionals.ProjectToMedia.Value(), ""))
@@ -594,6 +634,10 @@ Requires authentication as user
      * @param "HasTrailer" (optional.Bool) -  Optional filter by items with trailers.
      * @param "AdjacentTo" (optional.String) -  Optional. Return items that are siblings of a supplied item.
      * @param "MinIndexNumber" (optional.Int32) -  Optional filter by minimum index number.
+     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "MinPlayers" (optional.Int32) -  Optional filter by minimum number of game players.
      * @param "MaxPlayers" (optional.Int32) -  Optional filter by maximum number of game players.
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
@@ -633,6 +677,10 @@ Requires authentication as user
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
+     * @param "IsNew" (optional.Bool) -  Optional filter for IsNew.
+     * @param "IsPremiere" (optional.Bool) -  Optional filter for IsPremiere.
+     * @param "IsNewOrPremiere" (optional.Bool) -  Optional filter for IsNewOrPremiere.
+     * @param "IsRepeat" (optional.Bool) -  Optional filter for IsRepeat.
      * @param "ProjectToMedia" (optional.Bool) -  ProjectToMedia
      * @param "MediaTypes" (optional.String) -  Optional filter by MediaType. Allows multiple, comma delimited.
      * @param "ImageTypes" (optional.String) -  Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
@@ -688,6 +736,10 @@ type ItemsServiceApiGetUsersByUseridItemsOpts struct {
     HasTrailer optional.Bool
     AdjacentTo optional.String
     MinIndexNumber optional.Int32
+    MinStartDate optional.String
+    MaxStartDate optional.String
+    MinEndDate optional.String
+    MaxEndDate optional.String
     MinPlayers optional.Int32
     MaxPlayers optional.Int32
     ParentIndexNumber optional.Int32
@@ -727,6 +779,10 @@ type ItemsServiceApiGetUsersByUseridItemsOpts struct {
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
+    IsNew optional.Bool
+    IsPremiere optional.Bool
+    IsNewOrPremiere optional.Bool
+    IsRepeat optional.Bool
     ProjectToMedia optional.Bool
     MediaTypes optional.String
     ImageTypes optional.String
@@ -814,6 +870,18 @@ func (a *ItemsServiceApiService) GetUsersByUseridItems(ctx context.Context, user
 	}
 	if localVarOptionals != nil && localVarOptionals.MinIndexNumber.IsSet() {
 		localVarQueryParams.Add("MinIndexNumber", parameterToString(localVarOptionals.MinIndexNumber.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
+		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
+		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
+		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
+		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MinPlayers.IsSet() {
 		localVarQueryParams.Add("MinPlayers", parameterToString(localVarOptionals.MinPlayers.Value(), ""))
@@ -931,6 +999,18 @@ func (a *ItemsServiceApiService) GetUsersByUseridItems(ctx context.Context, user
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSports.IsSet() {
 		localVarQueryParams.Add("IsSports", parameterToString(localVarOptionals.IsSports.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNew.IsSet() {
+		localVarQueryParams.Add("IsNew", parameterToString(localVarOptionals.IsNew.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsPremiere.IsSet() {
+		localVarQueryParams.Add("IsPremiere", parameterToString(localVarOptionals.IsPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNewOrPremiere.IsSet() {
+		localVarQueryParams.Add("IsNewOrPremiere", parameterToString(localVarOptionals.IsNewOrPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsRepeat.IsSet() {
+		localVarQueryParams.Add("IsRepeat", parameterToString(localVarOptionals.IsRepeat.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.ProjectToMedia.IsSet() {
 		localVarQueryParams.Add("ProjectToMedia", parameterToString(localVarOptionals.ProjectToMedia.Value(), ""))
@@ -1147,6 +1227,10 @@ Requires authentication as user
      * @param "HasTrailer" (optional.Bool) -  Optional filter by items with trailers.
      * @param "AdjacentTo" (optional.String) -  Optional. Return items that are siblings of a supplied item.
      * @param "MinIndexNumber" (optional.Int32) -  Optional filter by minimum index number.
+     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "MinPlayers" (optional.Int32) -  Optional filter by minimum number of game players.
      * @param "MaxPlayers" (optional.Int32) -  Optional filter by maximum number of game players.
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
@@ -1186,6 +1270,10 @@ Requires authentication as user
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
+     * @param "IsNew" (optional.Bool) -  Optional filter for IsNew.
+     * @param "IsPremiere" (optional.Bool) -  Optional filter for IsPremiere.
+     * @param "IsNewOrPremiere" (optional.Bool) -  Optional filter for IsNewOrPremiere.
+     * @param "IsRepeat" (optional.Bool) -  Optional filter for IsRepeat.
      * @param "ProjectToMedia" (optional.Bool) -  ProjectToMedia
      * @param "MediaTypes" (optional.String) -  Optional filter by MediaType. Allows multiple, comma delimited.
      * @param "ImageTypes" (optional.String) -  Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
@@ -1241,6 +1329,10 @@ type ItemsServiceApiGetUsersByUseridItemsResumeOpts struct {
     HasTrailer optional.Bool
     AdjacentTo optional.String
     MinIndexNumber optional.Int32
+    MinStartDate optional.String
+    MaxStartDate optional.String
+    MinEndDate optional.String
+    MaxEndDate optional.String
     MinPlayers optional.Int32
     MaxPlayers optional.Int32
     ParentIndexNumber optional.Int32
@@ -1280,6 +1372,10 @@ type ItemsServiceApiGetUsersByUseridItemsResumeOpts struct {
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
+    IsNew optional.Bool
+    IsPremiere optional.Bool
+    IsNewOrPremiere optional.Bool
+    IsRepeat optional.Bool
     ProjectToMedia optional.Bool
     MediaTypes optional.String
     ImageTypes optional.String
@@ -1367,6 +1463,18 @@ func (a *ItemsServiceApiService) GetUsersByUseridItemsResume(ctx context.Context
 	}
 	if localVarOptionals != nil && localVarOptionals.MinIndexNumber.IsSet() {
 		localVarQueryParams.Add("MinIndexNumber", parameterToString(localVarOptionals.MinIndexNumber.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
+		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
+		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
+		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
+		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MinPlayers.IsSet() {
 		localVarQueryParams.Add("MinPlayers", parameterToString(localVarOptionals.MinPlayers.Value(), ""))
@@ -1484,6 +1592,18 @@ func (a *ItemsServiceApiService) GetUsersByUseridItemsResume(ctx context.Context
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSports.IsSet() {
 		localVarQueryParams.Add("IsSports", parameterToString(localVarOptionals.IsSports.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNew.IsSet() {
+		localVarQueryParams.Add("IsNew", parameterToString(localVarOptionals.IsNew.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsPremiere.IsSet() {
+		localVarQueryParams.Add("IsPremiere", parameterToString(localVarOptionals.IsPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNewOrPremiere.IsSet() {
+		localVarQueryParams.Add("IsNewOrPremiere", parameterToString(localVarOptionals.IsNewOrPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsRepeat.IsSet() {
+		localVarQueryParams.Add("IsRepeat", parameterToString(localVarOptionals.IsRepeat.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.ProjectToMedia.IsSet() {
 		localVarQueryParams.Add("ProjectToMedia", parameterToString(localVarOptionals.ProjectToMedia.Value(), ""))
