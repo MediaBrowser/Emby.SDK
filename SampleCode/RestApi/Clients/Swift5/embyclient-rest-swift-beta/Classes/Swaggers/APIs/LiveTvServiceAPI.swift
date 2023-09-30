@@ -622,6 +622,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -675,6 +676,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -769,6 +771,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -822,6 +825,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -1132,6 +1136,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -1185,6 +1190,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -1279,6 +1285,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -1332,6 +1339,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -1896,6 +1904,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -1949,6 +1958,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -2043,6 +2053,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -2096,6 +2107,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -2556,6 +2568,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -2609,6 +2622,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -2703,6 +2717,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -2756,6 +2771,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -3066,6 +3082,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -3119,6 +3136,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -3213,6 +3231,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -3266,6 +3285,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -4269,6 +4289,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -4322,6 +4343,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -4416,6 +4438,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -4469,6 +4492,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -4782,6 +4806,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -4835,6 +4860,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -4929,6 +4955,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -4982,6 +5009,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -5543,6 +5571,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -5596,6 +5625,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -5690,6 +5720,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -5743,6 +5774,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -6527,10 +6559,6 @@ open class LiveTvServiceAPI {
      Gets available live tv epgs..
 
      - parameter channelIds: (query) The channels to return guide information for. (optional)
-     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
-     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter artistType: (query) Artist or AlbumArtist (optional)
      - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
@@ -6540,6 +6568,10 @@ open class LiveTvServiceAPI {
      - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
      - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
      - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
@@ -6628,8 +6660,8 @@ open class LiveTvServiceAPI {
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLivetvPrograms(channelIds: String? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getLivetvProgramsWithRequestBuilder(channelIds: channelIds, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
+    open class func getLivetvPrograms(channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getLivetvProgramsWithRequestBuilder(channelIds: channelIds, artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -6650,10 +6682,6 @@ open class LiveTvServiceAPI {
        - type: http
        - name: embyauth
      - parameter channelIds: (query) The channels to return guide information for. (optional)
-     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
-     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter artistType: (query) Artist or AlbumArtist (optional)
      - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
@@ -6663,6 +6691,10 @@ open class LiveTvServiceAPI {
      - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
      - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
      - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
@@ -6752,17 +6784,13 @@ open class LiveTvServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getLivetvProgramsWithRequestBuilder(channelIds: String? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
+    open class func getLivetvProgramsWithRequestBuilder(channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
         let path = "/LiveTv/Programs"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "ChannelIds": channelIds, 
-                        "MinStartDate": minStartDate, 
-                        "MaxStartDate": maxStartDate, 
-                        "MinEndDate": minEndDate, 
-                        "MaxEndDate": maxEndDate, 
                         "ArtistType": artistType, 
                         "MaxOfficialRating": maxOfficialRating, 
                         "HasThemeSong": hasThemeSong, 
@@ -6772,6 +6800,10 @@ open class LiveTvServiceAPI {
                         "HasTrailer": hasTrailer, 
                         "AdjacentTo": adjacentTo, 
                         "MinIndexNumber": minIndexNumber?.encodeToJSON(), 
+                        "MinStartDate": minStartDate, 
+                        "MaxStartDate": maxStartDate, 
+                        "MinEndDate": minEndDate, 
+                        "MaxEndDate": maxEndDate, 
                         "MinPlayers": minPlayers?.encodeToJSON(), 
                         "MaxPlayers": maxPlayers?.encodeToJSON(), 
                         "ParentIndexNumber": parentIndexNumber?.encodeToJSON(), 
@@ -6991,6 +7023,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -7044,6 +7077,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -7138,6 +7172,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -7191,6 +7226,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -7501,6 +7537,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -7554,6 +7591,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -7648,6 +7686,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -7701,6 +7740,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -8438,6 +8478,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -8491,6 +8532,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -8585,6 +8627,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -8638,6 +8681,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9003,6 +9047,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9056,6 +9101,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9150,6 +9196,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9203,6 +9250,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9513,6 +9561,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9566,6 +9615,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9660,6 +9710,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -9713,6 +9764,7 @@ open class LiveTvServiceAPI {
       "ExtendedVideoType" : "None",
       "Rotation" : 4,
       "RealFrameRate" : 7.4577446,
+      "IsHearingImpaired" : true,
       "AspectRatio" : "AspectRatio",
       "Type" : "Unknown",
       "IsInterlaced" : true,
@@ -10080,6 +10132,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -10133,6 +10186,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -10227,6 +10281,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -10280,6 +10335,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -10590,6 +10646,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -10643,6 +10700,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -10737,6 +10795,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -10790,6 +10849,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11144,6 +11204,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11197,6 +11258,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11291,6 +11353,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11344,6 +11407,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11654,6 +11718,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11707,6 +11772,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11801,6 +11867,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -11854,6 +11921,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -12361,6 +12429,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -12414,6 +12483,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -12508,6 +12578,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -12561,6 +12632,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -12942,6 +13014,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -12995,6 +13068,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -13089,6 +13163,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -13142,6 +13217,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -13478,6 +13554,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -13531,6 +13608,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -13625,6 +13703,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -13678,6 +13757,7 @@ open class LiveTvServiceAPI {
           "ExtendedVideoType" : "None",
           "Rotation" : 4,
           "RealFrameRate" : 7.4577446,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
@@ -14059,6 +14139,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -14112,6 +14193,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -14206,6 +14288,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -14259,6 +14342,7 @@ open class LiveTvServiceAPI {
         "ExtendedVideoType" : "None",
         "Rotation" : 4,
         "RealFrameRate" : 7.4577446,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
@@ -15246,10 +15330,6 @@ open class LiveTvServiceAPI {
 
      - parameter body: (body) BaseItemsRequest:  
      - parameter channelIds: (query) The channels to return guide information for. (optional)
-     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
-     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter artistType: (query) Artist or AlbumArtist (optional)
      - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
@@ -15259,6 +15339,10 @@ open class LiveTvServiceAPI {
      - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
      - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
      - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
@@ -15347,8 +15431,8 @@ open class LiveTvServiceAPI {
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivetvPrograms(body: ApiBaseItemsRequest, channelIds: String? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postLivetvProgramsWithRequestBuilder(body: body, channelIds: channelIds, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
+    open class func postLivetvPrograms(body: ApiBaseItemsRequest, channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postLivetvProgramsWithRequestBuilder(body: body, channelIds: channelIds, artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -15370,10 +15454,6 @@ open class LiveTvServiceAPI {
        - name: embyauth
      - parameter body: (body) BaseItemsRequest:  
      - parameter channelIds: (query) The channels to return guide information for. (optional)
-     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
-     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
-     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter artistType: (query) Artist or AlbumArtist (optional)
      - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
      - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
@@ -15383,6 +15463,10 @@ open class LiveTvServiceAPI {
      - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
      - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
      - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
@@ -15472,17 +15556,13 @@ open class LiveTvServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postLivetvProgramsWithRequestBuilder(body: ApiBaseItemsRequest, channelIds: String? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
+    open class func postLivetvProgramsWithRequestBuilder(body: ApiBaseItemsRequest, channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
         let path = "/LiveTv/Programs"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "ChannelIds": channelIds, 
-                        "MinStartDate": minStartDate, 
-                        "MaxStartDate": maxStartDate, 
-                        "MinEndDate": minEndDate, 
-                        "MaxEndDate": maxEndDate, 
                         "ArtistType": artistType, 
                         "MaxOfficialRating": maxOfficialRating, 
                         "HasThemeSong": hasThemeSong, 
@@ -15492,6 +15572,10 @@ open class LiveTvServiceAPI {
                         "HasTrailer": hasTrailer, 
                         "AdjacentTo": adjacentTo, 
                         "MinIndexNumber": minIndexNumber?.encodeToJSON(), 
+                        "MinStartDate": minStartDate, 
+                        "MaxStartDate": maxStartDate, 
+                        "MinEndDate": minEndDate, 
+                        "MaxEndDate": maxEndDate, 
                         "MinPlayers": minPlayers?.encodeToJSON(), 
                         "MaxPlayers": maxPlayers?.encodeToJSON(), 
                         "ParentIndexNumber": parentIndexNumber?.encodeToJSON(), 

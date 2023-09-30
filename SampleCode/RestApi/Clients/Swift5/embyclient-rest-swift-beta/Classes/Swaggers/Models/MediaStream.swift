@@ -37,6 +37,7 @@ public struct MediaStream: Codable {
     public var sampleRate: Int?
     public var isDefault: Bool?
     public var isForced: Bool?
+    public var isHearingImpaired: Bool?
     public var height: Int?
     public var width: Int?
     public var averageFrameRate: Float?
@@ -65,7 +66,7 @@ public struct MediaStream: Codable {
     public var mimeType: String?
     public var subtitleLocationType: SubtitleLocationType?
 
-    public init(codec: String? = nil, codecTag: String? = nil, language: String? = nil, colorTransfer: String? = nil, colorPrimaries: String? = nil, colorSpace: String? = nil, comment: String? = nil, streamStartTimeTicks: Int64? = nil, timeBase: String? = nil, title: String? = nil, extradata: String? = nil, videoRange: String? = nil, displayTitle: String? = nil, displayLanguage: String? = nil, nalLengthSize: String? = nil, isInterlaced: Bool? = nil, isAVC: Bool? = nil, channelLayout: String? = nil, bitRate: Int? = nil, bitDepth: Int? = nil, refFrames: Int? = nil, rotation: Int? = nil, channels: Int? = nil, sampleRate: Int? = nil, isDefault: Bool? = nil, isForced: Bool? = nil, height: Int? = nil, width: Int? = nil, averageFrameRate: Float? = nil, realFrameRate: Float? = nil, profile: String? = nil, type: MediaStreamType? = nil, aspectRatio: String? = nil, index: Int? = nil, isExternal: Bool? = nil, deliveryMethod: DlnaSubtitleDeliveryMethod? = nil, deliveryUrl: String? = nil, isExternalUrl: Bool? = nil, isTextSubtitleStream: Bool? = nil, supportsExternalStream: Bool? = nil, path: String? = nil, _protocol: MediaInfoMediaProtocol? = nil, pixelFormat: String? = nil, level: Double? = nil, isAnamorphic: Bool? = nil, extendedVideoType: ExtendedVideoTypes? = nil, extendedVideoSubType: ExtendedVideoSubTypes? = nil, extendedVideoSubTypeDescription: String? = nil, itemId: String? = nil, serverId: String? = nil, attachmentSize: Int? = nil, mimeType: String? = nil, subtitleLocationType: SubtitleLocationType? = nil) {
+    public init(codec: String? = nil, codecTag: String? = nil, language: String? = nil, colorTransfer: String? = nil, colorPrimaries: String? = nil, colorSpace: String? = nil, comment: String? = nil, streamStartTimeTicks: Int64? = nil, timeBase: String? = nil, title: String? = nil, extradata: String? = nil, videoRange: String? = nil, displayTitle: String? = nil, displayLanguage: String? = nil, nalLengthSize: String? = nil, isInterlaced: Bool? = nil, isAVC: Bool? = nil, channelLayout: String? = nil, bitRate: Int? = nil, bitDepth: Int? = nil, refFrames: Int? = nil, rotation: Int? = nil, channels: Int? = nil, sampleRate: Int? = nil, isDefault: Bool? = nil, isForced: Bool? = nil, isHearingImpaired: Bool? = nil, height: Int? = nil, width: Int? = nil, averageFrameRate: Float? = nil, realFrameRate: Float? = nil, profile: String? = nil, type: MediaStreamType? = nil, aspectRatio: String? = nil, index: Int? = nil, isExternal: Bool? = nil, deliveryMethod: DlnaSubtitleDeliveryMethod? = nil, deliveryUrl: String? = nil, isExternalUrl: Bool? = nil, isTextSubtitleStream: Bool? = nil, supportsExternalStream: Bool? = nil, path: String? = nil, _protocol: MediaInfoMediaProtocol? = nil, pixelFormat: String? = nil, level: Double? = nil, isAnamorphic: Bool? = nil, extendedVideoType: ExtendedVideoTypes? = nil, extendedVideoSubType: ExtendedVideoSubTypes? = nil, extendedVideoSubTypeDescription: String? = nil, itemId: String? = nil, serverId: String? = nil, attachmentSize: Int? = nil, mimeType: String? = nil, subtitleLocationType: SubtitleLocationType? = nil) {
         self.codec = codec
         self.codecTag = codecTag
         self.language = language
@@ -92,6 +93,7 @@ public struct MediaStream: Codable {
         self.sampleRate = sampleRate
         self.isDefault = isDefault
         self.isForced = isForced
+        self.isHearingImpaired = isHearingImpaired
         self.height = height
         self.width = width
         self.averageFrameRate = averageFrameRate
@@ -148,6 +150,7 @@ public struct MediaStream: Codable {
         case sampleRate = "SampleRate"
         case isDefault = "IsDefault"
         case isForced = "IsForced"
+        case isHearingImpaired = "IsHearingImpaired"
         case height = "Height"
         case width = "Width"
         case averageFrameRate = "AverageFrameRate"

@@ -21692,30 +21692,6 @@
           },
           {
             "in": "query",
-            "name": "MinStartDate",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "MaxStartDate",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "MinEndDate",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "MaxEndDate",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
             "name": "ArtistType",
             "description": "Artist or AlbumArtist",
             "type": "string"
@@ -21768,6 +21744,30 @@
             "description": "Optional filter by minimum index number.",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MinStartDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxStartDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinEndDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxEndDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
           },
           {
             "in": "query",
@@ -22346,30 +22346,6 @@
           },
           {
             "in": "query",
-            "name": "MinStartDate",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "MaxStartDate",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "MinEndDate",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "MaxEndDate",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
-          },
-          {
-            "in": "query",
             "name": "ArtistType",
             "description": "Artist or AlbumArtist",
             "type": "string"
@@ -22422,6 +22398,30 @@
             "description": "Optional filter by minimum index number.",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MinStartDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxStartDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinEndDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxEndDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
           },
           {
             "in": "query",
@@ -55613,6 +55613,9 @@
         "IsForced": {
           "type": "boolean"
         },
+        "IsHearingImpaired": {
+          "type": "boolean"
+        },
         "Height": {
           "format": "int32",
           "type": "integer"
@@ -60322,6 +60325,9 @@
           "type": "boolean"
         },
         "EnableFks": {
+          "type": "boolean"
+        },
+        "AllowRenegotiation": {
           "type": "boolean"
         },
         "ProxyHeaderMode": {

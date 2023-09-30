@@ -48,6 +48,7 @@ class MediaStream(object):
         'sample_rate': 'int',
         'is_default': 'bool',
         'is_forced': 'bool',
+        'is_hearing_impaired': 'bool',
         'height': 'int',
         'width': 'int',
         'average_frame_rate': 'float',
@@ -104,6 +105,7 @@ class MediaStream(object):
         'sample_rate': 'SampleRate',
         'is_default': 'IsDefault',
         'is_forced': 'IsForced',
+        'is_hearing_impaired': 'IsHearingImpaired',
         'height': 'Height',
         'width': 'Width',
         'average_frame_rate': 'AverageFrameRate',
@@ -133,7 +135,7 @@ class MediaStream(object):
         'subtitle_location_type': 'SubtitleLocationType'
     }
 
-    def __init__(self, codec=None, codec_tag=None, language=None, color_transfer=None, color_primaries=None, color_space=None, comment=None, stream_start_time_ticks=None, time_base=None, title=None, extradata=None, video_range=None, display_title=None, display_language=None, nal_length_size=None, is_interlaced=None, is_avc=None, channel_layout=None, bit_rate=None, bit_depth=None, ref_frames=None, rotation=None, channels=None, sample_rate=None, is_default=None, is_forced=None, height=None, width=None, average_frame_rate=None, real_frame_rate=None, profile=None, type=None, aspect_ratio=None, index=None, is_external=None, delivery_method=None, delivery_url=None, is_external_url=None, is_text_subtitle_stream=None, supports_external_stream=None, path=None, protocol=None, pixel_format=None, level=None, is_anamorphic=None, extended_video_type=None, extended_video_sub_type=None, extended_video_sub_type_description=None, item_id=None, server_id=None, attachment_size=None, mime_type=None, subtitle_location_type=None):  # noqa: E501
+    def __init__(self, codec=None, codec_tag=None, language=None, color_transfer=None, color_primaries=None, color_space=None, comment=None, stream_start_time_ticks=None, time_base=None, title=None, extradata=None, video_range=None, display_title=None, display_language=None, nal_length_size=None, is_interlaced=None, is_avc=None, channel_layout=None, bit_rate=None, bit_depth=None, ref_frames=None, rotation=None, channels=None, sample_rate=None, is_default=None, is_forced=None, is_hearing_impaired=None, height=None, width=None, average_frame_rate=None, real_frame_rate=None, profile=None, type=None, aspect_ratio=None, index=None, is_external=None, delivery_method=None, delivery_url=None, is_external_url=None, is_text_subtitle_stream=None, supports_external_stream=None, path=None, protocol=None, pixel_format=None, level=None, is_anamorphic=None, extended_video_type=None, extended_video_sub_type=None, extended_video_sub_type_description=None, item_id=None, server_id=None, attachment_size=None, mime_type=None, subtitle_location_type=None):  # noqa: E501
         """MediaStream - a model defined in Swagger"""  # noqa: E501
         self._codec = None
         self._codec_tag = None
@@ -161,6 +163,7 @@ class MediaStream(object):
         self._sample_rate = None
         self._is_default = None
         self._is_forced = None
+        self._is_hearing_impaired = None
         self._height = None
         self._width = None
         self._average_frame_rate = None
@@ -241,6 +244,8 @@ class MediaStream(object):
             self.is_default = is_default
         if is_forced is not None:
             self.is_forced = is_forced
+        if is_hearing_impaired is not None:
+            self.is_hearing_impaired = is_hearing_impaired
         if height is not None:
             self.height = height
         if width is not None:
@@ -841,6 +846,27 @@ class MediaStream(object):
         """
 
         self._is_forced = is_forced
+
+    @property
+    def is_hearing_impaired(self):
+        """Gets the is_hearing_impaired of this MediaStream.  # noqa: E501
+
+
+        :return: The is_hearing_impaired of this MediaStream.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_hearing_impaired
+
+    @is_hearing_impaired.setter
+    def is_hearing_impaired(self, is_hearing_impaired):
+        """Sets the is_hearing_impaired of this MediaStream.
+
+
+        :param is_hearing_impaired: The is_hearing_impaired of this MediaStream.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_hearing_impaired = is_hearing_impaired
 
     @property
     def height(self):

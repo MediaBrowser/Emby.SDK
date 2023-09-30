@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EmbyWebGenericEditActionsPostbackAction model module.
 * @module model/EmbyWebGenericEditActionsPostbackAction
-* @version 4.8.0.48
+* @version 4.8.0.49
 */
 export default class EmbyWebGenericEditActionsPostbackAction {
     /**

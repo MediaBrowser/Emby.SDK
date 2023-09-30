@@ -18,7 +18,7 @@ import NetSocketsAddressFamily from './NetSocketsAddressFamily';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.48
+* @version 4.8.0.49
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -206,6 +206,9 @@ export default class ConfigurationServerConfiguration {
             }
             if (data.hasOwnProperty('EnableFks')) {
                 obj['EnableFks'] = ApiClient.convertToType(data['EnableFks'], 'Boolean');
+            }
+            if (data.hasOwnProperty('AllowRenegotiation')) {
+                obj['AllowRenegotiation'] = ApiClient.convertToType(data['AllowRenegotiation'], 'Boolean');
             }
             if (data.hasOwnProperty('ProxyHeaderMode')) {
                 obj['ProxyHeaderMode'] = ConfigurationProxyHeaderMode.constructFromObject(data['ProxyHeaderMode']);
@@ -451,6 +454,10 @@ export default class ConfigurationServerConfiguration {
     * @member {Boolean} EnableFks
     */
     'EnableFks' = undefined;
+    /**
+    * @member {Boolean} AllowRenegotiation
+    */
+    'AllowRenegotiation' = undefined;
     /**
     * @member {module:model/ConfigurationProxyHeaderMode} ProxyHeaderMode
     */

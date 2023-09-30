@@ -52,6 +52,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="sampleRate">sampleRate.</param>
         /// <param name="isDefault">isDefault.</param>
         /// <param name="isForced">isForced.</param>
+        /// <param name="isHearingImpaired">isHearingImpaired.</param>
         /// <param name="height">height.</param>
         /// <param name="width">width.</param>
         /// <param name="averageFrameRate">averageFrameRate.</param>
@@ -79,7 +80,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="attachmentSize">attachmentSize.</param>
         /// <param name="mimeType">mimeType.</param>
         /// <param name="subtitleLocationType">subtitleLocationType.</param>
-        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), DlnaSubtitleDeliveryMethod deliveryMethod = default(DlnaSubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaInfoMediaProtocol protocol = default(MediaInfoMediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), ExtendedVideoTypes extendedVideoType = default(ExtendedVideoTypes), ExtendedVideoSubTypes extendedVideoSubType = default(ExtendedVideoSubTypes), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
+        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), DlnaSubtitleDeliveryMethod deliveryMethod = default(DlnaSubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaInfoMediaProtocol protocol = default(MediaInfoMediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), ExtendedVideoTypes extendedVideoType = default(ExtendedVideoTypes), ExtendedVideoSubTypes extendedVideoSubType = default(ExtendedVideoSubTypes), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
         {
             this.Codec = codec;
             this.CodecTag = codecTag;
@@ -107,6 +108,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.SampleRate = sampleRate;
             this.IsDefault = isDefault;
             this.IsForced = isForced;
+            this.IsHearingImpaired = isHearingImpaired;
             this.Height = height;
             this.Width = width;
             this.AverageFrameRate = averageFrameRate;
@@ -291,6 +293,12 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="IsForced", EmitDefaultValue=false)]
         public bool? IsForced { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsHearingImpaired
+        /// </summary>
+        [DataMember(Name="IsHearingImpaired", EmitDefaultValue=false)]
+        public bool? IsHearingImpaired { get; set; }
 
         /// <summary>
         /// Gets or Sets Height
@@ -488,6 +496,7 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  SampleRate: ").Append(SampleRate).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
             sb.Append("  IsForced: ").Append(IsForced).Append("\n");
+            sb.Append("  IsHearingImpaired: ").Append(IsHearingImpaired).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("  AverageFrameRate: ").Append(AverageFrameRate).Append("\n");
@@ -678,6 +687,11 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.IsForced == input.IsForced ||
                     (this.IsForced != null &&
                     this.IsForced.Equals(input.IsForced))
+                ) && 
+                (
+                    this.IsHearingImpaired == input.IsHearingImpaired ||
+                    (this.IsHearingImpaired != null &&
+                    this.IsHearingImpaired.Equals(input.IsHearingImpaired))
                 ) && 
                 (
                     this.Height == input.Height ||
@@ -877,6 +891,8 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.IsDefault.GetHashCode();
                 if (this.IsForced != null)
                     hashCode = hashCode * 59 + this.IsForced.GetHashCode();
+                if (this.IsHearingImpaired != null)
+                    hashCode = hashCode * 59 + this.IsHearingImpaired.GetHashCode();
                 if (this.Height != null)
                     hashCode = hashCode * 59 + this.Height.GetHashCode();
                 if (this.Width != null)

@@ -20,7 +20,7 @@ import SubtitleLocationType from './SubtitleLocationType';
 /**
 * The MediaStream model module.
 * @module model/MediaStream
-* @version 4.8.0.48
+* @version 4.8.0.49
 */
 export default class MediaStream {
     /**
@@ -124,6 +124,9 @@ export default class MediaStream {
             }
             if (data.hasOwnProperty('IsForced')) {
                 obj['IsForced'] = ApiClient.convertToType(data['IsForced'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsHearingImpaired')) {
+                obj['IsHearingImpaired'] = ApiClient.convertToType(data['IsHearingImpaired'], 'Boolean');
             }
             if (data.hasOwnProperty('Height')) {
                 obj['Height'] = ApiClient.convertToType(data['Height'], 'Number');
@@ -314,6 +317,10 @@ export default class MediaStream {
     * @member {Boolean} IsForced
     */
     'IsForced' = undefined;
+    /**
+    * @member {Boolean} IsHearingImpaired
+    */
+    'IsHearingImpaired' = undefined;
     /**
     * @member {Number} Height
     */

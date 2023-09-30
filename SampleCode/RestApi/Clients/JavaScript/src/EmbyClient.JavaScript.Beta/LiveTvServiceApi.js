@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.48
+* @version 4.8.0.49
 */
 export default class LiveTvServiceApi {
 
@@ -1430,10 +1430,6 @@ export default class LiveTvServiceApi {
       };
       let queryParams = {
         'ChannelIds': opts['channelIds'],
-        'MinStartDate': opts['minStartDate'],
-        'MaxStartDate': opts['maxStartDate'],
-        'MinEndDate': opts['minEndDate'],
-        'MaxEndDate': opts['maxEndDate'],
         'ArtistType': opts['artistType'],
         'MaxOfficialRating': opts['maxOfficialRating'],
         'HasThemeSong': opts['hasThemeSong'],
@@ -1443,6 +1439,10 @@ export default class LiveTvServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
@@ -2566,10 +2566,6 @@ export default class LiveTvServiceApi {
       };
       let queryParams = {
         'ChannelIds': opts['channelIds'],
-        'MinStartDate': opts['minStartDate'],
-        'MaxStartDate': opts['maxStartDate'],
-        'MinEndDate': opts['minEndDate'],
-        'MaxEndDate': opts['maxEndDate'],
         'ArtistType': opts['artistType'],
         'MaxOfficialRating': opts['maxOfficialRating'],
         'HasThemeSong': opts['hasThemeSong'],
@@ -2579,6 +2575,10 @@ export default class LiveTvServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],

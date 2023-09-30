@@ -33,6 +33,7 @@ type MediaStream struct {
 	SampleRate int32 `json:"SampleRate,omitempty"`
 	IsDefault bool `json:"IsDefault,omitempty"`
 	IsForced bool `json:"IsForced,omitempty"`
+	IsHearingImpaired bool `json:"IsHearingImpaired,omitempty"`
 	Height int32 `json:"Height,omitempty"`
 	Width int32 `json:"Width,omitempty"`
 	AverageFrameRate float32 `json:"AverageFrameRate,omitempty"`

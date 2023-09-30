@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.48"
+    "version": "4.8.0.49"
   },
   "servers": [
     {
@@ -32905,46 +32905,6 @@
             }
           },
           {
-            "name": "MinStartDate",
-            "in": "query",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MaxStartDate",
-            "in": "query",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MinEndDate",
-            "in": "query",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MaxEndDate",
-            "in": "query",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "ArtistType",
             "in": "query",
             "description": "Artist or AlbumArtist",
@@ -33039,6 +32999,46 @@
               "type": "integer",
               "format": "int32",
               "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -33966,46 +33966,6 @@
             }
           },
           {
-            "name": "MinStartDate",
-            "in": "query",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MaxStartDate",
-            "in": "query",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MinEndDate",
-            "in": "query",
-            "description": "Optional. The minimum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MaxEndDate",
-            "in": "query",
-            "description": "Optional. The maximum premiere date. Format = ISO",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "ArtistType",
             "in": "query",
             "description": "Artist or AlbumArtist",
@@ -34100,6 +34060,46 @@
               "type": "integer",
               "format": "int32",
               "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -77984,6 +77984,9 @@
           "IsForced": {
             "type": "boolean"
           },
+          "IsHearingImpaired": {
+            "type": "boolean"
+          },
           "Height": {
             "type": "integer",
             "format": "int32",
@@ -82764,6 +82767,9 @@
             "type": "boolean"
           },
           "EnableFks": {
+            "type": "boolean"
+          },
+          "AllowRenegotiation": {
             "type": "boolean"
           },
           "ProxyHeaderMode": {

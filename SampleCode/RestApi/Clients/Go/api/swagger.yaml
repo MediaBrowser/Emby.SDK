@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.48
+  version: 4.8.0.49
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -27373,38 +27373,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: MinStartDate
-        in: query
-        description: Optional. The minimum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: MaxStartDate
-        in: query
-        description: Optional. The maximum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: MinEndDate
-        in: query
-        description: Optional. The minimum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: MaxEndDate
-        in: query
-        description: Optional. The maximum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
       - name: ArtistType
         in: query
         description: Artist or AlbumArtist
@@ -27485,6 +27453,38 @@ paths:
           type: integer
           format: int32
           nullable: true
+      - name: MinStartDate
+        in: query
+        description: Optional. The minimum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MaxStartDate
+        in: query
+        description: Optional. The maximum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MinEndDate
+        in: query
+        description: Optional. The minimum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MaxEndDate
+        in: query
+        description: Optional. The maximum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
       - name: MinPlayers
         in: query
         description: Optional filter by minimum number of game players.
@@ -28294,38 +28294,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: MinStartDate
-        in: query
-        description: Optional. The minimum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: MaxStartDate
-        in: query
-        description: Optional. The maximum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: MinEndDate
-        in: query
-        description: Optional. The minimum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: MaxEndDate
-        in: query
-        description: Optional. The maximum premiere date. Format = ISO
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
       - name: ArtistType
         in: query
         description: Artist or AlbumArtist
@@ -28406,6 +28374,38 @@ paths:
           type: integer
           format: int32
           nullable: true
+      - name: MinStartDate
+        in: query
+        description: Optional. The minimum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MaxStartDate
+        in: query
+        description: Optional. The maximum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MinEndDate
+        in: query
+        description: Optional. The minimum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: MaxEndDate
+        in: query
+        description: Optional. The maximum premiere date. Format = ISO
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
       - name: MinPlayers
         in: query
         description: Optional filter by minimum number of game players.
@@ -61006,6 +61006,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -61059,6 +61060,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -61155,6 +61157,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -61208,6 +61211,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -61535,6 +61539,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -61588,6 +61593,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -61684,6 +61690,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -61737,6 +61744,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -62514,6 +62522,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -62567,6 +62576,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -62663,6 +62673,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -62716,6 +62727,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -63139,6 +63151,7 @@ components:
           ExtendedVideoType: None
           Rotation: 4
           RealFrameRate: 7.4577446
+          IsHearingImpaired: true
           AspectRatio: AspectRatio
           Type: Unknown
           IsInterlaced: true
@@ -63192,6 +63205,7 @@ components:
           ExtendedVideoType: None
           Rotation: 4
           RealFrameRate: 7.4577446
+          IsHearingImpaired: true
           AspectRatio: AspectRatio
           Type: Unknown
           IsInterlaced: true
@@ -63325,6 +63339,8 @@ components:
           type: boolean
         IsForced:
           type: boolean
+        IsHearingImpaired:
+          type: boolean
         Height:
           type: integer
           format: int32
@@ -63443,6 +63459,7 @@ components:
         ExtendedVideoType: None
         Rotation: 4
         RealFrameRate: 7.4577446
+        IsHearingImpaired: true
         AspectRatio: AspectRatio
         Type: Unknown
         IsInterlaced: true
@@ -64389,6 +64406,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -64442,6 +64460,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -64538,6 +64557,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -64591,6 +64611,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -67467,6 +67488,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -67520,6 +67542,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -67846,6 +67869,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -67899,6 +67923,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -67995,6 +68020,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -68048,6 +68074,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -68379,6 +68406,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -68432,6 +68460,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -68528,6 +68557,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -68581,6 +68611,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -68922,6 +68953,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -68975,6 +69007,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -69071,6 +69104,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -69124,6 +69158,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -69576,6 +69611,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -69629,6 +69665,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -69725,6 +69762,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -69778,6 +69816,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -70132,6 +70171,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -70185,6 +70225,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -70281,6 +70322,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -70334,6 +70376,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -70751,6 +70794,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -70804,6 +70848,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -70900,6 +70945,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -70953,6 +70999,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -71738,6 +71785,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -71791,6 +71839,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -71887,6 +71936,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -71940,6 +71990,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -72267,6 +72318,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -72320,6 +72372,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -72416,6 +72469,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -72469,6 +72523,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -73139,6 +73194,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -73192,6 +73248,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -73313,6 +73370,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -73366,6 +73424,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -73529,6 +73588,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -73582,6 +73642,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -73795,6 +73856,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -73848,6 +73910,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -73969,6 +74032,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -74022,6 +74086,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -74391,6 +74456,8 @@ components:
           type: boolean
         EnableFks:
           type: boolean
+        AllowRenegotiation:
+          type: boolean
         ProxyHeaderMode:
           $ref: '#/components/schemas/Configuration.ProxyHeaderMode'
         EnableDebugLevelLogging:
@@ -74463,6 +74530,7 @@ components:
         UninstalledPlugins:
         - UninstalledPlugins
         - UninstalledPlugins
+        AllowRenegotiation: true
         EnableDashboardResponseCaching: true
         ForcedSortNameUpgraded: true
         EnableRemoteAccess: true
@@ -75883,6 +75951,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -75936,6 +76005,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -76032,6 +76102,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -76085,6 +76156,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -78353,6 +78425,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -78406,6 +78479,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -78502,6 +78576,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -78555,6 +78630,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -78882,6 +78958,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -78935,6 +79012,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -79031,6 +79109,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -79084,6 +79163,7 @@ components:
                 ExtendedVideoType: None
                 Rotation: 4
                 RealFrameRate: 7.4577446
+                IsHearingImpaired: true
                 AspectRatio: AspectRatio
                 Type: Unknown
                 IsInterlaced: true
@@ -79431,6 +79511,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -79484,6 +79565,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -79580,6 +79662,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -79633,6 +79716,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -79960,6 +80044,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -80013,6 +80098,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -80109,6 +80195,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -80162,6 +80249,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -80632,6 +80720,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -80685,6 +80774,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -80781,6 +80871,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -80834,6 +80925,7 @@ components:
             ExtendedVideoType: None
             Rotation: 4
             RealFrameRate: 7.4577446
+            IsHearingImpaired: true
             AspectRatio: AspectRatio
             Type: Unknown
             IsInterlaced: true
@@ -81877,6 +81969,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -81930,6 +82023,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -82026,6 +82120,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true
@@ -82079,6 +82174,7 @@ components:
               ExtendedVideoType: None
               Rotation: 4
               RealFrameRate: 7.4577446
+              IsHearingImpaired: true
               AspectRatio: AspectRatio
               Type: Unknown
               IsInterlaced: true

@@ -4384,10 +4384,6 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *LiveTvServiceApiGetLivetvProgramsOpts - Optional Parameters:
      * @param "ChannelIds" (optional.String) -  The channels to return guide information for.
-     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
-     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
-     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
-     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "ArtistType" (optional.String) -  Artist or AlbumArtist
      * @param "MaxOfficialRating" (optional.String) -  Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
      * @param "HasThemeSong" (optional.Bool) -  Optional filter by items with theme songs.
@@ -4397,6 +4393,10 @@ Requires authentication as user
      * @param "HasTrailer" (optional.Bool) -  Optional filter by items with trailers.
      * @param "AdjacentTo" (optional.String) -  Optional. Return items that are siblings of a supplied item.
      * @param "MinIndexNumber" (optional.Int32) -  Optional filter by minimum index number.
+     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "MinPlayers" (optional.Int32) -  Optional filter by minimum number of game players.
      * @param "MaxPlayers" (optional.Int32) -  Optional filter by maximum number of game players.
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
@@ -4488,10 +4488,6 @@ Requires authentication as user
 
 type LiveTvServiceApiGetLivetvProgramsOpts struct {
     ChannelIds optional.String
-    MinStartDate optional.String
-    MaxStartDate optional.String
-    MinEndDate optional.String
-    MaxEndDate optional.String
     ArtistType optional.String
     MaxOfficialRating optional.String
     HasThemeSong optional.Bool
@@ -4501,6 +4497,10 @@ type LiveTvServiceApiGetLivetvProgramsOpts struct {
     HasTrailer optional.Bool
     AdjacentTo optional.String
     MinIndexNumber optional.Int32
+    MinStartDate optional.String
+    MaxStartDate optional.String
+    MinEndDate optional.String
+    MaxEndDate optional.String
     MinPlayers optional.Int32
     MaxPlayers optional.Int32
     ParentIndexNumber optional.Int32
@@ -4608,18 +4608,6 @@ func (a *LiveTvServiceApiService) GetLivetvPrograms(ctx context.Context, localVa
 	if localVarOptionals != nil && localVarOptionals.ChannelIds.IsSet() {
 		localVarQueryParams.Add("ChannelIds", parameterToString(localVarOptionals.ChannelIds.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
-		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
-		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
-		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
-		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.ArtistType.IsSet() {
 		localVarQueryParams.Add("ArtistType", parameterToString(localVarOptionals.ArtistType.Value(), ""))
 	}
@@ -4646,6 +4634,18 @@ func (a *LiveTvServiceApiService) GetLivetvPrograms(ctx context.Context, localVa
 	}
 	if localVarOptionals != nil && localVarOptionals.MinIndexNumber.IsSet() {
 		localVarQueryParams.Add("MinIndexNumber", parameterToString(localVarOptionals.MinIndexNumber.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
+		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
+		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
+		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
+		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MinPlayers.IsSet() {
 		localVarQueryParams.Add("MinPlayers", parameterToString(localVarOptionals.MinPlayers.Value(), ""))
@@ -7812,10 +7812,6 @@ Requires authentication as user
  * @param body BaseItemsRequest: 
  * @param optional nil or *LiveTvServiceApiPostLivetvProgramsOpts - Optional Parameters:
      * @param "ChannelIds" (optional.String) -  The channels to return guide information for.
-     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
-     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
-     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
-     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "ArtistType" (optional.String) -  Artist or AlbumArtist
      * @param "MaxOfficialRating" (optional.String) -  Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
      * @param "HasThemeSong" (optional.Bool) -  Optional filter by items with theme songs.
@@ -7825,6 +7821,10 @@ Requires authentication as user
      * @param "HasTrailer" (optional.Bool) -  Optional filter by items with trailers.
      * @param "AdjacentTo" (optional.String) -  Optional. Return items that are siblings of a supplied item.
      * @param "MinIndexNumber" (optional.Int32) -  Optional filter by minimum index number.
+     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "MinPlayers" (optional.Int32) -  Optional filter by minimum number of game players.
      * @param "MaxPlayers" (optional.Int32) -  Optional filter by maximum number of game players.
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
@@ -7916,10 +7916,6 @@ Requires authentication as user
 
 type LiveTvServiceApiPostLivetvProgramsOpts struct {
     ChannelIds optional.String
-    MinStartDate optional.String
-    MaxStartDate optional.String
-    MinEndDate optional.String
-    MaxEndDate optional.String
     ArtistType optional.String
     MaxOfficialRating optional.String
     HasThemeSong optional.Bool
@@ -7929,6 +7925,10 @@ type LiveTvServiceApiPostLivetvProgramsOpts struct {
     HasTrailer optional.Bool
     AdjacentTo optional.String
     MinIndexNumber optional.Int32
+    MinStartDate optional.String
+    MaxStartDate optional.String
+    MinEndDate optional.String
+    MaxEndDate optional.String
     MinPlayers optional.Int32
     MaxPlayers optional.Int32
     ParentIndexNumber optional.Int32
@@ -8036,18 +8036,6 @@ func (a *LiveTvServiceApiService) PostLivetvPrograms(ctx context.Context, body A
 	if localVarOptionals != nil && localVarOptionals.ChannelIds.IsSet() {
 		localVarQueryParams.Add("ChannelIds", parameterToString(localVarOptionals.ChannelIds.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
-		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
-		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
-		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
-		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.ArtistType.IsSet() {
 		localVarQueryParams.Add("ArtistType", parameterToString(localVarOptionals.ArtistType.Value(), ""))
 	}
@@ -8074,6 +8062,18 @@ func (a *LiveTvServiceApiService) PostLivetvPrograms(ctx context.Context, body A
 	}
 	if localVarOptionals != nil && localVarOptionals.MinIndexNumber.IsSet() {
 		localVarQueryParams.Add("MinIndexNumber", parameterToString(localVarOptionals.MinIndexNumber.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
+		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
+		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
+		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
+		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MinPlayers.IsSet() {
 		localVarQueryParams.Add("MinPlayers", parameterToString(localVarOptionals.MinPlayers.Value(), ""))

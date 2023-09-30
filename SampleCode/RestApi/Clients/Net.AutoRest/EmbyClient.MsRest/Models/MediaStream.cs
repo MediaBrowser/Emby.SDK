@@ -38,7 +38,7 @@ namespace EmbyClient.MsRest.Models
         /// 'DoviProfile92'</param>
         /// <param name="subtitleLocationType">Possible values include:
         /// 'InternalStream', 'VideoSideData'</param>
-        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), int? height = default(int?), int? width = default(int?), double? averageFrameRate = default(double?), double? realFrameRate = default(double?), string profile = default(string), string type = default(string), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), string deliveryMethod = default(string), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), string protocol = default(string), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), string extendedVideoType = default(string), string extendedVideoSubType = default(string), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), string subtitleLocationType = default(string))
+        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), int? height = default(int?), int? width = default(int?), double? averageFrameRate = default(double?), double? realFrameRate = default(double?), string profile = default(string), string type = default(string), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), string deliveryMethod = default(string), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), string protocol = default(string), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), string extendedVideoType = default(string), string extendedVideoSubType = default(string), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), string subtitleLocationType = default(string))
         {
             Codec = codec;
             CodecTag = codecTag;
@@ -66,6 +66,7 @@ namespace EmbyClient.MsRest.Models
             SampleRate = sampleRate;
             IsDefault = isDefault;
             IsForced = isForced;
+            IsHearingImpaired = isHearingImpaired;
             Height = height;
             Width = width;
             AverageFrameRate = averageFrameRate;
@@ -230,6 +231,11 @@ namespace EmbyClient.MsRest.Models
         /// </summary>
         [JsonProperty(PropertyName = "IsForced")]
         public bool? IsForced { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "IsHearingImpaired")]
+        public bool? IsHearingImpaired { get; set; }
 
         /// <summary>
         /// </summary>

@@ -104,6 +104,9 @@ public class MediaStream {
   @SerializedName("IsForced")
   private Boolean isForced = null;
 
+  @SerializedName("IsHearingImpaired")
+  private Boolean isHearingImpaired = null;
+
   @SerializedName("Height")
   private Integer height = null;
 
@@ -653,6 +656,24 @@ public class MediaStream {
     this.isForced = isForced;
   }
 
+  public MediaStream isHearingImpaired(Boolean isHearingImpaired) {
+    this.isHearingImpaired = isHearingImpaired;
+    return this;
+  }
+
+   /**
+   * Get isHearingImpaired
+   * @return isHearingImpaired
+  **/
+  @Schema(description = "")
+  public Boolean isIsHearingImpaired() {
+    return isHearingImpaired;
+  }
+
+  public void setIsHearingImpaired(Boolean isHearingImpaired) {
+    this.isHearingImpaired = isHearingImpaired;
+  }
+
   public MediaStream height(Integer height) {
     this.height = height;
     return this;
@@ -1175,6 +1196,7 @@ public class MediaStream {
         Objects.equals(this.sampleRate, mediaStream.sampleRate) &&
         Objects.equals(this.isDefault, mediaStream.isDefault) &&
         Objects.equals(this.isForced, mediaStream.isForced) &&
+        Objects.equals(this.isHearingImpaired, mediaStream.isHearingImpaired) &&
         Objects.equals(this.height, mediaStream.height) &&
         Objects.equals(this.width, mediaStream.width) &&
         Objects.equals(this.averageFrameRate, mediaStream.averageFrameRate) &&
@@ -1206,7 +1228,7 @@ public class MediaStream {
 
   @Override
   public int hashCode() {
-    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
+    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, isHearingImpaired, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
   }
 
 
@@ -1241,6 +1263,7 @@ public class MediaStream {
     sb.append("    sampleRate: ").append(toIndentedString(sampleRate)).append("\n");
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    isForced: ").append(toIndentedString(isForced)).append("\n");
+    sb.append("    isHearingImpaired: ").append(toIndentedString(isHearingImpaired)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    averageFrameRate: ").append(toIndentedString(averageFrameRate)).append("\n");
