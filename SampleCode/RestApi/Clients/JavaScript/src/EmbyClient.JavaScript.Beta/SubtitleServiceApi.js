@@ -16,7 +16,7 @@ import SubtitlesSubtitleDownloadResult from '../model/SubtitlesSubtitleDownloadR
 /**
 * SubtitleService service.
 * @module EmbyClient.JavaScript.Beta/SubtitleServiceApi
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class SubtitleServiceApi {
 
@@ -224,7 +224,8 @@ export default class SubtitleServiceApi {
       let queryParams = {
         'MediaSourceId': mediaSourceId,
         'IsPerfectMatch': opts['isPerfectMatch'],
-        'IsForced': opts['isForced']
+        'IsForced': opts['isForced'],
+        'IsHearingImpaired': opts['isHearingImpaired']
       };
       let headerParams = {
       };

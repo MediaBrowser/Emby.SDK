@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.49
+  version: 4.8.0.50
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -56888,6 +56888,15 @@ paths:
         schema:
           type: boolean
           nullable: true
+      - name: IsHearingImpaired
+        in: query
+        description: IsHearingImpaired
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
       responses:
         "200":
           description: "Operation successful. Returning a RemoteSubtitleInfo[] object."
@@ -67111,6 +67120,8 @@ components:
           type: boolean
         ForcedSubtitlesOnly:
           type: boolean
+        HearingImpairedSubtitlesOnly:
+          type: boolean
         TypeOptions:
           type: array
           items:
@@ -67234,6 +67245,7 @@ components:
         LyricsFetcherOrder:
         - LyricsFetcherOrder
         - LyricsFetcherOrder
+        HearingImpairedSubtitlesOnly: true
         IgnoreFileExtensions:
         - IgnoreFileExtensions
         - IgnoreFileExtensions
@@ -74458,6 +74470,8 @@ components:
           type: boolean
         AllowRenegotiation:
           type: boolean
+        AllowLegacyLocalNetworkPassword:
+          type: boolean
         ProxyHeaderMode:
           $ref: '#/components/schemas/Configuration.ProxyHeaderMode'
         EnableDebugLevelLogging:
@@ -74499,6 +74513,7 @@ components:
         EnableDebugLevelLogging: true
         LogAllQueryTimes: true
         PlaylistsUpgradedToM3U: true
+        AllowLegacyLocalNetworkPassword: true
         ImageExtractorUpgraded: true
         RunAtStartup: true
         HttpServerPortNumber: 1
@@ -81162,6 +81177,7 @@ components:
             LyricsFetcherOrder:
             - LyricsFetcherOrder
             - LyricsFetcherOrder
+            HearingImpairedSubtitlesOnly: true
             IgnoreFileExtensions:
             - IgnoreFileExtensions
             - IgnoreFileExtensions
@@ -81298,6 +81314,7 @@ components:
             LyricsFetcherOrder:
             - LyricsFetcherOrder
             - LyricsFetcherOrder
+            HearingImpairedSubtitlesOnly: true
             IgnoreFileExtensions:
             - IgnoreFileExtensions
             - IgnoreFileExtensions
@@ -81462,6 +81479,7 @@ components:
           LyricsFetcherOrder:
           - LyricsFetcherOrder
           - LyricsFetcherOrder
+          HearingImpairedSubtitlesOnly: true
           IgnoreFileExtensions:
           - IgnoreFileExtensions
           - IgnoreFileExtensions

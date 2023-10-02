@@ -18,7 +18,7 @@ import NetSocketsAddressFamily from './NetSocketsAddressFamily';
 /**
 * The ConfigurationServerConfiguration model module.
 * @module model/ConfigurationServerConfiguration
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class ConfigurationServerConfiguration {
     /**
@@ -209,6 +209,9 @@ export default class ConfigurationServerConfiguration {
             }
             if (data.hasOwnProperty('AllowRenegotiation')) {
                 obj['AllowRenegotiation'] = ApiClient.convertToType(data['AllowRenegotiation'], 'Boolean');
+            }
+            if (data.hasOwnProperty('AllowLegacyLocalNetworkPassword')) {
+                obj['AllowLegacyLocalNetworkPassword'] = ApiClient.convertToType(data['AllowLegacyLocalNetworkPassword'], 'Boolean');
             }
             if (data.hasOwnProperty('ProxyHeaderMode')) {
                 obj['ProxyHeaderMode'] = ConfigurationProxyHeaderMode.constructFromObject(data['ProxyHeaderMode']);
@@ -458,6 +461,10 @@ export default class ConfigurationServerConfiguration {
     * @member {Boolean} AllowRenegotiation
     */
     'AllowRenegotiation' = undefined;
+    /**
+    * @member {Boolean} AllowLegacyLocalNetworkPassword
+    */
+    'AllowLegacyLocalNetworkPassword' = undefined;
     /**
     * @member {module:model/ConfigurationProxyHeaderMode} ProxyHeaderMode
     */

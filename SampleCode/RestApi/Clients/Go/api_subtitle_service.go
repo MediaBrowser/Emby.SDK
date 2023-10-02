@@ -414,12 +414,14 @@ Requires authentication as user
  * @param optional nil or *SubtitleServiceApiGetItemsByIdRemotesearchSubtitlesByLanguageOpts - Optional Parameters:
      * @param "IsPerfectMatch" (optional.Bool) -  IsPerfectMatch
      * @param "IsForced" (optional.Bool) -  IsForced
+     * @param "IsHearingImpaired" (optional.Bool) -  IsHearingImpaired
 @return []RemoteSubtitleInfo
 */
 
 type SubtitleServiceApiGetItemsByIdRemotesearchSubtitlesByLanguageOpts struct {
     IsPerfectMatch optional.Bool
     IsForced optional.Bool
+    IsHearingImpaired optional.Bool
 }
 
 func (a *SubtitleServiceApiService) GetItemsByIdRemotesearchSubtitlesByLanguage(ctx context.Context, id string, mediaSourceId string, language string, localVarOptionals *SubtitleServiceApiGetItemsByIdRemotesearchSubtitlesByLanguageOpts) ([]RemoteSubtitleInfo, *http.Response, error) {
@@ -446,6 +448,9 @@ func (a *SubtitleServiceApiService) GetItemsByIdRemotesearchSubtitlesByLanguage(
 	}
 	if localVarOptionals != nil && localVarOptionals.IsForced.IsSet() {
 		localVarQueryParams.Add("IsForced", parameterToString(localVarOptionals.IsForced.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsHearingImpaired.IsSet() {
+		localVarQueryParams.Add("IsHearingImpaired", parameterToString(localVarOptionals.IsHearingImpaired.Value(), ""))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}

@@ -46913,9 +46913,12 @@ namespace EmbyClient.MsRest
             /// <param name='isForced'>
             /// IsForced
             /// </param>
-            public static IList<RemoteSubtitleInfo> GetItemsByIdRemotesearchSubtitlesByLanguage(this IRestClient operations, string id, string mediaSourceId, string language, bool? isPerfectMatch = default(bool?), bool? isForced = default(bool?))
+            /// <param name='isHearingImpaired'>
+            /// IsHearingImpaired
+            /// </param>
+            public static IList<RemoteSubtitleInfo> GetItemsByIdRemotesearchSubtitlesByLanguage(this IRestClient operations, string id, string mediaSourceId, string language, bool? isPerfectMatch = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?))
             {
-                return operations.GetItemsByIdRemotesearchSubtitlesByLanguageAsync(id, mediaSourceId, language, isPerfectMatch, isForced).GetAwaiter().GetResult();
+                return operations.GetItemsByIdRemotesearchSubtitlesByLanguageAsync(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -46939,12 +46942,15 @@ namespace EmbyClient.MsRest
             /// <param name='isForced'>
             /// IsForced
             /// </param>
+            /// <param name='isHearingImpaired'>
+            /// IsHearingImpaired
+            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageAsync(this IRestClient operations, string id, string mediaSourceId, string language, bool? isPerfectMatch = default(bool?), bool? isForced = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageAsync(this IRestClient operations, string id, string mediaSourceId, string language, bool? isPerfectMatch = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpMessagesAsync(id, mediaSourceId, language, isPerfectMatch, isForced, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpMessagesAsync(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

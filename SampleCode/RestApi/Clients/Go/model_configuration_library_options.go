@@ -52,6 +52,7 @@ type ConfigurationLibraryOptions struct {
 	RequirePerfectSubtitleMatch bool `json:"RequirePerfectSubtitleMatch,omitempty"`
 	SaveSubtitlesWithMedia bool `json:"SaveSubtitlesWithMedia,omitempty"`
 	ForcedSubtitlesOnly bool `json:"ForcedSubtitlesOnly,omitempty"`
+	HearingImpairedSubtitlesOnly bool `json:"HearingImpairedSubtitlesOnly,omitempty"`
 	TypeOptions []ConfigurationTypeOptions `json:"TypeOptions,omitempty"`
 	CollapseSingleItemFolders bool `json:"CollapseSingleItemFolders,omitempty"`
 	EnableAdultMetadata bool `json:"EnableAdultMetadata,omitempty"`

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ConfigurationMediaPathInfo model module.
 * @module model/ConfigurationMediaPathInfo
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class ConfigurationMediaPathInfo {
     /**

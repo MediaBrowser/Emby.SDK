@@ -22640,13 +22640,16 @@ namespace EmbyClient.MsRest
         /// <param name='isForced'>
         /// IsForced
         /// </param>
+        /// <param name='isHearingImpaired'>
+        /// IsHearingImpaired
+        /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<IList<RemoteSubtitleInfo>>> GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpMessagesAsync(string id, string mediaSourceId, string language, bool? isPerfectMatch = default(bool?), bool? isForced = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<IList<RemoteSubtitleInfo>>> GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpMessagesAsync(string id, string mediaSourceId, string language, bool? isPerfectMatch = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Deletes an external subtitle file

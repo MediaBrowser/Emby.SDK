@@ -116,7 +116,8 @@ public class SubtitleServiceApiTest {
         String language = null;
         Boolean isPerfectMatch = null;
         Boolean isForced = null;
-        List<RemoteSubtitleInfo> response = api.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced);
+        Boolean isHearingImpaired = null;
+        List<RemoteSubtitleInfo> response = api.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired);
 
         // TODO: test validations
     }

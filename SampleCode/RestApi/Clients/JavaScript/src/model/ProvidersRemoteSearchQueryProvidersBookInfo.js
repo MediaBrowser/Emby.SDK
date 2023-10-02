@@ -15,7 +15,7 @@ import ProvidersBookInfo from './ProvidersBookInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersBookInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersBookInfo
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class ProvidersRemoteSearchQueryProvidersBookInfo {
     /**

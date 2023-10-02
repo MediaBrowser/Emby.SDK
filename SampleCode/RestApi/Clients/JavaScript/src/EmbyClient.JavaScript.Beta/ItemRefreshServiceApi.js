@@ -15,7 +15,7 @@ import ProvidersMetadataRefreshMode from '../model/ProvidersMetadataRefreshMode'
 /**
 * ItemRefreshService service.
 * @module EmbyClient.JavaScript.Beta/ItemRefreshServiceApi
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class ItemRefreshServiceApi {
 

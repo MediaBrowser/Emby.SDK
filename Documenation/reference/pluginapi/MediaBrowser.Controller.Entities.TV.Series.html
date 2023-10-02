@@ -169,7 +169,6 @@
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.SeriesInfo.html">SeriesInfo</a>&gt;</div>
-    <div><a class="xref" href="MediaBrowser.Controller.Entities.IMetadataContainer.html">IMetadataContainer</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1099,7 +1098,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_TV_Series_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Series : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasFolderGrouping, IHasLookupInfo&lt;SeriesInfo&gt;, IMetadataContainer</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Series : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasFolderGrouping, IHasLookupInfo&lt;SeriesInfo&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -1925,68 +1924,6 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal">BaseItem.GetUserDataKeyInternal()</a></div>
   
   
-  <a id="MediaBrowser_Controller_Entities_TV_Series_RefreshAllMetadata_" data-uid="MediaBrowser.Controller.Entities.TV.Series.RefreshAllMetadata*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_TV_Series_RefreshAllMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Collections_Generic_Dictionary_System_Int64_System_Boolean__System_IProgress_System_Double__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.TV.Series.RefreshAllMetadata(MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Model.Configuration.LibraryOptions,System.Collections.Generic.Dictionary{System.Int64,System.Boolean},System.IProgress{System.Double},System.Threading.CancellationToken)">RefreshAllMetadata(MetadataRefreshOptions, LibraryOptions, Dictionary&lt;Int64, Boolean&gt;, IProgress&lt;Double&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async Task RefreshAllMetadata(MetadataRefreshOptions refreshOptions, LibraryOptions libraryOptions, Dictionary&lt;long, bool&gt; newItemIds, IProgress&lt;double&gt; progress, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>
-        <td><span class="parametername">refreshOptions</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><span class="parametername">newItemIds</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
-        <td><span class="parametername">progress</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_TV_Series_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.TV.Series.SupportsPlayedStatus*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Series_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.TV.Series.SupportsPlayedStatus">SupportsPlayedStatus()</h4>
   <div class="markdown level1 summary"></div>
@@ -2024,9 +1961,6 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.IMetadataContainer.html">IMetadataContainer</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>

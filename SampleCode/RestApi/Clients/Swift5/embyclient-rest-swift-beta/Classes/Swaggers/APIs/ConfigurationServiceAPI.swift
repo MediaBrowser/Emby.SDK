@@ -50,6 +50,7 @@ open class ConfigurationServiceAPI {
   "EnableDebugLevelLogging" : true,
   "LogAllQueryTimes" : true,
   "PlaylistsUpgradedToM3U" : true,
+  "AllowLegacyLocalNetworkPassword" : true,
   "ImageExtractorUpgraded" : true,
   "RunAtStartup" : true,
   "HttpServerPortNumber" : 1,

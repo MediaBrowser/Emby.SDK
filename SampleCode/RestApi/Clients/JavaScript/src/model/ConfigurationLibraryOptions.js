@@ -16,7 +16,7 @@ import ConfigurationTypeOptions from './ConfigurationTypeOptions';
 /**
 * The ConfigurationLibraryOptions model module.
 * @module model/ConfigurationLibraryOptions
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class ConfigurationLibraryOptions {
     /**
@@ -177,6 +177,9 @@ export default class ConfigurationLibraryOptions {
             }
             if (data.hasOwnProperty('ForcedSubtitlesOnly')) {
                 obj['ForcedSubtitlesOnly'] = ApiClient.convertToType(data['ForcedSubtitlesOnly'], 'Boolean');
+            }
+            if (data.hasOwnProperty('HearingImpairedSubtitlesOnly')) {
+                obj['HearingImpairedSubtitlesOnly'] = ApiClient.convertToType(data['HearingImpairedSubtitlesOnly'], 'Boolean');
             }
             if (data.hasOwnProperty('TypeOptions')) {
                 obj['TypeOptions'] = ApiClient.convertToType(data['TypeOptions'], [ConfigurationTypeOptions]);
@@ -395,6 +398,10 @@ export default class ConfigurationLibraryOptions {
     * @member {Boolean} ForcedSubtitlesOnly
     */
     'ForcedSubtitlesOnly' = undefined;
+    /**
+    * @member {Boolean} HearingImpairedSubtitlesOnly
+    */
+    'HearingImpairedSubtitlesOnly' = undefined;
     /**
     * @member {Array.<module:model/ConfigurationTypeOptions>} TypeOptions
     */

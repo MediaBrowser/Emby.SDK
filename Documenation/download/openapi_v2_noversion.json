@@ -50531,6 +50531,12 @@
             "name": "IsForced",
             "description": "IsForced",
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsHearingImpaired",
+            "description": "IsHearingImpaired",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -58402,6 +58408,9 @@
         "ForcedSubtitlesOnly": {
           "type": "boolean"
         },
+        "HearingImpairedSubtitlesOnly": {
+          "type": "boolean"
+        },
         "TypeOptions": {
           "type": "array",
           "items": {
@@ -60328,6 +60337,9 @@
           "type": "boolean"
         },
         "AllowRenegotiation": {
+          "type": "boolean"
+        },
+        "AllowLegacyLocalNetworkPassword": {
           "type": "boolean"
         },
         "ProxyHeaderMode": {

@@ -15,7 +15,7 @@ import ProvidersAlbumInfo from './ProvidersAlbumInfo';
 /**
 * The ProvidersRemoteSearchQueryProvidersAlbumInfo model module.
 * @module model/ProvidersRemoteSearchQueryProvidersAlbumInfo
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class ProvidersRemoteSearchQueryProvidersAlbumInfo {
     /**

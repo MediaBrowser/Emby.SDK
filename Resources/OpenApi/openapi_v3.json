@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.49"
+    "version": "4.8.0.50"
   },
   "servers": [
     {
@@ -71580,6 +71580,17 @@
               "type": "boolean",
               "nullable": true
             }
+          },
+          {
+            "name": "IsHearingImpaired",
+            "in": "query",
+            "description": "IsHearingImpaired",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
           }
         ],
         "responses": {
@@ -80815,6 +80826,9 @@
           "ForcedSubtitlesOnly": {
             "type": "boolean"
           },
+          "HearingImpairedSubtitlesOnly": {
+            "type": "boolean"
+          },
           "TypeOptions": {
             "type": "array",
             "items": {
@@ -82770,6 +82784,9 @@
             "type": "boolean"
           },
           "AllowRenegotiation": {
+            "type": "boolean"
+          },
+          "AllowLegacyLocalNetworkPassword": {
             "type": "boolean"
           },
           "ProxyHeaderMode": {

@@ -67,6 +67,7 @@ class ConfigurationLibraryOptions(object):
         'require_perfect_subtitle_match': 'bool',
         'save_subtitles_with_media': 'bool',
         'forced_subtitles_only': 'bool',
+        'hearing_impaired_subtitles_only': 'bool',
         'type_options': 'list[ConfigurationTypeOptions]',
         'collapse_single_item_folders': 'bool',
         'enable_adult_metadata': 'bool',
@@ -126,6 +127,7 @@ class ConfigurationLibraryOptions(object):
         'require_perfect_subtitle_match': 'RequirePerfectSubtitleMatch',
         'save_subtitles_with_media': 'SaveSubtitlesWithMedia',
         'forced_subtitles_only': 'ForcedSubtitlesOnly',
+        'hearing_impaired_subtitles_only': 'HearingImpairedSubtitlesOnly',
         'type_options': 'TypeOptions',
         'collapse_single_item_folders': 'CollapseSingleItemFolders',
         'enable_adult_metadata': 'EnableAdultMetadata',
@@ -139,7 +141,7 @@ class ConfigurationLibraryOptions(object):
         'sample_ignore_size': 'SampleIgnoreSize'
     }
 
-    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_missing_episodes=None, import_playlists=None, enable_automatic_series_grouping=None, share_embedded_music_album_images=None, enable_embedded_titles=None, enable_audio_resume=None, automatic_refresh_interval_days=None, placeholder_metadata_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, name=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, type_options=None, collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
+    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_missing_episodes=None, import_playlists=None, enable_automatic_series_grouping=None, share_embedded_music_album_images=None, enable_embedded_titles=None, enable_audio_resume=None, automatic_refresh_interval_days=None, placeholder_metadata_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, name=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, hearing_impaired_subtitles_only=None, type_options=None, collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
         """ConfigurationLibraryOptions - a model defined in Swagger"""  # noqa: E501
         self._enable_archive_media_files = None
         self._enable_photos = None
@@ -186,6 +188,7 @@ class ConfigurationLibraryOptions(object):
         self._require_perfect_subtitle_match = None
         self._save_subtitles_with_media = None
         self._forced_subtitles_only = None
+        self._hearing_impaired_subtitles_only = None
         self._type_options = None
         self._collapse_single_item_folders = None
         self._enable_adult_metadata = None
@@ -288,6 +291,8 @@ class ConfigurationLibraryOptions(object):
             self.save_subtitles_with_media = save_subtitles_with_media
         if forced_subtitles_only is not None:
             self.forced_subtitles_only = forced_subtitles_only
+        if hearing_impaired_subtitles_only is not None:
+            self.hearing_impaired_subtitles_only = hearing_impaired_subtitles_only
         if type_options is not None:
             self.type_options = type_options
         if collapse_single_item_folders is not None:
@@ -1255,6 +1260,27 @@ class ConfigurationLibraryOptions(object):
         """
 
         self._forced_subtitles_only = forced_subtitles_only
+
+    @property
+    def hearing_impaired_subtitles_only(self):
+        """Gets the hearing_impaired_subtitles_only of this ConfigurationLibraryOptions.  # noqa: E501
+
+
+        :return: The hearing_impaired_subtitles_only of this ConfigurationLibraryOptions.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hearing_impaired_subtitles_only
+
+    @hearing_impaired_subtitles_only.setter
+    def hearing_impaired_subtitles_only(self, hearing_impaired_subtitles_only):
+        """Sets the hearing_impaired_subtitles_only of this ConfigurationLibraryOptions.
+
+
+        :param hearing_impaired_subtitles_only: The hearing_impaired_subtitles_only of this ConfigurationLibraryOptions.  # noqa: E501
+        :type: bool
+        """
+
+        self._hearing_impaired_subtitles_only = hearing_impaired_subtitles_only
 
     @property
     def type_options(self):

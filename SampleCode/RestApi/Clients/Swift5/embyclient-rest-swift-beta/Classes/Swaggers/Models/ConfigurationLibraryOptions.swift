@@ -56,6 +56,7 @@ public struct ConfigurationLibraryOptions: Codable {
     public var requirePerfectSubtitleMatch: Bool?
     public var saveSubtitlesWithMedia: Bool?
     public var forcedSubtitlesOnly: Bool?
+    public var hearingImpairedSubtitlesOnly: Bool?
     public var typeOptions: [ConfigurationTypeOptions]?
     public var collapseSingleItemFolders: Bool?
     public var enableAdultMetadata: Bool?
@@ -68,7 +69,7 @@ public struct ConfigurationLibraryOptions: Codable {
     public var thumbnailImagesIntervalSeconds: Int?
     public var sampleIgnoreSize: Int?
 
-    public init(enableArchiveMediaFiles: Bool? = nil, enablePhotos: Bool? = nil, enableRealtimeMonitor: Bool? = nil, enableMarkerDetection: Bool? = nil, enableMarkerDetectionDuringLibraryScan: Bool? = nil, introDetectionFingerprintLength: Int? = nil, enableChapterImageExtraction: Bool? = nil, extractChapterImagesDuringLibraryScan: Bool? = nil, downloadImagesInAdvance: Bool? = nil, pathInfos: [ConfigurationMediaPathInfo]? = nil, ignoreHiddenFiles: Bool? = nil, ignoreFileExtensions: [String]? = nil, saveLocalMetadata: Bool? = nil, saveMetadataHidden: Bool? = nil, saveLocalThumbnailSets: Bool? = nil, importMissingEpisodes: Bool? = nil, importPlaylists: Bool? = nil, enableAutomaticSeriesGrouping: Bool? = nil, shareEmbeddedMusicAlbumImages: Bool? = nil, enableEmbeddedTitles: Bool? = nil, enableAudioResume: Bool? = nil, automaticRefreshIntervalDays: Int? = nil, placeholderMetadataRefreshIntervalDays: Int? = nil, preferredMetadataLanguage: String? = nil, preferredImageLanguage: String? = nil, contentType: String? = nil, metadataCountryCode: String? = nil, name: String? = nil, metadataSavers: [String]? = nil, disabledLocalMetadataReaders: [String]? = nil, localMetadataReaderOrder: [String]? = nil, disabledLyricsFetchers: [String]? = nil, saveLyricsWithMedia: Bool? = nil, lyricsDownloadMaxAgeDays: Int? = nil, lyricsFetcherOrder: [String]? = nil, lyricsDownloadLanguages: [String]? = nil, disabledSubtitleFetchers: [String]? = nil, subtitleFetcherOrder: [String]? = nil, skipSubtitlesIfEmbeddedSubtitlesPresent: Bool? = nil, skipSubtitlesIfAudioTrackMatches: Bool? = nil, subtitleDownloadLanguages: [String]? = nil, subtitleDownloadMaxAgeDays: Int? = nil, requirePerfectSubtitleMatch: Bool? = nil, saveSubtitlesWithMedia: Bool? = nil, forcedSubtitlesOnly: Bool? = nil, typeOptions: [ConfigurationTypeOptions]? = nil, collapseSingleItemFolders: Bool? = nil, enableAdultMetadata: Bool? = nil, importCollections: Bool? = nil, minCollectionItems: Int? = nil, musicFolderStructure: String? = nil, minResumePct: Int? = nil, maxResumePct: Int? = nil, minResumeDurationSeconds: Int? = nil, thumbnailImagesIntervalSeconds: Int? = nil, sampleIgnoreSize: Int? = nil) {
+    public init(enableArchiveMediaFiles: Bool? = nil, enablePhotos: Bool? = nil, enableRealtimeMonitor: Bool? = nil, enableMarkerDetection: Bool? = nil, enableMarkerDetectionDuringLibraryScan: Bool? = nil, introDetectionFingerprintLength: Int? = nil, enableChapterImageExtraction: Bool? = nil, extractChapterImagesDuringLibraryScan: Bool? = nil, downloadImagesInAdvance: Bool? = nil, pathInfos: [ConfigurationMediaPathInfo]? = nil, ignoreHiddenFiles: Bool? = nil, ignoreFileExtensions: [String]? = nil, saveLocalMetadata: Bool? = nil, saveMetadataHidden: Bool? = nil, saveLocalThumbnailSets: Bool? = nil, importMissingEpisodes: Bool? = nil, importPlaylists: Bool? = nil, enableAutomaticSeriesGrouping: Bool? = nil, shareEmbeddedMusicAlbumImages: Bool? = nil, enableEmbeddedTitles: Bool? = nil, enableAudioResume: Bool? = nil, automaticRefreshIntervalDays: Int? = nil, placeholderMetadataRefreshIntervalDays: Int? = nil, preferredMetadataLanguage: String? = nil, preferredImageLanguage: String? = nil, contentType: String? = nil, metadataCountryCode: String? = nil, name: String? = nil, metadataSavers: [String]? = nil, disabledLocalMetadataReaders: [String]? = nil, localMetadataReaderOrder: [String]? = nil, disabledLyricsFetchers: [String]? = nil, saveLyricsWithMedia: Bool? = nil, lyricsDownloadMaxAgeDays: Int? = nil, lyricsFetcherOrder: [String]? = nil, lyricsDownloadLanguages: [String]? = nil, disabledSubtitleFetchers: [String]? = nil, subtitleFetcherOrder: [String]? = nil, skipSubtitlesIfEmbeddedSubtitlesPresent: Bool? = nil, skipSubtitlesIfAudioTrackMatches: Bool? = nil, subtitleDownloadLanguages: [String]? = nil, subtitleDownloadMaxAgeDays: Int? = nil, requirePerfectSubtitleMatch: Bool? = nil, saveSubtitlesWithMedia: Bool? = nil, forcedSubtitlesOnly: Bool? = nil, hearingImpairedSubtitlesOnly: Bool? = nil, typeOptions: [ConfigurationTypeOptions]? = nil, collapseSingleItemFolders: Bool? = nil, enableAdultMetadata: Bool? = nil, importCollections: Bool? = nil, minCollectionItems: Int? = nil, musicFolderStructure: String? = nil, minResumePct: Int? = nil, maxResumePct: Int? = nil, minResumeDurationSeconds: Int? = nil, thumbnailImagesIntervalSeconds: Int? = nil, sampleIgnoreSize: Int? = nil) {
         self.enableArchiveMediaFiles = enableArchiveMediaFiles
         self.enablePhotos = enablePhotos
         self.enableRealtimeMonitor = enableRealtimeMonitor
@@ -114,6 +115,7 @@ public struct ConfigurationLibraryOptions: Codable {
         self.requirePerfectSubtitleMatch = requirePerfectSubtitleMatch
         self.saveSubtitlesWithMedia = saveSubtitlesWithMedia
         self.forcedSubtitlesOnly = forcedSubtitlesOnly
+        self.hearingImpairedSubtitlesOnly = hearingImpairedSubtitlesOnly
         self.typeOptions = typeOptions
         self.collapseSingleItemFolders = collapseSingleItemFolders
         self.enableAdultMetadata = enableAdultMetadata
@@ -173,6 +175,7 @@ public struct ConfigurationLibraryOptions: Codable {
         case requirePerfectSubtitleMatch = "RequirePerfectSubtitleMatch"
         case saveSubtitlesWithMedia = "SaveSubtitlesWithMedia"
         case forcedSubtitlesOnly = "ForcedSubtitlesOnly"
+        case hearingImpairedSubtitlesOnly = "HearingImpairedSubtitlesOnly"
         case typeOptions = "TypeOptions"
         case collapseSingleItemFolders = "CollapseSingleItemFolders"
         case enableAdultMetadata = "EnableAdultMetadata"

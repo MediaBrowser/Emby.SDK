@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.49
+ * OpenAPI spec version: 4.8.0.50
  * 
  *
  * NOTE: This file is auto generated.
@@ -4867,7 +4867,8 @@ describe("SubtitleServiceApi", () => {
     const language: string = "language_example"
     const isPerfectMatch: boolean = true
     const isForced: boolean = true
-    return expect(instance.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced, {})).resolves.toBe(null)
+    const isHearingImpaired: boolean = true
+    return expect(instance.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired, {})).resolves.toBe(null)
   })
   test("getProvidersSubtitlesSubtitlesById", () => {
     const id: string = "id_example"

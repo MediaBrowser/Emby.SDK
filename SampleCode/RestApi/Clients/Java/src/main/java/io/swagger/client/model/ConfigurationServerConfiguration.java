@@ -191,6 +191,9 @@ public class ConfigurationServerConfiguration {
   @SerializedName("AllowRenegotiation")
   private Boolean allowRenegotiation = null;
 
+  @SerializedName("AllowLegacyLocalNetworkPassword")
+  private Boolean allowLegacyLocalNetworkPassword = null;
+
   @SerializedName("ProxyHeaderMode")
   private ConfigurationProxyHeaderMode proxyHeaderMode = null;
 
@@ -1253,6 +1256,24 @@ public class ConfigurationServerConfiguration {
     this.allowRenegotiation = allowRenegotiation;
   }
 
+  public ConfigurationServerConfiguration allowLegacyLocalNetworkPassword(Boolean allowLegacyLocalNetworkPassword) {
+    this.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
+    return this;
+  }
+
+   /**
+   * Get allowLegacyLocalNetworkPassword
+   * @return allowLegacyLocalNetworkPassword
+  **/
+  @Schema(description = "")
+  public Boolean isAllowLegacyLocalNetworkPassword() {
+    return allowLegacyLocalNetworkPassword;
+  }
+
+  public void setAllowLegacyLocalNetworkPassword(Boolean allowLegacyLocalNetworkPassword) {
+    this.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
+  }
+
   public ConfigurationServerConfiguration proxyHeaderMode(ConfigurationProxyHeaderMode proxyHeaderMode) {
     this.proxyHeaderMode = proxyHeaderMode;
     return this;
@@ -1462,6 +1483,7 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.migratedToUserItemShares, configurationServerConfiguration.migratedToUserItemShares) &&
         Objects.equals(this.enableFks, configurationServerConfiguration.enableFks) &&
         Objects.equals(this.allowRenegotiation, configurationServerConfiguration.allowRenegotiation) &&
+        Objects.equals(this.allowLegacyLocalNetworkPassword, configurationServerConfiguration.allowLegacyLocalNetworkPassword) &&
         Objects.equals(this.proxyHeaderMode, configurationServerConfiguration.proxyHeaderMode) &&
         Objects.equals(this.enableDebugLevelLogging, configurationServerConfiguration.enableDebugLevelLogging) &&
         Objects.equals(this.revertDebugLogging, configurationServerConfiguration.revertDebugLogging) &&
@@ -1474,7 +1496,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableFks, allowRenegotiation, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableFks, allowRenegotiation, allowLegacyLocalNetworkPassword, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1538,6 +1560,7 @@ public class ConfigurationServerConfiguration {
     sb.append("    migratedToUserItemShares: ").append(toIndentedString(migratedToUserItemShares)).append("\n");
     sb.append("    enableFks: ").append(toIndentedString(enableFks)).append("\n");
     sb.append("    allowRenegotiation: ").append(toIndentedString(allowRenegotiation)).append("\n");
+    sb.append("    allowLegacyLocalNetworkPassword: ").append(toIndentedString(allowLegacyLocalNetworkPassword)).append("\n");
     sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");
     sb.append("    enableDebugLevelLogging: ").append(toIndentedString(enableDebugLevelLogging)).append("\n");
     sb.append("    revertDebugLogging: ").append(toIndentedString(revertDebugLogging)).append("\n");

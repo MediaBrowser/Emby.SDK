@@ -510,6 +510,7 @@ class SubtitleServiceApi(object):
         :param str language: Language (required)
         :param bool is_perfect_match: IsPerfectMatch
         :param bool is_forced: IsForced
+        :param bool is_hearing_impaired: IsHearingImpaired
         :return: list[RemoteSubtitleInfo]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -536,12 +537,13 @@ class SubtitleServiceApi(object):
         :param str language: Language (required)
         :param bool is_perfect_match: IsPerfectMatch
         :param bool is_forced: IsForced
+        :param bool is_hearing_impaired: IsHearingImpaired
         :return: list[RemoteSubtitleInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'media_source_id', 'language', 'is_perfect_match', 'is_forced']  # noqa: E501
+        all_params = ['id', 'media_source_id', 'language', 'is_perfect_match', 'is_forced', 'is_hearing_impaired']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -584,6 +586,8 @@ class SubtitleServiceApi(object):
             query_params.append(('IsPerfectMatch', params['is_perfect_match']))  # noqa: E501
         if 'is_forced' in params:
             query_params.append(('IsForced', params['is_forced']))  # noqa: E501
+        if 'is_hearing_impaired' in params:
+            query_params.append(('IsHearingImpaired', params['is_hearing_impaired']))  # noqa: E501
 
         header_params = {}
 

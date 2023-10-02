@@ -15,7 +15,7 @@ import NameIdPair from './NameIdPair';
 /**
 * The UserLibraryAddTags model module.
 * @module model/UserLibraryAddTags
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class UserLibraryAddTags {
     /**

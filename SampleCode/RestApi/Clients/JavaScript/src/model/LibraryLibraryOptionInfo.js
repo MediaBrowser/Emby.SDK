@@ -15,7 +15,7 @@ import ConfigurationMetadataFeatures from './ConfigurationMetadataFeatures';
 /**
 * The LibraryLibraryOptionInfo model module.
 * @module model/LibraryLibraryOptionInfo
-* @version 4.8.0.49
+* @version 4.8.0.50
 */
 export default class LibraryLibraryOptionInfo {
     /**

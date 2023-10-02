@@ -159,6 +159,9 @@ public class ConfigurationLibraryOptions {
   @SerializedName("ForcedSubtitlesOnly")
   private Boolean forcedSubtitlesOnly = null;
 
+  @SerializedName("HearingImpairedSubtitlesOnly")
+  private Boolean hearingImpairedSubtitlesOnly = null;
+
   @SerializedName("TypeOptions")
   private List<ConfigurationTypeOptions> typeOptions = null;
 
@@ -1090,6 +1093,24 @@ public class ConfigurationLibraryOptions {
     this.forcedSubtitlesOnly = forcedSubtitlesOnly;
   }
 
+  public ConfigurationLibraryOptions hearingImpairedSubtitlesOnly(Boolean hearingImpairedSubtitlesOnly) {
+    this.hearingImpairedSubtitlesOnly = hearingImpairedSubtitlesOnly;
+    return this;
+  }
+
+   /**
+   * Get hearingImpairedSubtitlesOnly
+   * @return hearingImpairedSubtitlesOnly
+  **/
+  @Schema(description = "")
+  public Boolean isHearingImpairedSubtitlesOnly() {
+    return hearingImpairedSubtitlesOnly;
+  }
+
+  public void setHearingImpairedSubtitlesOnly(Boolean hearingImpairedSubtitlesOnly) {
+    this.hearingImpairedSubtitlesOnly = hearingImpairedSubtitlesOnly;
+  }
+
   public ConfigurationLibraryOptions typeOptions(List<ConfigurationTypeOptions> typeOptions) {
     this.typeOptions = typeOptions;
     return this;
@@ -1351,6 +1372,7 @@ public class ConfigurationLibraryOptions {
         Objects.equals(this.requirePerfectSubtitleMatch, configurationLibraryOptions.requirePerfectSubtitleMatch) &&
         Objects.equals(this.saveSubtitlesWithMedia, configurationLibraryOptions.saveSubtitlesWithMedia) &&
         Objects.equals(this.forcedSubtitlesOnly, configurationLibraryOptions.forcedSubtitlesOnly) &&
+        Objects.equals(this.hearingImpairedSubtitlesOnly, configurationLibraryOptions.hearingImpairedSubtitlesOnly) &&
         Objects.equals(this.typeOptions, configurationLibraryOptions.typeOptions) &&
         Objects.equals(this.collapseSingleItemFolders, configurationLibraryOptions.collapseSingleItemFolders) &&
         Objects.equals(this.enableAdultMetadata, configurationLibraryOptions.enableAdultMetadata) &&
@@ -1366,7 +1388,7 @@ public class ConfigurationLibraryOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importMissingEpisodes, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, name, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
+    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importMissingEpisodes, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, name, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
   }
 
 
@@ -1420,6 +1442,7 @@ public class ConfigurationLibraryOptions {
     sb.append("    requirePerfectSubtitleMatch: ").append(toIndentedString(requirePerfectSubtitleMatch)).append("\n");
     sb.append("    saveSubtitlesWithMedia: ").append(toIndentedString(saveSubtitlesWithMedia)).append("\n");
     sb.append("    forcedSubtitlesOnly: ").append(toIndentedString(forcedSubtitlesOnly)).append("\n");
+    sb.append("    hearingImpairedSubtitlesOnly: ").append(toIndentedString(hearingImpairedSubtitlesOnly)).append("\n");
     sb.append("    typeOptions: ").append(toIndentedString(typeOptions)).append("\n");
     sb.append("    collapseSingleItemFolders: ").append(toIndentedString(collapseSingleItemFolders)).append("\n");
     sb.append("    enableAdultMetadata: ").append(toIndentedString(enableAdultMetadata)).append("\n");

@@ -62,6 +62,7 @@ type ConfigurationServerConfiguration struct {
 	MigratedToUserItemShares bool `json:"MigratedToUserItemShares,omitempty"`
 	EnableFks bool `json:"EnableFks,omitempty"`
 	AllowRenegotiation bool `json:"AllowRenegotiation,omitempty"`
+	AllowLegacyLocalNetworkPassword bool `json:"AllowLegacyLocalNetworkPassword,omitempty"`
 	ProxyHeaderMode *ConfigurationProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`
 	EnableDebugLevelLogging bool `json:"EnableDebugLevelLogging,omitempty"`
 	RevertDebugLogging string `json:"RevertDebugLogging,omitempty"`
