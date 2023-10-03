@@ -15,7 +15,7 @@ import ConfigurationLibraryOptions from './ConfigurationLibraryOptions';
 /**
 * The LibraryUpdateLibraryOptions model module.
 * @module model/LibraryUpdateLibraryOptions
-* @version 4.8.0.50
+* @version 4.8.0.51
 */
 export default class LibraryUpdateLibraryOptions {
     /**

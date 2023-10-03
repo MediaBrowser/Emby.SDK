@@ -16,7 +16,7 @@ import MediaInfoMediaProtocol from './MediaInfoMediaProtocol';
 /**
 * The MediaInfoLiveStreamRequest model module.
 * @module model/MediaInfoLiveStreamRequest
-* @version 4.8.0.50
+* @version 4.8.0.51
 */
 export default class MediaInfoLiveStreamRequest {
     /**

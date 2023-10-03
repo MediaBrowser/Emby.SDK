@@ -16,7 +16,7 @@ import TasksTaskTriggerInfo from '../model/TasksTaskTriggerInfo';
 /**
 * ScheduledTaskService service.
 * @module EmbyClient.JavaScript.Beta/ScheduledTaskServiceApi
-* @version 4.8.0.50
+* @version 4.8.0.51
 */
 export default class ScheduledTaskServiceApi {
 

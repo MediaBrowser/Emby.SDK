@@ -15,7 +15,7 @@ import EmbyDlnaProfilesHeaderMatchType from './EmbyDlnaProfilesHeaderMatchType';
 /**
 * The EmbyDlnaProfilesHttpHeaderInfo model module.
 * @module model/EmbyDlnaProfilesHttpHeaderInfo
-* @version 4.8.0.50
+* @version 4.8.0.51
 */
 export default class EmbyDlnaProfilesHttpHeaderInfo {
     /**

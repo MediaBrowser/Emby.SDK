@@ -5,7 +5,7 @@
   <artifactId>embyclient-rest-java-beta</artifactId>
   <packaging>jar</packaging>
   <name>embyclient-rest-java-beta</name>
-  <version>4.8.0.50</version>
+  <version>4.8.0.51</version>
   <url>https://dev.emby.media</url>
   <description>Swagger Java</description>
   <prerequisites>

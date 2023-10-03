@@ -16,7 +16,7 @@ import SyncSyncJobStatus from './SyncSyncJobStatus';
 /**
 * The SyncSyncJob model module.
 * @module model/SyncSyncJob
-* @version 4.8.0.50
+* @version 4.8.0.51
 */
 export default class SyncSyncJob {
     /**

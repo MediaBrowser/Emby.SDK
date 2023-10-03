@@ -15,7 +15,7 @@ import DlnaSubtitleDeliveryMethod from '../model/DlnaSubtitleDeliveryMethod';
 /**
 * DynamicHlsService service.
 * @module EmbyClient.JavaScript.Beta/DynamicHlsServiceApi
-* @version 4.8.0.50
+* @version 4.8.0.51
 */
 export default class DynamicHlsServiceApi {
 
