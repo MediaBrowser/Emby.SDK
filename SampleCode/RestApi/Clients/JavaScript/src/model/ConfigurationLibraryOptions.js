@@ -16,7 +16,7 @@ import ConfigurationTypeOptions from './ConfigurationTypeOptions';
 /**
 * The ConfigurationLibraryOptions model module.
 * @module model/ConfigurationLibraryOptions
-* @version 4.8.0.51
+* @version 4.8.0.52
 */
 export default class ConfigurationLibraryOptions {
     /**
@@ -123,9 +123,6 @@ export default class ConfigurationLibraryOptions {
             }
             if (data.hasOwnProperty('MetadataCountryCode')) {
                 obj['MetadataCountryCode'] = ApiClient.convertToType(data['MetadataCountryCode'], 'String');
-            }
-            if (data.hasOwnProperty('Name')) {
-                obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
             if (data.hasOwnProperty('MetadataSavers')) {
                 obj['MetadataSavers'] = ApiClient.convertToType(data['MetadataSavers'], ['String']);
@@ -326,10 +323,6 @@ export default class ConfigurationLibraryOptions {
     * @member {String} MetadataCountryCode
     */
     'MetadataCountryCode' = undefined;
-    /**
-    * @member {String} Name
-    */
-    'Name' = undefined;
     /**
     * @member {Array.<String>} MetadataSavers
     */

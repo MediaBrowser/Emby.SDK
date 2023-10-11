@@ -188,9 +188,6 @@ public class ConfigurationServerConfiguration {
   @SerializedName("EnableFks")
   private Boolean enableFks = null;
 
-  @SerializedName("AllowRenegotiation")
-  private Boolean allowRenegotiation = null;
-
   @SerializedName("AllowLegacyLocalNetworkPassword")
   private Boolean allowLegacyLocalNetworkPassword = null;
 
@@ -1238,24 +1235,6 @@ public class ConfigurationServerConfiguration {
     this.enableFks = enableFks;
   }
 
-  public ConfigurationServerConfiguration allowRenegotiation(Boolean allowRenegotiation) {
-    this.allowRenegotiation = allowRenegotiation;
-    return this;
-  }
-
-   /**
-   * Get allowRenegotiation
-   * @return allowRenegotiation
-  **/
-  @Schema(description = "")
-  public Boolean isAllowRenegotiation() {
-    return allowRenegotiation;
-  }
-
-  public void setAllowRenegotiation(Boolean allowRenegotiation) {
-    this.allowRenegotiation = allowRenegotiation;
-  }
-
   public ConfigurationServerConfiguration allowLegacyLocalNetworkPassword(Boolean allowLegacyLocalNetworkPassword) {
     this.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
     return this;
@@ -1482,7 +1461,6 @@ public class ConfigurationServerConfiguration {
         Objects.equals(this.disableAsyncIO, configurationServerConfiguration.disableAsyncIO) &&
         Objects.equals(this.migratedToUserItemShares, configurationServerConfiguration.migratedToUserItemShares) &&
         Objects.equals(this.enableFks, configurationServerConfiguration.enableFks) &&
-        Objects.equals(this.allowRenegotiation, configurationServerConfiguration.allowRenegotiation) &&
         Objects.equals(this.allowLegacyLocalNetworkPassword, configurationServerConfiguration.allowLegacyLocalNetworkPassword) &&
         Objects.equals(this.proxyHeaderMode, configurationServerConfiguration.proxyHeaderMode) &&
         Objects.equals(this.enableDebugLevelLogging, configurationServerConfiguration.enableDebugLevelLogging) &&
@@ -1496,7 +1474,7 @@ public class ConfigurationServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableFks, allowRenegotiation, allowLegacyLocalNetworkPassword, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableFks, allowLegacyLocalNetworkPassword, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1559,7 +1537,6 @@ public class ConfigurationServerConfiguration {
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
     sb.append("    migratedToUserItemShares: ").append(toIndentedString(migratedToUserItemShares)).append("\n");
     sb.append("    enableFks: ").append(toIndentedString(enableFks)).append("\n");
-    sb.append("    allowRenegotiation: ").append(toIndentedString(allowRenegotiation)).append("\n");
     sb.append("    allowLegacyLocalNetworkPassword: ").append(toIndentedString(allowLegacyLocalNetworkPassword)).append("\n");
     sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");
     sb.append("    enableDebugLevelLogging: ").append(toIndentedString(enableDebugLevelLogging)).append("\n");

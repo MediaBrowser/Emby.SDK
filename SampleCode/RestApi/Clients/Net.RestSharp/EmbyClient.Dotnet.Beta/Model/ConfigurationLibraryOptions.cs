@@ -53,7 +53,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="preferredImageLanguage">preferredImageLanguage.</param>
         /// <param name="contentType">contentType.</param>
         /// <param name="metadataCountryCode">metadataCountryCode.</param>
-        /// <param name="name">name.</param>
         /// <param name="metadataSavers">metadataSavers.</param>
         /// <param name="disabledLocalMetadataReaders">disabledLocalMetadataReaders.</param>
         /// <param name="localMetadataReaderOrder">localMetadataReaderOrder.</param>
@@ -83,7 +82,7 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// <param name="minResumeDurationSeconds">minResumeDurationSeconds.</param>
         /// <param name="thumbnailImagesIntervalSeconds">thumbnailImagesIntervalSeconds.</param>
         /// <param name="sampleIgnoreSize">sampleIgnoreSize.</param>
-        public ConfigurationLibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), List<ConfigurationMediaPathInfo> pathInfos = default(List<ConfigurationMediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), List<string> ignoreFileExtensions = default(List<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importMissingEpisodes = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? shareEmbeddedMusicAlbumImages = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), string name = default(string), List<string> metadataSavers = default(List<string>), List<string> disabledLocalMetadataReaders = default(List<string>), List<string> localMetadataReaderOrder = default(List<string>), List<string> disabledLyricsFetchers = default(List<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), List<string> lyricsFetcherOrder = default(List<string>), List<string> lyricsDownloadLanguages = default(List<string>), List<string> disabledSubtitleFetchers = default(List<string>), List<string> subtitleFetcherOrder = default(List<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), List<string> subtitleDownloadLanguages = default(List<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), bool? hearingImpairedSubtitlesOnly = default(bool?), List<ConfigurationTypeOptions> typeOptions = default(List<ConfigurationTypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
+        public ConfigurationLibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), List<ConfigurationMediaPathInfo> pathInfos = default(List<ConfigurationMediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), List<string> ignoreFileExtensions = default(List<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importMissingEpisodes = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? shareEmbeddedMusicAlbumImages = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), List<string> metadataSavers = default(List<string>), List<string> disabledLocalMetadataReaders = default(List<string>), List<string> localMetadataReaderOrder = default(List<string>), List<string> disabledLyricsFetchers = default(List<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), List<string> lyricsFetcherOrder = default(List<string>), List<string> lyricsDownloadLanguages = default(List<string>), List<string> disabledSubtitleFetchers = default(List<string>), List<string> subtitleFetcherOrder = default(List<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), List<string> subtitleDownloadLanguages = default(List<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), bool? hearingImpairedSubtitlesOnly = default(bool?), List<ConfigurationTypeOptions> typeOptions = default(List<ConfigurationTypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
         {
             this.EnableArchiveMediaFiles = enableArchiveMediaFiles;
             this.EnablePhotos = enablePhotos;
@@ -112,7 +111,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             this.PreferredImageLanguage = preferredImageLanguage;
             this.ContentType = contentType;
             this.MetadataCountryCode = metadataCountryCode;
-            this.Name = name;
             this.MetadataSavers = metadataSavers;
             this.DisabledLocalMetadataReaders = disabledLocalMetadataReaders;
             this.LocalMetadataReaderOrder = localMetadataReaderOrder;
@@ -305,12 +303,6 @@ namespace EmbyClient.Dotnet.Beta.Model
         /// </summary>
         [DataMember(Name="MetadataCountryCode", EmitDefaultValue=false)]
         public string MetadataCountryCode { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets MetadataSavers
@@ -521,7 +513,6 @@ namespace EmbyClient.Dotnet.Beta.Model
             sb.Append("  PreferredImageLanguage: ").Append(PreferredImageLanguage).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MetadataSavers: ").Append(MetadataSavers).Append("\n");
             sb.Append("  DisabledLocalMetadataReaders: ").Append(DisabledLocalMetadataReaders).Append("\n");
             sb.Append("  LocalMetadataReaderOrder: ").Append(LocalMetadataReaderOrder).Append("\n");
@@ -721,11 +712,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     this.MetadataCountryCode == input.MetadataCountryCode ||
                     (this.MetadataCountryCode != null &&
                     this.MetadataCountryCode.Equals(input.MetadataCountryCode))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
                 ) && 
                 (
                     this.MetadataSavers == input.MetadataSavers ||
@@ -947,8 +933,6 @@ namespace EmbyClient.Dotnet.Beta.Model
                     hashCode = hashCode * 59 + this.ContentType.GetHashCode();
                 if (this.MetadataCountryCode != null)
                     hashCode = hashCode * 59 + this.MetadataCountryCode.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.MetadataSavers != null)
                     hashCode = hashCode * 59 + this.MetadataSavers.GetHashCode();
                 if (this.DisabledLocalMetadataReaders != null)

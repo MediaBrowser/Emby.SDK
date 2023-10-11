@@ -34,7 +34,6 @@ type ConfigurationLibraryOptions struct {
 	PreferredImageLanguage string `json:"PreferredImageLanguage,omitempty"`
 	ContentType string `json:"ContentType,omitempty"`
 	MetadataCountryCode string `json:"MetadataCountryCode,omitempty"`
-	Name string `json:"Name,omitempty"`
 	MetadataSavers []string `json:"MetadataSavers,omitempty"`
 	DisabledLocalMetadataReaders []string `json:"DisabledLocalMetadataReaders,omitempty"`
 	LocalMetadataReaderOrder []string `json:"LocalMetadataReaderOrder,omitempty"`

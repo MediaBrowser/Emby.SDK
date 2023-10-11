@@ -105,9 +105,6 @@ public class ConfigurationLibraryOptions {
   @SerializedName("MetadataCountryCode")
   private String metadataCountryCode = null;
 
-  @SerializedName("Name")
-  private String name = null;
-
   @SerializedName("MetadataSavers")
   private List<String> metadataSavers = null;
 
@@ -695,24 +692,6 @@ public class ConfigurationLibraryOptions {
 
   public void setMetadataCountryCode(String metadataCountryCode) {
     this.metadataCountryCode = metadataCountryCode;
-  }
-
-  public ConfigurationLibraryOptions name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @Schema(description = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
   }
 
   public ConfigurationLibraryOptions metadataSavers(List<String> metadataSavers) {
@@ -1354,7 +1333,6 @@ public class ConfigurationLibraryOptions {
         Objects.equals(this.preferredImageLanguage, configurationLibraryOptions.preferredImageLanguage) &&
         Objects.equals(this.contentType, configurationLibraryOptions.contentType) &&
         Objects.equals(this.metadataCountryCode, configurationLibraryOptions.metadataCountryCode) &&
-        Objects.equals(this.name, configurationLibraryOptions.name) &&
         Objects.equals(this.metadataSavers, configurationLibraryOptions.metadataSavers) &&
         Objects.equals(this.disabledLocalMetadataReaders, configurationLibraryOptions.disabledLocalMetadataReaders) &&
         Objects.equals(this.localMetadataReaderOrder, configurationLibraryOptions.localMetadataReaderOrder) &&
@@ -1388,7 +1366,7 @@ public class ConfigurationLibraryOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importMissingEpisodes, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, name, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
+    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importMissingEpisodes, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
   }
 
 
@@ -1424,7 +1402,6 @@ public class ConfigurationLibraryOptions {
     sb.append("    preferredImageLanguage: ").append(toIndentedString(preferredImageLanguage)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    metadataCountryCode: ").append(toIndentedString(metadataCountryCode)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    metadataSavers: ").append(toIndentedString(metadataSavers)).append("\n");
     sb.append("    disabledLocalMetadataReaders: ").append(toIndentedString(disabledLocalMetadataReaders)).append("\n");
     sb.append("    localMetadataReaderOrder: ").append(toIndentedString(localMetadataReaderOrder)).append("\n");

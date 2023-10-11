@@ -160,7 +160,7 @@ whenever needed.  Primarily for entity resolution.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
+    <div class="level1"><span class="xref">System.EventArgs</span></div>
     <div class="level2"><span class="xref">ItemResolveArgs</span></div>
   </div>
   <div class="inheritedMembers">
@@ -203,38 +203,6 @@ whenever needed.  Primarily for entity resolution.</p>
         <td><span class="parametername">directoryService</span></td>
         <td><p>The directory service.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_MediaBrowser_Controller_Providers_IDirectoryService_MediaBrowser_Controller_IServerApplicationHost_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor(MediaBrowser.Controller.Providers.IDirectoryService,MediaBrowser.Controller.IServerApplicationHost)">ItemResolveArgs(IDirectoryService, IServerApplicationHost)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemResolveArgs(IDirectoryService directoryService, IServerApplicationHost appHost)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
-        <td><span class="parametername">directoryService</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a></td>
-        <td><span class="parametername">appHost</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -450,79 +418,8 @@ whenever needed.  Primarily for entity resolution.</p>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_PhysicalLocations_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.PhysicalLocations*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_PhysicalLocations" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.PhysicalLocations">PhysicalLocations</h4>
-  <div class="markdown level1 summary"><p>Gets the physical locations.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] PhysicalLocations { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><p>The physical locations.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_AddAdditionalLocation_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.AddAdditionalLocation*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_AddAdditionalLocation_System_String_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.AddAdditionalLocation(System.String)">AddAdditionalLocation(String)</h4>
-  <div class="markdown level1 summary"><p>Adds the additional location.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddAdditionalLocation(string path)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">path</span></td>
-        <td><p>The path.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="MediaBrowser_Controller_Library_ItemResolveArgs_ContainsFileSystemEntryByName_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.ContainsFileSystemEntryByName*"></a>

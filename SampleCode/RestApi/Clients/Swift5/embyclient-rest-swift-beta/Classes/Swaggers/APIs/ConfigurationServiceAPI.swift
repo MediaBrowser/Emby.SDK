@@ -82,7 +82,6 @@ open class ConfigurationServiceAPI {
   "WanDdns" : "WanDdns",
   "IsBehindProxy" : true,
   "UninstalledPlugins" : [ "UninstalledPlugins", "UninstalledPlugins" ],
-  "AllowRenegotiation" : true,
   "EnableDashboardResponseCaching" : true,
   "ForcedSortNameUpgraded" : true,
   "EnableRemoteAccess" : true,

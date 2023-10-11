@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developers
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.51
+  version: 4.8.0.52
 externalDocs:
   description: API Documentation Wiki
   url: https://github.com/MediaBrowser/Emby/wiki
@@ -67064,8 +67064,6 @@ components:
           type: string
         MetadataCountryCode:
           type: string
-        Name:
-          type: string
         MetadataSavers:
           type: array
           items:
@@ -67165,7 +67163,6 @@ components:
         - MetadataSavers
         SaveMetadataHidden: true
         SaveLocalMetadata: true
-        Name: Name
         PreferredImageLanguage: PreferredImageLanguage
         DownloadImagesInAdvance: true
         ThumbnailImagesIntervalSeconds: 2
@@ -74468,8 +74465,6 @@ components:
           type: boolean
         EnableFks:
           type: boolean
-        AllowRenegotiation:
-          type: boolean
         AllowLegacyLocalNetworkPassword:
           type: boolean
         ProxyHeaderMode:
@@ -74545,7 +74540,6 @@ components:
         UninstalledPlugins:
         - UninstalledPlugins
         - UninstalledPlugins
-        AllowRenegotiation: true
         EnableDashboardResponseCaching: true
         ForcedSortNameUpgraded: true
         EnableRemoteAccess: true
@@ -81097,7 +81091,6 @@ components:
             - MetadataSavers
             SaveMetadataHidden: true
             SaveLocalMetadata: true
-            Name: Name
             PreferredImageLanguage: PreferredImageLanguage
             DownloadImagesInAdvance: true
             ThumbnailImagesIntervalSeconds: 2
@@ -81234,7 +81227,6 @@ components:
             - MetadataSavers
             SaveMetadataHidden: true
             SaveLocalMetadata: true
-            Name: Name
             PreferredImageLanguage: PreferredImageLanguage
             DownloadImagesInAdvance: true
             ThumbnailImagesIntervalSeconds: 2
@@ -81399,7 +81391,6 @@ components:
           - MetadataSavers
           SaveMetadataHidden: true
           SaveLocalMetadata: true
-          Name: Name
           PreferredImageLanguage: PreferredImageLanguage
           DownloadImagesInAdvance: true
           ThumbnailImagesIntervalSeconds: 2

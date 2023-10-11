@@ -58325,9 +58325,6 @@
         "MetadataCountryCode": {
           "type": "string"
         },
-        "Name": {
-          "type": "string"
-        },
         "MetadataSavers": {
           "type": "array",
           "items": {
@@ -60334,9 +60331,6 @@
           "type": "boolean"
         },
         "EnableFks": {
-          "type": "boolean"
-        },
-        "AllowRenegotiation": {
           "type": "boolean"
         },
         "AllowLegacyLocalNetworkPassword": {

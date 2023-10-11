@@ -8,7 +8,7 @@
       "name": "Emby Developers",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.51"
+    "version": "4.8.0.52"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -58327,9 +58327,6 @@
         "MetadataCountryCode": {
           "type": "string"
         },
-        "Name": {
-          "type": "string"
-        },
         "MetadataSavers": {
           "type": "array",
           "items": {
@@ -60336,9 +60333,6 @@
           "type": "boolean"
         },
         "EnableFks": {
-          "type": "boolean"
-        },
-        "AllowRenegotiation": {
           "type": "boolean"
         },
         "AllowLegacyLocalNetworkPassword": {
