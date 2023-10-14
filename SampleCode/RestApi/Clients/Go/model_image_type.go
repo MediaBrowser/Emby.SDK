@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// ImageType : Enum ImageType  
 type ImageType string
 
 // List of ImageType

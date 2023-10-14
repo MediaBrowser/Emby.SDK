@@ -12,15 +12,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationLibraryOptions;
+import io.swagger.client.model.LibraryOptions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * VirtualFolderInfo
+ * Used to hold information about a user&#x27;s list of configured virtual folders  
  */
-
+@Schema(description = "Used to hold information about a user's list of configured virtual folders  ")
 
 public class VirtualFolderInfo {
   @SerializedName("Name")
@@ -33,7 +33,7 @@ public class VirtualFolderInfo {
   private String collectionType = null;
 
   @SerializedName("LibraryOptions")
-  private ConfigurationLibraryOptions libraryOptions = null;
+  private LibraryOptions libraryOptions = null;
 
   @SerializedName("ItemId")
   private String itemId = null;
@@ -59,10 +59,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -85,10 +85,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get locations
+   * The locations.
    * @return locations
   **/
-  @Schema(description = "")
+  @Schema(description = "The locations.")
   public List<String> getLocations() {
     return locations;
   }
@@ -103,10 +103,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get collectionType
+   * The type of the collection.
    * @return collectionType
   **/
-  @Schema(description = "")
+  @Schema(description = "The type of the collection.")
   public String getCollectionType() {
     return collectionType;
   }
@@ -115,7 +115,7 @@ public class VirtualFolderInfo {
     this.collectionType = collectionType;
   }
 
-  public VirtualFolderInfo libraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public VirtualFolderInfo libraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
     return this;
   }
@@ -125,11 +125,11 @@ public class VirtualFolderInfo {
    * @return libraryOptions
   **/
   @Schema(description = "")
-  public ConfigurationLibraryOptions getLibraryOptions() {
+  public LibraryOptions getLibraryOptions() {
     return libraryOptions;
   }
 
-  public void setLibraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public void setLibraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
   }
 
@@ -139,10 +139,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get itemId
+   * The item identifier.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The item identifier.")
   public String getItemId() {
     return itemId;
   }
@@ -157,10 +157,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get id
+   * ItemId came first, so that is left for compatability purposes
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "ItemId came first, so that is left for compatability purposes")
   public String getId() {
     return id;
   }
@@ -193,10 +193,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get primaryImageItemId
+   * The primary image item identifier.
    * @return primaryImageItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image item identifier.")
   public String getPrimaryImageItemId() {
     return primaryImageItemId;
   }

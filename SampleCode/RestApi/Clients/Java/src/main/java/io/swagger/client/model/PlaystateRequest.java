@@ -72,10 +72,10 @@ public class PlaystateRequest {
   }
 
    /**
-   * Get controllingUserId
+   * The controlling user identifier.
    * @return controllingUserId
   **/
-  @Schema(description = "")
+  @Schema(description = "The controlling user identifier.")
   public String getControllingUserId() {
     return controllingUserId;
   }

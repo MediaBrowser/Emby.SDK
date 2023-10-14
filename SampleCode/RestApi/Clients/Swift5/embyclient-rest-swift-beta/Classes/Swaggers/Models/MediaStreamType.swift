@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum MediaStreamType   */
 public enum MediaStreamType: String, Codable {
     case unknown = "Unknown"
     case audio = "Audio"

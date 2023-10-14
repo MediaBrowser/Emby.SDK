@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The SessionUserInfo model module.
 * @module model/SessionUserInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class SessionUserInfo {
     /**
     * Constructs a new <code>SessionUserInfo</code>.
+    * Class SessionUserInfo.  
     * @alias module:model/SessionUserInfo
     * @class
     */
@@ -55,10 +56,12 @@ export default class SessionUserInfo {
     }
 
     /**
+    * The user identifier.
     * @member {String} UserId
     */
     'UserId' = undefined;
     /**
+    * The name of the user.
     * @member {String} UserName
     */
     'UserName' = undefined;

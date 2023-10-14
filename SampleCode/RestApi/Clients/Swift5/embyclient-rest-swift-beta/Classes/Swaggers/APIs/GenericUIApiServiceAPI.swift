@@ -17,7 +17,7 @@ open class GenericUIApiServiceAPI {
      - parameter clientLocale: (query) Locale identifier of the client 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUIView(pageId: String, clientLocale: String, completion: @escaping ((_ data: EmbyWebGenericUIModelUIViewInfo?,_ error: Error?) -> Void)) {
+    open class func getUIView(pageId: String, clientLocale: String, completion: @escaping ((_ data: UIViewInfo?,_ error: Error?) -> Void)) {
         getUIViewWithRequestBuilder(pageId: pageId, clientLocale: clientLocale).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -86,9 +86,9 @@ open class GenericUIApiServiceAPI {
      - parameter pageId: (query) Id of the page controller 
      - parameter clientLocale: (query) Locale identifier of the client 
 
-     - returns: RequestBuilder<EmbyWebGenericUIModelUIViewInfo> 
+     - returns: RequestBuilder<UIViewInfo> 
      */
-    open class func getUIViewWithRequestBuilder(pageId: String, clientLocale: String) -> RequestBuilder<EmbyWebGenericUIModelUIViewInfo> {
+    open class func getUIViewWithRequestBuilder(pageId: String, clientLocale: String) -> RequestBuilder<UIViewInfo> {
         let path = "/UI/View"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -99,7 +99,7 @@ open class GenericUIApiServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<EmbyWebGenericUIModelUIViewInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UIViewInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -109,7 +109,7 @@ open class GenericUIApiServiceAPI {
      - parameter body: (body) RunUICommand 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUICommand(body: EmbyWebGenericUIApiEndpointsRunUICommand, completion: @escaping ((_ data: EmbyWebGenericUIModelUIViewInfo?,_ error: Error?) -> Void)) {
+    open class func postUICommand(body: RunUICommand, completion: @escaping ((_ data: UIViewInfo?,_ error: Error?) -> Void)) {
         postUICommandWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -177,16 +177,16 @@ open class GenericUIApiServiceAPI {
 }}]
      - parameter body: (body) RunUICommand 
 
-     - returns: RequestBuilder<EmbyWebGenericUIModelUIViewInfo> 
+     - returns: RequestBuilder<UIViewInfo> 
      */
-    open class func postUICommandWithRequestBuilder(body: EmbyWebGenericUIApiEndpointsRunUICommand) -> RequestBuilder<EmbyWebGenericUIModelUIViewInfo> {
+    open class func postUICommandWithRequestBuilder(body: RunUICommand) -> RequestBuilder<UIViewInfo> {
         let path = "/UI/Command"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyWebGenericUIModelUIViewInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UIViewInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

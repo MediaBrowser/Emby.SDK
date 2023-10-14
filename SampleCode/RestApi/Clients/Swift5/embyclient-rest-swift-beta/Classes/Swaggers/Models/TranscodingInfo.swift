@@ -28,8 +28,11 @@ public struct TranscodingInfo: Codable {
     public var height: Int?
     public var audioChannels: Int?
     public var transcodeReasons: [TranscodeReason]?
+    /** Deprecated, please use ProcessStatistics instead */
     public var currentCpuUsage: Double?
+    /** Deprecated, please use ProcessStatistics instead */
     public var averageCpuUsage: Double?
+    /** Deprecated, please use ProcessStatistics instead */
     public var cpuHistory: [TupleDoubleDouble]?
     public var processStatistics: ProcessRunMetricsProcessStatistics?
     public var currentThrottle: Int?

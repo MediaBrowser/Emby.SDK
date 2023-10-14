@@ -8,19 +8,31 @@
 import Foundation
 
 
+/** Class UserItemDataDto   */
 
 public struct UserItemDataDto: Codable {
 
+    /** The rating. */
     public var rating: Double?
+    /** The played percentage. */
     public var playedPercentage: Double?
+    /** The unplayed item count. */
     public var unplayedItemCount: Int?
+    /** The playback position ticks. */
     public var playbackPositionTicks: Int64?
+    /** The play count. */
     public var playCount: Int?
+    /** A value indicating whether this instance is favorite. */
     public var isFavorite: Bool?
+    /** The last played date. */
     public var lastPlayedDate: Date?
+    /** A value indicating whether this &#x60;MediaBrowser.Model.Dto.UserItemDataDto&#x60; is played. */
     public var played: Bool?
+    /** The key. */
     public var key: String?
+    /** The item identifier. */
     public var itemId: String?
+    /** Used only by our Windows app. Not used by Emby Server. */
     public var serverId: String?
 
     public init(rating: Double? = nil, playedPercentage: Double? = nil, unplayedItemCount: Int? = nil, playbackPositionTicks: Int64? = nil, playCount: Int? = nil, isFavorite: Bool? = nil, lastPlayedDate: Date? = nil, played: Bool? = nil, key: String? = nil, itemId: String? = nil, serverId: String? = nil) {

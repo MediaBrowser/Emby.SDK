@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyWebApiConfigurationPageInfo;
+import io.swagger.client.model.ApiConfigurationPageInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -221,23 +221,23 @@ public class WebAppServiceApi {
     /**
      * 
      * Requires authentication as user
-     * @return List&lt;EmbyWebApiConfigurationPageInfo&gt;
+     * @return List&lt;ApiConfigurationPageInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EmbyWebApiConfigurationPageInfo> getWebConfigurationpages() throws ApiException {
-        ApiResponse<List<EmbyWebApiConfigurationPageInfo>> resp = getWebConfigurationpagesWithHttpInfo();
+    public List<ApiConfigurationPageInfo> getWebConfigurationpages() throws ApiException {
+        ApiResponse<List<ApiConfigurationPageInfo>> resp = getWebConfigurationpagesWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * 
      * Requires authentication as user
-     * @return ApiResponse&lt;List&lt;EmbyWebApiConfigurationPageInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;ApiConfigurationPageInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EmbyWebApiConfigurationPageInfo>> getWebConfigurationpagesWithHttpInfo() throws ApiException {
+    public ApiResponse<List<ApiConfigurationPageInfo>> getWebConfigurationpagesWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getWebConfigurationpagesValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<EmbyWebApiConfigurationPageInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ApiConfigurationPageInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -248,7 +248,7 @@ public class WebAppServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getWebConfigurationpagesAsync(final ApiCallback<List<EmbyWebApiConfigurationPageInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getWebConfigurationpagesAsync(final ApiCallback<List<ApiConfigurationPageInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -270,7 +270,7 @@ public class WebAppServiceApi {
         }
 
         com.squareup.okhttp.Call call = getWebConfigurationpagesValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<EmbyWebApiConfigurationPageInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ApiConfigurationPageInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

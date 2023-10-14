@@ -15,11 +15,12 @@ import SortOrder from './SortOrder';
 /**
 * The DisplayPreferences model module.
 * @module model/DisplayPreferences
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class DisplayPreferences {
     /**
     * Constructs a new <code>DisplayPreferences</code>.
+    * Defines the display preferences for any item that supports them (usually Folders)  
     * @alias module:model/DisplayPreferences
     * @class
     */
@@ -62,14 +63,17 @@ export default class DisplayPreferences {
     }
 
     /**
+    * The user id.
     * @member {String} Id
     */
     'Id' = undefined;
     /**
+    * The sort by.
     * @member {String} SortBy
     */
     'SortBy' = undefined;
     /**
+    * The custom prefs.
     * @member {Object.<String, String>} CustomPrefs
     */
     'CustomPrefs' = undefined;
@@ -78,6 +82,7 @@ export default class DisplayPreferences {
     */
     'SortOrder' = undefined;
     /**
+    * The client
     * @member {String} Client
     */
     'Client' = undefined;

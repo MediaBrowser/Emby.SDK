@@ -1165,7 +1165,7 @@ open class MusicGenresServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Items by name
-    url: https://github.com/MediaBrowser/Emby/wiki/Items-by-name
+    url: https://betadev.emby.media/doc/restapi/Items-by-Name.html
 }
      - parameter artistType: (query) Artist or AlbumArtist (optional)
      - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
@@ -1922,7 +1922,7 @@ open class MusicGenresServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Items by name
-    url: https://github.com/MediaBrowser/Emby/wiki/Items-by-name
+    url: https://betadev.emby.media/doc/restapi/Items-by-Name.html
 }
      - parameter name: (path) The genre name 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)

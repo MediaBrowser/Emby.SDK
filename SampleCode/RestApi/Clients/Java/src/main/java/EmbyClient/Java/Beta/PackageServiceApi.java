@@ -19,9 +19,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.UpdatesPackageInfo;
-import io.swagger.client.model.UpdatesPackageVersionClass;
-import io.swagger.client.model.UpdatesPackageVersionInfo;
+import io.swagger.client.model.PackageInfo;
+import io.swagger.client.model.PackageVersionClass;
+import io.swagger.client.model.PackageVersionInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -248,11 +248,11 @@ public class PackageServiceApi {
      * @param targetSystems Optional. Filter by target system type. Allows multiple, comma delimited. (optional)
      * @param isPremium Optional. Filter by premium status (optional)
      * @param isAdult Optional. Filter by package that contain adult content. (optional)
-     * @return List&lt;UpdatesPackageInfo&gt;
+     * @return List&lt;PackageInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<UpdatesPackageInfo> getPackages(String packageType, String targetSystems, Boolean isPremium, Boolean isAdult) throws ApiException {
-        ApiResponse<List<UpdatesPackageInfo>> resp = getPackagesWithHttpInfo(packageType, targetSystems, isPremium, isAdult);
+    public List<PackageInfo> getPackages(String packageType, String targetSystems, Boolean isPremium, Boolean isAdult) throws ApiException {
+        ApiResponse<List<PackageInfo>> resp = getPackagesWithHttpInfo(packageType, targetSystems, isPremium, isAdult);
         return resp.getData();
     }
 
@@ -263,12 +263,12 @@ public class PackageServiceApi {
      * @param targetSystems Optional. Filter by target system type. Allows multiple, comma delimited. (optional)
      * @param isPremium Optional. Filter by premium status (optional)
      * @param isAdult Optional. Filter by package that contain adult content. (optional)
-     * @return ApiResponse&lt;List&lt;UpdatesPackageInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;PackageInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<UpdatesPackageInfo>> getPackagesWithHttpInfo(String packageType, String targetSystems, Boolean isPremium, Boolean isAdult) throws ApiException {
+    public ApiResponse<List<PackageInfo>> getPackagesWithHttpInfo(String packageType, String targetSystems, Boolean isPremium, Boolean isAdult) throws ApiException {
         com.squareup.okhttp.Call call = getPackagesValidateBeforeCall(packageType, targetSystems, isPremium, isAdult, null, null);
-        Type localVarReturnType = new TypeToken<List<UpdatesPackageInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<PackageInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -283,7 +283,7 @@ public class PackageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPackagesAsync(String packageType, String targetSystems, Boolean isPremium, Boolean isAdult, final ApiCallback<List<UpdatesPackageInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPackagesAsync(String packageType, String targetSystems, Boolean isPremium, Boolean isAdult, final ApiCallback<List<PackageInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -305,7 +305,7 @@ public class PackageServiceApi {
         }
 
         com.squareup.okhttp.Call call = getPackagesValidateBeforeCall(packageType, targetSystems, isPremium, isAdult, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<UpdatesPackageInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<PackageInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -383,11 +383,11 @@ public class PackageServiceApi {
      * Requires authentication as user
      * @param name The name of the package (required)
      * @param assemblyGuid The guid of the associated assembly (optional)
-     * @return UpdatesPackageInfo
+     * @return PackageInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public UpdatesPackageInfo getPackagesByName(String name, String assemblyGuid) throws ApiException {
-        ApiResponse<UpdatesPackageInfo> resp = getPackagesByNameWithHttpInfo(name, assemblyGuid);
+    public PackageInfo getPackagesByName(String name, String assemblyGuid) throws ApiException {
+        ApiResponse<PackageInfo> resp = getPackagesByNameWithHttpInfo(name, assemblyGuid);
         return resp.getData();
     }
 
@@ -396,12 +396,12 @@ public class PackageServiceApi {
      * Requires authentication as user
      * @param name The name of the package (required)
      * @param assemblyGuid The guid of the associated assembly (optional)
-     * @return ApiResponse&lt;UpdatesPackageInfo&gt;
+     * @return ApiResponse&lt;PackageInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<UpdatesPackageInfo> getPackagesByNameWithHttpInfo(String name, String assemblyGuid) throws ApiException {
+    public ApiResponse<PackageInfo> getPackagesByNameWithHttpInfo(String name, String assemblyGuid) throws ApiException {
         com.squareup.okhttp.Call call = getPackagesByNameValidateBeforeCall(name, assemblyGuid, null, null);
-        Type localVarReturnType = new TypeToken<UpdatesPackageInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<PackageInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -414,7 +414,7 @@ public class PackageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPackagesByNameAsync(String name, String assemblyGuid, final ApiCallback<UpdatesPackageInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPackagesByNameAsync(String name, String assemblyGuid, final ApiCallback<PackageInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -436,7 +436,7 @@ public class PackageServiceApi {
         }
 
         com.squareup.okhttp.Call call = getPackagesByNameValidateBeforeCall(name, assemblyGuid, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<UpdatesPackageInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<PackageInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -511,11 +511,11 @@ public class PackageServiceApi {
      * Gets available package updates for currently installed packages
      * Requires authentication as administrator
      * @param packageType Package type filter (System/UserInstalled) (required)
-     * @return List&lt;UpdatesPackageVersionInfo&gt;
+     * @return List&lt;PackageVersionInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<UpdatesPackageVersionInfo> getPackagesUpdates(String packageType) throws ApiException {
-        ApiResponse<List<UpdatesPackageVersionInfo>> resp = getPackagesUpdatesWithHttpInfo(packageType);
+    public List<PackageVersionInfo> getPackagesUpdates(String packageType) throws ApiException {
+        ApiResponse<List<PackageVersionInfo>> resp = getPackagesUpdatesWithHttpInfo(packageType);
         return resp.getData();
     }
 
@@ -523,12 +523,12 @@ public class PackageServiceApi {
      * Gets available package updates for currently installed packages
      * Requires authentication as administrator
      * @param packageType Package type filter (System/UserInstalled) (required)
-     * @return ApiResponse&lt;List&lt;UpdatesPackageVersionInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;PackageVersionInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<UpdatesPackageVersionInfo>> getPackagesUpdatesWithHttpInfo(String packageType) throws ApiException {
+    public ApiResponse<List<PackageVersionInfo>> getPackagesUpdatesWithHttpInfo(String packageType) throws ApiException {
         com.squareup.okhttp.Call call = getPackagesUpdatesValidateBeforeCall(packageType, null, null);
-        Type localVarReturnType = new TypeToken<List<UpdatesPackageVersionInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<PackageVersionInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -540,7 +540,7 @@ public class PackageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPackagesUpdatesAsync(String packageType, final ApiCallback<List<UpdatesPackageVersionInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPackagesUpdatesAsync(String packageType, final ApiCallback<List<PackageVersionInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -562,7 +562,7 @@ public class PackageServiceApi {
         }
 
         com.squareup.okhttp.Call call = getPackagesUpdatesValidateBeforeCall(packageType, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<UpdatesPackageVersionInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<PackageVersionInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -577,7 +577,7 @@ public class PackageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postPackagesInstalledByNameCall(String name, String assemblyGuid, String version, UpdatesPackageVersionClass updateClass, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postPackagesInstalledByNameCall(String name, String assemblyGuid, String version, PackageVersionClass updateClass, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -626,7 +626,7 @@ public class PackageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postPackagesInstalledByNameValidateBeforeCall(String name, String assemblyGuid, String version, UpdatesPackageVersionClass updateClass, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postPackagesInstalledByNameValidateBeforeCall(String name, String assemblyGuid, String version, PackageVersionClass updateClass, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling postPackagesInstalledByName(Async)");
@@ -650,7 +650,7 @@ public class PackageServiceApi {
      * @param updateClass Optional update class (Dev, Beta, Release). Defaults to Release. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postPackagesInstalledByName(String name, String assemblyGuid, String version, UpdatesPackageVersionClass updateClass) throws ApiException {
+    public void postPackagesInstalledByName(String name, String assemblyGuid, String version, PackageVersionClass updateClass) throws ApiException {
         postPackagesInstalledByNameWithHttpInfo(name, assemblyGuid, version, updateClass);
     }
 
@@ -664,7 +664,7 @@ public class PackageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postPackagesInstalledByNameWithHttpInfo(String name, String assemblyGuid, String version, UpdatesPackageVersionClass updateClass) throws ApiException {
+    public ApiResponse<Void> postPackagesInstalledByNameWithHttpInfo(String name, String assemblyGuid, String version, PackageVersionClass updateClass) throws ApiException {
         com.squareup.okhttp.Call call = postPackagesInstalledByNameValidateBeforeCall(name, assemblyGuid, version, updateClass, null, null);
         return apiClient.execute(call);
     }
@@ -680,7 +680,7 @@ public class PackageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postPackagesInstalledByNameAsync(String name, String assemblyGuid, String version, UpdatesPackageVersionClass updateClass, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postPackagesInstalledByNameAsync(String name, String assemblyGuid, String version, PackageVersionClass updateClass, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

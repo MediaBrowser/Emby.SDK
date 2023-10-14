@@ -22,17 +22,17 @@ import java.io.IOException;
 import io.swagger.client.model.AuthenticateUser;
 import io.swagger.client.model.AuthenticateUserByName;
 import io.swagger.client.model.AuthenticationAuthenticationResult;
-import io.swagger.client.model.ConfigurationUserConfiguration;
 import io.swagger.client.model.CreateUserByName;
 import io.swagger.client.model.ForgotPassword;
 import io.swagger.client.model.ForgotPasswordPin;
+import io.swagger.client.model.ForgotPasswordResult;
 import io.swagger.client.model.NameIdPair;
+import io.swagger.client.model.PinRedeemResult;
 import io.swagger.client.model.QueryResultUserDto;
 import io.swagger.client.model.UpdateUserPassword;
+import io.swagger.client.model.UserConfiguration;
 import io.swagger.client.model.UserDto;
-import io.swagger.client.model.UsersForgotPasswordResult;
-import io.swagger.client.model.UsersPinRedeemResult;
-import io.swagger.client.model.UsersUserPolicy;
+import io.swagger.client.model.UserPolicy;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -724,7 +724,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersPublicCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -785,7 +785,7 @@ public class UserServiceApi {
      * @return List&lt;UserDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public List<UserDto> getUsersPublic() throws ApiException {
         ApiResponse<List<UserDto>> resp = getUsersPublicWithHttpInfo();
@@ -798,7 +798,7 @@ public class UserServiceApi {
      * @return ApiResponse&lt;List&lt;UserDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public ApiResponse<List<UserDto>> getUsersPublicWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getUsersPublicValidateBeforeCall(null, null);
@@ -813,7 +813,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersPublicAsync(final ApiCallback<List<UserDto>> callback) throws ApiException {
 
@@ -1002,7 +1002,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersAuthenticatebynameCall(AuthenticateUserByName body, String xEmbyAuthorization, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
@@ -1075,7 +1075,7 @@ public class UserServiceApi {
      * @return AuthenticationAuthenticationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public AuthenticationAuthenticationResult postUsersAuthenticatebyname(AuthenticateUserByName body, String xEmbyAuthorization) throws ApiException {
         ApiResponse<AuthenticationAuthenticationResult> resp = postUsersAuthenticatebynameWithHttpInfo(body, xEmbyAuthorization);
@@ -1090,7 +1090,7 @@ public class UserServiceApi {
      * @return ApiResponse&lt;AuthenticationAuthenticationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public ApiResponse<AuthenticationAuthenticationResult> postUsersAuthenticatebynameWithHttpInfo(AuthenticateUserByName body, String xEmbyAuthorization) throws ApiException {
         com.squareup.okhttp.Call call = postUsersAuthenticatebynameValidateBeforeCall(body, xEmbyAuthorization, null, null);
@@ -1107,7 +1107,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersAuthenticatebynameAsync(AuthenticateUserByName body, String xEmbyAuthorization, final ApiCallback<AuthenticationAuthenticationResult> callback) throws ApiException {
 
@@ -1273,7 +1273,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersByIdAuthenticateCall(AuthenticateUser body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
@@ -1345,7 +1345,7 @@ public class UserServiceApi {
      * @return AuthenticationAuthenticationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public AuthenticationAuthenticationResult postUsersByIdAuthenticate(AuthenticateUser body, String id) throws ApiException {
         ApiResponse<AuthenticationAuthenticationResult> resp = postUsersByIdAuthenticateWithHttpInfo(body, id);
@@ -1360,7 +1360,7 @@ public class UserServiceApi {
      * @return ApiResponse&lt;AuthenticationAuthenticationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public ApiResponse<AuthenticationAuthenticationResult> postUsersByIdAuthenticateWithHttpInfo(AuthenticateUser body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByIdAuthenticateValidateBeforeCall(body, id, null, null);
@@ -1377,7 +1377,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersByIdAuthenticateAsync(AuthenticateUser body, String id, final ApiCallback<AuthenticationAuthenticationResult> callback) throws ApiException {
 
@@ -1414,7 +1414,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdConfigurationCall(ConfigurationUserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdConfigurationCall(UserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1457,7 +1457,7 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdConfigurationValidateBeforeCall(ConfigurationUserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByIdConfigurationValidateBeforeCall(UserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdConfiguration(Async)");
@@ -1483,7 +1483,7 @@ public class UserServiceApi {
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByIdConfiguration(ConfigurationUserConfiguration body, String id) throws ApiException {
+    public void postUsersByIdConfiguration(UserConfiguration body, String id) throws ApiException {
         postUsersByIdConfigurationWithHttpInfo(body, id);
     }
 
@@ -1495,7 +1495,7 @@ public class UserServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByIdConfigurationWithHttpInfo(ConfigurationUserConfiguration body, String id) throws ApiException {
+    public ApiResponse<Void> postUsersByIdConfigurationWithHttpInfo(UserConfiguration body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByIdConfigurationValidateBeforeCall(body, id, null, null);
         return apiClient.execute(call);
     }
@@ -1509,7 +1509,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdConfigurationAsync(ConfigurationUserConfiguration body, String id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdConfigurationAsync(UserConfiguration body, String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1922,7 +1922,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdPolicyCall(UsersUserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdPolicyCall(UserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1965,7 +1965,7 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdPolicyValidateBeforeCall(UsersUserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByIdPolicyValidateBeforeCall(UserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdPolicy(Async)");
@@ -1991,7 +1991,7 @@ public class UserServiceApi {
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByIdPolicy(UsersUserPolicy body, String id) throws ApiException {
+    public void postUsersByIdPolicy(UserPolicy body, String id) throws ApiException {
         postUsersByIdPolicyWithHttpInfo(body, id);
     }
 
@@ -2003,7 +2003,7 @@ public class UserServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByIdPolicyWithHttpInfo(UsersUserPolicy body, String id) throws ApiException {
+    public ApiResponse<Void> postUsersByIdPolicyWithHttpInfo(UserPolicy body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByIdPolicyValidateBeforeCall(body, id, null, null);
         return apiClient.execute(call);
     }
@@ -2017,7 +2017,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdPolicyAsync(UsersUserPolicy body, String id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdPolicyAsync(UserPolicy body, String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2379,11 +2379,11 @@ public class UserServiceApi {
      * Initiates the forgot password process for a local user
      * Requires authentication as user
      * @param body ForgotPassword (required)
-     * @return UsersForgotPasswordResult
+     * @return ForgotPasswordResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public UsersForgotPasswordResult postUsersForgotpassword(ForgotPassword body) throws ApiException {
-        ApiResponse<UsersForgotPasswordResult> resp = postUsersForgotpasswordWithHttpInfo(body);
+    public ForgotPasswordResult postUsersForgotpassword(ForgotPassword body) throws ApiException {
+        ApiResponse<ForgotPasswordResult> resp = postUsersForgotpasswordWithHttpInfo(body);
         return resp.getData();
     }
 
@@ -2391,12 +2391,12 @@ public class UserServiceApi {
      * Initiates the forgot password process for a local user
      * Requires authentication as user
      * @param body ForgotPassword (required)
-     * @return ApiResponse&lt;UsersForgotPasswordResult&gt;
+     * @return ApiResponse&lt;ForgotPasswordResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<UsersForgotPasswordResult> postUsersForgotpasswordWithHttpInfo(ForgotPassword body) throws ApiException {
+    public ApiResponse<ForgotPasswordResult> postUsersForgotpasswordWithHttpInfo(ForgotPassword body) throws ApiException {
         com.squareup.okhttp.Call call = postUsersForgotpasswordValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<UsersForgotPasswordResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<ForgotPasswordResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -2408,7 +2408,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersForgotpasswordAsync(ForgotPassword body, final ApiCallback<UsersForgotPasswordResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersForgotpasswordAsync(ForgotPassword body, final ApiCallback<ForgotPasswordResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2430,7 +2430,7 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersForgotpasswordValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<UsersForgotPasswordResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<ForgotPasswordResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -2503,11 +2503,11 @@ public class UserServiceApi {
      * Redeems a forgot password pin
      * Requires authentication as user
      * @param body ForgotPasswordPin (required)
-     * @return UsersPinRedeemResult
+     * @return PinRedeemResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public UsersPinRedeemResult postUsersForgotpasswordPin(ForgotPasswordPin body) throws ApiException {
-        ApiResponse<UsersPinRedeemResult> resp = postUsersForgotpasswordPinWithHttpInfo(body);
+    public PinRedeemResult postUsersForgotpasswordPin(ForgotPasswordPin body) throws ApiException {
+        ApiResponse<PinRedeemResult> resp = postUsersForgotpasswordPinWithHttpInfo(body);
         return resp.getData();
     }
 
@@ -2515,12 +2515,12 @@ public class UserServiceApi {
      * Redeems a forgot password pin
      * Requires authentication as user
      * @param body ForgotPasswordPin (required)
-     * @return ApiResponse&lt;UsersPinRedeemResult&gt;
+     * @return ApiResponse&lt;PinRedeemResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<UsersPinRedeemResult> postUsersForgotpasswordPinWithHttpInfo(ForgotPasswordPin body) throws ApiException {
+    public ApiResponse<PinRedeemResult> postUsersForgotpasswordPinWithHttpInfo(ForgotPasswordPin body) throws ApiException {
         com.squareup.okhttp.Call call = postUsersForgotpasswordPinValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<UsersPinRedeemResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<PinRedeemResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -2532,7 +2532,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersForgotpasswordPinAsync(ForgotPasswordPin body, final ApiCallback<UsersPinRedeemResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersForgotpasswordPinAsync(ForgotPasswordPin body, final ApiCallback<PinRedeemResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2554,7 +2554,7 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersForgotpasswordPinValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<UsersPinRedeemResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<PinRedeemResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -22,11 +22,11 @@ class MediaSourceInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'protocol': 'MediaInfoMediaProtocol',
+        'protocol': 'MediaProtocol',
         'id': 'str',
         'path': 'str',
         'encoder_path': 'str',
-        'encoder_protocol': 'MediaInfoMediaProtocol',
+        'encoder_protocol': 'MediaProtocol',
         'type': 'MediaSourceType',
         'container': 'str',
         'size': 'int',
@@ -50,7 +50,7 @@ class MediaSourceInfo(object):
         'media_streams': 'list[MediaStream]',
         'formats': 'list[str]',
         'bitrate': 'int',
-        'timestamp': 'MediaInfoTransportStreamTimestamp',
+        'timestamp': 'TransportStreamTimestamp',
         'required_http_headers': 'dict(str, str)',
         'direct_stream_url': 'str',
         'transcoding_url': 'str',
@@ -237,7 +237,7 @@ class MediaSourceInfo(object):
 
 
         :return: The protocol of this MediaSourceInfo.  # noqa: E501
-        :rtype: MediaInfoMediaProtocol
+        :rtype: MediaProtocol
         """
         return self._protocol
 
@@ -247,7 +247,7 @@ class MediaSourceInfo(object):
 
 
         :param protocol: The protocol of this MediaSourceInfo.  # noqa: E501
-        :type: MediaInfoMediaProtocol
+        :type: MediaProtocol
         """
 
         self._protocol = protocol
@@ -321,7 +321,7 @@ class MediaSourceInfo(object):
 
 
         :return: The encoder_protocol of this MediaSourceInfo.  # noqa: E501
-        :rtype: MediaInfoMediaProtocol
+        :rtype: MediaProtocol
         """
         return self._encoder_protocol
 
@@ -331,7 +331,7 @@ class MediaSourceInfo(object):
 
 
         :param encoder_protocol: The encoder_protocol of this MediaSourceInfo.  # noqa: E501
-        :type: MediaInfoMediaProtocol
+        :type: MediaProtocol
         """
 
         self._encoder_protocol = encoder_protocol
@@ -445,6 +445,7 @@ class MediaSourceInfo(object):
     def is_remote(self):
         """Gets the is_remote of this MediaSourceInfo.  # noqa: E501
 
+        Differentiate internet url vs local network  # noqa: E501
 
         :return: The is_remote of this MediaSourceInfo.  # noqa: E501
         :rtype: bool
@@ -455,6 +456,7 @@ class MediaSourceInfo(object):
     def is_remote(self, is_remote):
         """Sets the is_remote of this MediaSourceInfo.
 
+        Differentiate internet url vs local network  # noqa: E501
 
         :param is_remote: The is_remote of this MediaSourceInfo.  # noqa: E501
         :type: bool
@@ -825,7 +827,7 @@ class MediaSourceInfo(object):
 
 
         :return: The timestamp of this MediaSourceInfo.  # noqa: E501
-        :rtype: MediaInfoTransportStreamTimestamp
+        :rtype: TransportStreamTimestamp
         """
         return self._timestamp
 
@@ -835,7 +837,7 @@ class MediaSourceInfo(object):
 
 
         :param timestamp: The timestamp of this MediaSourceInfo.  # noqa: E501
-        :type: MediaInfoTransportStreamTimestamp
+        :type: TransportStreamTimestamp
         """
 
         self._timestamp = timestamp
@@ -1033,6 +1035,7 @@ class MediaSourceInfo(object):
     def item_id(self):
         """Gets the item_id of this MediaSourceInfo.  # noqa: E501
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :return: The item_id of this MediaSourceInfo.  # noqa: E501
         :rtype: str
@@ -1043,6 +1046,7 @@ class MediaSourceInfo(object):
     def item_id(self, item_id):
         """Sets the item_id of this MediaSourceInfo.
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :param item_id: The item_id of this MediaSourceInfo.  # noqa: E501
         :type: str
@@ -1054,6 +1058,7 @@ class MediaSourceInfo(object):
     def server_id(self):
         """Gets the server_id of this MediaSourceInfo.  # noqa: E501
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :return: The server_id of this MediaSourceInfo.  # noqa: E501
         :rtype: str
@@ -1064,6 +1069,7 @@ class MediaSourceInfo(object):
     def server_id(self, server_id):
         """Sets the server_id of this MediaSourceInfo.
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :param server_id: The server_id of this MediaSourceInfo.  # noqa: E501
         :type: str

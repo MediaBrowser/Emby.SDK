@@ -796,7 +796,7 @@ public class TvShowsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets seasons for a tv series Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets seasons for a tv series Documentation</a>
      */
     public com.squareup.okhttp.Call getShowsByIdSeasonsCall(String userId, String id, String fields, Boolean isSpecialSeason, Boolean isMissing, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -894,7 +894,7 @@ public class TvShowsServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets seasons for a tv series Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets seasons for a tv series Documentation</a>
      */
     public QueryResultBaseItemDto getShowsByIdSeasons(String userId, String id, String fields, Boolean isSpecialSeason, Boolean isMissing, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getShowsByIdSeasonsWithHttpInfo(userId, id, fields, isSpecialSeason, isMissing, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -917,7 +917,7 @@ public class TvShowsServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets seasons for a tv series Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets seasons for a tv series Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getShowsByIdSeasonsWithHttpInfo(String userId, String id, String fields, Boolean isSpecialSeason, Boolean isMissing, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getShowsByIdSeasonsValidateBeforeCall(userId, id, fields, isSpecialSeason, isMissing, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -942,7 +942,7 @@ public class TvShowsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets seasons for a tv series Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets seasons for a tv series Documentation</a>
      */
     public com.squareup.okhttp.Call getShowsByIdSeasonsAsync(String userId, String id, String fields, Boolean isSpecialSeason, Boolean isMissing, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -987,7 +987,7 @@ public class TvShowsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public com.squareup.okhttp.Call getShowsNextupCall(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1082,7 +1082,7 @@ public class TvShowsServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public QueryResultBaseItemDto getShowsNextup(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getShowsNextupWithHttpInfo(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -1105,7 +1105,7 @@ public class TvShowsServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getShowsNextupWithHttpInfo(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getShowsNextupValidateBeforeCall(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -1130,7 +1130,7 @@ public class TvShowsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public com.squareup.okhttp.Call getShowsNextupAsync(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -1174,7 +1174,7 @@ public class TvShowsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of upcoming episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of upcoming episodes Documentation</a>
      */
     public com.squareup.okhttp.Call getShowsUpcomingCall(String userId, Integer startIndex, Integer limit, String fields, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1266,7 +1266,7 @@ public class TvShowsServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of upcoming episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of upcoming episodes Documentation</a>
      */
     public QueryResultBaseItemDto getShowsUpcoming(String userId, Integer startIndex, Integer limit, String fields, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getShowsUpcomingWithHttpInfo(userId, startIndex, limit, fields, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -1288,7 +1288,7 @@ public class TvShowsServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of upcoming episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of upcoming episodes Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getShowsUpcomingWithHttpInfo(String userId, Integer startIndex, Integer limit, String fields, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getShowsUpcomingValidateBeforeCall(userId, startIndex, limit, fields, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -1312,7 +1312,7 @@ public class TvShowsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of upcoming episodes Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a list of upcoming episodes Documentation</a>
      */
     public com.squareup.okhttp.Call getShowsUpcomingAsync(String userId, Integer startIndex, Integer limit, String fields, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 

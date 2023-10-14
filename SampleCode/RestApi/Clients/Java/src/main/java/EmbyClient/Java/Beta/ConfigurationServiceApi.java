@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.ConfigurationServerConfiguration;
+import io.swagger.client.model.ServerConfiguration;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -109,23 +109,23 @@ public class ConfigurationServiceApi {
     /**
      * Gets application configuration
      * Requires authentication as user
-     * @return ConfigurationServerConfiguration
+     * @return ServerConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ConfigurationServerConfiguration getSystemConfiguration() throws ApiException {
-        ApiResponse<ConfigurationServerConfiguration> resp = getSystemConfigurationWithHttpInfo();
+    public ServerConfiguration getSystemConfiguration() throws ApiException {
+        ApiResponse<ServerConfiguration> resp = getSystemConfigurationWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets application configuration
      * Requires authentication as user
-     * @return ApiResponse&lt;ConfigurationServerConfiguration&gt;
+     * @return ApiResponse&lt;ServerConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<ConfigurationServerConfiguration> getSystemConfigurationWithHttpInfo() throws ApiException {
+    public ApiResponse<ServerConfiguration> getSystemConfigurationWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getSystemConfigurationValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<ConfigurationServerConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<ServerConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -136,7 +136,7 @@ public class ConfigurationServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSystemConfigurationAsync(final ApiCallback<ConfigurationServerConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSystemConfigurationAsync(final ApiCallback<ServerConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -158,7 +158,7 @@ public class ConfigurationServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSystemConfigurationValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<ConfigurationServerConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<ServerConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -291,7 +291,7 @@ public class ConfigurationServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postSystemConfigurationCall(ConfigurationServerConfiguration body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postSystemConfigurationCall(ServerConfiguration body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -333,7 +333,7 @@ public class ConfigurationServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postSystemConfigurationValidateBeforeCall(ConfigurationServerConfiguration body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postSystemConfigurationValidateBeforeCall(ServerConfiguration body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postSystemConfiguration(Async)");
@@ -354,7 +354,7 @@ public class ConfigurationServiceApi {
      * @param body ServerConfiguration:  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postSystemConfiguration(ConfigurationServerConfiguration body) throws ApiException {
+    public void postSystemConfiguration(ServerConfiguration body) throws ApiException {
         postSystemConfigurationWithHttpInfo(body);
     }
 
@@ -365,7 +365,7 @@ public class ConfigurationServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postSystemConfigurationWithHttpInfo(ConfigurationServerConfiguration body) throws ApiException {
+    public ApiResponse<Void> postSystemConfigurationWithHttpInfo(ServerConfiguration body) throws ApiException {
         com.squareup.okhttp.Call call = postSystemConfigurationValidateBeforeCall(body, null, null);
         return apiClient.execute(call);
     }
@@ -378,7 +378,7 @@ public class ConfigurationServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postSystemConfigurationAsync(ConfigurationServerConfiguration body, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postSystemConfigurationAsync(ServerConfiguration body, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

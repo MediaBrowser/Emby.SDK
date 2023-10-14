@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.DlnaSubtitleDeliveryMethod;
+import io.swagger.client.model.SubtitleDeliveryMethod;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -230,7 +230,7 @@ public class VideoHlsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getVideosByIdLiveM3u8Call(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, DlnaSubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getVideosByIdLiveM3u8Call(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -329,7 +329,7 @@ public class VideoHlsServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getVideosByIdLiveM3u8ValidateBeforeCall(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, DlnaSubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getVideosByIdLiveM3u8ValidateBeforeCall(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getVideosByIdLiveM3u8(Async)");
@@ -382,7 +382,7 @@ public class VideoHlsServiceApi {
      * @param videoStreamIndex Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getVideosByIdLiveM3u8(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, DlnaSubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex) throws ApiException {
+    public void getVideosByIdLiveM3u8(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex) throws ApiException {
         getVideosByIdLiveM3u8WithHttpInfo(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
     }
 
@@ -421,7 +421,7 @@ public class VideoHlsServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getVideosByIdLiveM3u8WithHttpInfo(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, DlnaSubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex) throws ApiException {
+    public ApiResponse<Void> getVideosByIdLiveM3u8WithHttpInfo(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex) throws ApiException {
         com.squareup.okhttp.Call call = getVideosByIdLiveM3u8ValidateBeforeCall(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, null, null);
         return apiClient.execute(call);
     }
@@ -462,7 +462,7 @@ public class VideoHlsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getVideosByIdLiveM3u8Async(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, DlnaSubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getVideosByIdLiveM3u8Async(String id, String container, String deviceProfileId, String deviceId, String audioCodec, Boolean enableAutoStreamCopy, Integer audioSampleRate, Integer audioBitRate, Integer audioChannels, Integer maxAudioChannels, Boolean _static, String profile, String level, Float framerate, Float maxFramerate, Boolean copyTimestamps, Long startTimeTicks, Integer width, Integer height, Integer maxWidth, Integer maxHeight, Integer videoBitRate, Integer subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, Integer maxRefFrames, Integer maxVideoBitDepth, String videoCodec, Integer audioStreamIndex, Integer videoStreamIndex, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

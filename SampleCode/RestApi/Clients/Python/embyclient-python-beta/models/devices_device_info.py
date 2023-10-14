@@ -111,6 +111,7 @@ class DevicesDeviceInfo(object):
     def id(self):
         """Gets the id of this DevicesDeviceInfo.  # noqa: E501
 
+        The identifier.  # noqa: E501
 
         :return: The id of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -121,6 +122,7 @@ class DevicesDeviceInfo(object):
     def id(self, id):
         """Sets the id of this DevicesDeviceInfo.
 
+        The identifier.  # noqa: E501
 
         :param id: The id of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -174,6 +176,7 @@ class DevicesDeviceInfo(object):
     def last_user_name(self):
         """Gets the last_user_name of this DevicesDeviceInfo.  # noqa: E501
 
+        The last name of the user.  # noqa: E501
 
         :return: The last_user_name of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -184,6 +187,7 @@ class DevicesDeviceInfo(object):
     def last_user_name(self, last_user_name):
         """Sets the last_user_name of this DevicesDeviceInfo.
 
+        The last name of the user.  # noqa: E501
 
         :param last_user_name: The last_user_name of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -195,6 +199,7 @@ class DevicesDeviceInfo(object):
     def app_name(self):
         """Gets the app_name of this DevicesDeviceInfo.  # noqa: E501
 
+        The name of the application.  # noqa: E501
 
         :return: The app_name of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -205,6 +210,7 @@ class DevicesDeviceInfo(object):
     def app_name(self, app_name):
         """Sets the app_name of this DevicesDeviceInfo.
 
+        The name of the application.  # noqa: E501
 
         :param app_name: The app_name of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -216,6 +222,7 @@ class DevicesDeviceInfo(object):
     def app_version(self):
         """Gets the app_version of this DevicesDeviceInfo.  # noqa: E501
 
+        The application version.  # noqa: E501
 
         :return: The app_version of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -226,6 +233,7 @@ class DevicesDeviceInfo(object):
     def app_version(self, app_version):
         """Sets the app_version of this DevicesDeviceInfo.
 
+        The application version.  # noqa: E501
 
         :param app_version: The app_version of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -237,6 +245,7 @@ class DevicesDeviceInfo(object):
     def last_user_id(self):
         """Gets the last_user_id of this DevicesDeviceInfo.  # noqa: E501
 
+        The last user identifier.  # noqa: E501
 
         :return: The last_user_id of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -247,6 +256,7 @@ class DevicesDeviceInfo(object):
     def last_user_id(self, last_user_id):
         """Sets the last_user_id of this DevicesDeviceInfo.
 
+        The last user identifier.  # noqa: E501
 
         :param last_user_id: The last_user_id of this DevicesDeviceInfo.  # noqa: E501
         :type: str

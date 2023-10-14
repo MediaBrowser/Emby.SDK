@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.EmbyFeaturesFeatureInfo;
+import io.swagger.client.model.FeatureInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +34,7 @@ public class FeatureServiceApiTest {
      */
     @Test
     public void getFeaturesTest() throws Exception {
-        List<EmbyFeaturesFeatureInfo> response = api.getFeatures();
+        List<FeatureInfo> response = api.getFeatures();
 
         // TODO: test validations
     }

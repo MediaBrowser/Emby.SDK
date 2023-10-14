@@ -7,16 +7,17 @@
 package embyclient-rest-go
 
 type MediaSourceInfo struct {
-	Protocol *MediaInfoMediaProtocol `json:"Protocol,omitempty"`
+	Protocol *MediaProtocol `json:"Protocol,omitempty"`
 	Id string `json:"Id,omitempty"`
 	Path string `json:"Path,omitempty"`
 	EncoderPath string `json:"EncoderPath,omitempty"`
-	EncoderProtocol *MediaInfoMediaProtocol `json:"EncoderProtocol,omitempty"`
+	EncoderProtocol *MediaProtocol `json:"EncoderProtocol,omitempty"`
 	Type_ *MediaSourceType `json:"Type,omitempty"`
 	Container string `json:"Container,omitempty"`
 	Size int64 `json:"Size,omitempty"`
 	Name string `json:"Name,omitempty"`
 	SortName string `json:"SortName,omitempty"`
+	// Differentiate internet url vs local network
 	IsRemote bool `json:"IsRemote,omitempty"`
 	RunTimeTicks int64 `json:"RunTimeTicks,omitempty"`
 	ContainerStartTimeTicks int64 `json:"ContainerStartTimeTicks,omitempty"`
@@ -35,7 +36,7 @@ type MediaSourceInfo struct {
 	MediaStreams []MediaStream `json:"MediaStreams,omitempty"`
 	Formats []string `json:"Formats,omitempty"`
 	Bitrate int32 `json:"Bitrate,omitempty"`
-	Timestamp *MediaInfoTransportStreamTimestamp `json:"Timestamp,omitempty"`
+	Timestamp *TransportStreamTimestamp `json:"Timestamp,omitempty"`
 	RequiredHttpHeaders map[string]string `json:"RequiredHttpHeaders,omitempty"`
 	DirectStreamUrl string `json:"DirectStreamUrl,omitempty"`
 	TranscodingUrl string `json:"TranscodingUrl,omitempty"`
@@ -45,6 +46,8 @@ type MediaSourceInfo struct {
 	ReadAtNativeFramerate bool `json:"ReadAtNativeFramerate,omitempty"`
 	DefaultAudioStreamIndex int32 `json:"DefaultAudioStreamIndex,omitempty"`
 	DefaultSubtitleStreamIndex int32 `json:"DefaultSubtitleStreamIndex,omitempty"`
+	// Used only by our Windows app. Not used by Emby Server.
 	ItemId string `json:"ItemId,omitempty"`
+	// Used only by our Windows app. Not used by Emby Server.
 	ServerId string `json:"ServerId,omitempty"`
 }

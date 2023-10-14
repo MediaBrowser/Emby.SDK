@@ -1072,7 +1072,7 @@ open class SuggestionsServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (path)  
      - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)

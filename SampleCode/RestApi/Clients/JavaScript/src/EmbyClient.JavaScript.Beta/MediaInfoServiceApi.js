@@ -10,15 +10,15 @@
  */
 
 import ApiClient from "../ApiClient";
-import MediaInfoLiveStreamRequest from '../model/MediaInfoLiveStreamRequest';
-import MediaInfoLiveStreamResponse from '../model/MediaInfoLiveStreamResponse';
-import MediaInfoPlaybackInfoRequest from '../model/MediaInfoPlaybackInfoRequest';
-import MediaInfoPlaybackInfoResponse from '../model/MediaInfoPlaybackInfoResponse';
+import LiveStreamRequest from '../model/LiveStreamRequest';
+import LiveStreamResponse from '../model/LiveStreamResponse';
+import PlaybackInfoRequest from '../model/PlaybackInfoRequest';
+import PlaybackInfoResponse from '../model/PlaybackInfoResponse';
 
 /**
 * MediaInfoService service.
 * @module EmbyClient.JavaScript.Beta/MediaInfoServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class MediaInfoServiceApi {
 
@@ -37,7 +37,7 @@ export default class MediaInfoServiceApi {
      * Callback function to receive the result of the getItemsByIdPlaybackinfo operation.
      * @callback module:EmbyClient.JavaScript.Beta/MediaInfoServiceApi~getItemsByIdPlaybackinfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/MediaInfoPlaybackInfoResponse} data The data returned by the service call.
+     * @param {module:model/PlaybackInfoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -45,7 +45,7 @@ export default class MediaInfoServiceApi {
      * Gets live playback media info for an item
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/MediaInfoServiceApi~getItemsByIdPlaybackinfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MediaInfoPlaybackInfoResponse}
+     * data is of type: {@link module:model/PlaybackInfoResponse}
      */
     getItemsByIdPlaybackinfo() {
       let postBody = null;
@@ -64,7 +64,7 @@ export default class MediaInfoServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = MediaInfoPlaybackInfoResponse;
+      let returnType = PlaybackInfoResponse;
 
       return this.apiClient.callApi(
         '/Items/{Id}/PlaybackInfo', 'GET',
@@ -112,7 +112,7 @@ export default class MediaInfoServiceApi {
      * Callback function to receive the result of the postItemsByIdPlaybackinfo operation.
      * @callback module:EmbyClient.JavaScript.Beta/MediaInfoServiceApi~postItemsByIdPlaybackinfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/MediaInfoPlaybackInfoResponse} data The data returned by the service call.
+     * @param {module:model/PlaybackInfoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -120,7 +120,7 @@ export default class MediaInfoServiceApi {
      * Gets live playback media info for an item
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/MediaInfoServiceApi~postItemsByIdPlaybackinfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MediaInfoPlaybackInfoResponse}
+     * data is of type: {@link module:model/PlaybackInfoResponse}
      */
     postItemsByIdPlaybackinfo() {
       let postBody = body;
@@ -138,7 +138,7 @@ export default class MediaInfoServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = MediaInfoPlaybackInfoResponse;
+      let returnType = PlaybackInfoResponse;
 
       return this.apiClient.callApi(
         '/Items/{Id}/PlaybackInfo', 'POST',
@@ -224,7 +224,7 @@ export default class MediaInfoServiceApi {
      * Callback function to receive the result of the postLivestreamsOpen operation.
      * @callback module:EmbyClient.JavaScript.Beta/MediaInfoServiceApi~postLivestreamsOpenCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/MediaInfoLiveStreamResponse} data The data returned by the service call.
+     * @param {module:model/LiveStreamResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -232,7 +232,7 @@ export default class MediaInfoServiceApi {
      * Opens a media source
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/MediaInfoServiceApi~postLivestreamsOpenCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MediaInfoLiveStreamResponse}
+     * data is of type: {@link module:model/LiveStreamResponse}
      */
     postLivestreamsOpen() {
       let postBody = body;
@@ -249,7 +249,7 @@ export default class MediaInfoServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = MediaInfoLiveStreamResponse;
+      let returnType = LiveStreamResponse;
 
       return this.apiClient.callApi(
         '/LiveStreams/Open', 'POST',

@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.ProvidersMetadataRefreshMode;
+import io.swagger.client.model.MetadataRefreshMode;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class ItemRefreshServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdRefreshCall(String id, Boolean recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdRefreshCall(String id, Boolean recursive, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -112,7 +112,7 @@ public class ItemRefreshServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsByIdRefreshValidateBeforeCall(String id, Boolean recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsByIdRefreshValidateBeforeCall(String id, Boolean recursive, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling postItemsByIdRefresh(Async)");
@@ -138,7 +138,7 @@ public class ItemRefreshServiceApi {
      * @param replaceAllImages Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postItemsByIdRefresh(String id, Boolean recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages) throws ApiException {
+    public void postItemsByIdRefresh(String id, Boolean recursive, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages) throws ApiException {
         postItemsByIdRefreshWithHttpInfo(id, recursive, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages);
     }
 
@@ -154,7 +154,7 @@ public class ItemRefreshServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postItemsByIdRefreshWithHttpInfo(String id, Boolean recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages) throws ApiException {
+    public ApiResponse<Void> postItemsByIdRefreshWithHttpInfo(String id, Boolean recursive, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages) throws ApiException {
         com.squareup.okhttp.Call call = postItemsByIdRefreshValidateBeforeCall(id, recursive, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages, null, null);
         return apiClient.execute(call);
     }
@@ -172,7 +172,7 @@ public class ItemRefreshServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdRefreshAsync(String id, Boolean recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdRefreshAsync(String id, Boolean recursive, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, Boolean replaceAllMetadata, Boolean replaceAllImages, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

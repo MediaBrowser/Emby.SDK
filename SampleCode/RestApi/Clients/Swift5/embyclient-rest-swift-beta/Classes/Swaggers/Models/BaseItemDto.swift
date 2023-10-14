@@ -8,17 +8,25 @@
 import Foundation
 
 
+/** This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.   */
 
 public struct BaseItemDto: Codable {
 
+    /** The name. */
     public var name: String?
     public var originalTitle: String?
+    /** The server identifier. */
     public var serverId: String?
+    /** The id. */
     public var _id: String?
     public var guid: String?
+    /** The etag. */
     public var etag: String?
+    /** The Prefix. */
     public var _prefix: String?
+    /** The playlist item identifier. */
     public var playlistItemId: String?
+    /** The date created. */
     public var dateCreated: Date?
     public var extraType: String?
     public var sortIndexNumber: Int?
@@ -29,93 +37,159 @@ public struct BaseItemDto: Codable {
     public var presentationUniqueKey: String?
     public var preferredMetadataLanguage: String?
     public var preferredMetadataCountryCode: String?
+    /** A value indicating whether \\[supports synchronize\\]. */
     public var supportsSync: Bool?
     public var canManageAccess: Bool?
     public var canMakePrivate: Bool?
     public var canMakePublic: Bool?
     public var container: String?
+    /** The name of the sort. */
     public var sortName: String?
     public var forcedSortName: String?
     public var video3DFormat: Video3DFormat?
+    /** The premiere date. */
     public var premiereDate: Date?
+    /** The external urls. */
     public var externalUrls: [ExternalUrl]?
+    /** The media versions. */
     public var mediaSources: [MediaSourceInfo]?
+    /** The critic rating. */
     public var criticRating: Float?
     public var gameSystemId: Int64?
     public var asSeries: Bool?
+    /** The game system. */
     public var gameSystem: String?
     public var productionLocations: [String]?
+    /** The path. */
     public var path: String?
+    /** The official rating. */
     public var officialRating: String?
+    /** The custom rating. */
     public var customRating: String?
+    /** The channel identifier. */
     public var channelId: String?
     public var channelName: String?
+    /** The overview. */
     public var overview: String?
+    /** The taglines. */
     public var taglines: [String]?
+    /** The genres. */
     public var genres: [String]?
+    /** The community rating. */
     public var communityRating: Float?
+    /** The run time ticks. */
     public var runTimeTicks: Int64?
     public var size: Int64?
     public var fileName: String?
     public var bitrate: Int?
+    /** The production year. */
     public var productionYear: Int?
+    /** The number. */
     public var number: String?
     public var channelNumber: String?
+    /** The index number. */
     public var indexNumber: Int?
+    /** The index number end. */
     public var indexNumberEnd: Int?
+    /** The parent index number. */
     public var parentIndexNumber: Int?
+    /** The trailer urls. */
     public var remoteTrailers: [MediaUrl]?
     public var providerIds: ProviderIdDictionary?
+    /** A value indicating whether this instance is folder. */
     public var isFolder: Bool?
+    /** The parent id. */
     public var parentId: String?
+    /** The type. */
     public var type: String?
+    /** The people. */
     public var people: [BaseItemPerson]?
+    /** The studios. */
     public var studios: [NameLongIdPair]?
     public var genreItems: [NameLongIdPair]?
     public var tagItems: [NameLongIdPair]?
+    /** If the item does not have a logo, this will hold the Id of the Parent that has one. */
     public var parentLogoItemId: String?
+    /** If the item does not have any backdrops, this will hold the Id of the Parent that has one. */
     public var parentBackdropItemId: String?
+    /** The parent backdrop image tags. */
     public var parentBackdropImageTags: [String]?
+    /** The local trailer count. */
     public var localTrailerCount: Int?
     public var userData: UserItemDataDto?
+    /** The recursive item count. */
     public var recursiveItemCount: Int?
+    /** The child count. */
     public var childCount: Int?
+    /** The name of the series. */
     public var seriesName: String?
+    /** The series id. */
     public var seriesId: String?
+    /** The season identifier. */
     public var seasonId: String?
+    /** The special feature count. */
     public var specialFeatureCount: Int?
+    /** The display preferences id. */
     public var displayPreferencesId: String?
+    /** The status. */
     public var status: String?
+    /** The air days. */
     public var airDays: [DayOfWeek]?
+    /** The tags. */
     public var tags: [String]?
+    /** The primary image aspect ratio, after image enhancements. */
     public var primaryImageAspectRatio: Double?
+    /** The artists. */
     public var artists: [String]?
+    /** The artist items. */
     public var artistItems: [NameIdPair]?
     public var composers: [NameIdPair]?
+    /** The album. */
     public var album: String?
+    /** The type of the collection. */
     public var collectionType: String?
+    /** The display order. */
     public var displayOrder: String?
+    /** The album id. */
     public var albumId: String?
+    /** The album image tag. */
     public var albumPrimaryImageTag: String?
+    /** The series primary image tag. */
     public var seriesPrimaryImageTag: String?
+    /** The album artist. */
     public var albumArtist: String?
+    /** The album artists. */
     public var albumArtists: [NameIdPair]?
+    /** The name of the season. */
     public var seasonName: String?
+    /** The media streams. */
     public var mediaStreams: [MediaStream]?
+    /** The part count. */
     public var partCount: Int?
+    /** The image tags. */
     public var imageTags: [String:String]?
+    /** The backdrop image tags. */
     public var backdropImageTags: [String]?
+    /** The parent logo image tag. */
     public var parentLogoImageTag: String?
+    /** The series studio. */
     public var seriesStudio: String?
     public var primaryImageItemId: String?
     public var primaryImageTag: String?
+    /** The parent thumb item id. */
     public var parentThumbItemId: String?
+    /** The parent thumb image tag. */
     public var parentThumbImageTag: String?
+    /** The chapters. */
     public var chapters: [ChapterInfo]?
     public var locationType: LocationType?
+    /** The type of the media. */
     public var mediaType: String?
+    /** The end date. */
     public var endDate: Date?
+    /** The locked fields. */
     public var lockedFields: [MetadataFields]?
+    /** A value indicating whether \\[enable internet providers\\]. */
     public var lockData: Bool?
     public var width: Int?
     public var height: Int?
@@ -131,23 +205,37 @@ public struct BaseItemDto: Codable {
     public var longitude: Double?
     public var altitude: Double?
     public var isoSpeedRating: Int?
+    /** The series timer identifier. */
     public var seriesTimerId: String?
+    /** The channel primary image tag. */
     public var channelPrimaryImageTag: String?
+    /** The start date of the recording, in UTC. */
     public var startDate: Date?
+    /** The completion percentage. */
     public var completionPercentage: Double?
+    /** A value indicating whether this instance is repeat. */
     public var isRepeat: Bool?
     public var isNew: Bool?
+    /** The episode title. */
     public var episodeTitle: String?
+    /** A value indicating whether this instance is movie. */
     public var isMovie: Bool?
+    /** A value indicating whether this instance is sports. */
     public var isSports: Bool?
+    /** A value indicating whether this instance is series. */
     public var isSeries: Bool?
+    /** A value indicating whether this instance is live. */
     public var isLive: Bool?
+    /** A value indicating whether this instance is news. */
     public var isNews: Bool?
+    /** A value indicating whether this instance is kids. */
     public var isKids: Bool?
+    /** A value indicating whether this instance is premiere. */
     public var isPremiere: Bool?
     public var timerType: LiveTvTimerType?
     public var disabled: Bool?
     public var managementId: String?
+    /** The timer identifier. */
     public var timerId: String?
     public var currentProgram: BaseItemDto?
     public var movieCount: Int?

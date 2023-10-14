@@ -6,16 +6,16 @@
 package EmbyClient.Java.Beta;
 
 import io.swagger.client.model.ExternalIdInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersAlbumInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersArtistInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersBookInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersGameInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersItemLookupInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersMovieInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersMusicVideoInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersPersonLookupInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersSeriesInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersTrailerInfo;
+import io.swagger.client.model.RemoteSearchQueryAlbumInfo;
+import io.swagger.client.model.RemoteSearchQueryArtistInfo;
+import io.swagger.client.model.RemoteSearchQueryBookInfo;
+import io.swagger.client.model.RemoteSearchQueryGameInfo;
+import io.swagger.client.model.RemoteSearchQueryItemLookupInfo;
+import io.swagger.client.model.RemoteSearchQueryMovieInfo;
+import io.swagger.client.model.RemoteSearchQueryMusicVideoInfo;
+import io.swagger.client.model.RemoteSearchQueryPersonLookupInfo;
+import io.swagger.client.model.RemoteSearchQuerySeriesInfo;
+import io.swagger.client.model.RemoteSearchQueryTrailerInfo;
 import io.swagger.client.model.RemoteSearchResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -108,7 +108,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchBookTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersBookInfo body = null;
+        RemoteSearchQueryBookInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchBook(body);
 
         // TODO: test validations
@@ -123,7 +123,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchBoxsetTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersItemLookupInfo body = null;
+        RemoteSearchQueryItemLookupInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchBoxset(body);
 
         // TODO: test validations
@@ -138,7 +138,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchGameTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersGameInfo body = null;
+        RemoteSearchQueryGameInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchGame(body);
 
         // TODO: test validations
@@ -153,7 +153,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchMovieTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersMovieInfo body = null;
+        RemoteSearchQueryMovieInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchMovie(body);
 
         // TODO: test validations
@@ -168,7 +168,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchMusicalbumTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersAlbumInfo body = null;
+        RemoteSearchQueryAlbumInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchMusicalbum(body);
 
         // TODO: test validations
@@ -183,7 +183,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchMusicartistTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersArtistInfo body = null;
+        RemoteSearchQueryArtistInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchMusicartist(body);
 
         // TODO: test validations
@@ -198,7 +198,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchMusicvideoTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersMusicVideoInfo body = null;
+        RemoteSearchQueryMusicVideoInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchMusicvideo(body);
 
         // TODO: test validations
@@ -213,7 +213,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchPersonTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersPersonLookupInfo body = null;
+        RemoteSearchQueryPersonLookupInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchPerson(body);
 
         // TODO: test validations
@@ -228,7 +228,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchSeriesTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersSeriesInfo body = null;
+        RemoteSearchQuerySeriesInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchSeries(body);
 
         // TODO: test validations
@@ -243,7 +243,7 @@ public class ItemLookupServiceApiTest {
      */
     @Test
     public void postItemsRemotesearchTrailerTest() throws Exception {
-        ProvidersRemoteSearchQueryProvidersTrailerInfo body = null;
+        RemoteSearchQueryTrailerInfo body = null;
         List<RemoteSearchResult> response = api.postItemsRemotesearchTrailer(body);
 
         // TODO: test validations

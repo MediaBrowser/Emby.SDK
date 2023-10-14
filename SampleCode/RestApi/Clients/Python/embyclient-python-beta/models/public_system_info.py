@@ -70,6 +70,7 @@ class PublicSystemInfo(object):
     def local_address(self):
         """Gets the local_address of this PublicSystemInfo.  # noqa: E501
 
+        The local address.  # noqa: E501
 
         :return: The local_address of this PublicSystemInfo.  # noqa: E501
         :rtype: str
@@ -80,6 +81,7 @@ class PublicSystemInfo(object):
     def local_address(self, local_address):
         """Sets the local_address of this PublicSystemInfo.
 
+        The local address.  # noqa: E501
 
         :param local_address: The local_address of this PublicSystemInfo.  # noqa: E501
         :type: str
@@ -112,6 +114,7 @@ class PublicSystemInfo(object):
     def wan_address(self):
         """Gets the wan_address of this PublicSystemInfo.  # noqa: E501
 
+        The wan address.  # noqa: E501
 
         :return: The wan_address of this PublicSystemInfo.  # noqa: E501
         :rtype: str
@@ -122,6 +125,7 @@ class PublicSystemInfo(object):
     def wan_address(self, wan_address):
         """Sets the wan_address of this PublicSystemInfo.
 
+        The wan address.  # noqa: E501
 
         :param wan_address: The wan_address of this PublicSystemInfo.  # noqa: E501
         :type: str
@@ -154,6 +158,7 @@ class PublicSystemInfo(object):
     def server_name(self):
         """Gets the server_name of this PublicSystemInfo.  # noqa: E501
 
+        The name of the server.  # noqa: E501
 
         :return: The server_name of this PublicSystemInfo.  # noqa: E501
         :rtype: str
@@ -164,6 +169,7 @@ class PublicSystemInfo(object):
     def server_name(self, server_name):
         """Sets the server_name of this PublicSystemInfo.
 
+        The name of the server.  # noqa: E501
 
         :param server_name: The server_name of this PublicSystemInfo.  # noqa: E501
         :type: str
@@ -175,6 +181,7 @@ class PublicSystemInfo(object):
     def version(self):
         """Gets the version of this PublicSystemInfo.  # noqa: E501
 
+        The version.  # noqa: E501
 
         :return: The version of this PublicSystemInfo.  # noqa: E501
         :rtype: str
@@ -185,6 +192,7 @@ class PublicSystemInfo(object):
     def version(self, version):
         """Sets the version of this PublicSystemInfo.
 
+        The version.  # noqa: E501
 
         :param version: The version of this PublicSystemInfo.  # noqa: E501
         :type: str
@@ -196,6 +204,7 @@ class PublicSystemInfo(object):
     def id(self):
         """Gets the id of this PublicSystemInfo.  # noqa: E501
 
+        The id.  # noqa: E501
 
         :return: The id of this PublicSystemInfo.  # noqa: E501
         :rtype: str
@@ -206,6 +215,7 @@ class PublicSystemInfo(object):
     def id(self, id):
         """Sets the id of this PublicSystemInfo.
 
+        The id.  # noqa: E501
 
         :param id: The id of this PublicSystemInfo.  # noqa: E501
         :type: str

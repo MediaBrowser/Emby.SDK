@@ -11,7 +11,9 @@ import Foundation
 
 public struct LiveTvLiveTvInfo: Codable {
 
+    /** A value indicating whether this instance is enabled. */
     public var isEnabled: Bool?
+    /** The enabled users. */
     public var enabledUsers: [String]?
 
     public init(isEnabled: Bool? = nil, enabledUsers: [String]? = nil) {

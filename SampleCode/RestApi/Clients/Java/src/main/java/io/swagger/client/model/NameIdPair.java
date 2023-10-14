@@ -32,10 +32,10 @@ public class NameIdPair {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -50,10 +50,10 @@ public class NameIdPair {
   }
 
    /**
-   * Get id
+   * The identifier.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The identifier.")
   public String getId() {
     return id;
   }

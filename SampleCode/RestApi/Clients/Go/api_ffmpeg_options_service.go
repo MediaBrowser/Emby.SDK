@@ -25,15 +25,15 @@ type FfmpegOptionsServiceApiService service
 FfmpegOptionsServiceApiService Gets the ffmpeg options
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return EmbyWebGenericEditEditObjectContainer
+@return EditObjectContainer
 */
-func (a *FfmpegOptionsServiceApiService) GetEncodingFfmpegoptions(ctx context.Context) (EmbyWebGenericEditEditObjectContainer, *http.Response, error) {
+func (a *FfmpegOptionsServiceApiService) GetEncodingFfmpegoptions(ctx context.Context) (EditObjectContainer, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyWebGenericEditEditObjectContainer
+		localVarReturnValue EditObjectContainer
 	)
 
 	// create path and map variables
@@ -103,7 +103,7 @@ func (a *FfmpegOptionsServiceApiService) GetEncodingFfmpegoptions(ctx context.Co
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyWebGenericEditEditObjectContainer
+			var v EditObjectContainer
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

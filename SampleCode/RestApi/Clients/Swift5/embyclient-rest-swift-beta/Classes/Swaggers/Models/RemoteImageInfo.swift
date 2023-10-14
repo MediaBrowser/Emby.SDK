@@ -8,16 +8,25 @@
 import Foundation
 
 
+/** Class RemoteImageInfo   */
 
 public struct RemoteImageInfo: Codable {
 
+    /** The name of the provider. */
     public var providerName: String?
+    /** The URL. */
     public var url: String?
+    /** A url used for previewing a smaller version */
     public var thumbnailUrl: String?
+    /** The height. */
     public var height: Int?
+    /** The width. */
     public var width: Int?
+    /** The community rating. */
     public var communityRating: Double?
+    /** The vote count. */
     public var voteCount: Int?
+    /** The language. */
     public var language: String?
     public var displayLanguage: String?
     public var type: ImageType?

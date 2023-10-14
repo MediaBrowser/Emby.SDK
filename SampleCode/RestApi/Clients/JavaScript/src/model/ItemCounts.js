@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The ItemCounts model module.
 * @module model/ItemCounts
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ItemCounts {
     /**
     * Constructs a new <code>ItemCounts</code>.
+    * Class LibrarySummary  
     * @alias module:model/ItemCounts
     * @class
     */
@@ -88,18 +89,22 @@ export default class ItemCounts {
     }
 
     /**
+    * The movie count.
     * @member {Number} MovieCount
     */
     'MovieCount' = undefined;
     /**
+    * The series count.
     * @member {Number} SeriesCount
     */
     'SeriesCount' = undefined;
     /**
+    * The episode count.
     * @member {Number} EpisodeCount
     */
     'EpisodeCount' = undefined;
     /**
+    * The game count.
     * @member {Number} GameCount
     */
     'GameCount' = undefined;
@@ -112,30 +117,37 @@ export default class ItemCounts {
     */
     'ProgramCount' = undefined;
     /**
+    * The game system count.
     * @member {Number} GameSystemCount
     */
     'GameSystemCount' = undefined;
     /**
+    * The trailer count.
     * @member {Number} TrailerCount
     */
     'TrailerCount' = undefined;
     /**
+    * The song count.
     * @member {Number} SongCount
     */
     'SongCount' = undefined;
     /**
+    * The album count.
     * @member {Number} AlbumCount
     */
     'AlbumCount' = undefined;
     /**
+    * The music video count.
     * @member {Number} MusicVideoCount
     */
     'MusicVideoCount' = undefined;
     /**
+    * The box set count.
     * @member {Number} BoxSetCount
     */
     'BoxSetCount' = undefined;
     /**
+    * The book count.
     * @member {Number} BookCount
     */
     'BookCount' = undefined;

@@ -15,7 +15,7 @@ open class FeatureServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFeatures(completion: @escaping ((_ data: [EmbyFeaturesFeatureInfo]?,_ error: Error?) -> Void)) {
+    open class func getFeatures(completion: @escaping ((_ data: [FeatureInfo]?,_ error: Error?) -> Void)) {
         getFeaturesWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -42,16 +42,16 @@ open class FeatureServiceAPI {
   "Name" : "Name"
 } ]}]
 
-     - returns: RequestBuilder<[EmbyFeaturesFeatureInfo]> 
+     - returns: RequestBuilder<[FeatureInfo]> 
      */
-    open class func getFeaturesWithRequestBuilder() -> RequestBuilder<[EmbyFeaturesFeatureInfo]> {
+    open class func getFeaturesWithRequestBuilder() -> RequestBuilder<[FeatureInfo]> {
         let path = "/Features"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[EmbyFeaturesFeatureInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[FeatureInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

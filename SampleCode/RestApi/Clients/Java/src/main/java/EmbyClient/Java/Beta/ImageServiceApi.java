@@ -4009,7 +4009,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html"> Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByIdImagesByTypeCall(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -4123,7 +4123,7 @@ public class ImageServiceApi {
      * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html"> Documentation</a>
      */
     public void getUsersByIdImagesByType(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, Integer index) throws ApiException {
         getUsersByIdImagesByTypeWithHttpInfo(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index);
@@ -4151,7 +4151,7 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html"> Documentation</a>
      */
     public ApiResponse<Void> getUsersByIdImagesByTypeWithHttpInfo(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, Integer index) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByIdImagesByTypeValidateBeforeCall(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, null, null);
@@ -4181,7 +4181,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html"> Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByIdImagesByTypeAsync(String id, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, Integer index, final ApiCallback<Void> callback) throws ApiException {
 

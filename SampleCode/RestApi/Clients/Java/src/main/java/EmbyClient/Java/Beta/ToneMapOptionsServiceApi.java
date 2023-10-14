@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyWebGenericEditEditObjectContainer;
+import io.swagger.client.model.EditObjectContainer;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -109,23 +109,23 @@ public class ToneMapOptionsServiceApi {
     /**
      * Gets the tone mapping options
      * Requires authentication as user
-     * @return EmbyWebGenericEditEditObjectContainer
+     * @return EditObjectContainer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyWebGenericEditEditObjectContainer getEncodingFulltonemapoptions() throws ApiException {
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> resp = getEncodingFulltonemapoptionsWithHttpInfo();
+    public EditObjectContainer getEncodingFulltonemapoptions() throws ApiException {
+        ApiResponse<EditObjectContainer> resp = getEncodingFulltonemapoptionsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets the tone mapping options
      * Requires authentication as user
-     * @return ApiResponse&lt;EmbyWebGenericEditEditObjectContainer&gt;
+     * @return ApiResponse&lt;EditObjectContainer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyWebGenericEditEditObjectContainer> getEncodingFulltonemapoptionsWithHttpInfo() throws ApiException {
+    public ApiResponse<EditObjectContainer> getEncodingFulltonemapoptionsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getEncodingFulltonemapoptionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -136,7 +136,7 @@ public class ToneMapOptionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEncodingFulltonemapoptionsAsync(final ApiCallback<EmbyWebGenericEditEditObjectContainer> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEncodingFulltonemapoptionsAsync(final ApiCallback<EditObjectContainer> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -158,7 +158,7 @@ public class ToneMapOptionsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getEncodingFulltonemapoptionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -225,23 +225,23 @@ public class ToneMapOptionsServiceApi {
     /**
      * Gets the tone mapping options
      * Requires authentication as user
-     * @return EmbyWebGenericEditEditObjectContainer
+     * @return EditObjectContainer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyWebGenericEditEditObjectContainer getEncodingPublictonemapoptions() throws ApiException {
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> resp = getEncodingPublictonemapoptionsWithHttpInfo();
+    public EditObjectContainer getEncodingPublictonemapoptions() throws ApiException {
+        ApiResponse<EditObjectContainer> resp = getEncodingPublictonemapoptionsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets the tone mapping options
      * Requires authentication as user
-     * @return ApiResponse&lt;EmbyWebGenericEditEditObjectContainer&gt;
+     * @return ApiResponse&lt;EditObjectContainer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyWebGenericEditEditObjectContainer> getEncodingPublictonemapoptionsWithHttpInfo() throws ApiException {
+    public ApiResponse<EditObjectContainer> getEncodingPublictonemapoptionsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getEncodingPublictonemapoptionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -252,7 +252,7 @@ public class ToneMapOptionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEncodingPublictonemapoptionsAsync(final ApiCallback<EmbyWebGenericEditEditObjectContainer> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEncodingPublictonemapoptionsAsync(final ApiCallback<EditObjectContainer> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -274,7 +274,7 @@ public class ToneMapOptionsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getEncodingPublictonemapoptionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

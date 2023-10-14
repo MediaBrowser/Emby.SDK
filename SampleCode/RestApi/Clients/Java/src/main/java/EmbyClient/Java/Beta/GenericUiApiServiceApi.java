@@ -19,8 +19,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyWebGenericUIApiEndpointsRunUICommand;
-import io.swagger.client.model.EmbyWebGenericUIModelUIViewInfo;
+import io.swagger.client.model.RunUICommand;
+import io.swagger.client.model.UIViewInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -126,11 +126,11 @@ public class GenericUiApiServiceApi {
      * Requires authentication as user
      * @param pageId Id of the page controller (required)
      * @param clientLocale Locale identifier of the client (required)
-     * @return EmbyWebGenericUIModelUIViewInfo
+     * @return UIViewInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyWebGenericUIModelUIViewInfo getUIView(String pageId, String clientLocale) throws ApiException {
-        ApiResponse<EmbyWebGenericUIModelUIViewInfo> resp = getUIViewWithHttpInfo(pageId, clientLocale);
+    public UIViewInfo getUIView(String pageId, String clientLocale) throws ApiException {
+        ApiResponse<UIViewInfo> resp = getUIViewWithHttpInfo(pageId, clientLocale);
         return resp.getData();
     }
 
@@ -139,12 +139,12 @@ public class GenericUiApiServiceApi {
      * Requires authentication as user
      * @param pageId Id of the page controller (required)
      * @param clientLocale Locale identifier of the client (required)
-     * @return ApiResponse&lt;EmbyWebGenericUIModelUIViewInfo&gt;
+     * @return ApiResponse&lt;UIViewInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyWebGenericUIModelUIViewInfo> getUIViewWithHttpInfo(String pageId, String clientLocale) throws ApiException {
+    public ApiResponse<UIViewInfo> getUIViewWithHttpInfo(String pageId, String clientLocale) throws ApiException {
         com.squareup.okhttp.Call call = getUIViewValidateBeforeCall(pageId, clientLocale, null, null);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericUIModelUIViewInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<UIViewInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -157,7 +157,7 @@ public class GenericUiApiServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUIViewAsync(String pageId, String clientLocale, final ApiCallback<EmbyWebGenericUIModelUIViewInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUIViewAsync(String pageId, String clientLocale, final ApiCallback<UIViewInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -179,7 +179,7 @@ public class GenericUiApiServiceApi {
         }
 
         com.squareup.okhttp.Call call = getUIViewValidateBeforeCall(pageId, clientLocale, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericUIModelUIViewInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<UIViewInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -191,7 +191,7 @@ public class GenericUiApiServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUICommandCall(EmbyWebGenericUIApiEndpointsRunUICommand body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUICommandCall(RunUICommand body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -233,7 +233,7 @@ public class GenericUiApiServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUICommandValidateBeforeCall(EmbyWebGenericUIApiEndpointsRunUICommand body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUICommandValidateBeforeCall(RunUICommand body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUICommand(Async)");
@@ -252,11 +252,11 @@ public class GenericUiApiServiceApi {
      * Execute a command in the context of tv setup
      * Requires authentication as user
      * @param body RunUICommand (required)
-     * @return EmbyWebGenericUIModelUIViewInfo
+     * @return UIViewInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyWebGenericUIModelUIViewInfo postUICommand(EmbyWebGenericUIApiEndpointsRunUICommand body) throws ApiException {
-        ApiResponse<EmbyWebGenericUIModelUIViewInfo> resp = postUICommandWithHttpInfo(body);
+    public UIViewInfo postUICommand(RunUICommand body) throws ApiException {
+        ApiResponse<UIViewInfo> resp = postUICommandWithHttpInfo(body);
         return resp.getData();
     }
 
@@ -264,12 +264,12 @@ public class GenericUiApiServiceApi {
      * Execute a command in the context of tv setup
      * Requires authentication as user
      * @param body RunUICommand (required)
-     * @return ApiResponse&lt;EmbyWebGenericUIModelUIViewInfo&gt;
+     * @return ApiResponse&lt;UIViewInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyWebGenericUIModelUIViewInfo> postUICommandWithHttpInfo(EmbyWebGenericUIApiEndpointsRunUICommand body) throws ApiException {
+    public ApiResponse<UIViewInfo> postUICommandWithHttpInfo(RunUICommand body) throws ApiException {
         com.squareup.okhttp.Call call = postUICommandValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericUIModelUIViewInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<UIViewInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -281,7 +281,7 @@ public class GenericUiApiServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUICommandAsync(EmbyWebGenericUIApiEndpointsRunUICommand body, final ApiCallback<EmbyWebGenericUIModelUIViewInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUICommandAsync(RunUICommand body, final ApiCallback<UIViewInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -303,7 +303,7 @@ public class GenericUiApiServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUICommandValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericUIModelUIViewInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<UIViewInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

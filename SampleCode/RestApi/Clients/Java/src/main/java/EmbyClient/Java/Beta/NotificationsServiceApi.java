@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyNotificationsNotificationCategoryInfo;
+import io.swagger.client.model.NotificationCategoryInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -109,23 +109,23 @@ public class NotificationsServiceApi {
     /**
      * Gets notification types
      * Requires authentication as user
-     * @return List&lt;EmbyNotificationsNotificationCategoryInfo&gt;
+     * @return List&lt;NotificationCategoryInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EmbyNotificationsNotificationCategoryInfo> getNotificationsTypes() throws ApiException {
-        ApiResponse<List<EmbyNotificationsNotificationCategoryInfo>> resp = getNotificationsTypesWithHttpInfo();
+    public List<NotificationCategoryInfo> getNotificationsTypes() throws ApiException {
+        ApiResponse<List<NotificationCategoryInfo>> resp = getNotificationsTypesWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets notification types
      * Requires authentication as user
-     * @return ApiResponse&lt;List&lt;EmbyNotificationsNotificationCategoryInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;NotificationCategoryInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EmbyNotificationsNotificationCategoryInfo>> getNotificationsTypesWithHttpInfo() throws ApiException {
+    public ApiResponse<List<NotificationCategoryInfo>> getNotificationsTypesWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getNotificationsTypesValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<EmbyNotificationsNotificationCategoryInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<NotificationCategoryInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -136,7 +136,7 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getNotificationsTypesAsync(final ApiCallback<List<EmbyNotificationsNotificationCategoryInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getNotificationsTypesAsync(final ApiCallback<List<NotificationCategoryInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -158,7 +158,7 @@ public class NotificationsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getNotificationsTypesValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<EmbyNotificationsNotificationCategoryInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<NotificationCategoryInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

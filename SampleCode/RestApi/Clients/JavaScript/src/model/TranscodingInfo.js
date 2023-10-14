@@ -18,7 +18,7 @@ import TupleDoubleDouble from './TupleDoubleDouble';
 /**
 * The TranscodingInfo model module.
 * @module model/TranscodingInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class TranscodingInfo {
     /**
@@ -214,14 +214,17 @@ export default class TranscodingInfo {
     */
     'TranscodeReasons' = undefined;
     /**
+    * Deprecated, please use ProcessStatistics instead
     * @member {Number} CurrentCpuUsage
     */
     'CurrentCpuUsage' = undefined;
     /**
+    * Deprecated, please use ProcessStatistics instead
     * @member {Number} AverageCpuUsage
     */
     'AverageCpuUsage' = undefined;
     /**
+    * Deprecated, please use ProcessStatistics instead
     * @member {Array.<module:model/TupleDoubleDouble>} CpuHistory
     */
     'CpuHistory' = undefined;

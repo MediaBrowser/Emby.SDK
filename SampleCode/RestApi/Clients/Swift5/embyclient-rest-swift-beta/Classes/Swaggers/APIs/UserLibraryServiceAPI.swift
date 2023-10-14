@@ -668,7 +668,7 @@ open class UserLibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
 
@@ -1229,7 +1229,7 @@ open class UserLibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
@@ -2316,7 +2316,7 @@ open class UserLibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
@@ -3412,7 +3412,7 @@ open class UserLibraryServiceAPI {
 } ]}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
@@ -4508,7 +4508,7 @@ open class UserLibraryServiceAPI {
 } ]}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Movie Id 
@@ -5610,7 +5610,7 @@ open class UserLibraryServiceAPI {
 } ]}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Latest Items
-    url: https://github.com/MediaBrowser/Emby/wiki/Latest-Items
+    url: https://betadev.emby.media/doc/restapi/Latest-Items.html
 }
      - parameter userId: (path) User Id 
      - parameter limit: (query) Limit (optional)
@@ -6196,7 +6196,7 @@ open class UserLibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (path) User Id 
 
@@ -7279,7 +7279,7 @@ open class UserLibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)

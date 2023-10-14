@@ -15,7 +15,7 @@ import ProcessRunMetricsProcessMetricPoint from './ProcessRunMetricsProcessMetri
 /**
 * The ProcessRunMetricsProcessStatistics model module.
 * @module model/ProcessRunMetricsProcessStatistics
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ProcessRunMetricsProcessStatistics {
     /**
@@ -62,22 +62,27 @@ export default class ProcessRunMetricsProcessStatistics {
     }
 
     /**
+    * The current cpu.
     * @member {Number} CurrentCpu
     */
     'CurrentCpu' = undefined;
     /**
+    * The average cpu.
     * @member {Number} AverageCpu
     */
     'AverageCpu' = undefined;
     /**
+    * The currently allocated virtual memory.
     * @member {Number} CurrentVirtualMemory
     */
     'CurrentVirtualMemory' = undefined;
     /**
+    * The currently allocated working set.
     * @member {Number} CurrentWorkingSet
     */
     'CurrentWorkingSet' = undefined;
     /**
+    * The metrics.
     * @member {Array.<module:model/ProcessRunMetricsProcessMetricPoint>} Metrics
     */
     'Metrics' = undefined;

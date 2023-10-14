@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.MediaEncodingApiOnPlaybackProgress;
+import io.swagger.client.model.ApiOnPlaybackProgress;
 import io.swagger.client.model.PlayMethod;
 import io.swagger.client.model.PlaybackProgressInfo;
 import io.swagger.client.model.PlaybackStartInfo;
@@ -231,7 +231,7 @@ public class PlaystateServiceApiTest {
      */
     @Test
     public void postUsersByUseridPlayingitemsByIdProgressTest() throws Exception {
-        MediaEncodingApiOnPlaybackProgress body = null;
+        ApiOnPlaybackProgress body = null;
         String mediaSourceId = null;
         String userId = null;
         String id = null;

@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyNotificationsUserNotificationInfo from '../model/EmbyNotificationsUserNotificationInfo';
+import UserNotificationInfo from '../model/UserNotificationInfo';
 
 /**
 * UserNotificationsService service.
 * @module EmbyClient.JavaScript.Beta/UserNotificationsServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class UserNotificationsServiceApi {
 
@@ -34,7 +34,7 @@ export default class UserNotificationsServiceApi {
      * Callback function to receive the result of the getNotificationsServicesDefaults operation.
      * @callback module:EmbyClient.JavaScript.Beta/UserNotificationsServiceApi~getNotificationsServicesDefaultsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyNotificationsUserNotificationInfo} data The data returned by the service call.
+     * @param {module:model/UserNotificationInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -42,7 +42,7 @@ export default class UserNotificationsServiceApi {
      * Gets default notification info
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserNotificationsServiceApi~getNotificationsServicesDefaultsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyNotificationsUserNotificationInfo}
+     * data is of type: {@link module:model/UserNotificationInfo}
      */
     getNotificationsServicesDefaults() {
       let postBody = null;
@@ -59,7 +59,7 @@ export default class UserNotificationsServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyNotificationsUserNotificationInfo;
+      let returnType = UserNotificationInfo;
 
       return this.apiClient.callApi(
         '/Notifications/Services/Defaults', 'GET',

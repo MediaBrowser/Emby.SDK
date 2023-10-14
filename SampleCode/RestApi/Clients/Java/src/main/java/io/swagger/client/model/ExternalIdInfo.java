@@ -38,10 +38,10 @@ public class ExternalIdInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -56,10 +56,10 @@ public class ExternalIdInfo {
   }
 
    /**
-   * Get key
+   * The key.
    * @return key
   **/
-  @Schema(description = "")
+  @Schema(description = "The key.")
   public String getKey() {
     return key;
   }
@@ -74,10 +74,10 @@ public class ExternalIdInfo {
   }
 
    /**
-   * Get urlFormatString
+   * The URL format string.
    * @return urlFormatString
   **/
-  @Schema(description = "")
+  @Schema(description = "The URL format string.")
   public String getUrlFormatString() {
     return urlFormatString;
   }

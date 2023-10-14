@@ -1127,7 +1127,7 @@ type PlaystateServiceApiPostUsersByUseridPlayingitemsByIdProgressOpts struct {
     PlaybackRate optional.Float64
 }
 
-func (a *PlaystateServiceApiService) PostUsersByUseridPlayingitemsByIdProgress(ctx context.Context, body MediaEncodingApiOnPlaybackProgress, mediaSourceId string, userId string, id string, localVarOptionals *PlaystateServiceApiPostUsersByUseridPlayingitemsByIdProgressOpts) (*http.Response, error) {
+func (a *PlaystateServiceApiService) PostUsersByUseridPlayingitemsByIdProgress(ctx context.Context, body ApiOnPlaybackProgress, mediaSourceId string, userId string, id string, localVarOptionals *PlaystateServiceApiPostUsersByUseridPlayingitemsByIdProgressOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

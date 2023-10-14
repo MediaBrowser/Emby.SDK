@@ -561,7 +561,7 @@ open class UserServiceAPI {
 } ]}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://betadev.emby.media/doc/restapi/User-Authentication.html
 }
 
      - returns: RequestBuilder<[UserDto]> 
@@ -1477,39 +1477,15 @@ open class UserServiceAPI {
       "IsAudioDirect" : true,
       "ProcessStatistics" : {
         "Metrics" : [ {
-          "Time" : {
-            "TotalMilliseconds" : 7.143538047012306,
-            "TotalMinutes" : 0.8851374739011653,
-            "Hours" : 6,
-            "Ticks" : 1,
-            "TotalSeconds" : 7.058770351582356,
-            "Days" : 2,
-            "TotalDays" : 3.353193347011243,
-            "Seconds" : 6,
-            "TotalHours" : 3.0937452626664474,
-            "Milliseconds" : 6,
-            "Minutes" : 5
-          },
-          "WorkingSet" : 4.652396432933246,
-          "VirtualMemory" : 0.10263654006109402,
-          "CpuPercent" : 6.519180951018382
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
         }, {
-          "Time" : {
-            "TotalMilliseconds" : 7.143538047012306,
-            "TotalMinutes" : 0.8851374739011653,
-            "Hours" : 6,
-            "Ticks" : 1,
-            "TotalSeconds" : 7.058770351582356,
-            "Days" : 2,
-            "TotalDays" : 3.353193347011243,
-            "Seconds" : 6,
-            "TotalHours" : 3.0937452626664474,
-            "Milliseconds" : 6,
-            "Minutes" : 5
-          },
-          "WorkingSet" : 4.652396432933246,
-          "VirtualMemory" : 0.10263654006109402,
-          "CpuPercent" : 6.519180951018382
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
         } ],
         "AverageCpu" : 6.438423552598547,
         "CurrentCpu" : 9.018348186070783,
@@ -1565,7 +1541,7 @@ open class UserServiceAPI {
         "Item1" : 6.683562403749608,
         "Item2" : 8.762042012749001
       } ],
-      "CurrentThrottle" : 8,
+      "CurrentThrottle" : 6,
       "VideoCodec" : "VideoCodec",
       "Bitrate" : 4,
       "VideoDecoderHwAccel" : "VideoDecoderHwAccel",
@@ -1609,7 +1585,7 @@ open class UserServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://betadev.emby.media/doc/restapi/User-Authentication.html
 }
      - parameter body: (body) AuthenticateUserByName 
      - parameter xEmbyAuthorization: (header) The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. 
@@ -2333,39 +2309,15 @@ open class UserServiceAPI {
       "IsAudioDirect" : true,
       "ProcessStatistics" : {
         "Metrics" : [ {
-          "Time" : {
-            "TotalMilliseconds" : 7.143538047012306,
-            "TotalMinutes" : 0.8851374739011653,
-            "Hours" : 6,
-            "Ticks" : 1,
-            "TotalSeconds" : 7.058770351582356,
-            "Days" : 2,
-            "TotalDays" : 3.353193347011243,
-            "Seconds" : 6,
-            "TotalHours" : 3.0937452626664474,
-            "Milliseconds" : 6,
-            "Minutes" : 5
-          },
-          "WorkingSet" : 4.652396432933246,
-          "VirtualMemory" : 0.10263654006109402,
-          "CpuPercent" : 6.519180951018382
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
         }, {
-          "Time" : {
-            "TotalMilliseconds" : 7.143538047012306,
-            "TotalMinutes" : 0.8851374739011653,
-            "Hours" : 6,
-            "Ticks" : 1,
-            "TotalSeconds" : 7.058770351582356,
-            "Days" : 2,
-            "TotalDays" : 3.353193347011243,
-            "Seconds" : 6,
-            "TotalHours" : 3.0937452626664474,
-            "Milliseconds" : 6,
-            "Minutes" : 5
-          },
-          "WorkingSet" : 4.652396432933246,
-          "VirtualMemory" : 0.10263654006109402,
-          "CpuPercent" : 6.519180951018382
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
         } ],
         "AverageCpu" : 6.438423552598547,
         "CurrentCpu" : 9.018348186070783,
@@ -2421,7 +2373,7 @@ open class UserServiceAPI {
         "Item1" : 6.683562403749608,
         "Item2" : 8.762042012749001
       } ],
-      "CurrentThrottle" : 8,
+      "CurrentThrottle" : 6,
       "VideoCodec" : "VideoCodec",
       "Bitrate" : 4,
       "VideoDecoderHwAccel" : "VideoDecoderHwAccel",
@@ -2465,7 +2417,7 @@ open class UserServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://betadev.emby.media/doc/restapi/User-Authentication.html
 }
      - parameter body: (body) AuthenticateUser 
      - parameter _id: (path)  
@@ -2493,7 +2445,7 @@ open class UserServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByIdConfiguration(body: ConfigurationUserConfiguration, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postUsersByIdConfiguration(body: UserConfiguration, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postUsersByIdConfigurationWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2519,7 +2471,7 @@ open class UserServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByIdConfigurationWithRequestBuilder(body: ConfigurationUserConfiguration, _id: String) -> RequestBuilder<Void> {
+    open class func postUsersByIdConfigurationWithRequestBuilder(body: UserConfiguration, _id: String) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Configuration"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2679,7 +2631,7 @@ open class UserServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByIdPolicy(body: UsersUserPolicy, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postUsersByIdPolicy(body: UserPolicy, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postUsersByIdPolicyWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2705,7 +2657,7 @@ open class UserServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByIdPolicyWithRequestBuilder(body: UsersUserPolicy, _id: String) -> RequestBuilder<Void> {
+    open class func postUsersByIdPolicyWithRequestBuilder(body: UserPolicy, _id: String) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Policy"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2827,7 +2779,7 @@ open class UserServiceAPI {
      - parameter body: (body) ForgotPassword 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersForgotpassword(body: ForgotPassword, completion: @escaping ((_ data: UsersForgotPasswordResult?,_ error: Error?) -> Void)) {
+    open class func postUsersForgotpassword(body: ForgotPassword, completion: @escaping ((_ data: ForgotPasswordResult?,_ error: Error?) -> Void)) {
         postUsersForgotpasswordWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2851,16 +2803,16 @@ open class UserServiceAPI {
 }}]
      - parameter body: (body) ForgotPassword 
 
-     - returns: RequestBuilder<UsersForgotPasswordResult> 
+     - returns: RequestBuilder<ForgotPasswordResult> 
      */
-    open class func postUsersForgotpasswordWithRequestBuilder(body: ForgotPassword) -> RequestBuilder<UsersForgotPasswordResult> {
+    open class func postUsersForgotpasswordWithRequestBuilder(body: ForgotPassword) -> RequestBuilder<ForgotPasswordResult> {
         let path = "/Users/ForgotPassword"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<UsersForgotPasswordResult>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ForgotPasswordResult>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -2870,7 +2822,7 @@ open class UserServiceAPI {
      - parameter body: (body) ForgotPasswordPin 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersForgotpasswordPin(body: ForgotPasswordPin, completion: @escaping ((_ data: UsersPinRedeemResult?,_ error: Error?) -> Void)) {
+    open class func postUsersForgotpasswordPin(body: ForgotPasswordPin, completion: @escaping ((_ data: PinRedeemResult?,_ error: Error?) -> Void)) {
         postUsersForgotpasswordPinWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2893,16 +2845,16 @@ open class UserServiceAPI {
 }}]
      - parameter body: (body) ForgotPasswordPin 
 
-     - returns: RequestBuilder<UsersPinRedeemResult> 
+     - returns: RequestBuilder<PinRedeemResult> 
      */
-    open class func postUsersForgotpasswordPinWithRequestBuilder(body: ForgotPasswordPin) -> RequestBuilder<UsersPinRedeemResult> {
+    open class func postUsersForgotpasswordPinWithRequestBuilder(body: ForgotPasswordPin) -> RequestBuilder<PinRedeemResult> {
         let path = "/Users/ForgotPassword/Pin"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<UsersPinRedeemResult>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PinRedeemResult>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

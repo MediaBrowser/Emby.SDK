@@ -57,7 +57,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -108,7 +108,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -271,7 +271,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -321,7 +321,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -478,7 +478,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -528,7 +528,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -686,7 +686,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -737,7 +737,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -900,7 +900,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -950,7 +950,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -1107,7 +1107,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -1157,7 +1157,7 @@ class AudioServiceApi(object):
         :param int max_height: Optional. The maximum vertical resolution of the encoded video.
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-        :param DlnaSubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
+        :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
         :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.

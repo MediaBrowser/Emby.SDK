@@ -336,7 +336,7 @@ public class PlaylistServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the original items of a playlist Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the original items of a playlist Documentation</a>
      */
     public com.squareup.okhttp.Call getPlaylistsByIdItemsCall(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -427,7 +427,7 @@ public class PlaylistServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the original items of a playlist Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the original items of a playlist Documentation</a>
      */
     public QueryResultBaseItemDto getPlaylistsByIdItems(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getPlaylistsByIdItemsWithHttpInfo(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes);
@@ -449,7 +449,7 @@ public class PlaylistServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the original items of a playlist Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the original items of a playlist Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getPlaylistsByIdItemsWithHttpInfo(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes) throws ApiException {
         com.squareup.okhttp.Call call = getPlaylistsByIdItemsValidateBeforeCall(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes, null, null);
@@ -473,7 +473,7 @@ public class PlaylistServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the original items of a playlist Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the original items of a playlist Documentation</a>
      */
     public com.squareup.okhttp.Call getPlaylistsByIdItemsAsync(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 

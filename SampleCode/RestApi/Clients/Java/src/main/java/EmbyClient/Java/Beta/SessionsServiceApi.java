@@ -688,7 +688,7 @@ public class SessionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a the current play queue from a session Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a the current play queue from a session Documentation</a>
      */
     public com.squareup.okhttp.Call getSessionsPlayqueueCall(String id, String deviceId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -755,7 +755,7 @@ public class SessionsServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a the current play queue from a session Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a the current play queue from a session Documentation</a>
      */
     public QueryResultBaseItemDto getSessionsPlayqueue(String id, String deviceId) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getSessionsPlayqueueWithHttpInfo(id, deviceId);
@@ -770,7 +770,7 @@ public class SessionsServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a the current play queue from a session Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a the current play queue from a session Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getSessionsPlayqueueWithHttpInfo(String id, String deviceId) throws ApiException {
         com.squareup.okhttp.Call call = getSessionsPlayqueueValidateBeforeCall(id, deviceId, null, null);
@@ -787,7 +787,7 @@ public class SessionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a the current play queue from a session Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a the current play queue from a session Documentation</a>
      */
     public com.squareup.okhttp.Call getSessionsPlayqueueAsync(String id, String deviceId, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -2581,7 +2581,7 @@ public class SessionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Reports that a session has ended Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Reports that a session has ended Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsLogoutCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -2641,7 +2641,7 @@ public class SessionsServiceApi {
      * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Reports that a session has ended Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Reports that a session has ended Documentation</a>
      */
     public void postSessionsLogout() throws ApiException {
         postSessionsLogoutWithHttpInfo();
@@ -2653,7 +2653,7 @@ public class SessionsServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Reports that a session has ended Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Reports that a session has ended Documentation</a>
      */
     public ApiResponse<Void> postSessionsLogoutWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = postSessionsLogoutValidateBeforeCall(null, null);
@@ -2667,7 +2667,7 @@ public class SessionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Reports that a session has ended Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/User-Authentication.html">Reports that a session has ended Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsLogoutAsync(final ApiCallback<Void> callback) throws ApiException {
 

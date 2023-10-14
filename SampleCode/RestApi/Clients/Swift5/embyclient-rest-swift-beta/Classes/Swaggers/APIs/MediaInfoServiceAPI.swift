@@ -17,7 +17,7 @@ open class MediaInfoServiceAPI {
      - parameter userId: (query) User Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdPlaybackinfo(_id: String, userId: String, completion: @escaping ((_ data: MediaInfoPlaybackInfoResponse?,_ error: Error?) -> Void)) {
+    open class func getItemsByIdPlaybackinfo(_id: String, userId: String, completion: @escaping ((_ data: PlaybackInfoResponse?,_ error: Error?) -> Void)) {
         getItemsByIdPlaybackinfoWithRequestBuilder(_id: _id, userId: userId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -340,9 +340,9 @@ open class MediaInfoServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter userId: (query) User Id 
 
-     - returns: RequestBuilder<MediaInfoPlaybackInfoResponse> 
+     - returns: RequestBuilder<PlaybackInfoResponse> 
      */
-    open class func getItemsByIdPlaybackinfoWithRequestBuilder(_id: String, userId: String) -> RequestBuilder<MediaInfoPlaybackInfoResponse> {
+    open class func getItemsByIdPlaybackinfoWithRequestBuilder(_id: String, userId: String) -> RequestBuilder<PlaybackInfoResponse> {
         var path = "/Items/{Id}/PlaybackInfo"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -355,7 +355,7 @@ open class MediaInfoServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<MediaInfoPlaybackInfoResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PlaybackInfoResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -409,7 +409,7 @@ open class MediaInfoServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsByIdPlaybackinfo(body: MediaInfoPlaybackInfoRequest, _id: String, completion: @escaping ((_ data: MediaInfoPlaybackInfoResponse?,_ error: Error?) -> Void)) {
+    open class func postItemsByIdPlaybackinfo(body: PlaybackInfoRequest, _id: String, completion: @escaping ((_ data: PlaybackInfoResponse?,_ error: Error?) -> Void)) {
         postItemsByIdPlaybackinfoWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -732,9 +732,9 @@ open class MediaInfoServiceAPI {
      - parameter body: (body) PlaybackInfoRequest:  
      - parameter _id: (path)  
 
-     - returns: RequestBuilder<MediaInfoPlaybackInfoResponse> 
+     - returns: RequestBuilder<PlaybackInfoResponse> 
      */
-    open class func postItemsByIdPlaybackinfoWithRequestBuilder(body: MediaInfoPlaybackInfoRequest, _id: String) -> RequestBuilder<MediaInfoPlaybackInfoResponse> {
+    open class func postItemsByIdPlaybackinfoWithRequestBuilder(body: PlaybackInfoRequest, _id: String) -> RequestBuilder<PlaybackInfoResponse> {
         var path = "/Items/{Id}/PlaybackInfo"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -744,7 +744,7 @@ open class MediaInfoServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<MediaInfoPlaybackInfoResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PlaybackInfoResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -844,7 +844,7 @@ open class MediaInfoServiceAPI {
      - parameter body: (body) LiveStreamRequest:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivestreamsOpen(body: MediaInfoLiveStreamRequest, completion: @escaping ((_ data: MediaInfoLiveStreamResponse?,_ error: Error?) -> Void)) {
+    open class func postLivestreamsOpen(body: LiveStreamRequest, completion: @escaping ((_ data: LiveStreamResponse?,_ error: Error?) -> Void)) {
         postLivestreamsOpenWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1015,16 +1015,16 @@ open class MediaInfoServiceAPI {
 }}]
      - parameter body: (body) LiveStreamRequest:  
 
-     - returns: RequestBuilder<MediaInfoLiveStreamResponse> 
+     - returns: RequestBuilder<LiveStreamResponse> 
      */
-    open class func postLivestreamsOpenWithRequestBuilder(body: MediaInfoLiveStreamRequest) -> RequestBuilder<MediaInfoLiveStreamResponse> {
+    open class func postLivestreamsOpenWithRequestBuilder(body: LiveStreamRequest) -> RequestBuilder<LiveStreamResponse> {
         let path = "/LiveStreams/Open"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<MediaInfoLiveStreamResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<LiveStreamResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

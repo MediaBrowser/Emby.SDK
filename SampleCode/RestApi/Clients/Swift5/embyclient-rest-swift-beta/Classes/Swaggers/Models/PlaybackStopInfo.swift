@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Class PlaybackStopInfo.   */
 
 public struct PlaybackStopInfo: Codable {
 
@@ -16,12 +17,19 @@ public struct PlaybackStopInfo: Codable {
     public var playlistIndex: Int?
     public var playlistLength: Int?
     public var item: BaseItemDto?
+    /** The item identifier. */
     public var itemId: String?
+    /** The session id. */
     public var sessionId: String?
+    /** The media version identifier. */
     public var mediaSourceId: String?
+    /** The position ticks. */
     public var positionTicks: Int64?
+    /** The live stream identifier. */
     public var liveStreamId: String?
+    /** The play session identifier. */
     public var playSessionId: String?
+    /** A value indicating whether this &#x60;MediaBrowser.Model.Session.PlaybackStopInfo&#x60; is failed. */
     public var failed: Bool?
     public var nextMediaType: String?
 

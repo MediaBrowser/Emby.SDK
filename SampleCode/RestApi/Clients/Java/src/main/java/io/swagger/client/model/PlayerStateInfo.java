@@ -64,10 +64,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get positionTicks
+   * The now playing position ticks.
    * @return positionTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The now playing position ticks.")
   public Long getPositionTicks() {
     return positionTicks;
   }
@@ -82,10 +82,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get canSeek
+   * A value indicating whether this instance can seek.
    * @return canSeek
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance can seek.")
   public Boolean isCanSeek() {
     return canSeek;
   }
@@ -100,10 +100,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get isPaused
+   * A value indicating whether this instance is paused.
    * @return isPaused
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is paused.")
   public Boolean isIsPaused() {
     return isPaused;
   }
@@ -118,10 +118,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get isMuted
+   * A value indicating whether this instance is muted.
    * @return isMuted
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is muted.")
   public Boolean isIsMuted() {
     return isMuted;
   }
@@ -136,10 +136,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get volumeLevel
+   * The volume level.
    * @return volumeLevel
   **/
-  @Schema(description = "")
+  @Schema(description = "The volume level.")
   public Integer getVolumeLevel() {
     return volumeLevel;
   }
@@ -154,10 +154,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get audioStreamIndex
+   * The index of the now playing audio stream.
    * @return audioStreamIndex
   **/
-  @Schema(description = "")
+  @Schema(description = "The index of the now playing audio stream.")
   public Integer getAudioStreamIndex() {
     return audioStreamIndex;
   }
@@ -172,10 +172,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get subtitleStreamIndex
+   * The index of the now playing subtitle stream.
    * @return subtitleStreamIndex
   **/
-  @Schema(description = "")
+  @Schema(description = "The index of the now playing subtitle stream.")
   public Integer getSubtitleStreamIndex() {
     return subtitleStreamIndex;
   }
@@ -190,10 +190,10 @@ public class PlayerStateInfo {
   }
 
    /**
-   * Get mediaSourceId
+   * The now playing media version identifier.
    * @return mediaSourceId
   **/
-  @Schema(description = "")
+  @Schema(description = "The now playing media version identifier.")
   public String getMediaSourceId() {
     return mediaSourceId;
   }

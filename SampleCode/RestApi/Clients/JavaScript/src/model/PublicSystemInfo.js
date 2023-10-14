@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PublicSystemInfo model module.
 * @module model/PublicSystemInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class PublicSystemInfo {
     /**
@@ -67,6 +67,7 @@ export default class PublicSystemInfo {
     }
 
     /**
+    * The local address.
     * @member {String} LocalAddress
     */
     'LocalAddress' = undefined;
@@ -75,6 +76,7 @@ export default class PublicSystemInfo {
     */
     'LocalAddresses' = undefined;
     /**
+    * The wan address.
     * @member {String} WanAddress
     */
     'WanAddress' = undefined;
@@ -83,14 +85,17 @@ export default class PublicSystemInfo {
     */
     'RemoteAddresses' = undefined;
     /**
+    * The name of the server.
     * @member {String} ServerName
     */
     'ServerName' = undefined;
     /**
+    * The version.
     * @member {String} Version
     */
     'Version' = undefined;
     /**
+    * The id.
     * @member {String} Id
     */
     'Id' = undefined;

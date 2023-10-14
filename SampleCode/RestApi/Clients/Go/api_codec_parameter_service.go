@@ -27,15 +27,15 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param codecId Codec Id
  * @param parameterContext Parameter Context
-@return EmbyWebGenericEditEditObjectContainer
+@return EditObjectContainer
 */
-func (a *CodecParameterServiceApiService) GetEncodingCodecparameters(ctx context.Context, codecId string, parameterContext MediaEncodingCodecParameterContext) (EmbyWebGenericEditEditObjectContainer, *http.Response, error) {
+func (a *CodecParameterServiceApiService) GetEncodingCodecparameters(ctx context.Context, codecId string, parameterContext MediaEncodingCodecParameterContext) (EditObjectContainer, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyWebGenericEditEditObjectContainer
+		localVarReturnValue EditObjectContainer
 	)
 
 	// create path and map variables
@@ -107,7 +107,7 @@ func (a *CodecParameterServiceApiService) GetEncodingCodecparameters(ctx context
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyWebGenericEditEditObjectContainer
+			var v EditObjectContainer
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

@@ -1567,7 +1567,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter type: (query) Optional filter by channel type. (optional)
      - parameter isLiked: (query) Filter by channels that are liked, or not. (optional)
@@ -2334,7 +2334,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Channel Id 
      - parameter userId: (query) Optional attach user data. (optional)
@@ -3513,7 +3513,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter artistType: (query) Artist or AlbumArtist (optional)
      - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
@@ -6001,7 +6001,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
 
      - returns: RequestBuilder<BaseItemDto> 
@@ -6504,7 +6504,7 @@ open class LiveTvServiceAPI {
      - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLivetvManageChannels(startIndex: Int? = nil, limit: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultEmbyLiveTVChannelManagementInfo?,_ error: Error?) -> Void)) {
+    open class func getLivetvManageChannels(startIndex: Int? = nil, limit: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultChannelManagementInfo?,_ error: Error?) -> Void)) {
         getLivetvManageChannelsWithRequestBuilder(startIndex: startIndex, limit: limit, sortBy: sortBy, sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -6536,9 +6536,9 @@ open class LiveTvServiceAPI {
      - parameter sortBy: (query) Optional. Specify one or more sort orders, comma delimeted. Options: Name, StartDate (optional)
      - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
 
-     - returns: RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo> 
+     - returns: RequestBuilder<QueryResultChannelManagementInfo> 
      */
-    open class func getLivetvManageChannelsWithRequestBuilder(startIndex: Int? = nil, limit: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil) -> RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo> {
+    open class func getLivetvManageChannelsWithRequestBuilder(startIndex: Int? = nil, limit: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil) -> RequestBuilder<QueryResultChannelManagementInfo> {
         let path = "/LiveTv/Manage/Channels"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -6551,7 +6551,7 @@ open class LiveTvServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultChannelManagementInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -7968,7 +7968,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (query) Optional filter by user id. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
@@ -8908,7 +8908,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Recording Id 
      - parameter userId: (query) Optional attach user data. (optional)
@@ -9991,7 +9991,7 @@ open class LiveTvServiceAPI {
 } ]}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (query) Optional filter by user and attach user data. (optional)
      - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
@@ -11077,7 +11077,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
@@ -12149,7 +12149,7 @@ open class LiveTvServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
@@ -15226,7 +15226,7 @@ open class LiveTvServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivetvManageChannelsByIdDisabled(body: LiveTVApiSetChannelDisabled, _id: String, completion: @escaping ((_ data: QueryResultEmbyLiveTVChannelManagementInfo?,_ error: Error?) -> Void)) {
+    open class func postLivetvManageChannelsByIdDisabled(body: LiveTVApiSetChannelDisabled, _id: String, completion: @escaping ((_ data: QueryResultChannelManagementInfo?,_ error: Error?) -> Void)) {
         postLivetvManageChannelsByIdDisabledWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -15256,9 +15256,9 @@ open class LiveTvServiceAPI {
      - parameter body: (body) SetChannelDisabled 
      - parameter _id: (path)  
 
-     - returns: RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo> 
+     - returns: RequestBuilder<QueryResultChannelManagementInfo> 
      */
-    open class func postLivetvManageChannelsByIdDisabledWithRequestBuilder(body: LiveTVApiSetChannelDisabled, _id: String) -> RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo> {
+    open class func postLivetvManageChannelsByIdDisabledWithRequestBuilder(body: LiveTVApiSetChannelDisabled, _id: String) -> RequestBuilder<QueryResultChannelManagementInfo> {
         var path = "/LiveTv/Manage/Channels/{Id}/Disabled"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15268,7 +15268,7 @@ open class LiveTvServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultChannelManagementInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -15279,7 +15279,7 @@ open class LiveTvServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivetvManageChannelsByIdSortindex(body: LiveTVApiSetChannelSortIndex, _id: String, completion: @escaping ((_ data: QueryResultEmbyLiveTVChannelManagementInfo?,_ error: Error?) -> Void)) {
+    open class func postLivetvManageChannelsByIdSortindex(body: LiveTVApiSetChannelSortIndex, _id: String, completion: @escaping ((_ data: QueryResultChannelManagementInfo?,_ error: Error?) -> Void)) {
         postLivetvManageChannelsByIdSortindexWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -15309,9 +15309,9 @@ open class LiveTvServiceAPI {
      - parameter body: (body) SetChannelSortIndex 
      - parameter _id: (path)  
 
-     - returns: RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo> 
+     - returns: RequestBuilder<QueryResultChannelManagementInfo> 
      */
-    open class func postLivetvManageChannelsByIdSortindexWithRequestBuilder(body: LiveTVApiSetChannelSortIndex, _id: String) -> RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo> {
+    open class func postLivetvManageChannelsByIdSortindexWithRequestBuilder(body: LiveTVApiSetChannelSortIndex, _id: String) -> RequestBuilder<QueryResultChannelManagementInfo> {
         var path = "/LiveTv/Manage/Channels/{Id}/SortIndex"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15321,7 +15321,7 @@ open class LiveTvServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<QueryResultEmbyLiveTVChannelManagementInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultChannelManagementInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

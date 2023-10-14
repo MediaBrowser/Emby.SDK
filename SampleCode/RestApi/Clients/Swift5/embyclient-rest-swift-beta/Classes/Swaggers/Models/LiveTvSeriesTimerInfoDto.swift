@@ -8,43 +8,69 @@
 import Foundation
 
 
+/** Class SeriesTimerInfoDto.   */
 
 public struct LiveTvSeriesTimerInfoDto: Codable {
 
+    /** A value indicating whether \\[record any time\\]. */
     public var recordAnyTime: Bool?
     public var skipEpisodesInLibrary: Bool?
+    /** A value indicating whether \\[record any channel\\]. */
     public var recordAnyChannel: Bool?
     public var keepUpTo: Int?
     public var maxRecordingSeconds: Int?
+    /** A value indicating whether \\[record new only\\]. */
     public var recordNewOnly: Bool?
     public var channelIds: [String]?
+    /** The days. */
     public var days: [DayOfWeek]?
+    /** The image tags. */
     public var imageTags: [String:String]?
+    /** The parent thumb item id. */
     public var parentThumbItemId: String?
+    /** The parent thumb image tag. */
     public var parentThumbImageTag: String?
+    /** The parent primary image item identifier. */
     public var parentPrimaryImageItemId: String?
+    /** The parent primary image tag. */
     public var parentPrimaryImageTag: String?
     public var seriesId: String?
     public var keywords: [LiveTvKeywordInfo]?
     public var timerType: LiveTvTimerType?
+    /** Id of the recording. */
     public var _id: String?
     public var type: String?
+    /** The server identifier. */
     public var serverId: String?
+    /** ChannelId of the recording. */
     public var channelId: String?
+    /** ChannelName of the recording. */
     public var channelName: String?
     public var channelNumber: String?
     public var channelPrimaryImageTag: String?
+    /** The program identifier. */
     public var programId: String?
+    /** Name of the recording. */
     public var name: String?
+    /** Description of the recording. */
     public var overview: String?
+    /** The start date of the recording, in UTC. */
     public var startDate: Date?
+    /** The end date of the recording, in UTC. */
     public var endDate: Date?
+    /** The priority. */
     public var priority: Int?
+    /** The pre padding seconds. */
     public var prePaddingSeconds: Int?
+    /** The post padding seconds. */
     public var postPaddingSeconds: Int?
+    /** A value indicating whether this instance is pre padding required. */
     public var isPrePaddingRequired: Bool?
+    /** If the item does not have any backdrops, this will hold the Id of the Parent that has one. */
     public var parentBackdropItemId: String?
+    /** The parent backdrop image tags. */
     public var parentBackdropImageTags: [String]?
+    /** A value indicating whether this instance is post padding required. */
     public var isPostPaddingRequired: Bool?
     public var keepUntil: LiveTvKeepUntil?
 

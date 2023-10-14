@@ -59,7 +59,7 @@ public class SuggestionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets items based on a query. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets items based on a query. Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridSuggestionsCall(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -141,7 +141,7 @@ public class SuggestionsServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets items based on a query. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets items based on a query. Documentation</a>
      */
     public QueryResultBaseItemDto getUsersByUseridSuggestions(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridSuggestionsWithHttpInfo(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -160,7 +160,7 @@ public class SuggestionsServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets items based on a query. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets items based on a query. Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getUsersByUseridSuggestionsWithHttpInfo(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridSuggestionsValidateBeforeCall(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -181,7 +181,7 @@ public class SuggestionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets items based on a query. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets items based on a query. Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridSuggestionsAsync(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 

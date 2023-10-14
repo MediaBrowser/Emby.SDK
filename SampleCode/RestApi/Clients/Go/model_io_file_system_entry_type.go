@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// IoFileSystemEntryType : Enum FileSystemEntryType  
 type IoFileSystemEntryType string
 
 // List of IO.FileSystemEntryType

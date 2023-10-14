@@ -170,6 +170,7 @@ class PlaybackProgressInfo(object):
     def can_seek(self):
         """Gets the can_seek of this PlaybackProgressInfo.  # noqa: E501
 
+        A value indicating whether this instance can seek.  # noqa: E501
 
         :return: The can_seek of this PlaybackProgressInfo.  # noqa: E501
         :rtype: bool
@@ -180,6 +181,7 @@ class PlaybackProgressInfo(object):
     def can_seek(self, can_seek):
         """Sets the can_seek of this PlaybackProgressInfo.
 
+        A value indicating whether this instance can seek.  # noqa: E501
 
         :param can_seek: The can_seek of this PlaybackProgressInfo.  # noqa: E501
         :type: bool
@@ -254,6 +256,7 @@ class PlaybackProgressInfo(object):
     def item_id(self):
         """Gets the item_id of this PlaybackProgressInfo.  # noqa: E501
 
+        The item identifier.  # noqa: E501
 
         :return: The item_id of this PlaybackProgressInfo.  # noqa: E501
         :rtype: str
@@ -264,6 +267,7 @@ class PlaybackProgressInfo(object):
     def item_id(self, item_id):
         """Sets the item_id of this PlaybackProgressInfo.
 
+        The item identifier.  # noqa: E501
 
         :param item_id: The item_id of this PlaybackProgressInfo.  # noqa: E501
         :type: str
@@ -275,6 +279,7 @@ class PlaybackProgressInfo(object):
     def session_id(self):
         """Gets the session_id of this PlaybackProgressInfo.  # noqa: E501
 
+        The session id.  # noqa: E501
 
         :return: The session_id of this PlaybackProgressInfo.  # noqa: E501
         :rtype: str
@@ -285,6 +290,7 @@ class PlaybackProgressInfo(object):
     def session_id(self, session_id):
         """Sets the session_id of this PlaybackProgressInfo.
 
+        The session id.  # noqa: E501
 
         :param session_id: The session_id of this PlaybackProgressInfo.  # noqa: E501
         :type: str
@@ -296,6 +302,7 @@ class PlaybackProgressInfo(object):
     def media_source_id(self):
         """Gets the media_source_id of this PlaybackProgressInfo.  # noqa: E501
 
+        The media version identifier.  # noqa: E501
 
         :return: The media_source_id of this PlaybackProgressInfo.  # noqa: E501
         :rtype: str
@@ -306,6 +313,7 @@ class PlaybackProgressInfo(object):
     def media_source_id(self, media_source_id):
         """Sets the media_source_id of this PlaybackProgressInfo.
 
+        The media version identifier.  # noqa: E501
 
         :param media_source_id: The media_source_id of this PlaybackProgressInfo.  # noqa: E501
         :type: str
@@ -317,6 +325,7 @@ class PlaybackProgressInfo(object):
     def audio_stream_index(self):
         """Gets the audio_stream_index of this PlaybackProgressInfo.  # noqa: E501
 
+        The index of the audio stream.  # noqa: E501
 
         :return: The audio_stream_index of this PlaybackProgressInfo.  # noqa: E501
         :rtype: int
@@ -327,6 +336,7 @@ class PlaybackProgressInfo(object):
     def audio_stream_index(self, audio_stream_index):
         """Sets the audio_stream_index of this PlaybackProgressInfo.
 
+        The index of the audio stream.  # noqa: E501
 
         :param audio_stream_index: The audio_stream_index of this PlaybackProgressInfo.  # noqa: E501
         :type: int
@@ -338,6 +348,7 @@ class PlaybackProgressInfo(object):
     def subtitle_stream_index(self):
         """Gets the subtitle_stream_index of this PlaybackProgressInfo.  # noqa: E501
 
+        The index of the subtitle stream.  # noqa: E501
 
         :return: The subtitle_stream_index of this PlaybackProgressInfo.  # noqa: E501
         :rtype: int
@@ -348,6 +359,7 @@ class PlaybackProgressInfo(object):
     def subtitle_stream_index(self, subtitle_stream_index):
         """Sets the subtitle_stream_index of this PlaybackProgressInfo.
 
+        The index of the subtitle stream.  # noqa: E501
 
         :param subtitle_stream_index: The subtitle_stream_index of this PlaybackProgressInfo.  # noqa: E501
         :type: int
@@ -359,6 +371,7 @@ class PlaybackProgressInfo(object):
     def is_paused(self):
         """Gets the is_paused of this PlaybackProgressInfo.  # noqa: E501
 
+        A value indicating whether this instance is paused.  # noqa: E501
 
         :return: The is_paused of this PlaybackProgressInfo.  # noqa: E501
         :rtype: bool
@@ -369,6 +382,7 @@ class PlaybackProgressInfo(object):
     def is_paused(self, is_paused):
         """Sets the is_paused of this PlaybackProgressInfo.
 
+        A value indicating whether this instance is paused.  # noqa: E501
 
         :param is_paused: The is_paused of this PlaybackProgressInfo.  # noqa: E501
         :type: bool
@@ -422,6 +436,7 @@ class PlaybackProgressInfo(object):
     def is_muted(self):
         """Gets the is_muted of this PlaybackProgressInfo.  # noqa: E501
 
+        A value indicating whether this instance is muted.  # noqa: E501
 
         :return: The is_muted of this PlaybackProgressInfo.  # noqa: E501
         :rtype: bool
@@ -432,6 +447,7 @@ class PlaybackProgressInfo(object):
     def is_muted(self, is_muted):
         """Sets the is_muted of this PlaybackProgressInfo.
 
+        A value indicating whether this instance is muted.  # noqa: E501
 
         :param is_muted: The is_muted of this PlaybackProgressInfo.  # noqa: E501
         :type: bool
@@ -443,6 +459,7 @@ class PlaybackProgressInfo(object):
     def position_ticks(self):
         """Gets the position_ticks of this PlaybackProgressInfo.  # noqa: E501
 
+        The position ticks.  # noqa: E501
 
         :return: The position_ticks of this PlaybackProgressInfo.  # noqa: E501
         :rtype: int
@@ -453,6 +470,7 @@ class PlaybackProgressInfo(object):
     def position_ticks(self, position_ticks):
         """Sets the position_ticks of this PlaybackProgressInfo.
 
+        The position ticks.  # noqa: E501
 
         :param position_ticks: The position_ticks of this PlaybackProgressInfo.  # noqa: E501
         :type: int
@@ -506,6 +524,7 @@ class PlaybackProgressInfo(object):
     def volume_level(self):
         """Gets the volume_level of this PlaybackProgressInfo.  # noqa: E501
 
+        The volume level.  # noqa: E501
 
         :return: The volume_level of this PlaybackProgressInfo.  # noqa: E501
         :rtype: int
@@ -516,6 +535,7 @@ class PlaybackProgressInfo(object):
     def volume_level(self, volume_level):
         """Sets the volume_level of this PlaybackProgressInfo.
 
+        The volume level.  # noqa: E501
 
         :param volume_level: The volume_level of this PlaybackProgressInfo.  # noqa: E501
         :type: int
@@ -611,6 +631,7 @@ class PlaybackProgressInfo(object):
     def live_stream_id(self):
         """Gets the live_stream_id of this PlaybackProgressInfo.  # noqa: E501
 
+        The live stream identifier.  # noqa: E501
 
         :return: The live_stream_id of this PlaybackProgressInfo.  # noqa: E501
         :rtype: str
@@ -621,6 +642,7 @@ class PlaybackProgressInfo(object):
     def live_stream_id(self, live_stream_id):
         """Sets the live_stream_id of this PlaybackProgressInfo.
 
+        The live stream identifier.  # noqa: E501
 
         :param live_stream_id: The live_stream_id of this PlaybackProgressInfo.  # noqa: E501
         :type: str
@@ -632,6 +654,7 @@ class PlaybackProgressInfo(object):
     def play_session_id(self):
         """Gets the play_session_id of this PlaybackProgressInfo.  # noqa: E501
 
+        The play session identifier.  # noqa: E501
 
         :return: The play_session_id of this PlaybackProgressInfo.  # noqa: E501
         :rtype: str
@@ -642,6 +665,7 @@ class PlaybackProgressInfo(object):
     def play_session_id(self, play_session_id):
         """Sets the play_session_id of this PlaybackProgressInfo.
 
+        The play session identifier.  # noqa: E501
 
         :param play_session_id: The play_session_id of this PlaybackProgressInfo.  # noqa: E501
         :type: str

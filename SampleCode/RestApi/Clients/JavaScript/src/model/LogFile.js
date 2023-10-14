@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LogFile model module.
 * @module model/LogFile
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LogFile {
     /**
@@ -58,18 +58,22 @@ export default class LogFile {
     }
 
     /**
+    * The date created.
     * @member {Date} DateCreated
     */
     'DateCreated' = undefined;
     /**
+    * The date modified.
     * @member {Date} DateModified
     */
     'DateModified' = undefined;
     /**
+    * The size.
     * @member {Number} Size
     */
     'Size' = undefined;
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;

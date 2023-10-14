@@ -278,7 +278,8 @@
                       <a href="#Emby_Media_Model_Enums_CodecKinds" class="typelink">CodecKinds</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum defining the kind of media a codec is processing.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MediaTypeName</span></td>
@@ -296,7 +297,9 @@
                       <a href="#Emby_Media_Model_Enums_VideoMediaTypes" class="typelink">VideoMediaTypes</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum listing video media types.</p>
+<p>The enum member names are matching exactly those that are used by ffmpeg. Exception: Items that are starting with a number are prefixed with an underscore here.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MinWidth</span></td>
@@ -365,7 +368,11 @@
                       <a href="#Emby_Media_Model_Types_BitRate" class="typelink">BitRate</a>
                   
               </td>
-              <td></td>
+              <td><p>A type for handling bit rates.</p>
+<p>The purpose of this type is to avoid manual calculations and conversions in code,             unified handling and conversion as well as presentation through its various To***String methods.</p>
+<p><code>System.IComparable</code></p>
+<p><code>System.IEquatable</code>1`</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SupportedColorFormats</span></td>
@@ -410,7 +417,8 @@
                       <a href="#Emby_Media_Model_Enums_CodecDirections" class="typelink">CodecDirections</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum for indicating the processing direction of a codec.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Name</span></td>
@@ -455,7 +463,9 @@
                       <a href="#Emby_Media_Model_Enums_SecondaryFrameworks" class="typelink">SecondaryFrameworks</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum defining secondary frameworks for encoding and decoding.</p>
+<p>While most of these are hardware acceleration frameworks, this is not a necessity             (e.g. Android MediaCodec offers software codecs as well).</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SecondaryFrameworkCodec</span></td>
@@ -611,7 +621,9 @@
                       <a href="#Emby_Media_Model_Enums_SecondaryFrameworks" class="typelink">SecondaryFrameworks</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum defining secondary frameworks for encoding and decoding.</p>
+<p>While most of these are hardware acceleration frameworks, this is not a necessity             (e.g. Android MediaCodec offers software codecs as well).</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DevPath</span></td>
@@ -715,8 +727,7 @@
   
   <h3 id="System_Version" class="text-capitalize">Version</h3>
   <div>
-      <p>see also <a href="https://learn.microsoft.com/dotnet/api/system.version">System.Version</a></p>
-
+      
   </div>
   <table class="table table-bordered table-striped table-condensed">
       <thead>
@@ -1140,7 +1151,8 @@
                       <a href="#Emby_Media_Model_Types_ProfileInformation" class="typelink">ProfileInformation</a>
                   
               </td>
-              <td></td>
+              <td><p>Class for unified presentation of all information associated with a specific codec profile.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Level</span></td>
@@ -1149,7 +1161,8 @@
                       <a href="#Emby_Media_Model_Types_LevelInformation" class="typelink">LevelInformation</a>
                   
               </td>
-              <td></td>
+              <td><p>Class for unified presentation of all information associated with a specific codec level.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -1175,7 +1188,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The enum member name of the profile.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Description</span></td>
@@ -1184,7 +1198,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The common name of the profile.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Details</span></td>
@@ -1193,7 +1208,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Detail information about the profile.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Id</span></td>
@@ -1202,7 +1218,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A unique identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">BitDepths</span></td>
@@ -1211,7 +1228,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The bit depths.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -1237,7 +1255,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The enum member name of the level.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Description</span></td>
@@ -1246,7 +1265,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The common name of the level.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Ordinal</span></td>
@@ -1256,7 +1276,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating the level's ranking relative to other levels.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MaxBitRate</span></td>
@@ -1265,7 +1286,11 @@
                       <a href="#Emby_Media_Model_Types_BitRate" class="typelink">BitRate</a>
                   
               </td>
-              <td></td>
+              <td><p>A type for handling bit rates.</p>
+<p>The purpose of this type is to avoid manual calculations and conversions in code,             unified handling and conversion as well as presentation through its various To***String methods.</p>
+<p><code>System.IComparable</code></p>
+<p><code>System.IEquatable</code>1`</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MaxBitRateDisplay</span></td>
@@ -1274,7 +1299,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A display value of the <code>Emby.Media.Model.Types.LevelInformation.MaxBitRate</code> property.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Id</span></td>
@@ -1283,7 +1309,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A unique identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ResolutionRates</span></td>
@@ -1292,7 +1319,8 @@
                       <a href="#Emby_Media_Model_Types_ResolutionWithRate" class="typelink">ResolutionWithRate[]</a>
                   
               </td>
-              <td></td>
+              <td><p>Examples for the maximum supported combinations of resolution and rate for this level.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ResolutionRateStrings</span></td>
@@ -1301,7 +1329,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Examples for the maximum supported combinations of resolution and rate for this level as string values.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ResolutionRatesDisplay</span></td>
@@ -1310,7 +1339,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A single string from the <code>Emby.Media.Model.Types.LevelInformation.ResolutionRateStrings</code> list.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -1337,7 +1367,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The resolution width.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Height</span></td>
@@ -1347,7 +1378,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The resolution height.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">FrameRate</span></td>
@@ -1357,7 +1389,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The frame rate in frames/second (fps).</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Resolution</span></td>
@@ -1366,7 +1399,10 @@
                       <a href="#Emby_Media_Model_Types_Resolution" class="typelink">Resolution</a>
                   
               </td>
-              <td></td>
+              <td><p>Struct representing a video resolution specified in X and Y dimension.</p>
+<p><code>System.IComparable</code></p>
+<p><code>System.IEquatable</code>1`</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -1393,7 +1429,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The resolution width.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Height</span></td>
@@ -1403,7 +1440,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The resolution height.</p>
+</td>
           </tr>
       </tbody>
   </table>

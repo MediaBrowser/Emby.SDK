@@ -78,10 +78,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get id
+   * The identifier.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The identifier.")
   public String getId() {
     return id;
   }
@@ -132,10 +132,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get lastUserName
+   * The last name of the user.
    * @return lastUserName
   **/
-  @Schema(description = "")
+  @Schema(description = "The last name of the user.")
   public String getLastUserName() {
     return lastUserName;
   }
@@ -150,10 +150,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get appName
+   * The name of the application.
    * @return appName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the application.")
   public String getAppName() {
     return appName;
   }
@@ -168,10 +168,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get appVersion
+   * The application version.
    * @return appVersion
   **/
-  @Schema(description = "")
+  @Schema(description = "The application version.")
   public String getAppVersion() {
     return appVersion;
   }
@@ -186,10 +186,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get lastUserId
+   * The last user identifier.
    * @return lastUserId
   **/
-  @Schema(description = "")
+  @Schema(description = "The last user identifier.")
   public String getLastUserId() {
     return lastUserId;
   }

@@ -20,16 +20,16 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.ExternalIdInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersAlbumInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersArtistInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersBookInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersGameInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersItemLookupInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersMovieInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersMusicVideoInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersPersonLookupInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersSeriesInfo;
-import io.swagger.client.model.ProvidersRemoteSearchQueryProvidersTrailerInfo;
+import io.swagger.client.model.RemoteSearchQueryAlbumInfo;
+import io.swagger.client.model.RemoteSearchQueryArtistInfo;
+import io.swagger.client.model.RemoteSearchQueryBookInfo;
+import io.swagger.client.model.RemoteSearchQueryGameInfo;
+import io.swagger.client.model.RemoteSearchQueryItemLookupInfo;
+import io.swagger.client.model.RemoteSearchQueryMovieInfo;
+import io.swagger.client.model.RemoteSearchQueryMusicVideoInfo;
+import io.swagger.client.model.RemoteSearchQueryPersonLookupInfo;
+import io.swagger.client.model.RemoteSearchQuerySeriesInfo;
+import io.swagger.client.model.RemoteSearchQueryTrailerInfo;
 import io.swagger.client.model.RemoteSearchResult;
 
 import java.lang.reflect.Type;
@@ -579,7 +579,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchBookCall(ProvidersRemoteSearchQueryProvidersBookInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchBookCall(RemoteSearchQueryBookInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -621,7 +621,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchBookValidateBeforeCall(ProvidersRemoteSearchQueryProvidersBookInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchBookValidateBeforeCall(RemoteSearchQueryBookInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchBook(Async)");
@@ -643,7 +643,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchBook(ProvidersRemoteSearchQueryProvidersBookInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchBook(RemoteSearchQueryBookInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchBookWithHttpInfo(body);
         return resp.getData();
     }
@@ -655,7 +655,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchBookWithHttpInfo(ProvidersRemoteSearchQueryProvidersBookInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchBookWithHttpInfo(RemoteSearchQueryBookInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchBookValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -669,7 +669,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchBookAsync(ProvidersRemoteSearchQueryProvidersBookInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchBookAsync(RemoteSearchQueryBookInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -703,7 +703,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchBoxsetCall(ProvidersRemoteSearchQueryProvidersItemLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchBoxsetCall(RemoteSearchQueryItemLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -745,7 +745,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchBoxsetValidateBeforeCall(ProvidersRemoteSearchQueryProvidersItemLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchBoxsetValidateBeforeCall(RemoteSearchQueryItemLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchBoxset(Async)");
@@ -767,7 +767,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchBoxset(ProvidersRemoteSearchQueryProvidersItemLookupInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchBoxset(RemoteSearchQueryItemLookupInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchBoxsetWithHttpInfo(body);
         return resp.getData();
     }
@@ -779,7 +779,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchBoxsetWithHttpInfo(ProvidersRemoteSearchQueryProvidersItemLookupInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchBoxsetWithHttpInfo(RemoteSearchQueryItemLookupInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchBoxsetValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -793,7 +793,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchBoxsetAsync(ProvidersRemoteSearchQueryProvidersItemLookupInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchBoxsetAsync(RemoteSearchQueryItemLookupInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -827,7 +827,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchGameCall(ProvidersRemoteSearchQueryProvidersGameInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchGameCall(RemoteSearchQueryGameInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -869,7 +869,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchGameValidateBeforeCall(ProvidersRemoteSearchQueryProvidersGameInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchGameValidateBeforeCall(RemoteSearchQueryGameInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchGame(Async)");
@@ -891,7 +891,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchGame(ProvidersRemoteSearchQueryProvidersGameInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchGame(RemoteSearchQueryGameInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchGameWithHttpInfo(body);
         return resp.getData();
     }
@@ -903,7 +903,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchGameWithHttpInfo(ProvidersRemoteSearchQueryProvidersGameInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchGameWithHttpInfo(RemoteSearchQueryGameInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchGameValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -917,7 +917,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchGameAsync(ProvidersRemoteSearchQueryProvidersGameInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchGameAsync(RemoteSearchQueryGameInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -951,7 +951,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMovieCall(ProvidersRemoteSearchQueryProvidersMovieInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMovieCall(RemoteSearchQueryMovieInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -993,7 +993,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchMovieValidateBeforeCall(ProvidersRemoteSearchQueryProvidersMovieInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchMovieValidateBeforeCall(RemoteSearchQueryMovieInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchMovie(Async)");
@@ -1015,7 +1015,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchMovie(ProvidersRemoteSearchQueryProvidersMovieInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchMovie(RemoteSearchQueryMovieInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchMovieWithHttpInfo(body);
         return resp.getData();
     }
@@ -1027,7 +1027,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMovieWithHttpInfo(ProvidersRemoteSearchQueryProvidersMovieInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMovieWithHttpInfo(RemoteSearchQueryMovieInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchMovieValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1041,7 +1041,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMovieAsync(ProvidersRemoteSearchQueryProvidersMovieInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMovieAsync(RemoteSearchQueryMovieInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1075,7 +1075,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMusicalbumCall(ProvidersRemoteSearchQueryProvidersAlbumInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMusicalbumCall(RemoteSearchQueryAlbumInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1117,7 +1117,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchMusicalbumValidateBeforeCall(ProvidersRemoteSearchQueryProvidersAlbumInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchMusicalbumValidateBeforeCall(RemoteSearchQueryAlbumInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchMusicalbum(Async)");
@@ -1139,7 +1139,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchMusicalbum(ProvidersRemoteSearchQueryProvidersAlbumInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchMusicalbum(RemoteSearchQueryAlbumInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchMusicalbumWithHttpInfo(body);
         return resp.getData();
     }
@@ -1151,7 +1151,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMusicalbumWithHttpInfo(ProvidersRemoteSearchQueryProvidersAlbumInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMusicalbumWithHttpInfo(RemoteSearchQueryAlbumInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchMusicalbumValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1165,7 +1165,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMusicalbumAsync(ProvidersRemoteSearchQueryProvidersAlbumInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMusicalbumAsync(RemoteSearchQueryAlbumInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1199,7 +1199,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMusicartistCall(ProvidersRemoteSearchQueryProvidersArtistInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMusicartistCall(RemoteSearchQueryArtistInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1241,7 +1241,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchMusicartistValidateBeforeCall(ProvidersRemoteSearchQueryProvidersArtistInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchMusicartistValidateBeforeCall(RemoteSearchQueryArtistInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchMusicartist(Async)");
@@ -1263,7 +1263,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchMusicartist(ProvidersRemoteSearchQueryProvidersArtistInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchMusicartist(RemoteSearchQueryArtistInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchMusicartistWithHttpInfo(body);
         return resp.getData();
     }
@@ -1275,7 +1275,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMusicartistWithHttpInfo(ProvidersRemoteSearchQueryProvidersArtistInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMusicartistWithHttpInfo(RemoteSearchQueryArtistInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchMusicartistValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1289,7 +1289,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMusicartistAsync(ProvidersRemoteSearchQueryProvidersArtistInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMusicartistAsync(RemoteSearchQueryArtistInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1323,7 +1323,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMusicvideoCall(ProvidersRemoteSearchQueryProvidersMusicVideoInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMusicvideoCall(RemoteSearchQueryMusicVideoInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1365,7 +1365,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchMusicvideoValidateBeforeCall(ProvidersRemoteSearchQueryProvidersMusicVideoInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchMusicvideoValidateBeforeCall(RemoteSearchQueryMusicVideoInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchMusicvideo(Async)");
@@ -1387,7 +1387,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchMusicvideo(ProvidersRemoteSearchQueryProvidersMusicVideoInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchMusicvideo(RemoteSearchQueryMusicVideoInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchMusicvideoWithHttpInfo(body);
         return resp.getData();
     }
@@ -1399,7 +1399,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMusicvideoWithHttpInfo(ProvidersRemoteSearchQueryProvidersMusicVideoInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchMusicvideoWithHttpInfo(RemoteSearchQueryMusicVideoInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchMusicvideoValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1413,7 +1413,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchMusicvideoAsync(ProvidersRemoteSearchQueryProvidersMusicVideoInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchMusicvideoAsync(RemoteSearchQueryMusicVideoInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1447,7 +1447,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchPersonCall(ProvidersRemoteSearchQueryProvidersPersonLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchPersonCall(RemoteSearchQueryPersonLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1489,7 +1489,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchPersonValidateBeforeCall(ProvidersRemoteSearchQueryProvidersPersonLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchPersonValidateBeforeCall(RemoteSearchQueryPersonLookupInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchPerson(Async)");
@@ -1511,7 +1511,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchPerson(ProvidersRemoteSearchQueryProvidersPersonLookupInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchPerson(RemoteSearchQueryPersonLookupInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchPersonWithHttpInfo(body);
         return resp.getData();
     }
@@ -1523,7 +1523,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchPersonWithHttpInfo(ProvidersRemoteSearchQueryProvidersPersonLookupInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchPersonWithHttpInfo(RemoteSearchQueryPersonLookupInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchPersonValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1537,7 +1537,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchPersonAsync(ProvidersRemoteSearchQueryProvidersPersonLookupInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchPersonAsync(RemoteSearchQueryPersonLookupInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1571,7 +1571,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchSeriesCall(ProvidersRemoteSearchQueryProvidersSeriesInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchSeriesCall(RemoteSearchQuerySeriesInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1613,7 +1613,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchSeriesValidateBeforeCall(ProvidersRemoteSearchQueryProvidersSeriesInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchSeriesValidateBeforeCall(RemoteSearchQuerySeriesInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchSeries(Async)");
@@ -1635,7 +1635,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchSeries(ProvidersRemoteSearchQueryProvidersSeriesInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchSeries(RemoteSearchQuerySeriesInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchSeriesWithHttpInfo(body);
         return resp.getData();
     }
@@ -1647,7 +1647,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchSeriesWithHttpInfo(ProvidersRemoteSearchQueryProvidersSeriesInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchSeriesWithHttpInfo(RemoteSearchQuerySeriesInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchSeriesValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1661,7 +1661,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchSeriesAsync(ProvidersRemoteSearchQueryProvidersSeriesInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchSeriesAsync(RemoteSearchQuerySeriesInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1695,7 +1695,7 @@ public class ItemLookupServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchTrailerCall(ProvidersRemoteSearchQueryProvidersTrailerInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchTrailerCall(RemoteSearchQueryTrailerInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1737,7 +1737,7 @@ public class ItemLookupServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsRemotesearchTrailerValidateBeforeCall(ProvidersRemoteSearchQueryProvidersTrailerInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsRemotesearchTrailerValidateBeforeCall(RemoteSearchQueryTrailerInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsRemotesearchTrailer(Async)");
@@ -1759,7 +1759,7 @@ public class ItemLookupServiceApi {
      * @return List&lt;RemoteSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSearchResult> postItemsRemotesearchTrailer(ProvidersRemoteSearchQueryProvidersTrailerInfo body) throws ApiException {
+    public List<RemoteSearchResult> postItemsRemotesearchTrailer(RemoteSearchQueryTrailerInfo body) throws ApiException {
         ApiResponse<List<RemoteSearchResult>> resp = postItemsRemotesearchTrailerWithHttpInfo(body);
         return resp.getData();
     }
@@ -1771,7 +1771,7 @@ public class ItemLookupServiceApi {
      * @return ApiResponse&lt;List&lt;RemoteSearchResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchTrailerWithHttpInfo(ProvidersRemoteSearchQueryProvidersTrailerInfo body) throws ApiException {
+    public ApiResponse<List<RemoteSearchResult>> postItemsRemotesearchTrailerWithHttpInfo(RemoteSearchQueryTrailerInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postItemsRemotesearchTrailerValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSearchResult>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1785,7 +1785,7 @@ public class ItemLookupServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsRemotesearchTrailerAsync(ProvidersRemoteSearchQueryProvidersTrailerInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsRemotesearchTrailerAsync(RemoteSearchQueryTrailerInfo body, final ApiCallback<List<RemoteSearchResult>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

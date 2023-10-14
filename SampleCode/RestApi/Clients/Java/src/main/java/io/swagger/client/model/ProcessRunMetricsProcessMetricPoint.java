@@ -12,7 +12,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.TimeSpan;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
@@ -22,7 +21,7 @@ import java.io.IOException;
 
 public class ProcessRunMetricsProcessMetricPoint {
   @SerializedName("Time")
-  private TimeSpan time = null;
+  private String time = null;
 
   @SerializedName("CpuPercent")
   private Double cpuPercent = null;
@@ -33,21 +32,21 @@ public class ProcessRunMetricsProcessMetricPoint {
   @SerializedName("WorkingSet")
   private Double workingSet = null;
 
-  public ProcessRunMetricsProcessMetricPoint time(TimeSpan time) {
+  public ProcessRunMetricsProcessMetricPoint time(String time) {
     this.time = time;
     return this;
   }
 
    /**
-   * Get time
+   * The time.
    * @return time
   **/
-  @Schema(description = "")
-  public TimeSpan getTime() {
+  @Schema(description = "The time.")
+  public String getTime() {
     return time;
   }
 
-  public void setTime(TimeSpan time) {
+  public void setTime(String time) {
     this.time = time;
   }
 
@@ -57,10 +56,10 @@ public class ProcessRunMetricsProcessMetricPoint {
   }
 
    /**
-   * Get cpuPercent
+   * The cpu percent.
    * @return cpuPercent
   **/
-  @Schema(description = "")
+  @Schema(description = "The cpu percent.")
   public Double getCpuPercent() {
     return cpuPercent;
   }
@@ -75,10 +74,10 @@ public class ProcessRunMetricsProcessMetricPoint {
   }
 
    /**
-   * Get virtualMemory
+   * The virtual memory.
    * @return virtualMemory
   **/
-  @Schema(description = "")
+  @Schema(description = "The virtual memory.")
   public Double getVirtualMemory() {
     return virtualMemory;
   }
@@ -93,10 +92,10 @@ public class ProcessRunMetricsProcessMetricPoint {
   }
 
    /**
-   * Get workingSet
+   * The working set.
    * @return workingSet
   **/
-  @Schema(description = "")
+  @Schema(description = "The working set.")
   public Double getWorkingSet() {
     return workingSet;
   }

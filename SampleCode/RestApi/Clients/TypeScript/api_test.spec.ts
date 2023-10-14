@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.52
+ * OpenAPI spec version: 4.8.0.53
  * 
  *
  * NOTE: This file is auto generated.
@@ -276,7 +276,7 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -308,7 +308,7 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -340,7 +340,7 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -373,7 +373,7 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -405,7 +405,7 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -437,7 +437,7 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -564,7 +564,7 @@ describe("ConfigurationServiceApi", () => {
     return expect(instance.getSystemConfigurationByKey(key, {})).resolves.toBe(null)
   })
   test("postSystemConfiguration", () => {
-    const body: api.ConfigurationServerConfiguration = undefined
+    const body: api.ServerConfiguration = undefined
     return expect(instance.postSystemConfiguration(body, {})).resolves.toBe(null)
   })
   test("postSystemConfigurationByKey", () => {
@@ -738,11 +738,11 @@ describe("DlnaServiceApi", () => {
     return expect(instance.getDlnaProfilesDefault({})).resolves.toBe(null)
   })
   test("postDlnaProfiles", () => {
-    const body: api.EmbyDlnaProfilesDlnaProfile = undefined
+    const body: api.DlnaProfilesDlnaProfile = undefined
     return expect(instance.postDlnaProfiles(body, {})).resolves.toBe(null)
   })
   test("postDlnaProfilesById", () => {
-    const body: api.EmbyDlnaProfilesDlnaProfile = undefined
+    const body: api.DlnaProfilesDlnaProfile = undefined
     const id: string = "id_example"
     return expect(instance.postDlnaProfilesById(body, id, {})).resolves.toBe(null)
   })
@@ -785,7 +785,7 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -817,7 +817,7 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -862,7 +862,7 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -894,7 +894,7 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -939,7 +939,7 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -978,7 +978,7 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -1194,7 +1194,7 @@ describe("GenericUIApiServiceApi", () => {
     return expect(instance.getUIView(pageId, clientLocale, {})).resolves.toBe(null)
   })
   test("postUICommand", () => {
-    const body: api.EmbyWebGenericUIApiEndpointsRunUICommand = undefined
+    const body: api.RunUICommand = undefined
     return expect(instance.postUICommand(body, {})).resolves.toBe(null)
   })
 })
@@ -2213,43 +2213,43 @@ describe("ItemLookupServiceApi", () => {
     return expect(instance.postItemsRemotesearchApplyById(body, id, replaceAllImages, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchBook", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersBookInfo = undefined
+    const body: api.RemoteSearchQueryBookInfo = undefined
     return expect(instance.postItemsRemotesearchBook(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchBoxset", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersItemLookupInfo = undefined
+    const body: api.RemoteSearchQueryItemLookupInfo = undefined
     return expect(instance.postItemsRemotesearchBoxset(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchGame", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersGameInfo = undefined
+    const body: api.RemoteSearchQueryGameInfo = undefined
     return expect(instance.postItemsRemotesearchGame(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMovie", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersMovieInfo = undefined
+    const body: api.RemoteSearchQueryMovieInfo = undefined
     return expect(instance.postItemsRemotesearchMovie(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMusicalbum", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersAlbumInfo = undefined
+    const body: api.RemoteSearchQueryAlbumInfo = undefined
     return expect(instance.postItemsRemotesearchMusicalbum(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMusicartist", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersArtistInfo = undefined
+    const body: api.RemoteSearchQueryArtistInfo = undefined
     return expect(instance.postItemsRemotesearchMusicartist(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMusicvideo", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersMusicVideoInfo = undefined
+    const body: api.RemoteSearchQueryMusicVideoInfo = undefined
     return expect(instance.postItemsRemotesearchMusicvideo(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchPerson", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersPersonLookupInfo = undefined
+    const body: api.RemoteSearchQueryPersonLookupInfo = undefined
     return expect(instance.postItemsRemotesearchPerson(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchSeries", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersSeriesInfo = undefined
+    const body: api.RemoteSearchQuerySeriesInfo = undefined
     return expect(instance.postItemsRemotesearchSeries(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchTrailer", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersTrailerInfo = undefined
+    const body: api.RemoteSearchQueryTrailerInfo = undefined
     return expect(instance.postItemsRemotesearchTrailer(body, {})).resolves.toBe(null)
   })
 })
@@ -2263,8 +2263,8 @@ describe("ItemRefreshServiceApi", () => {
   test("postItemsByIdRefresh", () => {
     const id: string = "id_example"
     const recursive: boolean = true
-    const metadataRefreshMode: ProvidersMetadataRefreshMode = undefined
-    const imageRefreshMode: ProvidersMetadataRefreshMode = undefined
+    const metadataRefreshMode: MetadataRefreshMode = undefined
+    const imageRefreshMode: MetadataRefreshMode = undefined
     const replaceAllMetadata: boolean = true
     const replaceAllImages: boolean = true
     return expect(instance.postItemsByIdRefresh(id, recursive, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages, {})).resolves.toBe(null)
@@ -3876,7 +3876,7 @@ describe("MediaInfoServiceApi", () => {
     return expect(instance.getPlaybackBitratetest(size, {})).resolves.toBe(null)
   })
   test("postItemsByIdPlaybackinfo", () => {
-    const body: api.MediaInfoPlaybackInfoRequest = undefined
+    const body: api.PlaybackInfoRequest = undefined
     const id: string = "id_example"
     return expect(instance.postItemsByIdPlaybackinfo(body, id, {})).resolves.toBe(null)
   })
@@ -3889,7 +3889,7 @@ describe("MediaInfoServiceApi", () => {
     return expect(instance.postLivestreamsMediainfo(liveStreamId, {})).resolves.toBe(null)
   })
   test("postLivestreamsOpen", () => {
-    const body: api.MediaInfoLiveStreamRequest = undefined
+    const body: api.LiveStreamRequest = undefined
     return expect(instance.postLivestreamsOpen(body, {})).resolves.toBe(null)
   })
 })
@@ -4207,7 +4207,7 @@ describe("PackageServiceApi", () => {
     const name: string = "name_example"
     const assemblyGuid: string = "assemblyGuid_example"
     const version: string = "version_example"
-    const updateClass: UpdatesPackageVersionClass = undefined
+    const updateClass: PackageVersionClass = undefined
     return expect(instance.postPackagesInstalledByName(name, assemblyGuid, version, updateClass, {})).resolves.toBe(null)
   })
   test("postPackagesInstallingByIdDelete", () => {
@@ -4462,7 +4462,7 @@ describe("PlaystateServiceApi", () => {
     return expect(instance.postUsersByUseridPlayingitemsByIdDelete(userId, id, mediaSourceId, nextMediaType, positionTicks, liveStreamId, playSessionId, {})).resolves.toBe(null)
   })
   test("postUsersByUseridPlayingitemsByIdProgress", () => {
-    const body: api.MediaEncodingApiOnPlaybackProgress = undefined
+    const body: api.ApiOnPlaybackProgress = undefined
     const mediaSourceId: string = "mediaSourceId_example"
     const userId: string = "userId_example"
     const id: string = "id_example"
@@ -4566,7 +4566,7 @@ describe("ScheduledTaskServiceApi", () => {
     return expect(instance.getScheduledtasksById(id, {})).resolves.toBe(null)
   })
   test("postScheduledtasksByIdTriggers", () => {
-    const body: Array<api.TasksTaskTriggerInfo> = undefined
+    const body: Array<api.TaskTriggerInfo> = undefined
     const id: string = "id_example"
     return expect(instance.postScheduledtasksByIdTriggers(body, id, {})).resolves.toBe(null)
   })
@@ -4978,7 +4978,7 @@ describe("SyncServiceApi", () => {
     const itemIds: string = "itemIds_example"
     const parentId: string = "parentId_example"
     const targetId: string = "targetId_example"
-    const category: SyncSyncCategory = undefined
+    const category: SyncCategory = undefined
     return expect(instance.getSyncOptions(userId, itemIds, parentId, targetId, category, {})).resolves.toBe(null)
   })
   test("getSyncTargets", () => {
@@ -4986,7 +4986,7 @@ describe("SyncServiceApi", () => {
     return expect(instance.getSyncTargets(userId, {})).resolves.toBe(null)
   })
   test("postSyncByItemidStatus", () => {
-    const body: api.SyncModelSyncedItemProgress = undefined
+    const body: api.SyncedItemProgress = undefined
     const itemId: string = "itemId_example"
     return expect(instance.postSyncByItemidStatus(body, itemId, {})).resolves.toBe(null)
   })
@@ -4996,7 +4996,7 @@ describe("SyncServiceApi", () => {
     return expect(instance.postSyncByTargetidItemsDelete(targetId, itemIds, {})).resolves.toBe(null)
   })
   test("postSyncData", () => {
-    const body: api.SyncModelSyncDataRequest = undefined
+    const body: api.SyncDataRequest = undefined
     return expect(instance.postSyncData(body, {})).resolves.toBe(null)
   })
   test("postSyncItemsCancel", () => {
@@ -5024,11 +5024,11 @@ describe("SyncServiceApi", () => {
     return expect(instance.postSyncJobitemsByIdUnmarkforremoval(id, {})).resolves.toBe(null)
   })
   test("postSyncJobs", () => {
-    const body: api.SyncModelSyncJobRequest = undefined
+    const body: api.SyncJobRequest = undefined
     return expect(instance.postSyncJobs(body, {})).resolves.toBe(null)
   })
   test("postSyncJobsById", () => {
-    const body: api.SyncSyncJob = undefined
+    const body: api.SyncJob = undefined
     const id: number = 789
     return expect(instance.postSyncJobsById(body, id, {})).resolves.toBe(null)
   })
@@ -5037,7 +5037,7 @@ describe("SyncServiceApi", () => {
     return expect(instance.postSyncJobsByIdDelete(id, {})).resolves.toBe(null)
   })
   test("postSyncOfflineactions", () => {
-    const body: Array<api.UsersUserAction> = undefined
+    const body: Array<api.UserAction> = undefined
     return expect(instance.postSyncOfflineactions(body, {})).resolves.toBe(null)
   })
 })
@@ -6781,7 +6781,7 @@ describe("UserNotificationsServiceApi", () => {
     return expect(instance.getNotificationsServicesDefaults({})).resolves.toBe(null)
   })
   test("postNotificationsServicesTest", () => {
-    const body: api.EmbyNotificationsUserNotificationInfo = undefined
+    const body: api.UserNotificationInfo = undefined
     return expect(instance.postNotificationsServicesTest(body, {})).resolves.toBe(null)
   })
 })
@@ -6847,7 +6847,7 @@ describe("UserServiceApi", () => {
     return expect(instance.postUsersByIdAuthenticate(body, id, {})).resolves.toBe(null)
   })
   test("postUsersByIdConfiguration", () => {
-    const body: api.ConfigurationUserConfiguration = undefined
+    const body: api.UserConfiguration = undefined
     const id: string = "id_example"
     return expect(instance.postUsersByIdConfiguration(body, id, {})).resolves.toBe(null)
   })
@@ -6866,7 +6866,7 @@ describe("UserServiceApi", () => {
     return expect(instance.postUsersByIdPassword(body, id, {})).resolves.toBe(null)
   })
   test("postUsersByIdPolicy", () => {
-    const body: api.UsersUserPolicy = undefined
+    const body: api.UserPolicy = undefined
     const id: string = "id_example"
     return expect(instance.postUsersByIdPolicy(body, id, {})).resolves.toBe(null)
   })
@@ -6945,7 +6945,7 @@ describe("VideoHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -6986,7 +6986,7 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -7018,7 +7018,7 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -7050,7 +7050,7 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -7083,7 +7083,7 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -7115,7 +7115,7 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
@@ -7147,7 +7147,7 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxRefFrames: number = 56
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"

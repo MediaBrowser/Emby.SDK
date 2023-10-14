@@ -19,7 +19,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The LiveTvSeriesTimerInfo model module.
 * @module model/LiveTvSeriesTimerInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LiveTvSeriesTimerInfo {
     /**
@@ -126,10 +126,12 @@ export default class LiveTvSeriesTimerInfo {
     }
 
     /**
+    * Id of the recording.
     * @member {String} Id
     */
     'Id' = undefined;
     /**
+    * ChannelId of the recording.
     * @member {String} ChannelId
     */
     'ChannelId' = undefined;
@@ -138,10 +140,12 @@ export default class LiveTvSeriesTimerInfo {
     */
     'ChannelIds' = undefined;
     /**
+    * The program identifier.
     * @member {String} ProgramId
     */
     'ProgramId' = undefined;
     /**
+    * Name of the recording.
     * @member {String} Name
     */
     'Name' = undefined;
@@ -150,18 +154,22 @@ export default class LiveTvSeriesTimerInfo {
     */
     'ServiceName' = undefined;
     /**
+    * Description of the recording.
     * @member {String} Overview
     */
     'Overview' = undefined;
     /**
+    * The start date of the recording, in UTC.
     * @member {Date} StartDate
     */
     'StartDate' = undefined;
     /**
+    * The end date of the recording, in UTC.
     * @member {Date} EndDate
     */
     'EndDate' = undefined;
     /**
+    * A value indicating whether \\[record any time\\].
     * @member {Boolean} RecordAnyTime
     */
     'RecordAnyTime' = undefined;
@@ -178,34 +186,42 @@ export default class LiveTvSeriesTimerInfo {
     */
     'SkipEpisodesInLibrary' = undefined;
     /**
+    * A value indicating whether \\[record new only\\].
     * @member {Boolean} RecordNewOnly
     */
     'RecordNewOnly' = undefined;
     /**
+    * The days.
     * @member {Array.<module:model/DayOfWeek>} Days
     */
     'Days' = undefined;
     /**
+    * The priority.
     * @member {Number} Priority
     */
     'Priority' = undefined;
     /**
+    * The pre padding seconds.
     * @member {Number} PrePaddingSeconds
     */
     'PrePaddingSeconds' = undefined;
     /**
+    * The post padding seconds.
     * @member {Number} PostPaddingSeconds
     */
     'PostPaddingSeconds' = undefined;
     /**
+    * A value indicating whether this instance is pre padding required.
     * @member {Boolean} IsPrePaddingRequired
     */
     'IsPrePaddingRequired' = undefined;
     /**
+    * A value indicating whether this instance is post padding required.
     * @member {Boolean} IsPostPaddingRequired
     */
     'IsPostPaddingRequired' = undefined;
     /**
+    * The series identifier.
     * @member {String} SeriesId
     */
     'SeriesId' = undefined;

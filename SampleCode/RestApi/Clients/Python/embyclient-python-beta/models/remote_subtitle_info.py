@@ -100,6 +100,7 @@ class RemoteSubtitleInfo(object):
     def three_letter_iso_language_name(self):
         """Gets the three_letter_iso_language_name of this RemoteSubtitleInfo.  # noqa: E501
 
+        Use language instead to return the language specified by the subtitle provider  # noqa: E501
 
         :return: The three_letter_iso_language_name of this RemoteSubtitleInfo.  # noqa: E501
         :rtype: str
@@ -110,6 +111,7 @@ class RemoteSubtitleInfo(object):
     def three_letter_iso_language_name(self, three_letter_iso_language_name):
         """Sets the three_letter_iso_language_name of this RemoteSubtitleInfo.
 
+        Use language instead to return the language specified by the subtitle provider  # noqa: E501
 
         :param three_letter_iso_language_name: The three_letter_iso_language_name of this RemoteSubtitleInfo.  # noqa: E501
         :type: str

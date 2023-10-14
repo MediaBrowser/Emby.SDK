@@ -16,7 +16,7 @@ import UserDto from './UserDto';
 /**
 * The AuthenticationAuthenticationResult model module.
 * @module model/AuthenticationAuthenticationResult
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class AuthenticationAuthenticationResult {
     /**
@@ -68,10 +68,12 @@ export default class AuthenticationAuthenticationResult {
     */
     'SessionInfo' = undefined;
     /**
+    * The authentication token.
     * @member {String} AccessToken
     */
     'AccessToken' = undefined;
     /**
+    * The server identifier.
     * @member {String} ServerId
     */
     'ServerId' = undefined;

@@ -5,19 +5,19 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.QueryResultSyncModelSyncJobItem;
-import io.swagger.client.model.QueryResultSyncSyncJob;
-import io.swagger.client.model.SyncModelSyncDataRequest;
-import io.swagger.client.model.SyncModelSyncDataResponse;
-import io.swagger.client.model.SyncModelSyncDialogOptions;
-import io.swagger.client.model.SyncModelSyncJobCreationResult;
-import io.swagger.client.model.SyncModelSyncJobRequest;
-import io.swagger.client.model.SyncModelSyncedItem;
-import io.swagger.client.model.SyncModelSyncedItemProgress;
-import io.swagger.client.model.SyncSyncCategory;
-import io.swagger.client.model.SyncSyncJob;
-import io.swagger.client.model.SyncSyncTarget;
-import io.swagger.client.model.UsersUserAction;
+import io.swagger.client.model.QueryResultSyncJob;
+import io.swagger.client.model.QueryResultSyncJobItem;
+import io.swagger.client.model.SyncCategory;
+import io.swagger.client.model.SyncDataRequest;
+import io.swagger.client.model.SyncDataResponse;
+import io.swagger.client.model.SyncDialogOptions;
+import io.swagger.client.model.SyncJob;
+import io.swagger.client.model.SyncJobCreationResult;
+import io.swagger.client.model.SyncJobRequest;
+import io.swagger.client.model.SyncTarget;
+import io.swagger.client.model.SyncedItem;
+import io.swagger.client.model.SyncedItemProgress;
+import io.swagger.client.model.UserAction;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -93,7 +93,7 @@ public class SyncServiceApiTest {
     @Test
     public void getSyncItemsReadyTest() throws Exception {
         String targetId = null;
-        List<SyncModelSyncedItem> response = api.getSyncItemsReady(targetId);
+        List<SyncedItem> response = api.getSyncItemsReady(targetId);
 
         // TODO: test validations
     }
@@ -107,7 +107,7 @@ public class SyncServiceApiTest {
      */
     @Test
     public void getSyncJobitemsTest() throws Exception {
-        QueryResultSyncModelSyncJobItem response = api.getSyncJobitems();
+        QueryResultSyncJobItem response = api.getSyncJobitems();
 
         // TODO: test validations
     }
@@ -152,7 +152,7 @@ public class SyncServiceApiTest {
      */
     @Test
     public void getSyncJobsTest() throws Exception {
-        QueryResultSyncSyncJob response = api.getSyncJobs();
+        QueryResultSyncJob response = api.getSyncJobs();
 
         // TODO: test validations
     }
@@ -167,7 +167,7 @@ public class SyncServiceApiTest {
     @Test
     public void getSyncJobsByIdTest() throws Exception {
         String id = null;
-        SyncSyncJob response = api.getSyncJobsById(id);
+        SyncJob response = api.getSyncJobsById(id);
 
         // TODO: test validations
     }
@@ -185,8 +185,8 @@ public class SyncServiceApiTest {
         String itemIds = null;
         String parentId = null;
         String targetId = null;
-        SyncSyncCategory category = null;
-        SyncModelSyncDialogOptions response = api.getSyncOptions(userId, itemIds, parentId, targetId, category);
+        SyncCategory category = null;
+        SyncDialogOptions response = api.getSyncOptions(userId, itemIds, parentId, targetId, category);
 
         // TODO: test validations
     }
@@ -201,7 +201,7 @@ public class SyncServiceApiTest {
     @Test
     public void getSyncTargetsTest() throws Exception {
         String userId = null;
-        List<SyncSyncTarget> response = api.getSyncTargets(userId);
+        List<SyncTarget> response = api.getSyncTargets(userId);
 
         // TODO: test validations
     }
@@ -215,7 +215,7 @@ public class SyncServiceApiTest {
      */
     @Test
     public void postSyncByItemidStatusTest() throws Exception {
-        SyncModelSyncedItemProgress body = null;
+        SyncedItemProgress body = null;
         String itemId = null;
         api.postSyncByItemidStatus(body, itemId);
 
@@ -247,8 +247,8 @@ public class SyncServiceApiTest {
      */
     @Test
     public void postSyncDataTest() throws Exception {
-        SyncModelSyncDataRequest body = null;
-        SyncModelSyncDataResponse response = api.postSyncData(body);
+        SyncDataRequest body = null;
+        SyncDataResponse response = api.postSyncData(body);
 
         // TODO: test validations
     }
@@ -352,8 +352,8 @@ public class SyncServiceApiTest {
      */
     @Test
     public void postSyncJobsTest() throws Exception {
-        SyncModelSyncJobRequest body = null;
-        SyncModelSyncJobCreationResult response = api.postSyncJobs(body);
+        SyncJobRequest body = null;
+        SyncJobCreationResult response = api.postSyncJobs(body);
 
         // TODO: test validations
     }
@@ -367,7 +367,7 @@ public class SyncServiceApiTest {
      */
     @Test
     public void postSyncJobsByIdTest() throws Exception {
-        SyncSyncJob body = null;
+        SyncJob body = null;
         Long id = null;
         api.postSyncJobsById(body, id);
 
@@ -398,7 +398,7 @@ public class SyncServiceApiTest {
      */
     @Test
     public void postSyncOfflineactionsTest() throws Exception {
-        List<UsersUserAction> body = null;
+        List<UserAction> body = null;
         api.postSyncOfflineactions(body);
 
         // TODO: test validations

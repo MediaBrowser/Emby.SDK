@@ -17,9 +17,9 @@ import io.swagger.client.model.RatingType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * RemoteImageInfo
+ * Class RemoteImageInfo  
  */
-
+@Schema(description = "Class RemoteImageInfo  ")
 
 public class RemoteImageInfo {
   @SerializedName("ProviderName")
@@ -61,10 +61,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get providerName
+   * The name of the provider.
    * @return providerName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the provider.")
   public String getProviderName() {
     return providerName;
   }
@@ -79,10 +79,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get url
+   * The URL.
    * @return url
   **/
-  @Schema(description = "")
+  @Schema(description = "The URL.")
   public String getUrl() {
     return url;
   }
@@ -97,10 +97,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get thumbnailUrl
+   * A url used for previewing a smaller version
    * @return thumbnailUrl
   **/
-  @Schema(description = "")
+  @Schema(description = "A url used for previewing a smaller version")
   public String getThumbnailUrl() {
     return thumbnailUrl;
   }
@@ -115,10 +115,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get height
+   * The height.
    * @return height
   **/
-  @Schema(description = "")
+  @Schema(description = "The height.")
   public Integer getHeight() {
     return height;
   }
@@ -133,10 +133,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get width
+   * The width.
    * @return width
   **/
-  @Schema(description = "")
+  @Schema(description = "The width.")
   public Integer getWidth() {
     return width;
   }
@@ -151,10 +151,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get communityRating
+   * The community rating.
    * @return communityRating
   **/
-  @Schema(description = "")
+  @Schema(description = "The community rating.")
   public Double getCommunityRating() {
     return communityRating;
   }
@@ -169,10 +169,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get voteCount
+   * The vote count.
    * @return voteCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The vote count.")
   public Integer getVoteCount() {
     return voteCount;
   }
@@ -187,10 +187,10 @@ public class RemoteImageInfo {
   }
 
    /**
-   * Get language
+   * The language.
    * @return language
   **/
-  @Schema(description = "")
+  @Schema(description = "The language.")
   public String getLanguage() {
     return language;
   }

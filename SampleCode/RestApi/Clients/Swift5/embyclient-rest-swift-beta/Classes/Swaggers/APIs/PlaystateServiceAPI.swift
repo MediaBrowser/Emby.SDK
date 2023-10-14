@@ -48,8 +48,8 @@ open class PlaystateServiceAPI {
   "Key" : "Key"
 }}]
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://betadev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
@@ -168,8 +168,8 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://betadev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter body: (body) PlaybackStartInfo:  
 
@@ -259,8 +259,8 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://betadev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter body: (body) PlaybackProgressInfo:  
 
@@ -305,8 +305,8 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://betadev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter body: (body) PlaybackStopInfo:  
 
@@ -414,8 +414,8 @@ open class PlaystateServiceAPI {
   "Key" : "Key"
 }}]
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://betadev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
@@ -663,7 +663,7 @@ open class PlaystateServiceAPI {
      - parameter playbackRate: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByUseridPlayingitemsByIdProgress(body: MediaEncodingApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postUsersByUseridPlayingitemsByIdProgress(body: ApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postUsersByUseridPlayingitemsByIdProgressWithRequestBuilder(body: body, mediaSourceId: mediaSourceId, userId: userId, _id: _id, positionTicks: positionTicks, isPaused: isPaused, isMuted: isMuted, audioStreamIndex: audioStreamIndex, subtitleStreamIndex: subtitleStreamIndex, volumeLevel: volumeLevel, playMethod: playMethod, liveStreamId: liveStreamId, playSessionId: playSessionId, repeatMode: repeatMode, subtitleOffset: subtitleOffset, playbackRate: playbackRate).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -703,7 +703,7 @@ open class PlaystateServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByUseridPlayingitemsByIdProgressWithRequestBuilder(body: MediaEncodingApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil) -> RequestBuilder<Void> {
+    open class func postUsersByUseridPlayingitemsByIdProgressWithRequestBuilder(body: ApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{UserId}/PlayingItems/{Id}/Progress"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

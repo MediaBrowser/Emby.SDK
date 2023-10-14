@@ -15,11 +15,12 @@ import PersonType from './PersonType';
 /**
 * The BaseItemPerson model module.
 * @module model/BaseItemPerson
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class BaseItemPerson {
     /**
     * Constructs a new <code>BaseItemPerson</code>.
+    * This is used by the api to get information about a Person within a BaseItem  
     * @alias module:model/BaseItemPerson
     * @class
     */
@@ -62,14 +63,17 @@ export default class BaseItemPerson {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The identifier.
     * @member {String} Id
     */
     'Id' = undefined;
     /**
+    * The role.
     * @member {String} Role
     */
     'Role' = undefined;
@@ -78,6 +82,7 @@ export default class BaseItemPerson {
     */
     'Type' = undefined;
     /**
+    * The primary image tag.
     * @member {String} PrimaryImageTag
     */
     'PrimaryImageTag' = undefined;

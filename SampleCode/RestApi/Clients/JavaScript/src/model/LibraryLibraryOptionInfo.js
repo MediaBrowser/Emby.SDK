@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationMetadataFeatures from './ConfigurationMetadataFeatures';
+import MetadataFeatures from './MetadataFeatures';
 
 /**
 * The LibraryLibraryOptionInfo model module.
 * @module model/LibraryLibraryOptionInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LibraryLibraryOptionInfo {
     /**
@@ -52,7 +52,7 @@ export default class LibraryLibraryOptionInfo {
                 obj['DefaultEnabled'] = ApiClient.convertToType(data['DefaultEnabled'], 'Boolean');
             }
             if (data.hasOwnProperty('Features')) {
-                obj['Features'] = ApiClient.convertToType(data['Features'], [ConfigurationMetadataFeatures]);
+                obj['Features'] = ApiClient.convertToType(data['Features'], [MetadataFeatures]);
             }
         }
         return obj;
@@ -71,7 +71,7 @@ export default class LibraryLibraryOptionInfo {
     */
     'DefaultEnabled' = undefined;
     /**
-    * @member {Array.<module:model/ConfigurationMetadataFeatures>} Features
+    * @member {Array.<module:model/MetadataFeatures>} Features
     */
     'Features' = undefined;
 

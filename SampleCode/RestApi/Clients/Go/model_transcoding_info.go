@@ -24,8 +24,11 @@ type TranscodingInfo struct {
 	Height int32 `json:"Height,omitempty"`
 	AudioChannels int32 `json:"AudioChannels,omitempty"`
 	TranscodeReasons []TranscodeReason `json:"TranscodeReasons,omitempty"`
+	// Deprecated, please use ProcessStatistics instead
 	CurrentCpuUsage float64 `json:"CurrentCpuUsage,omitempty"`
+	// Deprecated, please use ProcessStatistics instead
 	AverageCpuUsage float64 `json:"AverageCpuUsage,omitempty"`
+	// Deprecated, please use ProcessStatistics instead
 	CpuHistory []TupleDoubleDouble `json:"CpuHistory,omitempty"`
 	ProcessStatistics *ProcessRunMetricsProcessStatistics `json:"ProcessStatistics,omitempty"`
 	CurrentThrottle int32 `json:"CurrentThrottle,omitempty"`

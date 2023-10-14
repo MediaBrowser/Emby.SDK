@@ -10,13 +10,13 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyWebGenericUIApiEndpointsRunUICommand from '../model/EmbyWebGenericUIApiEndpointsRunUICommand';
-import EmbyWebGenericUIModelUIViewInfo from '../model/EmbyWebGenericUIModelUIViewInfo';
+import RunUICommand from '../model/RunUICommand';
+import UIViewInfo from '../model/UIViewInfo';
 
 /**
 * GenericUIApiService service.
 * @module EmbyClient.JavaScript.Beta/GenericUIApiServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class GenericUIApiServiceApi {
 
@@ -35,7 +35,7 @@ export default class GenericUIApiServiceApi {
      * Callback function to receive the result of the getUIView operation.
      * @callback module:EmbyClient.JavaScript.Beta/GenericUIApiServiceApi~getUIViewCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericUIModelUIViewInfo} data The data returned by the service call.
+     * @param {module:model/UIViewInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -43,7 +43,7 @@ export default class GenericUIApiServiceApi {
      * Gets UI view data
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/GenericUIApiServiceApi~getUIViewCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericUIModelUIViewInfo}
+     * data is of type: {@link module:model/UIViewInfo}
      */
     getUIView() {
       let postBody = null;
@@ -62,7 +62,7 @@ export default class GenericUIApiServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericUIModelUIViewInfo;
+      let returnType = UIViewInfo;
 
       return this.apiClient.callApi(
         '/UI/View', 'GET',
@@ -74,7 +74,7 @@ export default class GenericUIApiServiceApi {
      * Callback function to receive the result of the postUICommand operation.
      * @callback module:EmbyClient.JavaScript.Beta/GenericUIApiServiceApi~postUICommandCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericUIModelUIViewInfo} data The data returned by the service call.
+     * @param {module:model/UIViewInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -82,7 +82,7 @@ export default class GenericUIApiServiceApi {
      * Execute a command in the context of tv setup
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/GenericUIApiServiceApi~postUICommandCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericUIModelUIViewInfo}
+     * data is of type: {@link module:model/UIViewInfo}
      */
     postUICommand() {
       let postBody = body;
@@ -99,7 +99,7 @@ export default class GenericUIApiServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericUIModelUIViewInfo;
+      let returnType = UIViewInfo;
 
       return this.apiClient.callApi(
         '/UI/Command', 'POST',

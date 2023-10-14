@@ -751,39 +751,15 @@ open class SessionsServiceAPI {
     "IsAudioDirect" : true,
     "ProcessStatistics" : {
       "Metrics" : [ {
-        "Time" : {
-          "TotalMilliseconds" : 7.143538047012306,
-          "TotalMinutes" : 0.8851374739011653,
-          "Hours" : 6,
-          "Ticks" : 1,
-          "TotalSeconds" : 7.058770351582356,
-          "Days" : 2,
-          "TotalDays" : 3.353193347011243,
-          "Seconds" : 6,
-          "TotalHours" : 3.0937452626664474,
-          "Milliseconds" : 6,
-          "Minutes" : 5
-        },
-        "WorkingSet" : 4.652396432933246,
-        "VirtualMemory" : 0.10263654006109402,
-        "CpuPercent" : 6.519180951018382
+        "Time" : "Time",
+        "WorkingSet" : 6.778324963048013,
+        "VirtualMemory" : 2.8841621266687802,
+        "CpuPercent" : 1.284659006116532
       }, {
-        "Time" : {
-          "TotalMilliseconds" : 7.143538047012306,
-          "TotalMinutes" : 0.8851374739011653,
-          "Hours" : 6,
-          "Ticks" : 1,
-          "TotalSeconds" : 7.058770351582356,
-          "Days" : 2,
-          "TotalDays" : 3.353193347011243,
-          "Seconds" : 6,
-          "TotalHours" : 3.0937452626664474,
-          "Milliseconds" : 6,
-          "Minutes" : 5
-        },
-        "WorkingSet" : 4.652396432933246,
-        "VirtualMemory" : 0.10263654006109402,
-        "CpuPercent" : 6.519180951018382
+        "Time" : "Time",
+        "WorkingSet" : 6.778324963048013,
+        "VirtualMemory" : 2.8841621266687802,
+        "CpuPercent" : 1.284659006116532
       } ],
       "AverageCpu" : 6.438423552598547,
       "CurrentCpu" : 9.018348186070783,
@@ -839,7 +815,7 @@ open class SessionsServiceAPI {
       "Item1" : 6.683562403749608,
       "Item2" : 8.762042012749001
     } ],
-    "CurrentThrottle" : 8,
+    "CurrentThrottle" : 6,
     "VideoCodec" : "VideoCodec",
     "Bitrate" : 4,
     "VideoDecoderHwAccel" : "VideoDecoderHwAccel",
@@ -1415,39 +1391,15 @@ open class SessionsServiceAPI {
     "IsAudioDirect" : true,
     "ProcessStatistics" : {
       "Metrics" : [ {
-        "Time" : {
-          "TotalMilliseconds" : 7.143538047012306,
-          "TotalMinutes" : 0.8851374739011653,
-          "Hours" : 6,
-          "Ticks" : 1,
-          "TotalSeconds" : 7.058770351582356,
-          "Days" : 2,
-          "TotalDays" : 3.353193347011243,
-          "Seconds" : 6,
-          "TotalHours" : 3.0937452626664474,
-          "Milliseconds" : 6,
-          "Minutes" : 5
-        },
-        "WorkingSet" : 4.652396432933246,
-        "VirtualMemory" : 0.10263654006109402,
-        "CpuPercent" : 6.519180951018382
+        "Time" : "Time",
+        "WorkingSet" : 6.778324963048013,
+        "VirtualMemory" : 2.8841621266687802,
+        "CpuPercent" : 1.284659006116532
       }, {
-        "Time" : {
-          "TotalMilliseconds" : 7.143538047012306,
-          "TotalMinutes" : 0.8851374739011653,
-          "Hours" : 6,
-          "Ticks" : 1,
-          "TotalSeconds" : 7.058770351582356,
-          "Days" : 2,
-          "TotalDays" : 3.353193347011243,
-          "Seconds" : 6,
-          "TotalHours" : 3.0937452626664474,
-          "Milliseconds" : 6,
-          "Minutes" : 5
-        },
-        "WorkingSet" : 4.652396432933246,
-        "VirtualMemory" : 0.10263654006109402,
-        "CpuPercent" : 6.519180951018382
+        "Time" : "Time",
+        "WorkingSet" : 6.778324963048013,
+        "VirtualMemory" : 2.8841621266687802,
+        "CpuPercent" : 1.284659006116532
       } ],
       "AverageCpu" : 6.438423552598547,
       "CurrentCpu" : 9.018348186070783,
@@ -1503,7 +1455,7 @@ open class SessionsServiceAPI {
       "Item1" : 6.683562403749608,
       "Item2" : 8.762042012749001
     } ],
-    "CurrentThrottle" : 8,
+    "CurrentThrottle" : 6,
     "VideoCodec" : "VideoCodec",
     "Bitrate" : 4,
     "VideoDecoderHwAccel" : "VideoDecoderHwAccel",
@@ -2624,7 +2576,7 @@ open class SessionsServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (query) Optional. Filter by session id. (optional)
      - parameter deviceId: (query) Optional. Filter by device id. (optional)
@@ -3333,7 +3285,7 @@ open class SessionsServiceAPI {
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://betadev.emby.media/doc/restapi/User-Authentication.html
 }
 
      - returns: RequestBuilder<Void> 

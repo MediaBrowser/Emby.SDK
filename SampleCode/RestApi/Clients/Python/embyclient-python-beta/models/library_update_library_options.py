@@ -23,7 +23,7 @@ class LibraryUpdateLibraryOptions(object):
     """
     swagger_types = {
         'id': 'str',
-        'library_options': 'ConfigurationLibraryOptions'
+        'library_options': 'LibraryOptions'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class LibraryUpdateLibraryOptions(object):
 
 
         :return: The library_options of this LibraryUpdateLibraryOptions.  # noqa: E501
-        :rtype: ConfigurationLibraryOptions
+        :rtype: LibraryOptions
         """
         return self._library_options
 
@@ -78,7 +78,7 @@ class LibraryUpdateLibraryOptions(object):
 
 
         :param library_options: The library_options of this LibraryUpdateLibraryOptions.  # noqa: E501
-        :type: ConfigurationLibraryOptions
+        :type: LibraryOptions
         """
 
         self._library_options = library_options

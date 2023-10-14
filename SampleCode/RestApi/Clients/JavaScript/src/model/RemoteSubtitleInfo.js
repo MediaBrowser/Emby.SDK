@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The RemoteSubtitleInfo model module.
 * @module model/RemoteSubtitleInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class RemoteSubtitleInfo {
     /**
@@ -85,6 +85,7 @@ export default class RemoteSubtitleInfo {
     }
 
     /**
+    * Use language instead to return the language specified by the subtitle provider
     * @member {String} ThreeLetterISOLanguageName
     */
     'ThreeLetterISOLanguageName' = undefined;

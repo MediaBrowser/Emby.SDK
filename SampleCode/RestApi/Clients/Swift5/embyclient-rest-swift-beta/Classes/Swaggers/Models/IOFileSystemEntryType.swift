@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum FileSystemEntryType   */
 public enum IOFileSystemEntryType: String, Codable {
     case file = "File"
     case directory = "Directory"

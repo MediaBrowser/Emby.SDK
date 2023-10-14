@@ -49,10 +49,10 @@ public class PublicSystemInfo {
   }
 
    /**
-   * Get localAddress
+   * The local address.
    * @return localAddress
   **/
-  @Schema(description = "")
+  @Schema(description = "The local address.")
   public String getLocalAddress() {
     return localAddress;
   }
@@ -93,10 +93,10 @@ public class PublicSystemInfo {
   }
 
    /**
-   * Get wanAddress
+   * The wan address.
    * @return wanAddress
   **/
-  @Schema(description = "")
+  @Schema(description = "The wan address.")
   public String getWanAddress() {
     return wanAddress;
   }
@@ -137,10 +137,10 @@ public class PublicSystemInfo {
   }
 
    /**
-   * Get serverName
+   * The name of the server.
    * @return serverName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the server.")
   public String getServerName() {
     return serverName;
   }
@@ -155,10 +155,10 @@ public class PublicSystemInfo {
   }
 
    /**
-   * Get version
+   * The version.
    * @return version
   **/
-  @Schema(description = "")
+  @Schema(description = "The version.")
   public String getVersion() {
     return version;
   }
@@ -173,10 +173,10 @@ public class PublicSystemInfo {
   }
 
    /**
-   * Get id
+   * The id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The id.")
   public String getId() {
     return id;
   }

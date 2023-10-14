@@ -23,7 +23,7 @@ class LibraryUpdateMediaPath(object):
     """
     swagger_types = {
         'id': 'str',
-        'path_info': 'ConfigurationMediaPathInfo'
+        'path_info': 'MediaPathInfo'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class LibraryUpdateMediaPath(object):
 
 
         :return: The path_info of this LibraryUpdateMediaPath.  # noqa: E501
-        :rtype: ConfigurationMediaPathInfo
+        :rtype: MediaPathInfo
         """
         return self._path_info
 
@@ -78,7 +78,7 @@ class LibraryUpdateMediaPath(object):
 
 
         :param path_info: The path_info of this LibraryUpdateMediaPath.  # noqa: E501
-        :type: ConfigurationMediaPathInfo
+        :type: MediaPathInfo
         """
 
         self._path_info = path_info

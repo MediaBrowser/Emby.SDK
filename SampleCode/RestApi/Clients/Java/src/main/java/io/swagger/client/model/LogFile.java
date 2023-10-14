@@ -39,10 +39,10 @@ public class LogFile {
   }
 
    /**
-   * Get dateCreated
+   * The date created.
    * @return dateCreated
   **/
-  @Schema(description = "")
+  @Schema(description = "The date created.")
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -57,10 +57,10 @@ public class LogFile {
   }
 
    /**
-   * Get dateModified
+   * The date modified.
    * @return dateModified
   **/
-  @Schema(description = "")
+  @Schema(description = "The date modified.")
   public OffsetDateTime getDateModified() {
     return dateModified;
   }
@@ -75,10 +75,10 @@ public class LogFile {
   }
 
    /**
-   * Get size
+   * The size.
    * @return size
   **/
-  @Schema(description = "")
+  @Schema(description = "The size.")
   public Long getSize() {
     return size;
   }
@@ -93,10 +93,10 @@ public class LogFile {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }

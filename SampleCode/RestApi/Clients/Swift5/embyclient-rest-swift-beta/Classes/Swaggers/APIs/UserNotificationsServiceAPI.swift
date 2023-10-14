@@ -15,7 +15,7 @@ open class UserNotificationsServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getNotificationsServicesDefaults(completion: @escaping ((_ data: EmbyNotificationsUserNotificationInfo?,_ error: Error?) -> Void)) {
+    open class func getNotificationsServicesDefaults(completion: @escaping ((_ data: UserNotificationInfo?,_ error: Error?) -> Void)) {
         getNotificationsServicesDefaultsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -50,16 +50,16 @@ open class UserNotificationsServiceAPI {
   "UserIds" : [ "UserIds", "UserIds" ]
 }}]
 
-     - returns: RequestBuilder<EmbyNotificationsUserNotificationInfo> 
+     - returns: RequestBuilder<UserNotificationInfo> 
      */
-    open class func getNotificationsServicesDefaultsWithRequestBuilder() -> RequestBuilder<EmbyNotificationsUserNotificationInfo> {
+    open class func getNotificationsServicesDefaultsWithRequestBuilder() -> RequestBuilder<UserNotificationInfo> {
         let path = "/Notifications/Services/Defaults"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyNotificationsUserNotificationInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UserNotificationInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -69,7 +69,7 @@ open class UserNotificationsServiceAPI {
      - parameter body: (body) UserNotificationInfo:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postNotificationsServicesTest(body: EmbyNotificationsUserNotificationInfo, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postNotificationsServicesTest(body: UserNotificationInfo, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postNotificationsServicesTestWithRequestBuilder(body: body).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -94,7 +94,7 @@ open class UserNotificationsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postNotificationsServicesTestWithRequestBuilder(body: EmbyNotificationsUserNotificationInfo) -> RequestBuilder<Void> {
+    open class func postNotificationsServicesTestWithRequestBuilder(body: UserNotificationInfo) -> RequestBuilder<Void> {
         let path = "/Notifications/Services/Test"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

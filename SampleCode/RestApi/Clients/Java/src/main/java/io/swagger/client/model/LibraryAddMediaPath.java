@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationMediaPathInfo;
+import io.swagger.client.model.MediaPathInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
@@ -28,7 +28,7 @@ public class LibraryAddMediaPath {
   private String path = null;
 
   @SerializedName("PathInfo")
-  private ConfigurationMediaPathInfo pathInfo = null;
+  private MediaPathInfo pathInfo = null;
 
   @SerializedName("RefreshLibrary")
   private Boolean refreshLibrary = null;
@@ -69,7 +69,7 @@ public class LibraryAddMediaPath {
     this.path = path;
   }
 
-  public LibraryAddMediaPath pathInfo(ConfigurationMediaPathInfo pathInfo) {
+  public LibraryAddMediaPath pathInfo(MediaPathInfo pathInfo) {
     this.pathInfo = pathInfo;
     return this;
   }
@@ -79,11 +79,11 @@ public class LibraryAddMediaPath {
    * @return pathInfo
   **/
   @Schema(description = "")
-  public ConfigurationMediaPathInfo getPathInfo() {
+  public MediaPathInfo getPathInfo() {
     return pathInfo;
   }
 
-  public void setPathInfo(ConfigurationMediaPathInfo pathInfo) {
+  public void setPathInfo(MediaPathInfo pathInfo) {
     this.pathInfo = pathInfo;
   }
 

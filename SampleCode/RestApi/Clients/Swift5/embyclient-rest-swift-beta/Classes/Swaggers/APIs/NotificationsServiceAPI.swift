@@ -15,7 +15,7 @@ open class NotificationsServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getNotificationsTypes(completion: @escaping ((_ data: [EmbyNotificationsNotificationCategoryInfo]?,_ error: Error?) -> Void)) {
+    open class func getNotificationsTypes(completion: @escaping ((_ data: [NotificationCategoryInfo]?,_ error: Error?) -> Void)) {
         getNotificationsTypesWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -62,16 +62,16 @@ open class NotificationsServiceAPI {
   "Name" : "Name"
 } ]}]
 
-     - returns: RequestBuilder<[EmbyNotificationsNotificationCategoryInfo]> 
+     - returns: RequestBuilder<[NotificationCategoryInfo]> 
      */
-    open class func getNotificationsTypesWithRequestBuilder() -> RequestBuilder<[EmbyNotificationsNotificationCategoryInfo]> {
+    open class func getNotificationsTypesWithRequestBuilder() -> RequestBuilder<[NotificationCategoryInfo]> {
         let path = "/Notifications/Types"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[EmbyNotificationsNotificationCategoryInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[NotificationCategoryInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

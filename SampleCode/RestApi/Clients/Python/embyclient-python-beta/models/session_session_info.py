@@ -202,6 +202,7 @@ class SessionSessionInfo(object):
     def remote_end_point(self):
         """Gets the remote_end_point of this SessionSessionInfo.  # noqa: E501
 
+        The remote end point.  # noqa: E501
 
         :return: The remote_end_point of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -212,6 +213,7 @@ class SessionSessionInfo(object):
     def remote_end_point(self, remote_end_point):
         """Sets the remote_end_point of this SessionSessionInfo.
 
+        The remote end point.  # noqa: E501
 
         :param remote_end_point: The remote_end_point of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -244,6 +246,7 @@ class SessionSessionInfo(object):
     def playable_media_types(self):
         """Gets the playable_media_types of this SessionSessionInfo.  # noqa: E501
 
+        The playable media types.  # noqa: E501
 
         :return: The playable_media_types of this SessionSessionInfo.  # noqa: E501
         :rtype: list[str]
@@ -254,6 +257,7 @@ class SessionSessionInfo(object):
     def playable_media_types(self, playable_media_types):
         """Sets the playable_media_types of this SessionSessionInfo.
 
+        The playable media types.  # noqa: E501
 
         :param playable_media_types: The playable_media_types of this SessionSessionInfo.  # noqa: E501
         :type: list[str]
@@ -328,6 +332,7 @@ class SessionSessionInfo(object):
     def id(self):
         """Gets the id of this SessionSessionInfo.  # noqa: E501
 
+        The id.  # noqa: E501
 
         :return: The id of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -338,6 +343,7 @@ class SessionSessionInfo(object):
     def id(self, id):
         """Sets the id of this SessionSessionInfo.
 
+        The id.  # noqa: E501
 
         :param id: The id of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -370,6 +376,7 @@ class SessionSessionInfo(object):
     def user_id(self):
         """Gets the user_id of this SessionSessionInfo.  # noqa: E501
 
+        The user id.  # noqa: E501
 
         :return: The user_id of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -380,6 +387,7 @@ class SessionSessionInfo(object):
     def user_id(self, user_id):
         """Sets the user_id of this SessionSessionInfo.
 
+        The user id.  # noqa: E501
 
         :param user_id: The user_id of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -391,6 +399,7 @@ class SessionSessionInfo(object):
     def user_name(self):
         """Gets the user_name of this SessionSessionInfo.  # noqa: E501
 
+        The username.  # noqa: E501
 
         :return: The user_name of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -401,6 +410,7 @@ class SessionSessionInfo(object):
     def user_name(self, user_name):
         """Sets the user_name of this SessionSessionInfo.
 
+        The username.  # noqa: E501
 
         :param user_name: The user_name of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -433,6 +443,7 @@ class SessionSessionInfo(object):
     def client(self):
         """Gets the client of this SessionSessionInfo.  # noqa: E501
 
+        The type of the client.  # noqa: E501
 
         :return: The client of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -443,6 +454,7 @@ class SessionSessionInfo(object):
     def client(self, client):
         """Sets the client of this SessionSessionInfo.
 
+        The type of the client.  # noqa: E501
 
         :param client: The client of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -454,6 +466,7 @@ class SessionSessionInfo(object):
     def last_activity_date(self):
         """Gets the last_activity_date of this SessionSessionInfo.  # noqa: E501
 
+        The last activity date.  # noqa: E501
 
         :return: The last_activity_date of this SessionSessionInfo.  # noqa: E501
         :rtype: datetime
@@ -464,6 +477,7 @@ class SessionSessionInfo(object):
     def last_activity_date(self, last_activity_date):
         """Sets the last_activity_date of this SessionSessionInfo.
 
+        The last activity date.  # noqa: E501
 
         :param last_activity_date: The last_activity_date of this SessionSessionInfo.  # noqa: E501
         :type: datetime
@@ -475,6 +489,7 @@ class SessionSessionInfo(object):
     def device_name(self):
         """Gets the device_name of this SessionSessionInfo.  # noqa: E501
 
+        The name of the device.  # noqa: E501
 
         :return: The device_name of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -485,6 +500,7 @@ class SessionSessionInfo(object):
     def device_name(self, device_name):
         """Sets the device_name of this SessionSessionInfo.
 
+        The name of the device.  # noqa: E501
 
         :param device_name: The device_name of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -559,6 +575,7 @@ class SessionSessionInfo(object):
     def device_id(self):
         """Gets the device_id of this SessionSessionInfo.  # noqa: E501
 
+        The device id.  # noqa: E501
 
         :return: The device_id of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -569,6 +586,7 @@ class SessionSessionInfo(object):
     def device_id(self, device_id):
         """Sets the device_id of this SessionSessionInfo.
 
+        The device id.  # noqa: E501
 
         :param device_id: The device_id of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -580,6 +598,7 @@ class SessionSessionInfo(object):
     def application_version(self):
         """Gets the application_version of this SessionSessionInfo.  # noqa: E501
 
+        The application version.  # noqa: E501
 
         :return: The application_version of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -590,6 +609,7 @@ class SessionSessionInfo(object):
     def application_version(self, application_version):
         """Sets the application_version of this SessionSessionInfo.
 
+        The application version.  # noqa: E501
 
         :param application_version: The application_version of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -601,6 +621,7 @@ class SessionSessionInfo(object):
     def app_icon_url(self):
         """Gets the app_icon_url of this SessionSessionInfo.  # noqa: E501
 
+        The application icon URL.  # noqa: E501
 
         :return: The app_icon_url of this SessionSessionInfo.  # noqa: E501
         :rtype: str
@@ -611,6 +632,7 @@ class SessionSessionInfo(object):
     def app_icon_url(self, app_icon_url):
         """Sets the app_icon_url of this SessionSessionInfo.
 
+        The application icon URL.  # noqa: E501
 
         :param app_icon_url: The app_icon_url of this SessionSessionInfo.  # noqa: E501
         :type: str
@@ -622,6 +644,7 @@ class SessionSessionInfo(object):
     def supported_commands(self):
         """Gets the supported_commands of this SessionSessionInfo.  # noqa: E501
 
+        The supported commands.  # noqa: E501
 
         :return: The supported_commands of this SessionSessionInfo.  # noqa: E501
         :rtype: list[str]
@@ -632,6 +655,7 @@ class SessionSessionInfo(object):
     def supported_commands(self, supported_commands):
         """Sets the supported_commands of this SessionSessionInfo.
 
+        The supported commands.  # noqa: E501
 
         :param supported_commands: The supported_commands of this SessionSessionInfo.  # noqa: E501
         :type: list[str]

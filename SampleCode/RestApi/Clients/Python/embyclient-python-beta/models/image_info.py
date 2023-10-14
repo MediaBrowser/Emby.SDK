@@ -91,6 +91,7 @@ class ImageInfo(object):
     def image_index(self):
         """Gets the image_index of this ImageInfo.  # noqa: E501
 
+        The index of the image.  # noqa: E501
 
         :return: The image_index of this ImageInfo.  # noqa: E501
         :rtype: int
@@ -101,6 +102,7 @@ class ImageInfo(object):
     def image_index(self, image_index):
         """Sets the image_index of this ImageInfo.
 
+        The index of the image.  # noqa: E501
 
         :param image_index: The image_index of this ImageInfo.  # noqa: E501
         :type: int
@@ -112,6 +114,7 @@ class ImageInfo(object):
     def path(self):
         """Gets the path of this ImageInfo.  # noqa: E501
 
+        The path.  # noqa: E501
 
         :return: The path of this ImageInfo.  # noqa: E501
         :rtype: str
@@ -122,6 +125,7 @@ class ImageInfo(object):
     def path(self, path):
         """Sets the path of this ImageInfo.
 
+        The path.  # noqa: E501
 
         :param path: The path of this ImageInfo.  # noqa: E501
         :type: str
@@ -154,6 +158,7 @@ class ImageInfo(object):
     def height(self):
         """Gets the height of this ImageInfo.  # noqa: E501
 
+        The height.  # noqa: E501
 
         :return: The height of this ImageInfo.  # noqa: E501
         :rtype: int
@@ -164,6 +169,7 @@ class ImageInfo(object):
     def height(self, height):
         """Sets the height of this ImageInfo.
 
+        The height.  # noqa: E501
 
         :param height: The height of this ImageInfo.  # noqa: E501
         :type: int
@@ -175,6 +181,7 @@ class ImageInfo(object):
     def width(self):
         """Gets the width of this ImageInfo.  # noqa: E501
 
+        The width.  # noqa: E501
 
         :return: The width of this ImageInfo.  # noqa: E501
         :rtype: int
@@ -185,6 +192,7 @@ class ImageInfo(object):
     def width(self, width):
         """Sets the width of this ImageInfo.
 
+        The width.  # noqa: E501
 
         :param width: The width of this ImageInfo.  # noqa: E501
         :type: int
@@ -196,6 +204,7 @@ class ImageInfo(object):
     def size(self):
         """Gets the size of this ImageInfo.  # noqa: E501
 
+        The size.  # noqa: E501
 
         :return: The size of this ImageInfo.  # noqa: E501
         :rtype: int
@@ -206,6 +215,7 @@ class ImageInfo(object):
     def size(self, size):
         """Sets the size of this ImageInfo.
 
+        The size.  # noqa: E501
 
         :param size: The size of this ImageInfo.  # noqa: E501
         :type: int

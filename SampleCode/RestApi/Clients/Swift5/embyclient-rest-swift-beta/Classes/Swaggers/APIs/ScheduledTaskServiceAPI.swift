@@ -62,7 +62,7 @@ open class ScheduledTaskServiceAPI {
      - parameter isEnabled: (query) Optional filter tasks that are enabled, or not. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScheduledtasks(isHidden: Bool? = nil, isEnabled: Bool? = nil, completion: @escaping ((_ data: [TasksTaskInfo]?,_ error: Error?) -> Void)) {
+    open class func getScheduledtasks(isHidden: Bool? = nil, isEnabled: Bool? = nil, completion: @escaping ((_ data: [TaskInfo]?,_ error: Error?) -> Void)) {
         getScheduledtasksWithRequestBuilder(isHidden: isHidden, isEnabled: isEnabled).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -151,9 +151,9 @@ open class ScheduledTaskServiceAPI {
      - parameter isHidden: (query) Optional filter tasks that are hidden, or not. (optional)
      - parameter isEnabled: (query) Optional filter tasks that are enabled, or not. (optional)
 
-     - returns: RequestBuilder<[TasksTaskInfo]> 
+     - returns: RequestBuilder<[TaskInfo]> 
      */
-    open class func getScheduledtasksWithRequestBuilder(isHidden: Bool? = nil, isEnabled: Bool? = nil) -> RequestBuilder<[TasksTaskInfo]> {
+    open class func getScheduledtasksWithRequestBuilder(isHidden: Bool? = nil, isEnabled: Bool? = nil) -> RequestBuilder<[TaskInfo]> {
         let path = "/ScheduledTasks"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -164,7 +164,7 @@ open class ScheduledTaskServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[TasksTaskInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[TaskInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -174,7 +174,7 @@ open class ScheduledTaskServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScheduledtasksById(_id: String, completion: @escaping ((_ data: TasksTaskInfo?,_ error: Error?) -> Void)) {
+    open class func getScheduledtasksById(_id: String, completion: @escaping ((_ data: TaskInfo?,_ error: Error?) -> Void)) {
         getScheduledtasksByIdWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -228,9 +228,9 @@ open class ScheduledTaskServiceAPI {
 }}]
      - parameter _id: (path)  
 
-     - returns: RequestBuilder<TasksTaskInfo> 
+     - returns: RequestBuilder<TaskInfo> 
      */
-    open class func getScheduledtasksByIdWithRequestBuilder(_id: String) -> RequestBuilder<TasksTaskInfo> {
+    open class func getScheduledtasksByIdWithRequestBuilder(_id: String) -> RequestBuilder<TaskInfo> {
         var path = "/ScheduledTasks/{Id}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -240,7 +240,7 @@ open class ScheduledTaskServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<TasksTaskInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<TaskInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -251,7 +251,7 @@ open class ScheduledTaskServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postScheduledtasksByIdTriggers(body: [TasksTaskTriggerInfo], _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postScheduledtasksByIdTriggers(body: [TaskTriggerInfo], _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postScheduledtasksByIdTriggersWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -277,7 +277,7 @@ open class ScheduledTaskServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postScheduledtasksByIdTriggersWithRequestBuilder(body: [TasksTaskTriggerInfo], _id: String) -> RequestBuilder<Void> {
+    open class func postScheduledtasksByIdTriggersWithRequestBuilder(body: [TaskTriggerInfo], _id: String) -> RequestBuilder<Void> {
         var path = "/ScheduledTasks/{Id}/Triggers"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

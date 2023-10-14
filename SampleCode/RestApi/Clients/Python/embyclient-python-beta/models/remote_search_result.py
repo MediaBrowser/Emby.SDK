@@ -105,6 +105,7 @@ class RemoteSearchResult(object):
     def name(self):
         """Gets the name of this RemoteSearchResult.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this RemoteSearchResult.  # noqa: E501
         :rtype: str
@@ -115,6 +116,7 @@ class RemoteSearchResult(object):
     def name(self, name):
         """Sets the name of this RemoteSearchResult.
 
+        The name.  # noqa: E501
 
         :param name: The name of this RemoteSearchResult.  # noqa: E501
         :type: str
@@ -147,6 +149,7 @@ class RemoteSearchResult(object):
     def production_year(self):
         """Gets the production_year of this RemoteSearchResult.  # noqa: E501
 
+        The year.  # noqa: E501
 
         :return: The production_year of this RemoteSearchResult.  # noqa: E501
         :rtype: int
@@ -157,6 +160,7 @@ class RemoteSearchResult(object):
     def production_year(self, production_year):
         """Sets the production_year of this RemoteSearchResult.
 
+        The year.  # noqa: E501
 
         :param production_year: The production_year of this RemoteSearchResult.  # noqa: E501
         :type: int

@@ -15,7 +15,7 @@ import PlaystateCommand from './PlaystateCommand';
 /**
 * The PlaystateRequest model module.
 * @module model/PlaystateRequest
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class PlaystateRequest {
     /**
@@ -64,6 +64,7 @@ export default class PlaystateRequest {
     */
     'SeekPositionTicks' = undefined;
     /**
+    * The controlling user identifier.
     * @member {String} ControllingUserId
     */
     'ControllingUserId' = undefined;

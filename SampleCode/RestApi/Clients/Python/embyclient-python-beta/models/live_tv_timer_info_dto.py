@@ -181,6 +181,7 @@ class LiveTvTimerInfoDto(object):
     def series_timer_id(self):
         """Gets the series_timer_id of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The series timer identifier.  # noqa: E501
 
         :return: The series_timer_id of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -191,6 +192,7 @@ class LiveTvTimerInfoDto(object):
     def series_timer_id(self, series_timer_id):
         """Sets the series_timer_id of this LiveTvTimerInfoDto.
 
+        The series timer identifier.  # noqa: E501
 
         :param series_timer_id: The series_timer_id of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -202,6 +204,7 @@ class LiveTvTimerInfoDto(object):
     def run_time_ticks(self):
         """Gets the run_time_ticks of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The run time ticks.  # noqa: E501
 
         :return: The run_time_ticks of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: int
@@ -212,6 +215,7 @@ class LiveTvTimerInfoDto(object):
     def run_time_ticks(self, run_time_ticks):
         """Sets the run_time_ticks of this LiveTvTimerInfoDto.
 
+        The run time ticks.  # noqa: E501
 
         :param run_time_ticks: The run_time_ticks of this LiveTvTimerInfoDto.  # noqa: E501
         :type: int
@@ -265,6 +269,7 @@ class LiveTvTimerInfoDto(object):
     def id(self):
         """Gets the id of this LiveTvTimerInfoDto.  # noqa: E501
 
+        Id of the recording.  # noqa: E501
 
         :return: The id of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -275,6 +280,7 @@ class LiveTvTimerInfoDto(object):
     def id(self, id):
         """Sets the id of this LiveTvTimerInfoDto.
 
+        Id of the recording.  # noqa: E501
 
         :param id: The id of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -307,6 +313,7 @@ class LiveTvTimerInfoDto(object):
     def server_id(self):
         """Gets the server_id of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The server identifier.  # noqa: E501
 
         :return: The server_id of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -317,6 +324,7 @@ class LiveTvTimerInfoDto(object):
     def server_id(self, server_id):
         """Sets the server_id of this LiveTvTimerInfoDto.
 
+        The server identifier.  # noqa: E501
 
         :param server_id: The server_id of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -328,6 +336,7 @@ class LiveTvTimerInfoDto(object):
     def channel_id(self):
         """Gets the channel_id of this LiveTvTimerInfoDto.  # noqa: E501
 
+        ChannelId of the recording.  # noqa: E501
 
         :return: The channel_id of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -338,6 +347,7 @@ class LiveTvTimerInfoDto(object):
     def channel_id(self, channel_id):
         """Sets the channel_id of this LiveTvTimerInfoDto.
 
+        ChannelId of the recording.  # noqa: E501
 
         :param channel_id: The channel_id of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -349,6 +359,7 @@ class LiveTvTimerInfoDto(object):
     def channel_name(self):
         """Gets the channel_name of this LiveTvTimerInfoDto.  # noqa: E501
 
+        ChannelName of the recording.  # noqa: E501
 
         :return: The channel_name of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -359,6 +370,7 @@ class LiveTvTimerInfoDto(object):
     def channel_name(self, channel_name):
         """Sets the channel_name of this LiveTvTimerInfoDto.
 
+        ChannelName of the recording.  # noqa: E501
 
         :param channel_name: The channel_name of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -412,6 +424,7 @@ class LiveTvTimerInfoDto(object):
     def program_id(self):
         """Gets the program_id of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The program identifier.  # noqa: E501
 
         :return: The program_id of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -422,6 +435,7 @@ class LiveTvTimerInfoDto(object):
     def program_id(self, program_id):
         """Sets the program_id of this LiveTvTimerInfoDto.
 
+        The program identifier.  # noqa: E501
 
         :param program_id: The program_id of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -433,6 +447,7 @@ class LiveTvTimerInfoDto(object):
     def name(self):
         """Gets the name of this LiveTvTimerInfoDto.  # noqa: E501
 
+        Name of the recording.  # noqa: E501
 
         :return: The name of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -443,6 +458,7 @@ class LiveTvTimerInfoDto(object):
     def name(self, name):
         """Sets the name of this LiveTvTimerInfoDto.
 
+        Name of the recording.  # noqa: E501
 
         :param name: The name of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -454,6 +470,7 @@ class LiveTvTimerInfoDto(object):
     def overview(self):
         """Gets the overview of this LiveTvTimerInfoDto.  # noqa: E501
 
+        Description of the recording.  # noqa: E501
 
         :return: The overview of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -464,6 +481,7 @@ class LiveTvTimerInfoDto(object):
     def overview(self, overview):
         """Sets the overview of this LiveTvTimerInfoDto.
 
+        Description of the recording.  # noqa: E501
 
         :param overview: The overview of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -475,6 +493,7 @@ class LiveTvTimerInfoDto(object):
     def start_date(self):
         """Gets the start_date of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :return: The start_date of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: datetime
@@ -485,6 +504,7 @@ class LiveTvTimerInfoDto(object):
     def start_date(self, start_date):
         """Sets the start_date of this LiveTvTimerInfoDto.
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :param start_date: The start_date of this LiveTvTimerInfoDto.  # noqa: E501
         :type: datetime
@@ -496,6 +516,7 @@ class LiveTvTimerInfoDto(object):
     def end_date(self):
         """Gets the end_date of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The end date of the recording, in UTC.  # noqa: E501
 
         :return: The end_date of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: datetime
@@ -506,6 +527,7 @@ class LiveTvTimerInfoDto(object):
     def end_date(self, end_date):
         """Sets the end_date of this LiveTvTimerInfoDto.
 
+        The end date of the recording, in UTC.  # noqa: E501
 
         :param end_date: The end_date of this LiveTvTimerInfoDto.  # noqa: E501
         :type: datetime
@@ -517,6 +539,7 @@ class LiveTvTimerInfoDto(object):
     def priority(self):
         """Gets the priority of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The priority.  # noqa: E501
 
         :return: The priority of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: int
@@ -527,6 +550,7 @@ class LiveTvTimerInfoDto(object):
     def priority(self, priority):
         """Sets the priority of this LiveTvTimerInfoDto.
 
+        The priority.  # noqa: E501
 
         :param priority: The priority of this LiveTvTimerInfoDto.  # noqa: E501
         :type: int
@@ -538,6 +562,7 @@ class LiveTvTimerInfoDto(object):
     def pre_padding_seconds(self):
         """Gets the pre_padding_seconds of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The pre padding seconds.  # noqa: E501
 
         :return: The pre_padding_seconds of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: int
@@ -548,6 +573,7 @@ class LiveTvTimerInfoDto(object):
     def pre_padding_seconds(self, pre_padding_seconds):
         """Sets the pre_padding_seconds of this LiveTvTimerInfoDto.
 
+        The pre padding seconds.  # noqa: E501
 
         :param pre_padding_seconds: The pre_padding_seconds of this LiveTvTimerInfoDto.  # noqa: E501
         :type: int
@@ -559,6 +585,7 @@ class LiveTvTimerInfoDto(object):
     def post_padding_seconds(self):
         """Gets the post_padding_seconds of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The post padding seconds.  # noqa: E501
 
         :return: The post_padding_seconds of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: int
@@ -569,6 +596,7 @@ class LiveTvTimerInfoDto(object):
     def post_padding_seconds(self, post_padding_seconds):
         """Sets the post_padding_seconds of this LiveTvTimerInfoDto.
 
+        The post padding seconds.  # noqa: E501
 
         :param post_padding_seconds: The post_padding_seconds of this LiveTvTimerInfoDto.  # noqa: E501
         :type: int
@@ -580,6 +608,7 @@ class LiveTvTimerInfoDto(object):
     def is_pre_padding_required(self):
         """Gets the is_pre_padding_required of this LiveTvTimerInfoDto.  # noqa: E501
 
+        A value indicating whether this instance is pre padding required.  # noqa: E501
 
         :return: The is_pre_padding_required of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: bool
@@ -590,6 +619,7 @@ class LiveTvTimerInfoDto(object):
     def is_pre_padding_required(self, is_pre_padding_required):
         """Sets the is_pre_padding_required of this LiveTvTimerInfoDto.
 
+        A value indicating whether this instance is pre padding required.  # noqa: E501
 
         :param is_pre_padding_required: The is_pre_padding_required of this LiveTvTimerInfoDto.  # noqa: E501
         :type: bool
@@ -601,6 +631,7 @@ class LiveTvTimerInfoDto(object):
     def parent_backdrop_item_id(self):
         """Gets the parent_backdrop_item_id of this LiveTvTimerInfoDto.  # noqa: E501
 
+        If the item does not have any backdrops, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :return: The parent_backdrop_item_id of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -611,6 +642,7 @@ class LiveTvTimerInfoDto(object):
     def parent_backdrop_item_id(self, parent_backdrop_item_id):
         """Sets the parent_backdrop_item_id of this LiveTvTimerInfoDto.
 
+        If the item does not have any backdrops, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :param parent_backdrop_item_id: The parent_backdrop_item_id of this LiveTvTimerInfoDto.  # noqa: E501
         :type: str
@@ -622,6 +654,7 @@ class LiveTvTimerInfoDto(object):
     def parent_backdrop_image_tags(self):
         """Gets the parent_backdrop_image_tags of this LiveTvTimerInfoDto.  # noqa: E501
 
+        The parent backdrop image tags.  # noqa: E501
 
         :return: The parent_backdrop_image_tags of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: list[str]
@@ -632,6 +665,7 @@ class LiveTvTimerInfoDto(object):
     def parent_backdrop_image_tags(self, parent_backdrop_image_tags):
         """Sets the parent_backdrop_image_tags of this LiveTvTimerInfoDto.
 
+        The parent backdrop image tags.  # noqa: E501
 
         :param parent_backdrop_image_tags: The parent_backdrop_image_tags of this LiveTvTimerInfoDto.  # noqa: E501
         :type: list[str]
@@ -643,6 +677,7 @@ class LiveTvTimerInfoDto(object):
     def is_post_padding_required(self):
         """Gets the is_post_padding_required of this LiveTvTimerInfoDto.  # noqa: E501
 
+        A value indicating whether this instance is post padding required.  # noqa: E501
 
         :return: The is_post_padding_required of this LiveTvTimerInfoDto.  # noqa: E501
         :rtype: bool
@@ -653,6 +688,7 @@ class LiveTvTimerInfoDto(object):
     def is_post_padding_required(self, is_post_padding_required):
         """Sets the is_post_padding_required of this LiveTvTimerInfoDto.
 
+        A value indicating whether this instance is post padding required.  # noqa: E501
 
         :param is_post_padding_required: The is_post_padding_required of this LiveTvTimerInfoDto.  # noqa: E501
         :type: bool

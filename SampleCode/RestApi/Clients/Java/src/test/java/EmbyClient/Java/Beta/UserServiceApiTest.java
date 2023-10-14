@@ -8,17 +8,17 @@ package EmbyClient.Java.Beta;
 import io.swagger.client.model.AuthenticateUser;
 import io.swagger.client.model.AuthenticateUserByName;
 import io.swagger.client.model.AuthenticationAuthenticationResult;
-import io.swagger.client.model.ConfigurationUserConfiguration;
 import io.swagger.client.model.CreateUserByName;
 import io.swagger.client.model.ForgotPassword;
 import io.swagger.client.model.ForgotPasswordPin;
+import io.swagger.client.model.ForgotPasswordResult;
 import io.swagger.client.model.NameIdPair;
+import io.swagger.client.model.PinRedeemResult;
 import io.swagger.client.model.QueryResultUserDto;
 import io.swagger.client.model.UpdateUserPassword;
+import io.swagger.client.model.UserConfiguration;
 import io.swagger.client.model.UserDto;
-import io.swagger.client.model.UsersForgotPasswordResult;
-import io.swagger.client.model.UsersPinRedeemResult;
-import io.swagger.client.model.UsersUserPolicy;
+import io.swagger.client.model.UserPolicy;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -211,7 +211,7 @@ public class UserServiceApiTest {
      */
     @Test
     public void postUsersByIdConfigurationTest() throws Exception {
-        ConfigurationUserConfiguration body = null;
+        UserConfiguration body = null;
         String id = null;
         api.postUsersByIdConfiguration(body, id);
 
@@ -274,7 +274,7 @@ public class UserServiceApiTest {
      */
     @Test
     public void postUsersByIdPolicyTest() throws Exception {
-        UsersUserPolicy body = null;
+        UserPolicy body = null;
         String id = null;
         api.postUsersByIdPolicy(body, id);
 
@@ -324,7 +324,7 @@ public class UserServiceApiTest {
     @Test
     public void postUsersForgotpasswordTest() throws Exception {
         ForgotPassword body = null;
-        UsersForgotPasswordResult response = api.postUsersForgotpassword(body);
+        ForgotPasswordResult response = api.postUsersForgotpassword(body);
 
         // TODO: test validations
     }
@@ -339,7 +339,7 @@ public class UserServiceApiTest {
     @Test
     public void postUsersForgotpasswordPinTest() throws Exception {
         ForgotPasswordPin body = null;
-        UsersPinRedeemResult response = api.postUsersForgotpasswordPin(body);
+        PinRedeemResult response = api.postUsersForgotpasswordPin(body);
 
         // TODO: test validations
     }

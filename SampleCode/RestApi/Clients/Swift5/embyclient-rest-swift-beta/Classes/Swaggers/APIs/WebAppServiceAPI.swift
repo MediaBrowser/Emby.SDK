@@ -52,7 +52,7 @@ open class WebAppServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebConfigurationpages(completion: @escaping ((_ data: [EmbyWebApiConfigurationPageInfo]?,_ error: Error?) -> Void)) {
+    open class func getWebConfigurationpages(completion: @escaping ((_ data: [ApiConfigurationPageInfo]?,_ error: Error?) -> Void)) {
         getWebConfigurationpagesWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -126,16 +126,16 @@ open class WebAppServiceAPI {
   }
 } ]}]
 
-     - returns: RequestBuilder<[EmbyWebApiConfigurationPageInfo]> 
+     - returns: RequestBuilder<[ApiConfigurationPageInfo]> 
      */
-    open class func getWebConfigurationpagesWithRequestBuilder() -> RequestBuilder<[EmbyWebApiConfigurationPageInfo]> {
+    open class func getWebConfigurationpagesWithRequestBuilder() -> RequestBuilder<[ApiConfigurationPageInfo]> {
         let path = "/web/ConfigurationPages"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[EmbyWebApiConfigurationPageInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[ApiConfigurationPageInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

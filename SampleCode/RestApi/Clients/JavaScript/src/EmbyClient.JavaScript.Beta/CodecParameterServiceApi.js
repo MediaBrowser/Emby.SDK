@@ -10,13 +10,13 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyWebGenericEditEditObjectContainer from '../model/EmbyWebGenericEditEditObjectContainer';
+import EditObjectContainer from '../model/EditObjectContainer';
 import MediaEncodingCodecParameterContext from '../model/MediaEncodingCodecParameterContext';
 
 /**
 * CodecParameterService service.
 * @module EmbyClient.JavaScript.Beta/CodecParameterServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class CodecParameterServiceApi {
 
@@ -35,7 +35,7 @@ export default class CodecParameterServiceApi {
      * Callback function to receive the result of the getEncodingCodecparameters operation.
      * @callback module:EmbyClient.JavaScript.Beta/CodecParameterServiceApi~getEncodingCodecparametersCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericEditEditObjectContainer} data The data returned by the service call.
+     * @param {module:model/EditObjectContainer} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -43,7 +43,7 @@ export default class CodecParameterServiceApi {
      * Gets the parameters for a specified codec.
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/CodecParameterServiceApi~getEncodingCodecparametersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericEditEditObjectContainer}
+     * data is of type: {@link module:model/EditObjectContainer}
      */
     getEncodingCodecparameters() {
       let postBody = null;
@@ -62,7 +62,7 @@ export default class CodecParameterServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericEditEditObjectContainer;
+      let returnType = EditObjectContainer;
 
       return this.apiClient.callApi(
         '/Encoding/CodecParameters', 'GET',

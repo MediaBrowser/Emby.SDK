@@ -8,13 +8,18 @@
 import Foundation
 
 
+/** This is used by the api to get information about a Person within a BaseItem   */
 
 public struct BaseItemPerson: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The identifier. */
     public var _id: String?
+    /** The role. */
     public var role: String?
     public var type: PersonType?
+    /** The primary image tag. */
     public var primaryImageTag: String?
 
     public init(name: String? = nil, _id: String? = nil, role: String? = nil, type: PersonType? = nil, primaryImageTag: String? = nil) {

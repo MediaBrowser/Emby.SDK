@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationMediaPathInfo from './ConfigurationMediaPathInfo';
+import MediaPathInfo from './MediaPathInfo';
 
 /**
 * The LibraryAddMediaPath model module.
 * @module model/LibraryAddMediaPath
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LibraryAddMediaPath {
     /**
@@ -49,7 +49,7 @@ export default class LibraryAddMediaPath {
                 obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
             }
             if (data.hasOwnProperty('PathInfo')) {
-                obj['PathInfo'] = ConfigurationMediaPathInfo.constructFromObject(data['PathInfo']);
+                obj['PathInfo'] = MediaPathInfo.constructFromObject(data['PathInfo']);
             }
             if (data.hasOwnProperty('RefreshLibrary')) {
                 obj['RefreshLibrary'] = ApiClient.convertToType(data['RefreshLibrary'], 'Boolean');
@@ -67,7 +67,7 @@ export default class LibraryAddMediaPath {
     */
     'Path' = undefined;
     /**
-    * @member {module:model/ConfigurationMediaPathInfo} PathInfo
+    * @member {module:model/MediaPathInfo} PathInfo
     */
     'PathInfo' = undefined;
     /**

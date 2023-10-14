@@ -1165,7 +1165,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
@@ -2268,7 +2268,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
@@ -3371,7 +3371,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
@@ -4464,7 +4464,7 @@ open class LibraryServiceAPI {
 } ]}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter userId: (query) Optional. Filter by user id, and attach user data (optional)
@@ -5547,7 +5547,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
@@ -6772,7 +6772,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
@@ -11340,7 +11340,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter isHidden: (query) Optional. Filter by folders that are marked hidden, or not. (optional)
 
@@ -12531,7 +12531,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
@@ -13634,7 +13634,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
@@ -14737,7 +14737,7 @@ open class LibraryServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path) Item Id 
      - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)

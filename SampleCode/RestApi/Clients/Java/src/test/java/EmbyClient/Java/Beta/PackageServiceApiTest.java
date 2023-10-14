@@ -5,9 +5,9 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.UpdatesPackageInfo;
-import io.swagger.client.model.UpdatesPackageVersionClass;
-import io.swagger.client.model.UpdatesPackageVersionInfo;
+import io.swagger.client.model.PackageInfo;
+import io.swagger.client.model.PackageVersionClass;
+import io.swagger.client.model.PackageVersionInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -55,7 +55,7 @@ public class PackageServiceApiTest {
         String targetSystems = null;
         Boolean isPremium = null;
         Boolean isAdult = null;
-        List<UpdatesPackageInfo> response = api.getPackages(packageType, targetSystems, isPremium, isAdult);
+        List<PackageInfo> response = api.getPackages(packageType, targetSystems, isPremium, isAdult);
 
         // TODO: test validations
     }
@@ -71,7 +71,7 @@ public class PackageServiceApiTest {
     public void getPackagesByNameTest() throws Exception {
         String name = null;
         String assemblyGuid = null;
-        UpdatesPackageInfo response = api.getPackagesByName(name, assemblyGuid);
+        PackageInfo response = api.getPackagesByName(name, assemblyGuid);
 
         // TODO: test validations
     }
@@ -86,7 +86,7 @@ public class PackageServiceApiTest {
     @Test
     public void getPackagesUpdatesTest() throws Exception {
         String packageType = null;
-        List<UpdatesPackageVersionInfo> response = api.getPackagesUpdates(packageType);
+        List<PackageVersionInfo> response = api.getPackagesUpdates(packageType);
 
         // TODO: test validations
     }
@@ -103,7 +103,7 @@ public class PackageServiceApiTest {
         String name = null;
         String assemblyGuid = null;
         String version = null;
-        UpdatesPackageVersionClass updateClass = null;
+        PackageVersionClass updateClass = null;
         api.postPackagesInstalledByName(name, assemblyGuid, version, updateClass);
 
         // TODO: test validations

@@ -16,11 +16,12 @@ import QueueItem from './QueueItem';
 /**
 * The PlaybackStopInfo model module.
 * @module model/PlaybackStopInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class PlaybackStopInfo {
     /**
     * Constructs a new <code>PlaybackStopInfo</code>.
+    * Class PlaybackStopInfo.  
     * @alias module:model/PlaybackStopInfo
     * @class
     */
@@ -107,30 +108,37 @@ export default class PlaybackStopInfo {
     */
     'Item' = undefined;
     /**
+    * The item identifier.
     * @member {String} ItemId
     */
     'ItemId' = undefined;
     /**
+    * The session id.
     * @member {String} SessionId
     */
     'SessionId' = undefined;
     /**
+    * The media version identifier.
     * @member {String} MediaSourceId
     */
     'MediaSourceId' = undefined;
     /**
+    * The position ticks.
     * @member {Number} PositionTicks
     */
     'PositionTicks' = undefined;
     /**
+    * The live stream identifier.
     * @member {String} LiveStreamId
     */
     'LiveStreamId' = undefined;
     /**
+    * The play session identifier.
     * @member {String} PlaySessionId
     */
     'PlaySessionId' = undefined;
     /**
+    * A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.
     * @member {Boolean} Failed
     */
     'Failed' = undefined;

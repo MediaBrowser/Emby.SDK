@@ -13,7 +13,7 @@ type ClientCapabilities struct {
 	PushToken string `json:"PushToken,omitempty"`
 	PushTokenType string `json:"PushTokenType,omitempty"`
 	SupportsSync bool `json:"SupportsSync,omitempty"`
-	DeviceProfile *DlnaDeviceProfile `json:"DeviceProfile,omitempty"`
+	DeviceProfile *DeviceProfile `json:"DeviceProfile,omitempty"`
 	IconUrl string `json:"IconUrl,omitempty"`
 	AppId string `json:"AppId,omitempty"`
 }

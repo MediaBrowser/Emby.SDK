@@ -8,21 +8,28 @@
 import Foundation
 
 
+/** Used to hold information about a user&#x27;s list of configured virtual folders   */
 
 public struct VirtualFolderInfo: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The locations. */
     public var locations: [String]?
+    /** The type of the collection. */
     public var collectionType: String?
-    public var libraryOptions: ConfigurationLibraryOptions?
+    public var libraryOptions: LibraryOptions?
+    /** The item identifier. */
     public var itemId: String?
+    /** ItemId came first, so that is left for compatability purposes */
     public var _id: String?
     public var guid: String?
+    /** The primary image item identifier. */
     public var primaryImageItemId: String?
     public var refreshProgress: Double?
     public var refreshStatus: String?
 
-    public init(name: String? = nil, locations: [String]? = nil, collectionType: String? = nil, libraryOptions: ConfigurationLibraryOptions? = nil, itemId: String? = nil, _id: String? = nil, guid: String? = nil, primaryImageItemId: String? = nil, refreshProgress: Double? = nil, refreshStatus: String? = nil) {
+    public init(name: String? = nil, locations: [String]? = nil, collectionType: String? = nil, libraryOptions: LibraryOptions? = nil, itemId: String? = nil, _id: String? = nil, guid: String? = nil, primaryImageItemId: String? = nil, refreshProgress: Double? = nil, refreshStatus: String? = nil) {
         self.name = name
         self.locations = locations
         self.collectionType = collectionType

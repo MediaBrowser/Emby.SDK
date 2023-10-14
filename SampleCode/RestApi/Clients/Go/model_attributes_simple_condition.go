@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// AttributesSimpleCondition : Conditions on the source value.  
 type AttributesSimpleCondition string
 
 // List of Attributes.SimpleCondition

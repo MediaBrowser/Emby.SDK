@@ -124,7 +124,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[EmbyDlnaProfilesDlnaProfile]
+        :return: list[DlnaProfilesDlnaProfile]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -145,7 +145,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[EmbyDlnaProfilesDlnaProfile]
+        :return: list[DlnaProfilesDlnaProfile]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -193,7 +193,7 @@ class DlnaServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[EmbyDlnaProfilesDlnaProfile]',  # noqa: E501
+            response_type='list[DlnaProfilesDlnaProfile]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -212,7 +212,7 @@ class DlnaServiceApi(object):
 
         :param async_req bool
         :param str id: Profile Id (required)
-        :return: EmbyDlnaProfilesDlnaProfile
+        :return: DlnaProfilesDlnaProfile
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -234,7 +234,7 @@ class DlnaServiceApi(object):
 
         :param async_req bool
         :param str id: Profile Id (required)
-        :return: EmbyDlnaProfilesDlnaProfile
+        :return: DlnaProfilesDlnaProfile
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -288,7 +288,7 @@ class DlnaServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EmbyDlnaProfilesDlnaProfile',  # noqa: E501
+            response_type='DlnaProfilesDlnaProfile',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -306,7 +306,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: EmbyDlnaProfilesDlnaProfile
+        :return: DlnaProfilesDlnaProfile
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -327,7 +327,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: EmbyDlnaProfilesDlnaProfile
+        :return: DlnaProfilesDlnaProfile
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -375,7 +375,7 @@ class DlnaServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EmbyDlnaProfilesDlnaProfile',  # noqa: E501
+            response_type='DlnaProfilesDlnaProfile',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -393,7 +393,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param EmbyDlnaProfilesDlnaProfile body: DlnaProfile:  (required)
+        :param DlnaProfilesDlnaProfile body: DlnaProfile:  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -415,7 +415,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param EmbyDlnaProfilesDlnaProfile body: DlnaProfile:  (required)
+        :param DlnaProfilesDlnaProfile body: DlnaProfile:  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -488,7 +488,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param EmbyDlnaProfilesDlnaProfile body: DlnaProfile:  (required)
+        :param DlnaProfilesDlnaProfile body: DlnaProfile:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -511,7 +511,7 @@ class DlnaServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param EmbyDlnaProfilesDlnaProfile body: DlnaProfile:  (required)
+        :param DlnaProfilesDlnaProfile body: DlnaProfile:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,

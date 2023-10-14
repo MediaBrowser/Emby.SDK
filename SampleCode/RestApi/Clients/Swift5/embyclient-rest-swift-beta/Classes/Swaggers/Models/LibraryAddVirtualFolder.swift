@@ -15,9 +15,9 @@ public struct LibraryAddVirtualFolder: Codable {
     public var collectionType: String?
     public var refreshLibrary: Bool?
     public var paths: [String]?
-    public var libraryOptions: ConfigurationLibraryOptions?
+    public var libraryOptions: LibraryOptions?
 
-    public init(name: String? = nil, collectionType: String? = nil, refreshLibrary: Bool? = nil, paths: [String]? = nil, libraryOptions: ConfigurationLibraryOptions? = nil) {
+    public init(name: String? = nil, collectionType: String? = nil, refreshLibrary: Bool? = nil, paths: [String]? = nil, libraryOptions: LibraryOptions? = nil) {
         self.name = name
         self.collectionType = collectionType
         self.refreshLibrary = refreshLibrary

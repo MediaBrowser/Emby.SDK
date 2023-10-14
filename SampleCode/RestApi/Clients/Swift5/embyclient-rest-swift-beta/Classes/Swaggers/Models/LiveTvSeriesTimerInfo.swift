@@ -11,26 +11,42 @@ import Foundation
 
 public struct LiveTvSeriesTimerInfo: Codable {
 
+    /** Id of the recording. */
     public var _id: String?
+    /** ChannelId of the recording. */
     public var channelId: String?
     public var channelIds: [String]?
+    /** The program identifier. */
     public var programId: String?
+    /** Name of the recording. */
     public var name: String?
     public var serviceName: String?
+    /** Description of the recording. */
     public var overview: String?
+    /** The start date of the recording, in UTC. */
     public var startDate: Date?
+    /** The end date of the recording, in UTC. */
     public var endDate: Date?
+    /** A value indicating whether \\[record any time\\]. */
     public var recordAnyTime: Bool?
     public var keepUpTo: Int?
     public var keepUntil: LiveTvKeepUntil?
     public var skipEpisodesInLibrary: Bool?
+    /** A value indicating whether \\[record new only\\]. */
     public var recordNewOnly: Bool?
+    /** The days. */
     public var days: [DayOfWeek]?
+    /** The priority. */
     public var priority: Int?
+    /** The pre padding seconds. */
     public var prePaddingSeconds: Int?
+    /** The post padding seconds. */
     public var postPaddingSeconds: Int?
+    /** A value indicating whether this instance is pre padding required. */
     public var isPrePaddingRequired: Bool?
+    /** A value indicating whether this instance is post padding required. */
     public var isPostPaddingRequired: Bool?
+    /** The series identifier. */
     public var seriesId: String?
     public var providerIds: ProviderIdDictionary?
     public var maxRecordingSeconds: Int?

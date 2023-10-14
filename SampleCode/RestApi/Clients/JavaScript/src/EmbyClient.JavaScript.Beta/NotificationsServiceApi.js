@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyNotificationsNotificationCategoryInfo from '../model/EmbyNotificationsNotificationCategoryInfo';
+import NotificationCategoryInfo from '../model/NotificationCategoryInfo';
 
 /**
 * NotificationsService service.
 * @module EmbyClient.JavaScript.Beta/NotificationsServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class NotificationsServiceApi {
 
@@ -34,7 +34,7 @@ export default class NotificationsServiceApi {
      * Callback function to receive the result of the getNotificationsTypes operation.
      * @callback module:EmbyClient.JavaScript.Beta/NotificationsServiceApi~getNotificationsTypesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/EmbyNotificationsNotificationCategoryInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/NotificationCategoryInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -42,7 +42,7 @@ export default class NotificationsServiceApi {
      * Gets notification types
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/NotificationsServiceApi~getNotificationsTypesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/EmbyNotificationsNotificationCategoryInfo>}
+     * data is of type: {@link Array.<module:model/NotificationCategoryInfo>}
      */
     getNotificationsTypes() {
       let postBody = null;
@@ -59,7 +59,7 @@ export default class NotificationsServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [EmbyNotificationsNotificationCategoryInfo];
+      let returnType = [NotificationCategoryInfo];
 
       return this.apiClient.callApi(
         '/Notifications/Types', 'GET',

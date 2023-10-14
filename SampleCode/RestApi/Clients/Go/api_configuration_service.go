@@ -26,15 +26,15 @@ type ConfigurationServiceApiService service
 ConfigurationServiceApiService Gets application configuration
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return ConfigurationServerConfiguration
+@return ServerConfiguration
 */
-func (a *ConfigurationServiceApiService) GetSystemConfiguration(ctx context.Context) (ConfigurationServerConfiguration, *http.Response, error) {
+func (a *ConfigurationServiceApiService) GetSystemConfiguration(ctx context.Context) (ServerConfiguration, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue ConfigurationServerConfiguration
+		localVarReturnValue ServerConfiguration
 	)
 
 	// create path and map variables
@@ -104,7 +104,7 @@ func (a *ConfigurationServiceApiService) GetSystemConfiguration(ctx context.Cont
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ConfigurationServerConfiguration
+			var v ServerConfiguration
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -206,7 +206,7 @@ Requires authentication as administrator
  * @param body ServerConfiguration: 
 
 */
-func (a *ConfigurationServiceApiService) PostSystemConfiguration(ctx context.Context, body ConfigurationServerConfiguration) (*http.Response, error) {
+func (a *ConfigurationServiceApiService) PostSystemConfiguration(ctx context.Context, body ServerConfiguration) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

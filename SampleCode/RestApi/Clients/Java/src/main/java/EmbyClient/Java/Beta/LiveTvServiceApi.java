@@ -37,7 +37,7 @@ import io.swagger.client.model.LiveTvTimerInfoDto;
 import io.swagger.client.model.LiveTvTunerHostInfo;
 import io.swagger.client.model.NameIdPair;
 import io.swagger.client.model.QueryResultBaseItemDto;
-import io.swagger.client.model.QueryResultEmbyLiveTVChannelManagementInfo;
+import io.swagger.client.model.QueryResultChannelManagementInfo;
 import io.swagger.client.model.QueryResultLiveTVApiEpgRow;
 import io.swagger.client.model.QueryResultLiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.QueryResultLiveTvTimerInfoDto;
@@ -1266,7 +1266,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv channels. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv channels. Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvChannelsCall(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1639,7 +1639,7 @@ public class LiveTvServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv channels. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv channels. Documentation</a>
      */
     public QueryResultBaseItemDto getLivetvChannels(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getLivetvChannelsWithHttpInfo(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
@@ -1756,7 +1756,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv channels. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv channels. Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getLivetvChannelsWithHttpInfo(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvChannelsValidateBeforeCall(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, null);
@@ -1875,7 +1875,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv channels. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv channels. Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvChannelsAsync(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -1912,7 +1912,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv channel Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv channel Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvChannelsByIdCall(String id, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1982,7 +1982,7 @@ public class LiveTvServiceApi {
      * @return BaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv channel Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv channel Documentation</a>
      */
     public BaseItemDto getLivetvChannelsById(String id, String userId) throws ApiException {
         ApiResponse<BaseItemDto> resp = getLivetvChannelsByIdWithHttpInfo(id, userId);
@@ -1997,7 +1997,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv channel Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv channel Documentation</a>
      */
     public ApiResponse<BaseItemDto> getLivetvChannelsByIdWithHttpInfo(String id, String userId) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvChannelsByIdValidateBeforeCall(id, userId, null, null);
@@ -2014,7 +2014,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv channel Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv channel Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvChannelsByIdAsync(String id, String userId, final ApiCallback<BaseItemDto> callback) throws ApiException {
 
@@ -2148,7 +2148,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv channel tags Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv channel tags Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvChanneltagsCall(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -2506,7 +2506,7 @@ public class LiveTvServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv channel tags Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv channel tags Documentation</a>
      */
     public QueryResultBaseItemDto getLivetvChanneltags(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getLivetvChanneltagsWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
@@ -2618,7 +2618,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv channel tags Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv channel tags Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getLivetvChanneltagsWithHttpInfo(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvChanneltagsValidateBeforeCall(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, null);
@@ -2732,7 +2732,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv channel tags Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv channel tags Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvChanneltagsAsync(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, String locationTypes, String excludeLocationTypes, Boolean isMissing, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -4223,7 +4223,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the top level live tv folder Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the top level live tv folder Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvFolderCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -4284,7 +4284,7 @@ public class LiveTvServiceApi {
      * @return BaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the top level live tv folder Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the top level live tv folder Documentation</a>
      */
     public BaseItemDto getLivetvFolder() throws ApiException {
         ApiResponse<BaseItemDto> resp = getLivetvFolderWithHttpInfo();
@@ -4297,7 +4297,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the top level live tv folder Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the top level live tv folder Documentation</a>
      */
     public ApiResponse<BaseItemDto> getLivetvFolderWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getLivetvFolderValidateBeforeCall(null, null);
@@ -4312,7 +4312,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the top level live tv folder Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the top level live tv folder Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvFolderAsync(final ApiCallback<BaseItemDto> callback) throws ApiException {
 
@@ -5512,11 +5512,11 @@ public class LiveTvServiceApi {
      * @param limit Optional. The maximum number of records to return (optional)
      * @param sortBy Optional. Specify one or more sort orders, comma delimeted. Options: Name, StartDate (optional)
      * @param sortOrder Sort Order - Ascending,Descending (optional)
-     * @return QueryResultEmbyLiveTVChannelManagementInfo
+     * @return QueryResultChannelManagementInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultEmbyLiveTVChannelManagementInfo getLivetvManageChannels(Integer startIndex, Integer limit, String sortBy, String sortOrder) throws ApiException {
-        ApiResponse<QueryResultEmbyLiveTVChannelManagementInfo> resp = getLivetvManageChannelsWithHttpInfo(startIndex, limit, sortBy, sortOrder);
+    public QueryResultChannelManagementInfo getLivetvManageChannels(Integer startIndex, Integer limit, String sortBy, String sortOrder) throws ApiException {
+        ApiResponse<QueryResultChannelManagementInfo> resp = getLivetvManageChannelsWithHttpInfo(startIndex, limit, sortBy, sortOrder);
         return resp.getData();
     }
 
@@ -5527,12 +5527,12 @@ public class LiveTvServiceApi {
      * @param limit Optional. The maximum number of records to return (optional)
      * @param sortBy Optional. Specify one or more sort orders, comma delimeted. Options: Name, StartDate (optional)
      * @param sortOrder Sort Order - Ascending,Descending (optional)
-     * @return ApiResponse&lt;QueryResultEmbyLiveTVChannelManagementInfo&gt;
+     * @return ApiResponse&lt;QueryResultChannelManagementInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultEmbyLiveTVChannelManagementInfo> getLivetvManageChannelsWithHttpInfo(Integer startIndex, Integer limit, String sortBy, String sortOrder) throws ApiException {
+    public ApiResponse<QueryResultChannelManagementInfo> getLivetvManageChannelsWithHttpInfo(Integer startIndex, Integer limit, String sortBy, String sortOrder) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvManageChannelsValidateBeforeCall(startIndex, limit, sortBy, sortOrder, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultEmbyLiveTVChannelManagementInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -5547,7 +5547,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLivetvManageChannelsAsync(Integer startIndex, Integer limit, String sortBy, String sortOrder, final ApiCallback<QueryResultEmbyLiveTVChannelManagementInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLivetvManageChannelsAsync(Integer startIndex, Integer limit, String sortBy, String sortOrder, final ApiCallback<QueryResultChannelManagementInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5569,7 +5569,7 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLivetvManageChannelsValidateBeforeCall(startIndex, limit, sortBy, sortOrder, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultEmbyLiveTVChannelManagementInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -6307,7 +6307,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv epgs.. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv epgs.. Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvProgramsRecommendedCall(String userId, Integer limit, Boolean isAiring, Boolean hasAired, Boolean isSeries, Boolean isMovie, Boolean isNews, Boolean isKids, Boolean isSports, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, String genreIds, String fields, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -6413,7 +6413,7 @@ public class LiveTvServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv epgs.. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv epgs.. Documentation</a>
      */
     public QueryResultBaseItemDto getLivetvProgramsRecommended(String userId, Integer limit, Boolean isAiring, Boolean hasAired, Boolean isSeries, Boolean isMovie, Boolean isNews, Boolean isKids, Boolean isSports, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, String genreIds, String fields, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getLivetvProgramsRecommendedWithHttpInfo(userId, limit, isAiring, hasAired, isSeries, isMovie, isNews, isKids, isSports, enableImages, imageTypeLimit, enableImageTypes, genreIds, fields, enableUserData);
@@ -6441,7 +6441,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv epgs.. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv epgs.. Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getLivetvProgramsRecommendedWithHttpInfo(String userId, Integer limit, Boolean isAiring, Boolean hasAired, Boolean isSeries, Boolean isMovie, Boolean isNews, Boolean isKids, Boolean isSports, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, String genreIds, String fields, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvProgramsRecommendedValidateBeforeCall(userId, limit, isAiring, hasAired, isSeries, isMovie, isNews, isKids, isSports, enableImages, imageTypeLimit, enableImageTypes, genreIds, fields, enableUserData, null, null);
@@ -6471,7 +6471,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available live tv epgs.. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available live tv epgs.. Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvProgramsRecommendedAsync(String userId, Integer limit, Boolean isAiring, Boolean hasAired, Boolean isSeries, Boolean isMovie, Boolean isNews, Boolean isKids, Boolean isSports, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, String genreIds, String fields, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -7238,7 +7238,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv recording Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv recording Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsByIdCall(String id, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -7308,7 +7308,7 @@ public class LiveTvServiceApi {
      * @return BaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv recording Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv recording Documentation</a>
      */
     public BaseItemDto getLivetvRecordingsById(String id, String userId) throws ApiException {
         ApiResponse<BaseItemDto> resp = getLivetvRecordingsByIdWithHttpInfo(id, userId);
@@ -7323,7 +7323,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv recording Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv recording Documentation</a>
      */
     public ApiResponse<BaseItemDto> getLivetvRecordingsByIdWithHttpInfo(String id, String userId) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvRecordingsByIdValidateBeforeCall(id, userId, null, null);
@@ -7340,7 +7340,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv recording Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv recording Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsByIdAsync(String id, String userId, final ApiCallback<BaseItemDto> callback) throws ApiException {
 
@@ -7381,7 +7381,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets recording folders Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets recording folders Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsFoldersCall(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -7460,7 +7460,7 @@ public class LiveTvServiceApi {
      * @return List&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets recording folders Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets recording folders Documentation</a>
      */
     public List<BaseItemDto> getLivetvRecordingsFolders(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<List<BaseItemDto>> resp = getLivetvRecordingsFoldersWithHttpInfo(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -7479,7 +7479,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;List&lt;BaseItemDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets recording folders Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets recording folders Documentation</a>
      */
     public ApiResponse<List<BaseItemDto>> getLivetvRecordingsFoldersWithHttpInfo(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvRecordingsFoldersValidateBeforeCall(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -7500,7 +7500,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets recording folders Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets recording folders Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsFoldersAsync(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
 
@@ -7535,7 +7535,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recording groups Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recording groups Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsGroupsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -7596,7 +7596,7 @@ public class LiveTvServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recording groups Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recording groups Documentation</a>
      */
     public QueryResultBaseItemDto getLivetvRecordingsGroups() throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getLivetvRecordingsGroupsWithHttpInfo();
@@ -7609,7 +7609,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recording groups Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recording groups Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getLivetvRecordingsGroupsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getLivetvRecordingsGroupsValidateBeforeCall(null, null);
@@ -7624,7 +7624,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recording groups Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recording groups Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsGroupsAsync(final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -7659,7 +7659,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recordings Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recordings Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsSeriesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -7720,7 +7720,7 @@ public class LiveTvServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recordings Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recordings Documentation</a>
      */
     public QueryResultBaseItemDto getLivetvRecordingsSeries() throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getLivetvRecordingsSeriesWithHttpInfo();
@@ -7733,7 +7733,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recordings Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recordings Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getLivetvRecordingsSeriesWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getLivetvRecordingsSeriesValidateBeforeCall(null, null);
@@ -7748,7 +7748,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets live tv recordings Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets live tv recordings Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvRecordingsSeriesAsync(final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -9703,11 +9703,11 @@ public class LiveTvServiceApi {
      * Requires authentication as administrator
      * @param body SetChannelDisabled (required)
      * @param id  (required)
-     * @return QueryResultEmbyLiveTVChannelManagementInfo
+     * @return QueryResultChannelManagementInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultEmbyLiveTVChannelManagementInfo postLivetvManageChannelsByIdDisabled(LiveTVApiSetChannelDisabled body, String id) throws ApiException {
-        ApiResponse<QueryResultEmbyLiveTVChannelManagementInfo> resp = postLivetvManageChannelsByIdDisabledWithHttpInfo(body, id);
+    public QueryResultChannelManagementInfo postLivetvManageChannelsByIdDisabled(LiveTVApiSetChannelDisabled body, String id) throws ApiException {
+        ApiResponse<QueryResultChannelManagementInfo> resp = postLivetvManageChannelsByIdDisabledWithHttpInfo(body, id);
         return resp.getData();
     }
 
@@ -9716,12 +9716,12 @@ public class LiveTvServiceApi {
      * Requires authentication as administrator
      * @param body SetChannelDisabled (required)
      * @param id  (required)
-     * @return ApiResponse&lt;QueryResultEmbyLiveTVChannelManagementInfo&gt;
+     * @return ApiResponse&lt;QueryResultChannelManagementInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultEmbyLiveTVChannelManagementInfo> postLivetvManageChannelsByIdDisabledWithHttpInfo(LiveTVApiSetChannelDisabled body, String id) throws ApiException {
+    public ApiResponse<QueryResultChannelManagementInfo> postLivetvManageChannelsByIdDisabledWithHttpInfo(LiveTVApiSetChannelDisabled body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postLivetvManageChannelsByIdDisabledValidateBeforeCall(body, id, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultEmbyLiveTVChannelManagementInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -9734,7 +9734,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledAsync(LiveTVApiSetChannelDisabled body, String id, final ApiCallback<QueryResultEmbyLiveTVChannelManagementInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledAsync(LiveTVApiSetChannelDisabled body, String id, final ApiCallback<QueryResultChannelManagementInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -9756,7 +9756,7 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = postLivetvManageChannelsByIdDisabledValidateBeforeCall(body, id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultEmbyLiveTVChannelManagementInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -9836,11 +9836,11 @@ public class LiveTvServiceApi {
      * Requires authentication as administrator
      * @param body SetChannelSortIndex (required)
      * @param id  (required)
-     * @return QueryResultEmbyLiveTVChannelManagementInfo
+     * @return QueryResultChannelManagementInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultEmbyLiveTVChannelManagementInfo postLivetvManageChannelsByIdSortindex(LiveTVApiSetChannelSortIndex body, String id) throws ApiException {
-        ApiResponse<QueryResultEmbyLiveTVChannelManagementInfo> resp = postLivetvManageChannelsByIdSortindexWithHttpInfo(body, id);
+    public QueryResultChannelManagementInfo postLivetvManageChannelsByIdSortindex(LiveTVApiSetChannelSortIndex body, String id) throws ApiException {
+        ApiResponse<QueryResultChannelManagementInfo> resp = postLivetvManageChannelsByIdSortindexWithHttpInfo(body, id);
         return resp.getData();
     }
 
@@ -9849,12 +9849,12 @@ public class LiveTvServiceApi {
      * Requires authentication as administrator
      * @param body SetChannelSortIndex (required)
      * @param id  (required)
-     * @return ApiResponse&lt;QueryResultEmbyLiveTVChannelManagementInfo&gt;
+     * @return ApiResponse&lt;QueryResultChannelManagementInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultEmbyLiveTVChannelManagementInfo> postLivetvManageChannelsByIdSortindexWithHttpInfo(LiveTVApiSetChannelSortIndex body, String id) throws ApiException {
+    public ApiResponse<QueryResultChannelManagementInfo> postLivetvManageChannelsByIdSortindexWithHttpInfo(LiveTVApiSetChannelSortIndex body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postLivetvManageChannelsByIdSortindexValidateBeforeCall(body, id, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultEmbyLiveTVChannelManagementInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -9867,7 +9867,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexAsync(LiveTVApiSetChannelSortIndex body, String id, final ApiCallback<QueryResultEmbyLiveTVChannelManagementInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexAsync(LiveTVApiSetChannelSortIndex body, String id, final ApiCallback<QueryResultChannelManagementInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -9889,7 +9889,7 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = postLivetvManageChannelsByIdSortindexValidateBeforeCall(body, id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultEmbyLiveTVChannelManagementInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

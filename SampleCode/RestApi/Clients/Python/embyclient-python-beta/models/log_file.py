@@ -55,6 +55,7 @@ class LogFile(object):
     def date_created(self):
         """Gets the date_created of this LogFile.  # noqa: E501
 
+        The date created.  # noqa: E501
 
         :return: The date_created of this LogFile.  # noqa: E501
         :rtype: datetime
@@ -65,6 +66,7 @@ class LogFile(object):
     def date_created(self, date_created):
         """Sets the date_created of this LogFile.
 
+        The date created.  # noqa: E501
 
         :param date_created: The date_created of this LogFile.  # noqa: E501
         :type: datetime
@@ -76,6 +78,7 @@ class LogFile(object):
     def date_modified(self):
         """Gets the date_modified of this LogFile.  # noqa: E501
 
+        The date modified.  # noqa: E501
 
         :return: The date_modified of this LogFile.  # noqa: E501
         :rtype: datetime
@@ -86,6 +89,7 @@ class LogFile(object):
     def date_modified(self, date_modified):
         """Sets the date_modified of this LogFile.
 
+        The date modified.  # noqa: E501
 
         :param date_modified: The date_modified of this LogFile.  # noqa: E501
         :type: datetime
@@ -97,6 +101,7 @@ class LogFile(object):
     def size(self):
         """Gets the size of this LogFile.  # noqa: E501
 
+        The size.  # noqa: E501
 
         :return: The size of this LogFile.  # noqa: E501
         :rtype: int
@@ -107,6 +112,7 @@ class LogFile(object):
     def size(self, size):
         """Sets the size of this LogFile.
 
+        The size.  # noqa: E501
 
         :param size: The size of this LogFile.  # noqa: E501
         :type: int
@@ -118,6 +124,7 @@ class LogFile(object):
     def name(self):
         """Gets the name of this LogFile.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this LogFile.  # noqa: E501
         :rtype: str
@@ -128,6 +135,7 @@ class LogFile(object):
     def name(self, name):
         """Sets the name of this LogFile.
 
+        The name.  # noqa: E501
 
         :param name: The name of this LogFile.  # noqa: E501
         :type: str

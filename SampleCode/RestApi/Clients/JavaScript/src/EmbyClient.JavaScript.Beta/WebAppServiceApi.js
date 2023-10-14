@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyWebApiConfigurationPageInfo from '../model/EmbyWebApiConfigurationPageInfo';
+import ApiConfigurationPageInfo from '../model/ApiConfigurationPageInfo';
 
 /**
 * WebAppService service.
 * @module EmbyClient.JavaScript.Beta/WebAppServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class WebAppServiceApi {
 
@@ -69,14 +69,14 @@ export default class WebAppServiceApi {
      * Callback function to receive the result of the getWebConfigurationpages operation.
      * @callback module:EmbyClient.JavaScript.Beta/WebAppServiceApi~getWebConfigurationpagesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/EmbyWebApiConfigurationPageInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/ApiConfigurationPageInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/WebAppServiceApi~getWebConfigurationpagesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/EmbyWebApiConfigurationPageInfo>}
+     * data is of type: {@link Array.<module:model/ApiConfigurationPageInfo>}
      */
     getWebConfigurationpages() {
       let postBody = null;
@@ -93,7 +93,7 @@ export default class WebAppServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [EmbyWebApiConfigurationPageInfo];
+      let returnType = [ApiConfigurationPageInfo];
 
       return this.apiClient.callApi(
         '/web/ConfigurationPages', 'GET',

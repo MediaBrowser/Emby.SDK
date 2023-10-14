@@ -8,9 +8,11 @@
 import Foundation
 
 
+/** Class ThemeMediaResult   */
 
 public struct ThemeMediaResult: Codable {
 
+    /** The owner id. */
     public var ownerId: Int64?
     public var items: [BaseItemDto]?
     public var totalRecordCount: Int?

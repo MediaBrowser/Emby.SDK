@@ -85,6 +85,7 @@ class ActivityLogEntry(object):
     def id(self):
         """Gets the id of this ActivityLogEntry.  # noqa: E501
 
+        The identifier.  # noqa: E501
 
         :return: The id of this ActivityLogEntry.  # noqa: E501
         :rtype: int
@@ -95,6 +96,7 @@ class ActivityLogEntry(object):
     def id(self, id):
         """Sets the id of this ActivityLogEntry.
 
+        The identifier.  # noqa: E501
 
         :param id: The id of this ActivityLogEntry.  # noqa: E501
         :type: int
@@ -106,6 +108,7 @@ class ActivityLogEntry(object):
     def name(self):
         """Gets the name of this ActivityLogEntry.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this ActivityLogEntry.  # noqa: E501
         :rtype: str
@@ -116,6 +119,7 @@ class ActivityLogEntry(object):
     def name(self, name):
         """Sets the name of this ActivityLogEntry.
 
+        The name.  # noqa: E501
 
         :param name: The name of this ActivityLogEntry.  # noqa: E501
         :type: str
@@ -127,6 +131,7 @@ class ActivityLogEntry(object):
     def overview(self):
         """Gets the overview of this ActivityLogEntry.  # noqa: E501
 
+        The overview.  # noqa: E501
 
         :return: The overview of this ActivityLogEntry.  # noqa: E501
         :rtype: str
@@ -137,6 +142,7 @@ class ActivityLogEntry(object):
     def overview(self, overview):
         """Sets the overview of this ActivityLogEntry.
 
+        The overview.  # noqa: E501
 
         :param overview: The overview of this ActivityLogEntry.  # noqa: E501
         :type: str
@@ -148,6 +154,7 @@ class ActivityLogEntry(object):
     def short_overview(self):
         """Gets the short_overview of this ActivityLogEntry.  # noqa: E501
 
+        The short overview.  # noqa: E501
 
         :return: The short_overview of this ActivityLogEntry.  # noqa: E501
         :rtype: str
@@ -158,6 +165,7 @@ class ActivityLogEntry(object):
     def short_overview(self, short_overview):
         """Sets the short_overview of this ActivityLogEntry.
 
+        The short overview.  # noqa: E501
 
         :param short_overview: The short_overview of this ActivityLogEntry.  # noqa: E501
         :type: str
@@ -169,6 +177,7 @@ class ActivityLogEntry(object):
     def type(self):
         """Gets the type of this ActivityLogEntry.  # noqa: E501
 
+        The type.  # noqa: E501
 
         :return: The type of this ActivityLogEntry.  # noqa: E501
         :rtype: str
@@ -179,6 +188,7 @@ class ActivityLogEntry(object):
     def type(self, type):
         """Sets the type of this ActivityLogEntry.
 
+        The type.  # noqa: E501
 
         :param type: The type of this ActivityLogEntry.  # noqa: E501
         :type: str
@@ -190,6 +200,7 @@ class ActivityLogEntry(object):
     def item_id(self):
         """Gets the item_id of this ActivityLogEntry.  # noqa: E501
 
+        The item identifier.  # noqa: E501
 
         :return: The item_id of this ActivityLogEntry.  # noqa: E501
         :rtype: str
@@ -200,6 +211,7 @@ class ActivityLogEntry(object):
     def item_id(self, item_id):
         """Sets the item_id of this ActivityLogEntry.
 
+        The item identifier.  # noqa: E501
 
         :param item_id: The item_id of this ActivityLogEntry.  # noqa: E501
         :type: str
@@ -211,6 +223,7 @@ class ActivityLogEntry(object):
     def _date(self):
         """Gets the _date of this ActivityLogEntry.  # noqa: E501
 
+        The date.  # noqa: E501
 
         :return: The _date of this ActivityLogEntry.  # noqa: E501
         :rtype: datetime
@@ -221,6 +234,7 @@ class ActivityLogEntry(object):
     def _date(self, _date):
         """Sets the _date of this ActivityLogEntry.
 
+        The date.  # noqa: E501
 
         :param _date: The _date of this ActivityLogEntry.  # noqa: E501
         :type: datetime
@@ -232,6 +246,7 @@ class ActivityLogEntry(object):
     def user_id(self):
         """Gets the user_id of this ActivityLogEntry.  # noqa: E501
 
+        The user identifier.  # noqa: E501
 
         :return: The user_id of this ActivityLogEntry.  # noqa: E501
         :rtype: str
@@ -242,6 +257,7 @@ class ActivityLogEntry(object):
     def user_id(self, user_id):
         """Sets the user_id of this ActivityLogEntry.
 
+        The user identifier.  # noqa: E501
 
         :param user_id: The user_id of this ActivityLogEntry.  # noqa: E501
         :type: str
@@ -253,6 +269,7 @@ class ActivityLogEntry(object):
     def user_primary_image_tag(self):
         """Gets the user_primary_image_tag of this ActivityLogEntry.  # noqa: E501
 
+        The user primary image tag.  # noqa: E501
 
         :return: The user_primary_image_tag of this ActivityLogEntry.  # noqa: E501
         :rtype: str
@@ -263,6 +280,7 @@ class ActivityLogEntry(object):
     def user_primary_image_tag(self, user_primary_image_tag):
         """Sets the user_primary_image_tag of this ActivityLogEntry.
 
+        The user primary image tag.  # noqa: E501
 
         :param user_primary_image_tag: The user_primary_image_tag of this ActivityLogEntry.  # noqa: E501
         :type: str

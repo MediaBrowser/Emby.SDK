@@ -14,9 +14,9 @@ public struct LibraryLibraryOptionInfo: Codable {
     public var name: String?
     public var setupUrl: String?
     public var defaultEnabled: Bool?
-    public var features: [ConfigurationMetadataFeatures]?
+    public var features: [MetadataFeatures]?
 
-    public init(name: String? = nil, setupUrl: String? = nil, defaultEnabled: Bool? = nil, features: [ConfigurationMetadataFeatures]? = nil) {
+    public init(name: String? = nil, setupUrl: String? = nil, defaultEnabled: Bool? = nil, features: [MetadataFeatures]? = nil) {
         self.name = name
         self.setupUrl = setupUrl
         self.defaultEnabled = defaultEnabled

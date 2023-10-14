@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Conditions for comparing with a target value.   */
 public enum AttributesValueCondition: String, Codable {
     case isEqual = "IsEqual"
     case isNotEqual = "IsNotEqual"

@@ -16,9 +16,9 @@ import io.swagger.client.model.MarkerType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * ChapterInfo
+ * Class ChapterInfo  
  */
-
+@Schema(description = "Class ChapterInfo  ")
 
 public class ChapterInfo {
   @SerializedName("StartPositionTicks")
@@ -42,10 +42,10 @@ public class ChapterInfo {
   }
 
    /**
-   * Get startPositionTicks
+   * The start position ticks.
    * @return startPositionTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The start position ticks.")
   public Long getStartPositionTicks() {
     return startPositionTicks;
   }
@@ -60,10 +60,10 @@ public class ChapterInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }

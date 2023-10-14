@@ -28,7 +28,7 @@ import LiveTvTimerInfoDto from '../model/LiveTvTimerInfoDto';
 import LiveTvTunerHostInfo from '../model/LiveTvTunerHostInfo';
 import NameIdPair from '../model/NameIdPair';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
-import QueryResultEmbyLiveTVChannelManagementInfo from '../model/QueryResultEmbyLiveTVChannelManagementInfo';
+import QueryResultChannelManagementInfo from '../model/QueryResultChannelManagementInfo';
 import QueryResultLiveTVApiEpgRow from '../model/QueryResultLiveTVApiEpgRow';
 import QueryResultLiveTvSeriesTimerInfoDto from '../model/QueryResultLiveTvSeriesTimerInfoDto';
 import QueryResultLiveTvTimerInfoDto from '../model/QueryResultLiveTvTimerInfoDto';
@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LiveTvServiceApi {
 
@@ -1369,7 +1369,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvManageChannels operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvManageChannelsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultEmbyLiveTVChannelManagementInfo} data The data returned by the service call.
+     * @param {module:model/QueryResultChannelManagementInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1378,7 +1378,7 @@ export default class LiveTvServiceApi {
      * Requires authentication as administrator
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvManageChannelsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultEmbyLiveTVChannelManagementInfo}
+     * data is of type: {@link module:model/QueryResultChannelManagementInfo}
      */
     getLivetvManageChannels() {
       opts = opts || {};
@@ -1400,7 +1400,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultEmbyLiveTVChannelManagementInfo;
+      let returnType = QueryResultChannelManagementInfo;
 
       return this.apiClient.callApi(
         '/LiveTv/Manage/Channels', 'GET',
@@ -2472,7 +2472,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the postLivetvManageChannelsByIdDisabled operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvManageChannelsByIdDisabledCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultEmbyLiveTVChannelManagementInfo} data The data returned by the service call.
+     * @param {module:model/QueryResultChannelManagementInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2480,7 +2480,7 @@ export default class LiveTvServiceApi {
      * Sets a channel disabled or not
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvManageChannelsByIdDisabledCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultEmbyLiveTVChannelManagementInfo}
+     * data is of type: {@link module:model/QueryResultChannelManagementInfo}
      */
     postLivetvManageChannelsByIdDisabled() {
       let postBody = body;
@@ -2498,7 +2498,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultEmbyLiveTVChannelManagementInfo;
+      let returnType = QueryResultChannelManagementInfo;
 
       return this.apiClient.callApi(
         '/LiveTv/Manage/Channels/{Id}/Disabled', 'POST',
@@ -2510,7 +2510,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the postLivetvManageChannelsByIdSortindex operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvManageChannelsByIdSortindexCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultEmbyLiveTVChannelManagementInfo} data The data returned by the service call.
+     * @param {module:model/QueryResultChannelManagementInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2518,7 +2518,7 @@ export default class LiveTvServiceApi {
      * Sets a channel sort index
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvManageChannelsByIdSortindexCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultEmbyLiveTVChannelManagementInfo}
+     * data is of type: {@link module:model/QueryResultChannelManagementInfo}
      */
     postLivetvManageChannelsByIdSortindex() {
       let postBody = body;
@@ -2536,7 +2536,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultEmbyLiveTVChannelManagementInfo;
+      let returnType = QueryResultChannelManagementInfo;
 
       return this.apiClient.callApi(
         '/LiveTv/Manage/Channels/{Id}/SortIndex', 'POST',

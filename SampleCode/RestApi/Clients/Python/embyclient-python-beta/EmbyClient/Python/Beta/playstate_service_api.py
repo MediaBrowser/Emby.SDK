@@ -1214,7 +1214,7 @@ class PlaystateServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param MediaEncodingApiOnPlaybackProgress body: OnPlaybackProgress (required)
+        :param ApiOnPlaybackProgress body: OnPlaybackProgress (required)
         :param str media_source_id: The id of the MediaSource (required)
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
@@ -1251,7 +1251,7 @@ class PlaystateServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param MediaEncodingApiOnPlaybackProgress body: OnPlaybackProgress (required)
+        :param ApiOnPlaybackProgress body: OnPlaybackProgress (required)
         :param str media_source_id: The id of the MediaSource (required)
         :param str user_id: User Id (required)
         :param str id: Item Id (required)

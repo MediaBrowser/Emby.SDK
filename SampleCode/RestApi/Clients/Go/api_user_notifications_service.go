@@ -25,15 +25,15 @@ type UserNotificationsServiceApiService service
 UserNotificationsServiceApiService Gets default notification info
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return EmbyNotificationsUserNotificationInfo
+@return UserNotificationInfo
 */
-func (a *UserNotificationsServiceApiService) GetNotificationsServicesDefaults(ctx context.Context) (EmbyNotificationsUserNotificationInfo, *http.Response, error) {
+func (a *UserNotificationsServiceApiService) GetNotificationsServicesDefaults(ctx context.Context) (UserNotificationInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyNotificationsUserNotificationInfo
+		localVarReturnValue UserNotificationInfo
 	)
 
 	// create path and map variables
@@ -103,7 +103,7 @@ func (a *UserNotificationsServiceApiService) GetNotificationsServicesDefaults(ct
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyNotificationsUserNotificationInfo
+			var v UserNotificationInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -124,7 +124,7 @@ Requires authentication as user
  * @param body UserNotificationInfo: 
 
 */
-func (a *UserNotificationsServiceApiService) PostNotificationsServicesTest(ctx context.Context, body EmbyNotificationsUserNotificationInfo) (*http.Response, error) {
+func (a *UserNotificationsServiceApiService) PostNotificationsServicesTest(ctx context.Context, body UserNotificationInfo) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

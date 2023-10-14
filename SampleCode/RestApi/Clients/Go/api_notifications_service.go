@@ -26,15 +26,15 @@ type NotificationsServiceApiService service
 NotificationsServiceApiService Gets notification types
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []EmbyNotificationsNotificationCategoryInfo
+@return []NotificationCategoryInfo
 */
-func (a *NotificationsServiceApiService) GetNotificationsTypes(ctx context.Context) ([]EmbyNotificationsNotificationCategoryInfo, *http.Response, error) {
+func (a *NotificationsServiceApiService) GetNotificationsTypes(ctx context.Context) ([]NotificationCategoryInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []EmbyNotificationsNotificationCategoryInfo
+		localVarReturnValue []NotificationCategoryInfo
 	)
 
 	// create path and map variables
@@ -104,7 +104,7 @@ func (a *NotificationsServiceApiService) GetNotificationsTypes(ctx context.Conte
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []EmbyNotificationsNotificationCategoryInfo
+			var v []NotificationCategoryInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

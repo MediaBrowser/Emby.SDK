@@ -11,10 +11,15 @@ import Foundation
 
 public struct ProcessRunMetricsProcessStatistics: Codable {
 
+    /** The current cpu. */
     public var currentCpu: Double?
+    /** The average cpu. */
     public var averageCpu: Double?
+    /** The currently allocated virtual memory. */
     public var currentVirtualMemory: Double?
+    /** The currently allocated working set. */
     public var currentWorkingSet: Double?
+    /** The metrics. */
     public var metrics: [ProcessRunMetricsProcessMetricPoint]?
 
     public init(currentCpu: Double? = nil, averageCpu: Double? = nil, currentVirtualMemory: Double? = nil, currentWorkingSet: Double? = nil, metrics: [ProcessRunMetricsProcessMetricPoint]? = nil) {

@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyDlnaProfilesDlnaProfile;
+import io.swagger.client.model.DlnaProfilesDlnaProfile;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -230,23 +230,23 @@ public class DlnaServiceApi {
     /**
      * Gets a list of profiles
      * Requires authentication as administrator
-     * @return List&lt;EmbyDlnaProfilesDlnaProfile&gt;
+     * @return List&lt;DlnaProfilesDlnaProfile&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EmbyDlnaProfilesDlnaProfile> getDlnaProfileinfos() throws ApiException {
-        ApiResponse<List<EmbyDlnaProfilesDlnaProfile>> resp = getDlnaProfileinfosWithHttpInfo();
+    public List<DlnaProfilesDlnaProfile> getDlnaProfileinfos() throws ApiException {
+        ApiResponse<List<DlnaProfilesDlnaProfile>> resp = getDlnaProfileinfosWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets a list of profiles
      * Requires authentication as administrator
-     * @return ApiResponse&lt;List&lt;EmbyDlnaProfilesDlnaProfile&gt;&gt;
+     * @return ApiResponse&lt;List&lt;DlnaProfilesDlnaProfile&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EmbyDlnaProfilesDlnaProfile>> getDlnaProfileinfosWithHttpInfo() throws ApiException {
+    public ApiResponse<List<DlnaProfilesDlnaProfile>> getDlnaProfileinfosWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getDlnaProfileinfosValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<EmbyDlnaProfilesDlnaProfile>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<DlnaProfilesDlnaProfile>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -257,7 +257,7 @@ public class DlnaServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDlnaProfileinfosAsync(final ApiCallback<List<EmbyDlnaProfilesDlnaProfile>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDlnaProfileinfosAsync(final ApiCallback<List<DlnaProfilesDlnaProfile>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -279,7 +279,7 @@ public class DlnaServiceApi {
         }
 
         com.squareup.okhttp.Call call = getDlnaProfileinfosValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<EmbyDlnaProfilesDlnaProfile>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<DlnaProfilesDlnaProfile>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -353,11 +353,11 @@ public class DlnaServiceApi {
      * Gets a single profile
      * Requires authentication as administrator
      * @param id Profile Id (required)
-     * @return EmbyDlnaProfilesDlnaProfile
+     * @return DlnaProfilesDlnaProfile
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyDlnaProfilesDlnaProfile getDlnaProfilesById(String id) throws ApiException {
-        ApiResponse<EmbyDlnaProfilesDlnaProfile> resp = getDlnaProfilesByIdWithHttpInfo(id);
+    public DlnaProfilesDlnaProfile getDlnaProfilesById(String id) throws ApiException {
+        ApiResponse<DlnaProfilesDlnaProfile> resp = getDlnaProfilesByIdWithHttpInfo(id);
         return resp.getData();
     }
 
@@ -365,12 +365,12 @@ public class DlnaServiceApi {
      * Gets a single profile
      * Requires authentication as administrator
      * @param id Profile Id (required)
-     * @return ApiResponse&lt;EmbyDlnaProfilesDlnaProfile&gt;
+     * @return ApiResponse&lt;DlnaProfilesDlnaProfile&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyDlnaProfilesDlnaProfile> getDlnaProfilesByIdWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<DlnaProfilesDlnaProfile> getDlnaProfilesByIdWithHttpInfo(String id) throws ApiException {
         com.squareup.okhttp.Call call = getDlnaProfilesByIdValidateBeforeCall(id, null, null);
-        Type localVarReturnType = new TypeToken<EmbyDlnaProfilesDlnaProfile>(){}.getType();
+        Type localVarReturnType = new TypeToken<DlnaProfilesDlnaProfile>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -382,7 +382,7 @@ public class DlnaServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDlnaProfilesByIdAsync(String id, final ApiCallback<EmbyDlnaProfilesDlnaProfile> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDlnaProfilesByIdAsync(String id, final ApiCallback<DlnaProfilesDlnaProfile> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -404,7 +404,7 @@ public class DlnaServiceApi {
         }
 
         com.squareup.okhttp.Call call = getDlnaProfilesByIdValidateBeforeCall(id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyDlnaProfilesDlnaProfile>(){}.getType();
+        Type localVarReturnType = new TypeToken<DlnaProfilesDlnaProfile>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -471,23 +471,23 @@ public class DlnaServiceApi {
     /**
      * Gets the default profile
      * Requires authentication as administrator
-     * @return EmbyDlnaProfilesDlnaProfile
+     * @return DlnaProfilesDlnaProfile
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyDlnaProfilesDlnaProfile getDlnaProfilesDefault() throws ApiException {
-        ApiResponse<EmbyDlnaProfilesDlnaProfile> resp = getDlnaProfilesDefaultWithHttpInfo();
+    public DlnaProfilesDlnaProfile getDlnaProfilesDefault() throws ApiException {
+        ApiResponse<DlnaProfilesDlnaProfile> resp = getDlnaProfilesDefaultWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets the default profile
      * Requires authentication as administrator
-     * @return ApiResponse&lt;EmbyDlnaProfilesDlnaProfile&gt;
+     * @return ApiResponse&lt;DlnaProfilesDlnaProfile&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyDlnaProfilesDlnaProfile> getDlnaProfilesDefaultWithHttpInfo() throws ApiException {
+    public ApiResponse<DlnaProfilesDlnaProfile> getDlnaProfilesDefaultWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getDlnaProfilesDefaultValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<EmbyDlnaProfilesDlnaProfile>(){}.getType();
+        Type localVarReturnType = new TypeToken<DlnaProfilesDlnaProfile>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -498,7 +498,7 @@ public class DlnaServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDlnaProfilesDefaultAsync(final ApiCallback<EmbyDlnaProfilesDlnaProfile> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDlnaProfilesDefaultAsync(final ApiCallback<DlnaProfilesDlnaProfile> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -520,7 +520,7 @@ public class DlnaServiceApi {
         }
 
         com.squareup.okhttp.Call call = getDlnaProfilesDefaultValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyDlnaProfilesDlnaProfile>(){}.getType();
+        Type localVarReturnType = new TypeToken<DlnaProfilesDlnaProfile>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -532,7 +532,7 @@ public class DlnaServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postDlnaProfilesCall(EmbyDlnaProfilesDlnaProfile body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postDlnaProfilesCall(DlnaProfilesDlnaProfile body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -574,7 +574,7 @@ public class DlnaServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postDlnaProfilesValidateBeforeCall(EmbyDlnaProfilesDlnaProfile body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postDlnaProfilesValidateBeforeCall(DlnaProfilesDlnaProfile body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postDlnaProfiles(Async)");
@@ -595,7 +595,7 @@ public class DlnaServiceApi {
      * @param body DlnaProfile:  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postDlnaProfiles(EmbyDlnaProfilesDlnaProfile body) throws ApiException {
+    public void postDlnaProfiles(DlnaProfilesDlnaProfile body) throws ApiException {
         postDlnaProfilesWithHttpInfo(body);
     }
 
@@ -606,7 +606,7 @@ public class DlnaServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postDlnaProfilesWithHttpInfo(EmbyDlnaProfilesDlnaProfile body) throws ApiException {
+    public ApiResponse<Void> postDlnaProfilesWithHttpInfo(DlnaProfilesDlnaProfile body) throws ApiException {
         com.squareup.okhttp.Call call = postDlnaProfilesValidateBeforeCall(body, null, null);
         return apiClient.execute(call);
     }
@@ -619,7 +619,7 @@ public class DlnaServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postDlnaProfilesAsync(EmbyDlnaProfilesDlnaProfile body, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postDlnaProfilesAsync(DlnaProfilesDlnaProfile body, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -653,7 +653,7 @@ public class DlnaServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postDlnaProfilesByIdCall(EmbyDlnaProfilesDlnaProfile body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postDlnaProfilesByIdCall(DlnaProfilesDlnaProfile body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -696,7 +696,7 @@ public class DlnaServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postDlnaProfilesByIdValidateBeforeCall(EmbyDlnaProfilesDlnaProfile body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postDlnaProfilesByIdValidateBeforeCall(DlnaProfilesDlnaProfile body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postDlnaProfilesById(Async)");
@@ -722,7 +722,7 @@ public class DlnaServiceApi {
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postDlnaProfilesById(EmbyDlnaProfilesDlnaProfile body, String id) throws ApiException {
+    public void postDlnaProfilesById(DlnaProfilesDlnaProfile body, String id) throws ApiException {
         postDlnaProfilesByIdWithHttpInfo(body, id);
     }
 
@@ -734,7 +734,7 @@ public class DlnaServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postDlnaProfilesByIdWithHttpInfo(EmbyDlnaProfilesDlnaProfile body, String id) throws ApiException {
+    public ApiResponse<Void> postDlnaProfilesByIdWithHttpInfo(DlnaProfilesDlnaProfile body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postDlnaProfilesByIdValidateBeforeCall(body, id, null, null);
         return apiClient.execute(call);
     }
@@ -748,7 +748,7 @@ public class DlnaServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postDlnaProfilesByIdAsync(EmbyDlnaProfilesDlnaProfile body, String id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postDlnaProfilesByIdAsync(DlnaProfilesDlnaProfile body, String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

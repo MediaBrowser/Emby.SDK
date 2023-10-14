@@ -8,9 +8,11 @@
 import Foundation
 
 
+/** Class ImageProviderInfo.   */
 
 public struct ImageProviderInfo: Codable {
 
+    /** The name. */
     public var name: String?
     public var supportedImages: [ImageType]?
 

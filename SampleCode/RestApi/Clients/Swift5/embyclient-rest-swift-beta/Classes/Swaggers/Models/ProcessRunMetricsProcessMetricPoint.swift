@@ -11,12 +11,16 @@ import Foundation
 
 public struct ProcessRunMetricsProcessMetricPoint: Codable {
 
-    public var time: TimeSpan?
+    /** The time. */
+    public var time: String?
+    /** The cpu percent. */
     public var cpuPercent: Double?
+    /** The virtual memory. */
     public var virtualMemory: Double?
+    /** The working set. */
     public var workingSet: Double?
 
-    public init(time: TimeSpan? = nil, cpuPercent: Double? = nil, virtualMemory: Double? = nil, workingSet: Double? = nil) {
+    public init(time: String? = nil, cpuPercent: Double? = nil, virtualMemory: Double? = nil, workingSet: Double? = nil) {
         self.time = time
         self.cpuPercent = cpuPercent
         self.virtualMemory = virtualMemory

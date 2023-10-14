@@ -45,6 +45,7 @@ class LiveTvGuideInfo(object):
     def start_date(self):
         """Gets the start_date of this LiveTvGuideInfo.  # noqa: E501
 
+        The start date.  # noqa: E501
 
         :return: The start_date of this LiveTvGuideInfo.  # noqa: E501
         :rtype: datetime
@@ -55,6 +56,7 @@ class LiveTvGuideInfo(object):
     def start_date(self, start_date):
         """Sets the start_date of this LiveTvGuideInfo.
 
+        The start date.  # noqa: E501
 
         :param start_date: The start_date of this LiveTvGuideInfo.  # noqa: E501
         :type: datetime
@@ -66,6 +68,7 @@ class LiveTvGuideInfo(object):
     def end_date(self):
         """Gets the end_date of this LiveTvGuideInfo.  # noqa: E501
 
+        The end date.  # noqa: E501
 
         :return: The end_date of this LiveTvGuideInfo.  # noqa: E501
         :rtype: datetime
@@ -76,6 +79,7 @@ class LiveTvGuideInfo(object):
     def end_date(self, end_date):
         """Sets the end_date of this LiveTvGuideInfo.
 
+        The end date.  # noqa: E501
 
         :param end_date: The end_date of this LiveTvGuideInfo.  # noqa: E501
         :type: datetime

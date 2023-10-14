@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// LoggingLogSeverity : Enum LogSeverity  
 type LoggingLogSeverity string
 
 // List of Logging.LogSeverity

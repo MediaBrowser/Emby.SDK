@@ -324,7 +324,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv program Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv program Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvProgramsByIdCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -391,7 +391,7 @@ public class UserLibraryServiceApi {
      * @return BaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv program Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv program Documentation</a>
      */
     public BaseItemDto getLivetvProgramsById(String id) throws ApiException {
         ApiResponse<BaseItemDto> resp = getLivetvProgramsByIdWithHttpInfo(id);
@@ -405,7 +405,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv program Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv program Documentation</a>
      */
     public ApiResponse<BaseItemDto> getLivetvProgramsByIdWithHttpInfo(String id) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvProgramsByIdValidateBeforeCall(id, null, null);
@@ -421,7 +421,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a live tv program Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets a live tv program Documentation</a>
      */
     public com.squareup.okhttp.Call getLivetvProgramsByIdAsync(String id, final ApiCallback<BaseItemDto> callback) throws ApiException {
 
@@ -458,7 +458,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets an item from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets an item from a user&#x27;s library Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -531,7 +531,7 @@ public class UserLibraryServiceApi {
      * @return BaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets an item from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets an item from a user&#x27;s library Documentation</a>
      */
     public BaseItemDto getUsersByUseridItemsById(String userId, String id) throws ApiException {
         ApiResponse<BaseItemDto> resp = getUsersByUseridItemsByIdWithHttpInfo(userId, id);
@@ -546,7 +546,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets an item from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets an item from a user&#x27;s library Documentation</a>
      */
     public ApiResponse<BaseItemDto> getUsersByUseridItemsByIdWithHttpInfo(String userId, String id) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridItemsByIdValidateBeforeCall(userId, id, null, null);
@@ -563,7 +563,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets an item from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets an item from a user&#x27;s library Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdAsync(String userId, String id, final ApiCallback<BaseItemDto> callback) throws ApiException {
 
@@ -605,7 +605,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets intros to play before the main media item plays Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -693,7 +693,7 @@ public class UserLibraryServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets intros to play before the main media item plays Documentation</a>
      */
     public QueryResultBaseItemDto getUsersByUseridItemsByIdIntros(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridItemsByIdIntrosWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -713,7 +713,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets intros to play before the main media item plays Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getUsersByUseridItemsByIdIntrosWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -735,7 +735,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets intros to play before the main media item plays Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets intros to play before the main media item plays Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -777,7 +777,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets local trailers for an item Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -865,7 +865,7 @@ public class UserLibraryServiceApi {
      * @return List&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets local trailers for an item Documentation</a>
      */
     public List<BaseItemDto> getUsersByUseridItemsByIdLocaltrailers(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<List<BaseItemDto>> resp = getUsersByUseridItemsByIdLocaltrailersWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -885,7 +885,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;List&lt;BaseItemDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets local trailers for an item Documentation</a>
      */
     public ApiResponse<List<BaseItemDto>> getUsersByUseridItemsByIdLocaltrailersWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridItemsByIdLocaltrailersValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -907,7 +907,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets local trailers for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets local trailers for an item Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdLocaltrailersAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
 
@@ -949,7 +949,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets special features for an item Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesCall(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1037,7 +1037,7 @@ public class UserLibraryServiceApi {
      * @return List&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets special features for an item Documentation</a>
      */
     public List<BaseItemDto> getUsersByUseridItemsByIdSpecialfeatures(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<List<BaseItemDto>> resp = getUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -1057,7 +1057,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;List&lt;BaseItemDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets special features for an item Documentation</a>
      */
     public ApiResponse<List<BaseItemDto>> getUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridItemsByIdSpecialfeaturesValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -1079,7 +1079,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets special features for an item Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets special features for an item Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsByIdSpecialfeaturesAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
 
@@ -1127,7 +1127,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Latest Items
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Latest-Items">Gets latest media Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Latest-Items.html">Gets latest media Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsLatestCall(String userId, Integer limit, String parentId, String fields, String includeItemTypes, String mediaTypes, Boolean isFolder, Boolean isPlayed, Boolean groupItems, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1230,7 +1230,7 @@ public class UserLibraryServiceApi {
      * @return List&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Latest Items
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Latest-Items">Gets latest media Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Latest-Items.html">Gets latest media Documentation</a>
      */
     public List<BaseItemDto> getUsersByUseridItemsLatest(String userId, Integer limit, String parentId, String fields, String includeItemTypes, String mediaTypes, Boolean isFolder, Boolean isPlayed, Boolean groupItems, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<List<BaseItemDto>> resp = getUsersByUseridItemsLatestWithHttpInfo(userId, limit, parentId, fields, includeItemTypes, mediaTypes, isFolder, isPlayed, groupItems, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -1256,7 +1256,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;List&lt;BaseItemDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Latest Items
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Latest-Items">Gets latest media Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Latest-Items.html">Gets latest media Documentation</a>
      */
     public ApiResponse<List<BaseItemDto>> getUsersByUseridItemsLatestWithHttpInfo(String userId, Integer limit, String parentId, String fields, String includeItemTypes, String mediaTypes, Boolean isFolder, Boolean isPlayed, Boolean groupItems, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridItemsLatestValidateBeforeCall(userId, limit, parentId, fields, includeItemTypes, mediaTypes, isFolder, isPlayed, groupItems, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -1284,7 +1284,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Latest Items
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Latest-Items">Gets latest media Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Latest-Items.html">Gets latest media Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsLatestAsync(String userId, Integer limit, String parentId, String fields, String includeItemTypes, String mediaTypes, Boolean isFolder, Boolean isPlayed, Boolean groupItems, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<List<BaseItemDto>> callback) throws ApiException {
 
@@ -1320,7 +1320,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the root folder from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the root folder from a user&#x27;s library Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsRootCall(String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1387,7 +1387,7 @@ public class UserLibraryServiceApi {
      * @return BaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the root folder from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the root folder from a user&#x27;s library Documentation</a>
      */
     public BaseItemDto getUsersByUseridItemsRoot(String userId) throws ApiException {
         ApiResponse<BaseItemDto> resp = getUsersByUseridItemsRootWithHttpInfo(userId);
@@ -1401,7 +1401,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;BaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the root folder from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the root folder from a user&#x27;s library Documentation</a>
      */
     public ApiResponse<BaseItemDto> getUsersByUseridItemsRootWithHttpInfo(String userId) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridItemsRootValidateBeforeCall(userId, null, null);
@@ -1417,7 +1417,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets the root folder from a user&#x27;s library Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets the root folder from a user&#x27;s library Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridItemsRootAsync(String userId, final ApiCallback<BaseItemDto> callback) throws ApiException {
 
@@ -1459,7 +1459,7 @@ public class UserLibraryServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets additional parts for a video. Documentation</a>
      */
     public com.squareup.okhttp.Call getVideosByIdAdditionalpartsCall(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1544,7 +1544,7 @@ public class UserLibraryServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets additional parts for a video. Documentation</a>
      */
     public QueryResultBaseItemDto getVideosByIdAdditionalparts(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getVideosByIdAdditionalpartsWithHttpInfo(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -1564,7 +1564,7 @@ public class UserLibraryServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets additional parts for a video. Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getVideosByIdAdditionalpartsWithHttpInfo(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsValidateBeforeCall(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -1586,7 +1586,7 @@ public class UserLibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets additional parts for a video. Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets additional parts for a video. Documentation</a>
      */
     public com.squareup.okhttp.Call getVideosByIdAdditionalpartsAsync(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 

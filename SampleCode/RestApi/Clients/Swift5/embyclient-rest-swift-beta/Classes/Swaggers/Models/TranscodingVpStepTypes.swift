@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Video Processing Step Type enum.   */
 public enum TranscodingVpStepTypes: String, Codable {
     case decoder = "Decoder"
     case encoder = "Encoder"

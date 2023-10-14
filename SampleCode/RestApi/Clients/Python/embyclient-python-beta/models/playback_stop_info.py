@@ -205,6 +205,7 @@ class PlaybackStopInfo(object):
     def item_id(self):
         """Gets the item_id of this PlaybackStopInfo.  # noqa: E501
 
+        The item identifier.  # noqa: E501
 
         :return: The item_id of this PlaybackStopInfo.  # noqa: E501
         :rtype: str
@@ -215,6 +216,7 @@ class PlaybackStopInfo(object):
     def item_id(self, item_id):
         """Sets the item_id of this PlaybackStopInfo.
 
+        The item identifier.  # noqa: E501
 
         :param item_id: The item_id of this PlaybackStopInfo.  # noqa: E501
         :type: str
@@ -226,6 +228,7 @@ class PlaybackStopInfo(object):
     def session_id(self):
         """Gets the session_id of this PlaybackStopInfo.  # noqa: E501
 
+        The session id.  # noqa: E501
 
         :return: The session_id of this PlaybackStopInfo.  # noqa: E501
         :rtype: str
@@ -236,6 +239,7 @@ class PlaybackStopInfo(object):
     def session_id(self, session_id):
         """Sets the session_id of this PlaybackStopInfo.
 
+        The session id.  # noqa: E501
 
         :param session_id: The session_id of this PlaybackStopInfo.  # noqa: E501
         :type: str
@@ -247,6 +251,7 @@ class PlaybackStopInfo(object):
     def media_source_id(self):
         """Gets the media_source_id of this PlaybackStopInfo.  # noqa: E501
 
+        The media version identifier.  # noqa: E501
 
         :return: The media_source_id of this PlaybackStopInfo.  # noqa: E501
         :rtype: str
@@ -257,6 +262,7 @@ class PlaybackStopInfo(object):
     def media_source_id(self, media_source_id):
         """Sets the media_source_id of this PlaybackStopInfo.
 
+        The media version identifier.  # noqa: E501
 
         :param media_source_id: The media_source_id of this PlaybackStopInfo.  # noqa: E501
         :type: str
@@ -268,6 +274,7 @@ class PlaybackStopInfo(object):
     def position_ticks(self):
         """Gets the position_ticks of this PlaybackStopInfo.  # noqa: E501
 
+        The position ticks.  # noqa: E501
 
         :return: The position_ticks of this PlaybackStopInfo.  # noqa: E501
         :rtype: int
@@ -278,6 +285,7 @@ class PlaybackStopInfo(object):
     def position_ticks(self, position_ticks):
         """Sets the position_ticks of this PlaybackStopInfo.
 
+        The position ticks.  # noqa: E501
 
         :param position_ticks: The position_ticks of this PlaybackStopInfo.  # noqa: E501
         :type: int
@@ -289,6 +297,7 @@ class PlaybackStopInfo(object):
     def live_stream_id(self):
         """Gets the live_stream_id of this PlaybackStopInfo.  # noqa: E501
 
+        The live stream identifier.  # noqa: E501
 
         :return: The live_stream_id of this PlaybackStopInfo.  # noqa: E501
         :rtype: str
@@ -299,6 +308,7 @@ class PlaybackStopInfo(object):
     def live_stream_id(self, live_stream_id):
         """Sets the live_stream_id of this PlaybackStopInfo.
 
+        The live stream identifier.  # noqa: E501
 
         :param live_stream_id: The live_stream_id of this PlaybackStopInfo.  # noqa: E501
         :type: str
@@ -310,6 +320,7 @@ class PlaybackStopInfo(object):
     def play_session_id(self):
         """Gets the play_session_id of this PlaybackStopInfo.  # noqa: E501
 
+        The play session identifier.  # noqa: E501
 
         :return: The play_session_id of this PlaybackStopInfo.  # noqa: E501
         :rtype: str
@@ -320,6 +331,7 @@ class PlaybackStopInfo(object):
     def play_session_id(self, play_session_id):
         """Sets the play_session_id of this PlaybackStopInfo.
 
+        The play session identifier.  # noqa: E501
 
         :param play_session_id: The play_session_id of this PlaybackStopInfo.  # noqa: E501
         :type: str
@@ -331,6 +343,7 @@ class PlaybackStopInfo(object):
     def failed(self):
         """Gets the failed of this PlaybackStopInfo.  # noqa: E501
 
+        A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.  # noqa: E501
 
         :return: The failed of this PlaybackStopInfo.  # noqa: E501
         :rtype: bool
@@ -341,6 +354,7 @@ class PlaybackStopInfo(object):
     def failed(self, failed):
         """Sets the failed of this PlaybackStopInfo.
 
+        A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.  # noqa: E501
 
         :param failed: The failed of this PlaybackStopInfo.  # noqa: E501
         :type: bool

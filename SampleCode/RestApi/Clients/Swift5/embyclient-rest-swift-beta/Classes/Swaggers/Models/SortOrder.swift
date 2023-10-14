@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum SortOrder   */
 public enum SortOrder: String, Codable {
     case ascending = "Ascending"
     case descending = "Descending"

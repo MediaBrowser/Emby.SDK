@@ -15,11 +15,12 @@ import MarkerType from './MarkerType';
 /**
 * The ChapterInfo model module.
 * @module model/ChapterInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ChapterInfo {
     /**
     * Constructs a new <code>ChapterInfo</code>.
+    * Class ChapterInfo  
     * @alias module:model/ChapterInfo
     * @class
     */
@@ -62,10 +63,12 @@ export default class ChapterInfo {
     }
 
     /**
+    * The start position ticks.
     * @member {Number} StartPositionTicks
     */
     'StartPositionTicks' = undefined;
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;

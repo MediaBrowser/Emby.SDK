@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.EmbyWebGenericEditEditObjectContainer;
+import io.swagger.client.model.EditObjectContainer;
 import io.swagger.client.model.MediaEncodingCodecParameterContext;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -37,7 +37,7 @@ public class CodecParameterServiceApiTest {
     public void getEncodingCodecparametersTest() throws Exception {
         String codecId = null;
         MediaEncodingCodecParameterContext parameterContext = null;
-        EmbyWebGenericEditEditObjectContainer response = api.getEncodingCodecparameters(codecId, parameterContext);
+        EditObjectContainer response = api.getEncodingCodecparameters(codecId, parameterContext);
 
         // TODO: test validations
     }

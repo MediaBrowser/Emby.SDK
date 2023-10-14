@@ -13,22 +13,22 @@ import ApiClient from "../ApiClient";
 import AuthenticateUser from '../model/AuthenticateUser';
 import AuthenticateUserByName from '../model/AuthenticateUserByName';
 import AuthenticationAuthenticationResult from '../model/AuthenticationAuthenticationResult';
-import ConfigurationUserConfiguration from '../model/ConfigurationUserConfiguration';
 import CreateUserByName from '../model/CreateUserByName';
 import ForgotPassword from '../model/ForgotPassword';
 import ForgotPasswordPin from '../model/ForgotPasswordPin';
+import ForgotPasswordResult from '../model/ForgotPasswordResult';
 import NameIdPair from '../model/NameIdPair';
+import PinRedeemResult from '../model/PinRedeemResult';
 import QueryResultUserDto from '../model/QueryResultUserDto';
 import UpdateUserPassword from '../model/UpdateUserPassword';
+import UserConfiguration from '../model/UserConfiguration';
 import UserDto from '../model/UserDto';
-import UsersForgotPasswordResult from '../model/UsersForgotPasswordResult';
-import UsersPinRedeemResult from '../model/UsersPinRedeemResult';
-import UsersUserPolicy from '../model/UsersUserPolicy';
+import UserPolicy from '../model/UserPolicy';
 
 /**
 * UserService service.
 * @module EmbyClient.JavaScript.Beta/UserServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class UserServiceApi {
 
@@ -699,7 +699,7 @@ export default class UserServiceApi {
      * Callback function to receive the result of the postUsersForgotpassword operation.
      * @callback module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersForgotpasswordCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/UsersForgotPasswordResult} data The data returned by the service call.
+     * @param {module:model/ForgotPasswordResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -707,7 +707,7 @@ export default class UserServiceApi {
      * Initiates the forgot password process for a local user
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersForgotpasswordCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UsersForgotPasswordResult}
+     * data is of type: {@link module:model/ForgotPasswordResult}
      */
     postUsersForgotpassword() {
       let postBody = body;
@@ -724,7 +724,7 @@ export default class UserServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = UsersForgotPasswordResult;
+      let returnType = ForgotPasswordResult;
 
       return this.apiClient.callApi(
         '/Users/ForgotPassword', 'POST',
@@ -736,7 +736,7 @@ export default class UserServiceApi {
      * Callback function to receive the result of the postUsersForgotpasswordPin operation.
      * @callback module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersForgotpasswordPinCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/UsersPinRedeemResult} data The data returned by the service call.
+     * @param {module:model/PinRedeemResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -744,7 +744,7 @@ export default class UserServiceApi {
      * Redeems a forgot password pin
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~postUsersForgotpasswordPinCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UsersPinRedeemResult}
+     * data is of type: {@link module:model/PinRedeemResult}
      */
     postUsersForgotpasswordPin() {
       let postBody = body;
@@ -761,7 +761,7 @@ export default class UserServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = UsersPinRedeemResult;
+      let returnType = PinRedeemResult;
 
       return this.apiClient.callApi(
         '/Users/ForgotPassword/Pin', 'POST',

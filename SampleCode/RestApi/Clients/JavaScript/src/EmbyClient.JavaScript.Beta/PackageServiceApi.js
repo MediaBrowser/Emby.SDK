@@ -10,14 +10,14 @@
  */
 
 import ApiClient from "../ApiClient";
-import UpdatesPackageInfo from '../model/UpdatesPackageInfo';
-import UpdatesPackageVersionClass from '../model/UpdatesPackageVersionClass';
-import UpdatesPackageVersionInfo from '../model/UpdatesPackageVersionInfo';
+import PackageInfo from '../model/PackageInfo';
+import PackageVersionClass from '../model/PackageVersionClass';
+import PackageVersionInfo from '../model/PackageVersionInfo';
 
 /**
 * PackageService service.
 * @module EmbyClient.JavaScript.Beta/PackageServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class PackageServiceApi {
 
@@ -73,7 +73,7 @@ export default class PackageServiceApi {
      * Callback function to receive the result of the getPackages operation.
      * @callback module:EmbyClient.JavaScript.Beta/PackageServiceApi~getPackagesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/UpdatesPackageInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/PackageInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -82,7 +82,7 @@ export default class PackageServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/PackageServiceApi~getPackagesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/UpdatesPackageInfo>}
+     * data is of type: {@link Array.<module:model/PackageInfo>}
      */
     getPackages() {
       opts = opts || {};
@@ -104,7 +104,7 @@ export default class PackageServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [UpdatesPackageInfo];
+      let returnType = [PackageInfo];
 
       return this.apiClient.callApi(
         '/Packages', 'GET',
@@ -116,7 +116,7 @@ export default class PackageServiceApi {
      * Callback function to receive the result of the getPackagesByName operation.
      * @callback module:EmbyClient.JavaScript.Beta/PackageServiceApi~getPackagesByNameCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/UpdatesPackageInfo} data The data returned by the service call.
+     * @param {module:model/PackageInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -125,7 +125,7 @@ export default class PackageServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/PackageServiceApi~getPackagesByNameCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UpdatesPackageInfo}
+     * data is of type: {@link module:model/PackageInfo}
      */
     getPackagesByName() {
       opts = opts || {};
@@ -145,7 +145,7 @@ export default class PackageServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = UpdatesPackageInfo;
+      let returnType = PackageInfo;
 
       return this.apiClient.callApi(
         '/Packages/{Name}', 'GET',
@@ -157,7 +157,7 @@ export default class PackageServiceApi {
      * Callback function to receive the result of the getPackagesUpdates operation.
      * @callback module:EmbyClient.JavaScript.Beta/PackageServiceApi~getPackagesUpdatesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/UpdatesPackageVersionInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/PackageVersionInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -165,7 +165,7 @@ export default class PackageServiceApi {
      * Gets available package updates for currently installed packages
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/PackageServiceApi~getPackagesUpdatesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/UpdatesPackageVersionInfo>}
+     * data is of type: {@link Array.<module:model/PackageVersionInfo>}
      */
     getPackagesUpdates() {
       let postBody = null;
@@ -183,7 +183,7 @@ export default class PackageServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [UpdatesPackageVersionInfo];
+      let returnType = [PackageVersionInfo];
 
       return this.apiClient.callApi(
         '/Packages/Updates', 'GET',

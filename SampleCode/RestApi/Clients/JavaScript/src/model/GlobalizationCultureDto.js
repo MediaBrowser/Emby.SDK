@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The GlobalizationCultureDto model module.
 * @module model/GlobalizationCultureDto
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class GlobalizationCultureDto {
     /**
     * Constructs a new <code>GlobalizationCultureDto</code>.
+    * Class CultureDto  
     * @alias module:model/GlobalizationCultureDto
     * @class
     */
@@ -64,18 +65,22 @@ export default class GlobalizationCultureDto {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The display name.
     * @member {String} DisplayName
     */
     'DisplayName' = undefined;
     /**
+    * The name of the two letter ISO language.
     * @member {String} TwoLetterISOLanguageName
     */
     'TwoLetterISOLanguageName' = undefined;
     /**
+    * The name of the three letter ISO language.
     * @member {String} ThreeLetterISOLanguageName
     */
     'ThreeLetterISOLanguageName' = undefined;

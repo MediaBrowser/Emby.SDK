@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.EmbyNotificationsUserNotificationInfo;
+import io.swagger.client.model.UserNotificationInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +34,7 @@ public class UserNotificationsServiceApiTest {
      */
     @Test
     public void getNotificationsServicesDefaultsTest() throws Exception {
-        EmbyNotificationsUserNotificationInfo response = api.getNotificationsServicesDefaults();
+        UserNotificationInfo response = api.getNotificationsServicesDefaults();
 
         // TODO: test validations
     }
@@ -48,7 +48,7 @@ public class UserNotificationsServiceApiTest {
      */
     @Test
     public void postNotificationsServicesTestTest() throws Exception {
-        EmbyNotificationsUserNotificationInfo body = null;
+        UserNotificationInfo body = null;
         api.postNotificationsServicesTest(body);
 
         // TODO: test validations

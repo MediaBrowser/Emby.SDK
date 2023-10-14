@@ -55,7 +55,7 @@ public class UserViewsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Browsing the Library
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Browsing-the-Library.html"> Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridViewsCall(String userId, Boolean includeExternalContent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -129,7 +129,7 @@ public class UserViewsServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Browsing the Library
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Browsing-the-Library.html"> Documentation</a>
      */
     public QueryResultBaseItemDto getUsersByUseridViews(String userId, Boolean includeExternalContent) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridViewsWithHttpInfo(userId, includeExternalContent);
@@ -144,7 +144,7 @@ public class UserViewsServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Browsing the Library
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Browsing-the-Library.html"> Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getUsersByUseridViewsWithHttpInfo(String userId, Boolean includeExternalContent) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridViewsValidateBeforeCall(userId, includeExternalContent, null, null);
@@ -161,7 +161,7 @@ public class UserViewsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Browsing the Library
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library"> Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Browsing-the-Library.html"> Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersByUseridViewsAsync(String userId, Boolean includeExternalContent, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 

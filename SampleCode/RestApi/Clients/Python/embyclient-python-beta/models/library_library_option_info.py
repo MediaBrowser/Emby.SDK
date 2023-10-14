@@ -25,7 +25,7 @@ class LibraryLibraryOptionInfo(object):
         'name': 'str',
         'setup_url': 'str',
         'default_enabled': 'bool',
-        'features': 'list[ConfigurationMetadataFeatures]'
+        'features': 'list[MetadataFeatures]'
     }
 
     attribute_map = {
@@ -120,7 +120,7 @@ class LibraryLibraryOptionInfo(object):
 
 
         :return: The features of this LibraryLibraryOptionInfo.  # noqa: E501
-        :rtype: list[ConfigurationMetadataFeatures]
+        :rtype: list[MetadataFeatures]
         """
         return self._features
 
@@ -130,7 +130,7 @@ class LibraryLibraryOptionInfo(object):
 
 
         :param features: The features of this LibraryLibraryOptionInfo.  # noqa: E501
-        :type: list[ConfigurationMetadataFeatures]
+        :type: list[MetadataFeatures]
         """
 
         self._features = features

@@ -1043,7 +1043,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ConfigurationUserConfiguration body: UserConfiguration:  (required)
+        :param UserConfiguration body: UserConfiguration:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1066,7 +1066,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ConfigurationUserConfiguration body: UserConfiguration:  (required)
+        :param UserConfiguration body: UserConfiguration:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1443,7 +1443,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param UsersUserPolicy body: UserPolicy:  (required)
+        :param UserPolicy body: UserPolicy:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1466,7 +1466,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param UsersUserPolicy body: UserPolicy:  (required)
+        :param UserPolicy body: UserPolicy:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1757,7 +1757,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPassword body: ForgotPassword (required)
-        :return: UsersForgotPasswordResult
+        :return: ForgotPasswordResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1779,7 +1779,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPassword body: ForgotPassword (required)
-        :return: UsersForgotPasswordResult
+        :return: ForgotPasswordResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1837,7 +1837,7 @@ class UserServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UsersForgotPasswordResult',  # noqa: E501
+            response_type='ForgotPasswordResult',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1856,7 +1856,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPasswordPin body: ForgotPasswordPin (required)
-        :return: UsersPinRedeemResult
+        :return: PinRedeemResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1878,7 +1878,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPasswordPin body: ForgotPasswordPin (required)
-        :return: UsersPinRedeemResult
+        :return: PinRedeemResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1936,7 +1936,7 @@ class UserServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UsersPinRedeemResult',  # noqa: E501
+            response_type='PinRedeemResult',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

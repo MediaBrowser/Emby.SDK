@@ -45,6 +45,7 @@ class LiveTvLiveTvInfo(object):
     def is_enabled(self):
         """Gets the is_enabled of this LiveTvLiveTvInfo.  # noqa: E501
 
+        A value indicating whether this instance is enabled.  # noqa: E501
 
         :return: The is_enabled of this LiveTvLiveTvInfo.  # noqa: E501
         :rtype: bool
@@ -55,6 +56,7 @@ class LiveTvLiveTvInfo(object):
     def is_enabled(self, is_enabled):
         """Sets the is_enabled of this LiveTvLiveTvInfo.
 
+        A value indicating whether this instance is enabled.  # noqa: E501
 
         :param is_enabled: The is_enabled of this LiveTvLiveTvInfo.  # noqa: E501
         :type: bool
@@ -66,6 +68,7 @@ class LiveTvLiveTvInfo(object):
     def enabled_users(self):
         """Gets the enabled_users of this LiveTvLiveTvInfo.  # noqa: E501
 
+        The enabled users.  # noqa: E501
 
         :return: The enabled_users of this LiveTvLiveTvInfo.  # noqa: E501
         :rtype: list[str]
@@ -76,6 +79,7 @@ class LiveTvLiveTvInfo(object):
     def enabled_users(self, enabled_users):
         """Sets the enabled_users of this LiveTvLiveTvInfo.
 
+        The enabled users.  # noqa: E501
 
         :param enabled_users: The enabled_users of this LiveTvLiveTvInfo.  # noqa: E501
         :type: list[str]

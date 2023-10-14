@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.EmbyWebGenericEditEditObjectContainer;
+import io.swagger.client.model.EditObjectContainer;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +34,7 @@ public class FfmpegOptionsServiceApiTest {
      */
     @Test
     public void getEncodingFfmpegoptionsTest() throws Exception {
-        EmbyWebGenericEditEditObjectContainer response = api.getEncodingFfmpegoptions();
+        EditObjectContainer response = api.getEncodingFfmpegoptions();
 
         // TODO: test validations
     }

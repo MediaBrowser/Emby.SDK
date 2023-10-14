@@ -15,7 +15,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The RemoteSearchResult model module.
 * @module model/RemoteSearchResult
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class RemoteSearchResult {
     /**
@@ -89,6 +89,7 @@ export default class RemoteSearchResult {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
@@ -97,6 +98,7 @@ export default class RemoteSearchResult {
     */
     'ProviderIds' = undefined;
     /**
+    * The year.
     * @member {Number} ProductionYear
     */
     'ProductionYear' = undefined;

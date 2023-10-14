@@ -22,7 +22,7 @@ class ProcessRunMetricsProcessMetricPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'time': 'TimeSpan',
+        'time': 'str',
         'cpu_percent': 'float',
         'virtual_memory': 'float',
         'working_set': 'float'
@@ -55,9 +55,10 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def time(self):
         """Gets the time of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
 
+        The time.  # noqa: E501
 
         :return: The time of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
-        :rtype: TimeSpan
+        :rtype: str
         """
         return self._time
 
@@ -65,9 +66,10 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def time(self, time):
         """Sets the time of this ProcessRunMetricsProcessMetricPoint.
 
+        The time.  # noqa: E501
 
         :param time: The time of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
-        :type: TimeSpan
+        :type: str
         """
 
         self._time = time
@@ -76,6 +78,7 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def cpu_percent(self):
         """Gets the cpu_percent of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
 
+        The cpu percent.  # noqa: E501
 
         :return: The cpu_percent of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
         :rtype: float
@@ -86,6 +89,7 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def cpu_percent(self, cpu_percent):
         """Sets the cpu_percent of this ProcessRunMetricsProcessMetricPoint.
 
+        The cpu percent.  # noqa: E501
 
         :param cpu_percent: The cpu_percent of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
         :type: float
@@ -97,6 +101,7 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def virtual_memory(self):
         """Gets the virtual_memory of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
 
+        The virtual memory.  # noqa: E501
 
         :return: The virtual_memory of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
         :rtype: float
@@ -107,6 +112,7 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def virtual_memory(self, virtual_memory):
         """Sets the virtual_memory of this ProcessRunMetricsProcessMetricPoint.
 
+        The virtual memory.  # noqa: E501
 
         :param virtual_memory: The virtual_memory of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
         :type: float
@@ -118,6 +124,7 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def working_set(self):
         """Gets the working_set of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
 
+        The working set.  # noqa: E501
 
         :return: The working_set of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
         :rtype: float
@@ -128,6 +135,7 @@ class ProcessRunMetricsProcessMetricPoint(object):
     def working_set(self, working_set):
         """Sets the working_set of this ProcessRunMetricsProcessMetricPoint.
 
+        The working set.  # noqa: E501
 
         :param working_set: The working_set of this ProcessRunMetricsProcessMetricPoint.  # noqa: E501
         :type: float

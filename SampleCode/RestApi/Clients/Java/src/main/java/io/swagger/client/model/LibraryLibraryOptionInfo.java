@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationMetadataFeatures;
+import io.swagger.client.model.MetadataFeatures;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class LibraryLibraryOptionInfo {
   private Boolean defaultEnabled = null;
 
   @SerializedName("Features")
-  private List<ConfigurationMetadataFeatures> features = null;
+  private List<MetadataFeatures> features = null;
 
   public LibraryLibraryOptionInfo name(String name) {
     this.name = name;
@@ -89,14 +89,14 @@ public class LibraryLibraryOptionInfo {
     this.defaultEnabled = defaultEnabled;
   }
 
-  public LibraryLibraryOptionInfo features(List<ConfigurationMetadataFeatures> features) {
+  public LibraryLibraryOptionInfo features(List<MetadataFeatures> features) {
     this.features = features;
     return this;
   }
 
-  public LibraryLibraryOptionInfo addFeaturesItem(ConfigurationMetadataFeatures featuresItem) {
+  public LibraryLibraryOptionInfo addFeaturesItem(MetadataFeatures featuresItem) {
     if (this.features == null) {
-      this.features = new ArrayList<ConfigurationMetadataFeatures>();
+      this.features = new ArrayList<MetadataFeatures>();
     }
     this.features.add(featuresItem);
     return this;
@@ -107,11 +107,11 @@ public class LibraryLibraryOptionInfo {
    * @return features
   **/
   @Schema(description = "")
-  public List<ConfigurationMetadataFeatures> getFeatures() {
+  public List<MetadataFeatures> getFeatures() {
     return features;
   }
 
-  public void setFeatures(List<ConfigurationMetadataFeatures> features) {
+  public void setFeatures(List<MetadataFeatures> features) {
     this.features = features;
   }
 

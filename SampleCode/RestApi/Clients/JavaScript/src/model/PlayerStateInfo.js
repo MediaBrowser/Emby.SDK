@@ -16,7 +16,7 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlayerStateInfo model module.
 * @module model/PlayerStateInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class PlayerStateInfo {
     /**
@@ -84,34 +84,42 @@ export default class PlayerStateInfo {
     }
 
     /**
+    * The now playing position ticks.
     * @member {Number} PositionTicks
     */
     'PositionTicks' = undefined;
     /**
+    * A value indicating whether this instance can seek.
     * @member {Boolean} CanSeek
     */
     'CanSeek' = undefined;
     /**
+    * A value indicating whether this instance is paused.
     * @member {Boolean} IsPaused
     */
     'IsPaused' = undefined;
     /**
+    * A value indicating whether this instance is muted.
     * @member {Boolean} IsMuted
     */
     'IsMuted' = undefined;
     /**
+    * The volume level.
     * @member {Number} VolumeLevel
     */
     'VolumeLevel' = undefined;
     /**
+    * The index of the now playing audio stream.
     * @member {Number} AudioStreamIndex
     */
     'AudioStreamIndex' = undefined;
     /**
+    * The index of the now playing subtitle stream.
     * @member {Number} SubtitleStreamIndex
     */
     'SubtitleStreamIndex' = undefined;
     /**
+    * The now playing media version identifier.
     * @member {String} MediaSourceId
     */
     'MediaSourceId' = undefined;

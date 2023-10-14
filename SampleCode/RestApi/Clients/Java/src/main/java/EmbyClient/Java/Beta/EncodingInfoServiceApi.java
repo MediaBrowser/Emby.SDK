@@ -19,9 +19,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.ConfigurationCodecConfiguration;
-import io.swagger.client.model.MediaEncodingCodecsVideoCodecsVideoCodecBase;
-import io.swagger.client.model.MediaEncodingConfigurationToneMappingToneMapOptionsVisibility;
+import io.swagger.client.model.CodecConfiguration;
+import io.swagger.client.model.ConfigurationToneMappingToneMapOptionsVisibility;
+import io.swagger.client.model.VideoCodecBase;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -111,23 +111,23 @@ public class EncodingInfoServiceApi {
     /**
      * Gets default codec configurations
      * Requires authentication as administrator
-     * @return List&lt;ConfigurationCodecConfiguration&gt;
+     * @return List&lt;CodecConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<ConfigurationCodecConfiguration> getEncodingCodecconfigurationDefaults() throws ApiException {
-        ApiResponse<List<ConfigurationCodecConfiguration>> resp = getEncodingCodecconfigurationDefaultsWithHttpInfo();
+    public List<CodecConfiguration> getEncodingCodecconfigurationDefaults() throws ApiException {
+        ApiResponse<List<CodecConfiguration>> resp = getEncodingCodecconfigurationDefaultsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets default codec configurations
      * Requires authentication as administrator
-     * @return ApiResponse&lt;List&lt;ConfigurationCodecConfiguration&gt;&gt;
+     * @return ApiResponse&lt;List&lt;CodecConfiguration&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<ConfigurationCodecConfiguration>> getEncodingCodecconfigurationDefaultsWithHttpInfo() throws ApiException {
+    public ApiResponse<List<CodecConfiguration>> getEncodingCodecconfigurationDefaultsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getEncodingCodecconfigurationDefaultsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<ConfigurationCodecConfiguration>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<CodecConfiguration>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -138,7 +138,7 @@ public class EncodingInfoServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEncodingCodecconfigurationDefaultsAsync(final ApiCallback<List<ConfigurationCodecConfiguration>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEncodingCodecconfigurationDefaultsAsync(final ApiCallback<List<CodecConfiguration>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -160,7 +160,7 @@ public class EncodingInfoServiceApi {
         }
 
         com.squareup.okhttp.Call call = getEncodingCodecconfigurationDefaultsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<ConfigurationCodecConfiguration>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<CodecConfiguration>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -227,23 +227,23 @@ public class EncodingInfoServiceApi {
     /**
      * Gets details about available video encoders and decoders
      * Requires authentication as administrator
-     * @return List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;
+     * @return List&lt;VideoCodecBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<MediaEncodingCodecsVideoCodecsVideoCodecBase> getEncodingCodecinformationVideo() throws ApiException {
-        ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> resp = getEncodingCodecinformationVideoWithHttpInfo();
+    public List<VideoCodecBase> getEncodingCodecinformationVideo() throws ApiException {
+        ApiResponse<List<VideoCodecBase>> resp = getEncodingCodecinformationVideoWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets details about available video encoders and decoders
      * Requires authentication as administrator
-     * @return ApiResponse&lt;List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;&gt;
+     * @return ApiResponse&lt;List&lt;VideoCodecBase&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> getEncodingCodecinformationVideoWithHttpInfo() throws ApiException {
+    public ApiResponse<List<VideoCodecBase>> getEncodingCodecinformationVideoWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getEncodingCodecinformationVideoValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<VideoCodecBase>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -254,7 +254,7 @@ public class EncodingInfoServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEncodingCodecinformationVideoAsync(final ApiCallback<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEncodingCodecinformationVideoAsync(final ApiCallback<List<VideoCodecBase>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -276,7 +276,7 @@ public class EncodingInfoServiceApi {
         }
 
         com.squareup.okhttp.Call call = getEncodingCodecinformationVideoValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<VideoCodecBase>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -343,23 +343,23 @@ public class EncodingInfoServiceApi {
     /**
      * Gets available tone mapping options
      * Requires authentication as administrator
-     * @return MediaEncodingConfigurationToneMappingToneMapOptionsVisibility
+     * @return ConfigurationToneMappingToneMapOptionsVisibility
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public MediaEncodingConfigurationToneMappingToneMapOptionsVisibility getEncodingTonemapoptions() throws ApiException {
-        ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> resp = getEncodingTonemapoptionsWithHttpInfo();
+    public ConfigurationToneMappingToneMapOptionsVisibility getEncodingTonemapoptions() throws ApiException {
+        ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility> resp = getEncodingTonemapoptionsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets available tone mapping options
      * Requires authentication as administrator
-     * @return ApiResponse&lt;MediaEncodingConfigurationToneMappingToneMapOptionsVisibility&gt;
+     * @return ApiResponse&lt;ConfigurationToneMappingToneMapOptionsVisibility&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> getEncodingTonemapoptionsWithHttpInfo() throws ApiException {
+    public ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility> getEncodingTonemapoptionsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getEncodingTonemapoptionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility>(){}.getType();
+        Type localVarReturnType = new TypeToken<ConfigurationToneMappingToneMapOptionsVisibility>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -370,7 +370,7 @@ public class EncodingInfoServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEncodingTonemapoptionsAsync(final ApiCallback<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEncodingTonemapoptionsAsync(final ApiCallback<ConfigurationToneMappingToneMapOptionsVisibility> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -392,7 +392,7 @@ public class EncodingInfoServiceApi {
         }
 
         com.squareup.okhttp.Call call = getEncodingTonemapoptionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility>(){}.getType();
+        Type localVarReturnType = new TypeToken<ConfigurationToneMappingToneMapOptionsVisibility>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

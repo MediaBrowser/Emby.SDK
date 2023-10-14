@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTvGuideInfo model module.
 * @module model/LiveTvGuideInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LiveTvGuideInfo {
     /**
@@ -52,10 +52,12 @@ export default class LiveTvGuideInfo {
     }
 
     /**
+    * The start date.
     * @member {Date} StartDate
     */
     'StartDate' = undefined;
     /**
+    * The end date.
     * @member {Date} EndDate
     */
     'EndDate' = undefined;

@@ -12,12 +12,17 @@ import Foundation
 public struct DevicesDeviceInfo: Codable {
 
     public var name: String?
+    /** The identifier. */
     public var _id: String?
     public var internalId: Int64?
     public var reportedDeviceId: String?
+    /** The last name of the user. */
     public var lastUserName: String?
+    /** The name of the application. */
     public var appName: String?
+    /** The application version. */
     public var appVersion: String?
+    /** The last user identifier. */
     public var lastUserId: String?
     public var dateLastActivity: Date?
     public var iconUrl: String?

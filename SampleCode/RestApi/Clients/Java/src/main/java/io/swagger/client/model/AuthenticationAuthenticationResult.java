@@ -76,10 +76,10 @@ public class AuthenticationAuthenticationResult {
   }
 
    /**
-   * Get accessToken
+   * The authentication token.
    * @return accessToken
   **/
-  @Schema(description = "")
+  @Schema(description = "The authentication token.")
   public String getAccessToken() {
     return accessToken;
   }
@@ -94,10 +94,10 @@ public class AuthenticationAuthenticationResult {
   }
 
    /**
-   * Get serverId
+   * The server identifier.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "The server identifier.")
   public String getServerId() {
     return serverId;
   }

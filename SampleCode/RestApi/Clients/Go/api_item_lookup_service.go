@@ -386,7 +386,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchBook(ctx context.Context, body ProvidersRemoteSearchQueryProvidersBookInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchBook(ctx context.Context, body RemoteSearchQueryBookInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -485,7 +485,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchBoxset(ctx context.Context, body ProvidersRemoteSearchQueryProvidersItemLookupInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchBoxset(ctx context.Context, body RemoteSearchQueryItemLookupInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -584,7 +584,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchGame(ctx context.Context, body ProvidersRemoteSearchQueryProvidersGameInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchGame(ctx context.Context, body RemoteSearchQueryGameInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -683,7 +683,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchMovie(ctx context.Context, body ProvidersRemoteSearchQueryProvidersMovieInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchMovie(ctx context.Context, body RemoteSearchQueryMovieInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -782,7 +782,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchMusicalbum(ctx context.Context, body ProvidersRemoteSearchQueryProvidersAlbumInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchMusicalbum(ctx context.Context, body RemoteSearchQueryAlbumInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -881,7 +881,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchMusicartist(ctx context.Context, body ProvidersRemoteSearchQueryProvidersArtistInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchMusicartist(ctx context.Context, body RemoteSearchQueryArtistInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -980,7 +980,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchMusicvideo(ctx context.Context, body ProvidersRemoteSearchQueryProvidersMusicVideoInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchMusicvideo(ctx context.Context, body RemoteSearchQueryMusicVideoInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1079,7 +1079,7 @@ Requires authentication as administrator
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchPerson(ctx context.Context, body ProvidersRemoteSearchQueryProvidersPersonLookupInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchPerson(ctx context.Context, body RemoteSearchQueryPersonLookupInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1178,7 +1178,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchSeries(ctx context.Context, body ProvidersRemoteSearchQueryProvidersSeriesInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchSeries(ctx context.Context, body RemoteSearchQuerySeriesInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1277,7 +1277,7 @@ Requires authentication as user
  * @param body RemoteSearchQuery&#x60;1: 
 @return []RemoteSearchResult
 */
-func (a *ItemLookupServiceApiService) PostItemsRemotesearchTrailer(ctx context.Context, body ProvidersRemoteSearchQueryProvidersTrailerInfo) ([]RemoteSearchResult, *http.Response, error) {
+func (a *ItemLookupServiceApiService) PostItemsRemotesearchTrailer(ctx context.Context, body RemoteSearchQueryTrailerInfo) ([]RemoteSearchResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

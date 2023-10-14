@@ -18,11 +18,12 @@ import LiveTvTimerType from './LiveTvTimerType';
 /**
 * The LiveTvSeriesTimerInfoDto model module.
 * @module model/LiveTvSeriesTimerInfoDto
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LiveTvSeriesTimerInfoDto {
     /**
     * Constructs a new <code>LiveTvSeriesTimerInfoDto</code>.
+    * Class SeriesTimerInfoDto.  
     * @alias module:model/LiveTvSeriesTimerInfoDto
     * @class
     */
@@ -158,6 +159,7 @@ export default class LiveTvSeriesTimerInfoDto {
     }
 
     /**
+    * A value indicating whether \\[record any time\\].
     * @member {Boolean} RecordAnyTime
     */
     'RecordAnyTime' = undefined;
@@ -166,6 +168,7 @@ export default class LiveTvSeriesTimerInfoDto {
     */
     'SkipEpisodesInLibrary' = undefined;
     /**
+    * A value indicating whether \\[record any channel\\].
     * @member {Boolean} RecordAnyChannel
     */
     'RecordAnyChannel' = undefined;
@@ -178,6 +181,7 @@ export default class LiveTvSeriesTimerInfoDto {
     */
     'MaxRecordingSeconds' = undefined;
     /**
+    * A value indicating whether \\[record new only\\].
     * @member {Boolean} RecordNewOnly
     */
     'RecordNewOnly' = undefined;
@@ -186,26 +190,32 @@ export default class LiveTvSeriesTimerInfoDto {
     */
     'ChannelIds' = undefined;
     /**
+    * The days.
     * @member {Array.<module:model/DayOfWeek>} Days
     */
     'Days' = undefined;
     /**
+    * The image tags.
     * @member {Object.<String, String>} ImageTags
     */
     'ImageTags' = undefined;
     /**
+    * The parent thumb item id.
     * @member {String} ParentThumbItemId
     */
     'ParentThumbItemId' = undefined;
     /**
+    * The parent thumb image tag.
     * @member {String} ParentThumbImageTag
     */
     'ParentThumbImageTag' = undefined;
     /**
+    * The parent primary image item identifier.
     * @member {String} ParentPrimaryImageItemId
     */
     'ParentPrimaryImageItemId' = undefined;
     /**
+    * The parent primary image tag.
     * @member {String} ParentPrimaryImageTag
     */
     'ParentPrimaryImageTag' = undefined;
@@ -222,6 +232,7 @@ export default class LiveTvSeriesTimerInfoDto {
     */
     'TimerType' = undefined;
     /**
+    * Id of the recording.
     * @member {String} Id
     */
     'Id' = undefined;
@@ -230,14 +241,17 @@ export default class LiveTvSeriesTimerInfoDto {
     */
     'Type' = undefined;
     /**
+    * The server identifier.
     * @member {String} ServerId
     */
     'ServerId' = undefined;
     /**
+    * ChannelId of the recording.
     * @member {String} ChannelId
     */
     'ChannelId' = undefined;
     /**
+    * ChannelName of the recording.
     * @member {String} ChannelName
     */
     'ChannelName' = undefined;
@@ -250,50 +264,62 @@ export default class LiveTvSeriesTimerInfoDto {
     */
     'ChannelPrimaryImageTag' = undefined;
     /**
+    * The program identifier.
     * @member {String} ProgramId
     */
     'ProgramId' = undefined;
     /**
+    * Name of the recording.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * Description of the recording.
     * @member {String} Overview
     */
     'Overview' = undefined;
     /**
+    * The start date of the recording, in UTC.
     * @member {Date} StartDate
     */
     'StartDate' = undefined;
     /**
+    * The end date of the recording, in UTC.
     * @member {Date} EndDate
     */
     'EndDate' = undefined;
     /**
+    * The priority.
     * @member {Number} Priority
     */
     'Priority' = undefined;
     /**
+    * The pre padding seconds.
     * @member {Number} PrePaddingSeconds
     */
     'PrePaddingSeconds' = undefined;
     /**
+    * The post padding seconds.
     * @member {Number} PostPaddingSeconds
     */
     'PostPaddingSeconds' = undefined;
     /**
+    * A value indicating whether this instance is pre padding required.
     * @member {Boolean} IsPrePaddingRequired
     */
     'IsPrePaddingRequired' = undefined;
     /**
+    * If the item does not have any backdrops, this will hold the Id of the Parent that has one.
     * @member {String} ParentBackdropItemId
     */
     'ParentBackdropItemId' = undefined;
     /**
+    * The parent backdrop image tags.
     * @member {Array.<String>} ParentBackdropImageTags
     */
     'ParentBackdropImageTags' = undefined;
     /**
+    * A value indicating whether this instance is post padding required.
     * @member {Boolean} IsPostPaddingRequired
     */
     'IsPostPaddingRequired' = undefined;

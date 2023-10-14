@@ -35,7 +35,7 @@ class MediaInfoServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str user_id: User Id (required)
-        :return: MediaInfoPlaybackInfoResponse
+        :return: PlaybackInfoResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -58,7 +58,7 @@ class MediaInfoServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str user_id: User Id (required)
-        :return: MediaInfoPlaybackInfoResponse
+        :return: PlaybackInfoResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -118,7 +118,7 @@ class MediaInfoServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='MediaInfoPlaybackInfoResponse',  # noqa: E501
+            response_type='PlaybackInfoResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -227,9 +227,9 @@ class MediaInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param MediaInfoPlaybackInfoRequest body: PlaybackInfoRequest:  (required)
+        :param PlaybackInfoRequest body: PlaybackInfoRequest:  (required)
         :param str id: (required)
-        :return: MediaInfoPlaybackInfoResponse
+        :return: PlaybackInfoResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -250,9 +250,9 @@ class MediaInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param MediaInfoPlaybackInfoRequest body: PlaybackInfoRequest:  (required)
+        :param PlaybackInfoRequest body: PlaybackInfoRequest:  (required)
         :param str id: (required)
-        :return: MediaInfoPlaybackInfoResponse
+        :return: PlaybackInfoResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -316,7 +316,7 @@ class MediaInfoServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='MediaInfoPlaybackInfoResponse',  # noqa: E501
+            response_type='PlaybackInfoResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -516,8 +516,8 @@ class MediaInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param MediaInfoLiveStreamRequest body: LiveStreamRequest:  (required)
-        :return: MediaInfoLiveStreamResponse
+        :param LiveStreamRequest body: LiveStreamRequest:  (required)
+        :return: LiveStreamResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -538,8 +538,8 @@ class MediaInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param MediaInfoLiveStreamRequest body: LiveStreamRequest:  (required)
-        :return: MediaInfoLiveStreamResponse
+        :param LiveStreamRequest body: LiveStreamRequest:  (required)
+        :return: LiveStreamResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -597,7 +597,7 @@ class MediaInfoServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='MediaInfoLiveStreamResponse',  # noqa: E501
+            response_type='LiveStreamResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

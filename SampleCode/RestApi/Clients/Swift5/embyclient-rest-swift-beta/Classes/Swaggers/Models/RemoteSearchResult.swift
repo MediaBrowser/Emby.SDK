@@ -11,8 +11,10 @@ import Foundation
 
 public struct RemoteSearchResult: Codable {
 
+    /** The name. */
     public var name: String?
     public var providerIds: ProviderIdDictionary?
+    /** The year. */
     public var productionYear: Int?
     public var indexNumber: Int?
     public var indexNumberEnd: Int?

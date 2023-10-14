@@ -37,9 +37,9 @@ import java.util.List;
 import java.util.Map;
 import org.threeten.bp.OffsetDateTime;
 /**
- * BaseItemDto
+ * This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.  
  */
-
+@Schema(description = "This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.  ")
 
 public class BaseItemDto {
   @SerializedName("Name")
@@ -504,10 +504,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -540,10 +540,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get serverId
+   * The server identifier.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "The server identifier.")
   public String getServerId() {
     return serverId;
   }
@@ -558,10 +558,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get id
+   * The id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The id.")
   public String getId() {
     return id;
   }
@@ -594,10 +594,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get etag
+   * The etag.
    * @return etag
   **/
-  @Schema(description = "")
+  @Schema(description = "The etag.")
   public String getEtag() {
     return etag;
   }
@@ -612,10 +612,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get prefix
+   * The Prefix.
    * @return prefix
   **/
-  @Schema(description = "")
+  @Schema(description = "The Prefix.")
   public String getPrefix() {
     return prefix;
   }
@@ -630,10 +630,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get playlistItemId
+   * The playlist item identifier.
    * @return playlistItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The playlist item identifier.")
   public String getPlaylistItemId() {
     return playlistItemId;
   }
@@ -648,10 +648,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get dateCreated
+   * The date created.
    * @return dateCreated
   **/
-  @Schema(description = "")
+  @Schema(description = "The date created.")
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -828,10 +828,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get supportsSync
+   * A value indicating whether \\[supports synchronize\\].
    * @return supportsSync
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[supports synchronize\\].")
   public Boolean isSupportsSync() {
     return supportsSync;
   }
@@ -918,10 +918,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get sortName
+   * The name of the sort.
    * @return sortName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the sort.")
   public String getSortName() {
     return sortName;
   }
@@ -972,10 +972,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get premiereDate
+   * The premiere date.
    * @return premiereDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The premiere date.")
   public OffsetDateTime getPremiereDate() {
     return premiereDate;
   }
@@ -998,10 +998,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get externalUrls
+   * The external urls.
    * @return externalUrls
   **/
-  @Schema(description = "")
+  @Schema(description = "The external urls.")
   public List<ExternalUrl> getExternalUrls() {
     return externalUrls;
   }
@@ -1024,10 +1024,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get mediaSources
+   * The media versions.
    * @return mediaSources
   **/
-  @Schema(description = "")
+  @Schema(description = "The media versions.")
   public List<MediaSourceInfo> getMediaSources() {
     return mediaSources;
   }
@@ -1042,10 +1042,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get criticRating
+   * The critic rating.
    * @return criticRating
   **/
-  @Schema(description = "")
+  @Schema(description = "The critic rating.")
   public Float getCriticRating() {
     return criticRating;
   }
@@ -1096,10 +1096,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get gameSystem
+   * The game system.
    * @return gameSystem
   **/
-  @Schema(description = "")
+  @Schema(description = "The game system.")
   public String getGameSystem() {
     return gameSystem;
   }
@@ -1140,10 +1140,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get path
+   * The path.
    * @return path
   **/
-  @Schema(description = "")
+  @Schema(description = "The path.")
   public String getPath() {
     return path;
   }
@@ -1158,10 +1158,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get officialRating
+   * The official rating.
    * @return officialRating
   **/
-  @Schema(description = "")
+  @Schema(description = "The official rating.")
   public String getOfficialRating() {
     return officialRating;
   }
@@ -1176,10 +1176,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get customRating
+   * The custom rating.
    * @return customRating
   **/
-  @Schema(description = "")
+  @Schema(description = "The custom rating.")
   public String getCustomRating() {
     return customRating;
   }
@@ -1194,10 +1194,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get channelId
+   * The channel identifier.
    * @return channelId
   **/
-  @Schema(description = "")
+  @Schema(description = "The channel identifier.")
   public String getChannelId() {
     return channelId;
   }
@@ -1230,10 +1230,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get overview
+   * The overview.
    * @return overview
   **/
-  @Schema(description = "")
+  @Schema(description = "The overview.")
   public String getOverview() {
     return overview;
   }
@@ -1256,10 +1256,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get taglines
+   * The taglines.
    * @return taglines
   **/
-  @Schema(description = "")
+  @Schema(description = "The taglines.")
   public List<String> getTaglines() {
     return taglines;
   }
@@ -1282,10 +1282,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get genres
+   * The genres.
    * @return genres
   **/
-  @Schema(description = "")
+  @Schema(description = "The genres.")
   public List<String> getGenres() {
     return genres;
   }
@@ -1300,10 +1300,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get communityRating
+   * The community rating.
    * @return communityRating
   **/
-  @Schema(description = "")
+  @Schema(description = "The community rating.")
   public Float getCommunityRating() {
     return communityRating;
   }
@@ -1318,10 +1318,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get runTimeTicks
+   * The run time ticks.
    * @return runTimeTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The run time ticks.")
   public Long getRunTimeTicks() {
     return runTimeTicks;
   }
@@ -1390,10 +1390,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get productionYear
+   * The production year.
    * @return productionYear
   **/
-  @Schema(description = "")
+  @Schema(description = "The production year.")
   public Integer getProductionYear() {
     return productionYear;
   }
@@ -1408,10 +1408,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get number
+   * The number.
    * @return number
   **/
-  @Schema(description = "")
+  @Schema(description = "The number.")
   public String getNumber() {
     return number;
   }
@@ -1444,10 +1444,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get indexNumber
+   * The index number.
    * @return indexNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The index number.")
   public Integer getIndexNumber() {
     return indexNumber;
   }
@@ -1462,10 +1462,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get indexNumberEnd
+   * The index number end.
    * @return indexNumberEnd
   **/
-  @Schema(description = "")
+  @Schema(description = "The index number end.")
   public Integer getIndexNumberEnd() {
     return indexNumberEnd;
   }
@@ -1480,10 +1480,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentIndexNumber
+   * The parent index number.
    * @return parentIndexNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent index number.")
   public Integer getParentIndexNumber() {
     return parentIndexNumber;
   }
@@ -1506,10 +1506,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get remoteTrailers
+   * The trailer urls.
    * @return remoteTrailers
   **/
-  @Schema(description = "")
+  @Schema(description = "The trailer urls.")
   public List<MediaUrl> getRemoteTrailers() {
     return remoteTrailers;
   }
@@ -1542,10 +1542,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isFolder
+   * A value indicating whether this instance is folder.
    * @return isFolder
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is folder.")
   public Boolean isIsFolder() {
     return isFolder;
   }
@@ -1560,10 +1560,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentId
+   * The parent id.
    * @return parentId
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent id.")
   public String getParentId() {
     return parentId;
   }
@@ -1578,10 +1578,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get type
+   * The type.
    * @return type
   **/
-  @Schema(description = "")
+  @Schema(description = "The type.")
   public String getType() {
     return type;
   }
@@ -1604,10 +1604,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get people
+   * The people.
    * @return people
   **/
-  @Schema(description = "")
+  @Schema(description = "The people.")
   public List<BaseItemPerson> getPeople() {
     return people;
   }
@@ -1630,10 +1630,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get studios
+   * The studios.
    * @return studios
   **/
-  @Schema(description = "")
+  @Schema(description = "The studios.")
   public List<NameLongIdPair> getStudios() {
     return studios;
   }
@@ -1700,10 +1700,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentLogoItemId
+   * If the item does not have a logo, this will hold the Id of the Parent that has one.
    * @return parentLogoItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "If the item does not have a logo, this will hold the Id of the Parent that has one.")
   public String getParentLogoItemId() {
     return parentLogoItemId;
   }
@@ -1718,10 +1718,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentBackdropItemId
+   * If the item does not have any backdrops, this will hold the Id of the Parent that has one.
    * @return parentBackdropItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "If the item does not have any backdrops, this will hold the Id of the Parent that has one.")
   public String getParentBackdropItemId() {
     return parentBackdropItemId;
   }
@@ -1744,10 +1744,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentBackdropImageTags
+   * The parent backdrop image tags.
    * @return parentBackdropImageTags
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent backdrop image tags.")
   public List<String> getParentBackdropImageTags() {
     return parentBackdropImageTags;
   }
@@ -1762,10 +1762,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get localTrailerCount
+   * The local trailer count.
    * @return localTrailerCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The local trailer count.")
   public Integer getLocalTrailerCount() {
     return localTrailerCount;
   }
@@ -1798,10 +1798,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get recursiveItemCount
+   * The recursive item count.
    * @return recursiveItemCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The recursive item count.")
   public Integer getRecursiveItemCount() {
     return recursiveItemCount;
   }
@@ -1816,10 +1816,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get childCount
+   * The child count.
    * @return childCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The child count.")
   public Integer getChildCount() {
     return childCount;
   }
@@ -1834,10 +1834,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get seriesName
+   * The name of the series.
    * @return seriesName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the series.")
   public String getSeriesName() {
     return seriesName;
   }
@@ -1852,10 +1852,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get seriesId
+   * The series id.
    * @return seriesId
   **/
-  @Schema(description = "")
+  @Schema(description = "The series id.")
   public String getSeriesId() {
     return seriesId;
   }
@@ -1870,10 +1870,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get seasonId
+   * The season identifier.
    * @return seasonId
   **/
-  @Schema(description = "")
+  @Schema(description = "The season identifier.")
   public String getSeasonId() {
     return seasonId;
   }
@@ -1888,10 +1888,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get specialFeatureCount
+   * The special feature count.
    * @return specialFeatureCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The special feature count.")
   public Integer getSpecialFeatureCount() {
     return specialFeatureCount;
   }
@@ -1906,10 +1906,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get displayPreferencesId
+   * The display preferences id.
    * @return displayPreferencesId
   **/
-  @Schema(description = "")
+  @Schema(description = "The display preferences id.")
   public String getDisplayPreferencesId() {
     return displayPreferencesId;
   }
@@ -1924,10 +1924,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get status
+   * The status.
    * @return status
   **/
-  @Schema(description = "")
+  @Schema(description = "The status.")
   public String getStatus() {
     return status;
   }
@@ -1950,10 +1950,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get airDays
+   * The air days.
    * @return airDays
   **/
-  @Schema(description = "")
+  @Schema(description = "The air days.")
   public List<DayOfWeek> getAirDays() {
     return airDays;
   }
@@ -1976,10 +1976,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get tags
+   * The tags.
    * @return tags
   **/
-  @Schema(description = "")
+  @Schema(description = "The tags.")
   public List<String> getTags() {
     return tags;
   }
@@ -1994,10 +1994,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get primaryImageAspectRatio
+   * The primary image aspect ratio, after image enhancements.
    * @return primaryImageAspectRatio
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image aspect ratio, after image enhancements.")
   public Double getPrimaryImageAspectRatio() {
     return primaryImageAspectRatio;
   }
@@ -2020,10 +2020,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get artists
+   * The artists.
    * @return artists
   **/
-  @Schema(description = "")
+  @Schema(description = "The artists.")
   public List<String> getArtists() {
     return artists;
   }
@@ -2046,10 +2046,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get artistItems
+   * The artist items.
    * @return artistItems
   **/
-  @Schema(description = "")
+  @Schema(description = "The artist items.")
   public List<NameIdPair> getArtistItems() {
     return artistItems;
   }
@@ -2090,10 +2090,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get album
+   * The album.
    * @return album
   **/
-  @Schema(description = "")
+  @Schema(description = "The album.")
   public String getAlbum() {
     return album;
   }
@@ -2108,10 +2108,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get collectionType
+   * The type of the collection.
    * @return collectionType
   **/
-  @Schema(description = "")
+  @Schema(description = "The type of the collection.")
   public String getCollectionType() {
     return collectionType;
   }
@@ -2126,10 +2126,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get displayOrder
+   * The display order.
    * @return displayOrder
   **/
-  @Schema(description = "")
+  @Schema(description = "The display order.")
   public String getDisplayOrder() {
     return displayOrder;
   }
@@ -2144,10 +2144,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get albumId
+   * The album id.
    * @return albumId
   **/
-  @Schema(description = "")
+  @Schema(description = "The album id.")
   public String getAlbumId() {
     return albumId;
   }
@@ -2162,10 +2162,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get albumPrimaryImageTag
+   * The album image tag.
    * @return albumPrimaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The album image tag.")
   public String getAlbumPrimaryImageTag() {
     return albumPrimaryImageTag;
   }
@@ -2180,10 +2180,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get seriesPrimaryImageTag
+   * The series primary image tag.
    * @return seriesPrimaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The series primary image tag.")
   public String getSeriesPrimaryImageTag() {
     return seriesPrimaryImageTag;
   }
@@ -2198,10 +2198,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get albumArtist
+   * The album artist.
    * @return albumArtist
   **/
-  @Schema(description = "")
+  @Schema(description = "The album artist.")
   public String getAlbumArtist() {
     return albumArtist;
   }
@@ -2224,10 +2224,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get albumArtists
+   * The album artists.
    * @return albumArtists
   **/
-  @Schema(description = "")
+  @Schema(description = "The album artists.")
   public List<NameIdPair> getAlbumArtists() {
     return albumArtists;
   }
@@ -2242,10 +2242,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get seasonName
+   * The name of the season.
    * @return seasonName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the season.")
   public String getSeasonName() {
     return seasonName;
   }
@@ -2268,10 +2268,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get mediaStreams
+   * The media streams.
    * @return mediaStreams
   **/
-  @Schema(description = "")
+  @Schema(description = "The media streams.")
   public List<MediaStream> getMediaStreams() {
     return mediaStreams;
   }
@@ -2286,10 +2286,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get partCount
+   * The part count.
    * @return partCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The part count.")
   public Integer getPartCount() {
     return partCount;
   }
@@ -2312,10 +2312,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get imageTags
+   * The image tags.
    * @return imageTags
   **/
-  @Schema(description = "")
+  @Schema(description = "The image tags.")
   public Map<String, String> getImageTags() {
     return imageTags;
   }
@@ -2338,10 +2338,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get backdropImageTags
+   * The backdrop image tags.
    * @return backdropImageTags
   **/
-  @Schema(description = "")
+  @Schema(description = "The backdrop image tags.")
   public List<String> getBackdropImageTags() {
     return backdropImageTags;
   }
@@ -2356,10 +2356,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentLogoImageTag
+   * The parent logo image tag.
    * @return parentLogoImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent logo image tag.")
   public String getParentLogoImageTag() {
     return parentLogoImageTag;
   }
@@ -2374,10 +2374,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get seriesStudio
+   * The series studio.
    * @return seriesStudio
   **/
-  @Schema(description = "")
+  @Schema(description = "The series studio.")
   public String getSeriesStudio() {
     return seriesStudio;
   }
@@ -2428,10 +2428,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentThumbItemId
+   * The parent thumb item id.
    * @return parentThumbItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent thumb item id.")
   public String getParentThumbItemId() {
     return parentThumbItemId;
   }
@@ -2446,10 +2446,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get parentThumbImageTag
+   * The parent thumb image tag.
    * @return parentThumbImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent thumb image tag.")
   public String getParentThumbImageTag() {
     return parentThumbImageTag;
   }
@@ -2472,10 +2472,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get chapters
+   * The chapters.
    * @return chapters
   **/
-  @Schema(description = "")
+  @Schema(description = "The chapters.")
   public List<ChapterInfo> getChapters() {
     return chapters;
   }
@@ -2508,10 +2508,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get mediaType
+   * The type of the media.
    * @return mediaType
   **/
-  @Schema(description = "")
+  @Schema(description = "The type of the media.")
   public String getMediaType() {
     return mediaType;
   }
@@ -2526,10 +2526,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get endDate
+   * The end date.
    * @return endDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The end date.")
   public OffsetDateTime getEndDate() {
     return endDate;
   }
@@ -2552,10 +2552,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get lockedFields
+   * The locked fields.
    * @return lockedFields
   **/
-  @Schema(description = "")
+  @Schema(description = "The locked fields.")
   public List<MetadataFields> getLockedFields() {
     return lockedFields;
   }
@@ -2570,10 +2570,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get lockData
+   * A value indicating whether \\[enable internet providers\\].
    * @return lockData
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[enable internet providers\\].")
   public Boolean isLockData() {
     return lockData;
   }
@@ -2840,10 +2840,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get seriesTimerId
+   * The series timer identifier.
    * @return seriesTimerId
   **/
-  @Schema(description = "")
+  @Schema(description = "The series timer identifier.")
   public String getSeriesTimerId() {
     return seriesTimerId;
   }
@@ -2858,10 +2858,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get channelPrimaryImageTag
+   * The channel primary image tag.
    * @return channelPrimaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The channel primary image tag.")
   public String getChannelPrimaryImageTag() {
     return channelPrimaryImageTag;
   }
@@ -2876,10 +2876,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get startDate
+   * The start date of the recording, in UTC.
    * @return startDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The start date of the recording, in UTC.")
   public OffsetDateTime getStartDate() {
     return startDate;
   }
@@ -2894,10 +2894,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get completionPercentage
+   * The completion percentage.
    * @return completionPercentage
   **/
-  @Schema(description = "")
+  @Schema(description = "The completion percentage.")
   public Double getCompletionPercentage() {
     return completionPercentage;
   }
@@ -2912,10 +2912,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isRepeat
+   * A value indicating whether this instance is repeat.
    * @return isRepeat
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is repeat.")
   public Boolean isIsRepeat() {
     return isRepeat;
   }
@@ -2948,10 +2948,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get episodeTitle
+   * The episode title.
    * @return episodeTitle
   **/
-  @Schema(description = "")
+  @Schema(description = "The episode title.")
   public String getEpisodeTitle() {
     return episodeTitle;
   }
@@ -2966,10 +2966,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isMovie
+   * A value indicating whether this instance is movie.
    * @return isMovie
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is movie.")
   public Boolean isIsMovie() {
     return isMovie;
   }
@@ -2984,10 +2984,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isSports
+   * A value indicating whether this instance is sports.
    * @return isSports
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is sports.")
   public Boolean isIsSports() {
     return isSports;
   }
@@ -3002,10 +3002,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isSeries
+   * A value indicating whether this instance is series.
    * @return isSeries
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is series.")
   public Boolean isIsSeries() {
     return isSeries;
   }
@@ -3020,10 +3020,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isLive
+   * A value indicating whether this instance is live.
    * @return isLive
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is live.")
   public Boolean isIsLive() {
     return isLive;
   }
@@ -3038,10 +3038,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isNews
+   * A value indicating whether this instance is news.
    * @return isNews
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is news.")
   public Boolean isIsNews() {
     return isNews;
   }
@@ -3056,10 +3056,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isKids
+   * A value indicating whether this instance is kids.
    * @return isKids
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is kids.")
   public Boolean isIsKids() {
     return isKids;
   }
@@ -3074,10 +3074,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get isPremiere
+   * A value indicating whether this instance is premiere.
    * @return isPremiere
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is premiere.")
   public Boolean isIsPremiere() {
     return isPremiere;
   }
@@ -3146,10 +3146,10 @@ public class BaseItemDto {
   }
 
    /**
-   * Get timerId
+   * The timer identifier.
    * @return timerId
   **/
-  @Schema(description = "")
+  @Schema(description = "The timer identifier.")
   public String getTimerId() {
     return timerId;
   }

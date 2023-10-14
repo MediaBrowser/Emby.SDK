@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// MetadataFields : Enum MetadataFields  
 type MetadataFields string
 
 // List of MetadataFields

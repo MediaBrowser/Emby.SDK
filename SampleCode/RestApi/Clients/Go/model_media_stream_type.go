@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// MediaStreamType : Enum MediaStreamType  
 type MediaStreamType string
 
 // List of MediaStreamType

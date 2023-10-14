@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum ChannelType   */
 public enum LiveTvChannelType: String, Codable {
     case tv = "TV"
     case radio = "Radio"

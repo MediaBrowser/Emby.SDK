@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// PluginsConfigurationPageType : Enum ConfigurationPageType  
 type PluginsConfigurationPageType string
 
 // List of Plugins.ConfigurationPageType

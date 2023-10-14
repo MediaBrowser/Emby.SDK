@@ -15,7 +15,7 @@ open class EncodingInfoServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingCodecconfigurationDefaults(completion: @escaping ((_ data: [ConfigurationCodecConfiguration]?,_ error: Error?) -> Void)) {
+    open class func getEncodingCodecconfigurationDefaults(completion: @escaping ((_ data: [CodecConfiguration]?,_ error: Error?) -> Void)) {
         getEncodingCodecconfigurationDefaultsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -42,16 +42,16 @@ open class EncodingInfoServiceAPI {
   "CodecId" : "CodecId"
 } ]}]
 
-     - returns: RequestBuilder<[ConfigurationCodecConfiguration]> 
+     - returns: RequestBuilder<[CodecConfiguration]> 
      */
-    open class func getEncodingCodecconfigurationDefaultsWithRequestBuilder() -> RequestBuilder<[ConfigurationCodecConfiguration]> {
+    open class func getEncodingCodecconfigurationDefaultsWithRequestBuilder() -> RequestBuilder<[CodecConfiguration]> {
         let path = "/Encoding/CodecConfiguration/Defaults"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[ConfigurationCodecConfiguration]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[CodecConfiguration]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -60,7 +60,7 @@ open class EncodingInfoServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingCodecinformationVideo(completion: @escaping ((_ data: [MediaEncodingCodecsVideoCodecsVideoCodecBase]?,_ error: Error?) -> Void)) {
+    open class func getEncodingCodecinformationVideo(completion: @escaping ((_ data: [VideoCodecBase]?,_ error: Error?) -> Void)) {
         getEncodingCodecinformationVideoWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -329,16 +329,16 @@ open class EncodingInfoServiceAPI {
   "IsEnabledByDefault" : true
 } ]}]
 
-     - returns: RequestBuilder<[MediaEncodingCodecsVideoCodecsVideoCodecBase]> 
+     - returns: RequestBuilder<[VideoCodecBase]> 
      */
-    open class func getEncodingCodecinformationVideoWithRequestBuilder() -> RequestBuilder<[MediaEncodingCodecsVideoCodecsVideoCodecBase]> {
+    open class func getEncodingCodecinformationVideoWithRequestBuilder() -> RequestBuilder<[VideoCodecBase]> {
         let path = "/Encoding/CodecInformation/Video"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[MediaEncodingCodecsVideoCodecsVideoCodecBase]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[VideoCodecBase]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -347,7 +347,7 @@ open class EncodingInfoServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingTonemapoptions(completion: @escaping ((_ data: MediaEncodingConfigurationToneMappingToneMapOptionsVisibility?,_ error: Error?) -> Void)) {
+    open class func getEncodingTonemapoptions(completion: @escaping ((_ data: ConfigurationToneMappingToneMapOptionsVisibility?,_ error: Error?) -> Void)) {
         getEncodingTonemapoptionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -378,16 +378,16 @@ open class EncodingInfoServiceAPI {
   "IsOpenClSuperTAvailable" : true
 }}]
 
-     - returns: RequestBuilder<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> 
+     - returns: RequestBuilder<ConfigurationToneMappingToneMapOptionsVisibility> 
      */
-    open class func getEncodingTonemapoptionsWithRequestBuilder() -> RequestBuilder<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> {
+    open class func getEncodingTonemapoptionsWithRequestBuilder() -> RequestBuilder<ConfigurationToneMappingToneMapOptionsVisibility> {
         let path = "/Encoding/ToneMapOptions"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ConfigurationToneMappingToneMapOptionsVisibility>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

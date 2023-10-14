@@ -8,31 +8,44 @@
 import Foundation
 
 
+/** Class PlaybackProgressInfo.   */
 
 public struct PlaybackProgressInfo: Codable {
 
+    /** A value indicating whether this instance can seek. */
     public var canSeek: Bool?
     public var item: BaseItemDto?
     public var nowPlayingQueue: [QueueItem]?
     public var playlistItemId: String?
+    /** The item identifier. */
     public var itemId: String?
+    /** The session id. */
     public var sessionId: String?
+    /** The media version identifier. */
     public var mediaSourceId: String?
+    /** The index of the audio stream. */
     public var audioStreamIndex: Int?
+    /** The index of the subtitle stream. */
     public var subtitleStreamIndex: Int?
+    /** A value indicating whether this instance is paused. */
     public var isPaused: Bool?
     public var playlistIndex: Int?
     public var playlistLength: Int?
+    /** A value indicating whether this instance is muted. */
     public var isMuted: Bool?
+    /** The position ticks. */
     public var positionTicks: Int64?
     public var runTimeTicks: Int64?
     public var playbackStartTimeTicks: Int64?
+    /** The volume level. */
     public var volumeLevel: Int?
     public var brightness: Int?
     public var aspectRatio: String?
     public var eventName: ProgressEvent?
     public var playMethod: PlayMethod?
+    /** The live stream identifier. */
     public var liveStreamId: String?
+    /** The play session identifier. */
     public var playSessionId: String?
     public var repeatMode: RepeatMode?
     public var subtitleOffset: Int?

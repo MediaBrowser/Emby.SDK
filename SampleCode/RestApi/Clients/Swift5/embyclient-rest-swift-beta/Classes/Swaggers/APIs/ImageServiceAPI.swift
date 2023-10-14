@@ -1736,7 +1736,7 @@ open class ImageServiceAPI {
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://betadev.emby.media/doc/restapi/User-Authentication.html
 }
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 

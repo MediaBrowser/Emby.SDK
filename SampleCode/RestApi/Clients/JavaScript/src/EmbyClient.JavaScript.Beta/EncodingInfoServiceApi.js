@@ -10,14 +10,14 @@
  */
 
 import ApiClient from "../ApiClient";
-import ConfigurationCodecConfiguration from '../model/ConfigurationCodecConfiguration';
-import MediaEncodingCodecsVideoCodecsVideoCodecBase from '../model/MediaEncodingCodecsVideoCodecsVideoCodecBase';
-import MediaEncodingConfigurationToneMappingToneMapOptionsVisibility from '../model/MediaEncodingConfigurationToneMappingToneMapOptionsVisibility';
+import CodecConfiguration from '../model/CodecConfiguration';
+import ConfigurationToneMappingToneMapOptionsVisibility from '../model/ConfigurationToneMappingToneMapOptionsVisibility';
+import VideoCodecBase from '../model/VideoCodecBase';
 
 /**
 * EncodingInfoService service.
 * @module EmbyClient.JavaScript.Beta/EncodingInfoServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class EncodingInfoServiceApi {
 
@@ -36,7 +36,7 @@ export default class EncodingInfoServiceApi {
      * Callback function to receive the result of the getEncodingCodecconfigurationDefaults operation.
      * @callback module:EmbyClient.JavaScript.Beta/EncodingInfoServiceApi~getEncodingCodecconfigurationDefaultsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ConfigurationCodecConfiguration>} data The data returned by the service call.
+     * @param {Array.<module:model/CodecConfiguration>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -44,7 +44,7 @@ export default class EncodingInfoServiceApi {
      * Gets default codec configurations
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/EncodingInfoServiceApi~getEncodingCodecconfigurationDefaultsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ConfigurationCodecConfiguration>}
+     * data is of type: {@link Array.<module:model/CodecConfiguration>}
      */
     getEncodingCodecconfigurationDefaults() {
       let postBody = null;
@@ -61,7 +61,7 @@ export default class EncodingInfoServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [ConfigurationCodecConfiguration];
+      let returnType = [CodecConfiguration];
 
       return this.apiClient.callApi(
         '/Encoding/CodecConfiguration/Defaults', 'GET',
@@ -73,7 +73,7 @@ export default class EncodingInfoServiceApi {
      * Callback function to receive the result of the getEncodingCodecinformationVideo operation.
      * @callback module:EmbyClient.JavaScript.Beta/EncodingInfoServiceApi~getEncodingCodecinformationVideoCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/MediaEncodingCodecsVideoCodecsVideoCodecBase>} data The data returned by the service call.
+     * @param {Array.<module:model/VideoCodecBase>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -81,7 +81,7 @@ export default class EncodingInfoServiceApi {
      * Gets details about available video encoders and decoders
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/EncodingInfoServiceApi~getEncodingCodecinformationVideoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/MediaEncodingCodecsVideoCodecsVideoCodecBase>}
+     * data is of type: {@link Array.<module:model/VideoCodecBase>}
      */
     getEncodingCodecinformationVideo() {
       let postBody = null;
@@ -98,7 +98,7 @@ export default class EncodingInfoServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [MediaEncodingCodecsVideoCodecsVideoCodecBase];
+      let returnType = [VideoCodecBase];
 
       return this.apiClient.callApi(
         '/Encoding/CodecInformation/Video', 'GET',
@@ -110,7 +110,7 @@ export default class EncodingInfoServiceApi {
      * Callback function to receive the result of the getEncodingTonemapoptions operation.
      * @callback module:EmbyClient.JavaScript.Beta/EncodingInfoServiceApi~getEncodingTonemapoptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/MediaEncodingConfigurationToneMappingToneMapOptionsVisibility} data The data returned by the service call.
+     * @param {module:model/ConfigurationToneMappingToneMapOptionsVisibility} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -118,7 +118,7 @@ export default class EncodingInfoServiceApi {
      * Gets available tone mapping options
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/EncodingInfoServiceApi~getEncodingTonemapoptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MediaEncodingConfigurationToneMappingToneMapOptionsVisibility}
+     * data is of type: {@link module:model/ConfigurationToneMappingToneMapOptionsVisibility}
      */
     getEncodingTonemapoptions() {
       let postBody = null;
@@ -135,7 +135,7 @@ export default class EncodingInfoServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = MediaEncodingConfigurationToneMappingToneMapOptionsVisibility;
+      let returnType = ConfigurationToneMappingToneMapOptionsVisibility;
 
       return this.apiClient.callApi(
         '/Encoding/ToneMapOptions', 'GET',

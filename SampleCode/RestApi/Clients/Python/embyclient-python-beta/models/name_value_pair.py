@@ -45,6 +45,7 @@ class NameValuePair(object):
     def name(self):
         """Gets the name of this NameValuePair.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this NameValuePair.  # noqa: E501
         :rtype: str
@@ -55,6 +56,7 @@ class NameValuePair(object):
     def name(self, name):
         """Sets the name of this NameValuePair.
 
+        The name.  # noqa: E501
 
         :param name: The name of this NameValuePair.  # noqa: E501
         :type: str
@@ -66,6 +68,7 @@ class NameValuePair(object):
     def value(self):
         """Gets the value of this NameValuePair.  # noqa: E501
 
+        The value.  # noqa: E501
 
         :return: The value of this NameValuePair.  # noqa: E501
         :rtype: str
@@ -76,6 +79,7 @@ class NameValuePair(object):
     def value(self, value):
         """Sets the value of this NameValuePair.
 
+        The value.  # noqa: E501
 
         :param value: The value of this NameValuePair.  # noqa: E501
         :type: str

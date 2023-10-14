@@ -12,20 +12,20 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.UpdatesInstallationInfo;
-import io.swagger.client.model.UpdatesPackageVersionClass;
+import io.swagger.client.model.InstallationInfo;
+import io.swagger.client.model.PackageVersionClass;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * SystemInfo
+ * Class SystemInfo  
  */
-
+@Schema(description = "Class SystemInfo  ")
 
 public class SystemInfo {
   @SerializedName("SystemUpdateLevel")
-  private UpdatesPackageVersionClass systemUpdateLevel = null;
+  private PackageVersionClass systemUpdateLevel = null;
 
   @SerializedName("OperatingSystemDisplayName")
   private String operatingSystemDisplayName = null;
@@ -55,7 +55,7 @@ public class SystemInfo {
   private Integer webSocketPortNumber = null;
 
   @SerializedName("CompletedInstallations")
-  private List<UpdatesInstallationInfo> completedInstallations = null;
+  private List<InstallationInfo> completedInstallations = null;
 
   @SerializedName("CanSelfRestart")
   private Boolean canSelfRestart = null;
@@ -123,7 +123,7 @@ public class SystemInfo {
   @SerializedName("Id")
   private String id = null;
 
-  public SystemInfo systemUpdateLevel(UpdatesPackageVersionClass systemUpdateLevel) {
+  public SystemInfo systemUpdateLevel(PackageVersionClass systemUpdateLevel) {
     this.systemUpdateLevel = systemUpdateLevel;
     return this;
   }
@@ -133,11 +133,11 @@ public class SystemInfo {
    * @return systemUpdateLevel
   **/
   @Schema(description = "")
-  public UpdatesPackageVersionClass getSystemUpdateLevel() {
+  public PackageVersionClass getSystemUpdateLevel() {
     return systemUpdateLevel;
   }
 
-  public void setSystemUpdateLevel(UpdatesPackageVersionClass systemUpdateLevel) {
+  public void setSystemUpdateLevel(PackageVersionClass systemUpdateLevel) {
     this.systemUpdateLevel = systemUpdateLevel;
   }
 
@@ -147,10 +147,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get operatingSystemDisplayName
+   * The display name of the operating system.
    * @return operatingSystemDisplayName
   **/
-  @Schema(description = "")
+  @Schema(description = "The display name of the operating system.")
   public String getOperatingSystemDisplayName() {
     return operatingSystemDisplayName;
   }
@@ -183,10 +183,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get hasPendingRestart
+   * A value indicating whether this instance has pending restart.
    * @return hasPendingRestart
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has pending restart.")
   public Boolean isHasPendingRestart() {
     return hasPendingRestart;
   }
@@ -219,10 +219,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get operatingSystem
+   * The operating sytem.
    * @return operatingSystem
   **/
-  @Schema(description = "")
+  @Schema(description = "The operating sytem.")
   public String getOperatingSystem() {
     return operatingSystem;
   }
@@ -237,10 +237,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get supportsLibraryMonitor
+   * A value indicating whether \\[supports library monitor\\].
    * @return supportsLibraryMonitor
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[supports library monitor\\].")
   public Boolean isSupportsLibraryMonitor() {
     return supportsLibraryMonitor;
   }
@@ -291,10 +291,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get webSocketPortNumber
+   * The web socket port number.
    * @return webSocketPortNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The web socket port number.")
   public Integer getWebSocketPortNumber() {
     return webSocketPortNumber;
   }
@@ -303,29 +303,29 @@ public class SystemInfo {
     this.webSocketPortNumber = webSocketPortNumber;
   }
 
-  public SystemInfo completedInstallations(List<UpdatesInstallationInfo> completedInstallations) {
+  public SystemInfo completedInstallations(List<InstallationInfo> completedInstallations) {
     this.completedInstallations = completedInstallations;
     return this;
   }
 
-  public SystemInfo addCompletedInstallationsItem(UpdatesInstallationInfo completedInstallationsItem) {
+  public SystemInfo addCompletedInstallationsItem(InstallationInfo completedInstallationsItem) {
     if (this.completedInstallations == null) {
-      this.completedInstallations = new ArrayList<UpdatesInstallationInfo>();
+      this.completedInstallations = new ArrayList<InstallationInfo>();
     }
     this.completedInstallations.add(completedInstallationsItem);
     return this;
   }
 
    /**
-   * Get completedInstallations
+   * The completed installations.
    * @return completedInstallations
   **/
-  @Schema(description = "")
-  public List<UpdatesInstallationInfo> getCompletedInstallations() {
+  @Schema(description = "The completed installations.")
+  public List<InstallationInfo> getCompletedInstallations() {
     return completedInstallations;
   }
 
-  public void setCompletedInstallations(List<UpdatesInstallationInfo> completedInstallations) {
+  public void setCompletedInstallations(List<InstallationInfo> completedInstallations) {
     this.completedInstallations = completedInstallations;
   }
 
@@ -335,10 +335,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get canSelfRestart
+   * A value indicating whether this instance can self restart.
    * @return canSelfRestart
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance can self restart.")
   public Boolean isCanSelfRestart() {
     return canSelfRestart;
   }
@@ -353,10 +353,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get canSelfUpdate
+   * A value indicating whether this instance can self update.
    * @return canSelfUpdate
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance can self update.")
   public Boolean isCanSelfUpdate() {
     return canSelfUpdate;
   }
@@ -389,10 +389,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get programDataPath
+   * The program data path.
    * @return programDataPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The program data path.")
   public String getProgramDataPath() {
     return programDataPath;
   }
@@ -407,10 +407,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get itemsByNamePath
+   * The items by name path.
    * @return itemsByNamePath
   **/
-  @Schema(description = "")
+  @Schema(description = "The items by name path.")
   public String getItemsByNamePath() {
     return itemsByNamePath;
   }
@@ -425,10 +425,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get cachePath
+   * The cache path.
    * @return cachePath
   **/
-  @Schema(description = "")
+  @Schema(description = "The cache path.")
   public String getCachePath() {
     return cachePath;
   }
@@ -443,10 +443,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get logPath
+   * The log path.
    * @return logPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The log path.")
   public String getLogPath() {
     return logPath;
   }
@@ -461,10 +461,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get internalMetadataPath
+   * The internal metadata path.
    * @return internalMetadataPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The internal metadata path.")
   public String getInternalMetadataPath() {
     return internalMetadataPath;
   }
@@ -479,10 +479,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get transcodingTempPath
+   * The transcoding temporary path.
    * @return transcodingTempPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The transcoding temporary path.")
   public String getTranscodingTempPath() {
     return transcodingTempPath;
   }
@@ -497,10 +497,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get httpServerPortNumber
+   * The HTTP server port number.
    * @return httpServerPortNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The HTTP server port number.")
   public Integer getHttpServerPortNumber() {
     return httpServerPortNumber;
   }
@@ -515,10 +515,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get supportsHttps
+   * A value indicating whether \\[enable HTTPS\\].
    * @return supportsHttps
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[enable HTTPS\\].")
   public Boolean isSupportsHttps() {
     return supportsHttps;
   }
@@ -533,10 +533,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get httpsPortNumber
+   * The HTTPS server port number.
    * @return httpsPortNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The HTTPS server port number.")
   public Integer getHttpsPortNumber() {
     return httpsPortNumber;
   }
@@ -551,10 +551,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get hasUpdateAvailable
+   * A value indicating whether this instance has update available.
    * @return hasUpdateAvailable
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has update available.")
   public Boolean isHasUpdateAvailable() {
     return hasUpdateAvailable;
   }
@@ -569,10 +569,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get supportsAutoRunAtStartup
+   * A value indicating whether \\[supports automatic run at startup\\].
    * @return supportsAutoRunAtStartup
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[supports automatic run at startup\\].")
   public Boolean isSupportsAutoRunAtStartup() {
     return supportsAutoRunAtStartup;
   }
@@ -605,10 +605,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get localAddress
+   * The local address.
    * @return localAddress
   **/
-  @Schema(description = "")
+  @Schema(description = "The local address.")
   public String getLocalAddress() {
     return localAddress;
   }
@@ -649,10 +649,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get wanAddress
+   * The wan address.
    * @return wanAddress
   **/
-  @Schema(description = "")
+  @Schema(description = "The wan address.")
   public String getWanAddress() {
     return wanAddress;
   }
@@ -693,10 +693,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get serverName
+   * The name of the server.
    * @return serverName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the server.")
   public String getServerName() {
     return serverName;
   }
@@ -711,10 +711,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get version
+   * The version.
    * @return version
   **/
-  @Schema(description = "")
+  @Schema(description = "The version.")
   public String getVersion() {
     return version;
   }
@@ -729,10 +729,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get id
+   * The id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The id.")
   public String getId() {
     return id;
   }

@@ -65,6 +65,7 @@ class PluginsPluginInfo(object):
     def name(self):
         """Gets the name of this PluginsPluginInfo.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this PluginsPluginInfo.  # noqa: E501
         :rtype: str
@@ -75,6 +76,7 @@ class PluginsPluginInfo(object):
     def name(self, name):
         """Sets the name of this PluginsPluginInfo.
 
+        The name.  # noqa: E501
 
         :param name: The name of this PluginsPluginInfo.  # noqa: E501
         :type: str
@@ -86,6 +88,7 @@ class PluginsPluginInfo(object):
     def version(self):
         """Gets the version of this PluginsPluginInfo.  # noqa: E501
 
+        The version.  # noqa: E501
 
         :return: The version of this PluginsPluginInfo.  # noqa: E501
         :rtype: str
@@ -96,6 +99,7 @@ class PluginsPluginInfo(object):
     def version(self, version):
         """Sets the version of this PluginsPluginInfo.
 
+        The version.  # noqa: E501
 
         :param version: The version of this PluginsPluginInfo.  # noqa: E501
         :type: str
@@ -107,6 +111,7 @@ class PluginsPluginInfo(object):
     def configuration_file_name(self):
         """Gets the configuration_file_name of this PluginsPluginInfo.  # noqa: E501
 
+        The name of the configuration file.  # noqa: E501
 
         :return: The configuration_file_name of this PluginsPluginInfo.  # noqa: E501
         :rtype: str
@@ -117,6 +122,7 @@ class PluginsPluginInfo(object):
     def configuration_file_name(self, configuration_file_name):
         """Sets the configuration_file_name of this PluginsPluginInfo.
 
+        The name of the configuration file.  # noqa: E501
 
         :param configuration_file_name: The configuration_file_name of this PluginsPluginInfo.  # noqa: E501
         :type: str
@@ -128,6 +134,7 @@ class PluginsPluginInfo(object):
     def description(self):
         """Gets the description of this PluginsPluginInfo.  # noqa: E501
 
+        The description.  # noqa: E501
 
         :return: The description of this PluginsPluginInfo.  # noqa: E501
         :rtype: str
@@ -138,6 +145,7 @@ class PluginsPluginInfo(object):
     def description(self, description):
         """Sets the description of this PluginsPluginInfo.
 
+        The description.  # noqa: E501
 
         :param description: The description of this PluginsPluginInfo.  # noqa: E501
         :type: str
@@ -149,6 +157,7 @@ class PluginsPluginInfo(object):
     def id(self):
         """Gets the id of this PluginsPluginInfo.  # noqa: E501
 
+        The unique id.  # noqa: E501
 
         :return: The id of this PluginsPluginInfo.  # noqa: E501
         :rtype: str
@@ -159,6 +168,7 @@ class PluginsPluginInfo(object):
     def id(self, id):
         """Sets the id of this PluginsPluginInfo.
 
+        The unique id.  # noqa: E501
 
         :param id: The id of this PluginsPluginInfo.  # noqa: E501
         :type: str
@@ -170,6 +180,7 @@ class PluginsPluginInfo(object):
     def image_tag(self):
         """Gets the image_tag of this PluginsPluginInfo.  # noqa: E501
 
+        The image URL.  # noqa: E501
 
         :return: The image_tag of this PluginsPluginInfo.  # noqa: E501
         :rtype: str
@@ -180,6 +191,7 @@ class PluginsPluginInfo(object):
     def image_tag(self, image_tag):
         """Sets the image_tag of this PluginsPluginInfo.
 
+        The image URL.  # noqa: E501
 
         :param image_tag: The image_tag of this PluginsPluginInfo.  # noqa: E501
         :type: str

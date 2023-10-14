@@ -10,6 +10,7 @@ import (
 )
 
 type RemoteSubtitleInfo struct {
+	// Use language instead to return the language specified by the subtitle provider
 	ThreeLetterISOLanguageName string `json:"ThreeLetterISOLanguageName,omitempty"`
 	Id string `json:"Id,omitempty"`
 	ProviderName string `json:"ProviderName,omitempty"`

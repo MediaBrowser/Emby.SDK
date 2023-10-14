@@ -18,11 +18,12 @@ import TranscodingInfo from './TranscodingInfo';
 /**
 * The SessionSessionInfo model module.
 * @module model/SessionSessionInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class SessionSessionInfo {
     /**
     * Constructs a new <code>SessionSessionInfo</code>.
+    * Class SessionInfo  
     * @alias module:model/SessionSessionInfo
     * @class
     */
@@ -133,6 +134,7 @@ export default class SessionSessionInfo {
     */
     'AdditionalUsers' = undefined;
     /**
+    * The remote end point.
     * @member {String} RemoteEndPoint
     */
     'RemoteEndPoint' = undefined;
@@ -141,6 +143,7 @@ export default class SessionSessionInfo {
     */
     'Protocol' = undefined;
     /**
+    * The playable media types.
     * @member {Array.<String>} PlayableMediaTypes
     */
     'PlayableMediaTypes' = undefined;
@@ -157,6 +160,7 @@ export default class SessionSessionInfo {
     */
     'PlaylistLength' = undefined;
     /**
+    * The id.
     * @member {String} Id
     */
     'Id' = undefined;
@@ -165,10 +169,12 @@ export default class SessionSessionInfo {
     */
     'ServerId' = undefined;
     /**
+    * The user id.
     * @member {String} UserId
     */
     'UserId' = undefined;
     /**
+    * The username.
     * @member {String} UserName
     */
     'UserName' = undefined;
@@ -177,14 +183,17 @@ export default class SessionSessionInfo {
     */
     'UserPrimaryImageTag' = undefined;
     /**
+    * The type of the client.
     * @member {String} Client
     */
     'Client' = undefined;
     /**
+    * The last activity date.
     * @member {Date} LastActivityDate
     */
     'LastActivityDate' = undefined;
     /**
+    * The name of the device.
     * @member {String} DeviceName
     */
     'DeviceName' = undefined;
@@ -201,18 +210,22 @@ export default class SessionSessionInfo {
     */
     'InternalDeviceId' = undefined;
     /**
+    * The device id.
     * @member {String} DeviceId
     */
     'DeviceId' = undefined;
     /**
+    * The application version.
     * @member {String} ApplicationVersion
     */
     'ApplicationVersion' = undefined;
     /**
+    * The application icon URL.
     * @member {String} AppIconUrl
     */
     'AppIconUrl' = undefined;
     /**
+    * The supported commands.
     * @member {Array.<String>} SupportedCommands
     */
     'SupportedCommands' = undefined;

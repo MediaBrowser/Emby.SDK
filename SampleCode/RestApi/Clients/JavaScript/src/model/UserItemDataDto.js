@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The UserItemDataDto model module.
 * @module model/UserItemDataDto
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class UserItemDataDto {
     /**
     * Constructs a new <code>UserItemDataDto</code>.
+    * Class UserItemDataDto  
     * @alias module:model/UserItemDataDto
     * @class
     */
@@ -79,46 +80,57 @@ export default class UserItemDataDto {
     }
 
     /**
+    * The rating.
     * @member {Number} Rating
     */
     'Rating' = undefined;
     /**
+    * The played percentage.
     * @member {Number} PlayedPercentage
     */
     'PlayedPercentage' = undefined;
     /**
+    * The unplayed item count.
     * @member {Number} UnplayedItemCount
     */
     'UnplayedItemCount' = undefined;
     /**
+    * The playback position ticks.
     * @member {Number} PlaybackPositionTicks
     */
     'PlaybackPositionTicks' = undefined;
     /**
+    * The play count.
     * @member {Number} PlayCount
     */
     'PlayCount' = undefined;
     /**
+    * A value indicating whether this instance is favorite.
     * @member {Boolean} IsFavorite
     */
     'IsFavorite' = undefined;
     /**
+    * The last played date.
     * @member {Date} LastPlayedDate
     */
     'LastPlayedDate' = undefined;
     /**
+    * A value indicating whether this `MediaBrowser.Model.Dto.UserItemDataDto` is played.
     * @member {Boolean} Played
     */
     'Played' = undefined;
     /**
+    * The key.
     * @member {String} Key
     */
     'Key' = undefined;
     /**
+    * The item identifier.
     * @member {String} ItemId
     */
     'ItemId' = undefined;
     /**
+    * Used only by our Windows app. Not used by Emby Server.
     * @member {String} ServerId
     */
     'ServerId' = undefined;

@@ -60,6 +60,7 @@ class PlayRequest(object):
     def controlling_user_id(self):
         """Gets the controlling_user_id of this PlayRequest.  # noqa: E501
 
+        The controlling user identifier.  # noqa: E501
 
         :return: The controlling_user_id of this PlayRequest.  # noqa: E501
         :rtype: str
@@ -70,6 +71,7 @@ class PlayRequest(object):
     def controlling_user_id(self, controlling_user_id):
         """Sets the controlling_user_id of this PlayRequest.
 
+        The controlling user identifier.  # noqa: E501
 
         :param controlling_user_id: The controlling_user_id of this PlayRequest.  # noqa: E501
         :type: str

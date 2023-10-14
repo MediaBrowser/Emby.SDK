@@ -60,6 +60,7 @@ class BaseItemPerson(object):
     def name(self):
         """Gets the name of this BaseItemPerson.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this BaseItemPerson.  # noqa: E501
         :rtype: str
@@ -70,6 +71,7 @@ class BaseItemPerson(object):
     def name(self, name):
         """Sets the name of this BaseItemPerson.
 
+        The name.  # noqa: E501
 
         :param name: The name of this BaseItemPerson.  # noqa: E501
         :type: str
@@ -81,6 +83,7 @@ class BaseItemPerson(object):
     def id(self):
         """Gets the id of this BaseItemPerson.  # noqa: E501
 
+        The identifier.  # noqa: E501
 
         :return: The id of this BaseItemPerson.  # noqa: E501
         :rtype: str
@@ -91,6 +94,7 @@ class BaseItemPerson(object):
     def id(self, id):
         """Sets the id of this BaseItemPerson.
 
+        The identifier.  # noqa: E501
 
         :param id: The id of this BaseItemPerson.  # noqa: E501
         :type: str
@@ -102,6 +106,7 @@ class BaseItemPerson(object):
     def role(self):
         """Gets the role of this BaseItemPerson.  # noqa: E501
 
+        The role.  # noqa: E501
 
         :return: The role of this BaseItemPerson.  # noqa: E501
         :rtype: str
@@ -112,6 +117,7 @@ class BaseItemPerson(object):
     def role(self, role):
         """Sets the role of this BaseItemPerson.
 
+        The role.  # noqa: E501
 
         :param role: The role of this BaseItemPerson.  # noqa: E501
         :type: str
@@ -144,6 +150,7 @@ class BaseItemPerson(object):
     def primary_image_tag(self):
         """Gets the primary_image_tag of this BaseItemPerson.  # noqa: E501
 
+        The primary image tag.  # noqa: E501
 
         :return: The primary_image_tag of this BaseItemPerson.  # noqa: E501
         :rtype: str
@@ -154,6 +161,7 @@ class BaseItemPerson(object):
     def primary_image_tag(self, primary_image_tag):
         """Sets the primary_image_tag of this BaseItemPerson.
 
+        The primary image tag.  # noqa: E501
 
         :param primary_image_tag: The primary_image_tag of this BaseItemPerson.  # noqa: E501
         :type: str

@@ -15,11 +15,12 @@ import ImageType from './ImageType';
 /**
 * The ImageProviderInfo model module.
 * @module model/ImageProviderInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ImageProviderInfo {
     /**
     * Constructs a new <code>ImageProviderInfo</code>.
+    * Class ImageProviderInfo.  
     * @alias module:model/ImageProviderInfo
     * @class
     */
@@ -53,6 +54,7 @@ export default class ImageProviderInfo {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;

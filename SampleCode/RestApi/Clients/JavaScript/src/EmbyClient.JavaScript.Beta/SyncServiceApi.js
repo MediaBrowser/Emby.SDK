@@ -10,24 +10,24 @@
  */
 
 import ApiClient from "../ApiClient";
-import QueryResultSyncModelSyncJobItem from '../model/QueryResultSyncModelSyncJobItem';
-import QueryResultSyncSyncJob from '../model/QueryResultSyncSyncJob';
-import SyncModelSyncDataRequest from '../model/SyncModelSyncDataRequest';
-import SyncModelSyncDataResponse from '../model/SyncModelSyncDataResponse';
-import SyncModelSyncDialogOptions from '../model/SyncModelSyncDialogOptions';
-import SyncModelSyncJobCreationResult from '../model/SyncModelSyncJobCreationResult';
-import SyncModelSyncJobRequest from '../model/SyncModelSyncJobRequest';
-import SyncModelSyncedItem from '../model/SyncModelSyncedItem';
-import SyncModelSyncedItemProgress from '../model/SyncModelSyncedItemProgress';
-import SyncSyncCategory from '../model/SyncSyncCategory';
-import SyncSyncJob from '../model/SyncSyncJob';
-import SyncSyncTarget from '../model/SyncSyncTarget';
-import UsersUserAction from '../model/UsersUserAction';
+import QueryResultSyncJob from '../model/QueryResultSyncJob';
+import QueryResultSyncJobItem from '../model/QueryResultSyncJobItem';
+import SyncCategory from '../model/SyncCategory';
+import SyncDataRequest from '../model/SyncDataRequest';
+import SyncDataResponse from '../model/SyncDataResponse';
+import SyncDialogOptions from '../model/SyncDialogOptions';
+import SyncJob from '../model/SyncJob';
+import SyncJobCreationResult from '../model/SyncJobCreationResult';
+import SyncJobRequest from '../model/SyncJobRequest';
+import SyncTarget from '../model/SyncTarget';
+import SyncedItem from '../model/SyncedItem';
+import SyncedItemProgress from '../model/SyncedItemProgress';
+import UserAction from '../model/UserAction';
 
 /**
 * SyncService service.
 * @module EmbyClient.JavaScript.Beta/SyncServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class SyncServiceApi {
 
@@ -160,7 +160,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the getSyncItemsReady operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncItemsReadyCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SyncModelSyncedItem>} data The data returned by the service call.
+     * @param {Array.<module:model/SyncedItem>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -168,7 +168,7 @@ export default class SyncServiceApi {
      * Gets ready to download sync items.
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncItemsReadyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SyncModelSyncedItem>}
+     * data is of type: {@link Array.<module:model/SyncedItem>}
      */
     getSyncItemsReady() {
       let postBody = null;
@@ -186,7 +186,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [SyncModelSyncedItem];
+      let returnType = [SyncedItem];
 
       return this.apiClient.callApi(
         '/Sync/Items/Ready', 'GET',
@@ -198,7 +198,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the getSyncJobitems operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncJobitemsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultSyncModelSyncJobItem} data The data returned by the service call.
+     * @param {module:model/QueryResultSyncJobItem} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -206,7 +206,7 @@ export default class SyncServiceApi {
      * Gets sync job items.
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncJobitemsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultSyncModelSyncJobItem}
+     * data is of type: {@link module:model/QueryResultSyncJobItem}
      */
     getSyncJobitems() {
       let postBody = null;
@@ -223,7 +223,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultSyncModelSyncJobItem;
+      let returnType = QueryResultSyncJobItem;
 
       return this.apiClient.callApi(
         '/Sync/JobItems', 'GET',
@@ -310,7 +310,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the getSyncJobs operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncJobsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultSyncSyncJob} data The data returned by the service call.
+     * @param {module:model/QueryResultSyncJob} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -318,7 +318,7 @@ export default class SyncServiceApi {
      * Gets sync jobs.
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncJobsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultSyncSyncJob}
+     * data is of type: {@link module:model/QueryResultSyncJob}
      */
     getSyncJobs() {
       let postBody = null;
@@ -335,7 +335,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultSyncSyncJob;
+      let returnType = QueryResultSyncJob;
 
       return this.apiClient.callApi(
         '/Sync/Jobs', 'GET',
@@ -347,7 +347,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the getSyncJobsById operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncJobsByIdCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SyncSyncJob} data The data returned by the service call.
+     * @param {module:model/SyncJob} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -355,7 +355,7 @@ export default class SyncServiceApi {
      * Gets a sync job.
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncJobsByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SyncSyncJob}
+     * data is of type: {@link module:model/SyncJob}
      */
     getSyncJobsById() {
       let postBody = null;
@@ -373,7 +373,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = SyncSyncJob;
+      let returnType = SyncJob;
 
       return this.apiClient.callApi(
         '/Sync/Jobs/{Id}', 'GET',
@@ -385,7 +385,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the getSyncOptions operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncOptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SyncModelSyncDialogOptions} data The data returned by the service call.
+     * @param {module:model/SyncDialogOptions} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -394,7 +394,7 @@ export default class SyncServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncOptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SyncModelSyncDialogOptions}
+     * data is of type: {@link module:model/SyncDialogOptions}
      */
     getSyncOptions() {
       opts = opts || {};
@@ -417,7 +417,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = SyncModelSyncDialogOptions;
+      let returnType = SyncDialogOptions;
 
       return this.apiClient.callApi(
         '/Sync/Options', 'GET',
@@ -429,7 +429,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the getSyncTargets operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncTargetsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SyncSyncTarget>} data The data returned by the service call.
+     * @param {Array.<module:model/SyncTarget>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -437,7 +437,7 @@ export default class SyncServiceApi {
      * Gets a list of available sync targets.
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~getSyncTargetsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SyncSyncTarget>}
+     * data is of type: {@link Array.<module:model/SyncTarget>}
      */
     getSyncTargets() {
       let postBody = null;
@@ -455,7 +455,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [SyncSyncTarget];
+      let returnType = [SyncTarget];
 
       return this.apiClient.callApi(
         '/Sync/Targets', 'GET',
@@ -544,7 +544,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the postSyncData operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~postSyncDataCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SyncModelSyncDataResponse} data The data returned by the service call.
+     * @param {module:model/SyncDataResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -552,7 +552,7 @@ export default class SyncServiceApi {
      * Syncs data between device and server
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~postSyncDataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SyncModelSyncDataResponse}
+     * data is of type: {@link module:model/SyncDataResponse}
      */
     postSyncData() {
       let postBody = body;
@@ -569,7 +569,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = SyncModelSyncDataResponse;
+      let returnType = SyncDataResponse;
 
       return this.apiClient.callApi(
         '/Sync/Data', 'POST',
@@ -805,7 +805,7 @@ export default class SyncServiceApi {
      * Callback function to receive the result of the postSyncJobs operation.
      * @callback module:EmbyClient.JavaScript.Beta/SyncServiceApi~postSyncJobsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SyncModelSyncJobCreationResult} data The data returned by the service call.
+     * @param {module:model/SyncJobCreationResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -813,7 +813,7 @@ export default class SyncServiceApi {
      * Gets sync jobs.
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SyncServiceApi~postSyncJobsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SyncModelSyncJobCreationResult}
+     * data is of type: {@link module:model/SyncJobCreationResult}
      */
     postSyncJobs() {
       let postBody = body;
@@ -830,7 +830,7 @@ export default class SyncServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = SyncModelSyncJobCreationResult;
+      let returnType = SyncJobCreationResult;
 
       return this.apiClient.callApi(
         '/Sync/Jobs', 'POST',

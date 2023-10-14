@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// LiveTvChannelType : Enum ChannelType  
 type LiveTvChannelType string
 
 // List of LiveTv.ChannelType

@@ -156,7 +156,7 @@ open class SyncServiceAPI {
      - parameter targetId: (query) TargetId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncItemsReady(targetId: String, completion: @escaping ((_ data: [SyncModelSyncedItem]?,_ error: Error?) -> Void)) {
+    open class func getSyncItemsReady(targetId: String, completion: @escaping ((_ data: [SyncedItem]?,_ error: Error?) -> Void)) {
         getSyncItemsReadyWithRequestBuilder(targetId: targetId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1248,9 +1248,9 @@ open class SyncServiceAPI {
 } ]}]
      - parameter targetId: (query) TargetId 
 
-     - returns: RequestBuilder<[SyncModelSyncedItem]> 
+     - returns: RequestBuilder<[SyncedItem]> 
      */
-    open class func getSyncItemsReadyWithRequestBuilder(targetId: String) -> RequestBuilder<[SyncModelSyncedItem]> {
+    open class func getSyncItemsReadyWithRequestBuilder(targetId: String) -> RequestBuilder<[SyncedItem]> {
         let path = "/Sync/Items/Ready"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -1260,7 +1260,7 @@ open class SyncServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[SyncModelSyncedItem]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[SyncedItem]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1269,7 +1269,7 @@ open class SyncServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncJobitems(completion: @escaping ((_ data: QueryResultSyncModelSyncJobItem?,_ error: Error?) -> Void)) {
+    open class func getSyncJobitems(completion: @escaping ((_ data: QueryResultSyncJobItem?,_ error: Error?) -> Void)) {
         getSyncJobitemsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1645,16 +1645,16 @@ open class SyncServiceAPI {
   } ]
 }}]
 
-     - returns: RequestBuilder<QueryResultSyncModelSyncJobItem> 
+     - returns: RequestBuilder<QueryResultSyncJobItem> 
      */
-    open class func getSyncJobitemsWithRequestBuilder() -> RequestBuilder<QueryResultSyncModelSyncJobItem> {
+    open class func getSyncJobitemsWithRequestBuilder() -> RequestBuilder<QueryResultSyncJobItem> {
         let path = "/Sync/JobItems"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<QueryResultSyncModelSyncJobItem>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultSyncJobItem>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1758,7 +1758,7 @@ open class SyncServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncJobs(completion: @escaping ((_ data: QueryResultSyncSyncJob?,_ error: Error?) -> Void)) {
+    open class func getSyncJobs(completion: @escaping ((_ data: QueryResultSyncJob?,_ error: Error?) -> Void)) {
         getSyncJobsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1832,16 +1832,16 @@ open class SyncServiceAPI {
   } ]
 }}]
 
-     - returns: RequestBuilder<QueryResultSyncSyncJob> 
+     - returns: RequestBuilder<QueryResultSyncJob> 
      */
-    open class func getSyncJobsWithRequestBuilder() -> RequestBuilder<QueryResultSyncSyncJob> {
+    open class func getSyncJobsWithRequestBuilder() -> RequestBuilder<QueryResultSyncJob> {
         let path = "/Sync/Jobs"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<QueryResultSyncSyncJob>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultSyncJob>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1851,7 +1851,7 @@ open class SyncServiceAPI {
      - parameter _id: (path) Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncJobsById(_id: String, completion: @escaping ((_ data: SyncSyncJob?,_ error: Error?) -> Void)) {
+    open class func getSyncJobsById(_id: String, completion: @escaping ((_ data: SyncJob?,_ error: Error?) -> Void)) {
         getSyncJobsByIdWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1897,9 +1897,9 @@ open class SyncServiceAPI {
 }}]
      - parameter _id: (path) Id 
 
-     - returns: RequestBuilder<SyncSyncJob> 
+     - returns: RequestBuilder<SyncJob> 
      */
-    open class func getSyncJobsByIdWithRequestBuilder(_id: String) -> RequestBuilder<SyncSyncJob> {
+    open class func getSyncJobsByIdWithRequestBuilder(_id: String) -> RequestBuilder<SyncJob> {
         var path = "/Sync/Jobs/{Id}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1909,7 +1909,7 @@ open class SyncServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SyncSyncJob>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncJob>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1923,7 +1923,7 @@ open class SyncServiceAPI {
      - parameter category: (query) Category (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncOptions(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncSyncCategory? = nil, completion: @escaping ((_ data: SyncModelSyncDialogOptions?,_ error: Error?) -> Void)) {
+    open class func getSyncOptions(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncCategory? = nil, completion: @escaping ((_ data: SyncDialogOptions?,_ error: Error?) -> Void)) {
         getSyncOptionsWithRequestBuilder(userId: userId, itemIds: itemIds, parentId: parentId, targetId: targetId, category: category).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1982,9 +1982,9 @@ open class SyncServiceAPI {
      - parameter targetId: (query) TargetId (optional)
      - parameter category: (query) Category (optional)
 
-     - returns: RequestBuilder<SyncModelSyncDialogOptions> 
+     - returns: RequestBuilder<SyncDialogOptions> 
      */
-    open class func getSyncOptionsWithRequestBuilder(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncSyncCategory? = nil) -> RequestBuilder<SyncModelSyncDialogOptions> {
+    open class func getSyncOptionsWithRequestBuilder(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncCategory? = nil) -> RequestBuilder<SyncDialogOptions> {
         let path = "/Sync/Options"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -1998,7 +1998,7 @@ open class SyncServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<SyncModelSyncDialogOptions>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncDialogOptions>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -2008,7 +2008,7 @@ open class SyncServiceAPI {
      - parameter userId: (query) UserId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncTargets(userId: String, completion: @escaping ((_ data: [SyncSyncTarget]?,_ error: Error?) -> Void)) {
+    open class func getSyncTargets(userId: String, completion: @escaping ((_ data: [SyncTarget]?,_ error: Error?) -> Void)) {
         getSyncTargetsWithRequestBuilder(userId: userId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2034,9 +2034,9 @@ open class SyncServiceAPI {
 } ]}]
      - parameter userId: (query) UserId 
 
-     - returns: RequestBuilder<[SyncSyncTarget]> 
+     - returns: RequestBuilder<[SyncTarget]> 
      */
-    open class func getSyncTargetsWithRequestBuilder(userId: String) -> RequestBuilder<[SyncSyncTarget]> {
+    open class func getSyncTargetsWithRequestBuilder(userId: String) -> RequestBuilder<[SyncTarget]> {
         let path = "/Sync/Targets"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -2046,7 +2046,7 @@ open class SyncServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[SyncSyncTarget]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[SyncTarget]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -2057,7 +2057,7 @@ open class SyncServiceAPI {
      - parameter itemId: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncByItemidStatus(body: SyncModelSyncedItemProgress, itemId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSyncByItemidStatus(body: SyncedItemProgress, itemId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSyncByItemidStatusWithRequestBuilder(body: body, itemId: itemId).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2083,7 +2083,7 @@ open class SyncServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSyncByItemidStatusWithRequestBuilder(body: SyncModelSyncedItemProgress, itemId: String) -> RequestBuilder<Void> {
+    open class func postSyncByItemidStatusWithRequestBuilder(body: SyncedItemProgress, itemId: String) -> RequestBuilder<Void> {
         var path = "/Sync/{ItemId}/Status"
         let itemIdPreEscape = "\(itemId)"
         let itemIdPostEscape = itemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2153,7 +2153,7 @@ open class SyncServiceAPI {
      - parameter body: (body) SyncDataRequest:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncData(body: SyncModelSyncDataRequest, completion: @escaping ((_ data: SyncModelSyncDataResponse?,_ error: Error?) -> Void)) {
+    open class func postSyncData(body: SyncDataRequest, completion: @escaping ((_ data: SyncDataResponse?,_ error: Error?) -> Void)) {
         postSyncDataWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2175,16 +2175,16 @@ open class SyncServiceAPI {
 }}]
      - parameter body: (body) SyncDataRequest:  
 
-     - returns: RequestBuilder<SyncModelSyncDataResponse> 
+     - returns: RequestBuilder<SyncDataResponse> 
      */
-    open class func postSyncDataWithRequestBuilder(body: SyncModelSyncDataRequest) -> RequestBuilder<SyncModelSyncDataResponse> {
+    open class func postSyncDataWithRequestBuilder(body: SyncDataRequest) -> RequestBuilder<SyncDataResponse> {
         let path = "/Sync/Data"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SyncModelSyncDataResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncDataResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -2464,7 +2464,7 @@ open class SyncServiceAPI {
      - parameter body: (body) SyncJobRequest:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncJobs(body: SyncModelSyncJobRequest, completion: @escaping ((_ data: SyncModelSyncJobCreationResult?,_ error: Error?) -> Void)) {
+    open class func postSyncJobs(body: SyncJobRequest, completion: @escaping ((_ data: SyncJobCreationResult?,_ error: Error?) -> Void)) {
         postSyncJobsWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2867,16 +2867,16 @@ open class SyncServiceAPI {
 }}]
      - parameter body: (body) SyncJobRequest:  
 
-     - returns: RequestBuilder<SyncModelSyncJobCreationResult> 
+     - returns: RequestBuilder<SyncJobCreationResult> 
      */
-    open class func postSyncJobsWithRequestBuilder(body: SyncModelSyncJobRequest) -> RequestBuilder<SyncModelSyncJobCreationResult> {
+    open class func postSyncJobsWithRequestBuilder(body: SyncJobRequest) -> RequestBuilder<SyncJobCreationResult> {
         let path = "/Sync/Jobs"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SyncModelSyncJobCreationResult>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncJobCreationResult>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -2887,7 +2887,7 @@ open class SyncServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncJobsById(body: SyncSyncJob, _id: Int64, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSyncJobsById(body: SyncJob, _id: Int64, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSyncJobsByIdWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2913,7 +2913,7 @@ open class SyncServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSyncJobsByIdWithRequestBuilder(body: SyncSyncJob, _id: Int64) -> RequestBuilder<Void> {
+    open class func postSyncJobsByIdWithRequestBuilder(body: SyncJob, _id: Int64) -> RequestBuilder<Void> {
         var path = "/Sync/Jobs/{Id}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2978,7 +2978,7 @@ open class SyncServiceAPI {
      - parameter body: (body) List&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncOfflineactions(body: [UsersUserAction], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSyncOfflineactions(body: [UserAction], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSyncOfflineactionsWithRequestBuilder(body: body).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -3003,7 +3003,7 @@ open class SyncServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSyncOfflineactionsWithRequestBuilder(body: [UsersUserAction]) -> RequestBuilder<Void> {
+    open class func postSyncOfflineactionsWithRequestBuilder(body: [UserAction]) -> RequestBuilder<Void> {
         let path = "/Sync/OfflineActions"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

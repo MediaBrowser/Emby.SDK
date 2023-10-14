@@ -19,11 +19,12 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlaybackStartInfo model module.
 * @module model/PlaybackStartInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class PlaybackStartInfo {
     /**
     * Constructs a new <code>PlaybackStartInfo</code>.
+    * Class PlaybackStartInfo.  
     * @alias module:model/PlaybackStartInfo
     * @class
     */
@@ -132,6 +133,7 @@ export default class PlaybackStartInfo {
     }
 
     /**
+    * A value indicating whether this instance can seek.
     * @member {Boolean} CanSeek
     */
     'CanSeek' = undefined;
@@ -148,26 +150,32 @@ export default class PlaybackStartInfo {
     */
     'PlaylistItemId' = undefined;
     /**
+    * The item identifier.
     * @member {String} ItemId
     */
     'ItemId' = undefined;
     /**
+    * The session id.
     * @member {String} SessionId
     */
     'SessionId' = undefined;
     /**
+    * The media version identifier.
     * @member {String} MediaSourceId
     */
     'MediaSourceId' = undefined;
     /**
+    * The index of the audio stream.
     * @member {Number} AudioStreamIndex
     */
     'AudioStreamIndex' = undefined;
     /**
+    * The index of the subtitle stream.
     * @member {Number} SubtitleStreamIndex
     */
     'SubtitleStreamIndex' = undefined;
     /**
+    * A value indicating whether this instance is paused.
     * @member {Boolean} IsPaused
     */
     'IsPaused' = undefined;
@@ -180,10 +188,12 @@ export default class PlaybackStartInfo {
     */
     'PlaylistLength' = undefined;
     /**
+    * A value indicating whether this instance is muted.
     * @member {Boolean} IsMuted
     */
     'IsMuted' = undefined;
     /**
+    * The position ticks.
     * @member {Number} PositionTicks
     */
     'PositionTicks' = undefined;
@@ -196,6 +206,7 @@ export default class PlaybackStartInfo {
     */
     'PlaybackStartTimeTicks' = undefined;
     /**
+    * The volume level.
     * @member {Number} VolumeLevel
     */
     'VolumeLevel' = undefined;
@@ -216,10 +227,12 @@ export default class PlaybackStartInfo {
     */
     'PlayMethod' = undefined;
     /**
+    * The live stream identifier.
     * @member {String} LiveStreamId
     */
     'LiveStreamId' = undefined;
     /**
+    * The play session identifier.
     * @member {String} PlaySessionId
     */
     'PlaySessionId' = undefined;

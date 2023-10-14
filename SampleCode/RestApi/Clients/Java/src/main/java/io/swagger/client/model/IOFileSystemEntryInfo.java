@@ -16,9 +16,9 @@ import io.swagger.client.model.IOFileSystemEntryType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * IOFileSystemEntryInfo
+ * Class FileSystemEntryInfo  
  */
-
+@Schema(description = "Class FileSystemEntryInfo  ")
 
 public class IOFileSystemEntryInfo {
   @SerializedName("Name")
@@ -36,10 +36,10 @@ public class IOFileSystemEntryInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -54,10 +54,10 @@ public class IOFileSystemEntryInfo {
   }
 
    /**
-   * Get path
+   * The path.
    * @return path
   **/
-  @Schema(description = "")
+  @Schema(description = "The path.")
   public String getPath() {
     return path;
   }

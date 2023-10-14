@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The NameIdPair model module.
 * @module model/NameIdPair
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class NameIdPair {
     /**
@@ -52,10 +52,12 @@ export default class NameIdPair {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The identifier.
     * @member {String} Id
     */
     'Id' = undefined;

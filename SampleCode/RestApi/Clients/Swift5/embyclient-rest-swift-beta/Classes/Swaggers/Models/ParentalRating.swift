@@ -8,10 +8,13 @@
 import Foundation
 
 
+/** Class ParentalRating   */
 
 public struct ParentalRating: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The value. */
     public var value: Int?
 
     public init(name: String? = nil, value: Int? = nil) {

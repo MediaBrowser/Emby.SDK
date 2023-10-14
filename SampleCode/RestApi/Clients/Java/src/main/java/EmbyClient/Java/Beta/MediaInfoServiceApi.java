@@ -19,10 +19,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.MediaInfoLiveStreamRequest;
-import io.swagger.client.model.MediaInfoLiveStreamResponse;
-import io.swagger.client.model.MediaInfoPlaybackInfoRequest;
-import io.swagger.client.model.MediaInfoPlaybackInfoResponse;
+import io.swagger.client.model.LiveStreamRequest;
+import io.swagger.client.model.LiveStreamResponse;
+import io.swagger.client.model.PlaybackInfoRequest;
+import io.swagger.client.model.PlaybackInfoResponse;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -127,11 +127,11 @@ public class MediaInfoServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param userId User Id (required)
-     * @return MediaInfoPlaybackInfoResponse
+     * @return PlaybackInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public MediaInfoPlaybackInfoResponse getItemsByIdPlaybackinfo(String id, String userId) throws ApiException {
-        ApiResponse<MediaInfoPlaybackInfoResponse> resp = getItemsByIdPlaybackinfoWithHttpInfo(id, userId);
+    public PlaybackInfoResponse getItemsByIdPlaybackinfo(String id, String userId) throws ApiException {
+        ApiResponse<PlaybackInfoResponse> resp = getItemsByIdPlaybackinfoWithHttpInfo(id, userId);
         return resp.getData();
     }
 
@@ -140,12 +140,12 @@ public class MediaInfoServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param userId User Id (required)
-     * @return ApiResponse&lt;MediaInfoPlaybackInfoResponse&gt;
+     * @return ApiResponse&lt;PlaybackInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<MediaInfoPlaybackInfoResponse> getItemsByIdPlaybackinfoWithHttpInfo(String id, String userId) throws ApiException {
+    public ApiResponse<PlaybackInfoResponse> getItemsByIdPlaybackinfoWithHttpInfo(String id, String userId) throws ApiException {
         com.squareup.okhttp.Call call = getItemsByIdPlaybackinfoValidateBeforeCall(id, userId, null, null);
-        Type localVarReturnType = new TypeToken<MediaInfoPlaybackInfoResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PlaybackInfoResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -158,7 +158,7 @@ public class MediaInfoServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdPlaybackinfoAsync(String id, String userId, final ApiCallback<MediaInfoPlaybackInfoResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdPlaybackinfoAsync(String id, String userId, final ApiCallback<PlaybackInfoResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -180,7 +180,7 @@ public class MediaInfoServiceApi {
         }
 
         com.squareup.okhttp.Call call = getItemsByIdPlaybackinfoValidateBeforeCall(id, userId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<MediaInfoPlaybackInfoResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PlaybackInfoResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -315,7 +315,7 @@ public class MediaInfoServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdPlaybackinfoCall(MediaInfoPlaybackInfoRequest body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdPlaybackinfoCall(PlaybackInfoRequest body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -358,7 +358,7 @@ public class MediaInfoServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsByIdPlaybackinfoValidateBeforeCall(MediaInfoPlaybackInfoRequest body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsByIdPlaybackinfoValidateBeforeCall(PlaybackInfoRequest body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsByIdPlaybackinfo(Async)");
@@ -382,11 +382,11 @@ public class MediaInfoServiceApi {
      * Requires authentication as user
      * @param body PlaybackInfoRequest:  (required)
      * @param id  (required)
-     * @return MediaInfoPlaybackInfoResponse
+     * @return PlaybackInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public MediaInfoPlaybackInfoResponse postItemsByIdPlaybackinfo(MediaInfoPlaybackInfoRequest body, String id) throws ApiException {
-        ApiResponse<MediaInfoPlaybackInfoResponse> resp = postItemsByIdPlaybackinfoWithHttpInfo(body, id);
+    public PlaybackInfoResponse postItemsByIdPlaybackinfo(PlaybackInfoRequest body, String id) throws ApiException {
+        ApiResponse<PlaybackInfoResponse> resp = postItemsByIdPlaybackinfoWithHttpInfo(body, id);
         return resp.getData();
     }
 
@@ -395,12 +395,12 @@ public class MediaInfoServiceApi {
      * Requires authentication as user
      * @param body PlaybackInfoRequest:  (required)
      * @param id  (required)
-     * @return ApiResponse&lt;MediaInfoPlaybackInfoResponse&gt;
+     * @return ApiResponse&lt;PlaybackInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<MediaInfoPlaybackInfoResponse> postItemsByIdPlaybackinfoWithHttpInfo(MediaInfoPlaybackInfoRequest body, String id) throws ApiException {
+    public ApiResponse<PlaybackInfoResponse> postItemsByIdPlaybackinfoWithHttpInfo(PlaybackInfoRequest body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postItemsByIdPlaybackinfoValidateBeforeCall(body, id, null, null);
-        Type localVarReturnType = new TypeToken<MediaInfoPlaybackInfoResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PlaybackInfoResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -413,7 +413,7 @@ public class MediaInfoServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdPlaybackinfoAsync(MediaInfoPlaybackInfoRequest body, String id, final ApiCallback<MediaInfoPlaybackInfoResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdPlaybackinfoAsync(PlaybackInfoRequest body, String id, final ApiCallback<PlaybackInfoResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -435,7 +435,7 @@ public class MediaInfoServiceApi {
         }
 
         com.squareup.okhttp.Call call = postItemsByIdPlaybackinfoValidateBeforeCall(body, id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<MediaInfoPlaybackInfoResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PlaybackInfoResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -691,7 +691,7 @@ public class MediaInfoServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postLivestreamsOpenCall(MediaInfoLiveStreamRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postLivestreamsOpenCall(LiveStreamRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -733,7 +733,7 @@ public class MediaInfoServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postLivestreamsOpenValidateBeforeCall(MediaInfoLiveStreamRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postLivestreamsOpenValidateBeforeCall(LiveStreamRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postLivestreamsOpen(Async)");
@@ -752,11 +752,11 @@ public class MediaInfoServiceApi {
      * Opens a media source
      * Requires authentication as user
      * @param body LiveStreamRequest:  (required)
-     * @return MediaInfoLiveStreamResponse
+     * @return LiveStreamResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public MediaInfoLiveStreamResponse postLivestreamsOpen(MediaInfoLiveStreamRequest body) throws ApiException {
-        ApiResponse<MediaInfoLiveStreamResponse> resp = postLivestreamsOpenWithHttpInfo(body);
+    public LiveStreamResponse postLivestreamsOpen(LiveStreamRequest body) throws ApiException {
+        ApiResponse<LiveStreamResponse> resp = postLivestreamsOpenWithHttpInfo(body);
         return resp.getData();
     }
 
@@ -764,12 +764,12 @@ public class MediaInfoServiceApi {
      * Opens a media source
      * Requires authentication as user
      * @param body LiveStreamRequest:  (required)
-     * @return ApiResponse&lt;MediaInfoLiveStreamResponse&gt;
+     * @return ApiResponse&lt;LiveStreamResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<MediaInfoLiveStreamResponse> postLivestreamsOpenWithHttpInfo(MediaInfoLiveStreamRequest body) throws ApiException {
+    public ApiResponse<LiveStreamResponse> postLivestreamsOpenWithHttpInfo(LiveStreamRequest body) throws ApiException {
         com.squareup.okhttp.Call call = postLivestreamsOpenValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<MediaInfoLiveStreamResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<LiveStreamResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -781,7 +781,7 @@ public class MediaInfoServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivestreamsOpenAsync(MediaInfoLiveStreamRequest body, final ApiCallback<MediaInfoLiveStreamResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivestreamsOpenAsync(LiveStreamRequest body, final ApiCallback<LiveStreamResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -803,7 +803,7 @@ public class MediaInfoServiceApi {
         }
 
         com.squareup.okhttp.Call call = postLivestreamsOpenValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<MediaInfoLiveStreamResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<LiveStreamResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

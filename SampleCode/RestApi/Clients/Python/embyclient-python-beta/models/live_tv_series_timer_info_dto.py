@@ -215,6 +215,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def record_any_time(self):
         """Gets the record_any_time of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        A value indicating whether \\[record any time\\].  # noqa: E501
 
         :return: The record_any_time of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: bool
@@ -225,6 +226,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def record_any_time(self, record_any_time):
         """Sets the record_any_time of this LiveTvSeriesTimerInfoDto.
 
+        A value indicating whether \\[record any time\\].  # noqa: E501
 
         :param record_any_time: The record_any_time of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: bool
@@ -257,6 +259,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def record_any_channel(self):
         """Gets the record_any_channel of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        A value indicating whether \\[record any channel\\].  # noqa: E501
 
         :return: The record_any_channel of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: bool
@@ -267,6 +270,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def record_any_channel(self, record_any_channel):
         """Sets the record_any_channel of this LiveTvSeriesTimerInfoDto.
 
+        A value indicating whether \\[record any channel\\].  # noqa: E501
 
         :param record_any_channel: The record_any_channel of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: bool
@@ -320,6 +324,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def record_new_only(self):
         """Gets the record_new_only of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        A value indicating whether \\[record new only\\].  # noqa: E501
 
         :return: The record_new_only of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: bool
@@ -330,6 +335,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def record_new_only(self, record_new_only):
         """Sets the record_new_only of this LiveTvSeriesTimerInfoDto.
 
+        A value indicating whether \\[record new only\\].  # noqa: E501
 
         :param record_new_only: The record_new_only of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: bool
@@ -362,6 +368,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def days(self):
         """Gets the days of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The days.  # noqa: E501
 
         :return: The days of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: list[DayOfWeek]
@@ -372,6 +379,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def days(self, days):
         """Sets the days of this LiveTvSeriesTimerInfoDto.
 
+        The days.  # noqa: E501
 
         :param days: The days of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: list[DayOfWeek]
@@ -383,6 +391,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def image_tags(self):
         """Gets the image_tags of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The image tags.  # noqa: E501
 
         :return: The image_tags of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: dict(str, str)
@@ -393,6 +402,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def image_tags(self, image_tags):
         """Sets the image_tags of this LiveTvSeriesTimerInfoDto.
 
+        The image tags.  # noqa: E501
 
         :param image_tags: The image_tags of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: dict(str, str)
@@ -404,6 +414,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_thumb_item_id(self):
         """Gets the parent_thumb_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The parent thumb item id.  # noqa: E501
 
         :return: The parent_thumb_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -414,6 +425,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_thumb_item_id(self, parent_thumb_item_id):
         """Sets the parent_thumb_item_id of this LiveTvSeriesTimerInfoDto.
 
+        The parent thumb item id.  # noqa: E501
 
         :param parent_thumb_item_id: The parent_thumb_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -425,6 +437,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_thumb_image_tag(self):
         """Gets the parent_thumb_image_tag of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The parent thumb image tag.  # noqa: E501
 
         :return: The parent_thumb_image_tag of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -435,6 +448,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_thumb_image_tag(self, parent_thumb_image_tag):
         """Sets the parent_thumb_image_tag of this LiveTvSeriesTimerInfoDto.
 
+        The parent thumb image tag.  # noqa: E501
 
         :param parent_thumb_image_tag: The parent_thumb_image_tag of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -446,6 +460,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_primary_image_item_id(self):
         """Gets the parent_primary_image_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The parent primary image item identifier.  # noqa: E501
 
         :return: The parent_primary_image_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -456,6 +471,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_primary_image_item_id(self, parent_primary_image_item_id):
         """Sets the parent_primary_image_item_id of this LiveTvSeriesTimerInfoDto.
 
+        The parent primary image item identifier.  # noqa: E501
 
         :param parent_primary_image_item_id: The parent_primary_image_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -467,6 +483,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_primary_image_tag(self):
         """Gets the parent_primary_image_tag of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The parent primary image tag.  # noqa: E501
 
         :return: The parent_primary_image_tag of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -477,6 +494,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_primary_image_tag(self, parent_primary_image_tag):
         """Sets the parent_primary_image_tag of this LiveTvSeriesTimerInfoDto.
 
+        The parent primary image tag.  # noqa: E501
 
         :param parent_primary_image_tag: The parent_primary_image_tag of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -551,6 +569,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def id(self):
         """Gets the id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        Id of the recording.  # noqa: E501
 
         :return: The id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -561,6 +580,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def id(self, id):
         """Sets the id of this LiveTvSeriesTimerInfoDto.
 
+        Id of the recording.  # noqa: E501
 
         :param id: The id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -593,6 +613,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def server_id(self):
         """Gets the server_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The server identifier.  # noqa: E501
 
         :return: The server_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -603,6 +624,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def server_id(self, server_id):
         """Sets the server_id of this LiveTvSeriesTimerInfoDto.
 
+        The server identifier.  # noqa: E501
 
         :param server_id: The server_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -614,6 +636,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def channel_id(self):
         """Gets the channel_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        ChannelId of the recording.  # noqa: E501
 
         :return: The channel_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -624,6 +647,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def channel_id(self, channel_id):
         """Sets the channel_id of this LiveTvSeriesTimerInfoDto.
 
+        ChannelId of the recording.  # noqa: E501
 
         :param channel_id: The channel_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -635,6 +659,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def channel_name(self):
         """Gets the channel_name of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        ChannelName of the recording.  # noqa: E501
 
         :return: The channel_name of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -645,6 +670,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def channel_name(self, channel_name):
         """Sets the channel_name of this LiveTvSeriesTimerInfoDto.
 
+        ChannelName of the recording.  # noqa: E501
 
         :param channel_name: The channel_name of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -698,6 +724,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def program_id(self):
         """Gets the program_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The program identifier.  # noqa: E501
 
         :return: The program_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -708,6 +735,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def program_id(self, program_id):
         """Sets the program_id of this LiveTvSeriesTimerInfoDto.
 
+        The program identifier.  # noqa: E501
 
         :param program_id: The program_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -719,6 +747,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def name(self):
         """Gets the name of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        Name of the recording.  # noqa: E501
 
         :return: The name of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -729,6 +758,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def name(self, name):
         """Sets the name of this LiveTvSeriesTimerInfoDto.
 
+        Name of the recording.  # noqa: E501
 
         :param name: The name of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -740,6 +770,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def overview(self):
         """Gets the overview of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        Description of the recording.  # noqa: E501
 
         :return: The overview of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -750,6 +781,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def overview(self, overview):
         """Sets the overview of this LiveTvSeriesTimerInfoDto.
 
+        Description of the recording.  # noqa: E501
 
         :param overview: The overview of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -761,6 +793,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def start_date(self):
         """Gets the start_date of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :return: The start_date of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: datetime
@@ -771,6 +804,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def start_date(self, start_date):
         """Sets the start_date of this LiveTvSeriesTimerInfoDto.
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :param start_date: The start_date of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: datetime
@@ -782,6 +816,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def end_date(self):
         """Gets the end_date of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The end date of the recording, in UTC.  # noqa: E501
 
         :return: The end_date of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: datetime
@@ -792,6 +827,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def end_date(self, end_date):
         """Sets the end_date of this LiveTvSeriesTimerInfoDto.
 
+        The end date of the recording, in UTC.  # noqa: E501
 
         :param end_date: The end_date of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: datetime
@@ -803,6 +839,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def priority(self):
         """Gets the priority of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The priority.  # noqa: E501
 
         :return: The priority of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: int
@@ -813,6 +850,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def priority(self, priority):
         """Sets the priority of this LiveTvSeriesTimerInfoDto.
 
+        The priority.  # noqa: E501
 
         :param priority: The priority of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: int
@@ -824,6 +862,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def pre_padding_seconds(self):
         """Gets the pre_padding_seconds of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The pre padding seconds.  # noqa: E501
 
         :return: The pre_padding_seconds of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: int
@@ -834,6 +873,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def pre_padding_seconds(self, pre_padding_seconds):
         """Sets the pre_padding_seconds of this LiveTvSeriesTimerInfoDto.
 
+        The pre padding seconds.  # noqa: E501
 
         :param pre_padding_seconds: The pre_padding_seconds of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: int
@@ -845,6 +885,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def post_padding_seconds(self):
         """Gets the post_padding_seconds of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The post padding seconds.  # noqa: E501
 
         :return: The post_padding_seconds of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: int
@@ -855,6 +896,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def post_padding_seconds(self, post_padding_seconds):
         """Sets the post_padding_seconds of this LiveTvSeriesTimerInfoDto.
 
+        The post padding seconds.  # noqa: E501
 
         :param post_padding_seconds: The post_padding_seconds of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: int
@@ -866,6 +908,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def is_pre_padding_required(self):
         """Gets the is_pre_padding_required of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        A value indicating whether this instance is pre padding required.  # noqa: E501
 
         :return: The is_pre_padding_required of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: bool
@@ -876,6 +919,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def is_pre_padding_required(self, is_pre_padding_required):
         """Sets the is_pre_padding_required of this LiveTvSeriesTimerInfoDto.
 
+        A value indicating whether this instance is pre padding required.  # noqa: E501
 
         :param is_pre_padding_required: The is_pre_padding_required of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: bool
@@ -887,6 +931,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_backdrop_item_id(self):
         """Gets the parent_backdrop_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        If the item does not have any backdrops, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :return: The parent_backdrop_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: str
@@ -897,6 +942,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_backdrop_item_id(self, parent_backdrop_item_id):
         """Sets the parent_backdrop_item_id of this LiveTvSeriesTimerInfoDto.
 
+        If the item does not have any backdrops, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :param parent_backdrop_item_id: The parent_backdrop_item_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: str
@@ -908,6 +954,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_backdrop_image_tags(self):
         """Gets the parent_backdrop_image_tags of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        The parent backdrop image tags.  # noqa: E501
 
         :return: The parent_backdrop_image_tags of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: list[str]
@@ -918,6 +965,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def parent_backdrop_image_tags(self, parent_backdrop_image_tags):
         """Sets the parent_backdrop_image_tags of this LiveTvSeriesTimerInfoDto.
 
+        The parent backdrop image tags.  # noqa: E501
 
         :param parent_backdrop_image_tags: The parent_backdrop_image_tags of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: list[str]
@@ -929,6 +977,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def is_post_padding_required(self):
         """Gets the is_post_padding_required of this LiveTvSeriesTimerInfoDto.  # noqa: E501
 
+        A value indicating whether this instance is post padding required.  # noqa: E501
 
         :return: The is_post_padding_required of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :rtype: bool
@@ -939,6 +988,7 @@ class LiveTvSeriesTimerInfoDto(object):
     def is_post_padding_required(self, is_post_padding_required):
         """Sets the is_post_padding_required of this LiveTvSeriesTimerInfoDto.
 
+        A value indicating whether this instance is post padding required.  # noqa: E501
 
         :param is_post_padding_required: The is_post_padding_required of this LiveTvSeriesTimerInfoDto.  # noqa: E501
         :type: bool

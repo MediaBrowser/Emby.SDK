@@ -442,10 +442,10 @@ public class TranscodingInfo {
   }
 
    /**
-   * Get currentCpuUsage
+   * Deprecated, please use ProcessStatistics instead
    * @return currentCpuUsage
   **/
-  @Schema(description = "")
+  @Schema(description = "Deprecated, please use ProcessStatistics instead")
   public Double getCurrentCpuUsage() {
     return currentCpuUsage;
   }
@@ -460,10 +460,10 @@ public class TranscodingInfo {
   }
 
    /**
-   * Get averageCpuUsage
+   * Deprecated, please use ProcessStatistics instead
    * @return averageCpuUsage
   **/
-  @Schema(description = "")
+  @Schema(description = "Deprecated, please use ProcessStatistics instead")
   public Double getAverageCpuUsage() {
     return averageCpuUsage;
   }
@@ -486,10 +486,10 @@ public class TranscodingInfo {
   }
 
    /**
-   * Get cpuHistory
+   * Deprecated, please use ProcessStatistics instead
    * @return cpuHistory
   **/
-  @Schema(description = "")
+  @Schema(description = "Deprecated, please use ProcessStatistics instead")
   public List<TupleDoubleDouble> getCpuHistory() {
     return cpuHistory;
   }

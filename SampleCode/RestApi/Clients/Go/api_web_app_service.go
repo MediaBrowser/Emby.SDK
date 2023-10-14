@@ -104,15 +104,15 @@ func (a *WebAppServiceApiService) GetWebConfigurationpage(ctx context.Context) (
 WebAppServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []EmbyWebApiConfigurationPageInfo
+@return []ApiConfigurationPageInfo
 */
-func (a *WebAppServiceApiService) GetWebConfigurationpages(ctx context.Context) ([]EmbyWebApiConfigurationPageInfo, *http.Response, error) {
+func (a *WebAppServiceApiService) GetWebConfigurationpages(ctx context.Context) ([]ApiConfigurationPageInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []EmbyWebApiConfigurationPageInfo
+		localVarReturnValue []ApiConfigurationPageInfo
 	)
 
 	// create path and map variables
@@ -182,7 +182,7 @@ func (a *WebAppServiceApiService) GetWebConfigurationpages(ctx context.Context) 
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []EmbyWebApiConfigurationPageInfo
+			var v []ApiConfigurationPageInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

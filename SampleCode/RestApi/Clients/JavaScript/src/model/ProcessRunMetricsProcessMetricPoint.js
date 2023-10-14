@@ -10,12 +10,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import TimeSpan from './TimeSpan';
 
 /**
 * The ProcessRunMetricsProcessMetricPoint model module.
 * @module model/ProcessRunMetricsProcessMetricPoint
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ProcessRunMetricsProcessMetricPoint {
     /**
@@ -43,7 +42,7 @@ export default class ProcessRunMetricsProcessMetricPoint {
                         
             
             if (data.hasOwnProperty('Time')) {
-                obj['Time'] = TimeSpan.constructFromObject(data['Time']);
+                obj['Time'] = ApiClient.convertToType(data['Time'], 'String');
             }
             if (data.hasOwnProperty('CpuPercent')) {
                 obj['CpuPercent'] = ApiClient.convertToType(data['CpuPercent'], 'Number');
@@ -59,18 +58,22 @@ export default class ProcessRunMetricsProcessMetricPoint {
     }
 
     /**
-    * @member {module:model/TimeSpan} Time
+    * The time.
+    * @member {String} Time
     */
     'Time' = undefined;
     /**
+    * The cpu percent.
     * @member {Number} CpuPercent
     */
     'CpuPercent' = undefined;
     /**
+    * The virtual memory.
     * @member {Number} VirtualMemory
     */
     'VirtualMemory' = undefined;
     /**
+    * The working set.
     * @member {Number} WorkingSet
     */
     'WorkingSet' = undefined;

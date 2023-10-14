@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.MediaEncodingApiOnPlaybackProgress;
+import io.swagger.client.model.ApiOnPlaybackProgress;
 import io.swagger.client.model.PlayMethod;
 import io.swagger.client.model.PlaybackProgressInfo;
 import io.swagger.client.model.PlaybackStartInfo;
@@ -60,8 +60,8 @@ public class PlaystateServiceApi {
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as unplayed Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as unplayed Documentation</a>
      */
     public com.squareup.okhttp.Call deleteUsersByUseridPlayeditemsByIdCall(String userId, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -133,8 +133,8 @@ public class PlaystateServiceApi {
      * @param id Item Id (required)
      * @return UserItemDataDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as unplayed Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as unplayed Documentation</a>
      */
     public UserItemDataDto deleteUsersByUseridPlayeditemsById(String userId, String id) throws ApiException {
         ApiResponse<UserItemDataDto> resp = deleteUsersByUseridPlayeditemsByIdWithHttpInfo(userId, id);
@@ -148,8 +148,8 @@ public class PlaystateServiceApi {
      * @param id Item Id (required)
      * @return ApiResponse&lt;UserItemDataDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as unplayed Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as unplayed Documentation</a>
      */
     public ApiResponse<UserItemDataDto> deleteUsersByUseridPlayeditemsByIdWithHttpInfo(String userId, String id) throws ApiException {
         com.squareup.okhttp.Call call = deleteUsersByUseridPlayeditemsByIdValidateBeforeCall(userId, id, null, null);
@@ -165,8 +165,8 @@ public class PlaystateServiceApi {
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as unplayed Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as unplayed Documentation</a>
      */
     public com.squareup.okhttp.Call deleteUsersByUseridPlayeditemsByIdAsync(String userId, String id, final ApiCallback<UserItemDataDto> callback) throws ApiException {
 
@@ -369,8 +369,8 @@ public class PlaystateServiceApi {
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has started within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has started within a session Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsPlayingCall(PlaybackStartInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
@@ -434,8 +434,8 @@ public class PlaystateServiceApi {
      * Requires authentication as user
      * @param body PlaybackStartInfo:  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has started within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has started within a session Documentation</a>
      */
     public void postSessionsPlaying(PlaybackStartInfo body) throws ApiException {
         postSessionsPlayingWithHttpInfo(body);
@@ -447,8 +447,8 @@ public class PlaystateServiceApi {
      * @param body PlaybackStartInfo:  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has started within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has started within a session Documentation</a>
      */
     public ApiResponse<Void> postSessionsPlayingWithHttpInfo(PlaybackStartInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postSessionsPlayingValidateBeforeCall(body, null, null);
@@ -462,8 +462,8 @@ public class PlaystateServiceApi {
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has started within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has started within a session Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsPlayingAsync(PlaybackStartInfo body, final ApiCallback<Void> callback) throws ApiException {
 
@@ -615,8 +615,8 @@ public class PlaystateServiceApi {
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback progress within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback progress within a session Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsPlayingProgressCall(PlaybackProgressInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
@@ -680,8 +680,8 @@ public class PlaystateServiceApi {
      * Requires authentication as user
      * @param body PlaybackProgressInfo:  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback progress within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback progress within a session Documentation</a>
      */
     public void postSessionsPlayingProgress(PlaybackProgressInfo body) throws ApiException {
         postSessionsPlayingProgressWithHttpInfo(body);
@@ -693,8 +693,8 @@ public class PlaystateServiceApi {
      * @param body PlaybackProgressInfo:  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback progress within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback progress within a session Documentation</a>
      */
     public ApiResponse<Void> postSessionsPlayingProgressWithHttpInfo(PlaybackProgressInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postSessionsPlayingProgressValidateBeforeCall(body, null, null);
@@ -708,8 +708,8 @@ public class PlaystateServiceApi {
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback progress within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback progress within a session Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsPlayingProgressAsync(PlaybackProgressInfo body, final ApiCallback<Void> callback) throws ApiException {
 
@@ -743,8 +743,8 @@ public class PlaystateServiceApi {
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has stopped within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has stopped within a session Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsPlayingStoppedCall(PlaybackStopInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
@@ -808,8 +808,8 @@ public class PlaystateServiceApi {
      * Requires authentication as user
      * @param body PlaybackStopInfo:  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has stopped within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has stopped within a session Documentation</a>
      */
     public void postSessionsPlayingStopped(PlaybackStopInfo body) throws ApiException {
         postSessionsPlayingStoppedWithHttpInfo(body);
@@ -821,8 +821,8 @@ public class PlaystateServiceApi {
      * @param body PlaybackStopInfo:  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has stopped within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has stopped within a session Documentation</a>
      */
     public ApiResponse<Void> postSessionsPlayingStoppedWithHttpInfo(PlaybackStopInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postSessionsPlayingStoppedValidateBeforeCall(body, null, null);
@@ -836,8 +836,8 @@ public class PlaystateServiceApi {
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Reports playback has stopped within a session Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Reports playback has stopped within a session Documentation</a>
      */
     public com.squareup.okhttp.Call postSessionsPlayingStoppedAsync(PlaybackStopInfo body, final ApiCallback<Void> callback) throws ApiException {
 
@@ -1011,8 +1011,8 @@ public class PlaystateServiceApi {
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as played Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as played Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersByUseridPlayeditemsByIdCall(String userId, String id, String datePlayed, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1087,8 +1087,8 @@ public class PlaystateServiceApi {
      * @param datePlayed The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)
      * @return UserItemDataDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as played Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as played Documentation</a>
      */
     public UserItemDataDto postUsersByUseridPlayeditemsById(String userId, String id, String datePlayed) throws ApiException {
         ApiResponse<UserItemDataDto> resp = postUsersByUseridPlayeditemsByIdWithHttpInfo(userId, id, datePlayed);
@@ -1103,8 +1103,8 @@ public class PlaystateServiceApi {
      * @param datePlayed The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)
      * @return ApiResponse&lt;UserItemDataDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as played Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as played Documentation</a>
      */
     public ApiResponse<UserItemDataDto> postUsersByUseridPlayeditemsByIdWithHttpInfo(String userId, String id, String datePlayed) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByUseridPlayeditemsByIdValidateBeforeCall(userId, id, datePlayed, null, null);
@@ -1121,8 +1121,8 @@ public class PlaystateServiceApi {
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * API Documentation: Playback Check ins
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins">Marks an item as played Documentation</a>
+     * API Documentation: Playback Check-ins
+     * @see <a href="https://betadev.emby.media/doc/restapi/Playback-Check-ins.html">Marks an item as played Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersByUseridPlayeditemsByIdAsync(String userId, String id, String datePlayed, final ApiCallback<UserItemDataDto> callback) throws ApiException {
 
@@ -1651,7 +1651,7 @@ public class PlaystateServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByUseridPlayingitemsByIdProgressCall(MediaEncodingApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByUseridPlayingitemsByIdProgressCall(ApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1721,7 +1721,7 @@ public class PlaystateServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByUseridPlayingitemsByIdProgressValidateBeforeCall(MediaEncodingApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByUseridPlayingitemsByIdProgressValidateBeforeCall(ApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUsersByUseridPlayingitemsByIdProgress(Async)");
@@ -1769,7 +1769,7 @@ public class PlaystateServiceApi {
      * @param playbackRate  (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByUseridPlayingitemsByIdProgress(MediaEncodingApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate) throws ApiException {
+    public void postUsersByUseridPlayingitemsByIdProgress(ApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate) throws ApiException {
         postUsersByUseridPlayingitemsByIdProgressWithHttpInfo(body, mediaSourceId, userId, id, positionTicks, isPaused, isMuted, audioStreamIndex, subtitleStreamIndex, volumeLevel, playMethod, liveStreamId, playSessionId, repeatMode, subtitleOffset, playbackRate);
     }
 
@@ -1795,7 +1795,7 @@ public class PlaystateServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByUseridPlayingitemsByIdProgressWithHttpInfo(MediaEncodingApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate) throws ApiException {
+    public ApiResponse<Void> postUsersByUseridPlayingitemsByIdProgressWithHttpInfo(ApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByUseridPlayingitemsByIdProgressValidateBeforeCall(body, mediaSourceId, userId, id, positionTicks, isPaused, isMuted, audioStreamIndex, subtitleStreamIndex, volumeLevel, playMethod, liveStreamId, playSessionId, repeatMode, subtitleOffset, playbackRate, null, null);
         return apiClient.execute(call);
     }
@@ -1823,7 +1823,7 @@ public class PlaystateServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByUseridPlayingitemsByIdProgressAsync(MediaEncodingApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByUseridPlayingitemsByIdProgressAsync(ApiOnPlaybackProgress body, String mediaSourceId, String userId, String id, Long positionTicks, Boolean isPaused, Boolean isMuted, Integer audioStreamIndex, Integer subtitleStreamIndex, Integer volumeLevel, PlayMethod playMethod, String liveStreamId, String playSessionId, RepeatMode repeatMode, Integer subtitleOffset, Double playbackRate, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

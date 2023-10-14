@@ -13,7 +13,9 @@ public struct AuthenticationAuthenticationResult: Codable {
 
     public var user: UserDto?
     public var sessionInfo: SessionSessionInfo?
+    /** The authentication token. */
     public var accessToken: String?
+    /** The server identifier. */
     public var serverId: String?
 
     public init(user: UserDto? = nil, sessionInfo: SessionSessionInfo? = nil, accessToken: String? = nil, serverId: String? = nil) {

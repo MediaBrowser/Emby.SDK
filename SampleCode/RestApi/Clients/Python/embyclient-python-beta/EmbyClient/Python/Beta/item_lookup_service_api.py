@@ -425,7 +425,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersBookInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryBookInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -447,7 +447,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersBookInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryBookInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -524,7 +524,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersItemLookupInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryItemLookupInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -546,7 +546,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersItemLookupInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryItemLookupInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -623,7 +623,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersGameInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryGameInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -645,7 +645,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersGameInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryGameInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -722,7 +722,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersMovieInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryMovieInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -744,7 +744,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersMovieInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryMovieInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -821,7 +821,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersAlbumInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryAlbumInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -843,7 +843,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersAlbumInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryAlbumInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -920,7 +920,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersArtistInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryArtistInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -942,7 +942,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersArtistInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryArtistInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1019,7 +1019,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersMusicVideoInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryMusicVideoInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1041,7 +1041,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersMusicVideoInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryMusicVideoInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1118,7 +1118,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersPersonLookupInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryPersonLookupInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1140,7 +1140,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersPersonLookupInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryPersonLookupInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1217,7 +1217,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersSeriesInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQuerySeriesInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1239,7 +1239,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersSeriesInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQuerySeriesInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1316,7 +1316,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersTrailerInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryTrailerInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1338,7 +1338,7 @@ class ItemLookupServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ProvidersRemoteSearchQueryProvidersTrailerInfo body: RemoteSearchQuery`1:  (required)
+        :param RemoteSearchQueryTrailerInfo body: RemoteSearchQuery`1:  (required)
         :return: list[RemoteSearchResult]
                  If the method is called asynchronously,
                  returns the request thread.

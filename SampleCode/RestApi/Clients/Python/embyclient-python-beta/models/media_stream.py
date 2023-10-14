@@ -58,13 +58,13 @@ class MediaStream(object):
         'aspect_ratio': 'str',
         'index': 'int',
         'is_external': 'bool',
-        'delivery_method': 'DlnaSubtitleDeliveryMethod',
+        'delivery_method': 'SubtitleDeliveryMethod',
         'delivery_url': 'str',
         'is_external_url': 'bool',
         'is_text_subtitle_stream': 'bool',
         'supports_external_stream': 'bool',
         'path': 'str',
-        'protocol': 'MediaInfoMediaProtocol',
+        'protocol': 'MediaProtocol',
         'pixel_format': 'str',
         'level': 'float',
         'is_anamorphic': 'bool',
@@ -305,6 +305,7 @@ class MediaStream(object):
     def codec(self):
         """Gets the codec of this MediaStream.  # noqa: E501
 
+        The codec.    Probe Field: `codec_name`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`    Related Enums: `T:Emby.Media.Model.Enums.VideoMediaTypes`, `Emby.Media.Model.Enums.AudioMediaTypes`, `Emby.Media.Model.Enums.SubtitleMediaTypes`.  # noqa: E501
 
         :return: The codec of this MediaStream.  # noqa: E501
         :rtype: str
@@ -315,6 +316,7 @@ class MediaStream(object):
     def codec(self, codec):
         """Sets the codec of this MediaStream.
 
+        The codec.    Probe Field: `codec_name`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`    Related Enums: `T:Emby.Media.Model.Enums.VideoMediaTypes`, `Emby.Media.Model.Enums.AudioMediaTypes`, `Emby.Media.Model.Enums.SubtitleMediaTypes`.  # noqa: E501
 
         :param codec: The codec of this MediaStream.  # noqa: E501
         :type: str
@@ -326,6 +328,7 @@ class MediaStream(object):
     def codec_tag(self):
         """Gets the codec_tag of this MediaStream.  # noqa: E501
 
+        The codec tag.    Probe Field: `codec_tag`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :return: The codec_tag of this MediaStream.  # noqa: E501
         :rtype: str
@@ -336,6 +339,7 @@ class MediaStream(object):
     def codec_tag(self, codec_tag):
         """Sets the codec_tag of this MediaStream.
 
+        The codec tag.    Probe Field: `codec_tag`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :param codec_tag: The codec_tag of this MediaStream.  # noqa: E501
         :type: str
@@ -347,6 +351,7 @@ class MediaStream(object):
     def language(self):
         """Gets the language of this MediaStream.  # noqa: E501
 
+        The language.    Probe Field: `tags[\"language\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :return: The language of this MediaStream.  # noqa: E501
         :rtype: str
@@ -357,6 +362,7 @@ class MediaStream(object):
     def language(self, language):
         """Sets the language of this MediaStream.
 
+        The language.    Probe Field: `tags[\"language\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :param language: The language of this MediaStream.  # noqa: E501
         :type: str
@@ -368,6 +374,7 @@ class MediaStream(object):
     def color_transfer(self):
         """Gets the color_transfer of this MediaStream.  # noqa: E501
 
+        The color transfer characteristics.    Probe Field: `color_transfer`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorTransfers`.  # noqa: E501
 
         :return: The color_transfer of this MediaStream.  # noqa: E501
         :rtype: str
@@ -378,6 +385,7 @@ class MediaStream(object):
     def color_transfer(self, color_transfer):
         """Sets the color_transfer of this MediaStream.
 
+        The color transfer characteristics.    Probe Field: `color_transfer`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorTransfers`.  # noqa: E501
 
         :param color_transfer: The color_transfer of this MediaStream.  # noqa: E501
         :type: str
@@ -389,6 +397,7 @@ class MediaStream(object):
     def color_primaries(self):
         """Gets the color_primaries of this MediaStream.  # noqa: E501
 
+        The chromaticity coordinates of the source primaries.    Probe Field: `color_primaries`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorPrimaries`.  # noqa: E501
 
         :return: The color_primaries of this MediaStream.  # noqa: E501
         :rtype: str
@@ -399,6 +408,7 @@ class MediaStream(object):
     def color_primaries(self, color_primaries):
         """Sets the color_primaries of this MediaStream.
 
+        The chromaticity coordinates of the source primaries.    Probe Field: `color_primaries`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorPrimaries`.  # noqa: E501
 
         :param color_primaries: The color_primaries of this MediaStream.  # noqa: E501
         :type: str
@@ -410,6 +420,7 @@ class MediaStream(object):
     def color_space(self):
         """Gets the color_space of this MediaStream.  # noqa: E501
 
+        The YUV colorspace type.    Probe Field: `color_space`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorSpaces`.  # noqa: E501
 
         :return: The color_space of this MediaStream.  # noqa: E501
         :rtype: str
@@ -420,6 +431,7 @@ class MediaStream(object):
     def color_space(self, color_space):
         """Sets the color_space of this MediaStream.
 
+        The YUV colorspace type.    Probe Field: `color_space`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorSpaces`.  # noqa: E501
 
         :param color_space: The color_space of this MediaStream.  # noqa: E501
         :type: str
@@ -431,6 +443,7 @@ class MediaStream(object):
     def comment(self):
         """Gets the comment of this MediaStream.  # noqa: E501
 
+        The comment.    Probe Field: `tags[\"comment\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :return: The comment of this MediaStream.  # noqa: E501
         :rtype: str
@@ -441,6 +454,7 @@ class MediaStream(object):
     def comment(self, comment):
         """Sets the comment of this MediaStream.
 
+        The comment.    Probe Field: `tags[\"comment\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :param comment: The comment of this MediaStream.  # noqa: E501
         :type: str
@@ -452,6 +466,7 @@ class MediaStream(object):
     def stream_start_time_ticks(self):
         """Gets the stream_start_time_ticks of this MediaStream.  # noqa: E501
 
+        The start time of the stream.    Probe Field: `start_time`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `System.TimeSpan`.  # noqa: E501
 
         :return: The stream_start_time_ticks of this MediaStream.  # noqa: E501
         :rtype: int
@@ -462,6 +477,7 @@ class MediaStream(object):
     def stream_start_time_ticks(self, stream_start_time_ticks):
         """Sets the stream_start_time_ticks of this MediaStream.
 
+        The start time of the stream.    Probe Field: `start_time`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `System.TimeSpan`.  # noqa: E501
 
         :param stream_start_time_ticks: The stream_start_time_ticks of this MediaStream.  # noqa: E501
         :type: int
@@ -473,6 +489,7 @@ class MediaStream(object):
     def time_base(self):
         """Gets the time_base of this MediaStream.  # noqa: E501
 
+        The time\\-base.    Probe Field: `time_base`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :return: The time_base of this MediaStream.  # noqa: E501
         :rtype: str
@@ -483,6 +500,7 @@ class MediaStream(object):
     def time_base(self, time_base):
         """Sets the time_base of this MediaStream.
 
+        The time\\-base.    Probe Field: `time_base`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :param time_base: The time_base of this MediaStream.  # noqa: E501
         :type: str
@@ -494,6 +512,7 @@ class MediaStream(object):
     def title(self):
         """Gets the title of this MediaStream.  # noqa: E501
 
+        The title.    Probe Field: `tags[\"title\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :return: The title of this MediaStream.  # noqa: E501
         :rtype: str
@@ -504,6 +523,7 @@ class MediaStream(object):
     def title(self, title):
         """Sets the title of this MediaStream.
 
+        The title.    Probe Field: `tags[\"title\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :param title: The title of this MediaStream.  # noqa: E501
         :type: str
@@ -515,6 +535,7 @@ class MediaStream(object):
     def extradata(self):
         """Gets the extradata of this MediaStream.  # noqa: E501
 
+        The extradata.    Probe Field: `extradata`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Currently, this value is only parsed for subtitle streams with codec `Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext`.  # noqa: E501
 
         :return: The extradata of this MediaStream.  # noqa: E501
         :rtype: str
@@ -525,6 +546,7 @@ class MediaStream(object):
     def extradata(self, extradata):
         """Sets the extradata of this MediaStream.
 
+        The extradata.    Probe Field: `extradata`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Currently, this value is only parsed for subtitle streams with codec `Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext`.  # noqa: E501
 
         :param extradata: The extradata of this MediaStream.  # noqa: E501
         :type: str
@@ -557,6 +579,7 @@ class MediaStream(object):
     def display_title(self):
         """Gets the display_title of this MediaStream.  # noqa: E501
 
+        The display title.    Custom property set by the application.  # noqa: E501
 
         :return: The display_title of this MediaStream.  # noqa: E501
         :rtype: str
@@ -567,6 +590,7 @@ class MediaStream(object):
     def display_title(self, display_title):
         """Sets the display_title of this MediaStream.
 
+        The display title.    Custom property set by the application.  # noqa: E501
 
         :param display_title: The display_title of this MediaStream.  # noqa: E501
         :type: str
@@ -578,6 +602,7 @@ class MediaStream(object):
     def display_language(self):
         """Gets the display_language of this MediaStream.  # noqa: E501
 
+        The display language.    Custom property set by the application.  # noqa: E501
 
         :return: The display_language of this MediaStream.  # noqa: E501
         :rtype: str
@@ -588,6 +613,7 @@ class MediaStream(object):
     def display_language(self, display_language):
         """Sets the display_language of this MediaStream.
 
+        The display language.    Custom property set by the application.  # noqa: E501
 
         :param display_language: The display_language of this MediaStream.  # noqa: E501
         :type: str
@@ -599,6 +625,7 @@ class MediaStream(object):
     def nal_length_size(self):
         """Gets the nal_length_size of this MediaStream.  # noqa: E501
 
+        The nal length size.    Probe Field: `nal_length_size`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video` of type `Emby.Media.Model.Enums.VideoMediaTypes.h264`.    Actual type: `System.Int32`.  # noqa: E501
 
         :return: The nal_length_size of this MediaStream.  # noqa: E501
         :rtype: str
@@ -609,6 +636,7 @@ class MediaStream(object):
     def nal_length_size(self, nal_length_size):
         """Sets the nal_length_size of this MediaStream.
 
+        The nal length size.    Probe Field: `nal_length_size`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video` of type `Emby.Media.Model.Enums.VideoMediaTypes.h264`.    Actual type: `System.Int32`.  # noqa: E501
 
         :param nal_length_size: The nal_length_size of this MediaStream.  # noqa: E501
         :type: str
@@ -620,6 +648,7 @@ class MediaStream(object):
     def is_interlaced(self):
         """Gets the is_interlaced of this MediaStream.  # noqa: E501
 
+        A value indicating whether this instance is interlaced.    Probe Field: `field_order` \\!\\= `progressive`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :return: The is_interlaced of this MediaStream.  # noqa: E501
         :rtype: bool
@@ -630,6 +659,7 @@ class MediaStream(object):
     def is_interlaced(self, is_interlaced):
         """Sets the is_interlaced of this MediaStream.
 
+        A value indicating whether this instance is interlaced.    Probe Field: `field_order` \\!\\= `progressive`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :param is_interlaced: The is_interlaced of this MediaStream.  # noqa: E501
         :type: bool
@@ -662,6 +692,7 @@ class MediaStream(object):
     def channel_layout(self):
         """Gets the channel_layout of this MediaStream.  # noqa: E501
 
+        The channel layout.    Probe Field: `channel_layout`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `MediaBrowser.Model.Entities.MediaStream.ChannelLayout`.  # noqa: E501
 
         :return: The channel_layout of this MediaStream.  # noqa: E501
         :rtype: str
@@ -672,6 +703,7 @@ class MediaStream(object):
     def channel_layout(self, channel_layout):
         """Sets the channel_layout of this MediaStream.
 
+        The channel layout.    Probe Field: `channel_layout`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `MediaBrowser.Model.Entities.MediaStream.ChannelLayout`.  # noqa: E501
 
         :param channel_layout: The channel_layout of this MediaStream.  # noqa: E501
         :type: str
@@ -683,6 +715,7 @@ class MediaStream(object):
     def bit_rate(self):
         """Gets the bit_rate of this MediaStream.  # noqa: E501
 
+        The bit rate.    Probe Field: `bit_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!  # noqa: E501
 
         :return: The bit_rate of this MediaStream.  # noqa: E501
         :rtype: int
@@ -693,6 +726,7 @@ class MediaStream(object):
     def bit_rate(self, bit_rate):
         """Sets the bit_rate of this MediaStream.
 
+        The bit rate.    Probe Field: `bit_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!  # noqa: E501
 
         :param bit_rate: The bit_rate of this MediaStream.  # noqa: E501
         :type: int
@@ -704,6 +738,7 @@ class MediaStream(object):
     def bit_depth(self):
         """Gets the bit_depth of this MediaStream.  # noqa: E501
 
+        The bit depth.    Probe Field: `bits_per_sample` or `bits_per_raw_sample`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.  # noqa: E501
 
         :return: The bit_depth of this MediaStream.  # noqa: E501
         :rtype: int
@@ -714,6 +749,7 @@ class MediaStream(object):
     def bit_depth(self, bit_depth):
         """Sets the bit_depth of this MediaStream.
 
+        The bit depth.    Probe Field: `bits_per_sample` or `bits_per_raw_sample`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.  # noqa: E501
 
         :param bit_depth: The bit_depth of this MediaStream.  # noqa: E501
         :type: int
@@ -725,6 +761,7 @@ class MediaStream(object):
     def ref_frames(self):
         """Gets the ref_frames of this MediaStream.  # noqa: E501
 
+        The reference frames.    Probe Field: `refs`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :return: The ref_frames of this MediaStream.  # noqa: E501
         :rtype: int
@@ -735,6 +772,7 @@ class MediaStream(object):
     def ref_frames(self, ref_frames):
         """Sets the ref_frames of this MediaStream.
 
+        The reference frames.    Probe Field: `refs`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :param ref_frames: The ref_frames of this MediaStream.  # noqa: E501
         :type: int
@@ -767,6 +805,7 @@ class MediaStream(object):
     def channels(self):
         """Gets the channels of this MediaStream.  # noqa: E501
 
+        The audio channel count.    Probe Field: `channels`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`.  # noqa: E501
 
         :return: The channels of this MediaStream.  # noqa: E501
         :rtype: int
@@ -777,6 +816,7 @@ class MediaStream(object):
     def channels(self, channels):
         """Sets the channels of this MediaStream.
 
+        The audio channel count.    Probe Field: `channels`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`.  # noqa: E501
 
         :param channels: The channels of this MediaStream.  # noqa: E501
         :type: int
@@ -788,6 +828,7 @@ class MediaStream(object):
     def sample_rate(self):
         """Gets the sample_rate of this MediaStream.  # noqa: E501
 
+        The sample rate.    Probe Field: `sample_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `Emby.Media.Model.Enums.SampleRates`.  # noqa: E501
 
         :return: The sample_rate of this MediaStream.  # noqa: E501
         :rtype: int
@@ -798,6 +839,7 @@ class MediaStream(object):
     def sample_rate(self, sample_rate):
         """Sets the sample_rate of this MediaStream.
 
+        The sample rate.    Probe Field: `sample_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `Emby.Media.Model.Enums.SampleRates`.  # noqa: E501
 
         :param sample_rate: The sample_rate of this MediaStream.  # noqa: E501
         :type: int
@@ -809,6 +851,7 @@ class MediaStream(object):
     def is_default(self):
         """Gets the is_default of this MediaStream.  # noqa: E501
 
+        A value indicating whether this instance is default.    Probe Field: `disposition[\"default\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :return: The is_default of this MediaStream.  # noqa: E501
         :rtype: bool
@@ -819,6 +862,7 @@ class MediaStream(object):
     def is_default(self, is_default):
         """Sets the is_default of this MediaStream.
 
+        A value indicating whether this instance is default.    Probe Field: `disposition[\"default\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :param is_default: The is_default of this MediaStream.  # noqa: E501
         :type: bool
@@ -830,6 +874,7 @@ class MediaStream(object):
     def is_forced(self):
         """Gets the is_forced of this MediaStream.  # noqa: E501
 
+        A value indicating whether this instance is forced.    Probe Field: `disposition[\"forced\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :return: The is_forced of this MediaStream.  # noqa: E501
         :rtype: bool
@@ -840,6 +885,7 @@ class MediaStream(object):
     def is_forced(self, is_forced):
         """Sets the is_forced of this MediaStream.
 
+        A value indicating whether this instance is forced.    Probe Field: `disposition[\"forced\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :param is_forced: The is_forced of this MediaStream.  # noqa: E501
         :type: bool
@@ -872,6 +918,7 @@ class MediaStream(object):
     def height(self):
         """Gets the height of this MediaStream.  # noqa: E501
 
+        The height.    Probe Field: `height`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :return: The height of this MediaStream.  # noqa: E501
         :rtype: int
@@ -882,6 +929,7 @@ class MediaStream(object):
     def height(self, height):
         """Sets the height of this MediaStream.
 
+        The height.    Probe Field: `height`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :param height: The height of this MediaStream.  # noqa: E501
         :type: int
@@ -893,6 +941,7 @@ class MediaStream(object):
     def width(self):
         """Gets the width of this MediaStream.  # noqa: E501
 
+        The width.    Probe Field: `width`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :return: The width of this MediaStream.  # noqa: E501
         :rtype: int
@@ -903,6 +952,7 @@ class MediaStream(object):
     def width(self, width):
         """Sets the width of this MediaStream.
 
+        The width.    Probe Field: `width`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.  # noqa: E501
 
         :param width: The width of this MediaStream.  # noqa: E501
         :type: int
@@ -914,6 +964,7 @@ class MediaStream(object):
     def average_frame_rate(self):
         """Gets the average_frame_rate of this MediaStream.  # noqa: E501
 
+        The average frame rate..    Probe Field: `avg_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :return: The average_frame_rate of this MediaStream.  # noqa: E501
         :rtype: float
@@ -924,6 +975,7 @@ class MediaStream(object):
     def average_frame_rate(self, average_frame_rate):
         """Sets the average_frame_rate of this MediaStream.
 
+        The average frame rate..    Probe Field: `avg_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :param average_frame_rate: The average_frame_rate of this MediaStream.  # noqa: E501
         :type: float
@@ -935,6 +987,7 @@ class MediaStream(object):
     def real_frame_rate(self):
         """Gets the real_frame_rate of this MediaStream.  # noqa: E501
 
+        The real frame rate..    Probe Field: `r_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :return: The real_frame_rate of this MediaStream.  # noqa: E501
         :rtype: float
@@ -945,6 +998,7 @@ class MediaStream(object):
     def real_frame_rate(self, real_frame_rate):
         """Sets the real_frame_rate of this MediaStream.
 
+        The real frame rate..    Probe Field: `r_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :param real_frame_rate: The real_frame_rate of this MediaStream.  # noqa: E501
         :type: float
@@ -956,6 +1010,7 @@ class MediaStream(object):
     def profile(self):
         """Gets the profile of this MediaStream.  # noqa: E501
 
+        The profile.    Probe Field: `profile`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enums: `Emby.Media.Model.Enums.AacProfiles`, `Emby.Media.Model.Enums.AvcProfiles`, `Emby.Media.Model.Enums.H263Profiles`, `Emby.Media.Model.Enums.HevcProfiles`, `Emby.Media.Model.Enums.Mpeg2Profiles`,`Emby.Media.Model.Enums.Vc1Profiles`, `Emby.Media.Model.Enums.Mpeg4Profiles`, `Emby.Media.Model.Enums.Vp8Profiles`, `Emby.Media.Model.Enums.Vp9Profiles`.  # noqa: E501
 
         :return: The profile of this MediaStream.  # noqa: E501
         :rtype: str
@@ -966,6 +1021,7 @@ class MediaStream(object):
     def profile(self, profile):
         """Sets the profile of this MediaStream.
 
+        The profile.    Probe Field: `profile`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enums: `Emby.Media.Model.Enums.AacProfiles`, `Emby.Media.Model.Enums.AvcProfiles`, `Emby.Media.Model.Enums.H263Profiles`, `Emby.Media.Model.Enums.HevcProfiles`, `Emby.Media.Model.Enums.Mpeg2Profiles`,`Emby.Media.Model.Enums.Vc1Profiles`, `Emby.Media.Model.Enums.Mpeg4Profiles`, `Emby.Media.Model.Enums.Vp8Profiles`, `Emby.Media.Model.Enums.Vp9Profiles`.  # noqa: E501
 
         :param profile: The profile of this MediaStream.  # noqa: E501
         :type: str
@@ -998,6 +1054,7 @@ class MediaStream(object):
     def aspect_ratio(self):
         """Gets the aspect_ratio of this MediaStream.  # noqa: E501
 
+        The aspect ratio.    Probe Field: `display_aspect_ratio`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :return: The aspect_ratio of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1008,6 +1065,7 @@ class MediaStream(object):
     def aspect_ratio(self, aspect_ratio):
         """Sets the aspect_ratio of this MediaStream.
 
+        The aspect ratio.    Probe Field: `display_aspect_ratio`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.  # noqa: E501
 
         :param aspect_ratio: The aspect_ratio of this MediaStream.  # noqa: E501
         :type: str
@@ -1019,6 +1077,7 @@ class MediaStream(object):
     def index(self):
         """Gets the index of this MediaStream.  # noqa: E501
 
+        The index of the stream inside its container.    Probe Field: `index`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :return: The index of this MediaStream.  # noqa: E501
         :rtype: int
@@ -1029,6 +1088,7 @@ class MediaStream(object):
     def index(self, index):
         """Sets the index of this MediaStream.
 
+        The index of the stream inside its container.    Probe Field: `index`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.  # noqa: E501
 
         :param index: The index of this MediaStream.  # noqa: E501
         :type: int
@@ -1040,6 +1100,7 @@ class MediaStream(object):
     def is_external(self):
         """Gets the is_external of this MediaStream.  # noqa: E501
 
+        A value indicating whether this instance is external.    Custom property set by the application.  # noqa: E501
 
         :return: The is_external of this MediaStream.  # noqa: E501
         :rtype: bool
@@ -1050,6 +1111,7 @@ class MediaStream(object):
     def is_external(self, is_external):
         """Sets the is_external of this MediaStream.
 
+        A value indicating whether this instance is external.    Custom property set by the application.  # noqa: E501
 
         :param is_external: The is_external of this MediaStream.  # noqa: E501
         :type: bool
@@ -1063,7 +1125,7 @@ class MediaStream(object):
 
 
         :return: The delivery_method of this MediaStream.  # noqa: E501
-        :rtype: DlnaSubtitleDeliveryMethod
+        :rtype: SubtitleDeliveryMethod
         """
         return self._delivery_method
 
@@ -1073,7 +1135,7 @@ class MediaStream(object):
 
 
         :param delivery_method: The delivery_method of this MediaStream.  # noqa: E501
-        :type: DlnaSubtitleDeliveryMethod
+        :type: SubtitleDeliveryMethod
         """
 
         self._delivery_method = delivery_method
@@ -1082,6 +1144,7 @@ class MediaStream(object):
     def delivery_url(self):
         """Gets the delivery_url of this MediaStream.  # noqa: E501
 
+        The delivery URL.    Custom property set by the application.  # noqa: E501
 
         :return: The delivery_url of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1092,6 +1155,7 @@ class MediaStream(object):
     def delivery_url(self, delivery_url):
         """Sets the delivery_url of this MediaStream.
 
+        The delivery URL.    Custom property set by the application.  # noqa: E501
 
         :param delivery_url: The delivery_url of this MediaStream.  # noqa: E501
         :type: str
@@ -1103,6 +1167,7 @@ class MediaStream(object):
     def is_external_url(self):
         """Gets the is_external_url of this MediaStream.  # noqa: E501
 
+        A value indicating whether this instance is external URL.    Custom property set by the application.  # noqa: E501
 
         :return: The is_external_url of this MediaStream.  # noqa: E501
         :rtype: bool
@@ -1113,6 +1178,7 @@ class MediaStream(object):
     def is_external_url(self, is_external_url):
         """Sets the is_external_url of this MediaStream.
 
+        A value indicating whether this instance is external URL.    Custom property set by the application.  # noqa: E501
 
         :param is_external_url: The is_external_url of this MediaStream.  # noqa: E501
         :type: bool
@@ -1145,6 +1211,7 @@ class MediaStream(object):
     def supports_external_stream(self):
         """Gets the supports_external_stream of this MediaStream.  # noqa: E501
 
+        A value indicating whether \\[supports external stream\\].  # noqa: E501
 
         :return: The supports_external_stream of this MediaStream.  # noqa: E501
         :rtype: bool
@@ -1155,6 +1222,7 @@ class MediaStream(object):
     def supports_external_stream(self, supports_external_stream):
         """Sets the supports_external_stream of this MediaStream.
 
+        A value indicating whether \\[supports external stream\\].  # noqa: E501
 
         :param supports_external_stream: The supports_external_stream of this MediaStream.  # noqa: E501
         :type: bool
@@ -1166,6 +1234,7 @@ class MediaStream(object):
     def path(self):
         """Gets the path of this MediaStream.  # noqa: E501
 
+        The filename.  # noqa: E501
 
         :return: The path of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1176,6 +1245,7 @@ class MediaStream(object):
     def path(self, path):
         """Sets the path of this MediaStream.
 
+        The filename.  # noqa: E501
 
         :param path: The path of this MediaStream.  # noqa: E501
         :type: str
@@ -1189,7 +1259,7 @@ class MediaStream(object):
 
 
         :return: The protocol of this MediaStream.  # noqa: E501
-        :rtype: MediaInfoMediaProtocol
+        :rtype: MediaProtocol
         """
         return self._protocol
 
@@ -1199,7 +1269,7 @@ class MediaStream(object):
 
 
         :param protocol: The protocol of this MediaStream.  # noqa: E501
-        :type: MediaInfoMediaProtocol
+        :type: MediaProtocol
         """
 
         self._protocol = protocol
@@ -1208,6 +1278,7 @@ class MediaStream(object):
     def pixel_format(self):
         """Gets the pixel_format of this MediaStream.  # noqa: E501
 
+        The pixel format.    Probe Field: `pix_fmt`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `MediaBrowser.Model.Entities.MediaStream.PixelFormat`.  # noqa: E501
 
         :return: The pixel_format of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1218,6 +1289,7 @@ class MediaStream(object):
     def pixel_format(self, pixel_format):
         """Sets the pixel_format of this MediaStream.
 
+        The pixel format.    Probe Field: `pix_fmt`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `MediaBrowser.Model.Entities.MediaStream.PixelFormat`.  # noqa: E501
 
         :param pixel_format: The pixel_format of this MediaStream.  # noqa: E501
         :type: str
@@ -1229,6 +1301,7 @@ class MediaStream(object):
     def level(self):
         """Gets the level of this MediaStream.  # noqa: E501
 
+        The codec level.    Probe Field: `level`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enums: `Emby.Media.Model.Enums.AvcLevels`, `Emby.Media.Model.Enums.H263Levels`, `Emby.Media.Model.Enums.HevcLevels`, `Emby.Media.Model.Enums.Mpeg2Levels`,`Emby.Media.Model.Enums.Vc1Levels`, `Emby.Media.Model.Enums.Mpeg4Levels`, `Emby.Media.Model.Enums.Vp8Levels`, `Emby.Media.Model.Enums.Vp9Levels`.  # noqa: E501
 
         :return: The level of this MediaStream.  # noqa: E501
         :rtype: float
@@ -1239,6 +1312,7 @@ class MediaStream(object):
     def level(self, level):
         """Sets the level of this MediaStream.
 
+        The codec level.    Probe Field: `level`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enums: `Emby.Media.Model.Enums.AvcLevels`, `Emby.Media.Model.Enums.H263Levels`, `Emby.Media.Model.Enums.HevcLevels`, `Emby.Media.Model.Enums.Mpeg2Levels`,`Emby.Media.Model.Enums.Vc1Levels`, `Emby.Media.Model.Enums.Mpeg4Levels`, `Emby.Media.Model.Enums.Vp8Levels`, `Emby.Media.Model.Enums.Vp9Levels`.  # noqa: E501
 
         :param level: The level of this MediaStream.  # noqa: E501
         :type: float
@@ -1250,6 +1324,7 @@ class MediaStream(object):
     def is_anamorphic(self):
         """Gets the is_anamorphic of this MediaStream.  # noqa: E501
 
+        A value indicating whether this instance is anamorphic.  # noqa: E501
 
         :return: The is_anamorphic of this MediaStream.  # noqa: E501
         :rtype: bool
@@ -1260,6 +1335,7 @@ class MediaStream(object):
     def is_anamorphic(self, is_anamorphic):
         """Sets the is_anamorphic of this MediaStream.
 
+        A value indicating whether this instance is anamorphic.  # noqa: E501
 
         :param is_anamorphic: The is_anamorphic of this MediaStream.  # noqa: E501
         :type: bool
@@ -1313,6 +1389,7 @@ class MediaStream(object):
     def extended_video_sub_type_description(self):
         """Gets the extended_video_sub_type_description of this MediaStream.  # noqa: E501
 
+        The extended video sub\\-type description.  # noqa: E501
 
         :return: The extended_video_sub_type_description of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1323,6 +1400,7 @@ class MediaStream(object):
     def extended_video_sub_type_description(self, extended_video_sub_type_description):
         """Sets the extended_video_sub_type_description of this MediaStream.
 
+        The extended video sub\\-type description.  # noqa: E501
 
         :param extended_video_sub_type_description: The extended_video_sub_type_description of this MediaStream.  # noqa: E501
         :type: str
@@ -1334,6 +1412,7 @@ class MediaStream(object):
     def item_id(self):
         """Gets the item_id of this MediaStream.  # noqa: E501
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :return: The item_id of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1344,6 +1423,7 @@ class MediaStream(object):
     def item_id(self, item_id):
         """Sets the item_id of this MediaStream.
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :param item_id: The item_id of this MediaStream.  # noqa: E501
         :type: str
@@ -1355,6 +1435,7 @@ class MediaStream(object):
     def server_id(self):
         """Gets the server_id of this MediaStream.  # noqa: E501
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :return: The server_id of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1365,6 +1446,7 @@ class MediaStream(object):
     def server_id(self, server_id):
         """Sets the server_id of this MediaStream.
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :param server_id: The server_id of this MediaStream.  # noqa: E501
         :type: str
@@ -1376,6 +1458,7 @@ class MediaStream(object):
     def attachment_size(self):
         """Gets the attachment_size of this MediaStream.  # noqa: E501
 
+        The size of the attachment.  # noqa: E501
 
         :return: The attachment_size of this MediaStream.  # noqa: E501
         :rtype: int
@@ -1386,6 +1469,7 @@ class MediaStream(object):
     def attachment_size(self, attachment_size):
         """Sets the attachment_size of this MediaStream.
 
+        The size of the attachment.  # noqa: E501
 
         :param attachment_size: The attachment_size of this MediaStream.  # noqa: E501
         :type: int
@@ -1397,6 +1481,7 @@ class MediaStream(object):
     def mime_type(self):
         """Gets the mime_type of this MediaStream.  # noqa: E501
 
+        The type of the MIME.  # noqa: E501
 
         :return: The mime_type of this MediaStream.  # noqa: E501
         :rtype: str
@@ -1407,6 +1492,7 @@ class MediaStream(object):
     def mime_type(self, mime_type):
         """Sets the mime_type of this MediaStream.
 
+        The type of the MIME.  # noqa: E501
 
         :param mime_type: The mime_type of this MediaStream.  # noqa: E501
         :type: str

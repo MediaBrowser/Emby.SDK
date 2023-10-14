@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// LocationType : Enum LocationType  
 type LocationType string
 
 // List of LocationType

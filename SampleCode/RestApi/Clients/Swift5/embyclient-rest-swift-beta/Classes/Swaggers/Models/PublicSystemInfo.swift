@@ -11,12 +11,17 @@ import Foundation
 
 public struct PublicSystemInfo: Codable {
 
+    /** The local address. */
     public var localAddress: String?
     public var localAddresses: [String]?
+    /** The wan address. */
     public var wanAddress: String?
     public var remoteAddresses: [String]?
+    /** The name of the server. */
     public var serverName: String?
+    /** The version. */
     public var version: String?
+    /** The id. */
     public var _id: String?
 
     public init(localAddress: String? = nil, localAddresses: [String]? = nil, wanAddress: String? = nil, remoteAddresses: [String]? = nil, serverName: String? = nil, version: String? = nil, _id: String? = nil) {

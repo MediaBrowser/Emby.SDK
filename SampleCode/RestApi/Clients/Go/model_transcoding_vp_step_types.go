@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// TranscodingVpStepTypes : Video Processing Step Type enum.  
 type TranscodingVpStepTypes string
 
 // List of Transcoding.VpStepTypes

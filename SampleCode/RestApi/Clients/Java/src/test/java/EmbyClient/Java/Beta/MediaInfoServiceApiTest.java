@@ -5,10 +5,10 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.MediaInfoLiveStreamRequest;
-import io.swagger.client.model.MediaInfoLiveStreamResponse;
-import io.swagger.client.model.MediaInfoPlaybackInfoRequest;
-import io.swagger.client.model.MediaInfoPlaybackInfoResponse;
+import io.swagger.client.model.LiveStreamRequest;
+import io.swagger.client.model.LiveStreamResponse;
+import io.swagger.client.model.PlaybackInfoRequest;
+import io.swagger.client.model.PlaybackInfoResponse;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -39,7 +39,7 @@ public class MediaInfoServiceApiTest {
     public void getItemsByIdPlaybackinfoTest() throws Exception {
         String id = null;
         String userId = null;
-        MediaInfoPlaybackInfoResponse response = api.getItemsByIdPlaybackinfo(id, userId);
+        PlaybackInfoResponse response = api.getItemsByIdPlaybackinfo(id, userId);
 
         // TODO: test validations
     }
@@ -68,9 +68,9 @@ public class MediaInfoServiceApiTest {
      */
     @Test
     public void postItemsByIdPlaybackinfoTest() throws Exception {
-        MediaInfoPlaybackInfoRequest body = null;
+        PlaybackInfoRequest body = null;
         String id = null;
-        MediaInfoPlaybackInfoResponse response = api.postItemsByIdPlaybackinfo(body, id);
+        PlaybackInfoResponse response = api.postItemsByIdPlaybackinfo(body, id);
 
         // TODO: test validations
     }
@@ -114,8 +114,8 @@ public class MediaInfoServiceApiTest {
      */
     @Test
     public void postLivestreamsOpenTest() throws Exception {
-        MediaInfoLiveStreamRequest body = null;
-        MediaInfoLiveStreamResponse response = api.postLivestreamsOpen(body);
+        LiveStreamRequest body = null;
+        LiveStreamResponse response = api.postLivestreamsOpen(body);
 
         // TODO: test validations
     }

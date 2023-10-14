@@ -662,7 +662,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: UpdatesPackageVersionInfo
+        :return: PackageVersionInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -683,7 +683,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: UpdatesPackageVersionInfo
+        :return: PackageVersionInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -731,7 +731,7 @@ class SystemServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UpdatesPackageVersionInfo',  # noqa: E501
+            response_type='PackageVersionInfo',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -749,7 +749,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[UpdatesPackageVersionInfo]
+        :return: list[PackageVersionInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -770,7 +770,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[UpdatesPackageVersionInfo]
+        :return: list[PackageVersionInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -818,7 +818,7 @@ class SystemServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[UpdatesPackageVersionInfo]',  # noqa: E501
+            response_type='list[PackageVersionInfo]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

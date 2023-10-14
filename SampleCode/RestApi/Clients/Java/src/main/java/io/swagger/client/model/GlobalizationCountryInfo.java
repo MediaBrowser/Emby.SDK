@@ -15,9 +15,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * GlobalizationCountryInfo
+ * Class CountryInfo  
  */
-
+@Schema(description = "Class CountryInfo  ")
 
 public class GlobalizationCountryInfo {
   @SerializedName("Name")
@@ -41,10 +41,10 @@ public class GlobalizationCountryInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -59,10 +59,10 @@ public class GlobalizationCountryInfo {
   }
 
    /**
-   * Get displayName
+   * The display name.
    * @return displayName
   **/
-  @Schema(description = "")
+  @Schema(description = "The display name.")
   public String getDisplayName() {
     return displayName;
   }
@@ -77,10 +77,10 @@ public class GlobalizationCountryInfo {
   }
 
    /**
-   * Get englishName
+   * The English name.
    * @return englishName
   **/
-  @Schema(description = "")
+  @Schema(description = "The English name.")
   public String getEnglishName() {
     return englishName;
   }
@@ -95,10 +95,10 @@ public class GlobalizationCountryInfo {
   }
 
    /**
-   * Get twoLetterISORegionName
+   * The name of the two letter ISO region.
    * @return twoLetterISORegionName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the two letter ISO region.")
   public String getTwoLetterISORegionName() {
     return twoLetterISORegionName;
   }
@@ -113,10 +113,10 @@ public class GlobalizationCountryInfo {
   }
 
    /**
-   * Get threeLetterISORegionName
+   * The name of the three letter ISO region.
    * @return threeLetterISORegionName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the three letter ISO region.")
   public String getThreeLetterISORegionName() {
     return threeLetterISORegionName;
   }

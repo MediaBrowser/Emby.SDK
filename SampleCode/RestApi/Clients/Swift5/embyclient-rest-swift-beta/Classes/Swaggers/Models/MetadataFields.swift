@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum MetadataFields   */
 public enum MetadataFields: String, Codable {
     case cast = "Cast"
     case genres = "Genres"

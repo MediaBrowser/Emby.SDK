@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.EmbyNotificationsNotificationCategoryInfo;
+import io.swagger.client.model.NotificationCategoryInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +34,7 @@ public class NotificationsServiceApiTest {
      */
     @Test
     public void getNotificationsTypesTest() throws Exception {
-        List<EmbyNotificationsNotificationCategoryInfo> response = api.getNotificationsTypes();
+        List<NotificationCategoryInfo> response = api.getNotificationsTypes();
 
         // TODO: test validations
     }

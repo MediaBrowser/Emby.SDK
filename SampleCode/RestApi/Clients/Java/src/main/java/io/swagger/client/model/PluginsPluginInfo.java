@@ -15,9 +15,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * PluginsPluginInfo
+ * This is a serializable stub class that is used by the api to provide information about installed plugins.  
  */
-
+@Schema(description = "This is a serializable stub class that is used by the api to provide information about installed plugins.  ")
 
 public class PluginsPluginInfo {
   @SerializedName("Name")
@@ -44,10 +44,10 @@ public class PluginsPluginInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -62,10 +62,10 @@ public class PluginsPluginInfo {
   }
 
    /**
-   * Get version
+   * The version.
    * @return version
   **/
-  @Schema(description = "")
+  @Schema(description = "The version.")
   public String getVersion() {
     return version;
   }
@@ -80,10 +80,10 @@ public class PluginsPluginInfo {
   }
 
    /**
-   * Get configurationFileName
+   * The name of the configuration file.
    * @return configurationFileName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the configuration file.")
   public String getConfigurationFileName() {
     return configurationFileName;
   }
@@ -98,10 +98,10 @@ public class PluginsPluginInfo {
   }
 
    /**
-   * Get description
+   * The description.
    * @return description
   **/
-  @Schema(description = "")
+  @Schema(description = "The description.")
   public String getDescription() {
     return description;
   }
@@ -116,10 +116,10 @@ public class PluginsPluginInfo {
   }
 
    /**
-   * Get id
+   * The unique id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The unique id.")
   public String getId() {
     return id;
   }
@@ -134,10 +134,10 @@ public class PluginsPluginInfo {
   }
 
    /**
-   * Get imageTag
+   * The image URL.
    * @return imageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The image URL.")
   public String getImageTag() {
     return imageTag;
   }

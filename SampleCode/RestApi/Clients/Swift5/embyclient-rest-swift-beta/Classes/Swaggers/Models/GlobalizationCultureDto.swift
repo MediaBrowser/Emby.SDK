@@ -8,12 +8,17 @@
 import Foundation
 
 
+/** Class CultureDto   */
 
 public struct GlobalizationCultureDto: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The display name. */
     public var displayName: String?
+    /** The name of the two letter ISO language. */
     public var twoLetterISOLanguageName: String?
+    /** The name of the three letter ISO language. */
     public var threeLetterISOLanguageName: String?
     public var threeLetterISOLanguageNames: [String]?
     public var twoLetterISOLanguageNames: [String]?

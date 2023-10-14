@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The PluginsPluginInfo model module.
 * @module model/PluginsPluginInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class PluginsPluginInfo {
     /**
     * Constructs a new <code>PluginsPluginInfo</code>.
+    * This is a serializable stub class that is used by the api to provide information about installed plugins.  
     * @alias module:model/PluginsPluginInfo
     * @class
     */
@@ -64,26 +65,32 @@ export default class PluginsPluginInfo {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The version.
     * @member {String} Version
     */
     'Version' = undefined;
     /**
+    * The name of the configuration file.
     * @member {String} ConfigurationFileName
     */
     'ConfigurationFileName' = undefined;
     /**
+    * The description.
     * @member {String} Description
     */
     'Description' = undefined;
     /**
+    * The unique id.
     * @member {String} Id
     */
     'Id' = undefined;
     /**
+    * The image URL.
     * @member {String} ImageTag
     */
     'ImageTag' = undefined;

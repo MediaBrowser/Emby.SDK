@@ -10,9 +10,15 @@
  */
 
 import ApiClient from './ApiClient';
+import AccessSchedule from './model/AccessSchedule';
+import ActionsPostbackAction from './model/ActionsPostbackAction';
 import ActivityLogEntry from './model/ActivityLogEntry';
+import AlbumInfo from './model/AlbumInfo';
 import AllThemeMediaResult from './model/AllThemeMediaResult';
 import ApiBaseItemsRequest from './model/ApiBaseItemsRequest';
+import ApiConfigurationPageInfo from './model/ApiConfigurationPageInfo';
+import ApiOnPlaybackProgress from './model/ApiOnPlaybackProgress';
+import ArtistInfo from './model/ArtistInfo';
 import AttributesSimpleCondition from './model/AttributesSimpleCondition';
 import AttributesValueCondition from './model/AttributesValueCondition';
 import AuthenticateUser from './model/AuthenticateUser';
@@ -20,99 +26,67 @@ import AuthenticateUserByName from './model/AuthenticateUserByName';
 import AuthenticationAuthenticationResult from './model/AuthenticationAuthenticationResult';
 import BaseItemDto from './model/BaseItemDto';
 import BaseItemPerson from './model/BaseItemPerson';
+import BitRate from './model/BitRate';
+import BookInfo from './model/BookInfo';
 import BrandingBrandingOptions from './model/BrandingBrandingOptions';
+import ChannelManagementInfo from './model/ChannelManagementInfo';
 import ChapterInfo from './model/ChapterInfo';
 import ClientCapabilities from './model/ClientCapabilities';
+import CodecConfiguration from './model/CodecConfiguration';
+import CodecDirections from './model/CodecDirections';
+import CodecKinds from './model/CodecKinds';
+import CodecProfile from './model/CodecProfile';
+import CodecType from './model/CodecType';
 import CollectionsCollectionCreationResult from './model/CollectionsCollectionCreationResult';
+import ColorFormats from './model/ColorFormats';
+import CommonEditorTypes from './model/CommonEditorTypes';
+import CommonInterfacesICodecDeviceCapabilities from './model/CommonInterfacesICodecDeviceCapabilities';
+import CommonInterfacesICodecDeviceInfo from './model/CommonInterfacesICodecDeviceInfo';
 import CommonPluginsIPlugin from './model/CommonPluginsIPlugin';
-import ConfigurationAccessSchedule from './model/ConfigurationAccessSchedule';
-import ConfigurationCodecConfiguration from './model/ConfigurationCodecConfiguration';
-import ConfigurationDynamicDayOfWeek from './model/ConfigurationDynamicDayOfWeek';
-import ConfigurationImageOption from './model/ConfigurationImageOption';
-import ConfigurationImageSavingConvention from './model/ConfigurationImageSavingConvention';
-import ConfigurationLibraryOptions from './model/ConfigurationLibraryOptions';
-import ConfigurationMediaPathInfo from './model/ConfigurationMediaPathInfo';
-import ConfigurationMetadataFeatures from './model/ConfigurationMetadataFeatures';
-import ConfigurationPathSubstitution from './model/ConfigurationPathSubstitution';
-import ConfigurationProxyHeaderMode from './model/ConfigurationProxyHeaderMode';
-import ConfigurationSegmentSkipMode from './model/ConfigurationSegmentSkipMode';
-import ConfigurationServerConfiguration from './model/ConfigurationServerConfiguration';
-import ConfigurationSubtitlePlaybackMode from './model/ConfigurationSubtitlePlaybackMode';
-import ConfigurationTypeOptions from './model/ConfigurationTypeOptions';
-import ConfigurationUnratedItem from './model/ConfigurationUnratedItem';
-import ConfigurationUserConfiguration from './model/ConfigurationUserConfiguration';
+import ConditionsPropertyCondition from './model/ConditionsPropertyCondition';
+import ConditionsPropertyConditionType from './model/ConditionsPropertyConditionType';
+import ConfigurationToneMappingToneMapOptionsVisibility from './model/ConfigurationToneMappingToneMapOptionsVisibility';
 import ConnectConnectAuthenticationExchangeResult from './model/ConnectConnectAuthenticationExchangeResult';
 import ConnectUserLinkResult from './model/ConnectUserLinkResult';
 import ConnectUserLinkType from './model/ConnectUserLinkType';
+import ContainerProfile from './model/ContainerProfile';
 import CreateUserByName from './model/CreateUserByName';
 import DayOfWeek from './model/DayOfWeek';
 import DefaultDirectoryBrowserInfo from './model/DefaultDirectoryBrowserInfo';
+import DeviceProfile from './model/DeviceProfile';
 import DevicesContentUploadHistory from './model/DevicesContentUploadHistory';
 import DevicesDeviceInfo from './model/DevicesDeviceInfo';
 import DevicesDeviceOptions from './model/DevicesDeviceOptions';
 import DevicesLocalFileInfo from './model/DevicesLocalFileInfo';
+import DirectPlayProfile from './model/DirectPlayProfile';
 import DisplayPreferences from './model/DisplayPreferences';
-import DlnaCodecProfile from './model/DlnaCodecProfile';
-import DlnaCodecType from './model/DlnaCodecType';
-import DlnaContainerProfile from './model/DlnaContainerProfile';
-import DlnaDeviceProfile from './model/DlnaDeviceProfile';
-import DlnaDirectPlayProfile from './model/DlnaDirectPlayProfile';
-import DlnaDlnaProfileType from './model/DlnaDlnaProfileType';
-import DlnaEncodingContext from './model/DlnaEncodingContext';
-import DlnaPlaybackErrorCode from './model/DlnaPlaybackErrorCode';
-import DlnaProfileCondition from './model/DlnaProfileCondition';
-import DlnaProfileConditionType from './model/DlnaProfileConditionType';
-import DlnaProfileConditionValue from './model/DlnaProfileConditionValue';
-import DlnaResponseProfile from './model/DlnaResponseProfile';
-import DlnaSubtitleDeliveryMethod from './model/DlnaSubtitleDeliveryMethod';
-import DlnaSubtitleProfile from './model/DlnaSubtitleProfile';
-import DlnaTranscodeSeekInfo from './model/DlnaTranscodeSeekInfo';
-import DlnaTranscodingProfile from './model/DlnaTranscodingProfile';
+import DlnaProfileType from './model/DlnaProfileType';
+import DlnaProfilesDeviceIdentification from './model/DlnaProfilesDeviceIdentification';
+import DlnaProfilesDeviceProfileType from './model/DlnaProfilesDeviceProfileType';
+import DlnaProfilesDlnaProfile from './model/DlnaProfilesDlnaProfile';
+import DlnaProfilesHeaderMatchType from './model/DlnaProfilesHeaderMatchType';
+import DlnaProfilesHttpHeaderInfo from './model/DlnaProfilesHttpHeaderInfo';
+import DlnaProfilesProtocolInfoDetection from './model/DlnaProfilesProtocolInfoDetection';
 import DrawingImageOrientation from './model/DrawingImageOrientation';
-import EmbyDlnaProfilesDeviceIdentification from './model/EmbyDlnaProfilesDeviceIdentification';
-import EmbyDlnaProfilesDeviceProfileType from './model/EmbyDlnaProfilesDeviceProfileType';
-import EmbyDlnaProfilesDlnaProfile from './model/EmbyDlnaProfilesDlnaProfile';
-import EmbyDlnaProfilesHeaderMatchType from './model/EmbyDlnaProfilesHeaderMatchType';
-import EmbyDlnaProfilesHttpHeaderInfo from './model/EmbyDlnaProfilesHttpHeaderInfo';
-import EmbyDlnaProfilesProtocolInfoDetection from './model/EmbyDlnaProfilesProtocolInfoDetection';
-import EmbyFeaturesFeatureInfo from './model/EmbyFeaturesFeatureInfo';
-import EmbyFeaturesFeatureType from './model/EmbyFeaturesFeatureType';
-import EmbyLiveTVChannelManagementInfo from './model/EmbyLiveTVChannelManagementInfo';
-import EmbyMediaModelEnumsCodecDirections from './model/EmbyMediaModelEnumsCodecDirections';
-import EmbyMediaModelEnumsCodecKinds from './model/EmbyMediaModelEnumsCodecKinds';
-import EmbyMediaModelEnumsColorFormats from './model/EmbyMediaModelEnumsColorFormats';
-import EmbyMediaModelEnumsSecondaryFrameworks from './model/EmbyMediaModelEnumsSecondaryFrameworks';
-import EmbyMediaModelEnumsVideoMediaTypes from './model/EmbyMediaModelEnumsVideoMediaTypes';
-import EmbyMediaModelTypesBitRate from './model/EmbyMediaModelTypesBitRate';
-import EmbyMediaModelTypesLevelInformation from './model/EmbyMediaModelTypesLevelInformation';
-import EmbyMediaModelTypesProfileInformation from './model/EmbyMediaModelTypesProfileInformation';
-import EmbyMediaModelTypesProfileLevelInformation from './model/EmbyMediaModelTypesProfileLevelInformation';
-import EmbyMediaModelTypesResolution from './model/EmbyMediaModelTypesResolution';
-import EmbyMediaModelTypesResolutionWithRate from './model/EmbyMediaModelTypesResolutionWithRate';
-import EmbyNotificationsNotificationCategoryInfo from './model/EmbyNotificationsNotificationCategoryInfo';
-import EmbyNotificationsNotificationTypeInfo from './model/EmbyNotificationsNotificationTypeInfo';
-import EmbyNotificationsUserNotificationInfo from './model/EmbyNotificationsUserNotificationInfo';
-import EmbyWebApiConfigurationPageInfo from './model/EmbyWebApiConfigurationPageInfo';
-import EmbyWebGenericEditActionsPostbackAction from './model/EmbyWebGenericEditActionsPostbackAction';
-import EmbyWebGenericEditCommonEditorTypes from './model/EmbyWebGenericEditCommonEditorTypes';
-import EmbyWebGenericEditConditionsPropertyCondition from './model/EmbyWebGenericEditConditionsPropertyCondition';
-import EmbyWebGenericEditConditionsPropertyConditionType from './model/EmbyWebGenericEditConditionsPropertyConditionType';
-import EmbyWebGenericEditEditObjectContainer from './model/EmbyWebGenericEditEditObjectContainer';
-import EmbyWebGenericEditEditorsEditorBase from './model/EmbyWebGenericEditEditorsEditorBase';
-import EmbyWebGenericEditEditorsEditorButtonItem from './model/EmbyWebGenericEditEditorsEditorButtonItem';
-import EmbyWebGenericEditEditorsEditorRoot from './model/EmbyWebGenericEditEditorsEditorRoot';
-import EmbyWebGenericUIApiEndpointsRunUICommand from './model/EmbyWebGenericUIApiEndpointsRunUICommand';
-import EmbyWebGenericUIModelEnumsUICommandType from './model/EmbyWebGenericUIModelEnumsUICommandType';
-import EmbyWebGenericUIModelEnumsUIViewType from './model/EmbyWebGenericUIModelEnumsUIViewType';
-import EmbyWebGenericUIModelUICommand from './model/EmbyWebGenericUIModelUICommand';
-import EmbyWebGenericUIModelUITabPageInfo from './model/EmbyWebGenericUIModelUITabPageInfo';
-import EmbyWebGenericUIModelUIViewInfo from './model/EmbyWebGenericUIModelUIViewInfo';
+import DynamicDayOfWeek from './model/DynamicDayOfWeek';
+import EditObjectContainer from './model/EditObjectContainer';
+import EditorsEditorBase from './model/EditorsEditorBase';
+import EditorsEditorButtonItem from './model/EditorsEditorButtonItem';
+import EditorsEditorRoot from './model/EditorsEditorRoot';
+import EncodingContext from './model/EncodingContext';
+import EnumsUICommandType from './model/EnumsUICommandType';
+import EnumsUIViewType from './model/EnumsUIViewType';
 import ExtendedVideoSubTypes from './model/ExtendedVideoSubTypes';
 import ExtendedVideoTypes from './model/ExtendedVideoTypes';
 import ExternalIdInfo from './model/ExternalIdInfo';
 import ExternalUrl from './model/ExternalUrl';
+import FeatureInfo from './model/FeatureInfo';
+import FeatureType from './model/FeatureType';
 import ForgotPassword from './model/ForgotPassword';
+import ForgotPasswordAction from './model/ForgotPasswordAction';
 import ForgotPasswordPin from './model/ForgotPasswordPin';
+import ForgotPasswordResult from './model/ForgotPasswordResult';
+import GameInfo from './model/GameInfo';
 import GeneralCommand from './model/GeneralCommand';
 import GenericEditIEditObjectContainer from './model/GenericEditIEditObjectContainer';
 import GlobalizationCountryInfo from './model/GlobalizationCountryInfo';
@@ -121,9 +95,16 @@ import GlobalizationLocalizatonOption from './model/GlobalizationLocalizatonOpti
 import IOFileSystemEntryInfo from './model/IOFileSystemEntryInfo';
 import IOFileSystemEntryType from './model/IOFileSystemEntryType';
 import ImageInfo from './model/ImageInfo';
+import ImageOption from './model/ImageOption';
 import ImageProviderInfo from './model/ImageProviderInfo';
+import ImageSavingConvention from './model/ImageSavingConvention';
 import ImageType from './model/ImageType';
+import InstallationInfo from './model/InstallationInfo';
 import ItemCounts from './model/ItemCounts';
+import ItemFileInfo from './model/ItemFileInfo';
+import ItemFileType from './model/ItemFileType';
+import ItemLookupInfo from './model/ItemLookupInfo';
+import LevelInformation from './model/LevelInformation';
 import LibraryAddMediaPath from './model/LibraryAddMediaPath';
 import LibraryAddVirtualFolder from './model/LibraryAddVirtualFolder';
 import LibraryDeleteInfo from './model/LibraryDeleteInfo';
@@ -133,6 +114,7 @@ import LibraryLibraryOptionsResult from './model/LibraryLibraryOptionsResult';
 import LibraryLibraryTypeOptions from './model/LibraryLibraryTypeOptions';
 import LibraryMediaFolder from './model/LibraryMediaFolder';
 import LibraryMediaUpdateInfo from './model/LibraryMediaUpdateInfo';
+import LibraryOptions from './model/LibraryOptions';
 import LibraryPostUpdatedMedia from './model/LibraryPostUpdatedMedia';
 import LibraryRemoveMediaPath from './model/LibraryRemoveMediaPath';
 import LibraryRemoveVirtualFolder from './model/LibraryRemoveVirtualFolder';
@@ -141,6 +123,8 @@ import LibrarySubFolder from './model/LibrarySubFolder';
 import LibraryUpdateLibraryOptions from './model/LibraryUpdateLibraryOptions';
 import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
 import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
+import LiveStreamRequest from './model/LiveStreamRequest';
+import LiveStreamResponse from './model/LiveStreamResponse';
 import LiveTVApiEpgRow from './model/LiveTVApiEpgRow';
 import LiveTVApiListingProviderTypeInfo from './model/LiveTVApiListingProviderTypeInfo';
 import LiveTVApiSetChannelDisabled from './model/LiveTVApiSetChannelDisabled';
@@ -164,37 +148,44 @@ import LocationType from './model/LocationType';
 import LogFile from './model/LogFile';
 import LoggingLogSeverity from './model/LoggingLogSeverity';
 import MarkerType from './model/MarkerType';
-import MediaEncodingApiOnPlaybackProgress from './model/MediaEncodingApiOnPlaybackProgress';
 import MediaEncodingCodecParameterContext from './model/MediaEncodingCodecParameterContext';
-import MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities from './model/MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities';
-import MediaEncodingCodecsCommonInterfacesICodecDeviceInfo from './model/MediaEncodingCodecsCommonInterfacesICodecDeviceInfo';
-import MediaEncodingCodecsVideoCodecsVideoCodecBase from './model/MediaEncodingCodecsVideoCodecsVideoCodecBase';
-import MediaEncodingConfigurationToneMappingToneMapOptionsVisibility from './model/MediaEncodingConfigurationToneMappingToneMapOptionsVisibility';
-import MediaInfoLiveStreamRequest from './model/MediaInfoLiveStreamRequest';
-import MediaInfoLiveStreamResponse from './model/MediaInfoLiveStreamResponse';
-import MediaInfoMediaProtocol from './model/MediaInfoMediaProtocol';
-import MediaInfoPlaybackInfoRequest from './model/MediaInfoPlaybackInfoRequest';
-import MediaInfoPlaybackInfoResponse from './model/MediaInfoPlaybackInfoResponse';
-import MediaInfoTransportStreamTimestamp from './model/MediaInfoTransportStreamTimestamp';
+import MediaPathInfo from './model/MediaPathInfo';
+import MediaProtocol from './model/MediaProtocol';
 import MediaSourceInfo from './model/MediaSourceInfo';
 import MediaSourceType from './model/MediaSourceType';
 import MediaStream from './model/MediaStream';
 import MediaStreamType from './model/MediaStreamType';
 import MediaUrl from './model/MediaUrl';
 import MetadataEditorInfo from './model/MetadataEditorInfo';
+import MetadataFeatures from './model/MetadataFeatures';
 import MetadataFields from './model/MetadataFields';
+import MetadataRefreshMode from './model/MetadataRefreshMode';
+import MovieInfo from './model/MovieInfo';
+import MusicVideoInfo from './model/MusicVideoInfo';
 import NameIdPair from './model/NameIdPair';
 import NameLongIdPair from './model/NameLongIdPair';
 import NameValuePair from './model/NameValuePair';
 import NetEndPointInfo from './model/NetEndPointInfo';
 import NetSocketsAddressFamily from './model/NetSocketsAddressFamily';
+import NotificationCategoryInfo from './model/NotificationCategoryInfo';
+import NotificationTypeInfo from './model/NotificationTypeInfo';
 import OperatingSystem from './model/OperatingSystem';
+import PackageInfo from './model/PackageInfo';
+import PackageTargetSystem from './model/PackageTargetSystem';
+import PackageVersionClass from './model/PackageVersionClass';
+import PackageVersionInfo from './model/PackageVersionInfo';
 import ParentalRating from './model/ParentalRating';
+import PathSubstitution from './model/PathSubstitution';
 import PersistenceIntroDebugInfo from './model/PersistenceIntroDebugInfo';
+import PersonLookupInfo from './model/PersonLookupInfo';
 import PersonType from './model/PersonType';
+import PinRedeemResult from './model/PinRedeemResult';
 import PlayCommand from './model/PlayCommand';
 import PlayMethod from './model/PlayMethod';
 import PlayRequest from './model/PlayRequest';
+import PlaybackErrorCode from './model/PlaybackErrorCode';
+import PlaybackInfoRequest from './model/PlaybackInfoRequest';
+import PlaybackInfoResponse from './model/PlaybackInfoResponse';
 import PlaybackProgressInfo from './model/PlaybackProgressInfo';
 import PlaybackStartInfo from './model/PlaybackStartInfo';
 import PlaybackStopInfo from './model/PlaybackStopInfo';
@@ -207,42 +198,26 @@ import PluginsConfigurationPageType from './model/PluginsConfigurationPageType';
 import PluginsPluginInfo from './model/PluginsPluginInfo';
 import ProcessRunMetricsProcessMetricPoint from './model/ProcessRunMetricsProcessMetricPoint';
 import ProcessRunMetricsProcessStatistics from './model/ProcessRunMetricsProcessStatistics';
+import ProfileCondition from './model/ProfileCondition';
+import ProfileConditionType from './model/ProfileConditionType';
+import ProfileConditionValue from './model/ProfileConditionValue';
+import ProfileInformation from './model/ProfileInformation';
+import ProfileLevelInformation from './model/ProfileLevelInformation';
 import ProgressEvent from './model/ProgressEvent';
 import ProviderIdDictionary from './model/ProviderIdDictionary';
-import ProvidersAlbumInfo from './model/ProvidersAlbumInfo';
-import ProvidersArtistInfo from './model/ProvidersArtistInfo';
-import ProvidersBookInfo from './model/ProvidersBookInfo';
-import ProvidersGameInfo from './model/ProvidersGameInfo';
-import ProvidersItemLookupInfo from './model/ProvidersItemLookupInfo';
-import ProvidersMetadataRefreshMode from './model/ProvidersMetadataRefreshMode';
-import ProvidersMovieInfo from './model/ProvidersMovieInfo';
-import ProvidersMusicVideoInfo from './model/ProvidersMusicVideoInfo';
-import ProvidersPersonLookupInfo from './model/ProvidersPersonLookupInfo';
-import ProvidersRemoteSearchQueryProvidersAlbumInfo from './model/ProvidersRemoteSearchQueryProvidersAlbumInfo';
-import ProvidersRemoteSearchQueryProvidersArtistInfo from './model/ProvidersRemoteSearchQueryProvidersArtistInfo';
-import ProvidersRemoteSearchQueryProvidersBookInfo from './model/ProvidersRemoteSearchQueryProvidersBookInfo';
-import ProvidersRemoteSearchQueryProvidersGameInfo from './model/ProvidersRemoteSearchQueryProvidersGameInfo';
-import ProvidersRemoteSearchQueryProvidersItemLookupInfo from './model/ProvidersRemoteSearchQueryProvidersItemLookupInfo';
-import ProvidersRemoteSearchQueryProvidersMovieInfo from './model/ProvidersRemoteSearchQueryProvidersMovieInfo';
-import ProvidersRemoteSearchQueryProvidersMusicVideoInfo from './model/ProvidersRemoteSearchQueryProvidersMusicVideoInfo';
-import ProvidersRemoteSearchQueryProvidersPersonLookupInfo from './model/ProvidersRemoteSearchQueryProvidersPersonLookupInfo';
-import ProvidersRemoteSearchQueryProvidersSeriesInfo from './model/ProvidersRemoteSearchQueryProvidersSeriesInfo';
-import ProvidersRemoteSearchQueryProvidersTrailerInfo from './model/ProvidersRemoteSearchQueryProvidersTrailerInfo';
-import ProvidersSeriesInfo from './model/ProvidersSeriesInfo';
-import ProvidersSongInfo from './model/ProvidersSongInfo';
-import ProvidersTrailerInfo from './model/ProvidersTrailerInfo';
+import ProxyHeaderMode from './model/ProxyHeaderMode';
 import PublicSystemInfo from './model/PublicSystemInfo';
 import QueryResultActivityLogEntry from './model/QueryResultActivityLogEntry';
 import QueryResultBaseItemDto from './model/QueryResultBaseItemDto';
+import QueryResultChannelManagementInfo from './model/QueryResultChannelManagementInfo';
 import QueryResultDevicesDeviceInfo from './model/QueryResultDevicesDeviceInfo';
-import QueryResultEmbyLiveTVChannelManagementInfo from './model/QueryResultEmbyLiveTVChannelManagementInfo';
 import QueryResultLiveTVApiEpgRow from './model/QueryResultLiveTVApiEpgRow';
 import QueryResultLiveTvSeriesTimerInfoDto from './model/QueryResultLiveTvSeriesTimerInfoDto';
 import QueryResultLiveTvTimerInfoDto from './model/QueryResultLiveTvTimerInfoDto';
 import QueryResultLogFile from './model/QueryResultLogFile';
 import QueryResultString from './model/QueryResultString';
-import QueryResultSyncModelSyncJobItem from './model/QueryResultSyncModelSyncJobItem';
-import QueryResultSyncSyncJob from './model/QueryResultSyncSyncJob';
+import QueryResultSyncJob from './model/QueryResultSyncJob';
+import QueryResultSyncJobItem from './model/QueryResultSyncJobItem';
 import QueryResultUserDto from './model/QueryResultUserDto';
 import QueryResultUserLibraryOfficialRatingItem from './model/QueryResultUserLibraryOfficialRatingItem';
 import QueryResultUserLibraryTagItem from './model/QueryResultUserLibraryTagItem';
@@ -253,69 +228,93 @@ import RecommendationDto from './model/RecommendationDto';
 import RecommendationType from './model/RecommendationType';
 import RemoteImageInfo from './model/RemoteImageInfo';
 import RemoteImageResult from './model/RemoteImageResult';
+import RemoteSearchQueryAlbumInfo from './model/RemoteSearchQueryAlbumInfo';
+import RemoteSearchQueryArtistInfo from './model/RemoteSearchQueryArtistInfo';
+import RemoteSearchQueryBookInfo from './model/RemoteSearchQueryBookInfo';
+import RemoteSearchQueryGameInfo from './model/RemoteSearchQueryGameInfo';
+import RemoteSearchQueryItemLookupInfo from './model/RemoteSearchQueryItemLookupInfo';
+import RemoteSearchQueryMovieInfo from './model/RemoteSearchQueryMovieInfo';
+import RemoteSearchQueryMusicVideoInfo from './model/RemoteSearchQueryMusicVideoInfo';
+import RemoteSearchQueryPersonLookupInfo from './model/RemoteSearchQueryPersonLookupInfo';
+import RemoteSearchQuerySeriesInfo from './model/RemoteSearchQuerySeriesInfo';
+import RemoteSearchQueryTrailerInfo from './model/RemoteSearchQueryTrailerInfo';
 import RemoteSearchResult from './model/RemoteSearchResult';
 import RemoteSubtitleInfo from './model/RemoteSubtitleInfo';
 import RepeatMode from './model/RepeatMode';
+import Resolution from './model/Resolution';
+import ResolutionWithRate from './model/ResolutionWithRate';
+import ResponseProfile from './model/ResponseProfile';
 import RokuMetadataApiThumbnailInfo from './model/RokuMetadataApiThumbnailInfo';
 import RokuMetadataApiThumbnailSetInfo from './model/RokuMetadataApiThumbnailSetInfo';
+import RunUICommand from './model/RunUICommand';
+import SecondaryFrameworks from './model/SecondaryFrameworks';
+import SegmentSkipMode from './model/SegmentSkipMode';
 import SeriesDisplayOrder from './model/SeriesDisplayOrder';
+import SeriesInfo from './model/SeriesInfo';
+import ServerConfiguration from './model/ServerConfiguration';
 import SessionSessionInfo from './model/SessionSessionInfo';
 import SessionUserInfo from './model/SessionUserInfo';
+import SongInfo from './model/SongInfo';
 import SortOrder from './model/SortOrder';
+import SubtitleDeliveryMethod from './model/SubtitleDeliveryMethod';
 import SubtitleLocationType from './model/SubtitleLocationType';
+import SubtitlePlaybackMode from './model/SubtitlePlaybackMode';
+import SubtitleProfile from './model/SubtitleProfile';
 import SubtitlesSubtitleDownloadResult from './model/SubtitlesSubtitleDownloadResult';
-import SyncModelItemFileInfo from './model/SyncModelItemFileInfo';
-import SyncModelItemFileType from './model/SyncModelItemFileType';
-import SyncModelSyncDataRequest from './model/SyncModelSyncDataRequest';
-import SyncModelSyncDataResponse from './model/SyncModelSyncDataResponse';
-import SyncModelSyncDialogOptions from './model/SyncModelSyncDialogOptions';
-import SyncModelSyncJobCreationResult from './model/SyncModelSyncJobCreationResult';
-import SyncModelSyncJobItem from './model/SyncModelSyncJobItem';
-import SyncModelSyncJobItemStatus from './model/SyncModelSyncJobItemStatus';
-import SyncModelSyncJobOption from './model/SyncModelSyncJobOption';
-import SyncModelSyncJobRequest from './model/SyncModelSyncJobRequest';
-import SyncModelSyncProfileOption from './model/SyncModelSyncProfileOption';
-import SyncModelSyncQualityOption from './model/SyncModelSyncQualityOption';
-import SyncModelSyncedItem from './model/SyncModelSyncedItem';
-import SyncModelSyncedItemProgress from './model/SyncModelSyncedItemProgress';
-import SyncSyncCategory from './model/SyncSyncCategory';
-import SyncSyncJob from './model/SyncSyncJob';
-import SyncSyncJobStatus from './model/SyncSyncJobStatus';
-import SyncSyncTarget from './model/SyncSyncTarget';
+import SyncCategory from './model/SyncCategory';
+import SyncDataRequest from './model/SyncDataRequest';
+import SyncDataResponse from './model/SyncDataResponse';
+import SyncDialogOptions from './model/SyncDialogOptions';
+import SyncJob from './model/SyncJob';
+import SyncJobCreationResult from './model/SyncJobCreationResult';
+import SyncJobItem from './model/SyncJobItem';
+import SyncJobItemStatus from './model/SyncJobItemStatus';
+import SyncJobOption from './model/SyncJobOption';
+import SyncJobRequest from './model/SyncJobRequest';
+import SyncJobStatus from './model/SyncJobStatus';
+import SyncProfileOption from './model/SyncProfileOption';
+import SyncQualityOption from './model/SyncQualityOption';
+import SyncTarget from './model/SyncTarget';
+import SyncedItem from './model/SyncedItem';
+import SyncedItemProgress from './model/SyncedItemProgress';
+import SystemEvent from './model/SystemEvent';
 import SystemInfo from './model/SystemInfo';
-import TasksSystemEvent from './model/TasksSystemEvent';
-import TasksTaskCompletionStatus from './model/TasksTaskCompletionStatus';
-import TasksTaskInfo from './model/TasksTaskInfo';
-import TasksTaskResult from './model/TasksTaskResult';
-import TasksTaskState from './model/TasksTaskState';
-import TasksTaskTriggerInfo from './model/TasksTaskTriggerInfo';
+import TaskCompletionStatus from './model/TaskCompletionStatus';
+import TaskInfo from './model/TaskInfo';
+import TaskResult from './model/TaskResult';
+import TaskState from './model/TaskState';
+import TaskTriggerInfo from './model/TaskTriggerInfo';
 import ThemeMediaResult from './model/ThemeMediaResult';
-import TimeSpan from './model/TimeSpan';
+import TrailerInfo from './model/TrailerInfo';
 import TranscodeReason from './model/TranscodeReason';
+import TranscodeSeekInfo from './model/TranscodeSeekInfo';
 import TranscodingInfo from './model/TranscodingInfo';
+import TranscodingProfile from './model/TranscodingProfile';
 import TranscodingVpStepInfo from './model/TranscodingVpStepInfo';
 import TranscodingVpStepTypes from './model/TranscodingVpStepTypes';
+import TransportStreamTimestamp from './model/TransportStreamTimestamp';
 import TupleDoubleDouble from './model/TupleDoubleDouble';
+import TypeOptions from './model/TypeOptions';
+import UICommand from './model/UICommand';
+import UITabPageInfo from './model/UITabPageInfo';
+import UIViewInfo from './model/UIViewInfo';
+import UnratedItem from './model/UnratedItem';
 import UpdateUserPassword from './model/UpdateUserPassword';
-import UpdatesInstallationInfo from './model/UpdatesInstallationInfo';
-import UpdatesPackageInfo from './model/UpdatesPackageInfo';
-import UpdatesPackageTargetSystem from './model/UpdatesPackageTargetSystem';
-import UpdatesPackageVersionClass from './model/UpdatesPackageVersionClass';
-import UpdatesPackageVersionInfo from './model/UpdatesPackageVersionInfo';
+import UserAction from './model/UserAction';
+import UserActionType from './model/UserActionType';
+import UserConfiguration from './model/UserConfiguration';
 import UserDto from './model/UserDto';
 import UserItemDataDto from './model/UserItemDataDto';
 import UserLibraryAddTags from './model/UserLibraryAddTags';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
-import UsersForgotPasswordAction from './model/UsersForgotPasswordAction';
-import UsersForgotPasswordResult from './model/UsersForgotPasswordResult';
-import UsersPinRedeemResult from './model/UsersPinRedeemResult';
-import UsersUserAction from './model/UsersUserAction';
-import UsersUserActionType from './model/UsersUserActionType';
-import UsersUserPolicy from './model/UsersUserPolicy';
+import UserNotificationInfo from './model/UserNotificationInfo';
+import UserPolicy from './model/UserPolicy';
 import ValidatePath from './model/ValidatePath';
 import Version from './model/Version';
 import Video3DFormat from './model/Video3DFormat';
+import VideoCodecBase from './model/VideoCodecBase';
+import VideoMediaTypes from './model/VideoMediaTypes';
 import VirtualFolderInfo from './model/VirtualFolderInfo';
 import WakeOnLanInfo from './model/WakeOnLanInfo';
 import ActivityLogServiceApi from './EmbyClient.JavaScript.Beta/ActivityLogServiceApi';
@@ -414,7 +413,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export {
     /**
@@ -424,10 +423,28 @@ export {
     ApiClient,
 
     /**
+     * The AccessSchedule model constructor.
+     * @property {module:model/AccessSchedule}
+     */
+    AccessSchedule,
+
+    /**
+     * The ActionsPostbackAction model constructor.
+     * @property {module:model/ActionsPostbackAction}
+     */
+    ActionsPostbackAction,
+
+    /**
      * The ActivityLogEntry model constructor.
      * @property {module:model/ActivityLogEntry}
      */
     ActivityLogEntry,
+
+    /**
+     * The AlbumInfo model constructor.
+     * @property {module:model/AlbumInfo}
+     */
+    AlbumInfo,
 
     /**
      * The AllThemeMediaResult model constructor.
@@ -440,6 +457,24 @@ export {
      * @property {module:model/ApiBaseItemsRequest}
      */
     ApiBaseItemsRequest,
+
+    /**
+     * The ApiConfigurationPageInfo model constructor.
+     * @property {module:model/ApiConfigurationPageInfo}
+     */
+    ApiConfigurationPageInfo,
+
+    /**
+     * The ApiOnPlaybackProgress model constructor.
+     * @property {module:model/ApiOnPlaybackProgress}
+     */
+    ApiOnPlaybackProgress,
+
+    /**
+     * The ArtistInfo model constructor.
+     * @property {module:model/ArtistInfo}
+     */
+    ArtistInfo,
 
     /**
      * The AttributesSimpleCondition model constructor.
@@ -484,10 +519,28 @@ export {
     BaseItemPerson,
 
     /**
+     * The BitRate model constructor.
+     * @property {module:model/BitRate}
+     */
+    BitRate,
+
+    /**
+     * The BookInfo model constructor.
+     * @property {module:model/BookInfo}
+     */
+    BookInfo,
+
+    /**
      * The BrandingBrandingOptions model constructor.
      * @property {module:model/BrandingBrandingOptions}
      */
     BrandingBrandingOptions,
+
+    /**
+     * The ChannelManagementInfo model constructor.
+     * @property {module:model/ChannelManagementInfo}
+     */
+    ChannelManagementInfo,
 
     /**
      * The ChapterInfo model constructor.
@@ -502,10 +555,64 @@ export {
     ClientCapabilities,
 
     /**
+     * The CodecConfiguration model constructor.
+     * @property {module:model/CodecConfiguration}
+     */
+    CodecConfiguration,
+
+    /**
+     * The CodecDirections model constructor.
+     * @property {module:model/CodecDirections}
+     */
+    CodecDirections,
+
+    /**
+     * The CodecKinds model constructor.
+     * @property {module:model/CodecKinds}
+     */
+    CodecKinds,
+
+    /**
+     * The CodecProfile model constructor.
+     * @property {module:model/CodecProfile}
+     */
+    CodecProfile,
+
+    /**
+     * The CodecType model constructor.
+     * @property {module:model/CodecType}
+     */
+    CodecType,
+
+    /**
      * The CollectionsCollectionCreationResult model constructor.
      * @property {module:model/CollectionsCollectionCreationResult}
      */
     CollectionsCollectionCreationResult,
+
+    /**
+     * The ColorFormats model constructor.
+     * @property {module:model/ColorFormats}
+     */
+    ColorFormats,
+
+    /**
+     * The CommonEditorTypes model constructor.
+     * @property {module:model/CommonEditorTypes}
+     */
+    CommonEditorTypes,
+
+    /**
+     * The CommonInterfacesICodecDeviceCapabilities model constructor.
+     * @property {module:model/CommonInterfacesICodecDeviceCapabilities}
+     */
+    CommonInterfacesICodecDeviceCapabilities,
+
+    /**
+     * The CommonInterfacesICodecDeviceInfo model constructor.
+     * @property {module:model/CommonInterfacesICodecDeviceInfo}
+     */
+    CommonInterfacesICodecDeviceInfo,
 
     /**
      * The CommonPluginsIPlugin model constructor.
@@ -514,100 +621,22 @@ export {
     CommonPluginsIPlugin,
 
     /**
-     * The ConfigurationAccessSchedule model constructor.
-     * @property {module:model/ConfigurationAccessSchedule}
+     * The ConditionsPropertyCondition model constructor.
+     * @property {module:model/ConditionsPropertyCondition}
      */
-    ConfigurationAccessSchedule,
+    ConditionsPropertyCondition,
 
     /**
-     * The ConfigurationCodecConfiguration model constructor.
-     * @property {module:model/ConfigurationCodecConfiguration}
+     * The ConditionsPropertyConditionType model constructor.
+     * @property {module:model/ConditionsPropertyConditionType}
      */
-    ConfigurationCodecConfiguration,
+    ConditionsPropertyConditionType,
 
     /**
-     * The ConfigurationDynamicDayOfWeek model constructor.
-     * @property {module:model/ConfigurationDynamicDayOfWeek}
+     * The ConfigurationToneMappingToneMapOptionsVisibility model constructor.
+     * @property {module:model/ConfigurationToneMappingToneMapOptionsVisibility}
      */
-    ConfigurationDynamicDayOfWeek,
-
-    /**
-     * The ConfigurationImageOption model constructor.
-     * @property {module:model/ConfigurationImageOption}
-     */
-    ConfigurationImageOption,
-
-    /**
-     * The ConfigurationImageSavingConvention model constructor.
-     * @property {module:model/ConfigurationImageSavingConvention}
-     */
-    ConfigurationImageSavingConvention,
-
-    /**
-     * The ConfigurationLibraryOptions model constructor.
-     * @property {module:model/ConfigurationLibraryOptions}
-     */
-    ConfigurationLibraryOptions,
-
-    /**
-     * The ConfigurationMediaPathInfo model constructor.
-     * @property {module:model/ConfigurationMediaPathInfo}
-     */
-    ConfigurationMediaPathInfo,
-
-    /**
-     * The ConfigurationMetadataFeatures model constructor.
-     * @property {module:model/ConfigurationMetadataFeatures}
-     */
-    ConfigurationMetadataFeatures,
-
-    /**
-     * The ConfigurationPathSubstitution model constructor.
-     * @property {module:model/ConfigurationPathSubstitution}
-     */
-    ConfigurationPathSubstitution,
-
-    /**
-     * The ConfigurationProxyHeaderMode model constructor.
-     * @property {module:model/ConfigurationProxyHeaderMode}
-     */
-    ConfigurationProxyHeaderMode,
-
-    /**
-     * The ConfigurationSegmentSkipMode model constructor.
-     * @property {module:model/ConfigurationSegmentSkipMode}
-     */
-    ConfigurationSegmentSkipMode,
-
-    /**
-     * The ConfigurationServerConfiguration model constructor.
-     * @property {module:model/ConfigurationServerConfiguration}
-     */
-    ConfigurationServerConfiguration,
-
-    /**
-     * The ConfigurationSubtitlePlaybackMode model constructor.
-     * @property {module:model/ConfigurationSubtitlePlaybackMode}
-     */
-    ConfigurationSubtitlePlaybackMode,
-
-    /**
-     * The ConfigurationTypeOptions model constructor.
-     * @property {module:model/ConfigurationTypeOptions}
-     */
-    ConfigurationTypeOptions,
-
-    /**
-     * The ConfigurationUnratedItem model constructor.
-     * @property {module:model/ConfigurationUnratedItem}
-     */
-    ConfigurationUnratedItem,
-
-    /**
-     * The ConfigurationUserConfiguration model constructor.
-     * @property {module:model/ConfigurationUserConfiguration}
-     */
-    ConfigurationUserConfiguration,
+    ConfigurationToneMappingToneMapOptionsVisibility,
 
     /**
      * The ConnectConnectAuthenticationExchangeResult model constructor.
@@ -628,6 +657,12 @@ export {
     ConnectUserLinkType,
 
     /**
+     * The ContainerProfile model constructor.
+     * @property {module:model/ContainerProfile}
+     */
+    ContainerProfile,
+
+    /**
      * The CreateUserByName model constructor.
      * @property {module:model/CreateUserByName}
      */
@@ -644,6 +679,12 @@ export {
      * @property {module:model/DefaultDirectoryBrowserInfo}
      */
     DefaultDirectoryBrowserInfo,
+
+    /**
+     * The DeviceProfile model constructor.
+     * @property {module:model/DeviceProfile}
+     */
+    DeviceProfile,
 
     /**
      * The DevicesContentUploadHistory model constructor.
@@ -670,106 +711,58 @@ export {
     DevicesLocalFileInfo,
 
     /**
+     * The DirectPlayProfile model constructor.
+     * @property {module:model/DirectPlayProfile}
+     */
+    DirectPlayProfile,
+
+    /**
      * The DisplayPreferences model constructor.
      * @property {module:model/DisplayPreferences}
      */
     DisplayPreferences,
 
     /**
-     * The DlnaCodecProfile model constructor.
-     * @property {module:model/DlnaCodecProfile}
+     * The DlnaProfileType model constructor.
+     * @property {module:model/DlnaProfileType}
      */
-    DlnaCodecProfile,
+    DlnaProfileType,
 
     /**
-     * The DlnaCodecType model constructor.
-     * @property {module:model/DlnaCodecType}
+     * The DlnaProfilesDeviceIdentification model constructor.
+     * @property {module:model/DlnaProfilesDeviceIdentification}
      */
-    DlnaCodecType,
+    DlnaProfilesDeviceIdentification,
 
     /**
-     * The DlnaContainerProfile model constructor.
-     * @property {module:model/DlnaContainerProfile}
+     * The DlnaProfilesDeviceProfileType model constructor.
+     * @property {module:model/DlnaProfilesDeviceProfileType}
      */
-    DlnaContainerProfile,
+    DlnaProfilesDeviceProfileType,
 
     /**
-     * The DlnaDeviceProfile model constructor.
-     * @property {module:model/DlnaDeviceProfile}
+     * The DlnaProfilesDlnaProfile model constructor.
+     * @property {module:model/DlnaProfilesDlnaProfile}
      */
-    DlnaDeviceProfile,
+    DlnaProfilesDlnaProfile,
 
     /**
-     * The DlnaDirectPlayProfile model constructor.
-     * @property {module:model/DlnaDirectPlayProfile}
+     * The DlnaProfilesHeaderMatchType model constructor.
+     * @property {module:model/DlnaProfilesHeaderMatchType}
      */
-    DlnaDirectPlayProfile,
+    DlnaProfilesHeaderMatchType,
 
     /**
-     * The DlnaDlnaProfileType model constructor.
-     * @property {module:model/DlnaDlnaProfileType}
+     * The DlnaProfilesHttpHeaderInfo model constructor.
+     * @property {module:model/DlnaProfilesHttpHeaderInfo}
      */
-    DlnaDlnaProfileType,
+    DlnaProfilesHttpHeaderInfo,
 
     /**
-     * The DlnaEncodingContext model constructor.
-     * @property {module:model/DlnaEncodingContext}
+     * The DlnaProfilesProtocolInfoDetection model constructor.
+     * @property {module:model/DlnaProfilesProtocolInfoDetection}
      */
-    DlnaEncodingContext,
-
-    /**
-     * The DlnaPlaybackErrorCode model constructor.
-     * @property {module:model/DlnaPlaybackErrorCode}
-     */
-    DlnaPlaybackErrorCode,
-
-    /**
-     * The DlnaProfileCondition model constructor.
-     * @property {module:model/DlnaProfileCondition}
-     */
-    DlnaProfileCondition,
-
-    /**
-     * The DlnaProfileConditionType model constructor.
-     * @property {module:model/DlnaProfileConditionType}
-     */
-    DlnaProfileConditionType,
-
-    /**
-     * The DlnaProfileConditionValue model constructor.
-     * @property {module:model/DlnaProfileConditionValue}
-     */
-    DlnaProfileConditionValue,
-
-    /**
-     * The DlnaResponseProfile model constructor.
-     * @property {module:model/DlnaResponseProfile}
-     */
-    DlnaResponseProfile,
-
-    /**
-     * The DlnaSubtitleDeliveryMethod model constructor.
-     * @property {module:model/DlnaSubtitleDeliveryMethod}
-     */
-    DlnaSubtitleDeliveryMethod,
-
-    /**
-     * The DlnaSubtitleProfile model constructor.
-     * @property {module:model/DlnaSubtitleProfile}
-     */
-    DlnaSubtitleProfile,
-
-    /**
-     * The DlnaTranscodeSeekInfo model constructor.
-     * @property {module:model/DlnaTranscodeSeekInfo}
-     */
-    DlnaTranscodeSeekInfo,
-
-    /**
-     * The DlnaTranscodingProfile model constructor.
-     * @property {module:model/DlnaTranscodingProfile}
-     */
-    DlnaTranscodingProfile,
+    DlnaProfilesProtocolInfoDetection,
 
     /**
      * The DrawingImageOrientation model constructor.
@@ -778,232 +771,52 @@ export {
     DrawingImageOrientation,
 
     /**
-     * The EmbyDlnaProfilesDeviceIdentification model constructor.
-     * @property {module:model/EmbyDlnaProfilesDeviceIdentification}
+     * The DynamicDayOfWeek model constructor.
+     * @property {module:model/DynamicDayOfWeek}
      */
-    EmbyDlnaProfilesDeviceIdentification,
+    DynamicDayOfWeek,
 
     /**
-     * The EmbyDlnaProfilesDeviceProfileType model constructor.
-     * @property {module:model/EmbyDlnaProfilesDeviceProfileType}
+     * The EditObjectContainer model constructor.
+     * @property {module:model/EditObjectContainer}
      */
-    EmbyDlnaProfilesDeviceProfileType,
+    EditObjectContainer,
 
     /**
-     * The EmbyDlnaProfilesDlnaProfile model constructor.
-     * @property {module:model/EmbyDlnaProfilesDlnaProfile}
+     * The EditorsEditorBase model constructor.
+     * @property {module:model/EditorsEditorBase}
      */
-    EmbyDlnaProfilesDlnaProfile,
+    EditorsEditorBase,
 
     /**
-     * The EmbyDlnaProfilesHeaderMatchType model constructor.
-     * @property {module:model/EmbyDlnaProfilesHeaderMatchType}
+     * The EditorsEditorButtonItem model constructor.
+     * @property {module:model/EditorsEditorButtonItem}
      */
-    EmbyDlnaProfilesHeaderMatchType,
+    EditorsEditorButtonItem,
 
     /**
-     * The EmbyDlnaProfilesHttpHeaderInfo model constructor.
-     * @property {module:model/EmbyDlnaProfilesHttpHeaderInfo}
+     * The EditorsEditorRoot model constructor.
+     * @property {module:model/EditorsEditorRoot}
      */
-    EmbyDlnaProfilesHttpHeaderInfo,
+    EditorsEditorRoot,
 
     /**
-     * The EmbyDlnaProfilesProtocolInfoDetection model constructor.
-     * @property {module:model/EmbyDlnaProfilesProtocolInfoDetection}
+     * The EncodingContext model constructor.
+     * @property {module:model/EncodingContext}
      */
-    EmbyDlnaProfilesProtocolInfoDetection,
+    EncodingContext,
 
     /**
-     * The EmbyFeaturesFeatureInfo model constructor.
-     * @property {module:model/EmbyFeaturesFeatureInfo}
+     * The EnumsUICommandType model constructor.
+     * @property {module:model/EnumsUICommandType}
      */
-    EmbyFeaturesFeatureInfo,
+    EnumsUICommandType,
 
     /**
-     * The EmbyFeaturesFeatureType model constructor.
-     * @property {module:model/EmbyFeaturesFeatureType}
+     * The EnumsUIViewType model constructor.
+     * @property {module:model/EnumsUIViewType}
      */
-    EmbyFeaturesFeatureType,
-
-    /**
-     * The EmbyLiveTVChannelManagementInfo model constructor.
-     * @property {module:model/EmbyLiveTVChannelManagementInfo}
-     */
-    EmbyLiveTVChannelManagementInfo,
-
-    /**
-     * The EmbyMediaModelEnumsCodecDirections model constructor.
-     * @property {module:model/EmbyMediaModelEnumsCodecDirections}
-     */
-    EmbyMediaModelEnumsCodecDirections,
-
-    /**
-     * The EmbyMediaModelEnumsCodecKinds model constructor.
-     * @property {module:model/EmbyMediaModelEnumsCodecKinds}
-     */
-    EmbyMediaModelEnumsCodecKinds,
-
-    /**
-     * The EmbyMediaModelEnumsColorFormats model constructor.
-     * @property {module:model/EmbyMediaModelEnumsColorFormats}
-     */
-    EmbyMediaModelEnumsColorFormats,
-
-    /**
-     * The EmbyMediaModelEnumsSecondaryFrameworks model constructor.
-     * @property {module:model/EmbyMediaModelEnumsSecondaryFrameworks}
-     */
-    EmbyMediaModelEnumsSecondaryFrameworks,
-
-    /**
-     * The EmbyMediaModelEnumsVideoMediaTypes model constructor.
-     * @property {module:model/EmbyMediaModelEnumsVideoMediaTypes}
-     */
-    EmbyMediaModelEnumsVideoMediaTypes,
-
-    /**
-     * The EmbyMediaModelTypesBitRate model constructor.
-     * @property {module:model/EmbyMediaModelTypesBitRate}
-     */
-    EmbyMediaModelTypesBitRate,
-
-    /**
-     * The EmbyMediaModelTypesLevelInformation model constructor.
-     * @property {module:model/EmbyMediaModelTypesLevelInformation}
-     */
-    EmbyMediaModelTypesLevelInformation,
-
-    /**
-     * The EmbyMediaModelTypesProfileInformation model constructor.
-     * @property {module:model/EmbyMediaModelTypesProfileInformation}
-     */
-    EmbyMediaModelTypesProfileInformation,
-
-    /**
-     * The EmbyMediaModelTypesProfileLevelInformation model constructor.
-     * @property {module:model/EmbyMediaModelTypesProfileLevelInformation}
-     */
-    EmbyMediaModelTypesProfileLevelInformation,
-
-    /**
-     * The EmbyMediaModelTypesResolution model constructor.
-     * @property {module:model/EmbyMediaModelTypesResolution}
-     */
-    EmbyMediaModelTypesResolution,
-
-    /**
-     * The EmbyMediaModelTypesResolutionWithRate model constructor.
-     * @property {module:model/EmbyMediaModelTypesResolutionWithRate}
-     */
-    EmbyMediaModelTypesResolutionWithRate,
-
-    /**
-     * The EmbyNotificationsNotificationCategoryInfo model constructor.
-     * @property {module:model/EmbyNotificationsNotificationCategoryInfo}
-     */
-    EmbyNotificationsNotificationCategoryInfo,
-
-    /**
-     * The EmbyNotificationsNotificationTypeInfo model constructor.
-     * @property {module:model/EmbyNotificationsNotificationTypeInfo}
-     */
-    EmbyNotificationsNotificationTypeInfo,
-
-    /**
-     * The EmbyNotificationsUserNotificationInfo model constructor.
-     * @property {module:model/EmbyNotificationsUserNotificationInfo}
-     */
-    EmbyNotificationsUserNotificationInfo,
-
-    /**
-     * The EmbyWebApiConfigurationPageInfo model constructor.
-     * @property {module:model/EmbyWebApiConfigurationPageInfo}
-     */
-    EmbyWebApiConfigurationPageInfo,
-
-    /**
-     * The EmbyWebGenericEditActionsPostbackAction model constructor.
-     * @property {module:model/EmbyWebGenericEditActionsPostbackAction}
-     */
-    EmbyWebGenericEditActionsPostbackAction,
-
-    /**
-     * The EmbyWebGenericEditCommonEditorTypes model constructor.
-     * @property {module:model/EmbyWebGenericEditCommonEditorTypes}
-     */
-    EmbyWebGenericEditCommonEditorTypes,
-
-    /**
-     * The EmbyWebGenericEditConditionsPropertyCondition model constructor.
-     * @property {module:model/EmbyWebGenericEditConditionsPropertyCondition}
-     */
-    EmbyWebGenericEditConditionsPropertyCondition,
-
-    /**
-     * The EmbyWebGenericEditConditionsPropertyConditionType model constructor.
-     * @property {module:model/EmbyWebGenericEditConditionsPropertyConditionType}
-     */
-    EmbyWebGenericEditConditionsPropertyConditionType,
-
-    /**
-     * The EmbyWebGenericEditEditObjectContainer model constructor.
-     * @property {module:model/EmbyWebGenericEditEditObjectContainer}
-     */
-    EmbyWebGenericEditEditObjectContainer,
-
-    /**
-     * The EmbyWebGenericEditEditorsEditorBase model constructor.
-     * @property {module:model/EmbyWebGenericEditEditorsEditorBase}
-     */
-    EmbyWebGenericEditEditorsEditorBase,
-
-    /**
-     * The EmbyWebGenericEditEditorsEditorButtonItem model constructor.
-     * @property {module:model/EmbyWebGenericEditEditorsEditorButtonItem}
-     */
-    EmbyWebGenericEditEditorsEditorButtonItem,
-
-    /**
-     * The EmbyWebGenericEditEditorsEditorRoot model constructor.
-     * @property {module:model/EmbyWebGenericEditEditorsEditorRoot}
-     */
-    EmbyWebGenericEditEditorsEditorRoot,
-
-    /**
-     * The EmbyWebGenericUIApiEndpointsRunUICommand model constructor.
-     * @property {module:model/EmbyWebGenericUIApiEndpointsRunUICommand}
-     */
-    EmbyWebGenericUIApiEndpointsRunUICommand,
-
-    /**
-     * The EmbyWebGenericUIModelEnumsUICommandType model constructor.
-     * @property {module:model/EmbyWebGenericUIModelEnumsUICommandType}
-     */
-    EmbyWebGenericUIModelEnumsUICommandType,
-
-    /**
-     * The EmbyWebGenericUIModelEnumsUIViewType model constructor.
-     * @property {module:model/EmbyWebGenericUIModelEnumsUIViewType}
-     */
-    EmbyWebGenericUIModelEnumsUIViewType,
-
-    /**
-     * The EmbyWebGenericUIModelUICommand model constructor.
-     * @property {module:model/EmbyWebGenericUIModelUICommand}
-     */
-    EmbyWebGenericUIModelUICommand,
-
-    /**
-     * The EmbyWebGenericUIModelUITabPageInfo model constructor.
-     * @property {module:model/EmbyWebGenericUIModelUITabPageInfo}
-     */
-    EmbyWebGenericUIModelUITabPageInfo,
-
-    /**
-     * The EmbyWebGenericUIModelUIViewInfo model constructor.
-     * @property {module:model/EmbyWebGenericUIModelUIViewInfo}
-     */
-    EmbyWebGenericUIModelUIViewInfo,
+    EnumsUIViewType,
 
     /**
      * The ExtendedVideoSubTypes model constructor.
@@ -1030,16 +843,46 @@ export {
     ExternalUrl,
 
     /**
+     * The FeatureInfo model constructor.
+     * @property {module:model/FeatureInfo}
+     */
+    FeatureInfo,
+
+    /**
+     * The FeatureType model constructor.
+     * @property {module:model/FeatureType}
+     */
+    FeatureType,
+
+    /**
      * The ForgotPassword model constructor.
      * @property {module:model/ForgotPassword}
      */
     ForgotPassword,
 
     /**
+     * The ForgotPasswordAction model constructor.
+     * @property {module:model/ForgotPasswordAction}
+     */
+    ForgotPasswordAction,
+
+    /**
      * The ForgotPasswordPin model constructor.
      * @property {module:model/ForgotPasswordPin}
      */
     ForgotPasswordPin,
+
+    /**
+     * The ForgotPasswordResult model constructor.
+     * @property {module:model/ForgotPasswordResult}
+     */
+    ForgotPasswordResult,
+
+    /**
+     * The GameInfo model constructor.
+     * @property {module:model/GameInfo}
+     */
+    GameInfo,
 
     /**
      * The GeneralCommand model constructor.
@@ -1090,10 +933,22 @@ export {
     ImageInfo,
 
     /**
+     * The ImageOption model constructor.
+     * @property {module:model/ImageOption}
+     */
+    ImageOption,
+
+    /**
      * The ImageProviderInfo model constructor.
      * @property {module:model/ImageProviderInfo}
      */
     ImageProviderInfo,
+
+    /**
+     * The ImageSavingConvention model constructor.
+     * @property {module:model/ImageSavingConvention}
+     */
+    ImageSavingConvention,
 
     /**
      * The ImageType model constructor.
@@ -1102,10 +957,40 @@ export {
     ImageType,
 
     /**
+     * The InstallationInfo model constructor.
+     * @property {module:model/InstallationInfo}
+     */
+    InstallationInfo,
+
+    /**
      * The ItemCounts model constructor.
      * @property {module:model/ItemCounts}
      */
     ItemCounts,
+
+    /**
+     * The ItemFileInfo model constructor.
+     * @property {module:model/ItemFileInfo}
+     */
+    ItemFileInfo,
+
+    /**
+     * The ItemFileType model constructor.
+     * @property {module:model/ItemFileType}
+     */
+    ItemFileType,
+
+    /**
+     * The ItemLookupInfo model constructor.
+     * @property {module:model/ItemLookupInfo}
+     */
+    ItemLookupInfo,
+
+    /**
+     * The LevelInformation model constructor.
+     * @property {module:model/LevelInformation}
+     */
+    LevelInformation,
 
     /**
      * The LibraryAddMediaPath model constructor.
@@ -1162,6 +1047,12 @@ export {
     LibraryMediaUpdateInfo,
 
     /**
+     * The LibraryOptions model constructor.
+     * @property {module:model/LibraryOptions}
+     */
+    LibraryOptions,
+
+    /**
      * The LibraryPostUpdatedMedia model constructor.
      * @property {module:model/LibraryPostUpdatedMedia}
      */
@@ -1208,6 +1099,18 @@ export {
      * @property {module:model/LibraryUserCopyOptions}
      */
     LibraryUserCopyOptions,
+
+    /**
+     * The LiveStreamRequest model constructor.
+     * @property {module:model/LiveStreamRequest}
+     */
+    LiveStreamRequest,
+
+    /**
+     * The LiveStreamResponse model constructor.
+     * @property {module:model/LiveStreamResponse}
+     */
+    LiveStreamResponse,
 
     /**
      * The LiveTVApiEpgRow model constructor.
@@ -1348,76 +1251,22 @@ export {
     MarkerType,
 
     /**
-     * The MediaEncodingApiOnPlaybackProgress model constructor.
-     * @property {module:model/MediaEncodingApiOnPlaybackProgress}
-     */
-    MediaEncodingApiOnPlaybackProgress,
-
-    /**
      * The MediaEncodingCodecParameterContext model constructor.
      * @property {module:model/MediaEncodingCodecParameterContext}
      */
     MediaEncodingCodecParameterContext,
 
     /**
-     * The MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities model constructor.
-     * @property {module:model/MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities}
+     * The MediaPathInfo model constructor.
+     * @property {module:model/MediaPathInfo}
      */
-    MediaEncodingCodecsCommonInterfacesICodecDeviceCapabilities,
+    MediaPathInfo,
 
     /**
-     * The MediaEncodingCodecsCommonInterfacesICodecDeviceInfo model constructor.
-     * @property {module:model/MediaEncodingCodecsCommonInterfacesICodecDeviceInfo}
+     * The MediaProtocol model constructor.
+     * @property {module:model/MediaProtocol}
      */
-    MediaEncodingCodecsCommonInterfacesICodecDeviceInfo,
-
-    /**
-     * The MediaEncodingCodecsVideoCodecsVideoCodecBase model constructor.
-     * @property {module:model/MediaEncodingCodecsVideoCodecsVideoCodecBase}
-     */
-    MediaEncodingCodecsVideoCodecsVideoCodecBase,
-
-    /**
-     * The MediaEncodingConfigurationToneMappingToneMapOptionsVisibility model constructor.
-     * @property {module:model/MediaEncodingConfigurationToneMappingToneMapOptionsVisibility}
-     */
-    MediaEncodingConfigurationToneMappingToneMapOptionsVisibility,
-
-    /**
-     * The MediaInfoLiveStreamRequest model constructor.
-     * @property {module:model/MediaInfoLiveStreamRequest}
-     */
-    MediaInfoLiveStreamRequest,
-
-    /**
-     * The MediaInfoLiveStreamResponse model constructor.
-     * @property {module:model/MediaInfoLiveStreamResponse}
-     */
-    MediaInfoLiveStreamResponse,
-
-    /**
-     * The MediaInfoMediaProtocol model constructor.
-     * @property {module:model/MediaInfoMediaProtocol}
-     */
-    MediaInfoMediaProtocol,
-
-    /**
-     * The MediaInfoPlaybackInfoRequest model constructor.
-     * @property {module:model/MediaInfoPlaybackInfoRequest}
-     */
-    MediaInfoPlaybackInfoRequest,
-
-    /**
-     * The MediaInfoPlaybackInfoResponse model constructor.
-     * @property {module:model/MediaInfoPlaybackInfoResponse}
-     */
-    MediaInfoPlaybackInfoResponse,
-
-    /**
-     * The MediaInfoTransportStreamTimestamp model constructor.
-     * @property {module:model/MediaInfoTransportStreamTimestamp}
-     */
-    MediaInfoTransportStreamTimestamp,
+    MediaProtocol,
 
     /**
      * The MediaSourceInfo model constructor.
@@ -1456,10 +1305,34 @@ export {
     MetadataEditorInfo,
 
     /**
+     * The MetadataFeatures model constructor.
+     * @property {module:model/MetadataFeatures}
+     */
+    MetadataFeatures,
+
+    /**
      * The MetadataFields model constructor.
      * @property {module:model/MetadataFields}
      */
     MetadataFields,
+
+    /**
+     * The MetadataRefreshMode model constructor.
+     * @property {module:model/MetadataRefreshMode}
+     */
+    MetadataRefreshMode,
+
+    /**
+     * The MovieInfo model constructor.
+     * @property {module:model/MovieInfo}
+     */
+    MovieInfo,
+
+    /**
+     * The MusicVideoInfo model constructor.
+     * @property {module:model/MusicVideoInfo}
+     */
+    MusicVideoInfo,
 
     /**
      * The NameIdPair model constructor.
@@ -1492,10 +1365,46 @@ export {
     NetSocketsAddressFamily,
 
     /**
+     * The NotificationCategoryInfo model constructor.
+     * @property {module:model/NotificationCategoryInfo}
+     */
+    NotificationCategoryInfo,
+
+    /**
+     * The NotificationTypeInfo model constructor.
+     * @property {module:model/NotificationTypeInfo}
+     */
+    NotificationTypeInfo,
+
+    /**
      * The OperatingSystem model constructor.
      * @property {module:model/OperatingSystem}
      */
     OperatingSystem,
+
+    /**
+     * The PackageInfo model constructor.
+     * @property {module:model/PackageInfo}
+     */
+    PackageInfo,
+
+    /**
+     * The PackageTargetSystem model constructor.
+     * @property {module:model/PackageTargetSystem}
+     */
+    PackageTargetSystem,
+
+    /**
+     * The PackageVersionClass model constructor.
+     * @property {module:model/PackageVersionClass}
+     */
+    PackageVersionClass,
+
+    /**
+     * The PackageVersionInfo model constructor.
+     * @property {module:model/PackageVersionInfo}
+     */
+    PackageVersionInfo,
 
     /**
      * The ParentalRating model constructor.
@@ -1504,16 +1413,34 @@ export {
     ParentalRating,
 
     /**
+     * The PathSubstitution model constructor.
+     * @property {module:model/PathSubstitution}
+     */
+    PathSubstitution,
+
+    /**
      * The PersistenceIntroDebugInfo model constructor.
      * @property {module:model/PersistenceIntroDebugInfo}
      */
     PersistenceIntroDebugInfo,
 
     /**
+     * The PersonLookupInfo model constructor.
+     * @property {module:model/PersonLookupInfo}
+     */
+    PersonLookupInfo,
+
+    /**
      * The PersonType model constructor.
      * @property {module:model/PersonType}
      */
     PersonType,
+
+    /**
+     * The PinRedeemResult model constructor.
+     * @property {module:model/PinRedeemResult}
+     */
+    PinRedeemResult,
 
     /**
      * The PlayCommand model constructor.
@@ -1532,6 +1459,24 @@ export {
      * @property {module:model/PlayRequest}
      */
     PlayRequest,
+
+    /**
+     * The PlaybackErrorCode model constructor.
+     * @property {module:model/PlaybackErrorCode}
+     */
+    PlaybackErrorCode,
+
+    /**
+     * The PlaybackInfoRequest model constructor.
+     * @property {module:model/PlaybackInfoRequest}
+     */
+    PlaybackInfoRequest,
+
+    /**
+     * The PlaybackInfoResponse model constructor.
+     * @property {module:model/PlaybackInfoResponse}
+     */
+    PlaybackInfoResponse,
 
     /**
      * The PlaybackProgressInfo model constructor.
@@ -1606,6 +1551,36 @@ export {
     ProcessRunMetricsProcessStatistics,
 
     /**
+     * The ProfileCondition model constructor.
+     * @property {module:model/ProfileCondition}
+     */
+    ProfileCondition,
+
+    /**
+     * The ProfileConditionType model constructor.
+     * @property {module:model/ProfileConditionType}
+     */
+    ProfileConditionType,
+
+    /**
+     * The ProfileConditionValue model constructor.
+     * @property {module:model/ProfileConditionValue}
+     */
+    ProfileConditionValue,
+
+    /**
+     * The ProfileInformation model constructor.
+     * @property {module:model/ProfileInformation}
+     */
+    ProfileInformation,
+
+    /**
+     * The ProfileLevelInformation model constructor.
+     * @property {module:model/ProfileLevelInformation}
+     */
+    ProfileLevelInformation,
+
+    /**
      * The ProgressEvent model constructor.
      * @property {module:model/ProgressEvent}
      */
@@ -1618,136 +1593,10 @@ export {
     ProviderIdDictionary,
 
     /**
-     * The ProvidersAlbumInfo model constructor.
-     * @property {module:model/ProvidersAlbumInfo}
+     * The ProxyHeaderMode model constructor.
+     * @property {module:model/ProxyHeaderMode}
      */
-    ProvidersAlbumInfo,
-
-    /**
-     * The ProvidersArtistInfo model constructor.
-     * @property {module:model/ProvidersArtistInfo}
-     */
-    ProvidersArtistInfo,
-
-    /**
-     * The ProvidersBookInfo model constructor.
-     * @property {module:model/ProvidersBookInfo}
-     */
-    ProvidersBookInfo,
-
-    /**
-     * The ProvidersGameInfo model constructor.
-     * @property {module:model/ProvidersGameInfo}
-     */
-    ProvidersGameInfo,
-
-    /**
-     * The ProvidersItemLookupInfo model constructor.
-     * @property {module:model/ProvidersItemLookupInfo}
-     */
-    ProvidersItemLookupInfo,
-
-    /**
-     * The ProvidersMetadataRefreshMode model constructor.
-     * @property {module:model/ProvidersMetadataRefreshMode}
-     */
-    ProvidersMetadataRefreshMode,
-
-    /**
-     * The ProvidersMovieInfo model constructor.
-     * @property {module:model/ProvidersMovieInfo}
-     */
-    ProvidersMovieInfo,
-
-    /**
-     * The ProvidersMusicVideoInfo model constructor.
-     * @property {module:model/ProvidersMusicVideoInfo}
-     */
-    ProvidersMusicVideoInfo,
-
-    /**
-     * The ProvidersPersonLookupInfo model constructor.
-     * @property {module:model/ProvidersPersonLookupInfo}
-     */
-    ProvidersPersonLookupInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersAlbumInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersAlbumInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersAlbumInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersArtistInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersArtistInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersArtistInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersBookInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersBookInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersBookInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersGameInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersGameInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersGameInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersItemLookupInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersItemLookupInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersItemLookupInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersMovieInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersMovieInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersMovieInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersMusicVideoInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersMusicVideoInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersMusicVideoInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersPersonLookupInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersPersonLookupInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersPersonLookupInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersSeriesInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersSeriesInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersSeriesInfo,
-
-    /**
-     * The ProvidersRemoteSearchQueryProvidersTrailerInfo model constructor.
-     * @property {module:model/ProvidersRemoteSearchQueryProvidersTrailerInfo}
-     */
-    ProvidersRemoteSearchQueryProvidersTrailerInfo,
-
-    /**
-     * The ProvidersSeriesInfo model constructor.
-     * @property {module:model/ProvidersSeriesInfo}
-     */
-    ProvidersSeriesInfo,
-
-    /**
-     * The ProvidersSongInfo model constructor.
-     * @property {module:model/ProvidersSongInfo}
-     */
-    ProvidersSongInfo,
-
-    /**
-     * The ProvidersTrailerInfo model constructor.
-     * @property {module:model/ProvidersTrailerInfo}
-     */
-    ProvidersTrailerInfo,
+    ProxyHeaderMode,
 
     /**
      * The PublicSystemInfo model constructor.
@@ -1768,16 +1617,16 @@ export {
     QueryResultBaseItemDto,
 
     /**
+     * The QueryResultChannelManagementInfo model constructor.
+     * @property {module:model/QueryResultChannelManagementInfo}
+     */
+    QueryResultChannelManagementInfo,
+
+    /**
      * The QueryResultDevicesDeviceInfo model constructor.
      * @property {module:model/QueryResultDevicesDeviceInfo}
      */
     QueryResultDevicesDeviceInfo,
-
-    /**
-     * The QueryResultEmbyLiveTVChannelManagementInfo model constructor.
-     * @property {module:model/QueryResultEmbyLiveTVChannelManagementInfo}
-     */
-    QueryResultEmbyLiveTVChannelManagementInfo,
 
     /**
      * The QueryResultLiveTVApiEpgRow model constructor.
@@ -1810,16 +1659,16 @@ export {
     QueryResultString,
 
     /**
-     * The QueryResultSyncModelSyncJobItem model constructor.
-     * @property {module:model/QueryResultSyncModelSyncJobItem}
+     * The QueryResultSyncJob model constructor.
+     * @property {module:model/QueryResultSyncJob}
      */
-    QueryResultSyncModelSyncJobItem,
+    QueryResultSyncJob,
 
     /**
-     * The QueryResultSyncSyncJob model constructor.
-     * @property {module:model/QueryResultSyncSyncJob}
+     * The QueryResultSyncJobItem model constructor.
+     * @property {module:model/QueryResultSyncJobItem}
      */
-    QueryResultSyncSyncJob,
+    QueryResultSyncJobItem,
 
     /**
      * The QueryResultUserDto model constructor.
@@ -1882,6 +1731,66 @@ export {
     RemoteImageResult,
 
     /**
+     * The RemoteSearchQueryAlbumInfo model constructor.
+     * @property {module:model/RemoteSearchQueryAlbumInfo}
+     */
+    RemoteSearchQueryAlbumInfo,
+
+    /**
+     * The RemoteSearchQueryArtistInfo model constructor.
+     * @property {module:model/RemoteSearchQueryArtistInfo}
+     */
+    RemoteSearchQueryArtistInfo,
+
+    /**
+     * The RemoteSearchQueryBookInfo model constructor.
+     * @property {module:model/RemoteSearchQueryBookInfo}
+     */
+    RemoteSearchQueryBookInfo,
+
+    /**
+     * The RemoteSearchQueryGameInfo model constructor.
+     * @property {module:model/RemoteSearchQueryGameInfo}
+     */
+    RemoteSearchQueryGameInfo,
+
+    /**
+     * The RemoteSearchQueryItemLookupInfo model constructor.
+     * @property {module:model/RemoteSearchQueryItemLookupInfo}
+     */
+    RemoteSearchQueryItemLookupInfo,
+
+    /**
+     * The RemoteSearchQueryMovieInfo model constructor.
+     * @property {module:model/RemoteSearchQueryMovieInfo}
+     */
+    RemoteSearchQueryMovieInfo,
+
+    /**
+     * The RemoteSearchQueryMusicVideoInfo model constructor.
+     * @property {module:model/RemoteSearchQueryMusicVideoInfo}
+     */
+    RemoteSearchQueryMusicVideoInfo,
+
+    /**
+     * The RemoteSearchQueryPersonLookupInfo model constructor.
+     * @property {module:model/RemoteSearchQueryPersonLookupInfo}
+     */
+    RemoteSearchQueryPersonLookupInfo,
+
+    /**
+     * The RemoteSearchQuerySeriesInfo model constructor.
+     * @property {module:model/RemoteSearchQuerySeriesInfo}
+     */
+    RemoteSearchQuerySeriesInfo,
+
+    /**
+     * The RemoteSearchQueryTrailerInfo model constructor.
+     * @property {module:model/RemoteSearchQueryTrailerInfo}
+     */
+    RemoteSearchQueryTrailerInfo,
+
+    /**
      * The RemoteSearchResult model constructor.
      * @property {module:model/RemoteSearchResult}
      */
@@ -1900,6 +1809,24 @@ export {
     RepeatMode,
 
     /**
+     * The Resolution model constructor.
+     * @property {module:model/Resolution}
+     */
+    Resolution,
+
+    /**
+     * The ResolutionWithRate model constructor.
+     * @property {module:model/ResolutionWithRate}
+     */
+    ResolutionWithRate,
+
+    /**
+     * The ResponseProfile model constructor.
+     * @property {module:model/ResponseProfile}
+     */
+    ResponseProfile,
+
+    /**
      * The RokuMetadataApiThumbnailInfo model constructor.
      * @property {module:model/RokuMetadataApiThumbnailInfo}
      */
@@ -1912,10 +1839,40 @@ export {
     RokuMetadataApiThumbnailSetInfo,
 
     /**
+     * The RunUICommand model constructor.
+     * @property {module:model/RunUICommand}
+     */
+    RunUICommand,
+
+    /**
+     * The SecondaryFrameworks model constructor.
+     * @property {module:model/SecondaryFrameworks}
+     */
+    SecondaryFrameworks,
+
+    /**
+     * The SegmentSkipMode model constructor.
+     * @property {module:model/SegmentSkipMode}
+     */
+    SegmentSkipMode,
+
+    /**
      * The SeriesDisplayOrder model constructor.
      * @property {module:model/SeriesDisplayOrder}
      */
     SeriesDisplayOrder,
+
+    /**
+     * The SeriesInfo model constructor.
+     * @property {module:model/SeriesInfo}
+     */
+    SeriesInfo,
+
+    /**
+     * The ServerConfiguration model constructor.
+     * @property {module:model/ServerConfiguration}
+     */
+    ServerConfiguration,
 
     /**
      * The SessionSessionInfo model constructor.
@@ -1930,10 +1887,22 @@ export {
     SessionUserInfo,
 
     /**
+     * The SongInfo model constructor.
+     * @property {module:model/SongInfo}
+     */
+    SongInfo,
+
+    /**
      * The SortOrder model constructor.
      * @property {module:model/SortOrder}
      */
     SortOrder,
+
+    /**
+     * The SubtitleDeliveryMethod model constructor.
+     * @property {module:model/SubtitleDeliveryMethod}
+     */
+    SubtitleDeliveryMethod,
 
     /**
      * The SubtitleLocationType model constructor.
@@ -1942,118 +1911,124 @@ export {
     SubtitleLocationType,
 
     /**
+     * The SubtitlePlaybackMode model constructor.
+     * @property {module:model/SubtitlePlaybackMode}
+     */
+    SubtitlePlaybackMode,
+
+    /**
+     * The SubtitleProfile model constructor.
+     * @property {module:model/SubtitleProfile}
+     */
+    SubtitleProfile,
+
+    /**
      * The SubtitlesSubtitleDownloadResult model constructor.
      * @property {module:model/SubtitlesSubtitleDownloadResult}
      */
     SubtitlesSubtitleDownloadResult,
 
     /**
-     * The SyncModelItemFileInfo model constructor.
-     * @property {module:model/SyncModelItemFileInfo}
+     * The SyncCategory model constructor.
+     * @property {module:model/SyncCategory}
      */
-    SyncModelItemFileInfo,
+    SyncCategory,
 
     /**
-     * The SyncModelItemFileType model constructor.
-     * @property {module:model/SyncModelItemFileType}
+     * The SyncDataRequest model constructor.
+     * @property {module:model/SyncDataRequest}
      */
-    SyncModelItemFileType,
+    SyncDataRequest,
 
     /**
-     * The SyncModelSyncDataRequest model constructor.
-     * @property {module:model/SyncModelSyncDataRequest}
+     * The SyncDataResponse model constructor.
+     * @property {module:model/SyncDataResponse}
      */
-    SyncModelSyncDataRequest,
+    SyncDataResponse,
 
     /**
-     * The SyncModelSyncDataResponse model constructor.
-     * @property {module:model/SyncModelSyncDataResponse}
+     * The SyncDialogOptions model constructor.
+     * @property {module:model/SyncDialogOptions}
      */
-    SyncModelSyncDataResponse,
+    SyncDialogOptions,
 
     /**
-     * The SyncModelSyncDialogOptions model constructor.
-     * @property {module:model/SyncModelSyncDialogOptions}
+     * The SyncJob model constructor.
+     * @property {module:model/SyncJob}
      */
-    SyncModelSyncDialogOptions,
+    SyncJob,
 
     /**
-     * The SyncModelSyncJobCreationResult model constructor.
-     * @property {module:model/SyncModelSyncJobCreationResult}
+     * The SyncJobCreationResult model constructor.
+     * @property {module:model/SyncJobCreationResult}
      */
-    SyncModelSyncJobCreationResult,
+    SyncJobCreationResult,
 
     /**
-     * The SyncModelSyncJobItem model constructor.
-     * @property {module:model/SyncModelSyncJobItem}
+     * The SyncJobItem model constructor.
+     * @property {module:model/SyncJobItem}
      */
-    SyncModelSyncJobItem,
+    SyncJobItem,
 
     /**
-     * The SyncModelSyncJobItemStatus model constructor.
-     * @property {module:model/SyncModelSyncJobItemStatus}
+     * The SyncJobItemStatus model constructor.
+     * @property {module:model/SyncJobItemStatus}
      */
-    SyncModelSyncJobItemStatus,
+    SyncJobItemStatus,
 
     /**
-     * The SyncModelSyncJobOption model constructor.
-     * @property {module:model/SyncModelSyncJobOption}
+     * The SyncJobOption model constructor.
+     * @property {module:model/SyncJobOption}
      */
-    SyncModelSyncJobOption,
+    SyncJobOption,
 
     /**
-     * The SyncModelSyncJobRequest model constructor.
-     * @property {module:model/SyncModelSyncJobRequest}
+     * The SyncJobRequest model constructor.
+     * @property {module:model/SyncJobRequest}
      */
-    SyncModelSyncJobRequest,
+    SyncJobRequest,
 
     /**
-     * The SyncModelSyncProfileOption model constructor.
-     * @property {module:model/SyncModelSyncProfileOption}
+     * The SyncJobStatus model constructor.
+     * @property {module:model/SyncJobStatus}
      */
-    SyncModelSyncProfileOption,
+    SyncJobStatus,
 
     /**
-     * The SyncModelSyncQualityOption model constructor.
-     * @property {module:model/SyncModelSyncQualityOption}
+     * The SyncProfileOption model constructor.
+     * @property {module:model/SyncProfileOption}
      */
-    SyncModelSyncQualityOption,
+    SyncProfileOption,
 
     /**
-     * The SyncModelSyncedItem model constructor.
-     * @property {module:model/SyncModelSyncedItem}
+     * The SyncQualityOption model constructor.
+     * @property {module:model/SyncQualityOption}
      */
-    SyncModelSyncedItem,
+    SyncQualityOption,
 
     /**
-     * The SyncModelSyncedItemProgress model constructor.
-     * @property {module:model/SyncModelSyncedItemProgress}
+     * The SyncTarget model constructor.
+     * @property {module:model/SyncTarget}
      */
-    SyncModelSyncedItemProgress,
+    SyncTarget,
 
     /**
-     * The SyncSyncCategory model constructor.
-     * @property {module:model/SyncSyncCategory}
+     * The SyncedItem model constructor.
+     * @property {module:model/SyncedItem}
      */
-    SyncSyncCategory,
+    SyncedItem,
 
     /**
-     * The SyncSyncJob model constructor.
-     * @property {module:model/SyncSyncJob}
+     * The SyncedItemProgress model constructor.
+     * @property {module:model/SyncedItemProgress}
      */
-    SyncSyncJob,
+    SyncedItemProgress,
 
     /**
-     * The SyncSyncJobStatus model constructor.
-     * @property {module:model/SyncSyncJobStatus}
+     * The SystemEvent model constructor.
+     * @property {module:model/SystemEvent}
      */
-    SyncSyncJobStatus,
-
-    /**
-     * The SyncSyncTarget model constructor.
-     * @property {module:model/SyncSyncTarget}
-     */
-    SyncSyncTarget,
+    SystemEvent,
 
     /**
      * The SystemInfo model constructor.
@@ -2062,40 +2037,34 @@ export {
     SystemInfo,
 
     /**
-     * The TasksSystemEvent model constructor.
-     * @property {module:model/TasksSystemEvent}
+     * The TaskCompletionStatus model constructor.
+     * @property {module:model/TaskCompletionStatus}
      */
-    TasksSystemEvent,
+    TaskCompletionStatus,
 
     /**
-     * The TasksTaskCompletionStatus model constructor.
-     * @property {module:model/TasksTaskCompletionStatus}
+     * The TaskInfo model constructor.
+     * @property {module:model/TaskInfo}
      */
-    TasksTaskCompletionStatus,
+    TaskInfo,
 
     /**
-     * The TasksTaskInfo model constructor.
-     * @property {module:model/TasksTaskInfo}
+     * The TaskResult model constructor.
+     * @property {module:model/TaskResult}
      */
-    TasksTaskInfo,
+    TaskResult,
 
     /**
-     * The TasksTaskResult model constructor.
-     * @property {module:model/TasksTaskResult}
+     * The TaskState model constructor.
+     * @property {module:model/TaskState}
      */
-    TasksTaskResult,
+    TaskState,
 
     /**
-     * The TasksTaskState model constructor.
-     * @property {module:model/TasksTaskState}
+     * The TaskTriggerInfo model constructor.
+     * @property {module:model/TaskTriggerInfo}
      */
-    TasksTaskState,
-
-    /**
-     * The TasksTaskTriggerInfo model constructor.
-     * @property {module:model/TasksTaskTriggerInfo}
-     */
-    TasksTaskTriggerInfo,
+    TaskTriggerInfo,
 
     /**
      * The ThemeMediaResult model constructor.
@@ -2104,10 +2073,10 @@ export {
     ThemeMediaResult,
 
     /**
-     * The TimeSpan model constructor.
-     * @property {module:model/TimeSpan}
+     * The TrailerInfo model constructor.
+     * @property {module:model/TrailerInfo}
      */
-    TimeSpan,
+    TrailerInfo,
 
     /**
      * The TranscodeReason model constructor.
@@ -2116,10 +2085,22 @@ export {
     TranscodeReason,
 
     /**
+     * The TranscodeSeekInfo model constructor.
+     * @property {module:model/TranscodeSeekInfo}
+     */
+    TranscodeSeekInfo,
+
+    /**
      * The TranscodingInfo model constructor.
      * @property {module:model/TranscodingInfo}
      */
     TranscodingInfo,
+
+    /**
+     * The TranscodingProfile model constructor.
+     * @property {module:model/TranscodingProfile}
+     */
+    TranscodingProfile,
 
     /**
      * The TranscodingVpStepInfo model constructor.
@@ -2134,10 +2115,46 @@ export {
     TranscodingVpStepTypes,
 
     /**
+     * The TransportStreamTimestamp model constructor.
+     * @property {module:model/TransportStreamTimestamp}
+     */
+    TransportStreamTimestamp,
+
+    /**
      * The TupleDoubleDouble model constructor.
      * @property {module:model/TupleDoubleDouble}
      */
     TupleDoubleDouble,
+
+    /**
+     * The TypeOptions model constructor.
+     * @property {module:model/TypeOptions}
+     */
+    TypeOptions,
+
+    /**
+     * The UICommand model constructor.
+     * @property {module:model/UICommand}
+     */
+    UICommand,
+
+    /**
+     * The UITabPageInfo model constructor.
+     * @property {module:model/UITabPageInfo}
+     */
+    UITabPageInfo,
+
+    /**
+     * The UIViewInfo model constructor.
+     * @property {module:model/UIViewInfo}
+     */
+    UIViewInfo,
+
+    /**
+     * The UnratedItem model constructor.
+     * @property {module:model/UnratedItem}
+     */
+    UnratedItem,
 
     /**
      * The UpdateUserPassword model constructor.
@@ -2146,34 +2163,22 @@ export {
     UpdateUserPassword,
 
     /**
-     * The UpdatesInstallationInfo model constructor.
-     * @property {module:model/UpdatesInstallationInfo}
+     * The UserAction model constructor.
+     * @property {module:model/UserAction}
      */
-    UpdatesInstallationInfo,
+    UserAction,
 
     /**
-     * The UpdatesPackageInfo model constructor.
-     * @property {module:model/UpdatesPackageInfo}
+     * The UserActionType model constructor.
+     * @property {module:model/UserActionType}
      */
-    UpdatesPackageInfo,
+    UserActionType,
 
     /**
-     * The UpdatesPackageTargetSystem model constructor.
-     * @property {module:model/UpdatesPackageTargetSystem}
+     * The UserConfiguration model constructor.
+     * @property {module:model/UserConfiguration}
      */
-    UpdatesPackageTargetSystem,
-
-    /**
-     * The UpdatesPackageVersionClass model constructor.
-     * @property {module:model/UpdatesPackageVersionClass}
-     */
-    UpdatesPackageVersionClass,
-
-    /**
-     * The UpdatesPackageVersionInfo model constructor.
-     * @property {module:model/UpdatesPackageVersionInfo}
-     */
-    UpdatesPackageVersionInfo,
+    UserConfiguration,
 
     /**
      * The UserDto model constructor.
@@ -2206,40 +2211,16 @@ export {
     UserLibraryTagItem,
 
     /**
-     * The UsersForgotPasswordAction model constructor.
-     * @property {module:model/UsersForgotPasswordAction}
+     * The UserNotificationInfo model constructor.
+     * @property {module:model/UserNotificationInfo}
      */
-    UsersForgotPasswordAction,
+    UserNotificationInfo,
 
     /**
-     * The UsersForgotPasswordResult model constructor.
-     * @property {module:model/UsersForgotPasswordResult}
+     * The UserPolicy model constructor.
+     * @property {module:model/UserPolicy}
      */
-    UsersForgotPasswordResult,
-
-    /**
-     * The UsersPinRedeemResult model constructor.
-     * @property {module:model/UsersPinRedeemResult}
-     */
-    UsersPinRedeemResult,
-
-    /**
-     * The UsersUserAction model constructor.
-     * @property {module:model/UsersUserAction}
-     */
-    UsersUserAction,
-
-    /**
-     * The UsersUserActionType model constructor.
-     * @property {module:model/UsersUserActionType}
-     */
-    UsersUserActionType,
-
-    /**
-     * The UsersUserPolicy model constructor.
-     * @property {module:model/UsersUserPolicy}
-     */
-    UsersUserPolicy,
+    UserPolicy,
 
     /**
      * The ValidatePath model constructor.
@@ -2258,6 +2239,18 @@ export {
      * @property {module:model/Video3DFormat}
      */
     Video3DFormat,
+
+    /**
+     * The VideoCodecBase model constructor.
+     * @property {module:model/VideoCodecBase}
+     */
+    VideoCodecBase,
+
+    /**
+     * The VideoMediaTypes model constructor.
+     * @property {module:model/VideoMediaTypes}
+     */
+    VideoMediaTypes,
 
     /**
      * The VirtualFolderInfo model constructor.

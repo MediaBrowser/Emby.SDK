@@ -27,15 +27,15 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param pageId Id of the page controller
  * @param clientLocale Locale identifier of the client
-@return EmbyWebGenericUiModelUiViewInfo
+@return UiViewInfo
 */
-func (a *GenericUIApiServiceApiService) GetUIView(ctx context.Context, pageId string, clientLocale string) (EmbyWebGenericUiModelUiViewInfo, *http.Response, error) {
+func (a *GenericUIApiServiceApiService) GetUIView(ctx context.Context, pageId string, clientLocale string) (UiViewInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyWebGenericUiModelUiViewInfo
+		localVarReturnValue UiViewInfo
 	)
 
 	// create path and map variables
@@ -107,7 +107,7 @@ func (a *GenericUIApiServiceApiService) GetUIView(ctx context.Context, pageId st
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyWebGenericUiModelUiViewInfo
+			var v UiViewInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -126,15 +126,15 @@ GenericUIApiServiceApiService Execute a command in the context of tv setup
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body RunUICommand
-@return EmbyWebGenericUiModelUiViewInfo
+@return UiViewInfo
 */
-func (a *GenericUIApiServiceApiService) PostUICommand(ctx context.Context, body EmbyWebGenericUiApiEndpointsRunUiCommand) (EmbyWebGenericUiModelUiViewInfo, *http.Response, error) {
+func (a *GenericUIApiServiceApiService) PostUICommand(ctx context.Context, body RunUiCommand) (UiViewInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyWebGenericUiModelUiViewInfo
+		localVarReturnValue UiViewInfo
 	)
 
 	// create path and map variables
@@ -206,7 +206,7 @@ func (a *GenericUIApiServiceApiService) PostUICommand(ctx context.Context, body 
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyWebGenericUiModelUiViewInfo
+			var v UiViewInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

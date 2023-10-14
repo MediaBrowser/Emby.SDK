@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum ConfigurationPageType   */
 public enum PluginsConfigurationPageType: String, Codable {
     case pluginConfiguration = "PluginConfiguration"
     case _none = "None"

@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.ConfigurationServerConfiguration;
+import io.swagger.client.model.ServerConfiguration;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +34,7 @@ public class ConfigurationServiceApiTest {
      */
     @Test
     public void getSystemConfigurationTest() throws Exception {
-        ConfigurationServerConfiguration response = api.getSystemConfiguration();
+        ServerConfiguration response = api.getSystemConfiguration();
 
         // TODO: test validations
     }
@@ -63,7 +63,7 @@ public class ConfigurationServiceApiTest {
      */
     @Test
     public void postSystemConfigurationTest() throws Exception {
-        ConfigurationServerConfiguration body = null;
+        ServerConfiguration body = null;
         api.postSystemConfiguration(body);
 
         // TODO: test validations

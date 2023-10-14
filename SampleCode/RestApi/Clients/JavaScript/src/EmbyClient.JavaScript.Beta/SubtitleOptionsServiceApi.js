@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyWebGenericEditEditObjectContainer from '../model/EmbyWebGenericEditEditObjectContainer';
+import EditObjectContainer from '../model/EditObjectContainer';
 
 /**
 * SubtitleOptionsService service.
 * @module EmbyClient.JavaScript.Beta/SubtitleOptionsServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class SubtitleOptionsServiceApi {
 
@@ -34,7 +34,7 @@ export default class SubtitleOptionsServiceApi {
      * Callback function to receive the result of the getEncodingSubtitleoptions operation.
      * @callback module:EmbyClient.JavaScript.Beta/SubtitleOptionsServiceApi~getEncodingSubtitleoptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericEditEditObjectContainer} data The data returned by the service call.
+     * @param {module:model/EditObjectContainer} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -42,7 +42,7 @@ export default class SubtitleOptionsServiceApi {
      * Gets the subtitle options
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/SubtitleOptionsServiceApi~getEncodingSubtitleoptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericEditEditObjectContainer}
+     * data is of type: {@link module:model/EditObjectContainer}
      */
     getEncodingSubtitleoptions() {
       let postBody = null;
@@ -59,7 +59,7 @@ export default class SubtitleOptionsServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericEditEditObjectContainer;
+      let returnType = EditObjectContainer;
 
       return this.apiClient.callApi(
         '/Encoding/SubtitleOptions', 'GET',

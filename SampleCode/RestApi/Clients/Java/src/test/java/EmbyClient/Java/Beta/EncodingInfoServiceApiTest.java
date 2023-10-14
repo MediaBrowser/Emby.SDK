@@ -5,9 +5,9 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.ConfigurationCodecConfiguration;
-import io.swagger.client.model.MediaEncodingCodecsVideoCodecsVideoCodecBase;
-import io.swagger.client.model.MediaEncodingConfigurationToneMappingToneMapOptionsVisibility;
+import io.swagger.client.model.CodecConfiguration;
+import io.swagger.client.model.ConfigurationToneMappingToneMapOptionsVisibility;
+import io.swagger.client.model.VideoCodecBase;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -36,7 +36,7 @@ public class EncodingInfoServiceApiTest {
      */
     @Test
     public void getEncodingCodecconfigurationDefaultsTest() throws Exception {
-        List<ConfigurationCodecConfiguration> response = api.getEncodingCodecconfigurationDefaults();
+        List<CodecConfiguration> response = api.getEncodingCodecconfigurationDefaults();
 
         // TODO: test validations
     }
@@ -50,7 +50,7 @@ public class EncodingInfoServiceApiTest {
      */
     @Test
     public void getEncodingCodecinformationVideoTest() throws Exception {
-        List<MediaEncodingCodecsVideoCodecsVideoCodecBase> response = api.getEncodingCodecinformationVideo();
+        List<VideoCodecBase> response = api.getEncodingCodecinformationVideo();
 
         // TODO: test validations
     }
@@ -64,7 +64,7 @@ public class EncodingInfoServiceApiTest {
      */
     @Test
     public void getEncodingTonemapoptionsTest() throws Exception {
-        MediaEncodingConfigurationToneMappingToneMapOptionsVisibility response = api.getEncodingTonemapoptions();
+        ConfigurationToneMappingToneMapOptionsVisibility response = api.getEncodingTonemapoptions();
 
         // TODO: test validations
     }

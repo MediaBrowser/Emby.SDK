@@ -24,7 +24,7 @@ class LibraryAddMediaPath(object):
     swagger_types = {
         'id': 'str',
         'path': 'str',
-        'path_info': 'ConfigurationMediaPathInfo',
+        'path_info': 'MediaPathInfo',
         'refresh_library': 'bool'
     }
 
@@ -99,7 +99,7 @@ class LibraryAddMediaPath(object):
 
 
         :return: The path_info of this LibraryAddMediaPath.  # noqa: E501
-        :rtype: ConfigurationMediaPathInfo
+        :rtype: MediaPathInfo
         """
         return self._path_info
 
@@ -109,7 +109,7 @@ class LibraryAddMediaPath(object):
 
 
         :param path_info: The path_info of this LibraryAddMediaPath.  # noqa: E501
-        :type: ConfigurationMediaPathInfo
+        :type: MediaPathInfo
         """
 
         self._path_info = path_info

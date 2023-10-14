@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyFeaturesFeatureInfo from '../model/EmbyFeaturesFeatureInfo';
+import FeatureInfo from '../model/FeatureInfo';
 
 /**
 * FeatureService service.
 * @module EmbyClient.JavaScript.Beta/FeatureServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class FeatureServiceApi {
 
@@ -34,7 +34,7 @@ export default class FeatureServiceApi {
      * Callback function to receive the result of the getFeatures operation.
      * @callback module:EmbyClient.JavaScript.Beta/FeatureServiceApi~getFeaturesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/EmbyFeaturesFeatureInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/FeatureInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -42,7 +42,7 @@ export default class FeatureServiceApi {
      * Gets a list of installed features
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/FeatureServiceApi~getFeaturesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/EmbyFeaturesFeatureInfo>}
+     * data is of type: {@link Array.<module:model/FeatureInfo>}
      */
     getFeatures() {
       let postBody = null;
@@ -59,7 +59,7 @@ export default class FeatureServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [EmbyFeaturesFeatureInfo];
+      let returnType = [FeatureInfo];
 
       return this.apiClient.callApi(
         '/Features', 'GET',

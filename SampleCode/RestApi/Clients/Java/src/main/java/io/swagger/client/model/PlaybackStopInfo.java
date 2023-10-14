@@ -19,9 +19,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * PlaybackStopInfo
+ * Class PlaybackStopInfo.  
  */
-
+@Schema(description = "Class PlaybackStopInfo.  ")
 
 public class PlaybackStopInfo {
   @SerializedName("NowPlayingQueue")
@@ -167,10 +167,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get itemId
+   * The item identifier.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The item identifier.")
   public String getItemId() {
     return itemId;
   }
@@ -185,10 +185,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get sessionId
+   * The session id.
    * @return sessionId
   **/
-  @Schema(description = "")
+  @Schema(description = "The session id.")
   public String getSessionId() {
     return sessionId;
   }
@@ -203,10 +203,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get mediaSourceId
+   * The media version identifier.
    * @return mediaSourceId
   **/
-  @Schema(description = "")
+  @Schema(description = "The media version identifier.")
   public String getMediaSourceId() {
     return mediaSourceId;
   }
@@ -221,10 +221,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get positionTicks
+   * The position ticks.
    * @return positionTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The position ticks.")
   public Long getPositionTicks() {
     return positionTicks;
   }
@@ -239,10 +239,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get liveStreamId
+   * The live stream identifier.
    * @return liveStreamId
   **/
-  @Schema(description = "")
+  @Schema(description = "The live stream identifier.")
   public String getLiveStreamId() {
     return liveStreamId;
   }
@@ -257,10 +257,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get playSessionId
+   * The play session identifier.
    * @return playSessionId
   **/
-  @Schema(description = "")
+  @Schema(description = "The play session identifier.")
   public String getPlaySessionId() {
     return playSessionId;
   }
@@ -275,10 +275,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get failed
+   * A value indicating whether this &#x60;MediaBrowser.Model.Session.PlaybackStopInfo&#x60; is failed.
    * @return failed
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.")
   public Boolean isFailed() {
     return failed;
   }

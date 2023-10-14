@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyWebGenericEditEditObjectContainer;
+import io.swagger.client.model.EditObjectContainer;
 import io.swagger.client.model.MediaEncodingCodecParameterContext;
 
 import java.lang.reflect.Type;
@@ -126,11 +126,11 @@ public class CodecParameterServiceApi {
      * Requires authentication as user
      * @param codecId Codec Id (required)
      * @param parameterContext Parameter Context (required)
-     * @return EmbyWebGenericEditEditObjectContainer
+     * @return EditObjectContainer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyWebGenericEditEditObjectContainer getEncodingCodecparameters(String codecId, MediaEncodingCodecParameterContext parameterContext) throws ApiException {
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> resp = getEncodingCodecparametersWithHttpInfo(codecId, parameterContext);
+    public EditObjectContainer getEncodingCodecparameters(String codecId, MediaEncodingCodecParameterContext parameterContext) throws ApiException {
+        ApiResponse<EditObjectContainer> resp = getEncodingCodecparametersWithHttpInfo(codecId, parameterContext);
         return resp.getData();
     }
 
@@ -139,12 +139,12 @@ public class CodecParameterServiceApi {
      * Requires authentication as user
      * @param codecId Codec Id (required)
      * @param parameterContext Parameter Context (required)
-     * @return ApiResponse&lt;EmbyWebGenericEditEditObjectContainer&gt;
+     * @return ApiResponse&lt;EditObjectContainer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyWebGenericEditEditObjectContainer> getEncodingCodecparametersWithHttpInfo(String codecId, MediaEncodingCodecParameterContext parameterContext) throws ApiException {
+    public ApiResponse<EditObjectContainer> getEncodingCodecparametersWithHttpInfo(String codecId, MediaEncodingCodecParameterContext parameterContext) throws ApiException {
         com.squareup.okhttp.Call call = getEncodingCodecparametersValidateBeforeCall(codecId, parameterContext, null, null);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -157,7 +157,7 @@ public class CodecParameterServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEncodingCodecparametersAsync(String codecId, MediaEncodingCodecParameterContext parameterContext, final ApiCallback<EmbyWebGenericEditEditObjectContainer> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEncodingCodecparametersAsync(String codecId, MediaEncodingCodecParameterContext parameterContext, final ApiCallback<EditObjectContainer> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -179,7 +179,7 @@ public class CodecParameterServiceApi {
         }
 
         com.squareup.okhttp.Call call = getEncodingCodecparametersValidateBeforeCall(codecId, parameterContext, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

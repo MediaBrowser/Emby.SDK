@@ -11,6 +11,7 @@ import Foundation
 
 public struct RemoteSubtitleInfo: Codable {
 
+    /** Use language instead to return the language specified by the subtitle provider */
     public var threeLetterISOLanguageName: String?
     public var _id: String?
     public var providerName: String?

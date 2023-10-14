@@ -12,10 +12,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.MediaInfoMediaProtocol;
-import io.swagger.client.model.MediaInfoTransportStreamTimestamp;
+import io.swagger.client.model.MediaProtocol;
 import io.swagger.client.model.MediaSourceType;
 import io.swagger.client.model.MediaStream;
+import io.swagger.client.model.TransportStreamTimestamp;
 import io.swagger.client.model.Video3DFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class MediaSourceInfo {
   @SerializedName("Protocol")
-  private MediaInfoMediaProtocol protocol = null;
+  private MediaProtocol protocol = null;
 
   @SerializedName("Id")
   private String id = null;
@@ -42,7 +42,7 @@ public class MediaSourceInfo {
   private String encoderPath = null;
 
   @SerializedName("EncoderProtocol")
-  private MediaInfoMediaProtocol encoderProtocol = null;
+  private MediaProtocol encoderProtocol = null;
 
   @SerializedName("Type")
   private MediaSourceType type = null;
@@ -114,7 +114,7 @@ public class MediaSourceInfo {
   private Integer bitrate = null;
 
   @SerializedName("Timestamp")
-  private MediaInfoTransportStreamTimestamp timestamp = null;
+  private TransportStreamTimestamp timestamp = null;
 
   @SerializedName("RequiredHttpHeaders")
   private Map<String, String> requiredHttpHeaders = null;
@@ -149,7 +149,7 @@ public class MediaSourceInfo {
   @SerializedName("ServerId")
   private String serverId = null;
 
-  public MediaSourceInfo protocol(MediaInfoMediaProtocol protocol) {
+  public MediaSourceInfo protocol(MediaProtocol protocol) {
     this.protocol = protocol;
     return this;
   }
@@ -159,11 +159,11 @@ public class MediaSourceInfo {
    * @return protocol
   **/
   @Schema(description = "")
-  public MediaInfoMediaProtocol getProtocol() {
+  public MediaProtocol getProtocol() {
     return protocol;
   }
 
-  public void setProtocol(MediaInfoMediaProtocol protocol) {
+  public void setProtocol(MediaProtocol protocol) {
     this.protocol = protocol;
   }
 
@@ -221,7 +221,7 @@ public class MediaSourceInfo {
     this.encoderPath = encoderPath;
   }
 
-  public MediaSourceInfo encoderProtocol(MediaInfoMediaProtocol encoderProtocol) {
+  public MediaSourceInfo encoderProtocol(MediaProtocol encoderProtocol) {
     this.encoderProtocol = encoderProtocol;
     return this;
   }
@@ -231,11 +231,11 @@ public class MediaSourceInfo {
    * @return encoderProtocol
   **/
   @Schema(description = "")
-  public MediaInfoMediaProtocol getEncoderProtocol() {
+  public MediaProtocol getEncoderProtocol() {
     return encoderProtocol;
   }
 
-  public void setEncoderProtocol(MediaInfoMediaProtocol encoderProtocol) {
+  public void setEncoderProtocol(MediaProtocol encoderProtocol) {
     this.encoderProtocol = encoderProtocol;
   }
 
@@ -335,10 +335,10 @@ public class MediaSourceInfo {
   }
 
    /**
-   * Get isRemote
+   * Differentiate internet url vs local network
    * @return isRemote
   **/
-  @Schema(description = "")
+  @Schema(description = "Differentiate internet url vs local network")
   public Boolean isIsRemote() {
     return isRemote;
   }
@@ -669,7 +669,7 @@ public class MediaSourceInfo {
     this.bitrate = bitrate;
   }
 
-  public MediaSourceInfo timestamp(MediaInfoTransportStreamTimestamp timestamp) {
+  public MediaSourceInfo timestamp(TransportStreamTimestamp timestamp) {
     this.timestamp = timestamp;
     return this;
   }
@@ -679,11 +679,11 @@ public class MediaSourceInfo {
    * @return timestamp
   **/
   @Schema(description = "")
-  public MediaInfoTransportStreamTimestamp getTimestamp() {
+  public TransportStreamTimestamp getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(MediaInfoTransportStreamTimestamp timestamp) {
+  public void setTimestamp(TransportStreamTimestamp timestamp) {
     this.timestamp = timestamp;
   }
 
@@ -863,10 +863,10 @@ public class MediaSourceInfo {
   }
 
    /**
-   * Get itemId
+   * Used only by our Windows app. Not used by Emby Server.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
   public String getItemId() {
     return itemId;
   }
@@ -881,10 +881,10 @@ public class MediaSourceInfo {
   }
 
    /**
-   * Get serverId
+   * Used only by our Windows app. Not used by Emby Server.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
   public String getServerId() {
     return serverId;
   }

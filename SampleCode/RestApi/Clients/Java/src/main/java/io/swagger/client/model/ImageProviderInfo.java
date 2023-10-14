@@ -18,9 +18,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * ImageProviderInfo
+ * Class ImageProviderInfo.  
  */
-
+@Schema(description = "Class ImageProviderInfo.  ")
 
 public class ImageProviderInfo {
   @SerializedName("Name")
@@ -35,10 +35,10 @@ public class ImageProviderInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }

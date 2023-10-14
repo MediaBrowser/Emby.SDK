@@ -1066,7 +1066,7 @@ open class UserViewsServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Browsing the Library
-    url: https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library
+    url: https://betadev.emby.media/doc/restapi/Browsing-the-Library.html
 }
      - parameter userId: (path) User Id 
      - parameter includeExternalContent: (query) Whether or not to include external views such as channels or live tv 

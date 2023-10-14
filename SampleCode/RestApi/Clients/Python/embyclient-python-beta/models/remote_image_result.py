@@ -50,6 +50,7 @@ class RemoteImageResult(object):
     def images(self):
         """Gets the images of this RemoteImageResult.  # noqa: E501
 
+        The images.  # noqa: E501
 
         :return: The images of this RemoteImageResult.  # noqa: E501
         :rtype: list[RemoteImageInfo]
@@ -60,6 +61,7 @@ class RemoteImageResult(object):
     def images(self, images):
         """Sets the images of this RemoteImageResult.
 
+        The images.  # noqa: E501
 
         :param images: The images of this RemoteImageResult.  # noqa: E501
         :type: list[RemoteImageInfo]
@@ -71,6 +73,7 @@ class RemoteImageResult(object):
     def total_record_count(self):
         """Gets the total_record_count of this RemoteImageResult.  # noqa: E501
 
+        The total record count.  # noqa: E501
 
         :return: The total_record_count of this RemoteImageResult.  # noqa: E501
         :rtype: int
@@ -81,6 +84,7 @@ class RemoteImageResult(object):
     def total_record_count(self, total_record_count):
         """Sets the total_record_count of this RemoteImageResult.
 
+        The total record count.  # noqa: E501
 
         :param total_record_count: The total_record_count of this RemoteImageResult.  # noqa: E501
         :type: int
@@ -92,6 +96,7 @@ class RemoteImageResult(object):
     def providers(self):
         """Gets the providers of this RemoteImageResult.  # noqa: E501
 
+        The providers.  # noqa: E501
 
         :return: The providers of this RemoteImageResult.  # noqa: E501
         :rtype: list[str]
@@ -102,6 +107,7 @@ class RemoteImageResult(object):
     def providers(self, providers):
         """Sets the providers of this RemoteImageResult.
 
+        The providers.  # noqa: E501
 
         :param providers: The providers of this RemoteImageResult.  # noqa: E501
         :type: list[str]

@@ -1165,7 +1165,7 @@ open class ItemsServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter artistType: (query) Artist or AlbumArtist (optional)
      - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
@@ -2536,7 +2536,7 @@ open class ItemsServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Browsing the Library
-    url: https://github.com/MediaBrowser/Emby/wiki/Browsing-the-Library
+    url: https://betadev.emby.media/doc/restapi/Browsing-the-Library.html
 }
      - parameter userId: (path) User Id 
      - parameter artistType: (query) Artist or AlbumArtist (optional)
@@ -3909,7 +3909,7 @@ open class ItemsServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (path) User Id 
      - parameter artistType: (query) Artist or AlbumArtist (optional)

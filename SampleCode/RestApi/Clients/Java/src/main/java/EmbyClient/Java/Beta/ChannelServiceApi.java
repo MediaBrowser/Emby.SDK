@@ -61,7 +61,7 @@ public class ChannelServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available channels Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available channels Documentation</a>
      */
     public com.squareup.okhttp.Call getChannelsCall(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -146,7 +146,7 @@ public class ChannelServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available channels Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available channels Documentation</a>
      */
     public QueryResultBaseItemDto getChannels(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getChannelsWithHttpInfo(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -167,7 +167,7 @@ public class ChannelServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available channels Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available channels Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getChannelsWithHttpInfo(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getChannelsValidateBeforeCall(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -190,7 +190,7 @@ public class ChannelServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets available channels Documentation</a>
+     * @see <a href="https://betadev.emby.media/doc/restapi/Item-Information.html">Gets available channels Documentation</a>
      */
     public com.squareup.okhttp.Call getChannelsAsync(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 

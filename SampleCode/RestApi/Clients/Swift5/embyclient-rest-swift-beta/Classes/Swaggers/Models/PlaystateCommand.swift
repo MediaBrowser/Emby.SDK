@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum PlaystateCommand   */
 public enum PlaystateCommand: String, Codable {
     case stop = "Stop"
     case pause = "Pause"

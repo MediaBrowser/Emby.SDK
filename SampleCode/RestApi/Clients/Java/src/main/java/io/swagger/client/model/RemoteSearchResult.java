@@ -73,10 +73,10 @@ public class RemoteSearchResult {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -109,10 +109,10 @@ public class RemoteSearchResult {
   }
 
    /**
-   * Get productionYear
+   * The year.
    * @return productionYear
   **/
-  @Schema(description = "")
+  @Schema(description = "The year.")
   public Integer getProductionYear() {
     return productionYear;
   }

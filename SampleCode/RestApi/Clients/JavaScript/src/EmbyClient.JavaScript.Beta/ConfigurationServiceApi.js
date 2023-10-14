@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import ConfigurationServerConfiguration from '../model/ConfigurationServerConfiguration';
+import ServerConfiguration from '../model/ServerConfiguration';
 
 /**
 * ConfigurationService service.
 * @module EmbyClient.JavaScript.Beta/ConfigurationServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ConfigurationServiceApi {
 
@@ -34,7 +34,7 @@ export default class ConfigurationServiceApi {
      * Callback function to receive the result of the getSystemConfiguration operation.
      * @callback module:EmbyClient.JavaScript.Beta/ConfigurationServiceApi~getSystemConfigurationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ConfigurationServerConfiguration} data The data returned by the service call.
+     * @param {module:model/ServerConfiguration} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -42,7 +42,7 @@ export default class ConfigurationServiceApi {
      * Gets application configuration
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/ConfigurationServiceApi~getSystemConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ConfigurationServerConfiguration}
+     * data is of type: {@link module:model/ServerConfiguration}
      */
     getSystemConfiguration() {
       let postBody = null;
@@ -59,7 +59,7 @@ export default class ConfigurationServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = ConfigurationServerConfiguration;
+      let returnType = ServerConfiguration;
 
       return this.apiClient.callApi(
         '/System/Configuration', 'GET',

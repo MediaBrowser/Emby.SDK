@@ -25,7 +25,7 @@ class VirtualFolderInfo(object):
         'name': 'str',
         'locations': 'list[str]',
         'collection_type': 'str',
-        'library_options': 'ConfigurationLibraryOptions',
+        'library_options': 'LibraryOptions',
         'item_id': 'str',
         'id': 'str',
         'guid': 'str',
@@ -85,6 +85,7 @@ class VirtualFolderInfo(object):
     def name(self):
         """Gets the name of this VirtualFolderInfo.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this VirtualFolderInfo.  # noqa: E501
         :rtype: str
@@ -95,6 +96,7 @@ class VirtualFolderInfo(object):
     def name(self, name):
         """Sets the name of this VirtualFolderInfo.
 
+        The name.  # noqa: E501
 
         :param name: The name of this VirtualFolderInfo.  # noqa: E501
         :type: str
@@ -106,6 +108,7 @@ class VirtualFolderInfo(object):
     def locations(self):
         """Gets the locations of this VirtualFolderInfo.  # noqa: E501
 
+        The locations.  # noqa: E501
 
         :return: The locations of this VirtualFolderInfo.  # noqa: E501
         :rtype: list[str]
@@ -116,6 +119,7 @@ class VirtualFolderInfo(object):
     def locations(self, locations):
         """Sets the locations of this VirtualFolderInfo.
 
+        The locations.  # noqa: E501
 
         :param locations: The locations of this VirtualFolderInfo.  # noqa: E501
         :type: list[str]
@@ -127,6 +131,7 @@ class VirtualFolderInfo(object):
     def collection_type(self):
         """Gets the collection_type of this VirtualFolderInfo.  # noqa: E501
 
+        The type of the collection.  # noqa: E501
 
         :return: The collection_type of this VirtualFolderInfo.  # noqa: E501
         :rtype: str
@@ -137,6 +142,7 @@ class VirtualFolderInfo(object):
     def collection_type(self, collection_type):
         """Sets the collection_type of this VirtualFolderInfo.
 
+        The type of the collection.  # noqa: E501
 
         :param collection_type: The collection_type of this VirtualFolderInfo.  # noqa: E501
         :type: str
@@ -150,7 +156,7 @@ class VirtualFolderInfo(object):
 
 
         :return: The library_options of this VirtualFolderInfo.  # noqa: E501
-        :rtype: ConfigurationLibraryOptions
+        :rtype: LibraryOptions
         """
         return self._library_options
 
@@ -160,7 +166,7 @@ class VirtualFolderInfo(object):
 
 
         :param library_options: The library_options of this VirtualFolderInfo.  # noqa: E501
-        :type: ConfigurationLibraryOptions
+        :type: LibraryOptions
         """
 
         self._library_options = library_options
@@ -169,6 +175,7 @@ class VirtualFolderInfo(object):
     def item_id(self):
         """Gets the item_id of this VirtualFolderInfo.  # noqa: E501
 
+        The item identifier.  # noqa: E501
 
         :return: The item_id of this VirtualFolderInfo.  # noqa: E501
         :rtype: str
@@ -179,6 +186,7 @@ class VirtualFolderInfo(object):
     def item_id(self, item_id):
         """Sets the item_id of this VirtualFolderInfo.
 
+        The item identifier.  # noqa: E501
 
         :param item_id: The item_id of this VirtualFolderInfo.  # noqa: E501
         :type: str
@@ -190,6 +198,7 @@ class VirtualFolderInfo(object):
     def id(self):
         """Gets the id of this VirtualFolderInfo.  # noqa: E501
 
+        ItemId came first, so that is left for compatability purposes  # noqa: E501
 
         :return: The id of this VirtualFolderInfo.  # noqa: E501
         :rtype: str
@@ -200,6 +209,7 @@ class VirtualFolderInfo(object):
     def id(self, id):
         """Sets the id of this VirtualFolderInfo.
 
+        ItemId came first, so that is left for compatability purposes  # noqa: E501
 
         :param id: The id of this VirtualFolderInfo.  # noqa: E501
         :type: str
@@ -232,6 +242,7 @@ class VirtualFolderInfo(object):
     def primary_image_item_id(self):
         """Gets the primary_image_item_id of this VirtualFolderInfo.  # noqa: E501
 
+        The primary image item identifier.  # noqa: E501
 
         :return: The primary_image_item_id of this VirtualFolderInfo.  # noqa: E501
         :rtype: str
@@ -242,6 +253,7 @@ class VirtualFolderInfo(object):
     def primary_image_item_id(self, primary_image_item_id):
         """Sets the primary_image_item_id of this VirtualFolderInfo.
 
+        The primary image item identifier.  # noqa: E501
 
         :param primary_image_item_id: The primary_image_item_id of this VirtualFolderInfo.  # noqa: E501
         :type: str

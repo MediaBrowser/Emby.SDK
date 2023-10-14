@@ -44,10 +44,10 @@ public class ProcessRunMetricsProcessStatistics {
   }
 
    /**
-   * Get currentCpu
+   * The current cpu.
    * @return currentCpu
   **/
-  @Schema(description = "")
+  @Schema(description = "The current cpu.")
   public Double getCurrentCpu() {
     return currentCpu;
   }
@@ -62,10 +62,10 @@ public class ProcessRunMetricsProcessStatistics {
   }
 
    /**
-   * Get averageCpu
+   * The average cpu.
    * @return averageCpu
   **/
-  @Schema(description = "")
+  @Schema(description = "The average cpu.")
   public Double getAverageCpu() {
     return averageCpu;
   }
@@ -80,10 +80,10 @@ public class ProcessRunMetricsProcessStatistics {
   }
 
    /**
-   * Get currentVirtualMemory
+   * The currently allocated virtual memory.
    * @return currentVirtualMemory
   **/
-  @Schema(description = "")
+  @Schema(description = "The currently allocated virtual memory.")
   public Double getCurrentVirtualMemory() {
     return currentVirtualMemory;
   }
@@ -98,10 +98,10 @@ public class ProcessRunMetricsProcessStatistics {
   }
 
    /**
-   * Get currentWorkingSet
+   * The currently allocated working set.
    * @return currentWorkingSet
   **/
-  @Schema(description = "")
+  @Schema(description = "The currently allocated working set.")
   public Double getCurrentWorkingSet() {
     return currentWorkingSet;
   }
@@ -124,10 +124,10 @@ public class ProcessRunMetricsProcessStatistics {
   }
 
    /**
-   * Get metrics
+   * The metrics.
    * @return metrics
   **/
-  @Schema(description = "")
+  @Schema(description = "The metrics.")
   public List<ProcessRunMetricsProcessMetricPoint> getMetrics() {
     return metrics;
   }

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTvLiveTvInfo model module.
 * @module model/LiveTvLiveTvInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LiveTvLiveTvInfo {
     /**
@@ -52,10 +52,12 @@ export default class LiveTvLiveTvInfo {
     }
 
     /**
+    * A value indicating whether this instance is enabled.
     * @member {Boolean} IsEnabled
     */
     'IsEnabled' = undefined;
     /**
+    * The enabled users.
     * @member {Array.<String>} EnabledUsers
     */
     'EnabledUsers' = undefined;

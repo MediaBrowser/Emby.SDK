@@ -10,21 +10,22 @@
  */
 
 import ApiClient from '../ApiClient';
-import DlnaSubtitleDeliveryMethod from './DlnaSubtitleDeliveryMethod';
 import ExtendedVideoSubTypes from './ExtendedVideoSubTypes';
 import ExtendedVideoTypes from './ExtendedVideoTypes';
-import MediaInfoMediaProtocol from './MediaInfoMediaProtocol';
+import MediaProtocol from './MediaProtocol';
 import MediaStreamType from './MediaStreamType';
+import SubtitleDeliveryMethod from './SubtitleDeliveryMethod';
 import SubtitleLocationType from './SubtitleLocationType';
 
 /**
 * The MediaStream model module.
 * @module model/MediaStream
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class MediaStream {
     /**
     * Constructs a new <code>MediaStream</code>.
+    * MediaStream information.      MediaStream itens are typically included in a &#x60;MediaBrowser.Model.Dto.MediaSourceInfo&#x60; object.      &#x60;MediaBrowser.Model.Dto.MediaSourceInfo.MediaStreams&#x60;  
     * @alias module:model/MediaStream
     * @class
     */
@@ -156,7 +157,7 @@ export default class MediaStream {
                 obj['IsExternal'] = ApiClient.convertToType(data['IsExternal'], 'Boolean');
             }
             if (data.hasOwnProperty('DeliveryMethod')) {
-                obj['DeliveryMethod'] = DlnaSubtitleDeliveryMethod.constructFromObject(data['DeliveryMethod']);
+                obj['DeliveryMethod'] = SubtitleDeliveryMethod.constructFromObject(data['DeliveryMethod']);
             }
             if (data.hasOwnProperty('DeliveryUrl')) {
                 obj['DeliveryUrl'] = ApiClient.convertToType(data['DeliveryUrl'], 'String');
@@ -174,7 +175,7 @@ export default class MediaStream {
                 obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
             }
             if (data.hasOwnProperty('Protocol')) {
-                obj['Protocol'] = MediaInfoMediaProtocol.constructFromObject(data['Protocol']);
+                obj['Protocol'] = MediaProtocol.constructFromObject(data['Protocol']);
             }
             if (data.hasOwnProperty('PixelFormat')) {
                 obj['PixelFormat'] = ApiClient.convertToType(data['PixelFormat'], 'String');
@@ -214,46 +215,57 @@ export default class MediaStream {
     }
 
     /**
+    * The codec.    Probe Field: `codec_name`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`    Related Enums: `T:Emby.Media.Model.Enums.VideoMediaTypes`, `Emby.Media.Model.Enums.AudioMediaTypes`, `Emby.Media.Model.Enums.SubtitleMediaTypes`.
     * @member {String} Codec
     */
     'Codec' = undefined;
     /**
+    * The codec tag.    Probe Field: `codec_tag`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.
     * @member {String} CodecTag
     */
     'CodecTag' = undefined;
     /**
+    * The language.    Probe Field: `tags[\"language\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.
     * @member {String} Language
     */
     'Language' = undefined;
     /**
+    * The color transfer characteristics.    Probe Field: `color_transfer`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorTransfers`.
     * @member {String} ColorTransfer
     */
     'ColorTransfer' = undefined;
     /**
+    * The chromaticity coordinates of the source primaries.    Probe Field: `color_primaries`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorPrimaries`.
     * @member {String} ColorPrimaries
     */
     'ColorPrimaries' = undefined;
     /**
+    * The YUV colorspace type.    Probe Field: `color_space`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorSpaces`.
     * @member {String} ColorSpace
     */
     'ColorSpace' = undefined;
     /**
+    * The comment.    Probe Field: `tags[\"comment\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.
     * @member {String} Comment
     */
     'Comment' = undefined;
     /**
+    * The start time of the stream.    Probe Field: `start_time`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `System.TimeSpan`.
     * @member {Number} StreamStartTimeTicks
     */
     'StreamStartTimeTicks' = undefined;
     /**
+    * The time\\-base.    Probe Field: `time_base`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `Emby.Media.Model.Types.Rational`.
     * @member {String} TimeBase
     */
     'TimeBase' = undefined;
     /**
+    * The title.    Probe Field: `tags[\"title\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.
     * @member {String} Title
     */
     'Title' = undefined;
     /**
+    * The extradata.    Probe Field: `extradata`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Currently, this value is only parsed for subtitle streams with codec `Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext`.
     * @member {String} Extradata
     */
     'Extradata' = undefined;
@@ -262,18 +274,22 @@ export default class MediaStream {
     */
     'VideoRange' = undefined;
     /**
+    * The display title.    Custom property set by the application.
     * @member {String} DisplayTitle
     */
     'DisplayTitle' = undefined;
     /**
+    * The display language.    Custom property set by the application.
     * @member {String} DisplayLanguage
     */
     'DisplayLanguage' = undefined;
     /**
+    * The nal length size.    Probe Field: `nal_length_size`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video` of type `Emby.Media.Model.Enums.VideoMediaTypes.h264`.    Actual type: `System.Int32`.
     * @member {String} NalLengthSize
     */
     'NalLengthSize' = undefined;
     /**
+    * A value indicating whether this instance is interlaced.    Probe Field: `field_order` \\!\\= `progressive`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.
     * @member {Boolean} IsInterlaced
     */
     'IsInterlaced' = undefined;
@@ -282,18 +298,22 @@ export default class MediaStream {
     */
     'IsAVC' = undefined;
     /**
+    * The channel layout.    Probe Field: `channel_layout`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `MediaBrowser.Model.Entities.MediaStream.ChannelLayout`.
     * @member {String} ChannelLayout
     */
     'ChannelLayout' = undefined;
     /**
+    * The bit rate.    Probe Field: `bit_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!
     * @member {Number} BitRate
     */
     'BitRate' = undefined;
     /**
+    * The bit depth.    Probe Field: `bits_per_sample` or `bits_per_raw_sample`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.
     * @member {Number} BitDepth
     */
     'BitDepth' = undefined;
     /**
+    * The reference frames.    Probe Field: `refs`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.
     * @member {Number} RefFrames
     */
     'RefFrames' = undefined;
@@ -302,18 +322,22 @@ export default class MediaStream {
     */
     'Rotation' = undefined;
     /**
+    * The audio channel count.    Probe Field: `channels`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`.
     * @member {Number} Channels
     */
     'Channels' = undefined;
     /**
+    * The sample rate.    Probe Field: `sample_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `Emby.Media.Model.Enums.SampleRates`.
     * @member {Number} SampleRate
     */
     'SampleRate' = undefined;
     /**
+    * A value indicating whether this instance is default.    Probe Field: `disposition[\"default\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.
     * @member {Boolean} IsDefault
     */
     'IsDefault' = undefined;
     /**
+    * A value indicating whether this instance is forced.    Probe Field: `disposition[\"forced\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.
     * @member {Boolean} IsForced
     */
     'IsForced' = undefined;
@@ -322,22 +346,27 @@ export default class MediaStream {
     */
     'IsHearingImpaired' = undefined;
     /**
+    * The height.    Probe Field: `height`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.
     * @member {Number} Height
     */
     'Height' = undefined;
     /**
+    * The width.    Probe Field: `width`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.
     * @member {Number} Width
     */
     'Width' = undefined;
     /**
+    * The average frame rate..    Probe Field: `avg_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.
     * @member {Number} AverageFrameRate
     */
     'AverageFrameRate' = undefined;
     /**
+    * The real frame rate..    Probe Field: `r_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.
     * @member {Number} RealFrameRate
     */
     'RealFrameRate' = undefined;
     /**
+    * The profile.    Probe Field: `profile`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enums: `Emby.Media.Model.Enums.AacProfiles`, `Emby.Media.Model.Enums.AvcProfiles`, `Emby.Media.Model.Enums.H263Profiles`, `Emby.Media.Model.Enums.HevcProfiles`, `Emby.Media.Model.Enums.Mpeg2Profiles`,`Emby.Media.Model.Enums.Vc1Profiles`, `Emby.Media.Model.Enums.Mpeg4Profiles`, `Emby.Media.Model.Enums.Vp8Profiles`, `Emby.Media.Model.Enums.Vp9Profiles`.
     * @member {String} Profile
     */
     'Profile' = undefined;
@@ -346,26 +375,31 @@ export default class MediaStream {
     */
     'Type' = undefined;
     /**
+    * The aspect ratio.    Probe Field: `display_aspect_ratio`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.
     * @member {String} AspectRatio
     */
     'AspectRatio' = undefined;
     /**
+    * The index of the stream inside its container.    Probe Field: `index`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.
     * @member {Number} Index
     */
     'Index' = undefined;
     /**
+    * A value indicating whether this instance is external.    Custom property set by the application.
     * @member {Boolean} IsExternal
     */
     'IsExternal' = undefined;
     /**
-    * @member {module:model/DlnaSubtitleDeliveryMethod} DeliveryMethod
+    * @member {module:model/SubtitleDeliveryMethod} DeliveryMethod
     */
     'DeliveryMethod' = undefined;
     /**
+    * The delivery URL.    Custom property set by the application.
     * @member {String} DeliveryUrl
     */
     'DeliveryUrl' = undefined;
     /**
+    * A value indicating whether this instance is external URL.    Custom property set by the application.
     * @member {Boolean} IsExternalUrl
     */
     'IsExternalUrl' = undefined;
@@ -374,26 +408,31 @@ export default class MediaStream {
     */
     'IsTextSubtitleStream' = undefined;
     /**
+    * A value indicating whether \\[supports external stream\\].
     * @member {Boolean} SupportsExternalStream
     */
     'SupportsExternalStream' = undefined;
     /**
+    * The filename.
     * @member {String} Path
     */
     'Path' = undefined;
     /**
-    * @member {module:model/MediaInfoMediaProtocol} Protocol
+    * @member {module:model/MediaProtocol} Protocol
     */
     'Protocol' = undefined;
     /**
+    * The pixel format.    Probe Field: `pix_fmt`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `MediaBrowser.Model.Entities.MediaStream.PixelFormat`.
     * @member {String} PixelFormat
     */
     'PixelFormat' = undefined;
     /**
+    * The codec level.    Probe Field: `level`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enums: `Emby.Media.Model.Enums.AvcLevels`, `Emby.Media.Model.Enums.H263Levels`, `Emby.Media.Model.Enums.HevcLevels`, `Emby.Media.Model.Enums.Mpeg2Levels`,`Emby.Media.Model.Enums.Vc1Levels`, `Emby.Media.Model.Enums.Mpeg4Levels`, `Emby.Media.Model.Enums.Vp8Levels`, `Emby.Media.Model.Enums.Vp9Levels`.
     * @member {Number} Level
     */
     'Level' = undefined;
     /**
+    * A value indicating whether this instance is anamorphic.
     * @member {Boolean} IsAnamorphic
     */
     'IsAnamorphic' = undefined;
@@ -406,22 +445,27 @@ export default class MediaStream {
     */
     'ExtendedVideoSubType' = undefined;
     /**
+    * The extended video sub\\-type description.
     * @member {String} ExtendedVideoSubTypeDescription
     */
     'ExtendedVideoSubTypeDescription' = undefined;
     /**
+    * Used only by our Windows app. Not used by Emby Server.
     * @member {String} ItemId
     */
     'ItemId' = undefined;
     /**
+    * Used only by our Windows app. Not used by Emby Server.
     * @member {String} ServerId
     */
     'ServerId' = undefined;
     /**
+    * The size of the attachment.
     * @member {Number} AttachmentSize
     */
     'AttachmentSize' = undefined;
     /**
+    * The type of the MIME.
     * @member {String} MimeType
     */
     'MimeType' = undefined;

@@ -60,6 +60,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def current_cpu(self):
         """Gets the current_cpu of this ProcessRunMetricsProcessStatistics.  # noqa: E501
 
+        The current cpu.  # noqa: E501
 
         :return: The current_cpu of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :rtype: float
@@ -70,6 +71,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def current_cpu(self, current_cpu):
         """Sets the current_cpu of this ProcessRunMetricsProcessStatistics.
 
+        The current cpu.  # noqa: E501
 
         :param current_cpu: The current_cpu of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :type: float
@@ -81,6 +83,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def average_cpu(self):
         """Gets the average_cpu of this ProcessRunMetricsProcessStatistics.  # noqa: E501
 
+        The average cpu.  # noqa: E501
 
         :return: The average_cpu of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :rtype: float
@@ -91,6 +94,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def average_cpu(self, average_cpu):
         """Sets the average_cpu of this ProcessRunMetricsProcessStatistics.
 
+        The average cpu.  # noqa: E501
 
         :param average_cpu: The average_cpu of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :type: float
@@ -102,6 +106,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def current_virtual_memory(self):
         """Gets the current_virtual_memory of this ProcessRunMetricsProcessStatistics.  # noqa: E501
 
+        The currently allocated virtual memory.  # noqa: E501
 
         :return: The current_virtual_memory of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :rtype: float
@@ -112,6 +117,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def current_virtual_memory(self, current_virtual_memory):
         """Sets the current_virtual_memory of this ProcessRunMetricsProcessStatistics.
 
+        The currently allocated virtual memory.  # noqa: E501
 
         :param current_virtual_memory: The current_virtual_memory of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :type: float
@@ -123,6 +129,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def current_working_set(self):
         """Gets the current_working_set of this ProcessRunMetricsProcessStatistics.  # noqa: E501
 
+        The currently allocated working set.  # noqa: E501
 
         :return: The current_working_set of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :rtype: float
@@ -133,6 +140,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def current_working_set(self, current_working_set):
         """Sets the current_working_set of this ProcessRunMetricsProcessStatistics.
 
+        The currently allocated working set.  # noqa: E501
 
         :param current_working_set: The current_working_set of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :type: float
@@ -144,6 +152,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def metrics(self):
         """Gets the metrics of this ProcessRunMetricsProcessStatistics.  # noqa: E501
 
+        The metrics.  # noqa: E501
 
         :return: The metrics of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :rtype: list[ProcessRunMetricsProcessMetricPoint]
@@ -154,6 +163,7 @@ class ProcessRunMetricsProcessStatistics(object):
     def metrics(self, metrics):
         """Sets the metrics of this ProcessRunMetricsProcessStatistics.
 
+        The metrics.  # noqa: E501
 
         :param metrics: The metrics of this ProcessRunMetricsProcessStatistics.  # noqa: E501
         :type: list[ProcessRunMetricsProcessMetricPoint]

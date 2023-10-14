@@ -25,15 +25,15 @@ type FeatureServiceApiService service
 FeatureServiceApiService Gets a list of installed features
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []EmbyFeaturesFeatureInfo
+@return []FeatureInfo
 */
-func (a *FeatureServiceApiService) GetFeatures(ctx context.Context) ([]EmbyFeaturesFeatureInfo, *http.Response, error) {
+func (a *FeatureServiceApiService) GetFeatures(ctx context.Context) ([]FeatureInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []EmbyFeaturesFeatureInfo
+		localVarReturnValue []FeatureInfo
 	)
 
 	// create path and map variables
@@ -103,7 +103,7 @@ func (a *FeatureServiceApiService) GetFeatures(ctx context.Context) ([]EmbyFeatu
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []EmbyFeaturesFeatureInfo
+			var v []FeatureInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

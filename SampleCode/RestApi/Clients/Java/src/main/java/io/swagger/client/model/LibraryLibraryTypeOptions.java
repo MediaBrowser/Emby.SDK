@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationImageOption;
+import io.swagger.client.model.ImageOption;
 import io.swagger.client.model.ImageType;
 import io.swagger.client.model.LibraryLibraryOptionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -38,7 +38,7 @@ public class LibraryLibraryTypeOptions {
   private List<ImageType> supportedImageTypes = null;
 
   @SerializedName("DefaultImageOptions")
-  private List<ConfigurationImageOption> defaultImageOptions = null;
+  private List<ImageOption> defaultImageOptions = null;
 
   public LibraryLibraryTypeOptions type(String type) {
     this.type = type;
@@ -136,14 +136,14 @@ public class LibraryLibraryTypeOptions {
     this.supportedImageTypes = supportedImageTypes;
   }
 
-  public LibraryLibraryTypeOptions defaultImageOptions(List<ConfigurationImageOption> defaultImageOptions) {
+  public LibraryLibraryTypeOptions defaultImageOptions(List<ImageOption> defaultImageOptions) {
     this.defaultImageOptions = defaultImageOptions;
     return this;
   }
 
-  public LibraryLibraryTypeOptions addDefaultImageOptionsItem(ConfigurationImageOption defaultImageOptionsItem) {
+  public LibraryLibraryTypeOptions addDefaultImageOptionsItem(ImageOption defaultImageOptionsItem) {
     if (this.defaultImageOptions == null) {
-      this.defaultImageOptions = new ArrayList<ConfigurationImageOption>();
+      this.defaultImageOptions = new ArrayList<ImageOption>();
     }
     this.defaultImageOptions.add(defaultImageOptionsItem);
     return this;
@@ -154,11 +154,11 @@ public class LibraryLibraryTypeOptions {
    * @return defaultImageOptions
   **/
   @Schema(description = "")
-  public List<ConfigurationImageOption> getDefaultImageOptions() {
+  public List<ImageOption> getDefaultImageOptions() {
     return defaultImageOptions;
   }
 
-  public void setDefaultImageOptions(List<ConfigurationImageOption> defaultImageOptions) {
+  public void setDefaultImageOptions(List<ImageOption> defaultImageOptions) {
     this.defaultImageOptions = defaultImageOptions;
   }
 

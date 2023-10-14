@@ -8,29 +8,41 @@
 import Foundation
 
 
+/** Class UserDto   */
 
 public struct UserDto: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The server identifier. */
     public var serverId: String?
+    /** The name of the server. This is not used by the server and is for client\\-side usage only. */
     public var serverName: String?
     public var _prefix: String?
+    /** The name of the connect user. */
     public var connectUserName: String?
     public var dateCreated: Date?
     public var connectLinkType: ConnectUserLinkType?
+    /** The id. */
     public var _id: String?
+    /** The primary image tag. */
     public var primaryImageTag: String?
+    /** A value indicating whether this instance has password. */
     public var hasPassword: Bool?
+    /** A value indicating whether this instance has configured password. */
     public var hasConfiguredPassword: Bool?
     public var enableAutoLogin: Bool?
+    /** The last login date. */
     public var lastLoginDate: Date?
+    /** The last activity date. */
     public var lastActivityDate: Date?
-    public var configuration: ConfigurationUserConfiguration?
-    public var policy: UsersUserPolicy?
+    public var configuration: UserConfiguration?
+    public var policy: UserPolicy?
+    /** The primary image aspect ratio. */
     public var primaryImageAspectRatio: Double?
     public var hasConfiguredEasyPassword: Bool?
 
-    public init(name: String? = nil, serverId: String? = nil, serverName: String? = nil, _prefix: String? = nil, connectUserName: String? = nil, dateCreated: Date? = nil, connectLinkType: ConnectUserLinkType? = nil, _id: String? = nil, primaryImageTag: String? = nil, hasPassword: Bool? = nil, hasConfiguredPassword: Bool? = nil, enableAutoLogin: Bool? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, configuration: ConfigurationUserConfiguration? = nil, policy: UsersUserPolicy? = nil, primaryImageAspectRatio: Double? = nil, hasConfiguredEasyPassword: Bool? = nil) {
+    public init(name: String? = nil, serverId: String? = nil, serverName: String? = nil, _prefix: String? = nil, connectUserName: String? = nil, dateCreated: Date? = nil, connectLinkType: ConnectUserLinkType? = nil, _id: String? = nil, primaryImageTag: String? = nil, hasPassword: Bool? = nil, hasConfiguredPassword: Bool? = nil, enableAutoLogin: Bool? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, configuration: UserConfiguration? = nil, policy: UserPolicy? = nil, primaryImageAspectRatio: Double? = nil, hasConfiguredEasyPassword: Bool? = nil) {
         self.name = name
         self.serverId = serverId
         self.serverName = serverName

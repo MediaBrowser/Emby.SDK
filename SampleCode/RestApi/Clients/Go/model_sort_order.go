@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// SortOrder : Enum SortOrder  
 type SortOrder string
 
 // List of SortOrder

@@ -25,15 +25,15 @@ type ToneMapOptionsServiceApiService service
 ToneMapOptionsServiceApiService Gets the tone mapping options
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return EmbyWebGenericEditEditObjectContainer
+@return EditObjectContainer
 */
-func (a *ToneMapOptionsServiceApiService) GetEncodingFulltonemapoptions(ctx context.Context) (EmbyWebGenericEditEditObjectContainer, *http.Response, error) {
+func (a *ToneMapOptionsServiceApiService) GetEncodingFulltonemapoptions(ctx context.Context) (EditObjectContainer, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyWebGenericEditEditObjectContainer
+		localVarReturnValue EditObjectContainer
 	)
 
 	// create path and map variables
@@ -103,7 +103,7 @@ func (a *ToneMapOptionsServiceApiService) GetEncodingFulltonemapoptions(ctx cont
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyWebGenericEditEditObjectContainer
+			var v EditObjectContainer
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -121,15 +121,15 @@ func (a *ToneMapOptionsServiceApiService) GetEncodingFulltonemapoptions(ctx cont
 ToneMapOptionsServiceApiService Gets the tone mapping options
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return EmbyWebGenericEditEditObjectContainer
+@return EditObjectContainer
 */
-func (a *ToneMapOptionsServiceApiService) GetEncodingPublictonemapoptions(ctx context.Context) (EmbyWebGenericEditEditObjectContainer, *http.Response, error) {
+func (a *ToneMapOptionsServiceApiService) GetEncodingPublictonemapoptions(ctx context.Context) (EditObjectContainer, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyWebGenericEditEditObjectContainer
+		localVarReturnValue EditObjectContainer
 	)
 
 	// create path and map variables
@@ -199,7 +199,7 @@ func (a *ToneMapOptionsServiceApiService) GetEncodingPublictonemapoptions(ctx co
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyWebGenericEditEditObjectContainer
+			var v EditObjectContainer
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

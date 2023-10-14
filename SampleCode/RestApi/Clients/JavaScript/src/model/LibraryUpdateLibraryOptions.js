@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationLibraryOptions from './ConfigurationLibraryOptions';
+import LibraryOptions from './LibraryOptions';
 
 /**
 * The LibraryUpdateLibraryOptions model module.
 * @module model/LibraryUpdateLibraryOptions
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LibraryUpdateLibraryOptions {
     /**
@@ -46,7 +46,7 @@ export default class LibraryUpdateLibraryOptions {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
             if (data.hasOwnProperty('LibraryOptions')) {
-                obj['LibraryOptions'] = ConfigurationLibraryOptions.constructFromObject(data['LibraryOptions']);
+                obj['LibraryOptions'] = LibraryOptions.constructFromObject(data['LibraryOptions']);
             }
         }
         return obj;
@@ -57,7 +57,7 @@ export default class LibraryUpdateLibraryOptions {
     */
     'Id' = undefined;
     /**
-    * @member {module:model/ConfigurationLibraryOptions} LibraryOptions
+    * @member {module:model/LibraryOptions} LibraryOptions
     */
     'LibraryOptions' = undefined;
 

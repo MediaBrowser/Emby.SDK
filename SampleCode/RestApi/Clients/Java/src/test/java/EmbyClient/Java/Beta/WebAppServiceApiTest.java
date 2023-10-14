@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.EmbyWebApiConfigurationPageInfo;
+import io.swagger.client.model.ApiConfigurationPageInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -48,7 +48,7 @@ public class WebAppServiceApiTest {
      */
     @Test
     public void getWebConfigurationpagesTest() throws Exception {
-        List<EmbyWebApiConfigurationPageInfo> response = api.getWebConfigurationpages();
+        List<ApiConfigurationPageInfo> response = api.getWebConfigurationpages();
 
         // TODO: test validations
     }

@@ -11,22 +11,22 @@
 
 import ApiClient from "../ApiClient";
 import ExternalIdInfo from '../model/ExternalIdInfo';
-import ProvidersRemoteSearchQueryProvidersAlbumInfo from '../model/ProvidersRemoteSearchQueryProvidersAlbumInfo';
-import ProvidersRemoteSearchQueryProvidersArtistInfo from '../model/ProvidersRemoteSearchQueryProvidersArtistInfo';
-import ProvidersRemoteSearchQueryProvidersBookInfo from '../model/ProvidersRemoteSearchQueryProvidersBookInfo';
-import ProvidersRemoteSearchQueryProvidersGameInfo from '../model/ProvidersRemoteSearchQueryProvidersGameInfo';
-import ProvidersRemoteSearchQueryProvidersItemLookupInfo from '../model/ProvidersRemoteSearchQueryProvidersItemLookupInfo';
-import ProvidersRemoteSearchQueryProvidersMovieInfo from '../model/ProvidersRemoteSearchQueryProvidersMovieInfo';
-import ProvidersRemoteSearchQueryProvidersMusicVideoInfo from '../model/ProvidersRemoteSearchQueryProvidersMusicVideoInfo';
-import ProvidersRemoteSearchQueryProvidersPersonLookupInfo from '../model/ProvidersRemoteSearchQueryProvidersPersonLookupInfo';
-import ProvidersRemoteSearchQueryProvidersSeriesInfo from '../model/ProvidersRemoteSearchQueryProvidersSeriesInfo';
-import ProvidersRemoteSearchQueryProvidersTrailerInfo from '../model/ProvidersRemoteSearchQueryProvidersTrailerInfo';
+import RemoteSearchQueryAlbumInfo from '../model/RemoteSearchQueryAlbumInfo';
+import RemoteSearchQueryArtistInfo from '../model/RemoteSearchQueryArtistInfo';
+import RemoteSearchQueryBookInfo from '../model/RemoteSearchQueryBookInfo';
+import RemoteSearchQueryGameInfo from '../model/RemoteSearchQueryGameInfo';
+import RemoteSearchQueryItemLookupInfo from '../model/RemoteSearchQueryItemLookupInfo';
+import RemoteSearchQueryMovieInfo from '../model/RemoteSearchQueryMovieInfo';
+import RemoteSearchQueryMusicVideoInfo from '../model/RemoteSearchQueryMusicVideoInfo';
+import RemoteSearchQueryPersonLookupInfo from '../model/RemoteSearchQueryPersonLookupInfo';
+import RemoteSearchQuerySeriesInfo from '../model/RemoteSearchQuerySeriesInfo';
+import RemoteSearchQueryTrailerInfo from '../model/RemoteSearchQueryTrailerInfo';
 import RemoteSearchResult from '../model/RemoteSearchResult';
 
 /**
 * ItemLookupService service.
 * @module EmbyClient.JavaScript.Beta/ItemLookupServiceApi
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ItemLookupServiceApi {
 

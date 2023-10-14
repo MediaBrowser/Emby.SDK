@@ -138,7 +138,7 @@ Requires authentication as user
      * @param "MaxHeight" (optional.Int32) -  Optional. The maximum vertical resolution of the encoded video.
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-     * @param "SubtitleMethod" (optional.Interface of DlnaSubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
+     * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
      * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -361,7 +361,7 @@ Requires authentication as user
      * @param "MaxHeight" (optional.Int32) -  Optional. The maximum vertical resolution of the encoded video.
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-     * @param "SubtitleMethod" (optional.Interface of DlnaSubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
+     * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
      * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -756,7 +756,7 @@ Requires authentication as user
      * @param "MaxHeight" (optional.Int32) -  Optional. The maximum vertical resolution of the encoded video.
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-     * @param "SubtitleMethod" (optional.Interface of DlnaSubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
+     * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
      * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -979,7 +979,7 @@ Requires authentication as user
      * @param "MaxHeight" (optional.Int32) -  Optional. The maximum vertical resolution of the encoded video.
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-     * @param "SubtitleMethod" (optional.Interface of DlnaSubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
+     * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
      * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -1374,7 +1374,7 @@ Requires authentication as user
      * @param "MaxHeight" (optional.Int32) -  Optional. The maximum vertical resolution of the encoded video.
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-     * @param "SubtitleMethod" (optional.Interface of DlnaSubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
+     * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
      * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
@@ -1684,7 +1684,7 @@ Requires authentication as user
      * @param "MaxHeight" (optional.Int32) -  Optional. The maximum vertical resolution of the encoded video.
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
-     * @param "SubtitleMethod" (optional.Interface of DlnaSubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
+     * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
      * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.

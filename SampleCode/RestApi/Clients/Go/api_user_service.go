@@ -1020,7 +1020,7 @@ Requires authentication as user
  * @param id
 
 */
-func (a *UserServiceApiService) PostUsersByIdConfiguration(ctx context.Context, body ConfigurationUserConfiguration, id string) (*http.Response, error) {
+func (a *UserServiceApiService) PostUsersByIdConfiguration(ctx context.Context, body UserConfiguration, id string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1353,7 +1353,7 @@ Requires authentication as administrator
  * @param id
 
 */
-func (a *UserServiceApiService) PostUsersByIdPolicy(ctx context.Context, body UsersUserPolicy, id string) (*http.Response, error) {
+func (a *UserServiceApiService) PostUsersByIdPolicy(ctx context.Context, body UserPolicy, id string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1603,15 +1603,15 @@ UserServiceApiService Initiates the forgot password process for a local user
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body ForgotPassword
-@return UsersForgotPasswordResult
+@return ForgotPasswordResult
 */
-func (a *UserServiceApiService) PostUsersForgotpassword(ctx context.Context, body ForgotPassword) (UsersForgotPasswordResult, *http.Response, error) {
+func (a *UserServiceApiService) PostUsersForgotpassword(ctx context.Context, body ForgotPassword) (ForgotPasswordResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue UsersForgotPasswordResult
+		localVarReturnValue ForgotPasswordResult
 	)
 
 	// create path and map variables
@@ -1683,7 +1683,7 @@ func (a *UserServiceApiService) PostUsersForgotpassword(ctx context.Context, bod
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v UsersForgotPasswordResult
+			var v ForgotPasswordResult
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -1702,15 +1702,15 @@ UserServiceApiService Redeems a forgot password pin
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body ForgotPasswordPin
-@return UsersPinRedeemResult
+@return PinRedeemResult
 */
-func (a *UserServiceApiService) PostUsersForgotpasswordPin(ctx context.Context, body ForgotPasswordPin) (UsersPinRedeemResult, *http.Response, error) {
+func (a *UserServiceApiService) PostUsersForgotpasswordPin(ctx context.Context, body ForgotPasswordPin) (PinRedeemResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue UsersPinRedeemResult
+		localVarReturnValue PinRedeemResult
 	)
 
 	// create path and map variables
@@ -1782,7 +1782,7 @@ func (a *UserServiceApiService) PostUsersForgotpasswordPin(ctx context.Context, 
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v UsersPinRedeemResult
+			var v PinRedeemResult
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

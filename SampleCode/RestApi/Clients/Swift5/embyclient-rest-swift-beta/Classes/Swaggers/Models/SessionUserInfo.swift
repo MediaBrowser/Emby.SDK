@@ -8,10 +8,13 @@
 import Foundation
 
 
+/** Class SessionUserInfo.   */
 
 public struct SessionUserInfo: Codable {
 
+    /** The user identifier. */
     public var userId: String?
+    /** The name of the user. */
     public var userName: String?
     public var userInternalId: Int64?
 

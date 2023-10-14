@@ -212,7 +212,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchBook(body: ProvidersRemoteSearchQueryProvidersBookInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchBook(body: RemoteSearchQueryBookInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchBookWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -265,7 +265,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchBookWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersBookInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchBookWithRequestBuilder(body: RemoteSearchQueryBookInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Book"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -281,7 +281,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchBoxset(body: ProvidersRemoteSearchQueryProvidersItemLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchBoxset(body: RemoteSearchQueryItemLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchBoxsetWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -334,7 +334,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchBoxsetWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersItemLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchBoxsetWithRequestBuilder(body: RemoteSearchQueryItemLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/BoxSet"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -350,7 +350,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchGame(body: ProvidersRemoteSearchQueryProvidersGameInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchGame(body: RemoteSearchQueryGameInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchGameWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -403,7 +403,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchGameWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersGameInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchGameWithRequestBuilder(body: RemoteSearchQueryGameInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Game"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -419,7 +419,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMovie(body: ProvidersRemoteSearchQueryProvidersMovieInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMovie(body: RemoteSearchQueryMovieInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMovieWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -472,7 +472,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMovieWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersMovieInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMovieWithRequestBuilder(body: RemoteSearchQueryMovieInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Movie"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -488,7 +488,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMusicalbum(body: ProvidersRemoteSearchQueryProvidersAlbumInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMusicalbum(body: RemoteSearchQueryAlbumInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMusicalbumWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -541,7 +541,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMusicalbumWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersAlbumInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMusicalbumWithRequestBuilder(body: RemoteSearchQueryAlbumInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/MusicAlbum"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -557,7 +557,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMusicartist(body: ProvidersRemoteSearchQueryProvidersArtistInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMusicartist(body: RemoteSearchQueryArtistInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMusicartistWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -610,7 +610,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMusicartistWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersArtistInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMusicartistWithRequestBuilder(body: RemoteSearchQueryArtistInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/MusicArtist"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -626,7 +626,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMusicvideo(body: ProvidersRemoteSearchQueryProvidersMusicVideoInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMusicvideo(body: RemoteSearchQueryMusicVideoInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMusicvideoWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -679,7 +679,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMusicvideoWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersMusicVideoInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMusicvideoWithRequestBuilder(body: RemoteSearchQueryMusicVideoInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/MusicVideo"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -695,7 +695,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchPerson(body: ProvidersRemoteSearchQueryProvidersPersonLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchPerson(body: RemoteSearchQueryPersonLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchPersonWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -748,7 +748,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchPersonWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersPersonLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchPersonWithRequestBuilder(body: RemoteSearchQueryPersonLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Person"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -764,7 +764,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchSeries(body: ProvidersRemoteSearchQueryProvidersSeriesInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchSeries(body: RemoteSearchQuerySeriesInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchSeriesWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -817,7 +817,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchSeriesWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersSeriesInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchSeriesWithRequestBuilder(body: RemoteSearchQuerySeriesInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Series"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -833,7 +833,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchTrailer(body: ProvidersRemoteSearchQueryProvidersTrailerInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchTrailer(body: RemoteSearchQueryTrailerInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchTrailerWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -886,7 +886,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchTrailerWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersTrailerInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchTrailerWithRequestBuilder(body: RemoteSearchQueryTrailerInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Trailer"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

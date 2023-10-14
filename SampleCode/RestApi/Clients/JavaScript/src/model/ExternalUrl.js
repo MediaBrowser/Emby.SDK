@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ExternalUrl model module.
 * @module model/ExternalUrl
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class ExternalUrl {
     /**
@@ -52,10 +52,12 @@ export default class ExternalUrl {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The type of the item.
     * @member {String} Url
     */
     'Url' = undefined;

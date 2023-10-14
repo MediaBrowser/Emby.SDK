@@ -45,6 +45,7 @@ class NameIdPair(object):
     def name(self):
         """Gets the name of this NameIdPair.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this NameIdPair.  # noqa: E501
         :rtype: str
@@ -55,6 +56,7 @@ class NameIdPair(object):
     def name(self, name):
         """Sets the name of this NameIdPair.
 
+        The name.  # noqa: E501
 
         :param name: The name of this NameIdPair.  # noqa: E501
         :type: str
@@ -66,6 +68,7 @@ class NameIdPair(object):
     def id(self):
         """Gets the id of this NameIdPair.  # noqa: E501
 
+        The identifier.  # noqa: E501
 
         :return: The id of this NameIdPair.  # noqa: E501
         :rtype: str
@@ -76,6 +79,7 @@ class NameIdPair(object):
     def id(self, id):
         """Sets the id of this NameIdPair.
 
+        The identifier.  # noqa: E501
 
         :param id: The id of this NameIdPair.  # noqa: E501
         :type: str

@@ -552,6 +552,7 @@ class TranscodingInfo(object):
     def current_cpu_usage(self):
         """Gets the current_cpu_usage of this TranscodingInfo.  # noqa: E501
 
+        Deprecated, please use ProcessStatistics instead  # noqa: E501
 
         :return: The current_cpu_usage of this TranscodingInfo.  # noqa: E501
         :rtype: float
@@ -562,6 +563,7 @@ class TranscodingInfo(object):
     def current_cpu_usage(self, current_cpu_usage):
         """Sets the current_cpu_usage of this TranscodingInfo.
 
+        Deprecated, please use ProcessStatistics instead  # noqa: E501
 
         :param current_cpu_usage: The current_cpu_usage of this TranscodingInfo.  # noqa: E501
         :type: float
@@ -573,6 +575,7 @@ class TranscodingInfo(object):
     def average_cpu_usage(self):
         """Gets the average_cpu_usage of this TranscodingInfo.  # noqa: E501
 
+        Deprecated, please use ProcessStatistics instead  # noqa: E501
 
         :return: The average_cpu_usage of this TranscodingInfo.  # noqa: E501
         :rtype: float
@@ -583,6 +586,7 @@ class TranscodingInfo(object):
     def average_cpu_usage(self, average_cpu_usage):
         """Sets the average_cpu_usage of this TranscodingInfo.
 
+        Deprecated, please use ProcessStatistics instead  # noqa: E501
 
         :param average_cpu_usage: The average_cpu_usage of this TranscodingInfo.  # noqa: E501
         :type: float
@@ -594,6 +598,7 @@ class TranscodingInfo(object):
     def cpu_history(self):
         """Gets the cpu_history of this TranscodingInfo.  # noqa: E501
 
+        Deprecated, please use ProcessStatistics instead  # noqa: E501
 
         :return: The cpu_history of this TranscodingInfo.  # noqa: E501
         :rtype: list[TupleDoubleDouble]
@@ -604,6 +609,7 @@ class TranscodingInfo(object):
     def cpu_history(self, cpu_history):
         """Sets the cpu_history of this TranscodingInfo.
 
+        Deprecated, please use ProcessStatistics instead  # noqa: E501
 
         :param cpu_history: The cpu_history of this TranscodingInfo.  # noqa: E501
         :type: list[TupleDoubleDouble]

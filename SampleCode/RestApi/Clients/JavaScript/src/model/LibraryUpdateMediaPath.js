@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationMediaPathInfo from './ConfigurationMediaPathInfo';
+import MediaPathInfo from './MediaPathInfo';
 
 /**
 * The LibraryUpdateMediaPath model module.
 * @module model/LibraryUpdateMediaPath
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class LibraryUpdateMediaPath {
     /**
@@ -46,7 +46,7 @@ export default class LibraryUpdateMediaPath {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
             if (data.hasOwnProperty('PathInfo')) {
-                obj['PathInfo'] = ConfigurationMediaPathInfo.constructFromObject(data['PathInfo']);
+                obj['PathInfo'] = MediaPathInfo.constructFromObject(data['PathInfo']);
             }
         }
         return obj;
@@ -57,7 +57,7 @@ export default class LibraryUpdateMediaPath {
     */
     'Id' = undefined;
     /**
-    * @member {module:model/ConfigurationMediaPathInfo} PathInfo
+    * @member {module:model/MediaPathInfo} PathInfo
     */
     'PathInfo' = undefined;
 

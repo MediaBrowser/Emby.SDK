@@ -16,11 +16,12 @@ import RatingType from './RatingType';
 /**
 * The RemoteImageInfo model module.
 * @module model/RemoteImageInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class RemoteImageInfo {
     /**
     * Constructs a new <code>RemoteImageInfo</code>.
+    * Class RemoteImageInfo  
     * @alias module:model/RemoteImageInfo
     * @class
     */
@@ -81,34 +82,42 @@ export default class RemoteImageInfo {
     }
 
     /**
+    * The name of the provider.
     * @member {String} ProviderName
     */
     'ProviderName' = undefined;
     /**
+    * The URL.
     * @member {String} Url
     */
     'Url' = undefined;
     /**
+    * A url used for previewing a smaller version
     * @member {String} ThumbnailUrl
     */
     'ThumbnailUrl' = undefined;
     /**
+    * The height.
     * @member {Number} Height
     */
     'Height' = undefined;
     /**
+    * The width.
     * @member {Number} Width
     */
     'Width' = undefined;
     /**
+    * The community rating.
     * @member {Number} CommunityRating
     */
     'CommunityRating' = undefined;
     /**
+    * The vote count.
     * @member {Number} VoteCount
     */
     'VoteCount' = undefined;
     /**
+    * The language.
     * @member {String} Language
     */
     'Language' = undefined;

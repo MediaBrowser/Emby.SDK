@@ -60,7 +60,7 @@ open class DlnaServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDlnaProfileinfos(completion: @escaping ((_ data: [EmbyDlnaProfilesDlnaProfile]?,_ error: Error?) -> Void)) {
+    open class func getDlnaProfileinfos(completion: @escaping ((_ data: [DlnaProfilesDlnaProfile]?,_ error: Error?) -> Void)) {
         getDlnaProfileinfosWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -433,16 +433,16 @@ open class DlnaServiceAPI {
   }
 } ]}]
 
-     - returns: RequestBuilder<[EmbyDlnaProfilesDlnaProfile]> 
+     - returns: RequestBuilder<[DlnaProfilesDlnaProfile]> 
      */
-    open class func getDlnaProfileinfosWithRequestBuilder() -> RequestBuilder<[EmbyDlnaProfilesDlnaProfile]> {
+    open class func getDlnaProfileinfosWithRequestBuilder() -> RequestBuilder<[DlnaProfilesDlnaProfile]> {
         let path = "/Dlna/ProfileInfos"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[EmbyDlnaProfilesDlnaProfile]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[DlnaProfilesDlnaProfile]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -452,7 +452,7 @@ open class DlnaServiceAPI {
      - parameter _id: (path) Profile Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDlnaProfilesById(_id: String, completion: @escaping ((_ data: EmbyDlnaProfilesDlnaProfile?,_ error: Error?) -> Void)) {
+    open class func getDlnaProfilesById(_id: String, completion: @escaping ((_ data: DlnaProfilesDlnaProfile?,_ error: Error?) -> Void)) {
         getDlnaProfilesByIdWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -649,9 +649,9 @@ open class DlnaServiceAPI {
 }}]
      - parameter _id: (path) Profile Id 
 
-     - returns: RequestBuilder<EmbyDlnaProfilesDlnaProfile> 
+     - returns: RequestBuilder<DlnaProfilesDlnaProfile> 
      */
-    open class func getDlnaProfilesByIdWithRequestBuilder(_id: String) -> RequestBuilder<EmbyDlnaProfilesDlnaProfile> {
+    open class func getDlnaProfilesByIdWithRequestBuilder(_id: String) -> RequestBuilder<DlnaProfilesDlnaProfile> {
         var path = "/Dlna/Profiles/{Id}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -661,7 +661,7 @@ open class DlnaServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyDlnaProfilesDlnaProfile>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DlnaProfilesDlnaProfile>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -670,7 +670,7 @@ open class DlnaServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDlnaProfilesDefault(completion: @escaping ((_ data: EmbyDlnaProfilesDlnaProfile?,_ error: Error?) -> Void)) {
+    open class func getDlnaProfilesDefault(completion: @escaping ((_ data: DlnaProfilesDlnaProfile?,_ error: Error?) -> Void)) {
         getDlnaProfilesDefaultWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -866,16 +866,16 @@ open class DlnaServiceAPI {
   }
 }}]
 
-     - returns: RequestBuilder<EmbyDlnaProfilesDlnaProfile> 
+     - returns: RequestBuilder<DlnaProfilesDlnaProfile> 
      */
-    open class func getDlnaProfilesDefaultWithRequestBuilder() -> RequestBuilder<EmbyDlnaProfilesDlnaProfile> {
+    open class func getDlnaProfilesDefaultWithRequestBuilder() -> RequestBuilder<DlnaProfilesDlnaProfile> {
         let path = "/Dlna/Profiles/Default"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyDlnaProfilesDlnaProfile>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DlnaProfilesDlnaProfile>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -885,7 +885,7 @@ open class DlnaServiceAPI {
      - parameter body: (body) DlnaProfile:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postDlnaProfiles(body: EmbyDlnaProfilesDlnaProfile, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postDlnaProfiles(body: DlnaProfilesDlnaProfile, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postDlnaProfilesWithRequestBuilder(body: body).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -910,7 +910,7 @@ open class DlnaServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postDlnaProfilesWithRequestBuilder(body: EmbyDlnaProfilesDlnaProfile) -> RequestBuilder<Void> {
+    open class func postDlnaProfilesWithRequestBuilder(body: DlnaProfilesDlnaProfile) -> RequestBuilder<Void> {
         let path = "/Dlna/Profiles"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -928,7 +928,7 @@ open class DlnaServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postDlnaProfilesById(body: EmbyDlnaProfilesDlnaProfile, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postDlnaProfilesById(body: DlnaProfilesDlnaProfile, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postDlnaProfilesByIdWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -954,7 +954,7 @@ open class DlnaServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postDlnaProfilesByIdWithRequestBuilder(body: EmbyDlnaProfilesDlnaProfile, _id: String) -> RequestBuilder<Void> {
+    open class func postDlnaProfilesByIdWithRequestBuilder(body: DlnaProfilesDlnaProfile, _id: String) -> RequestBuilder<Void> {
         var path = "/Dlna/Profiles/{Id}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

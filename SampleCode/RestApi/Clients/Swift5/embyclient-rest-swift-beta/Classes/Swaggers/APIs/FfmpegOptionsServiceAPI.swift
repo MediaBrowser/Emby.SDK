@@ -15,7 +15,7 @@ open class FfmpegOptionsServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingFfmpegoptions(completion: @escaping ((_ data: EmbyWebGenericEditEditObjectContainer?,_ error: Error?) -> Void)) {
+    open class func getEncodingFfmpegoptions(completion: @escaping ((_ data: EditObjectContainer?,_ error: Error?) -> Void)) {
         getEncodingFfmpegoptionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -102,16 +102,16 @@ open class FfmpegOptionsServiceAPI {
   "Object" : { }
 }}]
 
-     - returns: RequestBuilder<EmbyWebGenericEditEditObjectContainer> 
+     - returns: RequestBuilder<EditObjectContainer> 
      */
-    open class func getEncodingFfmpegoptionsWithRequestBuilder() -> RequestBuilder<EmbyWebGenericEditEditObjectContainer> {
+    open class func getEncodingFfmpegoptionsWithRequestBuilder() -> RequestBuilder<EditObjectContainer> {
         let path = "/Encoding/FfmpegOptions"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyWebGenericEditEditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

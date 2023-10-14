@@ -23,7 +23,7 @@ import io.swagger.client.model.LiveTvTimerInfoDto;
 import io.swagger.client.model.LiveTvTunerHostInfo;
 import io.swagger.client.model.NameIdPair;
 import io.swagger.client.model.QueryResultBaseItemDto;
-import io.swagger.client.model.QueryResultEmbyLiveTVChannelManagementInfo;
+import io.swagger.client.model.QueryResultChannelManagementInfo;
 import io.swagger.client.model.QueryResultLiveTVApiEpgRow;
 import io.swagger.client.model.QueryResultLiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.QueryResultLiveTvTimerInfoDto;
@@ -822,7 +822,7 @@ public class LiveTvServiceApiTest {
         Integer limit = null;
         String sortBy = null;
         String sortOrder = null;
-        QueryResultEmbyLiveTVChannelManagementInfo response = api.getLivetvManageChannels(startIndex, limit, sortBy, sortOrder);
+        QueryResultChannelManagementInfo response = api.getLivetvManageChannels(startIndex, limit, sortBy, sortOrder);
 
         // TODO: test validations
     }
@@ -1389,7 +1389,7 @@ public class LiveTvServiceApiTest {
     public void postLivetvManageChannelsByIdDisabledTest() throws Exception {
         LiveTVApiSetChannelDisabled body = null;
         String id = null;
-        QueryResultEmbyLiveTVChannelManagementInfo response = api.postLivetvManageChannelsByIdDisabled(body, id);
+        QueryResultChannelManagementInfo response = api.postLivetvManageChannelsByIdDisabled(body, id);
 
         // TODO: test validations
     }
@@ -1405,7 +1405,7 @@ public class LiveTvServiceApiTest {
     public void postLivetvManageChannelsByIdSortindexTest() throws Exception {
         LiveTVApiSetChannelSortIndex body = null;
         String id = null;
-        QueryResultEmbyLiveTVChannelManagementInfo response = api.postLivetvManageChannelsByIdSortindex(body, id);
+        QueryResultChannelManagementInfo response = api.postLivetvManageChannelsByIdSortindex(body, id);
 
         // TODO: test validations
     }

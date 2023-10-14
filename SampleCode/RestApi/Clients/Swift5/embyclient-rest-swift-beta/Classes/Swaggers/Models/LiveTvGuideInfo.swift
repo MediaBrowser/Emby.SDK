@@ -11,7 +11,9 @@ import Foundation
 
 public struct LiveTvGuideInfo: Codable {
 
+    /** The start date. */
     public var startDate: Date?
+    /** The end date. */
     public var endDate: Date?
 
     public init(startDate: Date? = nil, endDate: Date? = nil) {

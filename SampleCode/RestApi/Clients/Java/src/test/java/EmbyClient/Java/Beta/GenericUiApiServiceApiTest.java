@@ -5,8 +5,8 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.EmbyWebGenericUIApiEndpointsRunUICommand;
-import io.swagger.client.model.EmbyWebGenericUIModelUIViewInfo;
+import io.swagger.client.model.RunUICommand;
+import io.swagger.client.model.UIViewInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -37,7 +37,7 @@ public class GenericUiApiServiceApiTest {
     public void getUIViewTest() throws Exception {
         String pageId = null;
         String clientLocale = null;
-        EmbyWebGenericUIModelUIViewInfo response = api.getUIView(pageId, clientLocale);
+        UIViewInfo response = api.getUIView(pageId, clientLocale);
 
         // TODO: test validations
     }
@@ -51,8 +51,8 @@ public class GenericUiApiServiceApiTest {
      */
     @Test
     public void postUICommandTest() throws Exception {
-        EmbyWebGenericUIApiEndpointsRunUICommand body = null;
-        EmbyWebGenericUIModelUIViewInfo response = api.postUICommand(body);
+        RunUICommand body = null;
+        UIViewInfo response = api.postUICommand(body);
 
         // TODO: test validations
     }

@@ -694,15 +694,15 @@ func (a *SystemServiceApiService) GetSystemPing(ctx context.Context) (*http.Resp
 SystemServiceApiService Gets release notes
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return UpdatesPackageVersionInfo
+@return PackageVersionInfo
 */
-func (a *SystemServiceApiService) GetSystemReleasenotes(ctx context.Context) (UpdatesPackageVersionInfo, *http.Response, error) {
+func (a *SystemServiceApiService) GetSystemReleasenotes(ctx context.Context) (PackageVersionInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue UpdatesPackageVersionInfo
+		localVarReturnValue PackageVersionInfo
 	)
 
 	// create path and map variables
@@ -772,7 +772,7 @@ func (a *SystemServiceApiService) GetSystemReleasenotes(ctx context.Context) (Up
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v UpdatesPackageVersionInfo
+			var v PackageVersionInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -790,15 +790,15 @@ func (a *SystemServiceApiService) GetSystemReleasenotes(ctx context.Context) (Up
 SystemServiceApiService Gets release notes
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []UpdatesPackageVersionInfo
+@return []PackageVersionInfo
 */
-func (a *SystemServiceApiService) GetSystemReleasenotesVersions(ctx context.Context) ([]UpdatesPackageVersionInfo, *http.Response, error) {
+func (a *SystemServiceApiService) GetSystemReleasenotesVersions(ctx context.Context) ([]PackageVersionInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []UpdatesPackageVersionInfo
+		localVarReturnValue []PackageVersionInfo
 	)
 
 	// create path and map variables
@@ -868,7 +868,7 @@ func (a *SystemServiceApiService) GetSystemReleasenotesVersions(ctx context.Cont
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []UpdatesPackageVersionInfo
+			var v []PackageVersionInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

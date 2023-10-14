@@ -12,16 +12,16 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationUserConfiguration;
 import io.swagger.client.model.ConnectUserLinkType;
-import io.swagger.client.model.UsersUserPolicy;
+import io.swagger.client.model.UserConfiguration;
+import io.swagger.client.model.UserPolicy;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 /**
- * UserDto
+ * Class UserDto  
  */
-
+@Schema(description = "Class UserDto  ")
 
 public class UserDto {
   @SerializedName("Name")
@@ -67,10 +67,10 @@ public class UserDto {
   private OffsetDateTime lastActivityDate = null;
 
   @SerializedName("Configuration")
-  private ConfigurationUserConfiguration _configuration = null;
+  private UserConfiguration _configuration = null;
 
   @SerializedName("Policy")
-  private UsersUserPolicy policy = null;
+  private UserPolicy policy = null;
 
   @SerializedName("PrimaryImageAspectRatio")
   private Double primaryImageAspectRatio = null;
@@ -84,10 +84,10 @@ public class UserDto {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -102,10 +102,10 @@ public class UserDto {
   }
 
    /**
-   * Get serverId
+   * The server identifier.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "The server identifier.")
   public String getServerId() {
     return serverId;
   }
@@ -120,10 +120,10 @@ public class UserDto {
   }
 
    /**
-   * Get serverName
+   * The name of the server. This is not used by the server and is for client\\-side usage only.
    * @return serverName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the server. This is not used by the server and is for client\\-side usage only.")
   public String getServerName() {
     return serverName;
   }
@@ -156,10 +156,10 @@ public class UserDto {
   }
 
    /**
-   * Get connectUserName
+   * The name of the connect user.
    * @return connectUserName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the connect user.")
   public String getConnectUserName() {
     return connectUserName;
   }
@@ -210,10 +210,10 @@ public class UserDto {
   }
 
    /**
-   * Get id
+   * The id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The id.")
   public String getId() {
     return id;
   }
@@ -228,10 +228,10 @@ public class UserDto {
   }
 
    /**
-   * Get primaryImageTag
+   * The primary image tag.
    * @return primaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image tag.")
   public String getPrimaryImageTag() {
     return primaryImageTag;
   }
@@ -246,10 +246,10 @@ public class UserDto {
   }
 
    /**
-   * Get hasPassword
+   * A value indicating whether this instance has password.
    * @return hasPassword
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has password.")
   public Boolean isHasPassword() {
     return hasPassword;
   }
@@ -264,10 +264,10 @@ public class UserDto {
   }
 
    /**
-   * Get hasConfiguredPassword
+   * A value indicating whether this instance has configured password.
    * @return hasConfiguredPassword
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has configured password.")
   public Boolean isHasConfiguredPassword() {
     return hasConfiguredPassword;
   }
@@ -300,10 +300,10 @@ public class UserDto {
   }
 
    /**
-   * Get lastLoginDate
+   * The last login date.
    * @return lastLoginDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The last login date.")
   public OffsetDateTime getLastLoginDate() {
     return lastLoginDate;
   }
@@ -318,10 +318,10 @@ public class UserDto {
   }
 
    /**
-   * Get lastActivityDate
+   * The last activity date.
    * @return lastActivityDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The last activity date.")
   public OffsetDateTime getLastActivityDate() {
     return lastActivityDate;
   }
@@ -330,7 +330,7 @@ public class UserDto {
     this.lastActivityDate = lastActivityDate;
   }
 
-  public UserDto _configuration(ConfigurationUserConfiguration _configuration) {
+  public UserDto _configuration(UserConfiguration _configuration) {
     this._configuration = _configuration;
     return this;
   }
@@ -340,15 +340,15 @@ public class UserDto {
    * @return _configuration
   **/
   @Schema(description = "")
-  public ConfigurationUserConfiguration getConfiguration() {
+  public UserConfiguration getConfiguration() {
     return _configuration;
   }
 
-  public void setConfiguration(ConfigurationUserConfiguration _configuration) {
+  public void setConfiguration(UserConfiguration _configuration) {
     this._configuration = _configuration;
   }
 
-  public UserDto policy(UsersUserPolicy policy) {
+  public UserDto policy(UserPolicy policy) {
     this.policy = policy;
     return this;
   }
@@ -358,11 +358,11 @@ public class UserDto {
    * @return policy
   **/
   @Schema(description = "")
-  public UsersUserPolicy getPolicy() {
+  public UserPolicy getPolicy() {
     return policy;
   }
 
-  public void setPolicy(UsersUserPolicy policy) {
+  public void setPolicy(UserPolicy policy) {
     this.policy = policy;
   }
 
@@ -372,10 +372,10 @@ public class UserDto {
   }
 
    /**
-   * Get primaryImageAspectRatio
+   * The primary image aspect ratio.
    * @return primaryImageAspectRatio
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image aspect ratio.")
   public Double getPrimaryImageAspectRatio() {
     return primaryImageAspectRatio;
   }

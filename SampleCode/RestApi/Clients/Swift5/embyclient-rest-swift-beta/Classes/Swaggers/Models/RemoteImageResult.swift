@@ -8,11 +8,15 @@
 import Foundation
 
 
+/** Class RemoteImageResult.   */
 
 public struct RemoteImageResult: Codable {
 
+    /** The images. */
     public var images: [RemoteImageInfo]?
+    /** The total record count. */
     public var totalRecordCount: Int?
+    /** The providers. */
     public var providers: [String]?
 
     public init(images: [RemoteImageInfo]? = nil, totalRecordCount: Int? = nil, providers: [String]? = nil) {

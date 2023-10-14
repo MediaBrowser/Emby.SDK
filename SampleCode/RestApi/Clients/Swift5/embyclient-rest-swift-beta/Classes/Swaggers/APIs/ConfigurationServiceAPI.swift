@@ -15,7 +15,7 @@ open class ConfigurationServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSystemConfiguration(completion: @escaping ((_ data: ConfigurationServerConfiguration?,_ error: Error?) -> Void)) {
+    open class func getSystemConfiguration(completion: @escaping ((_ data: ServerConfiguration?,_ error: Error?) -> Void)) {
         getSystemConfigurationWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -104,16 +104,16 @@ open class ConfigurationServiceAPI {
   "EnableAutoUpdate" : true
 }}]
 
-     - returns: RequestBuilder<ConfigurationServerConfiguration> 
+     - returns: RequestBuilder<ServerConfiguration> 
      */
-    open class func getSystemConfigurationWithRequestBuilder() -> RequestBuilder<ConfigurationServerConfiguration> {
+    open class func getSystemConfigurationWithRequestBuilder() -> RequestBuilder<ServerConfiguration> {
         let path = "/System/Configuration"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<ConfigurationServerConfiguration>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ServerConfiguration>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -168,7 +168,7 @@ open class ConfigurationServiceAPI {
      - parameter body: (body) ServerConfiguration:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSystemConfiguration(body: ConfigurationServerConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSystemConfiguration(body: ServerConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSystemConfigurationWithRequestBuilder(body: body).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -193,7 +193,7 @@ open class ConfigurationServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSystemConfigurationWithRequestBuilder(body: ConfigurationServerConfiguration) -> RequestBuilder<Void> {
+    open class func postSystemConfigurationWithRequestBuilder(body: ServerConfiguration) -> RequestBuilder<Void> {
         let path = "/System/Configuration"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

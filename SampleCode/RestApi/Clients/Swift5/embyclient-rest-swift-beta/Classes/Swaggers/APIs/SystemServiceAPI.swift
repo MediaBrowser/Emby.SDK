@@ -374,7 +374,7 @@ open class SystemServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSystemReleasenotes(completion: @escaping ((_ data: UpdatesPackageVersionInfo?,_ error: Error?) -> Void)) {
+    open class func getSystemReleasenotes(completion: @escaping ((_ data: PackageVersionInfo?,_ error: Error?) -> Void)) {
         getSystemReleasenotesWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -406,16 +406,16 @@ open class SystemServiceAPI {
   "timestamp" : "2000-01-23T04:56:07.000+00:00"
 }}]
 
-     - returns: RequestBuilder<UpdatesPackageVersionInfo> 
+     - returns: RequestBuilder<PackageVersionInfo> 
      */
-    open class func getSystemReleasenotesWithRequestBuilder() -> RequestBuilder<UpdatesPackageVersionInfo> {
+    open class func getSystemReleasenotesWithRequestBuilder() -> RequestBuilder<PackageVersionInfo> {
         let path = "/System/ReleaseNotes"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<UpdatesPackageVersionInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PackageVersionInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -424,7 +424,7 @@ open class SystemServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSystemReleasenotesVersions(completion: @escaping ((_ data: [UpdatesPackageVersionInfo]?,_ error: Error?) -> Void)) {
+    open class func getSystemReleasenotesVersions(completion: @escaping ((_ data: [PackageVersionInfo]?,_ error: Error?) -> Void)) {
         getSystemReleasenotesVersionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -469,16 +469,16 @@ open class SystemServiceAPI {
   "timestamp" : "2000-01-23T04:56:07.000+00:00"
 } ]}]
 
-     - returns: RequestBuilder<[UpdatesPackageVersionInfo]> 
+     - returns: RequestBuilder<[PackageVersionInfo]> 
      */
-    open class func getSystemReleasenotesVersionsWithRequestBuilder() -> RequestBuilder<[UpdatesPackageVersionInfo]> {
+    open class func getSystemReleasenotesVersionsWithRequestBuilder() -> RequestBuilder<[PackageVersionInfo]> {
         let path = "/System/ReleaseNotes/Versions"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[UpdatesPackageVersionInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[PackageVersionInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

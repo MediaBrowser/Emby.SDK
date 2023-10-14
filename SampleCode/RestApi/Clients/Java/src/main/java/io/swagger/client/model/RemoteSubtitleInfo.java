@@ -66,10 +66,10 @@ public class RemoteSubtitleInfo {
   }
 
    /**
-   * Get threeLetterISOLanguageName
+   * Use language instead to return the language specified by the subtitle provider
    * @return threeLetterISOLanguageName
   **/
-  @Schema(description = "")
+  @Schema(description = "Use language instead to return the language specified by the subtitle provider")
   public String getThreeLetterISOLanguageName() {
     return threeLetterISOLanguageName;
   }

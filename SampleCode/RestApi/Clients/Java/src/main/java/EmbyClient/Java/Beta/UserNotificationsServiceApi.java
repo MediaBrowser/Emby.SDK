@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyNotificationsUserNotificationInfo;
+import io.swagger.client.model.UserNotificationInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -109,23 +109,23 @@ public class UserNotificationsServiceApi {
     /**
      * Gets default notification info
      * Requires authentication as user
-     * @return EmbyNotificationsUserNotificationInfo
+     * @return UserNotificationInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyNotificationsUserNotificationInfo getNotificationsServicesDefaults() throws ApiException {
-        ApiResponse<EmbyNotificationsUserNotificationInfo> resp = getNotificationsServicesDefaultsWithHttpInfo();
+    public UserNotificationInfo getNotificationsServicesDefaults() throws ApiException {
+        ApiResponse<UserNotificationInfo> resp = getNotificationsServicesDefaultsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets default notification info
      * Requires authentication as user
-     * @return ApiResponse&lt;EmbyNotificationsUserNotificationInfo&gt;
+     * @return ApiResponse&lt;UserNotificationInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyNotificationsUserNotificationInfo> getNotificationsServicesDefaultsWithHttpInfo() throws ApiException {
+    public ApiResponse<UserNotificationInfo> getNotificationsServicesDefaultsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getNotificationsServicesDefaultsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<EmbyNotificationsUserNotificationInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<UserNotificationInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -136,7 +136,7 @@ public class UserNotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getNotificationsServicesDefaultsAsync(final ApiCallback<EmbyNotificationsUserNotificationInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getNotificationsServicesDefaultsAsync(final ApiCallback<UserNotificationInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -158,7 +158,7 @@ public class UserNotificationsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getNotificationsServicesDefaultsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyNotificationsUserNotificationInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<UserNotificationInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -170,7 +170,7 @@ public class UserNotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postNotificationsServicesTestCall(EmbyNotificationsUserNotificationInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postNotificationsServicesTestCall(UserNotificationInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -212,7 +212,7 @@ public class UserNotificationsServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postNotificationsServicesTestValidateBeforeCall(EmbyNotificationsUserNotificationInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postNotificationsServicesTestValidateBeforeCall(UserNotificationInfo body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postNotificationsServicesTest(Async)");
@@ -233,7 +233,7 @@ public class UserNotificationsServiceApi {
      * @param body UserNotificationInfo:  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postNotificationsServicesTest(EmbyNotificationsUserNotificationInfo body) throws ApiException {
+    public void postNotificationsServicesTest(UserNotificationInfo body) throws ApiException {
         postNotificationsServicesTestWithHttpInfo(body);
     }
 
@@ -244,7 +244,7 @@ public class UserNotificationsServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postNotificationsServicesTestWithHttpInfo(EmbyNotificationsUserNotificationInfo body) throws ApiException {
+    public ApiResponse<Void> postNotificationsServicesTestWithHttpInfo(UserNotificationInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postNotificationsServicesTestValidateBeforeCall(body, null, null);
         return apiClient.execute(call);
     }
@@ -257,7 +257,7 @@ public class UserNotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postNotificationsServicesTestAsync(EmbyNotificationsUserNotificationInfo body, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postNotificationsServicesTestAsync(UserNotificationInfo body, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

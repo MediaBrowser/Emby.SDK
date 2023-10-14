@@ -5,7 +5,7 @@
 
 package EmbyClient.Java.Beta;
 
-import io.swagger.client.model.DlnaSubtitleDeliveryMethod;
+import io.swagger.client.model.SubtitleDeliveryMethod;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -75,7 +75,7 @@ public class VideoHlsServiceApiTest {
         Integer maxHeight = null;
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
-        DlnaSubtitleDeliveryMethod subtitleMethod = null;
+        SubtitleDeliveryMethod subtitleMethod = null;
         Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;

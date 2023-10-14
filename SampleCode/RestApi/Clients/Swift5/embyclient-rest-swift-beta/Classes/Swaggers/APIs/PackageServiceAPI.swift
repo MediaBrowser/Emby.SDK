@@ -64,7 +64,7 @@ open class PackageServiceAPI {
      - parameter isAdult: (query) Optional. Filter by package that contain adult content. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPackages(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil, completion: @escaping ((_ data: [UpdatesPackageInfo]?,_ error: Error?) -> Void)) {
+    open class func getPackages(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil, completion: @escaping ((_ data: [PackageInfo]?,_ error: Error?) -> Void)) {
         getPackagesWithRequestBuilder(packageType: packageType, targetSystems: targetSystems, isPremium: isPremium, isAdult: isAdult).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -187,9 +187,9 @@ open class PackageServiceAPI {
      - parameter isPremium: (query) Optional. Filter by premium status (optional)
      - parameter isAdult: (query) Optional. Filter by package that contain adult content. (optional)
 
-     - returns: RequestBuilder<[UpdatesPackageInfo]> 
+     - returns: RequestBuilder<[PackageInfo]> 
      */
-    open class func getPackagesWithRequestBuilder(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil) -> RequestBuilder<[UpdatesPackageInfo]> {
+    open class func getPackagesWithRequestBuilder(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil) -> RequestBuilder<[PackageInfo]> {
         let path = "/Packages"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -202,7 +202,7 @@ open class PackageServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[UpdatesPackageInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[PackageInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -213,7 +213,7 @@ open class PackageServiceAPI {
      - parameter assemblyGuid: (query) The guid of the associated assembly (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPackagesByName(name: String, assemblyGuid: String? = nil, completion: @escaping ((_ data: UpdatesPackageInfo?,_ error: Error?) -> Void)) {
+    open class func getPackagesByName(name: String, assemblyGuid: String? = nil, completion: @escaping ((_ data: PackageInfo?,_ error: Error?) -> Void)) {
         getPackagesByNameWithRequestBuilder(name: name, assemblyGuid: assemblyGuid).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -284,9 +284,9 @@ open class PackageServiceAPI {
      - parameter name: (path) The name of the package 
      - parameter assemblyGuid: (query) The guid of the associated assembly (optional)
 
-     - returns: RequestBuilder<UpdatesPackageInfo> 
+     - returns: RequestBuilder<PackageInfo> 
      */
-    open class func getPackagesByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil) -> RequestBuilder<UpdatesPackageInfo> {
+    open class func getPackagesByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil) -> RequestBuilder<PackageInfo> {
         var path = "/Packages/{Name}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -299,7 +299,7 @@ open class PackageServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<UpdatesPackageInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PackageInfo>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -309,7 +309,7 @@ open class PackageServiceAPI {
      - parameter packageType: (query) Package type filter (System/UserInstalled) 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPackagesUpdates(packageType: String, completion: @escaping ((_ data: [UpdatesPackageVersionInfo]?,_ error: Error?) -> Void)) {
+    open class func getPackagesUpdates(packageType: String, completion: @escaping ((_ data: [PackageVersionInfo]?,_ error: Error?) -> Void)) {
         getPackagesUpdatesWithRequestBuilder(packageType: packageType).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -355,9 +355,9 @@ open class PackageServiceAPI {
 } ]}]
      - parameter packageType: (query) Package type filter (System/UserInstalled) 
 
-     - returns: RequestBuilder<[UpdatesPackageVersionInfo]> 
+     - returns: RequestBuilder<[PackageVersionInfo]> 
      */
-    open class func getPackagesUpdatesWithRequestBuilder(packageType: String) -> RequestBuilder<[UpdatesPackageVersionInfo]> {
+    open class func getPackagesUpdatesWithRequestBuilder(packageType: String) -> RequestBuilder<[PackageVersionInfo]> {
         let path = "/Packages/Updates"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -367,7 +367,7 @@ open class PackageServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[UpdatesPackageVersionInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[PackageVersionInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -380,7 +380,7 @@ open class PackageServiceAPI {
      - parameter updateClass: (query) Optional update class (Dev, Beta, Release). Defaults to Release. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postPackagesInstalledByName(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: UpdatesPackageVersionClass? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postPackagesInstalledByName(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: PackageVersionClass? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postPackagesInstalledByNameWithRequestBuilder(name: name, assemblyGuid: assemblyGuid, version: version, updateClass: updateClass).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -408,7 +408,7 @@ open class PackageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postPackagesInstalledByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: UpdatesPackageVersionClass? = nil) -> RequestBuilder<Void> {
+    open class func postPackagesInstalledByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: PackageVersionClass? = nil) -> RequestBuilder<Void> {
         var path = "/Packages/Installed/{Name}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

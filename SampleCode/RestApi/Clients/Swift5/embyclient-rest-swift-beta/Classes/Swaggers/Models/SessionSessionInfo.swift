@@ -8,31 +8,44 @@
 import Foundation
 
 
+/** Class SessionInfo   */
 
 public struct SessionSessionInfo: Codable {
 
     public var playState: PlayerStateInfo?
     public var additionalUsers: [SessionUserInfo]?
+    /** The remote end point. */
     public var remoteEndPoint: String?
     public var _protocol: String?
+    /** The playable media types. */
     public var playableMediaTypes: [String]?
     public var playlistItemId: String?
     public var playlistIndex: Int?
     public var playlistLength: Int?
+    /** The id. */
     public var _id: String?
     public var serverId: String?
+    /** The user id. */
     public var userId: String?
+    /** The username. */
     public var userName: String?
     public var userPrimaryImageTag: String?
+    /** The type of the client. */
     public var client: String?
+    /** The last activity date. */
     public var lastActivityDate: Date?
+    /** The name of the device. */
     public var deviceName: String?
     public var deviceType: String?
     public var nowPlayingItem: BaseItemDto?
     public var internalDeviceId: Int64?
+    /** The device id. */
     public var deviceId: String?
+    /** The application version. */
     public var applicationVersion: String?
+    /** The application icon URL. */
     public var appIconUrl: String?
+    /** The supported commands. */
     public var supportedCommands: [String]?
     public var transcodingInfo: TranscodingInfo?
     public var supportsRemoteControl: Bool?

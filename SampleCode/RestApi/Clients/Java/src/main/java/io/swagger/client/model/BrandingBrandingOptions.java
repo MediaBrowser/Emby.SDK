@@ -32,10 +32,10 @@ public class BrandingBrandingOptions {
   }
 
    /**
-   * Get loginDisclaimer
+   * The login disclaimer.
    * @return loginDisclaimer
   **/
-  @Schema(description = "")
+  @Schema(description = "The login disclaimer.")
   public String getLoginDisclaimer() {
     return loginDisclaimer;
   }
@@ -50,10 +50,10 @@ public class BrandingBrandingOptions {
   }
 
    /**
-   * Get customCss
+   * The custom CSS.
    * @return customCss
   **/
-  @Schema(description = "")
+  @Schema(description = "The custom CSS.")
   public String getCustomCss() {
     return customCss;
   }

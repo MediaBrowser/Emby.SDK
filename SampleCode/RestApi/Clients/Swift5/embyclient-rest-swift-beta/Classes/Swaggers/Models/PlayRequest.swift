@@ -8,9 +8,11 @@
 import Foundation
 
 
+/** Class PlayRequest   */
 
 public struct PlayRequest: Codable {
 
+    /** The controlling user identifier. */
     public var controllingUserId: String?
     public var subtitleStreamIndex: Int?
     public var audioStreamIndex: Int?

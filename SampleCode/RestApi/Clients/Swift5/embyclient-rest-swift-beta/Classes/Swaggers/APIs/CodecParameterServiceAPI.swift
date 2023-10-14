@@ -17,7 +17,7 @@ open class CodecParameterServiceAPI {
      - parameter parameterContext: (query) Parameter Context 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingCodecparameters(codecId: String, parameterContext: MediaEncodingCodecParameterContext, completion: @escaping ((_ data: EmbyWebGenericEditEditObjectContainer?,_ error: Error?) -> Void)) {
+    open class func getEncodingCodecparameters(codecId: String, parameterContext: MediaEncodingCodecParameterContext, completion: @escaping ((_ data: EditObjectContainer?,_ error: Error?) -> Void)) {
         getEncodingCodecparametersWithRequestBuilder(codecId: codecId, parameterContext: parameterContext).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -106,9 +106,9 @@ open class CodecParameterServiceAPI {
      - parameter codecId: (query) Codec Id 
      - parameter parameterContext: (query) Parameter Context 
 
-     - returns: RequestBuilder<EmbyWebGenericEditEditObjectContainer> 
+     - returns: RequestBuilder<EditObjectContainer> 
      */
-    open class func getEncodingCodecparametersWithRequestBuilder(codecId: String, parameterContext: MediaEncodingCodecParameterContext) -> RequestBuilder<EmbyWebGenericEditEditObjectContainer> {
+    open class func getEncodingCodecparametersWithRequestBuilder(codecId: String, parameterContext: MediaEncodingCodecParameterContext) -> RequestBuilder<EditObjectContainer> {
         let path = "/Encoding/CodecParameters"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -119,7 +119,7 @@ open class CodecParameterServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<EmbyWebGenericEditEditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

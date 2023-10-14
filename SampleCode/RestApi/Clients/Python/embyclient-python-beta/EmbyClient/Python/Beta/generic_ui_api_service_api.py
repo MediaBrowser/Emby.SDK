@@ -35,7 +35,7 @@ class GenericUIApiServiceApi(object):
         :param async_req bool
         :param str page_id: Id of the page controller (required)
         :param str client_locale: Locale identifier of the client (required)
-        :return: EmbyWebGenericUIModelUIViewInfo
+        :return: UIViewInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -58,7 +58,7 @@ class GenericUIApiServiceApi(object):
         :param async_req bool
         :param str page_id: Id of the page controller (required)
         :param str client_locale: Locale identifier of the client (required)
-        :return: EmbyWebGenericUIModelUIViewInfo
+        :return: UIViewInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -118,7 +118,7 @@ class GenericUIApiServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EmbyWebGenericUIModelUIViewInfo',  # noqa: E501
+            response_type='UIViewInfo',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -136,8 +136,8 @@ class GenericUIApiServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param EmbyWebGenericUIApiEndpointsRunUICommand body: RunUICommand (required)
-        :return: EmbyWebGenericUIModelUIViewInfo
+        :param RunUICommand body: RunUICommand (required)
+        :return: UIViewInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -158,8 +158,8 @@ class GenericUIApiServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param EmbyWebGenericUIApiEndpointsRunUICommand body: RunUICommand (required)
-        :return: EmbyWebGenericUIModelUIViewInfo
+        :param RunUICommand body: RunUICommand (required)
+        :return: UIViewInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -217,7 +217,7 @@ class GenericUIApiServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EmbyWebGenericUIModelUIViewInfo',  # noqa: E501
+            response_type='UIViewInfo',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

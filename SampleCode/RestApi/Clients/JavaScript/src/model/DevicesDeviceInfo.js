@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The DevicesDeviceInfo model module.
 * @module model/DevicesDeviceInfo
-* @version 4.8.0.52
+* @version 4.8.0.53
 */
 export default class DevicesDeviceInfo {
     /**
@@ -83,6 +83,7 @@ export default class DevicesDeviceInfo {
     */
     'Name' = undefined;
     /**
+    * The identifier.
     * @member {String} Id
     */
     'Id' = undefined;
@@ -95,18 +96,22 @@ export default class DevicesDeviceInfo {
     */
     'ReportedDeviceId' = undefined;
     /**
+    * The last name of the user.
     * @member {String} LastUserName
     */
     'LastUserName' = undefined;
     /**
+    * The name of the application.
     * @member {String} AppName
     */
     'AppName' = undefined;
     /**
+    * The application version.
     * @member {String} AppVersion
     */
     'AppVersion' = undefined;
     /**
+    * The last user identifier.
     * @member {String} LastUserId
     */
     'LastUserId' = undefined;

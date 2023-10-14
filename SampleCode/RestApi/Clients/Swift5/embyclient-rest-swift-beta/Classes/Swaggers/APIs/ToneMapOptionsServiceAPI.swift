@@ -15,7 +15,7 @@ open class ToneMapOptionsServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingFulltonemapoptions(completion: @escaping ((_ data: EmbyWebGenericEditEditObjectContainer?,_ error: Error?) -> Void)) {
+    open class func getEncodingFulltonemapoptions(completion: @escaping ((_ data: EditObjectContainer?,_ error: Error?) -> Void)) {
         getEncodingFulltonemapoptionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -102,16 +102,16 @@ open class ToneMapOptionsServiceAPI {
   "Object" : { }
 }}]
 
-     - returns: RequestBuilder<EmbyWebGenericEditEditObjectContainer> 
+     - returns: RequestBuilder<EditObjectContainer> 
      */
-    open class func getEncodingFulltonemapoptionsWithRequestBuilder() -> RequestBuilder<EmbyWebGenericEditEditObjectContainer> {
+    open class func getEncodingFulltonemapoptionsWithRequestBuilder() -> RequestBuilder<EditObjectContainer> {
         let path = "/Encoding/FullToneMapOptions"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyWebGenericEditEditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -120,7 +120,7 @@ open class ToneMapOptionsServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingPublictonemapoptions(completion: @escaping ((_ data: EmbyWebGenericEditEditObjectContainer?,_ error: Error?) -> Void)) {
+    open class func getEncodingPublictonemapoptions(completion: @escaping ((_ data: EditObjectContainer?,_ error: Error?) -> Void)) {
         getEncodingPublictonemapoptionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -207,16 +207,16 @@ open class ToneMapOptionsServiceAPI {
   "Object" : { }
 }}]
 
-     - returns: RequestBuilder<EmbyWebGenericEditEditObjectContainer> 
+     - returns: RequestBuilder<EditObjectContainer> 
      */
-    open class func getEncodingPublictonemapoptionsWithRequestBuilder() -> RequestBuilder<EmbyWebGenericEditEditObjectContainer> {
+    open class func getEncodingPublictonemapoptionsWithRequestBuilder() -> RequestBuilder<EditObjectContainer> {
         let path = "/Encoding/PublicToneMapOptions"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyWebGenericEditEditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EditObjectContainer>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyFeaturesFeatureInfo;
+import io.swagger.client.model.FeatureInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -109,23 +109,23 @@ public class FeatureServiceApi {
     /**
      * Gets a list of installed features
      * Requires authentication as administrator
-     * @return List&lt;EmbyFeaturesFeatureInfo&gt;
+     * @return List&lt;FeatureInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EmbyFeaturesFeatureInfo> getFeatures() throws ApiException {
-        ApiResponse<List<EmbyFeaturesFeatureInfo>> resp = getFeaturesWithHttpInfo();
+    public List<FeatureInfo> getFeatures() throws ApiException {
+        ApiResponse<List<FeatureInfo>> resp = getFeaturesWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets a list of installed features
      * Requires authentication as administrator
-     * @return ApiResponse&lt;List&lt;EmbyFeaturesFeatureInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;FeatureInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EmbyFeaturesFeatureInfo>> getFeaturesWithHttpInfo() throws ApiException {
+    public ApiResponse<List<FeatureInfo>> getFeaturesWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getFeaturesValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<EmbyFeaturesFeatureInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<FeatureInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -136,7 +136,7 @@ public class FeatureServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getFeaturesAsync(final ApiCallback<List<EmbyFeaturesFeatureInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getFeaturesAsync(final ApiCallback<List<FeatureInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -158,7 +158,7 @@ public class FeatureServiceApi {
         }
 
         com.squareup.okhttp.Call call = getFeaturesValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<EmbyFeaturesFeatureInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<FeatureInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

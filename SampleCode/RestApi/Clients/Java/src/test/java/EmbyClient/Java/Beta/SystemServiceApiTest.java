@@ -6,11 +6,11 @@
 package EmbyClient.Java.Beta;
 
 import io.swagger.client.model.NetEndPointInfo;
+import io.swagger.client.model.PackageVersionInfo;
 import io.swagger.client.model.PublicSystemInfo;
 import io.swagger.client.model.QueryResultLogFile;
 import io.swagger.client.model.QueryResultString;
 import io.swagger.client.model.SystemInfo;
-import io.swagger.client.model.UpdatesPackageVersionInfo;
 import io.swagger.client.model.WakeOnLanInfo;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -143,7 +143,7 @@ public class SystemServiceApiTest {
      */
     @Test
     public void getSystemReleasenotesTest() throws Exception {
-        UpdatesPackageVersionInfo response = api.getSystemReleasenotes();
+        PackageVersionInfo response = api.getSystemReleasenotes();
 
         // TODO: test validations
     }
@@ -157,7 +157,7 @@ public class SystemServiceApiTest {
      */
     @Test
     public void getSystemReleasenotesVersionsTest() throws Exception {
-        List<UpdatesPackageVersionInfo> response = api.getSystemReleasenotesVersions();
+        List<PackageVersionInfo> response = api.getSystemReleasenotesVersions();
 
         // TODO: test validations
     }

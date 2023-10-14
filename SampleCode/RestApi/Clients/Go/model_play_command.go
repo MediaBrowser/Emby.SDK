@@ -5,7 +5,7 @@
  *
  */
 package embyclient-rest-go
-
+// PlayCommand : Enum PlayCommand  
 type PlayCommand string
 
 // List of PlayCommand

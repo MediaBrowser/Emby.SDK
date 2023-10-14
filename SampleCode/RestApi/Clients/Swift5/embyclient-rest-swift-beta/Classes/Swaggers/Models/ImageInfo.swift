@@ -8,15 +8,21 @@
 import Foundation
 
 
+/** Class ImageInfo   */
 
 public struct ImageInfo: Codable {
 
     public var imageType: ImageType?
+    /** The index of the image. */
     public var imageIndex: Int?
+    /** The path. */
     public var path: String?
     public var filename: String?
+    /** The height. */
     public var height: Int?
+    /** The width. */
     public var width: Int?
+    /** The size. */
     public var size: Int64?
 
     public init(imageType: ImageType? = nil, imageIndex: Int? = nil, path: String? = nil, filename: String? = nil, height: Int? = nil, width: Int? = nil, size: Int64? = nil) {

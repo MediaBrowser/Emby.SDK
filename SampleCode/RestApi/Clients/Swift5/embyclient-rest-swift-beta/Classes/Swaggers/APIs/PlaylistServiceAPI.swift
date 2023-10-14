@@ -1179,7 +1179,7 @@ open class PlaylistServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://betadev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter _id: (path)  
      - parameter userId: (query) User Id (optional)

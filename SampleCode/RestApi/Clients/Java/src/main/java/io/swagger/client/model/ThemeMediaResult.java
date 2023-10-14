@@ -18,9 +18,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * ThemeMediaResult
+ * Class ThemeMediaResult  
  */
-
+@Schema(description = "Class ThemeMediaResult  ")
 
 public class ThemeMediaResult {
   @SerializedName("OwnerId")
@@ -38,10 +38,10 @@ public class ThemeMediaResult {
   }
 
    /**
-   * Get ownerId
+   * The owner id.
    * @return ownerId
   **/
-  @Schema(description = "")
+  @Schema(description = "The owner id.")
   public Long getOwnerId() {
     return ownerId;
   }
