@@ -29,6 +29,7 @@ class SyncJobItem(object):
         'media_source_id': 'str',
         'media_source': 'MediaSourceInfo',
         'target_id': 'str',
+        'internal_target_id': 'int',
         'output_path': 'str',
         'status': 'SyncJobItemStatus',
         'progress': 'float',
@@ -47,6 +48,7 @@ class SyncJobItem(object):
         'media_source_id': 'MediaSourceId',
         'media_source': 'MediaSource',
         'target_id': 'TargetId',
+        'internal_target_id': 'InternalTargetId',
         'output_path': 'OutputPath',
         'status': 'Status',
         'progress': 'Progress',
@@ -57,7 +59,7 @@ class SyncJobItem(object):
         'additional_files': 'AdditionalFiles'
     }
 
-    def __init__(self, id=None, job_id=None, item_id=None, item_name=None, media_source_id=None, media_source=None, target_id=None, output_path=None, status=None, progress=None, date_created=None, primary_image_item_id=None, primary_image_tag=None, temporary_path=None, additional_files=None):  # noqa: E501
+    def __init__(self, id=None, job_id=None, item_id=None, item_name=None, media_source_id=None, media_source=None, target_id=None, internal_target_id=None, output_path=None, status=None, progress=None, date_created=None, primary_image_item_id=None, primary_image_tag=None, temporary_path=None, additional_files=None):  # noqa: E501
         """SyncJobItem - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._job_id = None
@@ -66,6 +68,7 @@ class SyncJobItem(object):
         self._media_source_id = None
         self._media_source = None
         self._target_id = None
+        self._internal_target_id = None
         self._output_path = None
         self._status = None
         self._progress = None
@@ -89,6 +92,8 @@ class SyncJobItem(object):
             self.media_source = media_source
         if target_id is not None:
             self.target_id = target_id
+        if internal_target_id is not None:
+            self.internal_target_id = internal_target_id
         if output_path is not None:
             self.output_path = output_path
         if status is not None:
@@ -252,6 +257,27 @@ class SyncJobItem(object):
         """
 
         self._target_id = target_id
+
+    @property
+    def internal_target_id(self):
+        """Gets the internal_target_id of this SyncJobItem.  # noqa: E501
+
+
+        :return: The internal_target_id of this SyncJobItem.  # noqa: E501
+        :rtype: int
+        """
+        return self._internal_target_id
+
+    @internal_target_id.setter
+    def internal_target_id(self, internal_target_id):
+        """Sets the internal_target_id of this SyncJobItem.
+
+
+        :param internal_target_id: The internal_target_id of this SyncJobItem.  # noqa: E501
+        :type: int
+        """
+
+        self._internal_target_id = internal_target_id
 
     @property
     def output_path(self):

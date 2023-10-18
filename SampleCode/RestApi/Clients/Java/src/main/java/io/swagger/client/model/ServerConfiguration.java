@@ -185,11 +185,17 @@ public class ServerConfiguration {
   @SerializedName("MigratedToUserItemShares")
   private Boolean migratedToUserItemShares = null;
 
+  @SerializedName("MigratedLibraryOptionsToDb")
+  private Boolean migratedLibraryOptionsToDb = null;
+
   @SerializedName("EnableFks")
   private Boolean enableFks = null;
 
   @SerializedName("AllowLegacyLocalNetworkPassword")
   private Boolean allowLegacyLocalNetworkPassword = null;
+
+  @SerializedName("EnableSavedMetadataForPeople")
+  private Boolean enableSavedMetadataForPeople = null;
 
   @SerializedName("ProxyHeaderMode")
   private ProxyHeaderMode proxyHeaderMode = null;
@@ -1217,6 +1223,24 @@ public class ServerConfiguration {
     this.migratedToUserItemShares = migratedToUserItemShares;
   }
 
+  public ServerConfiguration migratedLibraryOptionsToDb(Boolean migratedLibraryOptionsToDb) {
+    this.migratedLibraryOptionsToDb = migratedLibraryOptionsToDb;
+    return this;
+  }
+
+   /**
+   * Get migratedLibraryOptionsToDb
+   * @return migratedLibraryOptionsToDb
+  **/
+  @Schema(description = "")
+  public Boolean isMigratedLibraryOptionsToDb() {
+    return migratedLibraryOptionsToDb;
+  }
+
+  public void setMigratedLibraryOptionsToDb(Boolean migratedLibraryOptionsToDb) {
+    this.migratedLibraryOptionsToDb = migratedLibraryOptionsToDb;
+  }
+
   public ServerConfiguration enableFks(Boolean enableFks) {
     this.enableFks = enableFks;
     return this;
@@ -1251,6 +1275,24 @@ public class ServerConfiguration {
 
   public void setAllowLegacyLocalNetworkPassword(Boolean allowLegacyLocalNetworkPassword) {
     this.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
+  }
+
+  public ServerConfiguration enableSavedMetadataForPeople(Boolean enableSavedMetadataForPeople) {
+    this.enableSavedMetadataForPeople = enableSavedMetadataForPeople;
+    return this;
+  }
+
+   /**
+   * Get enableSavedMetadataForPeople
+   * @return enableSavedMetadataForPeople
+  **/
+  @Schema(description = "")
+  public Boolean isEnableSavedMetadataForPeople() {
+    return enableSavedMetadataForPeople;
+  }
+
+  public void setEnableSavedMetadataForPeople(Boolean enableSavedMetadataForPeople) {
+    this.enableSavedMetadataForPeople = enableSavedMetadataForPeople;
   }
 
   public ServerConfiguration proxyHeaderMode(ProxyHeaderMode proxyHeaderMode) {
@@ -1460,8 +1502,10 @@ public class ServerConfiguration {
         Objects.equals(this.databaseAnalysisLimit, serverConfiguration.databaseAnalysisLimit) &&
         Objects.equals(this.disableAsyncIO, serverConfiguration.disableAsyncIO) &&
         Objects.equals(this.migratedToUserItemShares, serverConfiguration.migratedToUserItemShares) &&
+        Objects.equals(this.migratedLibraryOptionsToDb, serverConfiguration.migratedLibraryOptionsToDb) &&
         Objects.equals(this.enableFks, serverConfiguration.enableFks) &&
         Objects.equals(this.allowLegacyLocalNetworkPassword, serverConfiguration.allowLegacyLocalNetworkPassword) &&
+        Objects.equals(this.enableSavedMetadataForPeople, serverConfiguration.enableSavedMetadataForPeople) &&
         Objects.equals(this.proxyHeaderMode, serverConfiguration.proxyHeaderMode) &&
         Objects.equals(this.enableDebugLevelLogging, serverConfiguration.enableDebugLevelLogging) &&
         Objects.equals(this.revertDebugLogging, serverConfiguration.revertDebugLogging) &&
@@ -1474,7 +1518,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, enableFks, allowLegacyLocalNetworkPassword, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, migratedLibraryOptionsToDb, enableFks, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1536,8 +1580,10 @@ public class ServerConfiguration {
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
     sb.append("    migratedToUserItemShares: ").append(toIndentedString(migratedToUserItemShares)).append("\n");
+    sb.append("    migratedLibraryOptionsToDb: ").append(toIndentedString(migratedLibraryOptionsToDb)).append("\n");
     sb.append("    enableFks: ").append(toIndentedString(enableFks)).append("\n");
     sb.append("    allowLegacyLocalNetworkPassword: ").append(toIndentedString(allowLegacyLocalNetworkPassword)).append("\n");
+    sb.append("    enableSavedMetadataForPeople: ").append(toIndentedString(enableSavedMetadataForPeople)).append("\n");
     sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");
     sb.append("    enableDebugLevelLogging: ").append(toIndentedString(enableDebugLevelLogging)).append("\n");
     sb.append("    revertDebugLogging: ").append(toIndentedString(revertDebugLogging)).append("\n");

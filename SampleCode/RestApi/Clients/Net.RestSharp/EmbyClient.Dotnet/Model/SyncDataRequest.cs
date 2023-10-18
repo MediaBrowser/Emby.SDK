@@ -27,11 +27,11 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="SyncDataRequest" /> class.
         /// </summary>
         /// <param name="localItemIds">localItemIds.</param>
-        /// <param name="targetId">targetId.</param>
-        public SyncDataRequest(List<string> localItemIds = default(List<string>), string targetId = default(string))
+        /// <param name="internalTargetIds">internalTargetIds.</param>
+        public SyncDataRequest(List<string> localItemIds = default(List<string>), List<long?> internalTargetIds = default(List<long?>))
         {
             this.LocalItemIds = localItemIds;
-            this.TargetId = targetId;
+            this.InternalTargetIds = internalTargetIds;
         }
         
         /// <summary>
@@ -41,10 +41,10 @@ namespace EmbyClient.Dotnet.Model
         public List<string> LocalItemIds { get; set; }
 
         /// <summary>
-        /// Gets or Sets TargetId
+        /// Gets or Sets InternalTargetIds
         /// </summary>
-        [DataMember(Name="TargetId", EmitDefaultValue=false)]
-        public string TargetId { get; set; }
+        [DataMember(Name="InternalTargetIds", EmitDefaultValue=false)]
+        public List<long?> InternalTargetIds { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +55,7 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class SyncDataRequest {\n");
             sb.Append("  LocalItemIds: ").Append(LocalItemIds).Append("\n");
-            sb.Append("  TargetId: ").Append(TargetId).Append("\n");
+            sb.Append("  InternalTargetIds: ").Append(InternalTargetIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,9 +97,10 @@ namespace EmbyClient.Dotnet.Model
                     this.LocalItemIds.SequenceEqual(input.LocalItemIds)
                 ) && 
                 (
-                    this.TargetId == input.TargetId ||
-                    (this.TargetId != null &&
-                    this.TargetId.Equals(input.TargetId))
+                    this.InternalTargetIds == input.InternalTargetIds ||
+                    this.InternalTargetIds != null &&
+                    input.InternalTargetIds != null &&
+                    this.InternalTargetIds.SequenceEqual(input.InternalTargetIds)
                 );
         }
 
@@ -114,8 +115,8 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.LocalItemIds != null)
                     hashCode = hashCode * 59 + this.LocalItemIds.GetHashCode();
-                if (this.TargetId != null)
-                    hashCode = hashCode * 59 + this.TargetId.GetHashCode();
+                if (this.InternalTargetIds != null)
+                    hashCode = hashCode * 59 + this.InternalTargetIds.GetHashCode();
                 return hashCode;
             }
         }

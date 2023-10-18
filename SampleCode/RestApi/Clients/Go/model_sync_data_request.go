@@ -8,5 +8,5 @@ package embyclient-rest-go
 
 type SyncDataRequest struct {
 	LocalItemIds []string `json:"LocalItemIds,omitempty"`
-	TargetId string `json:"TargetId,omitempty"`
+	InternalTargetIds []int64 `json:"InternalTargetIds,omitempty"`
 }

@@ -24,13 +24,14 @@ import MetadataFields from './MetadataFields';
 import NameIdPair from './NameIdPair';
 import NameLongIdPair from './NameLongIdPair';
 import ProviderIdDictionary from './ProviderIdDictionary';
+import SyncJobItemStatus from './SyncJobItemStatus';
 import UserItemDataDto from './UserItemDataDto';
 import Video3DFormat from './Video3DFormat';
 
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export default class BaseItemDto {
     /**
@@ -114,6 +115,9 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('SupportsSync')) {
                 obj['SupportsSync'] = ApiClient.convertToType(data['SupportsSync'], 'Boolean');
+            }
+            if (data.hasOwnProperty('SyncStatus')) {
+                obj['SyncStatus'] = SyncJobItemStatus.constructFromObject(data['SyncStatus']);
             }
             if (data.hasOwnProperty('CanManageAccess')) {
                 obj['CanManageAccess'] = ApiClient.convertToType(data['CanManageAccess'], 'Boolean');
@@ -602,6 +606,10 @@ export default class BaseItemDto {
     * @member {Boolean} SupportsSync
     */
     'SupportsSync' = undefined;
+    /**
+    * @member {module:model/SyncJobItemStatus} SyncStatus
+    */
+    'SyncStatus' = undefined;
     /**
     * @member {Boolean} CanManageAccess
     */

@@ -16,7 +16,7 @@ import PlaybackErrorCode from './PlaybackErrorCode';
 /**
 * The PlaybackInfoResponse model module.
 * @module model/PlaybackInfoResponse
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export default class PlaybackInfoResponse {
     /**

@@ -33,6 +33,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="mediaSourceId">mediaSourceId.</param>
         /// <param name="mediaSource">mediaSource.</param>
         /// <param name="targetId">targetId.</param>
+        /// <param name="internalTargetId">internalTargetId.</param>
         /// <param name="outputPath">outputPath.</param>
         /// <param name="status">status.</param>
         /// <param name="progress">progress.</param>
@@ -41,7 +42,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="primaryImageTag">primaryImageTag.</param>
         /// <param name="temporaryPath">temporaryPath.</param>
         /// <param name="additionalFiles">additionalFiles.</param>
-        public SyncJobItem(long? id = default(long?), long? jobId = default(long?), long? itemId = default(long?), string itemName = default(string), string mediaSourceId = default(string), MediaSourceInfo mediaSource = default(MediaSourceInfo), string targetId = default(string), string outputPath = default(string), SyncJobItemStatus status = default(SyncJobItemStatus), double? progress = default(double?), DateTimeOffset? dateCreated = default(DateTimeOffset?), string primaryImageItemId = default(string), string primaryImageTag = default(string), string temporaryPath = default(string), List<ItemFileInfo> additionalFiles = default(List<ItemFileInfo>))
+        public SyncJobItem(long? id = default(long?), long? jobId = default(long?), long? itemId = default(long?), string itemName = default(string), string mediaSourceId = default(string), MediaSourceInfo mediaSource = default(MediaSourceInfo), string targetId = default(string), long? internalTargetId = default(long?), string outputPath = default(string), SyncJobItemStatus status = default(SyncJobItemStatus), double? progress = default(double?), DateTimeOffset? dateCreated = default(DateTimeOffset?), string primaryImageItemId = default(string), string primaryImageTag = default(string), string temporaryPath = default(string), List<ItemFileInfo> additionalFiles = default(List<ItemFileInfo>))
         {
             this.Id = id;
             this.JobId = jobId;
@@ -50,6 +51,7 @@ namespace EmbyClient.Dotnet.Model
             this.MediaSourceId = mediaSourceId;
             this.MediaSource = mediaSource;
             this.TargetId = targetId;
+            this.InternalTargetId = internalTargetId;
             this.OutputPath = outputPath;
             this.Status = status;
             this.Progress = progress;
@@ -101,6 +103,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="TargetId", EmitDefaultValue=false)]
         public string TargetId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InternalTargetId
+        /// </summary>
+        [DataMember(Name="InternalTargetId", EmitDefaultValue=false)]
+        public long? InternalTargetId { get; set; }
 
         /// <summary>
         /// Gets or Sets OutputPath
@@ -165,6 +173,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  MediaSourceId: ").Append(MediaSourceId).Append("\n");
             sb.Append("  MediaSource: ").Append(MediaSource).Append("\n");
             sb.Append("  TargetId: ").Append(TargetId).Append("\n");
+            sb.Append("  InternalTargetId: ").Append(InternalTargetId).Append("\n");
             sb.Append("  OutputPath: ").Append(OutputPath).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Progress: ").Append(Progress).Append("\n");
@@ -243,6 +252,11 @@ namespace EmbyClient.Dotnet.Model
                     this.TargetId.Equals(input.TargetId))
                 ) && 
                 (
+                    this.InternalTargetId == input.InternalTargetId ||
+                    (this.InternalTargetId != null &&
+                    this.InternalTargetId.Equals(input.InternalTargetId))
+                ) && 
+                (
                     this.OutputPath == input.OutputPath ||
                     (this.OutputPath != null &&
                     this.OutputPath.Equals(input.OutputPath))
@@ -308,6 +322,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MediaSource.GetHashCode();
                 if (this.TargetId != null)
                     hashCode = hashCode * 59 + this.TargetId.GetHashCode();
+                if (this.InternalTargetId != null)
+                    hashCode = hashCode * 59 + this.InternalTargetId.GetHashCode();
                 if (this.OutputPath != null)
                     hashCode = hashCode * 59 + this.OutputPath.GetHashCode();
                 if (this.Status != null)

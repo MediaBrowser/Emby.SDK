@@ -81,8 +81,10 @@ public struct ServerConfiguration: Codable {
     public var databaseAnalysisLimit: Int?
     public var disableAsyncIO: Bool?
     public var migratedToUserItemShares: Bool?
+    public var migratedLibraryOptionsToDb: Bool?
     public var enableFks: Bool?
     public var allowLegacyLocalNetworkPassword: Bool?
+    public var enableSavedMetadataForPeople: Bool?
     public var proxyHeaderMode: ProxyHeaderMode?
     /** A value indicating whether \\[enable debug level logging\\]. */
     public var enableDebugLevelLogging: Bool?
@@ -98,7 +100,7 @@ public struct ServerConfiguration: Codable {
     /** The cache path. */
     public var cachePath: String?
 
-    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelay: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, forcedSortNameUpgraded: Bool? = nil, inheritedParentalRatingValueUpgraded: Bool? = nil, imageExtractorUpgraded: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares: Bool? = nil, enableFks: Bool? = nil, allowLegacyLocalNetworkPassword: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
+    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelay: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, forcedSortNameUpgraded: Bool? = nil, inheritedParentalRatingValueUpgraded: Bool? = nil, imageExtractorUpgraded: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares: Bool? = nil, migratedLibraryOptionsToDb: Bool? = nil, enableFks: Bool? = nil, allowLegacyLocalNetworkPassword: Bool? = nil, enableSavedMetadataForPeople: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
         self.enableUPnP = enableUPnP
         self.publicPort = publicPort
         self.publicHttpsPort = publicHttpsPort
@@ -152,8 +154,10 @@ public struct ServerConfiguration: Codable {
         self.databaseAnalysisLimit = databaseAnalysisLimit
         self.disableAsyncIO = disableAsyncIO
         self.migratedToUserItemShares = migratedToUserItemShares
+        self.migratedLibraryOptionsToDb = migratedLibraryOptionsToDb
         self.enableFks = enableFks
         self.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword
+        self.enableSavedMetadataForPeople = enableSavedMetadataForPeople
         self.proxyHeaderMode = proxyHeaderMode
         self.enableDebugLevelLogging = enableDebugLevelLogging
         self.revertDebugLogging = revertDebugLogging
@@ -218,8 +222,10 @@ public struct ServerConfiguration: Codable {
         case databaseAnalysisLimit = "DatabaseAnalysisLimit"
         case disableAsyncIO = "DisableAsyncIO"
         case migratedToUserItemShares = "MigratedToUserItemShares"
+        case migratedLibraryOptionsToDb = "MigratedLibraryOptionsToDb"
         case enableFks = "EnableFks"
         case allowLegacyLocalNetworkPassword = "AllowLegacyLocalNetworkPassword"
+        case enableSavedMetadataForPeople = "EnableSavedMetadataForPeople"
         case proxyHeaderMode = "ProxyHeaderMode"
         case enableDebugLevelLogging = "EnableDebugLevelLogging"
         case revertDebugLogging = "RevertDebugLogging"

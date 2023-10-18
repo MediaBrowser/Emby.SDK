@@ -89,6 +89,7 @@ import ForgotPasswordResult from './model/ForgotPasswordResult';
 import GameInfo from './model/GameInfo';
 import GeneralCommand from './model/GeneralCommand';
 import GenericEditIEditObjectContainer from './model/GenericEditIEditObjectContainer';
+import GetDirectoryContents from './model/GetDirectoryContents';
 import GlobalizationCountryInfo from './model/GlobalizationCountryInfo';
 import GlobalizationCultureDto from './model/GlobalizationCultureDto';
 import GlobalizationLocalizatonOption from './model/GlobalizationLocalizatonOption';
@@ -413,7 +414,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export {
     /**
@@ -895,6 +896,12 @@ export {
      * @property {module:model/GenericEditIEditObjectContainer}
      */
     GenericEditIEditObjectContainer,
+
+    /**
+     * The GetDirectoryContents model constructor.
+     * @property {module:model/GetDirectoryContents}
+     */
+    GetDirectoryContents,
 
     /**
      * The GlobalizationCountryInfo model constructor.

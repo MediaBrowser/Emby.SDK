@@ -31,6 +31,9 @@ public class SyncJob {
   @SerializedName("TargetId")
   private String targetId = null;
 
+  @SerializedName("InternalTargetId")
+  private Long internalTargetId = null;
+
   @SerializedName("TargetName")
   private String targetName = null;
 
@@ -81,6 +84,9 @@ public class SyncJob {
 
   @SerializedName("RequestedItemIds")
   private List<Long> requestedItemIds = null;
+
+  @SerializedName("ItemId")
+  private Long itemId = null;
 
   @SerializedName("DateCreated")
   private OffsetDateTime dateCreated = null;
@@ -134,6 +140,24 @@ public class SyncJob {
 
   public void setTargetId(String targetId) {
     this.targetId = targetId;
+  }
+
+  public SyncJob internalTargetId(Long internalTargetId) {
+    this.internalTargetId = internalTargetId;
+    return this;
+  }
+
+   /**
+   * Get internalTargetId
+   * @return internalTargetId
+  **/
+  @Schema(description = "")
+  public Long getInternalTargetId() {
+    return internalTargetId;
+  }
+
+  public void setInternalTargetId(Long internalTargetId) {
+    this.internalTargetId = internalTargetId;
   }
 
   public SyncJob targetName(String targetName) {
@@ -450,6 +474,24 @@ public class SyncJob {
     this.requestedItemIds = requestedItemIds;
   }
 
+  public SyncJob itemId(Long itemId) {
+    this.itemId = itemId;
+    return this;
+  }
+
+   /**
+   * Get itemId
+   * @return itemId
+  **/
+  @Schema(description = "")
+  public Long getItemId() {
+    return itemId;
+  }
+
+  public void setItemId(Long itemId) {
+    this.itemId = itemId;
+  }
+
   public SyncJob dateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
@@ -570,6 +612,7 @@ public class SyncJob {
     SyncJob syncJob = (SyncJob) o;
     return Objects.equals(this.id, syncJob.id) &&
         Objects.equals(this.targetId, syncJob.targetId) &&
+        Objects.equals(this.internalTargetId, syncJob.internalTargetId) &&
         Objects.equals(this.targetName, syncJob.targetName) &&
         Objects.equals(this.quality, syncJob.quality) &&
         Objects.equals(this.bitrate, syncJob.bitrate) &&
@@ -587,6 +630,7 @@ public class SyncJob {
         Objects.equals(this.syncNewContent, syncJob.syncNewContent) &&
         Objects.equals(this.itemLimit, syncJob.itemLimit) &&
         Objects.equals(this.requestedItemIds, syncJob.requestedItemIds) &&
+        Objects.equals(this.itemId, syncJob.itemId) &&
         Objects.equals(this.dateCreated, syncJob.dateCreated) &&
         Objects.equals(this.dateLastModified, syncJob.dateLastModified) &&
         Objects.equals(this.itemCount, syncJob.itemCount) &&
@@ -597,7 +641,7 @@ public class SyncJob {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, targetId, targetName, quality, bitrate, container, videoCodec, audioCodec, profile, category, parentId, progress, name, status, userId, unwatchedOnly, syncNewContent, itemLimit, requestedItemIds, dateCreated, dateLastModified, itemCount, parentName, primaryImageItemId, primaryImageTag);
+    return Objects.hash(id, targetId, internalTargetId, targetName, quality, bitrate, container, videoCodec, audioCodec, profile, category, parentId, progress, name, status, userId, unwatchedOnly, syncNewContent, itemLimit, requestedItemIds, itemId, dateCreated, dateLastModified, itemCount, parentName, primaryImageItemId, primaryImageTag);
   }
 
 
@@ -608,6 +652,7 @@ public class SyncJob {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    targetId: ").append(toIndentedString(targetId)).append("\n");
+    sb.append("    internalTargetId: ").append(toIndentedString(internalTargetId)).append("\n");
     sb.append("    targetName: ").append(toIndentedString(targetName)).append("\n");
     sb.append("    quality: ").append(toIndentedString(quality)).append("\n");
     sb.append("    bitrate: ").append(toIndentedString(bitrate)).append("\n");
@@ -625,6 +670,7 @@ public class SyncJob {
     sb.append("    syncNewContent: ").append(toIndentedString(syncNewContent)).append("\n");
     sb.append("    itemLimit: ").append(toIndentedString(itemLimit)).append("\n");
     sb.append("    requestedItemIds: ").append(toIndentedString(requestedItemIds)).append("\n");
+    sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("    dateLastModified: ").append(toIndentedString(dateLastModified)).append("\n");
     sb.append("    itemCount: ").append(toIndentedString(itemCount)).append("\n");

@@ -107,7 +107,8 @@ public class SyncServiceApiTest {
      */
     @Test
     public void getSyncJobitemsTest() throws Exception {
-        QueryResultSyncJobItem response = api.getSyncJobitems();
+        String targetId = null;
+        QueryResultSyncJobItem response = api.getSyncJobitems(targetId);
 
         // TODO: test validations
     }
@@ -248,7 +249,8 @@ public class SyncServiceApiTest {
     @Test
     public void postSyncDataTest() throws Exception {
         SyncDataRequest body = null;
-        SyncDataResponse response = api.postSyncData(body);
+        String targetId = null;
+        SyncDataResponse response = api.postSyncData(body, targetId);
 
         // TODO: test validations
     }

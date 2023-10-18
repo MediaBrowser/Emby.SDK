@@ -14,6 +14,7 @@ type SyncJob struct {
 	Id int64 `json:"Id,omitempty"`
 	// The device identifier.
 	TargetId string `json:"TargetId,omitempty"`
+	InternalTargetId int64 `json:"InternalTargetId,omitempty"`
 	// The name of the target.
 	TargetName string `json:"TargetName,omitempty"`
 	// The quality.
@@ -43,6 +44,7 @@ type SyncJob struct {
 	ItemLimit int32 `json:"ItemLimit,omitempty"`
 	// The requested item ids.
 	RequestedItemIds []int64 `json:"RequestedItemIds,omitempty"`
+	ItemId int64 `json:"ItemId,omitempty"`
 	// The date created.
 	DateCreated time.Time `json:"DateCreated,omitempty"`
 	// The date last modified.

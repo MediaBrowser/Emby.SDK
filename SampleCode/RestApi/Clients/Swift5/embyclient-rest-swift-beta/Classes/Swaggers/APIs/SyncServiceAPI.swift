@@ -601,6 +601,7 @@ open class SyncServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
+    "SyncStatus" : "Queued",
     "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
@@ -695,13 +696,13 @@ open class SyncServiceAPI {
   "AdditionalFiles" : [ {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   }, {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   } ],
@@ -1137,6 +1138,7 @@ open class SyncServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
+    "SyncStatus" : "Queued",
     "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
@@ -1231,13 +1233,13 @@ open class SyncServiceAPI {
   "AdditionalFiles" : [ {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   }, {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   } ],
@@ -1267,10 +1269,11 @@ open class SyncServiceAPI {
     /**
      Gets sync job items.
 
+     - parameter targetId: (query) TargetId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncJobitems(completion: @escaping ((_ data: QueryResultSyncJobItem?,_ error: Error?) -> Void)) {
-        getSyncJobitemsWithRequestBuilder().execute { (response, error) -> Void in
+    open class func getSyncJobitems(targetId: String, completion: @escaping ((_ data: QueryResultSyncJobItem?,_ error: Error?) -> Void)) {
+        getSyncJobitemsWithRequestBuilder(targetId: targetId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -1290,7 +1293,7 @@ open class SyncServiceAPI {
   "TotalRecordCount" : 0,
   "Items" : [ {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1298,6 +1301,7 @@ open class SyncServiceAPI {
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
@@ -1451,13 +1455,13 @@ open class SyncServiceAPI {
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -1467,7 +1471,7 @@ open class SyncServiceAPI {
     "JobId" : 6
   }, {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1475,6 +1479,7 @@ open class SyncServiceAPI {
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
@@ -1628,13 +1633,13 @@ open class SyncServiceAPI {
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -1644,14 +1649,18 @@ open class SyncServiceAPI {
     "JobId" : 6
   } ]
 }}]
+     - parameter targetId: (query) TargetId 
 
      - returns: RequestBuilder<QueryResultSyncJobItem> 
      */
-    open class func getSyncJobitemsWithRequestBuilder() -> RequestBuilder<QueryResultSyncJobItem> {
+    open class func getSyncJobitemsWithRequestBuilder(targetId: String) -> RequestBuilder<QueryResultSyncJobItem> {
         let path = "/Sync/JobItems"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "TargetId": targetId
+        ])
 
 
         let requestBuilder: RequestBuilder<QueryResultSyncJobItem>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
@@ -1776,57 +1785,61 @@ open class SyncServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "TotalRecordCount" : 3,
+  "TotalRecordCount" : 4,
   "Items" : [ {
     "Category" : "Latest",
-    "ItemLimit" : 2,
+    "ItemLimit" : 7,
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
-    "RequestedItemIds" : [ 7, 7 ],
+    "RequestedItemIds" : [ 9, 9 ],
     "TargetName" : "TargetName",
     "SyncNewContent" : true,
     "ParentName" : "ParentName",
+    "ItemId" : 3,
     "Profile" : "Profile",
     "Name" : "Name",
     "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
     "Container" : "Container",
     "Quality" : "Quality",
     "PrimaryImageItemId" : "PrimaryImageItemId",
-    "ItemCount" : 9,
+    "ItemCount" : 2,
     "AudioCodec" : "AudioCodec",
-    "ParentId" : 1,
+    "ParentId" : 5,
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
-    "Bitrate" : 6,
+    "Progress" : 5.637376656633329,
+    "Bitrate" : 1,
     "VideoCodec" : "VideoCodec",
     "TargetId" : "TargetId",
-    "UserId" : 5,
+    "InternalTargetId" : 6,
+    "UserId" : 2,
     "UnwatchedOnly" : true,
     "Id" : 0
   }, {
     "Category" : "Latest",
-    "ItemLimit" : 2,
+    "ItemLimit" : 7,
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
-    "RequestedItemIds" : [ 7, 7 ],
+    "RequestedItemIds" : [ 9, 9 ],
     "TargetName" : "TargetName",
     "SyncNewContent" : true,
     "ParentName" : "ParentName",
+    "ItemId" : 3,
     "Profile" : "Profile",
     "Name" : "Name",
     "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
     "Container" : "Container",
     "Quality" : "Quality",
     "PrimaryImageItemId" : "PrimaryImageItemId",
-    "ItemCount" : 9,
+    "ItemCount" : 2,
     "AudioCodec" : "AudioCodec",
-    "ParentId" : 1,
+    "ParentId" : 5,
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
-    "Bitrate" : 6,
+    "Progress" : 5.637376656633329,
+    "Bitrate" : 1,
     "VideoCodec" : "VideoCodec",
     "TargetId" : "TargetId",
-    "UserId" : 5,
+    "InternalTargetId" : 6,
+    "UserId" : 2,
     "UnwatchedOnly" : true,
     "Id" : 0
   } ]
@@ -1870,28 +1883,30 @@ open class SyncServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "Category" : "Latest",
-  "ItemLimit" : 2,
+  "ItemLimit" : 7,
   "DateCreated" : "2000-01-23T04:56:07.000+00:00",
   "PrimaryImageTag" : "PrimaryImageTag",
-  "RequestedItemIds" : [ 7, 7 ],
+  "RequestedItemIds" : [ 9, 9 ],
   "TargetName" : "TargetName",
   "SyncNewContent" : true,
   "ParentName" : "ParentName",
+  "ItemId" : 3,
   "Profile" : "Profile",
   "Name" : "Name",
   "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
   "Container" : "Container",
   "Quality" : "Quality",
   "PrimaryImageItemId" : "PrimaryImageItemId",
-  "ItemCount" : 9,
+  "ItemCount" : 2,
   "AudioCodec" : "AudioCodec",
-  "ParentId" : 1,
+  "ParentId" : 5,
   "Status" : "Queued",
-  "Progress" : 5.962133916683182,
-  "Bitrate" : 6,
+  "Progress" : 5.637376656633329,
+  "Bitrate" : 1,
   "VideoCodec" : "VideoCodec",
   "TargetId" : "TargetId",
-  "UserId" : 5,
+  "InternalTargetId" : 6,
+  "UserId" : 2,
   "UnwatchedOnly" : true,
   "Id" : 0
 }}]
@@ -2151,10 +2166,11 @@ open class SyncServiceAPI {
      Syncs data between device and server
 
      - parameter body: (body) SyncDataRequest:  
+     - parameter targetId: (query) TargetId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncData(body: SyncDataRequest, completion: @escaping ((_ data: SyncDataResponse?,_ error: Error?) -> Void)) {
-        postSyncDataWithRequestBuilder(body: body).execute { (response, error) -> Void in
+    open class func postSyncData(body: SyncDataRequest, targetId: String, completion: @escaping ((_ data: SyncDataResponse?,_ error: Error?) -> Void)) {
+        postSyncDataWithRequestBuilder(body: body, targetId: targetId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -2174,14 +2190,18 @@ open class SyncServiceAPI {
   "ItemIdsToRemove" : [ "ItemIdsToRemove", "ItemIdsToRemove" ]
 }}]
      - parameter body: (body) SyncDataRequest:  
+     - parameter targetId: (query) TargetId 
 
      - returns: RequestBuilder<SyncDataResponse> 
      */
-    open class func postSyncDataWithRequestBuilder(body: SyncDataRequest) -> RequestBuilder<SyncDataResponse> {
+    open class func postSyncDataWithRequestBuilder(body: SyncDataRequest, targetId: String) -> RequestBuilder<SyncDataResponse> {
         let path = "/Sync/Data"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "TargetId": targetId
+        ])
 
 
         let requestBuilder: RequestBuilder<SyncDataResponse>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
@@ -2484,7 +2504,7 @@ open class SyncServiceAPI {
      - examples: [{contentType=application/json, example={
   "JobItems" : [ {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2492,6 +2512,7 @@ open class SyncServiceAPI {
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
@@ -2645,13 +2666,13 @@ open class SyncServiceAPI {
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -2661,7 +2682,7 @@ open class SyncServiceAPI {
     "JobId" : 6
   }, {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2669,6 +2690,7 @@ open class SyncServiceAPI {
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
@@ -2822,13 +2844,13 @@ open class SyncServiceAPI {
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -2839,28 +2861,30 @@ open class SyncServiceAPI {
   } ],
   "Job" : {
     "Category" : "Latest",
-    "ItemLimit" : 2,
+    "ItemLimit" : 7,
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
-    "RequestedItemIds" : [ 7, 7 ],
+    "RequestedItemIds" : [ 9, 9 ],
     "TargetName" : "TargetName",
     "SyncNewContent" : true,
     "ParentName" : "ParentName",
+    "ItemId" : 3,
     "Profile" : "Profile",
     "Name" : "Name",
     "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
     "Container" : "Container",
     "Quality" : "Quality",
     "PrimaryImageItemId" : "PrimaryImageItemId",
-    "ItemCount" : 9,
+    "ItemCount" : 2,
     "AudioCodec" : "AudioCodec",
-    "ParentId" : 1,
+    "ParentId" : 5,
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
-    "Bitrate" : 6,
+    "Progress" : 5.637376656633329,
+    "Bitrate" : 1,
     "VideoCodec" : "VideoCodec",
     "TargetId" : "TargetId",
-    "UserId" : 5,
+    "InternalTargetId" : 6,
+    "UserId" : 2,
     "UnwatchedOnly" : true,
     "Id" : 0
   }

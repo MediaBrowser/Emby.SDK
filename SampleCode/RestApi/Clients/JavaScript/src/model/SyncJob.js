@@ -16,7 +16,7 @@ import SyncJobStatus from './SyncJobStatus';
 /**
 * The SyncJob model module.
 * @module model/SyncJob
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export default class SyncJob {
     /**
@@ -48,6 +48,9 @@ export default class SyncJob {
             }
             if (data.hasOwnProperty('TargetId')) {
                 obj['TargetId'] = ApiClient.convertToType(data['TargetId'], 'String');
+            }
+            if (data.hasOwnProperty('InternalTargetId')) {
+                obj['InternalTargetId'] = ApiClient.convertToType(data['InternalTargetId'], 'Number');
             }
             if (data.hasOwnProperty('TargetName')) {
                 obj['TargetName'] = ApiClient.convertToType(data['TargetName'], 'String');
@@ -100,6 +103,9 @@ export default class SyncJob {
             if (data.hasOwnProperty('RequestedItemIds')) {
                 obj['RequestedItemIds'] = ApiClient.convertToType(data['RequestedItemIds'], ['Number']);
             }
+            if (data.hasOwnProperty('ItemId')) {
+                obj['ItemId'] = ApiClient.convertToType(data['ItemId'], 'Number');
+            }
             if (data.hasOwnProperty('DateCreated')) {
                 obj['DateCreated'] = ApiClient.convertToType(data['DateCreated'], 'Date');
             }
@@ -132,6 +138,10 @@ export default class SyncJob {
     * @member {String} TargetId
     */
     'TargetId' = undefined;
+    /**
+    * @member {Number} InternalTargetId
+    */
+    'InternalTargetId' = undefined;
     /**
     * The name of the target.
     * @member {String} TargetName
@@ -212,6 +222,10 @@ export default class SyncJob {
     * @member {Array.<Number>} RequestedItemIds
     */
     'RequestedItemIds' = undefined;
+    /**
+    * @member {Number} ItemId
+    */
+    'ItemId' = undefined;
     /**
     * The date created.
     * @member {Date} DateCreated

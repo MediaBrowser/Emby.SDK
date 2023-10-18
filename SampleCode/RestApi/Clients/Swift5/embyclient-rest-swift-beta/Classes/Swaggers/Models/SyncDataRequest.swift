@@ -12,16 +12,16 @@ import Foundation
 public struct SyncDataRequest: Codable {
 
     public var localItemIds: [String]?
-    public var targetId: String?
+    public var internalTargetIds: [Int64]?
 
-    public init(localItemIds: [String]? = nil, targetId: String? = nil) {
+    public init(localItemIds: [String]? = nil, internalTargetIds: [Int64]? = nil) {
         self.localItemIds = localItemIds
-        self.targetId = targetId
+        self.internalTargetIds = internalTargetIds
     }
 
     public enum CodingKeys: String, CodingKey { 
         case localItemIds = "LocalItemIds"
-        case targetId = "TargetId"
+        case internalTargetIds = "InternalTargetIds"
     }
 
 }

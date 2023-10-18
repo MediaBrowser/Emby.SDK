@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SyncDataRequest model module.
 * @module model/SyncDataRequest
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export default class SyncDataRequest {
     /**
@@ -44,8 +44,8 @@ export default class SyncDataRequest {
             if (data.hasOwnProperty('LocalItemIds')) {
                 obj['LocalItemIds'] = ApiClient.convertToType(data['LocalItemIds'], ['String']);
             }
-            if (data.hasOwnProperty('TargetId')) {
-                obj['TargetId'] = ApiClient.convertToType(data['TargetId'], 'String');
+            if (data.hasOwnProperty('InternalTargetIds')) {
+                obj['InternalTargetIds'] = ApiClient.convertToType(data['InternalTargetIds'], ['Number']);
             }
         }
         return obj;
@@ -56,9 +56,9 @@ export default class SyncDataRequest {
     */
     'LocalItemIds' = undefined;
     /**
-    * @member {String} TargetId
+    * @member {Array.<Number>} InternalTargetIds
     */
-    'TargetId' = undefined;
+    'InternalTargetIds' = undefined;
 
 
 

@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.53"
+    "version": "4.8.0.54"
   },
   "servers": [
     {
@@ -26195,6 +26195,109 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "post": {
+        "tags": [
+          "EnvironmentService"
+        ],
+        "summary": "Gets the contents of a given directory in the file system",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEnvironmentDirectorycontents",
+        "parameters": [
+          {
+            "name": "Path",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeFiles",
+            "in": "query",
+            "description": "An optional filter to include or exclude files from the results. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IncludeDirectories",
+            "in": "query",
+            "description": "An optional filter to include or exclude folders from the results. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "GetDirectoryContents",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDirectoryContents"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDirectoryContents"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a List<FileSystemEntryInfo> object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IO.FileSystemEntryInfo"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IO.FileSystemEntryInfo"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
     "/Environment/NetworkShares": {
@@ -38465,6 +38568,19 @@
         "summary": "Gets sync job items.",
         "description": "Requires authentication as user",
         "operationId": "getSyncJobitems",
+        "parameters": [
+          {
+            "name": "TargetId",
+            "in": "query",
+            "description": "TargetId",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Operation successful. Returning a QueryResult<SyncJobItem> object.",
@@ -38684,6 +38800,19 @@
         "summary": "Syncs data between device and server",
         "description": "Requires authentication as user",
         "operationId": "postSyncData",
+        "parameters": [
+          {
+            "name": "TargetId",
+            "in": "query",
+            "description": "TargetId",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "description": "SyncDataRequest: ",
           "content": {
@@ -77153,6 +77282,9 @@
             "description": "A value indicating whether \\[supports synchronize\\].",
             "nullable": true
           },
+          "SyncStatus": {
+            "$ref": "#/components/schemas/SyncJobItemStatus"
+          },
           "CanManageAccess": {
             "type": "boolean",
             "nullable": true
@@ -77789,6 +77921,18 @@
         },
         "description": "This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Dto.BaseItemDto"
+      },
+      "SyncJobItemStatus": {
+        "enum": [
+          "Queued",
+          "Converting",
+          "ReadyToTransfer",
+          "Transferring",
+          "Synced",
+          "Failed"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Sync.SyncJobItemStatus"
       },
       "Video3DFormat": {
         "enum": [
@@ -80640,6 +80784,18 @@
         "description": "Enum FileSystemEntryType\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.IO.FileSystemEntryType"
       },
+      "GetDirectoryContents": {
+        "type": "object",
+        "properties": {
+          "Username": {
+            "type": "string"
+          },
+          "Password": {
+            "type": "string"
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.GetDirectoryContents"
+      },
       "ItemCounts": {
         "type": "object",
         "properties": {
@@ -82513,6 +82669,10 @@
             "type": "string",
             "description": "The device identifier."
           },
+          "InternalTargetId": {
+            "type": "integer",
+            "format": "int64"
+          },
           "TargetName": {
             "type": "string",
             "description": "The name of the target."
@@ -82586,6 +82746,10 @@
               "format": "int64"
             },
             "description": "The requested item ids."
+          },
+          "ItemId": {
+            "type": "integer",
+            "format": "int64"
           },
           "DateCreated": {
             "type": "string",
@@ -82678,6 +82842,10 @@
           "TargetId": {
             "type": "string"
           },
+          "InternalTargetId": {
+            "type": "integer",
+            "format": "int64"
+          },
           "OutputPath": {
             "type": "string"
           },
@@ -82710,18 +82878,6 @@
           }
         },
         "x-internal-ref-name": "Emby.Server.Sync.Model.SyncJobItem"
-      },
-      "SyncJobItemStatus": {
-        "enum": [
-          "Queued",
-          "Converting",
-          "ReadyToTransfer",
-          "Transferring",
-          "Synced",
-          "Failed"
-        ],
-        "type": "string",
-        "x-internal-ref-name": "Emby.Server.Sync.Model.SyncJobItemStatus"
       },
       "ItemFileInfo": {
         "type": "object",
@@ -82960,8 +83116,12 @@
               "type": "string"
             }
           },
-          "TargetId": {
-            "type": "string"
+          "InternalTargetIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
           }
         },
         "x-internal-ref-name": "Emby.Server.Sync.Model.SyncDataRequest"
@@ -83184,10 +83344,16 @@
           "MigratedToUserItemShares": {
             "type": "boolean"
           },
+          "MigratedLibraryOptionsToDb": {
+            "type": "boolean"
+          },
           "EnableFks": {
             "type": "boolean"
           },
           "AllowLegacyLocalNetworkPassword": {
+            "type": "boolean"
+          },
+          "EnableSavedMetadataForPeople": {
             "type": "boolean"
           },
           "ProxyHeaderMode": {

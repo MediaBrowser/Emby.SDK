@@ -27,7 +27,7 @@ import UserAction from '../model/UserAction';
 /**
 * SyncService service.
 * @module EmbyClient.JavaScript.Beta/SyncServiceApi
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export default class SyncServiceApi {
 
@@ -214,6 +214,7 @@ export default class SyncServiceApi {
       let pathParams = {
       };
       let queryParams = {
+        'TargetId': targetId
       };
       let headerParams = {
       };
@@ -560,6 +561,7 @@ export default class SyncServiceApi {
       let pathParams = {
       };
       let queryParams = {
+        'TargetId': targetId
       };
       let headerParams = {
       };

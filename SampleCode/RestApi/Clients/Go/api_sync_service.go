@@ -378,9 +378,10 @@ func (a *SyncServiceApiService) GetSyncItemsReady(ctx context.Context, targetId 
 SyncServiceApiService Gets sync job items.
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param targetId TargetId
 @return QueryResultSyncJobItem
 */
-func (a *SyncServiceApiService) GetSyncJobitems(ctx context.Context) (QueryResultSyncJobItem, *http.Response, error) {
+func (a *SyncServiceApiService) GetSyncJobitems(ctx context.Context, targetId string) (QueryResultSyncJobItem, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -396,6 +397,7 @@ func (a *SyncServiceApiService) GetSyncJobitems(ctx context.Context) (QueryResul
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("TargetId", parameterToString(targetId, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 
@@ -1229,9 +1231,10 @@ SyncServiceApiService Syncs data between device and server
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body SyncDataRequest: 
+ * @param targetId TargetId
 @return SyncDataResponse
 */
-func (a *SyncServiceApiService) PostSyncData(ctx context.Context, body SyncDataRequest) (SyncDataResponse, *http.Response, error) {
+func (a *SyncServiceApiService) PostSyncData(ctx context.Context, body SyncDataRequest, targetId string) (SyncDataResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1247,6 +1250,7 @@ func (a *SyncServiceApiService) PostSyncData(ctx context.Context, body SyncDataR
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("TargetId", parameterToString(targetId, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json", "application/xml"}
 

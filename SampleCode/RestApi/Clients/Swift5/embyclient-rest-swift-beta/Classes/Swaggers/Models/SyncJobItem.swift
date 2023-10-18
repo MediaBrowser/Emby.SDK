@@ -18,6 +18,7 @@ public struct SyncJobItem: Codable {
     public var mediaSourceId: String?
     public var mediaSource: MediaSourceInfo?
     public var targetId: String?
+    public var internalTargetId: Int64?
     public var outputPath: String?
     public var status: SyncJobItemStatus?
     public var progress: Double?
@@ -27,7 +28,7 @@ public struct SyncJobItem: Codable {
     public var temporaryPath: String?
     public var additionalFiles: [ItemFileInfo]?
 
-    public init(_id: Int64? = nil, jobId: Int64? = nil, itemId: Int64? = nil, itemName: String? = nil, mediaSourceId: String? = nil, mediaSource: MediaSourceInfo? = nil, targetId: String? = nil, outputPath: String? = nil, status: SyncJobItemStatus? = nil, progress: Double? = nil, dateCreated: Date? = nil, primaryImageItemId: String? = nil, primaryImageTag: String? = nil, temporaryPath: String? = nil, additionalFiles: [ItemFileInfo]? = nil) {
+    public init(_id: Int64? = nil, jobId: Int64? = nil, itemId: Int64? = nil, itemName: String? = nil, mediaSourceId: String? = nil, mediaSource: MediaSourceInfo? = nil, targetId: String? = nil, internalTargetId: Int64? = nil, outputPath: String? = nil, status: SyncJobItemStatus? = nil, progress: Double? = nil, dateCreated: Date? = nil, primaryImageItemId: String? = nil, primaryImageTag: String? = nil, temporaryPath: String? = nil, additionalFiles: [ItemFileInfo]? = nil) {
         self._id = _id
         self.jobId = jobId
         self.itemId = itemId
@@ -35,6 +36,7 @@ public struct SyncJobItem: Codable {
         self.mediaSourceId = mediaSourceId
         self.mediaSource = mediaSource
         self.targetId = targetId
+        self.internalTargetId = internalTargetId
         self.outputPath = outputPath
         self.status = status
         self.progress = progress
@@ -53,6 +55,7 @@ public struct SyncJobItem: Codable {
         case mediaSourceId = "MediaSourceId"
         case mediaSource = "MediaSource"
         case targetId = "TargetId"
+        case internalTargetId = "InternalTargetId"
         case outputPath = "OutputPath"
         case status = "Status"
         case progress = "Progress"

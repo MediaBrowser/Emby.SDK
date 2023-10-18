@@ -28,6 +28,7 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="id">The identifier..</param>
         /// <param name="targetId">The device identifier..</param>
+        /// <param name="internalTargetId">internalTargetId.</param>
         /// <param name="targetName">The name of the target..</param>
         /// <param name="quality">The quality..</param>
         /// <param name="bitrate">The bitrate..</param>
@@ -45,16 +46,18 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="syncNewContent">A value indicating whether \\[synchronize new content\\]..</param>
         /// <param name="itemLimit">The item limit..</param>
         /// <param name="requestedItemIds">The requested item ids..</param>
+        /// <param name="itemId">itemId.</param>
         /// <param name="dateCreated">The date created..</param>
         /// <param name="dateLastModified">The date last modified..</param>
         /// <param name="itemCount">The item count..</param>
         /// <param name="parentName">parentName.</param>
         /// <param name="primaryImageItemId">primaryImageItemId.</param>
         /// <param name="primaryImageTag">primaryImageTag.</param>
-        public SyncJob(long? id = default(long?), string targetId = default(string), string targetName = default(string), string quality = default(string), int? bitrate = default(int?), string container = default(string), string videoCodec = default(string), string audioCodec = default(string), string profile = default(string), SyncCategory category = default(SyncCategory), long? parentId = default(long?), double? progress = default(double?), string name = default(string), SyncJobStatus status = default(SyncJobStatus), long? userId = default(long?), bool? unwatchedOnly = default(bool?), bool? syncNewContent = default(bool?), int? itemLimit = default(int?), List<long?> requestedItemIds = default(List<long?>), DateTimeOffset? dateCreated = default(DateTimeOffset?), DateTimeOffset? dateLastModified = default(DateTimeOffset?), int? itemCount = default(int?), string parentName = default(string), string primaryImageItemId = default(string), string primaryImageTag = default(string))
+        public SyncJob(long? id = default(long?), string targetId = default(string), long? internalTargetId = default(long?), string targetName = default(string), string quality = default(string), int? bitrate = default(int?), string container = default(string), string videoCodec = default(string), string audioCodec = default(string), string profile = default(string), SyncCategory category = default(SyncCategory), long? parentId = default(long?), double? progress = default(double?), string name = default(string), SyncJobStatus status = default(SyncJobStatus), long? userId = default(long?), bool? unwatchedOnly = default(bool?), bool? syncNewContent = default(bool?), int? itemLimit = default(int?), List<long?> requestedItemIds = default(List<long?>), long? itemId = default(long?), DateTimeOffset? dateCreated = default(DateTimeOffset?), DateTimeOffset? dateLastModified = default(DateTimeOffset?), int? itemCount = default(int?), string parentName = default(string), string primaryImageItemId = default(string), string primaryImageTag = default(string))
         {
             this.Id = id;
             this.TargetId = targetId;
+            this.InternalTargetId = internalTargetId;
             this.TargetName = targetName;
             this.Quality = quality;
             this.Bitrate = bitrate;
@@ -72,6 +75,7 @@ namespace EmbyClient.Dotnet.Model
             this.SyncNewContent = syncNewContent;
             this.ItemLimit = itemLimit;
             this.RequestedItemIds = requestedItemIds;
+            this.ItemId = itemId;
             this.DateCreated = dateCreated;
             this.DateLastModified = dateLastModified;
             this.ItemCount = itemCount;
@@ -93,6 +97,12 @@ namespace EmbyClient.Dotnet.Model
         /// <value>The device identifier.</value>
         [DataMember(Name="TargetId", EmitDefaultValue=false)]
         public string TargetId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InternalTargetId
+        /// </summary>
+        [DataMember(Name="InternalTargetId", EmitDefaultValue=false)]
+        public long? InternalTargetId { get; set; }
 
         /// <summary>
         /// The name of the target.
@@ -209,6 +219,12 @@ namespace EmbyClient.Dotnet.Model
         public List<long?> RequestedItemIds { get; set; }
 
         /// <summary>
+        /// Gets or Sets ItemId
+        /// </summary>
+        [DataMember(Name="ItemId", EmitDefaultValue=false)]
+        public long? ItemId { get; set; }
+
+        /// <summary>
         /// The date created.
         /// </summary>
         /// <value>The date created.</value>
@@ -257,6 +273,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class SyncJob {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  TargetId: ").Append(TargetId).Append("\n");
+            sb.Append("  InternalTargetId: ").Append(InternalTargetId).Append("\n");
             sb.Append("  TargetName: ").Append(TargetName).Append("\n");
             sb.Append("  Quality: ").Append(Quality).Append("\n");
             sb.Append("  Bitrate: ").Append(Bitrate).Append("\n");
@@ -274,6 +291,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  SyncNewContent: ").Append(SyncNewContent).Append("\n");
             sb.Append("  ItemLimit: ").Append(ItemLimit).Append("\n");
             sb.Append("  RequestedItemIds: ").Append(RequestedItemIds).Append("\n");
+            sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateLastModified: ").Append(DateLastModified).Append("\n");
             sb.Append("  ItemCount: ").Append(ItemCount).Append("\n");
@@ -323,6 +341,11 @@ namespace EmbyClient.Dotnet.Model
                     this.TargetId == input.TargetId ||
                     (this.TargetId != null &&
                     this.TargetId.Equals(input.TargetId))
+                ) && 
+                (
+                    this.InternalTargetId == input.InternalTargetId ||
+                    (this.InternalTargetId != null &&
+                    this.InternalTargetId.Equals(input.InternalTargetId))
                 ) && 
                 (
                     this.TargetName == input.TargetName ||
@@ -411,6 +434,11 @@ namespace EmbyClient.Dotnet.Model
                     this.RequestedItemIds.SequenceEqual(input.RequestedItemIds)
                 ) && 
                 (
+                    this.ItemId == input.ItemId ||
+                    (this.ItemId != null &&
+                    this.ItemId.Equals(input.ItemId))
+                ) && 
+                (
                     this.DateCreated == input.DateCreated ||
                     (this.DateCreated != null &&
                     this.DateCreated.Equals(input.DateCreated))
@@ -455,6 +483,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.TargetId != null)
                     hashCode = hashCode * 59 + this.TargetId.GetHashCode();
+                if (this.InternalTargetId != null)
+                    hashCode = hashCode * 59 + this.InternalTargetId.GetHashCode();
                 if (this.TargetName != null)
                     hashCode = hashCode * 59 + this.TargetName.GetHashCode();
                 if (this.Quality != null)
@@ -489,6 +519,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ItemLimit.GetHashCode();
                 if (this.RequestedItemIds != null)
                     hashCode = hashCode * 59 + this.RequestedItemIds.GetHashCode();
+                if (this.ItemId != null)
+                    hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.DateCreated != null)
                     hashCode = hashCode * 59 + this.DateCreated.GetHashCode();
                 if (this.DateLastModified != null)

@@ -41,6 +41,7 @@ class BaseItemDto(object):
         'preferred_metadata_language': 'str',
         'preferred_metadata_country_code': 'str',
         'supports_sync': 'bool',
+        'sync_status': 'SyncJobItemStatus',
         'can_manage_access': 'bool',
         'can_make_private': 'bool',
         'can_make_public': 'bool',
@@ -196,6 +197,7 @@ class BaseItemDto(object):
         'preferred_metadata_language': 'PreferredMetadataLanguage',
         'preferred_metadata_country_code': 'PreferredMetadataCountryCode',
         'supports_sync': 'SupportsSync',
+        'sync_status': 'SyncStatus',
         'can_manage_access': 'CanManageAccess',
         'can_make_private': 'CanMakePrivate',
         'can_make_public': 'CanMakePublic',
@@ -331,7 +333,7 @@ class BaseItemDto(object):
         'affiliate_call_sign': 'AffiliateCallSign'
     }
 
-    def __init__(self, name=None, original_title=None, server_id=None, id=None, guid=None, etag=None, prefix=None, playlist_item_id=None, date_created=None, extra_type=None, sort_index_number=None, sort_parent_index_number=None, can_delete=None, can_download=None, supports_resume=None, presentation_unique_key=None, preferred_metadata_language=None, preferred_metadata_country_code=None, supports_sync=None, can_manage_access=None, can_make_private=None, can_make_public=None, container=None, sort_name=None, forced_sort_name=None, video3_d_format=None, premiere_date=None, external_urls=None, media_sources=None, critic_rating=None, game_system_id=None, as_series=None, game_system=None, production_locations=None, path=None, official_rating=None, custom_rating=None, channel_id=None, channel_name=None, overview=None, taglines=None, genres=None, community_rating=None, run_time_ticks=None, size=None, file_name=None, bitrate=None, production_year=None, number=None, channel_number=None, index_number=None, index_number_end=None, parent_index_number=None, remote_trailers=None, provider_ids=None, is_folder=None, parent_id=None, type=None, people=None, studios=None, genre_items=None, tag_items=None, parent_logo_item_id=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, local_trailer_count=None, user_data=None, recursive_item_count=None, child_count=None, series_name=None, series_id=None, season_id=None, special_feature_count=None, display_preferences_id=None, status=None, air_days=None, tags=None, primary_image_aspect_ratio=None, artists=None, artist_items=None, composers=None, album=None, collection_type=None, display_order=None, album_id=None, album_primary_image_tag=None, series_primary_image_tag=None, album_artist=None, album_artists=None, season_name=None, media_streams=None, part_count=None, image_tags=None, backdrop_image_tags=None, parent_logo_image_tag=None, series_studio=None, primary_image_item_id=None, primary_image_tag=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, chapters=None, location_type=None, media_type=None, end_date=None, locked_fields=None, lock_data=None, width=None, height=None, camera_make=None, camera_model=None, software=None, exposure_time=None, focal_length=None, image_orientation=None, aperture=None, shutter_speed=None, latitude=None, longitude=None, altitude=None, iso_speed_rating=None, series_timer_id=None, channel_primary_image_tag=None, start_date=None, completion_percentage=None, is_repeat=None, is_new=None, episode_title=None, is_movie=None, is_sports=None, is_series=None, is_live=None, is_news=None, is_kids=None, is_premiere=None, timer_type=None, disabled=None, management_id=None, timer_id=None, current_program=None, movie_count=None, series_count=None, album_count=None, song_count=None, music_video_count=None, subviews=None, listings_provider_id=None, listings_channel_id=None, listings_path=None, listings_id=None, listings_channel_name=None, listings_channel_number=None, affiliate_call_sign=None):  # noqa: E501
+    def __init__(self, name=None, original_title=None, server_id=None, id=None, guid=None, etag=None, prefix=None, playlist_item_id=None, date_created=None, extra_type=None, sort_index_number=None, sort_parent_index_number=None, can_delete=None, can_download=None, supports_resume=None, presentation_unique_key=None, preferred_metadata_language=None, preferred_metadata_country_code=None, supports_sync=None, sync_status=None, can_manage_access=None, can_make_private=None, can_make_public=None, container=None, sort_name=None, forced_sort_name=None, video3_d_format=None, premiere_date=None, external_urls=None, media_sources=None, critic_rating=None, game_system_id=None, as_series=None, game_system=None, production_locations=None, path=None, official_rating=None, custom_rating=None, channel_id=None, channel_name=None, overview=None, taglines=None, genres=None, community_rating=None, run_time_ticks=None, size=None, file_name=None, bitrate=None, production_year=None, number=None, channel_number=None, index_number=None, index_number_end=None, parent_index_number=None, remote_trailers=None, provider_ids=None, is_folder=None, parent_id=None, type=None, people=None, studios=None, genre_items=None, tag_items=None, parent_logo_item_id=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, local_trailer_count=None, user_data=None, recursive_item_count=None, child_count=None, series_name=None, series_id=None, season_id=None, special_feature_count=None, display_preferences_id=None, status=None, air_days=None, tags=None, primary_image_aspect_ratio=None, artists=None, artist_items=None, composers=None, album=None, collection_type=None, display_order=None, album_id=None, album_primary_image_tag=None, series_primary_image_tag=None, album_artist=None, album_artists=None, season_name=None, media_streams=None, part_count=None, image_tags=None, backdrop_image_tags=None, parent_logo_image_tag=None, series_studio=None, primary_image_item_id=None, primary_image_tag=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, chapters=None, location_type=None, media_type=None, end_date=None, locked_fields=None, lock_data=None, width=None, height=None, camera_make=None, camera_model=None, software=None, exposure_time=None, focal_length=None, image_orientation=None, aperture=None, shutter_speed=None, latitude=None, longitude=None, altitude=None, iso_speed_rating=None, series_timer_id=None, channel_primary_image_tag=None, start_date=None, completion_percentage=None, is_repeat=None, is_new=None, episode_title=None, is_movie=None, is_sports=None, is_series=None, is_live=None, is_news=None, is_kids=None, is_premiere=None, timer_type=None, disabled=None, management_id=None, timer_id=None, current_program=None, movie_count=None, series_count=None, album_count=None, song_count=None, music_video_count=None, subviews=None, listings_provider_id=None, listings_channel_id=None, listings_path=None, listings_id=None, listings_channel_name=None, listings_channel_number=None, affiliate_call_sign=None):  # noqa: E501
         """BaseItemDto - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._original_title = None
@@ -352,6 +354,7 @@ class BaseItemDto(object):
         self._preferred_metadata_language = None
         self._preferred_metadata_country_code = None
         self._supports_sync = None
+        self._sync_status = None
         self._can_manage_access = None
         self._can_make_private = None
         self._can_make_public = None
@@ -524,6 +527,8 @@ class BaseItemDto(object):
             self.preferred_metadata_country_code = preferred_metadata_country_code
         if supports_sync is not None:
             self.supports_sync = supports_sync
+        if sync_status is not None:
+            self.sync_status = sync_status
         if can_manage_access is not None:
             self.can_manage_access = can_manage_access
         if can_make_private is not None:
@@ -1205,6 +1210,27 @@ class BaseItemDto(object):
         """
 
         self._supports_sync = supports_sync
+
+    @property
+    def sync_status(self):
+        """Gets the sync_status of this BaseItemDto.  # noqa: E501
+
+
+        :return: The sync_status of this BaseItemDto.  # noqa: E501
+        :rtype: SyncJobItemStatus
+        """
+        return self._sync_status
+
+    @sync_status.setter
+    def sync_status(self, sync_status):
+        """Sets the sync_status of this BaseItemDto.
+
+
+        :param sync_status: The sync_status of this BaseItemDto.  # noqa: E501
+        :type: SyncJobItemStatus
+        """
+
+        self._sync_status = sync_status
 
     @property
     def can_manage_access(self):

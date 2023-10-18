@@ -27,6 +27,7 @@ import io.swagger.client.model.MetadataFields;
 import io.swagger.client.model.NameIdPair;
 import io.swagger.client.model.NameLongIdPair;
 import io.swagger.client.model.ProviderIdDictionary;
+import io.swagger.client.model.SyncJobItemStatus;
 import io.swagger.client.model.UserItemDataDto;
 import io.swagger.client.model.Video3DFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -98,6 +99,9 @@ public class BaseItemDto {
 
   @SerializedName("SupportsSync")
   private Boolean supportsSync = null;
+
+  @SerializedName("SyncStatus")
+  private SyncJobItemStatus syncStatus = null;
 
   @SerializedName("CanManageAccess")
   private Boolean canManageAccess = null;
@@ -838,6 +842,24 @@ public class BaseItemDto {
 
   public void setSupportsSync(Boolean supportsSync) {
     this.supportsSync = supportsSync;
+  }
+
+  public BaseItemDto syncStatus(SyncJobItemStatus syncStatus) {
+    this.syncStatus = syncStatus;
+    return this;
+  }
+
+   /**
+   * Get syncStatus
+   * @return syncStatus
+  **/
+  @Schema(description = "")
+  public SyncJobItemStatus getSyncStatus() {
+    return syncStatus;
+  }
+
+  public void setSyncStatus(SyncJobItemStatus syncStatus) {
+    this.syncStatus = syncStatus;
   }
 
   public BaseItemDto canManageAccess(Boolean canManageAccess) {
@@ -3447,6 +3469,7 @@ public class BaseItemDto {
         Objects.equals(this.preferredMetadataLanguage, baseItemDto.preferredMetadataLanguage) &&
         Objects.equals(this.preferredMetadataCountryCode, baseItemDto.preferredMetadataCountryCode) &&
         Objects.equals(this.supportsSync, baseItemDto.supportsSync) &&
+        Objects.equals(this.syncStatus, baseItemDto.syncStatus) &&
         Objects.equals(this.canManageAccess, baseItemDto.canManageAccess) &&
         Objects.equals(this.canMakePrivate, baseItemDto.canMakePrivate) &&
         Objects.equals(this.canMakePublic, baseItemDto.canMakePublic) &&
@@ -3584,7 +3607,7 @@ public class BaseItemDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, canManageAccess, canMakePrivate, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
+    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, syncStatus, canManageAccess, canMakePrivate, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
   }
 
 
@@ -3612,6 +3635,7 @@ public class BaseItemDto {
     sb.append("    preferredMetadataLanguage: ").append(toIndentedString(preferredMetadataLanguage)).append("\n");
     sb.append("    preferredMetadataCountryCode: ").append(toIndentedString(preferredMetadataCountryCode)).append("\n");
     sb.append("    supportsSync: ").append(toIndentedString(supportsSync)).append("\n");
+    sb.append("    syncStatus: ").append(toIndentedString(syncStatus)).append("\n");
     sb.append("    canManageAccess: ").append(toIndentedString(canManageAccess)).append("\n");
     sb.append("    canMakePrivate: ").append(toIndentedString(canMakePrivate)).append("\n");
     sb.append("    canMakePublic: ").append(toIndentedString(canMakePublic)).append("\n");

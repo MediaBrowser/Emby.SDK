@@ -47,6 +47,9 @@ public class SyncJobItem {
   @SerializedName("TargetId")
   private String targetId = null;
 
+  @SerializedName("InternalTargetId")
+  private Long internalTargetId = null;
+
   @SerializedName("OutputPath")
   private String outputPath = null;
 
@@ -195,6 +198,24 @@ public class SyncJobItem {
 
   public void setTargetId(String targetId) {
     this.targetId = targetId;
+  }
+
+  public SyncJobItem internalTargetId(Long internalTargetId) {
+    this.internalTargetId = internalTargetId;
+    return this;
+  }
+
+   /**
+   * Get internalTargetId
+   * @return internalTargetId
+  **/
+  @Schema(description = "")
+  public Long getInternalTargetId() {
+    return internalTargetId;
+  }
+
+  public void setInternalTargetId(Long internalTargetId) {
+    this.internalTargetId = internalTargetId;
   }
 
   public SyncJobItem outputPath(String outputPath) {
@@ -366,6 +387,7 @@ public class SyncJobItem {
         Objects.equals(this.mediaSourceId, syncJobItem.mediaSourceId) &&
         Objects.equals(this.mediaSource, syncJobItem.mediaSource) &&
         Objects.equals(this.targetId, syncJobItem.targetId) &&
+        Objects.equals(this.internalTargetId, syncJobItem.internalTargetId) &&
         Objects.equals(this.outputPath, syncJobItem.outputPath) &&
         Objects.equals(this.status, syncJobItem.status) &&
         Objects.equals(this.progress, syncJobItem.progress) &&
@@ -378,7 +400,7 @@ public class SyncJobItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, jobId, itemId, itemName, mediaSourceId, mediaSource, targetId, outputPath, status, progress, dateCreated, primaryImageItemId, primaryImageTag, temporaryPath, additionalFiles);
+    return Objects.hash(id, jobId, itemId, itemName, mediaSourceId, mediaSource, targetId, internalTargetId, outputPath, status, progress, dateCreated, primaryImageItemId, primaryImageTag, temporaryPath, additionalFiles);
   }
 
 
@@ -394,6 +416,7 @@ public class SyncJobItem {
     sb.append("    mediaSourceId: ").append(toIndentedString(mediaSourceId)).append("\n");
     sb.append("    mediaSource: ").append(toIndentedString(mediaSource)).append("\n");
     sb.append("    targetId: ").append(toIndentedString(targetId)).append("\n");
+    sb.append("    internalTargetId: ").append(toIndentedString(internalTargetId)).append("\n");
     sb.append("    outputPath: ").append(toIndentedString(outputPath)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    progress: ").append(toIndentedString(progress)).append("\n");

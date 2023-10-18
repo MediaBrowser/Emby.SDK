@@ -40,6 +40,7 @@ open class ConfigurationServiceAPI {
   "RevertDebugLogging" : "RevertDebugLogging",
   "IsStartupWizardCompleted" : true,
   "ImageSavingConvention" : "Legacy",
+  "EnableSavedMetadataForPeople" : true,
   "LocalNetworkAddresses" : [ "LocalNetworkAddresses", "LocalNetworkAddresses" ],
   "EnableUPnP" : true,
   "OptimizeDatabaseOnShutdown" : true,
@@ -70,6 +71,7 @@ open class ConfigurationServiceAPI {
   "EnablePeopleLetterSubFolders" : true,
   "DisableAsyncIO" : true,
   "PreferredDetectedRemoteAddressFamily" : "Unspecified",
+  "MigratedLibraryOptionsToDb" : true,
   "SimultaneousStreamLimit" : 9,
   "PathSubstitutions" : [ {
     "From" : "From",

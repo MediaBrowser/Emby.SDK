@@ -24,6 +24,7 @@ class SyncJob(object):
     swagger_types = {
         'id': 'int',
         'target_id': 'str',
+        'internal_target_id': 'int',
         'target_name': 'str',
         'quality': 'str',
         'bitrate': 'int',
@@ -41,6 +42,7 @@ class SyncJob(object):
         'sync_new_content': 'bool',
         'item_limit': 'int',
         'requested_item_ids': 'list[int]',
+        'item_id': 'int',
         'date_created': 'datetime',
         'date_last_modified': 'datetime',
         'item_count': 'int',
@@ -52,6 +54,7 @@ class SyncJob(object):
     attribute_map = {
         'id': 'Id',
         'target_id': 'TargetId',
+        'internal_target_id': 'InternalTargetId',
         'target_name': 'TargetName',
         'quality': 'Quality',
         'bitrate': 'Bitrate',
@@ -69,6 +72,7 @@ class SyncJob(object):
         'sync_new_content': 'SyncNewContent',
         'item_limit': 'ItemLimit',
         'requested_item_ids': 'RequestedItemIds',
+        'item_id': 'ItemId',
         'date_created': 'DateCreated',
         'date_last_modified': 'DateLastModified',
         'item_count': 'ItemCount',
@@ -77,10 +81,11 @@ class SyncJob(object):
         'primary_image_tag': 'PrimaryImageTag'
     }
 
-    def __init__(self, id=None, target_id=None, target_name=None, quality=None, bitrate=None, container=None, video_codec=None, audio_codec=None, profile=None, category=None, parent_id=None, progress=None, name=None, status=None, user_id=None, unwatched_only=None, sync_new_content=None, item_limit=None, requested_item_ids=None, date_created=None, date_last_modified=None, item_count=None, parent_name=None, primary_image_item_id=None, primary_image_tag=None):  # noqa: E501
+    def __init__(self, id=None, target_id=None, internal_target_id=None, target_name=None, quality=None, bitrate=None, container=None, video_codec=None, audio_codec=None, profile=None, category=None, parent_id=None, progress=None, name=None, status=None, user_id=None, unwatched_only=None, sync_new_content=None, item_limit=None, requested_item_ids=None, item_id=None, date_created=None, date_last_modified=None, item_count=None, parent_name=None, primary_image_item_id=None, primary_image_tag=None):  # noqa: E501
         """SyncJob - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._target_id = None
+        self._internal_target_id = None
         self._target_name = None
         self._quality = None
         self._bitrate = None
@@ -98,6 +103,7 @@ class SyncJob(object):
         self._sync_new_content = None
         self._item_limit = None
         self._requested_item_ids = None
+        self._item_id = None
         self._date_created = None
         self._date_last_modified = None
         self._item_count = None
@@ -109,6 +115,8 @@ class SyncJob(object):
             self.id = id
         if target_id is not None:
             self.target_id = target_id
+        if internal_target_id is not None:
+            self.internal_target_id = internal_target_id
         if target_name is not None:
             self.target_name = target_name
         if quality is not None:
@@ -143,6 +151,8 @@ class SyncJob(object):
             self.item_limit = item_limit
         if requested_item_ids is not None:
             self.requested_item_ids = requested_item_ids
+        if item_id is not None:
+            self.item_id = item_id
         if date_created is not None:
             self.date_created = date_created
         if date_last_modified is not None:
@@ -201,6 +211,27 @@ class SyncJob(object):
         """
 
         self._target_id = target_id
+
+    @property
+    def internal_target_id(self):
+        """Gets the internal_target_id of this SyncJob.  # noqa: E501
+
+
+        :return: The internal_target_id of this SyncJob.  # noqa: E501
+        :rtype: int
+        """
+        return self._internal_target_id
+
+    @internal_target_id.setter
+    def internal_target_id(self, internal_target_id):
+        """Sets the internal_target_id of this SyncJob.
+
+
+        :param internal_target_id: The internal_target_id of this SyncJob.  # noqa: E501
+        :type: int
+        """
+
+        self._internal_target_id = internal_target_id
 
     @property
     def target_name(self):
@@ -582,6 +613,27 @@ class SyncJob(object):
         """
 
         self._requested_item_ids = requested_item_ids
+
+    @property
+    def item_id(self):
+        """Gets the item_id of this SyncJob.  # noqa: E501
+
+
+        :return: The item_id of this SyncJob.  # noqa: E501
+        :rtype: int
+        """
+        return self._item_id
+
+    @item_id.setter
+    def item_id(self, item_id):
+        """Sets the item_id of this SyncJob.
+
+
+        :param item_id: The item_id of this SyncJob.  # noqa: E501
+        :type: int
+        """
+
+        self._item_id = item_id
 
     @property
     def date_created(self):

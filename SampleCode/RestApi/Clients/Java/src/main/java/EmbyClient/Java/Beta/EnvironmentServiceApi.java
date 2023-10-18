@@ -20,6 +20,7 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.DefaultDirectoryBrowserInfo;
+import io.swagger.client.model.GetDirectoryContents;
 import io.swagger.client.model.IOFileSystemEntryInfo;
 import io.swagger.client.model.ValidatePath;
 
@@ -783,6 +784,152 @@ public class EnvironmentServiceApi {
 
         com.squareup.okhttp.Call call = getEnvironmentParentpathValidateBeforeCall(path, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for postEnvironmentDirectorycontents
+     * @param body GetDirectoryContents (required)
+     * @param path  (required)
+     * @param includeFiles An optional filter to include or exclude files from the results. true/false (optional)
+     * @param includeDirectories An optional filter to include or exclude folders from the results. true/false (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call postEnvironmentDirectorycontentsCall(GetDirectoryContents body, String path, Boolean includeFiles, Boolean includeDirectories, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+        
+        // create path and map variables
+        String localVarPath = "/Environment/DirectoryContents";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (path != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Path", path));
+        if (includeFiles != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("IncludeFiles", includeFiles));
+        if (includeDirectories != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("IncludeDirectories", includeDirectories));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "application/xml"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call postEnvironmentDirectorycontentsValidateBeforeCall(GetDirectoryContents body, String path, Boolean includeFiles, Boolean includeDirectories, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling postEnvironmentDirectorycontents(Async)");
+        }
+        // verify the required parameter 'path' is set
+        if (path == null) {
+            throw new ApiException("Missing the required parameter 'path' when calling postEnvironmentDirectorycontents(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = postEnvironmentDirectorycontentsCall(body, path, includeFiles, includeDirectories, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets the contents of a given directory in the file system
+     * Requires authentication as administrator
+     * @param body GetDirectoryContents (required)
+     * @param path  (required)
+     * @param includeFiles An optional filter to include or exclude files from the results. true/false (optional)
+     * @param includeDirectories An optional filter to include or exclude folders from the results. true/false (optional)
+     * @return List&lt;IOFileSystemEntryInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public List<IOFileSystemEntryInfo> postEnvironmentDirectorycontents(GetDirectoryContents body, String path, Boolean includeFiles, Boolean includeDirectories) throws ApiException {
+        ApiResponse<List<IOFileSystemEntryInfo>> resp = postEnvironmentDirectorycontentsWithHttpInfo(body, path, includeFiles, includeDirectories);
+        return resp.getData();
+    }
+
+    /**
+     * Gets the contents of a given directory in the file system
+     * Requires authentication as administrator
+     * @param body GetDirectoryContents (required)
+     * @param path  (required)
+     * @param includeFiles An optional filter to include or exclude files from the results. true/false (optional)
+     * @param includeDirectories An optional filter to include or exclude folders from the results. true/false (optional)
+     * @return ApiResponse&lt;List&lt;IOFileSystemEntryInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<List<IOFileSystemEntryInfo>> postEnvironmentDirectorycontentsWithHttpInfo(GetDirectoryContents body, String path, Boolean includeFiles, Boolean includeDirectories) throws ApiException {
+        com.squareup.okhttp.Call call = postEnvironmentDirectorycontentsValidateBeforeCall(body, path, includeFiles, includeDirectories, null, null);
+        Type localVarReturnType = new TypeToken<List<IOFileSystemEntryInfo>>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Gets the contents of a given directory in the file system (asynchronously)
+     * Requires authentication as administrator
+     * @param body GetDirectoryContents (required)
+     * @param path  (required)
+     * @param includeFiles An optional filter to include or exclude files from the results. true/false (optional)
+     * @param includeDirectories An optional filter to include or exclude folders from the results. true/false (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call postEnvironmentDirectorycontentsAsync(GetDirectoryContents body, String path, Boolean includeFiles, Boolean includeDirectories, final ApiCallback<List<IOFileSystemEntryInfo>> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = postEnvironmentDirectorycontentsValidateBeforeCall(body, path, includeFiles, includeDirectories, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<List<IOFileSystemEntryInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

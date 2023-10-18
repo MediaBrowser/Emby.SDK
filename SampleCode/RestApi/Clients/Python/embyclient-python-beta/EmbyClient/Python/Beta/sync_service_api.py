@@ -395,43 +395,45 @@ class SyncServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_sync_jobitems(self, **kwargs):  # noqa: E501
+    def get_sync_jobitems(self, target_id, **kwargs):  # noqa: E501
         """Gets sync job items.  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_sync_jobitems(async_req=True)
+        >>> thread = api.get_sync_jobitems(target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str target_id: TargetId (required)
         :return: QueryResultSyncJobItem
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_sync_jobitems_with_http_info(**kwargs)  # noqa: E501
+            return self.get_sync_jobitems_with_http_info(target_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_sync_jobitems_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_sync_jobitems_with_http_info(target_id, **kwargs)  # noqa: E501
             return data
 
-    def get_sync_jobitems_with_http_info(self, **kwargs):  # noqa: E501
+    def get_sync_jobitems_with_http_info(self, target_id, **kwargs):  # noqa: E501
         """Gets sync job items.  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_sync_jobitems_with_http_info(async_req=True)
+        >>> thread = api.get_sync_jobitems_with_http_info(target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str target_id: TargetId (required)
         :return: QueryResultSyncJobItem
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['target_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -446,12 +448,18 @@ class SyncServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'target_id' is set
+        if ('target_id' not in params or
+                params['target_id'] is None):
+            raise ValueError("Missing the required parameter `target_id` when calling `get_sync_jobitems`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'target_id' in params:
+            query_params.append(('TargetId', params['target_id']))  # noqa: E501
 
         header_params = {}
 
@@ -1258,45 +1266,47 @@ class SyncServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_sync_data(self, body, **kwargs):  # noqa: E501
+    def post_sync_data(self, body, target_id, **kwargs):  # noqa: E501
         """Syncs data between device and server  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_sync_data(body, async_req=True)
+        >>> thread = api.post_sync_data(body, target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param SyncDataRequest body: SyncDataRequest:  (required)
+        :param str target_id: TargetId (required)
         :return: SyncDataResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_sync_data_with_http_info(body, **kwargs)  # noqa: E501
+            return self.post_sync_data_with_http_info(body, target_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_sync_data_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.post_sync_data_with_http_info(body, target_id, **kwargs)  # noqa: E501
             return data
 
-    def post_sync_data_with_http_info(self, body, **kwargs):  # noqa: E501
+    def post_sync_data_with_http_info(self, body, target_id, **kwargs):  # noqa: E501
         """Syncs data between device and server  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_sync_data_with_http_info(body, async_req=True)
+        >>> thread = api.post_sync_data_with_http_info(body, target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param SyncDataRequest body: SyncDataRequest:  (required)
+        :param str target_id: TargetId (required)
         :return: SyncDataResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['body', 'target_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1315,12 +1325,18 @@ class SyncServiceApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `post_sync_data`")  # noqa: E501
+        # verify the required parameter 'target_id' is set
+        if ('target_id' not in params or
+                params['target_id'] is None):
+            raise ValueError("Missing the required parameter `target_id` when calling `post_sync_data`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'target_id' in params:
+            query_params.append(('TargetId', params['target_id']))  # noqa: E501
 
         header_params = {}
 

@@ -356,6 +356,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ShareLevel">BaseItem.ShareLevel</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SyncStatus">BaseItem.SyncStatus</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Container">BaseItem.Container</a>
     </div>
     <div>
@@ -846,9 +849,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataCountryCode_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredMetadataCountryCode(LibraryOptions)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalMetadataEnabled(LibraryOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParentalRatingValue">BaseItem.GetParentalRatingValue()</a>
@@ -1421,7 +1421,7 @@ public override bool SupportsPeople { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1581,6 +1581,99 @@ public override bool SupportsPeople { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal">BaseItem.GetUserDataKeyInternal()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Person_IsLocalMetadataReaderEnabled_" data-uid="MediaBrowser.Controller.Entities.Person.IsLocalMetadataReaderEnabled*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Person_IsLocalMetadataReaderEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_" data-uid="MediaBrowser.Controller.Entities.Person.IsLocalMetadataReaderEnabled(MediaBrowser.Model.Configuration.LibraryOptions,System.String)">IsLocalMetadataReaderEnabled(LibraryOptions, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsLocalMetadataReaderEnabled(LibraryOptions libraryOptions, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsLocalMetadataReaderEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsLocalMetadataReaderEnabled(LibraryOptions, String)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Person_IsSaveLocalMetadataEnabled_" data-uid="MediaBrowser.Controller.Entities.Person.IsSaveLocalMetadataEnabled*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Person_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Person.IsSaveLocalMetadataEnabled(MediaBrowser.Model.Configuration.LibraryOptions)">IsSaveLocalMetadataEnabled(LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsSaveLocalMetadataEnabled(LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalMetadataEnabled(LibraryOptions)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>

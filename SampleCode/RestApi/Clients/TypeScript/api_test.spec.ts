@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.53
+ * OpenAPI spec version: 4.8.0.54
  * 
  *
  * NOTE: This file is auto generated.
@@ -1033,6 +1033,13 @@ describe("EnvironmentServiceApi", () => {
   test("getEnvironmentParentpath", () => {
     const path: string = "path_example"
     return expect(instance.getEnvironmentParentpath(path, {})).resolves.toBe(null)
+  })
+  test("postEnvironmentDirectorycontents", () => {
+    const body: api.GetDirectoryContents = undefined
+    const path: string = "path_example"
+    const includeFiles: boolean = true
+    const includeDirectories: boolean = true
+    return expect(instance.postEnvironmentDirectorycontents(body, path, includeFiles, includeDirectories, {})).resolves.toBe(null)
   })
   test("postEnvironmentValidatepath", () => {
     const body: api.ValidatePath = undefined
@@ -4955,7 +4962,8 @@ describe("SyncServiceApi", () => {
     return expect(instance.getSyncItemsReady(targetId, {})).resolves.toBe(null)
   })
   test("getSyncJobitems", () => {
-    return expect(instance.getSyncJobitems({})).resolves.toBe(null)
+    const targetId: string = "targetId_example"
+    return expect(instance.getSyncJobitems(targetId, {})).resolves.toBe(null)
   })
   test("getSyncJobitemsByIdAdditionalfiles", () => {
     const id: string = "id_example"
@@ -4997,7 +5005,8 @@ describe("SyncServiceApi", () => {
   })
   test("postSyncData", () => {
     const body: api.SyncDataRequest = undefined
-    return expect(instance.postSyncData(body, {})).resolves.toBe(null)
+    const targetId: string = "targetId_example"
+    return expect(instance.postSyncData(body, targetId, {})).resolves.toBe(null)
   })
   test("postSyncItemsCancel", () => {
     const itemIds: string = "itemIds_example"

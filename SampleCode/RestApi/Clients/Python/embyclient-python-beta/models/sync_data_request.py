@@ -23,23 +23,23 @@ class SyncDataRequest(object):
     """
     swagger_types = {
         'local_item_ids': 'list[str]',
-        'target_id': 'str'
+        'internal_target_ids': 'list[int]'
     }
 
     attribute_map = {
         'local_item_ids': 'LocalItemIds',
-        'target_id': 'TargetId'
+        'internal_target_ids': 'InternalTargetIds'
     }
 
-    def __init__(self, local_item_ids=None, target_id=None):  # noqa: E501
+    def __init__(self, local_item_ids=None, internal_target_ids=None):  # noqa: E501
         """SyncDataRequest - a model defined in Swagger"""  # noqa: E501
         self._local_item_ids = None
-        self._target_id = None
+        self._internal_target_ids = None
         self.discriminator = None
         if local_item_ids is not None:
             self.local_item_ids = local_item_ids
-        if target_id is not None:
-            self.target_id = target_id
+        if internal_target_ids is not None:
+            self.internal_target_ids = internal_target_ids
 
     @property
     def local_item_ids(self):
@@ -63,25 +63,25 @@ class SyncDataRequest(object):
         self._local_item_ids = local_item_ids
 
     @property
-    def target_id(self):
-        """Gets the target_id of this SyncDataRequest.  # noqa: E501
+    def internal_target_ids(self):
+        """Gets the internal_target_ids of this SyncDataRequest.  # noqa: E501
 
 
-        :return: The target_id of this SyncDataRequest.  # noqa: E501
-        :rtype: str
+        :return: The internal_target_ids of this SyncDataRequest.  # noqa: E501
+        :rtype: list[int]
         """
-        return self._target_id
+        return self._internal_target_ids
 
-    @target_id.setter
-    def target_id(self, target_id):
-        """Sets the target_id of this SyncDataRequest.
+    @internal_target_ids.setter
+    def internal_target_ids(self, internal_target_ids):
+        """Sets the internal_target_ids of this SyncDataRequest.
 
 
-        :param target_id: The target_id of this SyncDataRequest.  # noqa: E501
-        :type: str
+        :param internal_target_ids: The internal_target_ids of this SyncDataRequest.  # noqa: E501
+        :type: list[int]
         """
 
-        self._target_id = target_id
+        self._internal_target_ids = internal_target_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

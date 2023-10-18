@@ -77,8 +77,10 @@ type ServerConfiguration struct {
 	DatabaseAnalysisLimit int32 `json:"DatabaseAnalysisLimit,omitempty"`
 	DisableAsyncIO bool `json:"DisableAsyncIO,omitempty"`
 	MigratedToUserItemShares bool `json:"MigratedToUserItemShares,omitempty"`
+	MigratedLibraryOptionsToDb bool `json:"MigratedLibraryOptionsToDb,omitempty"`
 	EnableFks bool `json:"EnableFks,omitempty"`
 	AllowLegacyLocalNetworkPassword bool `json:"AllowLegacyLocalNetworkPassword,omitempty"`
+	EnableSavedMetadataForPeople bool `json:"EnableSavedMetadataForPeople,omitempty"`
 	ProxyHeaderMode *ProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`
 	// A value indicating whether \\[enable debug level logging\\].
 	EnableDebugLevelLogging bool `json:"EnableDebugLevelLogging,omitempty"`

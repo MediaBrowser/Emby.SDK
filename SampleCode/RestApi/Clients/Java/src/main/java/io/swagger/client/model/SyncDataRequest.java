@@ -25,8 +25,8 @@ public class SyncDataRequest {
   @SerializedName("LocalItemIds")
   private List<String> localItemIds = null;
 
-  @SerializedName("TargetId")
-  private String targetId = null;
+  @SerializedName("InternalTargetIds")
+  private List<Long> internalTargetIds = null;
 
   public SyncDataRequest localItemIds(List<String> localItemIds) {
     this.localItemIds = localItemIds;
@@ -54,22 +54,30 @@ public class SyncDataRequest {
     this.localItemIds = localItemIds;
   }
 
-  public SyncDataRequest targetId(String targetId) {
-    this.targetId = targetId;
+  public SyncDataRequest internalTargetIds(List<Long> internalTargetIds) {
+    this.internalTargetIds = internalTargetIds;
+    return this;
+  }
+
+  public SyncDataRequest addInternalTargetIdsItem(Long internalTargetIdsItem) {
+    if (this.internalTargetIds == null) {
+      this.internalTargetIds = new ArrayList<Long>();
+    }
+    this.internalTargetIds.add(internalTargetIdsItem);
     return this;
   }
 
    /**
-   * Get targetId
-   * @return targetId
+   * Get internalTargetIds
+   * @return internalTargetIds
   **/
   @Schema(description = "")
-  public String getTargetId() {
-    return targetId;
+  public List<Long> getInternalTargetIds() {
+    return internalTargetIds;
   }
 
-  public void setTargetId(String targetId) {
-    this.targetId = targetId;
+  public void setInternalTargetIds(List<Long> internalTargetIds) {
+    this.internalTargetIds = internalTargetIds;
   }
 
 
@@ -83,12 +91,12 @@ public class SyncDataRequest {
     }
     SyncDataRequest syncDataRequest = (SyncDataRequest) o;
     return Objects.equals(this.localItemIds, syncDataRequest.localItemIds) &&
-        Objects.equals(this.targetId, syncDataRequest.targetId);
+        Objects.equals(this.internalTargetIds, syncDataRequest.internalTargetIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(localItemIds, targetId);
+    return Objects.hash(localItemIds, internalTargetIds);
   }
 
 
@@ -98,7 +106,7 @@ public class SyncDataRequest {
     sb.append("class SyncDataRequest {\n");
     
     sb.append("    localItemIds: ").append(toIndentedString(localItemIds)).append("\n");
-    sb.append("    targetId: ").append(toIndentedString(targetId)).append("\n");
+    sb.append("    internalTargetIds: ").append(toIndentedString(internalTargetIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

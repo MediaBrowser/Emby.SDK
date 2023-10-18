@@ -17,6 +17,7 @@ type SyncJobItem struct {
 	MediaSourceId string `json:"MediaSourceId,omitempty"`
 	MediaSource *MediaSourceInfo `json:"MediaSource,omitempty"`
 	TargetId string `json:"TargetId,omitempty"`
+	InternalTargetId int64 `json:"InternalTargetId,omitempty"`
 	OutputPath string `json:"OutputPath,omitempty"`
 	Status *SyncJobItemStatus `json:"Status,omitempty"`
 	Progress float64 `json:"Progress,omitempty"`

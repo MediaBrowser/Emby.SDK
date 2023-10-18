@@ -15,6 +15,7 @@ public struct SyncJob: Codable {
     public var _id: Int64?
     /** The device identifier. */
     public var targetId: String?
+    public var internalTargetId: Int64?
     /** The name of the target. */
     public var targetName: String?
     /** The quality. */
@@ -44,6 +45,7 @@ public struct SyncJob: Codable {
     public var itemLimit: Int?
     /** The requested item ids. */
     public var requestedItemIds: [Int64]?
+    public var itemId: Int64?
     /** The date created. */
     public var dateCreated: Date?
     /** The date last modified. */
@@ -54,9 +56,10 @@ public struct SyncJob: Codable {
     public var primaryImageItemId: String?
     public var primaryImageTag: String?
 
-    public init(_id: Int64? = nil, targetId: String? = nil, targetName: String? = nil, quality: String? = nil, bitrate: Int? = nil, container: String? = nil, videoCodec: String? = nil, audioCodec: String? = nil, profile: String? = nil, category: SyncCategory? = nil, parentId: Int64? = nil, progress: Double? = nil, name: String? = nil, status: SyncJobStatus? = nil, userId: Int64? = nil, unwatchedOnly: Bool? = nil, syncNewContent: Bool? = nil, itemLimit: Int? = nil, requestedItemIds: [Int64]? = nil, dateCreated: Date? = nil, dateLastModified: Date? = nil, itemCount: Int? = nil, parentName: String? = nil, primaryImageItemId: String? = nil, primaryImageTag: String? = nil) {
+    public init(_id: Int64? = nil, targetId: String? = nil, internalTargetId: Int64? = nil, targetName: String? = nil, quality: String? = nil, bitrate: Int? = nil, container: String? = nil, videoCodec: String? = nil, audioCodec: String? = nil, profile: String? = nil, category: SyncCategory? = nil, parentId: Int64? = nil, progress: Double? = nil, name: String? = nil, status: SyncJobStatus? = nil, userId: Int64? = nil, unwatchedOnly: Bool? = nil, syncNewContent: Bool? = nil, itemLimit: Int? = nil, requestedItemIds: [Int64]? = nil, itemId: Int64? = nil, dateCreated: Date? = nil, dateLastModified: Date? = nil, itemCount: Int? = nil, parentName: String? = nil, primaryImageItemId: String? = nil, primaryImageTag: String? = nil) {
         self._id = _id
         self.targetId = targetId
+        self.internalTargetId = internalTargetId
         self.targetName = targetName
         self.quality = quality
         self.bitrate = bitrate
@@ -74,6 +77,7 @@ public struct SyncJob: Codable {
         self.syncNewContent = syncNewContent
         self.itemLimit = itemLimit
         self.requestedItemIds = requestedItemIds
+        self.itemId = itemId
         self.dateCreated = dateCreated
         self.dateLastModified = dateLastModified
         self.itemCount = itemCount
@@ -85,6 +89,7 @@ public struct SyncJob: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "Id"
         case targetId = "TargetId"
+        case internalTargetId = "InternalTargetId"
         case targetName = "TargetName"
         case quality = "Quality"
         case bitrate = "Bitrate"
@@ -102,6 +107,7 @@ public struct SyncJob: Codable {
         case syncNewContent = "SyncNewContent"
         case itemLimit = "ItemLimit"
         case requestedItemIds = "RequestedItemIds"
+        case itemId = "ItemId"
         case dateCreated = "DateCreated"
         case dateLastModified = "DateLastModified"
         case itemCount = "ItemCount"

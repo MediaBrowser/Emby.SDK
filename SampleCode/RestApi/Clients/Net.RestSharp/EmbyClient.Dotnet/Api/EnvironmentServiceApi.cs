@@ -149,6 +149,33 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>List&lt;IOFileSystemEntryInfo&gt;</returns>
+        List<IOFileSystemEntryInfo> PostEnvironmentDirectorycontents (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories);
+
+        /// <summary>
+        /// Gets the contents of a given directory in the file system
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>ApiResponse of List&lt;IOFileSystemEntryInfo&gt;</returns>
+        ApiResponse<List<IOFileSystemEntryInfo>> PostEnvironmentDirectorycontentsWithHttpInfo (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories);
+        /// <summary>
+        /// Gets the contents of a given directory in the file system
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ValidatePath</param>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -291,6 +318,33 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="path"></param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetEnvironmentParentpathAsyncWithHttpInfo (string path);
+        /// <summary>
+        /// Gets the contents of a given directory in the file system
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>Task of List&lt;IOFileSystemEntryInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<IOFileSystemEntryInfo>> PostEnvironmentDirectorycontentsAsync (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories);
+
+        /// <summary>
+        /// Gets the contents of a given directory in the file system
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;IOFileSystemEntryInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<IOFileSystemEntryInfo>>> PostEnvironmentDirectorycontentsAsyncWithHttpInfo (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories);
         /// <summary>
         /// Gets the contents of a given directory in the file system
         /// </summary>
@@ -1329,6 +1383,203 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Gets the contents of a given directory in the file system Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>List&lt;IOFileSystemEntryInfo&gt;</returns>
+        public List<IOFileSystemEntryInfo> PostEnvironmentDirectorycontents (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories)
+        {
+             ApiResponse<List<IOFileSystemEntryInfo>> localVarResponse = PostEnvironmentDirectorycontentsWithHttpInfo(body, path, includeFiles, includeDirectories);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the contents of a given directory in the file system Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>ApiResponse of List&lt;IOFileSystemEntryInfo&gt;</returns>
+        public ApiResponse< List<IOFileSystemEntryInfo> > PostEnvironmentDirectorycontentsWithHttpInfo (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling EnvironmentServiceApi->PostEnvironmentDirectorycontents");
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling EnvironmentServiceApi->PostEnvironmentDirectorycontents");
+
+            var localVarPath = "/Environment/DirectoryContents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Path", path)); // query parameter
+            if (includeFiles != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IncludeFiles", includeFiles)); // query parameter
+            if (includeDirectories != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IncludeDirectories", includeDirectories)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostEnvironmentDirectorycontents", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<IOFileSystemEntryInfo>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<IOFileSystemEntryInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<IOFileSystemEntryInfo>)));
+        }
+
+        /// <summary>
+        /// Gets the contents of a given directory in the file system Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>Task of List&lt;IOFileSystemEntryInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<IOFileSystemEntryInfo>> PostEnvironmentDirectorycontentsAsync (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories)
+        {
+             ApiResponse<List<IOFileSystemEntryInfo>> localVarResponse = await PostEnvironmentDirectorycontentsAsyncWithHttpInfo(body, path, includeFiles, includeDirectories);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the contents of a given directory in the file system Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">GetDirectoryContents</param>
+        /// <param name="path"></param>
+        /// <param name="includeFiles">An optional filter to include or exclude files from the results. true/false (optional)</param>
+        /// <param name="includeDirectories">An optional filter to include or exclude folders from the results. true/false (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;IOFileSystemEntryInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<IOFileSystemEntryInfo>>> PostEnvironmentDirectorycontentsAsyncWithHttpInfo (GetDirectoryContents body, string path, bool? includeFiles, bool? includeDirectories)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling EnvironmentServiceApi->PostEnvironmentDirectorycontents");
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling EnvironmentServiceApi->PostEnvironmentDirectorycontents");
+
+            var localVarPath = "/Environment/DirectoryContents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Path", path)); // query parameter
+            if (includeFiles != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IncludeFiles", includeFiles)); // query parameter
+            if (includeDirectories != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IncludeDirectories", includeDirectories)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostEnvironmentDirectorycontents", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<IOFileSystemEntryInfo>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<IOFileSystemEntryInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<IOFileSystemEntryInfo>)));
         }
 
         /// <summary>

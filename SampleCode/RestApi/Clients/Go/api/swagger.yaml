@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.53
+  version: 4.8.0.54
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -22259,6 +22259,78 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+    post:
+      tags:
+      - EnvironmentService
+      summary: Gets the contents of a given directory in the file system
+      description: Requires authentication as administrator
+      operationId: postEnvironmentDirectorycontents
+      parameters:
+      - name: Path
+        in: query
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: IncludeFiles
+        in: query
+        description: An optional filter to include or exclude files from the results.
+          true/false
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      - name: IncludeDirectories
+        in: query
+        description: An optional filter to include or exclude folders from the results.
+          true/false
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      requestBody:
+        description: GetDirectoryContents
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetDirectoryContents'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/GetDirectoryContents'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Returning a List<FileSystemEntryInfo>
+            object.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IO.FileSystemEntryInfo'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IO.FileSystemEntryInfo'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
   /Environment/NetworkShares:
     summary: Gets shares from a network device
     get:
@@ -31939,6 +32011,15 @@ paths:
       summary: Gets sync job items.
       description: Requires authentication as user
       operationId: getSyncJobitems
+      parameters:
+      - name: TargetId
+        in: query
+        description: TargetId
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
       responses:
         "200":
           description: Operation successful. Returning a QueryResult<SyncJobItem>
@@ -32084,6 +32165,15 @@ paths:
       summary: Syncs data between device and server
       description: Requires authentication as user
       operationId: postSyncData
+      parameters:
+      - name: TargetId
+        in: query
+        description: TargetId
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
       requestBody:
         description: "SyncDataRequest: "
         content:
@@ -61538,6 +61628,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -62071,6 +62162,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -62218,6 +62310,8 @@ components:
           type: boolean
           description: "A value indicating whether \\[supports synchronize\\]."
           nullable: true
+        SyncStatus:
+          $ref: '#/components/schemas/SyncJobItemStatus'
         CanManageAccess:
           type: boolean
           nullable: true
@@ -63147,6 +63241,7 @@ components:
         PresentationUniqueKey: PresentationUniqueKey
         CustomRating: CustomRating
         ListingsChannelNumber: ListingsChannelNumber
+        SyncStatus: Queued
         CanManageAccess: true
         AirDays:
         - Sunday
@@ -63236,6 +63331,16 @@ components:
         IsPremiere: true
         Altitude: 9.132027271330688
       x-internal-ref-name: MediaBrowser.Model.Dto.BaseItemDto
+    SyncJobItemStatus:
+      type: string
+      enum:
+      - Queued
+      - Converting
+      - ReadyToTransfer
+      - Transferring
+      - Synced
+      - Failed
+      x-internal-ref-name: MediaBrowser.Model.Sync.SyncJobItemStatus
     Video3DFormat:
       type: string
       enum:
@@ -65274,6 +65379,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -67113,6 +67219,14 @@ components:
       - NetworkComputer
       - NetworkShare
       x-internal-ref-name: MediaBrowser.Model.IO.FileSystemEntryType
+    GetDirectoryContents:
+      type: object
+      properties:
+        Username:
+          type: string
+        Password:
+          type: string
+      x-internal-ref-name: Emby.Api.GetDirectoryContents
     ItemCounts:
       type: object
       properties:
@@ -68694,6 +68808,7 @@ components:
             PresentationUniqueKey: PresentationUniqueKey
             CustomRating: CustomRating
             ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
             CanManageAccess: true
             AirDays:
             - Sunday
@@ -69231,6 +69346,7 @@ components:
             PresentationUniqueKey: PresentationUniqueKey
             CustomRating: CustomRating
             ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
             CanManageAccess: true
             AirDays:
             - Sunday
@@ -69778,6 +69894,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -70436,6 +70553,7 @@ components:
             PresentationUniqueKey: PresentationUniqueKey
             CustomRating: CustomRating
             ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
             CanManageAccess: true
             AirDays:
             - Sunday
@@ -70996,6 +71114,7 @@ components:
             PresentationUniqueKey: PresentationUniqueKey
             CustomRating: CustomRating
             ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
             CanManageAccess: true
             AirDays:
             - Sunday
@@ -71638,6 +71757,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -72688,6 +72808,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -73221,6 +73342,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -73505,60 +73627,64 @@ components:
           type: integer
           format: int32
       example:
-        TotalRecordCount: 3
+        TotalRecordCount: 4
         Items:
         - Category: Latest
-          ItemLimit: 2
+          ItemLimit: 7
           DateCreated: 2000-01-23T04:56:07.000+00:00
           PrimaryImageTag: PrimaryImageTag
           RequestedItemIds:
-          - 7
-          - 7
+          - 9
+          - 9
           TargetName: TargetName
           SyncNewContent: true
           ParentName: ParentName
+          ItemId: 3
           Profile: Profile
           Name: Name
           DateLastModified: 2000-01-23T04:56:07.000+00:00
           Container: Container
           Quality: Quality
           PrimaryImageItemId: PrimaryImageItemId
-          ItemCount: 9
+          ItemCount: 2
           AudioCodec: AudioCodec
-          ParentId: 1
+          ParentId: 5
           Status: Queued
-          Progress: 5.962133916683182
-          Bitrate: 6
+          Progress: 5.637376656633329
+          Bitrate: 1
           VideoCodec: VideoCodec
           TargetId: TargetId
-          UserId: 5
+          InternalTargetId: 6
+          UserId: 2
           UnwatchedOnly: true
           Id: 0
         - Category: Latest
-          ItemLimit: 2
+          ItemLimit: 7
           DateCreated: 2000-01-23T04:56:07.000+00:00
           PrimaryImageTag: PrimaryImageTag
           RequestedItemIds:
-          - 7
-          - 7
+          - 9
+          - 9
           TargetName: TargetName
           SyncNewContent: true
           ParentName: ParentName
+          ItemId: 3
           Profile: Profile
           Name: Name
           DateLastModified: 2000-01-23T04:56:07.000+00:00
           Container: Container
           Quality: Quality
           PrimaryImageItemId: PrimaryImageItemId
-          ItemCount: 9
+          ItemCount: 2
           AudioCodec: AudioCodec
-          ParentId: 1
+          ParentId: 5
           Status: Queued
-          Progress: 5.962133916683182
-          Bitrate: 6
+          Progress: 5.637376656633329
+          Bitrate: 1
           VideoCodec: VideoCodec
           TargetId: TargetId
-          UserId: 5
+          InternalTargetId: 6
+          UserId: 2
           UnwatchedOnly: true
           Id: 0
     SyncJob:
@@ -73571,6 +73697,9 @@ components:
         TargetId:
           type: string
           description: The device identifier.
+        InternalTargetId:
+          type: integer
+          format: int64
         TargetName:
           type: string
           description: The name of the target.
@@ -73627,6 +73756,9 @@ components:
           items:
             type: integer
             format: int64
+        ItemId:
+          type: integer
+          format: int64
         DateCreated:
           type: string
           description: The date created.
@@ -73647,30 +73779,32 @@ components:
           type: string
       example:
         Category: Latest
-        ItemLimit: 2
+        ItemLimit: 7
         DateCreated: 2000-01-23T04:56:07.000+00:00
         PrimaryImageTag: PrimaryImageTag
         RequestedItemIds:
-        - 7
-        - 7
+        - 9
+        - 9
         TargetName: TargetName
         SyncNewContent: true
         ParentName: ParentName
+        ItemId: 3
         Profile: Profile
         Name: Name
         DateLastModified: 2000-01-23T04:56:07.000+00:00
         Container: Container
         Quality: Quality
         PrimaryImageItemId: PrimaryImageItemId
-        ItemCount: 9
+        ItemCount: 2
         AudioCodec: AudioCodec
-        ParentId: 1
+        ParentId: 5
         Status: Queued
-        Progress: 5.962133916683182
-        Bitrate: 6
+        Progress: 5.637376656633329
+        Bitrate: 1
         VideoCodec: VideoCodec
         TargetId: TargetId
-        UserId: 5
+        InternalTargetId: 6
+        UserId: 2
         UnwatchedOnly: true
         Id: 0
       x-internal-ref-name: MediaBrowser.Model.Sync.SyncJob
@@ -73706,7 +73840,7 @@ components:
         TotalRecordCount: 0
         Items:
         - Status: Queued
-          Progress: 5.962133916683182
+          Progress: 5.637376656633329
           OutputPath: OutputPath
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
@@ -73714,6 +73848,7 @@ components:
           ItemId: 1
           TemporaryPath: TemporaryPath
           TargetId: TargetId
+          InternalTargetId: 5
           MediaSource:
             EncoderPath: EncoderPath
             RequiredHttpHeaders:
@@ -73869,12 +74004,12 @@ components:
           AdditionalFiles:
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           PrimaryImageItemId: PrimaryImageItemId
@@ -73882,7 +74017,7 @@ components:
           Id: 0
           JobId: 6
         - Status: Queued
-          Progress: 5.962133916683182
+          Progress: 5.637376656633329
           OutputPath: OutputPath
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
@@ -73890,6 +74025,7 @@ components:
           ItemId: 1
           TemporaryPath: TemporaryPath
           TargetId: TargetId
+          InternalTargetId: 5
           MediaSource:
             EncoderPath: EncoderPath
             RequiredHttpHeaders:
@@ -74045,12 +74181,12 @@ components:
           AdditionalFiles:
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           PrimaryImageItemId: PrimaryImageItemId
@@ -74077,6 +74213,9 @@ components:
           $ref: '#/components/schemas/MediaSourceInfo'
         TargetId:
           type: string
+        InternalTargetId:
+          type: integer
+          format: int64
         OutputPath:
           type: string
         Status:
@@ -74100,7 +74239,7 @@ components:
             $ref: '#/components/schemas/ItemFileInfo'
       example:
         Status: Queued
-        Progress: 5.962133916683182
+        Progress: 5.637376656633329
         OutputPath: OutputPath
         MediaSourceId: MediaSourceId
         DateCreated: 2000-01-23T04:56:07.000+00:00
@@ -74108,6 +74247,7 @@ components:
         ItemId: 1
         TemporaryPath: TemporaryPath
         TargetId: TargetId
+        InternalTargetId: 5
         MediaSource:
           EncoderPath: EncoderPath
           RequiredHttpHeaders:
@@ -74263,12 +74403,12 @@ components:
         AdditionalFiles:
         - Path: Path
           Type: Media
-          Index: 5
+          Index: 2
           Name: Name
           ImageType: Primary
         - Path: Path
           Type: Media
-          Index: 5
+          Index: 2
           Name: Name
           ImageType: Primary
         PrimaryImageItemId: PrimaryImageItemId
@@ -74276,16 +74416,6 @@ components:
         Id: 0
         JobId: 6
       x-internal-ref-name: Emby.Server.Sync.Model.SyncJobItem
-    SyncJobItemStatus:
-      type: string
-      enum:
-      - Queued
-      - Converting
-      - ReadyToTransfer
-      - Transferring
-      - Synced
-      - Failed
-      x-internal-ref-name: Emby.Server.Sync.Model.SyncJobItemStatus
     ItemFileInfo:
       type: object
       properties:
@@ -74303,7 +74433,7 @@ components:
       example:
         Path: Path
         Type: Media
-        Index: 5
+        Index: 2
         Name: Name
         ImageType: Primary
       x-internal-ref-name: Emby.Server.Sync.Model.ItemFileInfo
@@ -74368,7 +74498,7 @@ components:
       example:
         JobItems:
         - Status: Queued
-          Progress: 5.962133916683182
+          Progress: 5.637376656633329
           OutputPath: OutputPath
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
@@ -74376,6 +74506,7 @@ components:
           ItemId: 1
           TemporaryPath: TemporaryPath
           TargetId: TargetId
+          InternalTargetId: 5
           MediaSource:
             EncoderPath: EncoderPath
             RequiredHttpHeaders:
@@ -74531,12 +74662,12 @@ components:
           AdditionalFiles:
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           PrimaryImageItemId: PrimaryImageItemId
@@ -74544,7 +74675,7 @@ components:
           Id: 0
           JobId: 6
         - Status: Queued
-          Progress: 5.962133916683182
+          Progress: 5.637376656633329
           OutputPath: OutputPath
           MediaSourceId: MediaSourceId
           DateCreated: 2000-01-23T04:56:07.000+00:00
@@ -74552,6 +74683,7 @@ components:
           ItemId: 1
           TemporaryPath: TemporaryPath
           TargetId: TargetId
+          InternalTargetId: 5
           MediaSource:
             EncoderPath: EncoderPath
             RequiredHttpHeaders:
@@ -74707,12 +74839,12 @@ components:
           AdditionalFiles:
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           - Path: Path
             Type: Media
-            Index: 5
+            Index: 2
             Name: Name
             ImageType: Primary
           PrimaryImageItemId: PrimaryImageItemId
@@ -74721,30 +74853,32 @@ components:
           JobId: 6
         Job:
           Category: Latest
-          ItemLimit: 2
+          ItemLimit: 7
           DateCreated: 2000-01-23T04:56:07.000+00:00
           PrimaryImageTag: PrimaryImageTag
           RequestedItemIds:
-          - 7
-          - 7
+          - 9
+          - 9
           TargetName: TargetName
           SyncNewContent: true
           ParentName: ParentName
+          ItemId: 3
           Profile: Profile
           Name: Name
           DateLastModified: 2000-01-23T04:56:07.000+00:00
           Container: Container
           Quality: Quality
           PrimaryImageItemId: PrimaryImageItemId
-          ItemCount: 9
+          ItemCount: 2
           AudioCodec: AudioCodec
-          ParentId: 1
+          ParentId: 5
           Status: Queued
-          Progress: 5.962133916683182
-          Bitrate: 6
+          Progress: 5.637376656633329
+          Bitrate: 1
           VideoCodec: VideoCodec
           TargetId: TargetId
-          UserId: 5
+          InternalTargetId: 6
+          UserId: 2
           UnwatchedOnly: true
           Id: 0
       x-internal-ref-name: Emby.Server.Sync.Model.SyncJobCreationResult
@@ -74882,8 +75016,11 @@ components:
           type: array
           items:
             type: string
-        TargetId:
-          type: string
+        InternalTargetIds:
+          type: array
+          items:
+            type: integer
+            format: int64
       x-internal-ref-name: Emby.Server.Sync.Model.SyncDataRequest
     SyncDataResponse:
       type: object
@@ -75051,9 +75188,13 @@ components:
           type: boolean
         MigratedToUserItemShares:
           type: boolean
+        MigratedLibraryOptionsToDb:
+          type: boolean
         EnableFks:
           type: boolean
         AllowLegacyLocalNetworkPassword:
+          type: boolean
+        EnableSavedMetadataForPeople:
           type: boolean
         ProxyHeaderMode:
           $ref: '#/components/schemas/ProxyHeaderMode'
@@ -75090,6 +75231,7 @@ components:
         RevertDebugLogging: RevertDebugLogging
         IsStartupWizardCompleted: true
         ImageSavingConvention: Legacy
+        EnableSavedMetadataForPeople: true
         LocalNetworkAddresses:
         - LocalNetworkAddresses
         - LocalNetworkAddresses
@@ -75124,6 +75266,7 @@ components:
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
         PreferredDetectedRemoteAddressFamily: Unspecified
+        MigratedLibraryOptionsToDb: true
         SimultaneousStreamLimit: 9
         PathSubstitutions:
         - From: From
@@ -76977,6 +77120,7 @@ components:
             PresentationUniqueKey: PresentationUniqueKey
             CustomRating: CustomRating
             ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
             CanManageAccess: true
             AirDays:
             - Sunday
@@ -79544,6 +79688,7 @@ components:
             PresentationUniqueKey: PresentationUniqueKey
             CustomRating: CustomRating
             ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
             CanManageAccess: true
             AirDays:
             - Sunday
@@ -80077,6 +80222,7 @@ components:
             PresentationUniqueKey: PresentationUniqueKey
             CustomRating: CustomRating
             ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
             CanManageAccess: true
             AirDays:
             - Sunday
@@ -80632,6 +80778,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -81165,6 +81312,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -83151,6 +83299,7 @@ components:
           PresentationUniqueKey: PresentationUniqueKey
           CustomRating: CustomRating
           ListingsChannelNumber: ListingsChannelNumber
+          SyncStatus: Queued
           CanManageAccess: true
           AirDays:
           - Sunday
@@ -83245,12 +83394,12 @@ components:
         AdditionalFiles:
         - Path: Path
           Type: Media
-          Index: 5
+          Index: 2
           Name: Name
           ImageType: Primary
         - Path: Path
           Type: Media
-          Index: 5
+          Index: 2
           Name: Name
           ImageType: Primary
         SyncJobDateCreated: 2000-01-23T04:56:07.000+00:00

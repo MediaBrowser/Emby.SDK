@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export default class ServerConfiguration {
     /**
@@ -205,11 +205,17 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('MigratedToUserItemShares')) {
                 obj['MigratedToUserItemShares'] = ApiClient.convertToType(data['MigratedToUserItemShares'], 'Boolean');
             }
+            if (data.hasOwnProperty('MigratedLibraryOptionsToDb')) {
+                obj['MigratedLibraryOptionsToDb'] = ApiClient.convertToType(data['MigratedLibraryOptionsToDb'], 'Boolean');
+            }
             if (data.hasOwnProperty('EnableFks')) {
                 obj['EnableFks'] = ApiClient.convertToType(data['EnableFks'], 'Boolean');
             }
             if (data.hasOwnProperty('AllowLegacyLocalNetworkPassword')) {
                 obj['AllowLegacyLocalNetworkPassword'] = ApiClient.convertToType(data['AllowLegacyLocalNetworkPassword'], 'Boolean');
+            }
+            if (data.hasOwnProperty('EnableSavedMetadataForPeople')) {
+                obj['EnableSavedMetadataForPeople'] = ApiClient.convertToType(data['EnableSavedMetadataForPeople'], 'Boolean');
             }
             if (data.hasOwnProperty('ProxyHeaderMode')) {
                 obj['ProxyHeaderMode'] = ProxyHeaderMode.constructFromObject(data['ProxyHeaderMode']);
@@ -468,6 +474,10 @@ export default class ServerConfiguration {
     */
     'MigratedToUserItemShares' = undefined;
     /**
+    * @member {Boolean} MigratedLibraryOptionsToDb
+    */
+    'MigratedLibraryOptionsToDb' = undefined;
+    /**
     * @member {Boolean} EnableFks
     */
     'EnableFks' = undefined;
@@ -475,6 +485,10 @@ export default class ServerConfiguration {
     * @member {Boolean} AllowLegacyLocalNetworkPassword
     */
     'AllowLegacyLocalNetworkPassword' = undefined;
+    /**
+    * @member {Boolean} EnableSavedMetadataForPeople
+    */
+    'EnableSavedMetadataForPeople' = undefined;
     /**
     * @member {module:model/ProxyHeaderMode} ProxyHeaderMode
     */

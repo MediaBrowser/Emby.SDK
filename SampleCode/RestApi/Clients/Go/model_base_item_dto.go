@@ -38,6 +38,7 @@ type BaseItemDto struct {
 	PreferredMetadataCountryCode string `json:"PreferredMetadataCountryCode,omitempty"`
 	// A value indicating whether \\[supports synchronize\\].
 	SupportsSync bool `json:"SupportsSync,omitempty"`
+	SyncStatus *SyncJobItemStatus `json:"SyncStatus,omitempty"`
 	CanManageAccess bool `json:"CanManageAccess,omitempty"`
 	CanMakePrivate bool `json:"CanMakePrivate,omitempty"`
 	CanMakePublic bool `json:"CanMakePublic,omitempty"`

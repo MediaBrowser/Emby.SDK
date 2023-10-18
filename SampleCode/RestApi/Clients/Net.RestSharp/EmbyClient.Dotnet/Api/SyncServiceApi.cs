@@ -111,8 +111,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>QueryResultSyncJobItem</returns>
-        QueryResultSyncJobItem GetSyncJobitems ();
+        QueryResultSyncJobItem GetSyncJobitems (string targetId);
 
         /// <summary>
         /// Gets sync job items.
@@ -121,8 +122,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>ApiResponse of QueryResultSyncJobItem</returns>
-        ApiResponse<QueryResultSyncJobItem> GetSyncJobitemsWithHttpInfo ();
+        ApiResponse<QueryResultSyncJobItem> GetSyncJobitemsWithHttpInfo (string targetId);
         /// <summary>
         /// Gets a sync job item file
         /// </summary>
@@ -311,8 +313,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>SyncDataResponse</returns>
-        SyncDataResponse PostSyncData (SyncDataRequest body);
+        SyncDataResponse PostSyncData (SyncDataRequest body, string targetId);
 
         /// <summary>
         /// Syncs data between device and server
@@ -322,8 +325,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>ApiResponse of SyncDataResponse</returns>
-        ApiResponse<SyncDataResponse> PostSyncDataWithHttpInfo (SyncDataRequest body);
+        ApiResponse<SyncDataResponse> PostSyncDataWithHttpInfo (SyncDataRequest body, string targetId);
         /// <summary>
         /// Cancels items from a sync target
         /// </summary>
@@ -631,8 +635,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of QueryResultSyncJobItem</returns>
-        System.Threading.Tasks.Task<QueryResultSyncJobItem> GetSyncJobitemsAsync ();
+        System.Threading.Tasks.Task<QueryResultSyncJobItem> GetSyncJobitemsAsync (string targetId);
 
         /// <summary>
         /// Gets sync job items.
@@ -641,8 +646,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of ApiResponse (QueryResultSyncJobItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultSyncJobItem>> GetSyncJobitemsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<QueryResultSyncJobItem>> GetSyncJobitemsAsyncWithHttpInfo (string targetId);
         /// <summary>
         /// Gets a sync job item file
         /// </summary>
@@ -831,8 +837,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of SyncDataResponse</returns>
-        System.Threading.Tasks.Task<SyncDataResponse> PostSyncDataAsync (SyncDataRequest body);
+        System.Threading.Tasks.Task<SyncDataResponse> PostSyncDataAsync (SyncDataRequest body, string targetId);
 
         /// <summary>
         /// Syncs data between device and server
@@ -842,8 +849,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of ApiResponse (SyncDataResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SyncDataResponse>> PostSyncDataAsyncWithHttpInfo (SyncDataRequest body);
+        System.Threading.Tasks.Task<ApiResponse<SyncDataResponse>> PostSyncDataAsyncWithHttpInfo (SyncDataRequest body, string targetId);
         /// <summary>
         /// Cancels items from a sync target
         /// </summary>
@@ -1779,10 +1787,11 @@ namespace EmbyClient.Dotnet.Api
         /// Gets sync job items. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>QueryResultSyncJobItem</returns>
-        public QueryResultSyncJobItem GetSyncJobitems ()
+        public QueryResultSyncJobItem GetSyncJobitems (string targetId)
         {
-             ApiResponse<QueryResultSyncJobItem> localVarResponse = GetSyncJobitemsWithHttpInfo();
+             ApiResponse<QueryResultSyncJobItem> localVarResponse = GetSyncJobitemsWithHttpInfo(targetId);
              return localVarResponse.Data;
         }
 
@@ -1790,9 +1799,13 @@ namespace EmbyClient.Dotnet.Api
         /// Gets sync job items. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>ApiResponse of QueryResultSyncJobItem</returns>
-        public ApiResponse< QueryResultSyncJobItem > GetSyncJobitemsWithHttpInfo ()
+        public ApiResponse< QueryResultSyncJobItem > GetSyncJobitemsWithHttpInfo (string targetId)
         {
+            // verify the required parameter 'targetId' is set
+            if (targetId == null)
+                throw new ApiException(400, "Missing required parameter 'targetId' when calling SyncServiceApi->GetSyncJobitems");
 
             var localVarPath = "/Sync/JobItems";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1816,6 +1829,7 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (targetId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TargetId", targetId)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1850,10 +1864,11 @@ namespace EmbyClient.Dotnet.Api
         /// Gets sync job items. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of QueryResultSyncJobItem</returns>
-        public async System.Threading.Tasks.Task<QueryResultSyncJobItem> GetSyncJobitemsAsync ()
+        public async System.Threading.Tasks.Task<QueryResultSyncJobItem> GetSyncJobitemsAsync (string targetId)
         {
-             ApiResponse<QueryResultSyncJobItem> localVarResponse = await GetSyncJobitemsAsyncWithHttpInfo();
+             ApiResponse<QueryResultSyncJobItem> localVarResponse = await GetSyncJobitemsAsyncWithHttpInfo(targetId);
              return localVarResponse.Data;
 
         }
@@ -1862,9 +1877,13 @@ namespace EmbyClient.Dotnet.Api
         /// Gets sync job items. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of ApiResponse (QueryResultSyncJobItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultSyncJobItem>> GetSyncJobitemsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultSyncJobItem>> GetSyncJobitemsAsyncWithHttpInfo (string targetId)
         {
+            // verify the required parameter 'targetId' is set
+            if (targetId == null)
+                throw new ApiException(400, "Missing required parameter 'targetId' when calling SyncServiceApi->GetSyncJobitems");
 
             var localVarPath = "/Sync/JobItems";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1888,6 +1907,7 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (targetId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TargetId", targetId)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -3199,10 +3219,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>SyncDataResponse</returns>
-        public SyncDataResponse PostSyncData (SyncDataRequest body)
+        public SyncDataResponse PostSyncData (SyncDataRequest body, string targetId)
         {
-             ApiResponse<SyncDataResponse> localVarResponse = PostSyncDataWithHttpInfo(body);
+             ApiResponse<SyncDataResponse> localVarResponse = PostSyncDataWithHttpInfo(body, targetId);
              return localVarResponse.Data;
         }
 
@@ -3211,12 +3232,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>ApiResponse of SyncDataResponse</returns>
-        public ApiResponse< SyncDataResponse > PostSyncDataWithHttpInfo (SyncDataRequest body)
+        public ApiResponse< SyncDataResponse > PostSyncDataWithHttpInfo (SyncDataRequest body, string targetId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SyncServiceApi->PostSyncData");
+            // verify the required parameter 'targetId' is set
+            if (targetId == null)
+                throw new ApiException(400, "Missing required parameter 'targetId' when calling SyncServiceApi->PostSyncData");
 
             var localVarPath = "/Sync/Data";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3242,6 +3267,7 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (targetId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TargetId", targetId)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3285,10 +3311,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of SyncDataResponse</returns>
-        public async System.Threading.Tasks.Task<SyncDataResponse> PostSyncDataAsync (SyncDataRequest body)
+        public async System.Threading.Tasks.Task<SyncDataResponse> PostSyncDataAsync (SyncDataRequest body, string targetId)
         {
-             ApiResponse<SyncDataResponse> localVarResponse = await PostSyncDataAsyncWithHttpInfo(body);
+             ApiResponse<SyncDataResponse> localVarResponse = await PostSyncDataAsyncWithHttpInfo(body, targetId);
              return localVarResponse.Data;
 
         }
@@ -3298,12 +3325,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SyncDataRequest: </param>
+        /// <param name="targetId">TargetId</param>
         /// <returns>Task of ApiResponse (SyncDataResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SyncDataResponse>> PostSyncDataAsyncWithHttpInfo (SyncDataRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<SyncDataResponse>> PostSyncDataAsyncWithHttpInfo (SyncDataRequest body, string targetId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SyncServiceApi->PostSyncData");
+            // verify the required parameter 'targetId' is set
+            if (targetId == null)
+                throw new ApiException(400, "Missing required parameter 'targetId' when calling SyncServiceApi->PostSyncData");
 
             var localVarPath = "/Sync/Data";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3329,6 +3360,7 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (targetId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TargetId", targetId)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter

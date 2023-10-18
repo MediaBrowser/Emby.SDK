@@ -87,6 +87,7 @@ from embyclient-python-beta.models.forgot_password_result import ForgotPasswordR
 from embyclient-python-beta.models.game_info import GameInfo
 from embyclient-python-beta.models.general_command import GeneralCommand
 from embyclient-python-beta.models.generic_edit_i_edit_object_container import GenericEditIEditObjectContainer
+from embyclient-python-beta.models.get_directory_contents import GetDirectoryContents
 from embyclient-python-beta.models.globalization_country_info import GlobalizationCountryInfo
 from embyclient-python-beta.models.globalization_culture_dto import GlobalizationCultureDto
 from embyclient-python-beta.models.globalization_localizaton_option import GlobalizationLocalizatonOption

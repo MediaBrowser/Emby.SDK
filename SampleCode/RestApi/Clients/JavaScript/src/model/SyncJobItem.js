@@ -17,7 +17,7 @@ import SyncJobItemStatus from './SyncJobItemStatus';
 /**
 * The SyncJobItem model module.
 * @module model/SyncJobItem
-* @version 4.8.0.53
+* @version 4.8.0.54
 */
 export default class SyncJobItem {
     /**
@@ -64,6 +64,9 @@ export default class SyncJobItem {
             }
             if (data.hasOwnProperty('TargetId')) {
                 obj['TargetId'] = ApiClient.convertToType(data['TargetId'], 'String');
+            }
+            if (data.hasOwnProperty('InternalTargetId')) {
+                obj['InternalTargetId'] = ApiClient.convertToType(data['InternalTargetId'], 'Number');
             }
             if (data.hasOwnProperty('OutputPath')) {
                 obj['OutputPath'] = ApiClient.convertToType(data['OutputPath'], 'String');
@@ -121,6 +124,10 @@ export default class SyncJobItem {
     * @member {String} TargetId
     */
     'TargetId' = undefined;
+    /**
+    * @member {Number} InternalTargetId
+    */
+    'InternalTargetId' = undefined;
     /**
     * @member {String} OutputPath
     */
