@@ -253,4 +253,46 @@ open class ConfigurationServiceAPI {
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
+    /**
+     Updates application configuration
+
+     - parameter body: (body) ServerConfiguration:  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSystemConfigurationPartial(body: ServerConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postSystemConfigurationPartialWithRequestBuilder(body: body).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates application configuration
+     - POST /System/Configuration/Partial
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) ServerConfiguration:  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postSystemConfigurationPartialWithRequestBuilder(body: ServerConfiguration) -> RequestBuilder<Void> {
+        let path = "/System/Configuration/Partial"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
 }

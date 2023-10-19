@@ -84,4 +84,19 @@ public class ConfigurationServiceApiTest {
 
         // TODO: test validations
     }
+    /**
+     * Updates application configuration
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postSystemConfigurationPartialTest() throws Exception {
+        ServerConfiguration body = null;
+        api.postSystemConfigurationPartial(body);
+
+        // TODO: test validations
+    }
 }

@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.54
+ * OpenAPI spec version: 4.8.0.55
  * 
  *
  * NOTE: This file is auto generated.
@@ -571,6 +571,10 @@ describe("ConfigurationServiceApi", () => {
     const body: Object = undefined
     const key: string = "key_example"
     return expect(instance.postSystemConfigurationByKey(body, key, {})).resolves.toBe(null)
+  })
+  test("postSystemConfigurationPartial", () => {
+    const body: api.ServerConfiguration = undefined
+    return expect(instance.postSystemConfigurationPartial(body, {})).resolves.toBe(null)
   })
 })
 

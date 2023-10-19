@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.54"
+    "version": "4.8.0.55"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -38643,6 +38643,61 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Cancels a sync job item"
+    },
+    "/System/Configuration/Partial": {
+      "post": {
+        "tags": [
+          "ConfigurationService"
+        ],
+        "summary": "Updates application configuration",
+        "description": "Requires authentication as administrator",
+        "operationId": "postSystemConfigurationPartial",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "ServerConfiguration: ",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ServerConfiguration"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Updates application configuration"
     },
     "/System/Configuration/{Key}": {
       "get": {

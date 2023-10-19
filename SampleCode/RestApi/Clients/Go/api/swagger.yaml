@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.54
+  version: 4.8.0.55
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -44508,6 +44508,41 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /System/Configuration/Partial:
+    summary: Updates application configuration
+    post:
+      tags:
+      - ConfigurationService
+      summary: Updates application configuration
+      description: Requires authentication as administrator
+      operationId: postSystemConfigurationPartial
+      requestBody:
+        description: "ServerConfiguration: "
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServerConfiguration'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/ServerConfiguration'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
   /System/Configuration/{Key}:
     summary: Gets a named configuration
     get:

@@ -15,7 +15,7 @@ import ServerConfiguration from '../model/ServerConfiguration';
 /**
 * ConfigurationService service.
 * @module EmbyClient.JavaScript.Beta/ConfigurationServiceApi
-* @version 4.8.0.54
+* @version 4.8.0.55
 */
 export default class ConfigurationServiceApi {
 
@@ -173,6 +173,42 @@ export default class ConfigurationServiceApi {
 
       return this.apiClient.callApi(
         '/System/Configuration/{Key}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postSystemConfigurationPartial operation.
+     * @callback module:EmbyClient.JavaScript.Beta/ConfigurationServiceApi~postSystemConfigurationPartialCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates application configuration
+     * Requires authentication as administrator
+     * @param {module:EmbyClient.JavaScript.Beta/ConfigurationServiceApi~postSystemConfigurationPartialCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postSystemConfigurationPartial() {
+      let postBody = body;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/System/Configuration/Partial', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
