@@ -19,6 +19,7 @@ public struct ApiBaseItemsRequest: Codable {
     public var genreIds: String?
     public var collectionIds: String?
     public var tagIds: String?
+    public var excludeTagIds: String?
     public var excludeArtistIds: String?
     public var albumArtistIds: String?
     public var contributingArtistIds: String?
@@ -37,7 +38,7 @@ public struct ApiBaseItemsRequest: Codable {
     public var isAiring: Bool?
     public var hasAired: Bool?
 
-    public init(is4K: Bool? = nil, enableTotalRecordCount: Bool? = nil, recordingKeyword: String? = nil, recordingKeywordType: LiveTvKeywordType? = nil, randomSeed: Int? = nil, genreIds: String? = nil, collectionIds: String? = nil, tagIds: String? = nil, excludeArtistIds: String? = nil, albumArtistIds: String? = nil, contributingArtistIds: String? = nil, albumIds: String? = nil, outerIds: String? = nil, listItemIds: String? = nil, audioLanguages: String? = nil, subtitleLanguages: String? = nil, groupItemsInto: LibraryItemLinkType? = nil, minWidth: Int? = nil, minHeight: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, groupProgramsBySeries: Bool? = nil, airDays: [DayOfWeek]? = nil, isAiring: Bool? = nil, hasAired: Bool? = nil) {
+    public init(is4K: Bool? = nil, enableTotalRecordCount: Bool? = nil, recordingKeyword: String? = nil, recordingKeywordType: LiveTvKeywordType? = nil, randomSeed: Int? = nil, genreIds: String? = nil, collectionIds: String? = nil, tagIds: String? = nil, excludeTagIds: String? = nil, excludeArtistIds: String? = nil, albumArtistIds: String? = nil, contributingArtistIds: String? = nil, albumIds: String? = nil, outerIds: String? = nil, listItemIds: String? = nil, audioLanguages: String? = nil, subtitleLanguages: String? = nil, groupItemsInto: LibraryItemLinkType? = nil, minWidth: Int? = nil, minHeight: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, groupProgramsBySeries: Bool? = nil, airDays: [DayOfWeek]? = nil, isAiring: Bool? = nil, hasAired: Bool? = nil) {
         self.is4K = is4K
         self.enableTotalRecordCount = enableTotalRecordCount
         self.recordingKeyword = recordingKeyword
@@ -46,6 +47,7 @@ public struct ApiBaseItemsRequest: Codable {
         self.genreIds = genreIds
         self.collectionIds = collectionIds
         self.tagIds = tagIds
+        self.excludeTagIds = excludeTagIds
         self.excludeArtistIds = excludeArtistIds
         self.albumArtistIds = albumArtistIds
         self.contributingArtistIds = contributingArtistIds
@@ -74,6 +76,7 @@ public struct ApiBaseItemsRequest: Codable {
         case genreIds = "GenreIds"
         case collectionIds = "CollectionIds"
         case tagIds = "TagIds"
+        case excludeTagIds = "ExcludeTagIds"
         case excludeArtistIds = "ExcludeArtistIds"
         case albumArtistIds = "AlbumArtistIds"
         case contributingArtistIds = "ContributingArtistIds"

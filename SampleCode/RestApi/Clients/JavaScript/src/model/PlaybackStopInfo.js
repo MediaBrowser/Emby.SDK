@@ -16,7 +16,7 @@ import QueueItem from './QueueItem';
 /**
 * The PlaybackStopInfo model module.
 * @module model/PlaybackStopInfo
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class PlaybackStopInfo {
     /**
@@ -80,6 +80,9 @@ export default class PlaybackStopInfo {
             if (data.hasOwnProperty('Failed')) {
                 obj['Failed'] = ApiClient.convertToType(data['Failed'], 'Boolean');
             }
+            if (data.hasOwnProperty('IsAutomated')) {
+                obj['IsAutomated'] = ApiClient.convertToType(data['IsAutomated'], 'Boolean');
+            }
             if (data.hasOwnProperty('NextMediaType')) {
                 obj['NextMediaType'] = ApiClient.convertToType(data['NextMediaType'], 'String');
             }
@@ -142,6 +145,10 @@ export default class PlaybackStopInfo {
     * @member {Boolean} Failed
     */
     'Failed' = undefined;
+    /**
+    * @member {Boolean} IsAutomated
+    */
+    'IsAutomated' = undefined;
     /**
     * @member {String} NextMediaType
     */

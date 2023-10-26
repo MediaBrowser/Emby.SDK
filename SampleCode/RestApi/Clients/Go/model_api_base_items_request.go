@@ -15,6 +15,7 @@ type ApiBaseItemsRequest struct {
 	GenreIds string `json:"GenreIds,omitempty"`
 	CollectionIds string `json:"CollectionIds,omitempty"`
 	TagIds string `json:"TagIds,omitempty"`
+	ExcludeTagIds string `json:"ExcludeTagIds,omitempty"`
 	ExcludeArtistIds string `json:"ExcludeArtistIds,omitempty"`
 	AlbumArtistIds string `json:"AlbumArtistIds,omitempty"`
 	ContributingArtistIds string `json:"ContributingArtistIds,omitempty"`

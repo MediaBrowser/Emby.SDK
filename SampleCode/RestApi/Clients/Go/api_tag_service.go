@@ -92,6 +92,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -195,6 +196,7 @@ type TagServiceApiGetArtistsPrefixesOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -439,6 +441,9 @@ func (a *TagServiceApiService) GetArtistsPrefixes(ctx context.Context, localVarO
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -688,6 +693,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -791,6 +797,7 @@ type TagServiceApiGetAudiocodecsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -1035,6 +1042,9 @@ func (a *TagServiceApiService) GetAudiocodecs(ctx context.Context, localVarOptio
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -1284,6 +1294,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -1387,6 +1398,7 @@ type TagServiceApiGetAudiolayoutsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -1631,6 +1643,9 @@ func (a *TagServiceApiService) GetAudiolayouts(ctx context.Context, localVarOpti
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -1880,6 +1895,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -1983,6 +1999,7 @@ type TagServiceApiGetContainersOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -2227,6 +2244,9 @@ func (a *TagServiceApiService) GetContainers(ctx context.Context, localVarOption
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -2476,6 +2496,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -2579,6 +2600,7 @@ type TagServiceApiGetExtendedvideotypesOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -2823,6 +2845,9 @@ func (a *TagServiceApiService) GetExtendedvideotypes(ctx context.Context, localV
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -3072,6 +3097,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -3175,6 +3201,7 @@ type TagServiceApiGetItemsPrefixesOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -3419,6 +3446,9 @@ func (a *TagServiceApiService) GetItemsPrefixes(ctx context.Context, localVarOpt
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -3668,6 +3698,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -3771,6 +3802,7 @@ type TagServiceApiGetItemtypesOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -4015,6 +4047,9 @@ func (a *TagServiceApiService) GetItemtypes(ctx context.Context, localVarOptiona
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -4264,6 +4299,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -4367,6 +4403,7 @@ type TagServiceApiGetStreamlanguagesOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -4611,6 +4648,9 @@ func (a *TagServiceApiService) GetStreamlanguages(ctx context.Context, localVarO
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -4860,6 +4900,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -4963,6 +5004,7 @@ type TagServiceApiGetSubtitlecodecsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -5207,6 +5249,9 @@ func (a *TagServiceApiService) GetSubtitlecodecs(ctx context.Context, localVarOp
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -5456,6 +5501,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -5559,6 +5605,7 @@ type TagServiceApiGetTagsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -5803,6 +5850,9 @@ func (a *TagServiceApiService) GetTags(ctx context.Context, localVarOptionals *T
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -6052,6 +6102,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -6155,6 +6206,7 @@ type TagServiceApiGetVideocodecsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -6399,6 +6451,9 @@ func (a *TagServiceApiService) GetVideocodecs(ctx context.Context, localVarOptio
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -6648,6 +6703,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -6751,6 +6807,7 @@ type TagServiceApiGetYearsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -6995,6 +7052,9 @@ func (a *TagServiceApiService) GetYears(ctx context.Context, localVarOptionals *
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))

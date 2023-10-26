@@ -60,6 +60,9 @@ public class PlaybackStopInfo {
   @SerializedName("Failed")
   private Boolean failed = null;
 
+  @SerializedName("IsAutomated")
+  private Boolean isAutomated = null;
+
   @SerializedName("NextMediaType")
   private String nextMediaType = null;
 
@@ -287,6 +290,24 @@ public class PlaybackStopInfo {
     this.failed = failed;
   }
 
+  public PlaybackStopInfo isAutomated(Boolean isAutomated) {
+    this.isAutomated = isAutomated;
+    return this;
+  }
+
+   /**
+   * Get isAutomated
+   * @return isAutomated
+  **/
+  @Schema(description = "")
+  public Boolean isIsAutomated() {
+    return isAutomated;
+  }
+
+  public void setIsAutomated(Boolean isAutomated) {
+    this.isAutomated = isAutomated;
+  }
+
   public PlaybackStopInfo nextMediaType(String nextMediaType) {
     this.nextMediaType = nextMediaType;
     return this;
@@ -327,12 +348,13 @@ public class PlaybackStopInfo {
         Objects.equals(this.liveStreamId, playbackStopInfo.liveStreamId) &&
         Objects.equals(this.playSessionId, playbackStopInfo.playSessionId) &&
         Objects.equals(this.failed, playbackStopInfo.failed) &&
+        Objects.equals(this.isAutomated, playbackStopInfo.isAutomated) &&
         Objects.equals(this.nextMediaType, playbackStopInfo.nextMediaType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nowPlayingQueue, playlistItemId, playlistIndex, playlistLength, item, itemId, sessionId, mediaSourceId, positionTicks, liveStreamId, playSessionId, failed, nextMediaType);
+    return Objects.hash(nowPlayingQueue, playlistItemId, playlistIndex, playlistLength, item, itemId, sessionId, mediaSourceId, positionTicks, liveStreamId, playSessionId, failed, isAutomated, nextMediaType);
   }
 
 
@@ -353,6 +375,7 @@ public class PlaybackStopInfo {
     sb.append("    liveStreamId: ").append(toIndentedString(liveStreamId)).append("\n");
     sb.append("    playSessionId: ").append(toIndentedString(playSessionId)).append("\n");
     sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
+    sb.append("    isAutomated: ").append(toIndentedString(isAutomated)).append("\n");
     sb.append("    nextMediaType: ").append(toIndentedString(nextMediaType)).append("\n");
     sb.append("}");
     return sb.toString();

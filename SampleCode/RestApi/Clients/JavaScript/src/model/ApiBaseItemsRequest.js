@@ -17,7 +17,7 @@ import LiveTvKeywordType from './LiveTvKeywordType';
 /**
 * The ApiBaseItemsRequest model module.
 * @module model/ApiBaseItemsRequest
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class ApiBaseItemsRequest {
     /**
@@ -67,6 +67,9 @@ export default class ApiBaseItemsRequest {
             }
             if (data.hasOwnProperty('TagIds')) {
                 obj['TagIds'] = ApiClient.convertToType(data['TagIds'], 'String');
+            }
+            if (data.hasOwnProperty('ExcludeTagIds')) {
+                obj['ExcludeTagIds'] = ApiClient.convertToType(data['ExcludeTagIds'], 'String');
             }
             if (data.hasOwnProperty('ExcludeArtistIds')) {
                 obj['ExcludeArtistIds'] = ApiClient.convertToType(data['ExcludeArtistIds'], 'String');
@@ -155,6 +158,10 @@ export default class ApiBaseItemsRequest {
     * @member {String} TagIds
     */
     'TagIds' = undefined;
+    /**
+    * @member {String} ExcludeTagIds
+    */
+    'ExcludeTagIds' = undefined;
     /**
     * @member {String} ExcludeArtistIds
     */

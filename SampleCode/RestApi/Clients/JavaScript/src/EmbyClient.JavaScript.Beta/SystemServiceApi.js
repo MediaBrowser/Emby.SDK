@@ -21,7 +21,7 @@ import WakeOnLanInfo from '../model/WakeOnLanInfo';
 /**
 * SystemService service.
 * @module EmbyClient.JavaScript.Beta/SystemServiceApi
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class SystemServiceApi {
 

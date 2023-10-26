@@ -161,12 +161,6 @@ public class ServerConfiguration {
   @SerializedName("PlaylistsUpgradedToM3U")
   private Boolean playlistsUpgradedToM3U = null;
 
-  @SerializedName("ForcedSortNameUpgraded")
-  private Boolean forcedSortNameUpgraded = null;
-
-  @SerializedName("InheritedParentalRatingValueUpgraded")
-  private Boolean inheritedParentalRatingValueUpgraded = null;
-
   @SerializedName("ImageExtractorUpgraded")
   private Boolean imageExtractorUpgraded = null;
 
@@ -187,9 +181,6 @@ public class ServerConfiguration {
 
   @SerializedName("MigratedLibraryOptionsToDb")
   private Boolean migratedLibraryOptionsToDb = null;
-
-  @SerializedName("EnableFks")
-  private Boolean enableFks = null;
 
   @SerializedName("AllowLegacyLocalNetworkPassword")
   private Boolean allowLegacyLocalNetworkPassword = null;
@@ -1079,42 +1070,6 @@ public class ServerConfiguration {
     this.playlistsUpgradedToM3U = playlistsUpgradedToM3U;
   }
 
-  public ServerConfiguration forcedSortNameUpgraded(Boolean forcedSortNameUpgraded) {
-    this.forcedSortNameUpgraded = forcedSortNameUpgraded;
-    return this;
-  }
-
-   /**
-   * Get forcedSortNameUpgraded
-   * @return forcedSortNameUpgraded
-  **/
-  @Schema(description = "")
-  public Boolean isForcedSortNameUpgraded() {
-    return forcedSortNameUpgraded;
-  }
-
-  public void setForcedSortNameUpgraded(Boolean forcedSortNameUpgraded) {
-    this.forcedSortNameUpgraded = forcedSortNameUpgraded;
-  }
-
-  public ServerConfiguration inheritedParentalRatingValueUpgraded(Boolean inheritedParentalRatingValueUpgraded) {
-    this.inheritedParentalRatingValueUpgraded = inheritedParentalRatingValueUpgraded;
-    return this;
-  }
-
-   /**
-   * Get inheritedParentalRatingValueUpgraded
-   * @return inheritedParentalRatingValueUpgraded
-  **/
-  @Schema(description = "")
-  public Boolean isInheritedParentalRatingValueUpgraded() {
-    return inheritedParentalRatingValueUpgraded;
-  }
-
-  public void setInheritedParentalRatingValueUpgraded(Boolean inheritedParentalRatingValueUpgraded) {
-    this.inheritedParentalRatingValueUpgraded = inheritedParentalRatingValueUpgraded;
-  }
-
   public ServerConfiguration imageExtractorUpgraded(Boolean imageExtractorUpgraded) {
     this.imageExtractorUpgraded = imageExtractorUpgraded;
     return this;
@@ -1239,24 +1194,6 @@ public class ServerConfiguration {
 
   public void setMigratedLibraryOptionsToDb(Boolean migratedLibraryOptionsToDb) {
     this.migratedLibraryOptionsToDb = migratedLibraryOptionsToDb;
-  }
-
-  public ServerConfiguration enableFks(Boolean enableFks) {
-    this.enableFks = enableFks;
-    return this;
-  }
-
-   /**
-   * Get enableFks
-   * @return enableFks
-  **/
-  @Schema(description = "")
-  public Boolean isEnableFks() {
-    return enableFks;
-  }
-
-  public void setEnableFks(Boolean enableFks) {
-    this.enableFks = enableFks;
   }
 
   public ServerConfiguration allowLegacyLocalNetworkPassword(Boolean allowLegacyLocalNetworkPassword) {
@@ -1494,8 +1431,6 @@ public class ServerConfiguration {
         Objects.equals(this.databaseCacheSizeMB, serverConfiguration.databaseCacheSizeMB) &&
         Objects.equals(this.enableSqLiteMmio, serverConfiguration.enableSqLiteMmio) &&
         Objects.equals(this.playlistsUpgradedToM3U, serverConfiguration.playlistsUpgradedToM3U) &&
-        Objects.equals(this.forcedSortNameUpgraded, serverConfiguration.forcedSortNameUpgraded) &&
-        Objects.equals(this.inheritedParentalRatingValueUpgraded, serverConfiguration.inheritedParentalRatingValueUpgraded) &&
         Objects.equals(this.imageExtractorUpgraded, serverConfiguration.imageExtractorUpgraded) &&
         Objects.equals(this.enablePeopleLetterSubFolders, serverConfiguration.enablePeopleLetterSubFolders) &&
         Objects.equals(this.optimizeDatabaseOnShutdown, serverConfiguration.optimizeDatabaseOnShutdown) &&
@@ -1503,7 +1438,6 @@ public class ServerConfiguration {
         Objects.equals(this.disableAsyncIO, serverConfiguration.disableAsyncIO) &&
         Objects.equals(this.migratedToUserItemShares, serverConfiguration.migratedToUserItemShares) &&
         Objects.equals(this.migratedLibraryOptionsToDb, serverConfiguration.migratedLibraryOptionsToDb) &&
-        Objects.equals(this.enableFks, serverConfiguration.enableFks) &&
         Objects.equals(this.allowLegacyLocalNetworkPassword, serverConfiguration.allowLegacyLocalNetworkPassword) &&
         Objects.equals(this.enableSavedMetadataForPeople, serverConfiguration.enableSavedMetadataForPeople) &&
         Objects.equals(this.proxyHeaderMode, serverConfiguration.proxyHeaderMode) &&
@@ -1518,7 +1452,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, forcedSortNameUpgraded, inheritedParentalRatingValueUpgraded, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, migratedLibraryOptionsToDb, enableFks, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1572,8 +1506,6 @@ public class ServerConfiguration {
     sb.append("    databaseCacheSizeMB: ").append(toIndentedString(databaseCacheSizeMB)).append("\n");
     sb.append("    enableSqLiteMmio: ").append(toIndentedString(enableSqLiteMmio)).append("\n");
     sb.append("    playlistsUpgradedToM3U: ").append(toIndentedString(playlistsUpgradedToM3U)).append("\n");
-    sb.append("    forcedSortNameUpgraded: ").append(toIndentedString(forcedSortNameUpgraded)).append("\n");
-    sb.append("    inheritedParentalRatingValueUpgraded: ").append(toIndentedString(inheritedParentalRatingValueUpgraded)).append("\n");
     sb.append("    imageExtractorUpgraded: ").append(toIndentedString(imageExtractorUpgraded)).append("\n");
     sb.append("    enablePeopleLetterSubFolders: ").append(toIndentedString(enablePeopleLetterSubFolders)).append("\n");
     sb.append("    optimizeDatabaseOnShutdown: ").append(toIndentedString(optimizeDatabaseOnShutdown)).append("\n");
@@ -1581,7 +1513,6 @@ public class ServerConfiguration {
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
     sb.append("    migratedToUserItemShares: ").append(toIndentedString(migratedToUserItemShares)).append("\n");
     sb.append("    migratedLibraryOptionsToDb: ").append(toIndentedString(migratedLibraryOptionsToDb)).append("\n");
-    sb.append("    enableFks: ").append(toIndentedString(enableFks)).append("\n");
     sb.append("    allowLegacyLocalNetworkPassword: ").append(toIndentedString(allowLegacyLocalNetworkPassword)).append("\n");
     sb.append("    enableSavedMetadataForPeople: ").append(toIndentedString(enableSavedMetadataForPeople)).append("\n");
     sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");

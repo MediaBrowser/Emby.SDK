@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * GenresService service.
 * @module EmbyClient.JavaScript.Beta/GenresServiceApi
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class GenresServiceApi {
 
@@ -117,6 +117,7 @@ export default class GenresServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],

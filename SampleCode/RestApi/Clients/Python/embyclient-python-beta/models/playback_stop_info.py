@@ -34,6 +34,7 @@ class PlaybackStopInfo(object):
         'live_stream_id': 'str',
         'play_session_id': 'str',
         'failed': 'bool',
+        'is_automated': 'bool',
         'next_media_type': 'str'
     }
 
@@ -50,10 +51,11 @@ class PlaybackStopInfo(object):
         'live_stream_id': 'LiveStreamId',
         'play_session_id': 'PlaySessionId',
         'failed': 'Failed',
+        'is_automated': 'IsAutomated',
         'next_media_type': 'NextMediaType'
     }
 
-    def __init__(self, now_playing_queue=None, playlist_item_id=None, playlist_index=None, playlist_length=None, item=None, item_id=None, session_id=None, media_source_id=None, position_ticks=None, live_stream_id=None, play_session_id=None, failed=None, next_media_type=None):  # noqa: E501
+    def __init__(self, now_playing_queue=None, playlist_item_id=None, playlist_index=None, playlist_length=None, item=None, item_id=None, session_id=None, media_source_id=None, position_ticks=None, live_stream_id=None, play_session_id=None, failed=None, is_automated=None, next_media_type=None):  # noqa: E501
         """PlaybackStopInfo - a model defined in Swagger"""  # noqa: E501
         self._now_playing_queue = None
         self._playlist_item_id = None
@@ -67,6 +69,7 @@ class PlaybackStopInfo(object):
         self._live_stream_id = None
         self._play_session_id = None
         self._failed = None
+        self._is_automated = None
         self._next_media_type = None
         self.discriminator = None
         if now_playing_queue is not None:
@@ -93,6 +96,8 @@ class PlaybackStopInfo(object):
             self.play_session_id = play_session_id
         if failed is not None:
             self.failed = failed
+        if is_automated is not None:
+            self.is_automated = is_automated
         if next_media_type is not None:
             self.next_media_type = next_media_type
 
@@ -361,6 +366,27 @@ class PlaybackStopInfo(object):
         """
 
         self._failed = failed
+
+    @property
+    def is_automated(self):
+        """Gets the is_automated of this PlaybackStopInfo.  # noqa: E501
+
+
+        :return: The is_automated of this PlaybackStopInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_automated
+
+    @is_automated.setter
+    def is_automated(self, is_automated):
+        """Sets the is_automated of this PlaybackStopInfo.
+
+
+        :param is_automated: The is_automated of this PlaybackStopInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_automated = is_automated
 
     @property
     def next_media_type(self):

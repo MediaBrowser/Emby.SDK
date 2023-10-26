@@ -27,5 +27,6 @@ type PlaybackStopInfo struct {
 	PlaySessionId string `json:"PlaySessionId,omitempty"`
 	// A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.
 	Failed bool `json:"Failed,omitempty"`
+	IsAutomated bool `json:"IsAutomated,omitempty"`
 	NextMediaType string `json:"NextMediaType,omitempty"`
 }

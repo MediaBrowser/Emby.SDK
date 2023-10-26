@@ -71,8 +71,6 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="databaseCacheSizeMB">databaseCacheSizeMB.</param>
         /// <param name="enableSqLiteMmio">enableSqLiteMmio.</param>
         /// <param name="playlistsUpgradedToM3U">playlistsUpgradedToM3U.</param>
-        /// <param name="forcedSortNameUpgraded">forcedSortNameUpgraded.</param>
-        /// <param name="inheritedParentalRatingValueUpgraded">inheritedParentalRatingValueUpgraded.</param>
         /// <param name="imageExtractorUpgraded">imageExtractorUpgraded.</param>
         /// <param name="enablePeopleLetterSubFolders">enablePeopleLetterSubFolders.</param>
         /// <param name="optimizeDatabaseOnShutdown">optimizeDatabaseOnShutdown.</param>
@@ -80,7 +78,6 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="disableAsyncIO">disableAsyncIO.</param>
         /// <param name="migratedToUserItemShares">migratedToUserItemShares.</param>
         /// <param name="migratedLibraryOptionsToDb">migratedLibraryOptionsToDb.</param>
-        /// <param name="enableFks">enableFks.</param>
         /// <param name="allowLegacyLocalNetworkPassword">allowLegacyLocalNetworkPassword.</param>
         /// <param name="enableSavedMetadataForPeople">enableSavedMetadataForPeople.</param>
         /// <param name="proxyHeaderMode">proxyHeaderMode.</param>
@@ -91,7 +88,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="runAtStartup">A value indicating whether \\[run at startup\\]..</param>
         /// <param name="isStartupWizardCompleted">A value indicating whether this instance is first run..</param>
         /// <param name="cachePath">The cache path..</param>
-        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? forcedSortNameUpgraded = default(bool?), bool? inheritedParentalRatingValueUpgraded = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? enableFks = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             this.EnableUPnP = enableUPnP;
             this.PublicPort = publicPort;
@@ -138,8 +135,6 @@ namespace EmbyClient.Dotnet.Model
             this.DatabaseCacheSizeMB = databaseCacheSizeMB;
             this.EnableSqLiteMmio = enableSqLiteMmio;
             this.PlaylistsUpgradedToM3U = playlistsUpgradedToM3U;
-            this.ForcedSortNameUpgraded = forcedSortNameUpgraded;
-            this.InheritedParentalRatingValueUpgraded = inheritedParentalRatingValueUpgraded;
             this.ImageExtractorUpgraded = imageExtractorUpgraded;
             this.EnablePeopleLetterSubFolders = enablePeopleLetterSubFolders;
             this.OptimizeDatabaseOnShutdown = optimizeDatabaseOnShutdown;
@@ -147,7 +142,6 @@ namespace EmbyClient.Dotnet.Model
             this.DisableAsyncIO = disableAsyncIO;
             this.MigratedToUserItemShares = migratedToUserItemShares;
             this.MigratedLibraryOptionsToDb = migratedLibraryOptionsToDb;
-            this.EnableFks = enableFks;
             this.AllowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
             this.EnableSavedMetadataForPeople = enableSavedMetadataForPeople;
             this.ProxyHeaderMode = proxyHeaderMode;
@@ -447,18 +441,6 @@ namespace EmbyClient.Dotnet.Model
         public bool? PlaylistsUpgradedToM3U { get; set; }
 
         /// <summary>
-        /// Gets or Sets ForcedSortNameUpgraded
-        /// </summary>
-        [DataMember(Name="ForcedSortNameUpgraded", EmitDefaultValue=false)]
-        public bool? ForcedSortNameUpgraded { get; set; }
-
-        /// <summary>
-        /// Gets or Sets InheritedParentalRatingValueUpgraded
-        /// </summary>
-        [DataMember(Name="InheritedParentalRatingValueUpgraded", EmitDefaultValue=false)]
-        public bool? InheritedParentalRatingValueUpgraded { get; set; }
-
-        /// <summary>
         /// Gets or Sets ImageExtractorUpgraded
         /// </summary>
         [DataMember(Name="ImageExtractorUpgraded", EmitDefaultValue=false)]
@@ -499,12 +481,6 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="MigratedLibraryOptionsToDb", EmitDefaultValue=false)]
         public bool? MigratedLibraryOptionsToDb { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EnableFks
-        /// </summary>
-        [DataMember(Name="EnableFks", EmitDefaultValue=false)]
-        public bool? EnableFks { get; set; }
 
         /// <summary>
         /// Gets or Sets AllowLegacyLocalNetworkPassword
@@ -625,8 +601,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  DatabaseCacheSizeMB: ").Append(DatabaseCacheSizeMB).Append("\n");
             sb.Append("  EnableSqLiteMmio: ").Append(EnableSqLiteMmio).Append("\n");
             sb.Append("  PlaylistsUpgradedToM3U: ").Append(PlaylistsUpgradedToM3U).Append("\n");
-            sb.Append("  ForcedSortNameUpgraded: ").Append(ForcedSortNameUpgraded).Append("\n");
-            sb.Append("  InheritedParentalRatingValueUpgraded: ").Append(InheritedParentalRatingValueUpgraded).Append("\n");
             sb.Append("  ImageExtractorUpgraded: ").Append(ImageExtractorUpgraded).Append("\n");
             sb.Append("  EnablePeopleLetterSubFolders: ").Append(EnablePeopleLetterSubFolders).Append("\n");
             sb.Append("  OptimizeDatabaseOnShutdown: ").Append(OptimizeDatabaseOnShutdown).Append("\n");
@@ -634,7 +608,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  DisableAsyncIO: ").Append(DisableAsyncIO).Append("\n");
             sb.Append("  MigratedToUserItemShares: ").Append(MigratedToUserItemShares).Append("\n");
             sb.Append("  MigratedLibraryOptionsToDb: ").Append(MigratedLibraryOptionsToDb).Append("\n");
-            sb.Append("  EnableFks: ").Append(EnableFks).Append("\n");
             sb.Append("  AllowLegacyLocalNetworkPassword: ").Append(AllowLegacyLocalNetworkPassword).Append("\n");
             sb.Append("  EnableSavedMetadataForPeople: ").Append(EnableSavedMetadataForPeople).Append("\n");
             sb.Append("  ProxyHeaderMode: ").Append(ProxyHeaderMode).Append("\n");
@@ -911,16 +884,6 @@ namespace EmbyClient.Dotnet.Model
                     this.PlaylistsUpgradedToM3U.Equals(input.PlaylistsUpgradedToM3U))
                 ) && 
                 (
-                    this.ForcedSortNameUpgraded == input.ForcedSortNameUpgraded ||
-                    (this.ForcedSortNameUpgraded != null &&
-                    this.ForcedSortNameUpgraded.Equals(input.ForcedSortNameUpgraded))
-                ) && 
-                (
-                    this.InheritedParentalRatingValueUpgraded == input.InheritedParentalRatingValueUpgraded ||
-                    (this.InheritedParentalRatingValueUpgraded != null &&
-                    this.InheritedParentalRatingValueUpgraded.Equals(input.InheritedParentalRatingValueUpgraded))
-                ) && 
-                (
                     this.ImageExtractorUpgraded == input.ImageExtractorUpgraded ||
                     (this.ImageExtractorUpgraded != null &&
                     this.ImageExtractorUpgraded.Equals(input.ImageExtractorUpgraded))
@@ -954,11 +917,6 @@ namespace EmbyClient.Dotnet.Model
                     this.MigratedLibraryOptionsToDb == input.MigratedLibraryOptionsToDb ||
                     (this.MigratedLibraryOptionsToDb != null &&
                     this.MigratedLibraryOptionsToDb.Equals(input.MigratedLibraryOptionsToDb))
-                ) && 
-                (
-                    this.EnableFks == input.EnableFks ||
-                    (this.EnableFks != null &&
-                    this.EnableFks.Equals(input.EnableFks))
                 ) && 
                 (
                     this.AllowLegacyLocalNetworkPassword == input.AllowLegacyLocalNetworkPassword ||
@@ -1111,10 +1069,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.EnableSqLiteMmio.GetHashCode();
                 if (this.PlaylistsUpgradedToM3U != null)
                     hashCode = hashCode * 59 + this.PlaylistsUpgradedToM3U.GetHashCode();
-                if (this.ForcedSortNameUpgraded != null)
-                    hashCode = hashCode * 59 + this.ForcedSortNameUpgraded.GetHashCode();
-                if (this.InheritedParentalRatingValueUpgraded != null)
-                    hashCode = hashCode * 59 + this.InheritedParentalRatingValueUpgraded.GetHashCode();
                 if (this.ImageExtractorUpgraded != null)
                     hashCode = hashCode * 59 + this.ImageExtractorUpgraded.GetHashCode();
                 if (this.EnablePeopleLetterSubFolders != null)
@@ -1129,8 +1083,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MigratedToUserItemShares.GetHashCode();
                 if (this.MigratedLibraryOptionsToDb != null)
                     hashCode = hashCode * 59 + this.MigratedLibraryOptionsToDb.GetHashCode();
-                if (this.EnableFks != null)
-                    hashCode = hashCode * 59 + this.EnableFks.GetHashCode();
                 if (this.AllowLegacyLocalNetworkPassword != null)
                     hashCode = hashCode * 59 + this.AllowLegacyLocalNetworkPassword.GetHashCode();
                 if (this.EnableSavedMetadataForPeople != null)

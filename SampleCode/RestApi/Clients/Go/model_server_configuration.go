@@ -69,8 +69,6 @@ type ServerConfiguration struct {
 	DatabaseCacheSizeMB int32 `json:"DatabaseCacheSizeMB,omitempty"`
 	EnableSqLiteMmio bool `json:"EnableSqLiteMmio,omitempty"`
 	PlaylistsUpgradedToM3U bool `json:"PlaylistsUpgradedToM3U,omitempty"`
-	ForcedSortNameUpgraded bool `json:"ForcedSortNameUpgraded,omitempty"`
-	InheritedParentalRatingValueUpgraded bool `json:"InheritedParentalRatingValueUpgraded,omitempty"`
 	ImageExtractorUpgraded bool `json:"ImageExtractorUpgraded,omitempty"`
 	EnablePeopleLetterSubFolders bool `json:"EnablePeopleLetterSubFolders,omitempty"`
 	OptimizeDatabaseOnShutdown bool `json:"OptimizeDatabaseOnShutdown,omitempty"`
@@ -78,7 +76,6 @@ type ServerConfiguration struct {
 	DisableAsyncIO bool `json:"DisableAsyncIO,omitempty"`
 	MigratedToUserItemShares bool `json:"MigratedToUserItemShares,omitempty"`
 	MigratedLibraryOptionsToDb bool `json:"MigratedLibraryOptionsToDb,omitempty"`
-	EnableFks bool `json:"EnableFks,omitempty"`
 	AllowLegacyLocalNetworkPassword bool `json:"AllowLegacyLocalNetworkPassword,omitempty"`
 	EnableSavedMetadataForPeople bool `json:"EnableSavedMetadataForPeople,omitempty"`
 	ProxyHeaderMode *ProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`

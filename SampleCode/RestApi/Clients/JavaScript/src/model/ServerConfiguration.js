@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class ServerConfiguration {
     /**
@@ -181,12 +181,6 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('PlaylistsUpgradedToM3U')) {
                 obj['PlaylistsUpgradedToM3U'] = ApiClient.convertToType(data['PlaylistsUpgradedToM3U'], 'Boolean');
             }
-            if (data.hasOwnProperty('ForcedSortNameUpgraded')) {
-                obj['ForcedSortNameUpgraded'] = ApiClient.convertToType(data['ForcedSortNameUpgraded'], 'Boolean');
-            }
-            if (data.hasOwnProperty('InheritedParentalRatingValueUpgraded')) {
-                obj['InheritedParentalRatingValueUpgraded'] = ApiClient.convertToType(data['InheritedParentalRatingValueUpgraded'], 'Boolean');
-            }
             if (data.hasOwnProperty('ImageExtractorUpgraded')) {
                 obj['ImageExtractorUpgraded'] = ApiClient.convertToType(data['ImageExtractorUpgraded'], 'Boolean');
             }
@@ -207,9 +201,6 @@ export default class ServerConfiguration {
             }
             if (data.hasOwnProperty('MigratedLibraryOptionsToDb')) {
                 obj['MigratedLibraryOptionsToDb'] = ApiClient.convertToType(data['MigratedLibraryOptionsToDb'], 'Boolean');
-            }
-            if (data.hasOwnProperty('EnableFks')) {
-                obj['EnableFks'] = ApiClient.convertToType(data['EnableFks'], 'Boolean');
             }
             if (data.hasOwnProperty('AllowLegacyLocalNetworkPassword')) {
                 obj['AllowLegacyLocalNetworkPassword'] = ApiClient.convertToType(data['AllowLegacyLocalNetworkPassword'], 'Boolean');
@@ -442,14 +433,6 @@ export default class ServerConfiguration {
     */
     'PlaylistsUpgradedToM3U' = undefined;
     /**
-    * @member {Boolean} ForcedSortNameUpgraded
-    */
-    'ForcedSortNameUpgraded' = undefined;
-    /**
-    * @member {Boolean} InheritedParentalRatingValueUpgraded
-    */
-    'InheritedParentalRatingValueUpgraded' = undefined;
-    /**
     * @member {Boolean} ImageExtractorUpgraded
     */
     'ImageExtractorUpgraded' = undefined;
@@ -477,10 +460,6 @@ export default class ServerConfiguration {
     * @member {Boolean} MigratedLibraryOptionsToDb
     */
     'MigratedLibraryOptionsToDb' = undefined;
-    /**
-    * @member {Boolean} EnableFks
-    */
-    'EnableFks' = undefined;
     /**
     * @member {Boolean} AllowLegacyLocalNetworkPassword
     */

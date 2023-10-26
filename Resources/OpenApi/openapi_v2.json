@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.55"
+    "version": "4.8.0.56"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -423,6 +423,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -1082,6 +1088,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -1731,6 +1743,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -2567,6 +2585,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -3322,6 +3346,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -4030,6 +4060,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -4688,6 +4724,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -5341,6 +5383,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -6046,6 +6094,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -6704,6 +6758,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -7353,6 +7413,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -8153,6 +8219,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -9063,6 +9135,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -9721,6 +9799,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -10370,6 +10454,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -11095,6 +11185,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -11748,6 +11844,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -12407,6 +12509,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -13056,6 +13164,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -14108,6 +14222,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -14757,6 +14877,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -17879,6 +18005,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -19235,6 +19367,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -20824,6 +20962,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -21511,6 +21655,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -22167,6 +22317,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -22816,6 +22972,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -23495,6 +23657,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -34021,6 +34189,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -37748,6 +37922,12 @@
           },
           {
             "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "Years",
             "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
             "type": "string"
@@ -40063,6 +40243,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -48057,6 +48243,12 @@
           {
             "in": "query",
             "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
             "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
             "type": "string"
           },
@@ -59342,6 +59534,9 @@
         "TagIds": {
           "type": "string"
         },
+        "ExcludeTagIds": {
+          "type": "string"
+        },
         "ExcludeArtistIds": {
           "type": "string"
         },
@@ -60889,12 +61084,6 @@
         "PlaylistsUpgradedToM3U": {
           "type": "boolean"
         },
-        "ForcedSortNameUpgraded": {
-          "type": "boolean"
-        },
-        "InheritedParentalRatingValueUpgraded": {
-          "type": "boolean"
-        },
         "ImageExtractorUpgraded": {
           "type": "boolean"
         },
@@ -60915,9 +61104,6 @@
           "type": "boolean"
         },
         "MigratedLibraryOptionsToDb": {
-          "type": "boolean"
-        },
-        "EnableFks": {
           "type": "boolean"
         },
         "AllowLegacyLocalNetworkPassword": {
@@ -64602,6 +64788,9 @@
         },
         "Failed": {
           "description": "A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.",
+          "type": "boolean"
+        },
+        "IsAutomated": {
           "type": "boolean"
         },
         "NextMediaType": {

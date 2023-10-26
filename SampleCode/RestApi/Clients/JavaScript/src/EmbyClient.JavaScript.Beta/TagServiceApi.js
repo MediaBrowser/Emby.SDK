@@ -17,7 +17,7 @@ import UserLibraryAddTags from '../model/UserLibraryAddTags';
 /**
 * TagService service.
 * @module EmbyClient.JavaScript.Beta/TagServiceApi
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class TagServiceApi {
 
@@ -118,6 +118,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -256,6 +257,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -394,6 +396,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -532,6 +535,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -670,6 +674,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -808,6 +813,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -946,6 +952,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1084,6 +1091,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1222,6 +1230,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1360,6 +1369,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1498,6 +1508,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1636,6 +1647,7 @@ export default class TagServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],

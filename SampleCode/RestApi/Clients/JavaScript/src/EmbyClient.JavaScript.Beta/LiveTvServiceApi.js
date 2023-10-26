@@ -37,7 +37,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class LiveTvServiceApi {
 
@@ -476,6 +476,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -655,6 +656,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -793,6 +795,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -937,6 +940,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1494,6 +1498,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1689,6 +1694,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -2630,6 +2636,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],

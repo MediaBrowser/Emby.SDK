@@ -15,7 +15,7 @@ import BrandingBrandingOptions from '../model/BrandingBrandingOptions';
 /**
 * BrandingService service.
 * @module EmbyClient.JavaScript.Beta/BrandingServiceApi
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class BrandingServiceApi {
 

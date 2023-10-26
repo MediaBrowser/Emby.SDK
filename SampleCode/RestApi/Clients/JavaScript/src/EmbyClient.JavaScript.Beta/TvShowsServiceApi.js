@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * TvShowsService service.
 * @module EmbyClient.JavaScript.Beta/TvShowsServiceApi
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class TvShowsServiceApi {
 
@@ -119,6 +119,7 @@ export default class TvShowsServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],

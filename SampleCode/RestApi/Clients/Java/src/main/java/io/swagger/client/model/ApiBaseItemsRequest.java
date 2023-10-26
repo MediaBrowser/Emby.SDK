@@ -49,6 +49,9 @@ public class ApiBaseItemsRequest {
   @SerializedName("TagIds")
   private String tagIds = null;
 
+  @SerializedName("ExcludeTagIds")
+  private String excludeTagIds = null;
+
   @SerializedName("ExcludeArtistIds")
   private String excludeArtistIds = null;
 
@@ -242,6 +245,24 @@ public class ApiBaseItemsRequest {
 
   public void setTagIds(String tagIds) {
     this.tagIds = tagIds;
+  }
+
+  public ApiBaseItemsRequest excludeTagIds(String excludeTagIds) {
+    this.excludeTagIds = excludeTagIds;
+    return this;
+  }
+
+   /**
+   * Get excludeTagIds
+   * @return excludeTagIds
+  **/
+  @Schema(description = "")
+  public String getExcludeTagIds() {
+    return excludeTagIds;
+  }
+
+  public void setExcludeTagIds(String excludeTagIds) {
+    this.excludeTagIds = excludeTagIds;
   }
 
   public ApiBaseItemsRequest excludeArtistIds(String excludeArtistIds) {
@@ -576,6 +597,7 @@ public class ApiBaseItemsRequest {
         Objects.equals(this.genreIds, apiBaseItemsRequest.genreIds) &&
         Objects.equals(this.collectionIds, apiBaseItemsRequest.collectionIds) &&
         Objects.equals(this.tagIds, apiBaseItemsRequest.tagIds) &&
+        Objects.equals(this.excludeTagIds, apiBaseItemsRequest.excludeTagIds) &&
         Objects.equals(this.excludeArtistIds, apiBaseItemsRequest.excludeArtistIds) &&
         Objects.equals(this.albumArtistIds, apiBaseItemsRequest.albumArtistIds) &&
         Objects.equals(this.contributingArtistIds, apiBaseItemsRequest.contributingArtistIds) &&
@@ -597,7 +619,7 @@ public class ApiBaseItemsRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(is4K, enableTotalRecordCount, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeArtistIds, albumArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, groupItemsInto, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, airDays, isAiring, hasAired);
+    return Objects.hash(is4K, enableTotalRecordCount, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeTagIds, excludeArtistIds, albumArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, groupItemsInto, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, airDays, isAiring, hasAired);
   }
 
 
@@ -614,6 +636,7 @@ public class ApiBaseItemsRequest {
     sb.append("    genreIds: ").append(toIndentedString(genreIds)).append("\n");
     sb.append("    collectionIds: ").append(toIndentedString(collectionIds)).append("\n");
     sb.append("    tagIds: ").append(toIndentedString(tagIds)).append("\n");
+    sb.append("    excludeTagIds: ").append(toIndentedString(excludeTagIds)).append("\n");
     sb.append("    excludeArtistIds: ").append(toIndentedString(excludeArtistIds)).append("\n");
     sb.append("    albumArtistIds: ").append(toIndentedString(albumArtistIds)).append("\n");
     sb.append("    contributingArtistIds: ").append(toIndentedString(contributingArtistIds)).append("\n");

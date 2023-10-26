@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ArtistsService service.
 * @module EmbyClient.JavaScript.Beta/ArtistsServiceApi
-* @version 4.8.0.55
+* @version 4.8.0.56
 */
 export default class ArtistsServiceApi {
 
@@ -117,6 +117,7 @@ export default class ArtistsServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -255,6 +256,7 @@ export default class ArtistsServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],

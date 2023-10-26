@@ -30,6 +30,7 @@ class ApiBaseItemsRequest(object):
         'genre_ids': 'str',
         'collection_ids': 'str',
         'tag_ids': 'str',
+        'exclude_tag_ids': 'str',
         'exclude_artist_ids': 'str',
         'album_artist_ids': 'str',
         'contributing_artist_ids': 'str',
@@ -58,6 +59,7 @@ class ApiBaseItemsRequest(object):
         'genre_ids': 'GenreIds',
         'collection_ids': 'CollectionIds',
         'tag_ids': 'TagIds',
+        'exclude_tag_ids': 'ExcludeTagIds',
         'exclude_artist_ids': 'ExcludeArtistIds',
         'album_artist_ids': 'AlbumArtistIds',
         'contributing_artist_ids': 'ContributingArtistIds',
@@ -77,7 +79,7 @@ class ApiBaseItemsRequest(object):
         'has_aired': 'HasAired'
     }
 
-    def __init__(self, is4_k=None, enable_total_record_count=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_artist_ids=None, album_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, group_items_into=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, air_days=None, is_airing=None, has_aired=None):  # noqa: E501
+    def __init__(self, is4_k=None, enable_total_record_count=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_tag_ids=None, exclude_artist_ids=None, album_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, group_items_into=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, air_days=None, is_airing=None, has_aired=None):  # noqa: E501
         """ApiBaseItemsRequest - a model defined in Swagger"""  # noqa: E501
         self._is4_k = None
         self._enable_total_record_count = None
@@ -87,6 +89,7 @@ class ApiBaseItemsRequest(object):
         self._genre_ids = None
         self._collection_ids = None
         self._tag_ids = None
+        self._exclude_tag_ids = None
         self._exclude_artist_ids = None
         self._album_artist_ids = None
         self._contributing_artist_ids = None
@@ -121,6 +124,8 @@ class ApiBaseItemsRequest(object):
             self.collection_ids = collection_ids
         if tag_ids is not None:
             self.tag_ids = tag_ids
+        if exclude_tag_ids is not None:
+            self.exclude_tag_ids = exclude_tag_ids
         if exclude_artist_ids is not None:
             self.exclude_artist_ids = exclude_artist_ids
         if album_artist_ids is not None:
@@ -323,6 +328,27 @@ class ApiBaseItemsRequest(object):
         """
 
         self._tag_ids = tag_ids
+
+    @property
+    def exclude_tag_ids(self):
+        """Gets the exclude_tag_ids of this ApiBaseItemsRequest.  # noqa: E501
+
+
+        :return: The exclude_tag_ids of this ApiBaseItemsRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_tag_ids
+
+    @exclude_tag_ids.setter
+    def exclude_tag_ids(self, exclude_tag_ids):
+        """Sets the exclude_tag_ids of this ApiBaseItemsRequest.
+
+
+        :param exclude_tag_ids: The exclude_tag_ids of this ApiBaseItemsRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._exclude_tag_ids = exclude_tag_ids
 
     @property
     def exclude_artist_ids(self):

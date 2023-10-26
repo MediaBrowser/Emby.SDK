@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.55
+  version: 4.8.0.56
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -863,6 +863,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -1794,6 +1803,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -2708,6 +2726,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -3818,6 +3845,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -4813,6 +4849,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -5775,6 +5820,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -6701,6 +6755,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -7619,6 +7682,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -8582,6 +8654,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -9507,6 +9588,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -10422,6 +10512,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -11473,6 +11572,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -12617,6 +12725,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -13542,6 +13659,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -14457,6 +14583,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -15439,6 +15574,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -16356,6 +16500,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -17287,6 +17440,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -18201,6 +18363,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -19548,6 +19719,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -20463,6 +20643,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -23268,6 +23457,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -24683,6 +24881,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -26290,6 +26497,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -27257,6 +27473,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -28188,6 +28413,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -29101,6 +29335,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -30059,6 +30302,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -40114,6 +40366,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -43629,6 +43890,15 @@ paths:
         explode: true
         schema:
           type: string
+      - name: ExcludeTags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
       - name: Years
         in: query
         description: "Optional. If specified, results will be filtered based on production\
@@ -45898,6 +46168,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -54466,6 +54745,15 @@ paths:
         schema:
           type: string
       - name: Tags
+        in: query
+        description: "Optional. If specified, results will be filtered based on tag.\
+          \ This allows multiple, pipe delimeted."
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ExcludeTags
         in: query
         description: "Optional. If specified, results will be filtered based on tag.\
           \ This allows multiple, pipe delimeted."
@@ -70040,6 +70328,8 @@ components:
           type: string
         TagIds:
           type: string
+        ExcludeTagIds:
+          type: string
         ExcludeArtistIds:
           type: string
         AlbumArtistIds:
@@ -75206,10 +75496,6 @@ components:
           type: boolean
         PlaylistsUpgradedToM3U:
           type: boolean
-        ForcedSortNameUpgraded:
-          type: boolean
-        InheritedParentalRatingValueUpgraded:
-          type: boolean
         ImageExtractorUpgraded:
           type: boolean
         EnablePeopleLetterSubFolders:
@@ -75224,8 +75510,6 @@ components:
         MigratedToUserItemShares:
           type: boolean
         MigratedLibraryOptionsToDb:
-          type: boolean
-        EnableFks:
           type: boolean
         AllowLegacyLocalNetworkPassword:
           type: boolean
@@ -75290,7 +75574,6 @@ components:
         LogFileRetentionDays: 4
         HttpsPortNumber: 5
         CertificatePassword: CertificatePassword
-        InheritedParentalRatingValueUpgraded: true
         MigratedToUserItemShares: true
         EnableOriginalTrackTitles: true
         RemoteClientBitrateLimit: 2
@@ -75315,9 +75598,7 @@ components:
         - UninstalledPlugins
         - UninstalledPlugins
         EnableDashboardResponseCaching: true
-        ForcedSortNameUpgraded: true
         EnableRemoteAccess: true
-        EnableFks: true
         CertificatePath: CertificatePath
         CollapseVideoFolders: true
         AutoRunWebApp: true
@@ -82847,6 +83128,8 @@ components:
           type: boolean
           description: A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo`
             is failed.
+        IsAutomated:
+          type: boolean
         NextMediaType:
           type: string
       description: "Class PlaybackStopInfo.\r\n"

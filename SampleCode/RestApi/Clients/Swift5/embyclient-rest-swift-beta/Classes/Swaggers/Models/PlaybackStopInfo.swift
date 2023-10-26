@@ -31,9 +31,10 @@ public struct PlaybackStopInfo: Codable {
     public var playSessionId: String?
     /** A value indicating whether this &#x60;MediaBrowser.Model.Session.PlaybackStopInfo&#x60; is failed. */
     public var failed: Bool?
+    public var isAutomated: Bool?
     public var nextMediaType: String?
 
-    public init(nowPlayingQueue: [QueueItem]? = nil, playlistItemId: String? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, item: BaseItemDto? = nil, itemId: String? = nil, sessionId: String? = nil, mediaSourceId: String? = nil, positionTicks: Int64? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, failed: Bool? = nil, nextMediaType: String? = nil) {
+    public init(nowPlayingQueue: [QueueItem]? = nil, playlistItemId: String? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, item: BaseItemDto? = nil, itemId: String? = nil, sessionId: String? = nil, mediaSourceId: String? = nil, positionTicks: Int64? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, failed: Bool? = nil, isAutomated: Bool? = nil, nextMediaType: String? = nil) {
         self.nowPlayingQueue = nowPlayingQueue
         self.playlistItemId = playlistItemId
         self.playlistIndex = playlistIndex
@@ -46,6 +47,7 @@ public struct PlaybackStopInfo: Codable {
         self.liveStreamId = liveStreamId
         self.playSessionId = playSessionId
         self.failed = failed
+        self.isAutomated = isAutomated
         self.nextMediaType = nextMediaType
     }
 
@@ -62,6 +64,7 @@ public struct PlaybackStopInfo: Codable {
         case liveStreamId = "LiveStreamId"
         case playSessionId = "PlaySessionId"
         case failed = "Failed"
+        case isAutomated = "IsAutomated"
         case nextMediaType = "NextMediaType"
     }
 

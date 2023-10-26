@@ -913,6 +913,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -1038,6 +1039,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -1078,7 +1080,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['type', 'is_liked', 'is_disliked', 'enable_favorite_sorting', 'add_current_program', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['type', 'is_liked', 'is_disliked', 'enable_favorite_sorting', 'add_current_program', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1237,6 +1239,8 @@ class LiveTvServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -1510,6 +1514,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -1630,6 +1635,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -1670,7 +1676,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1819,6 +1825,8 @@ class LiveTvServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -1993,6 +2001,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -2113,6 +2122,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -2153,7 +2163,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2302,6 +2312,8 @@ class LiveTvServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -2482,6 +2494,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -2608,6 +2621,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -2648,7 +2662,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['type', 'is_liked', 'is_disliked', 'enable_favorite_sorting', 'add_current_program', 'channel_ids', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['type', 'is_liked', 'is_disliked', 'enable_favorite_sorting', 'add_current_program', 'channel_ids', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2809,6 +2823,8 @@ class LiveTvServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -3993,6 +4009,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -4114,6 +4131,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -4154,7 +4172,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['channel_ids', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['channel_ids', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4305,6 +4323,8 @@ class LiveTvServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -4626,6 +4646,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -4750,6 +4771,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -4790,7 +4812,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['channel_id', 'status', 'is_in_progress', 'series_timer_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['channel_id', 'status', 'is_in_progress', 'series_timer_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4947,6 +4969,8 @@ class LiveTvServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -7114,6 +7138,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -7236,6 +7261,7 @@ class LiveTvServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -7276,7 +7302,7 @@ class LiveTvServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'channel_ids', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['body', 'channel_ids', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7431,6 +7457,8 @@ class LiveTvServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
