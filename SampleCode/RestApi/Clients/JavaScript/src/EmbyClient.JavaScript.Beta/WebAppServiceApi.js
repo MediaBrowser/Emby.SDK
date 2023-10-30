@@ -15,7 +15,7 @@ import ApiConfigurationPageInfo from '../model/ApiConfigurationPageInfo';
 /**
 * WebAppService service.
 * @module EmbyClient.JavaScript.Beta/WebAppServiceApi
-* @version 4.8.0.56
+* @version 4.8.0.57
 */
 export default class WebAppServiceApi {
 
@@ -132,6 +132,42 @@ export default class WebAppServiceApi {
 
       return this.apiClient.callApi(
         '/web/strings', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getWebStringset operation.
+     * @callback module:EmbyClient.JavaScript.Beta/WebAppServiceApi~getWebStringsetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<'String'>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/WebAppServiceApi~getWebStringsetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<'String'>}
+     */
+    getWebStringset() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = ['String'];
+
+      return this.apiClient.callApi(
+        '/web/stringset', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

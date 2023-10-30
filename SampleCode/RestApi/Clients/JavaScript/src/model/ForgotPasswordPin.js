@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ForgotPasswordPin model module.
 * @module model/ForgotPasswordPin
-* @version 4.8.0.56
+* @version 4.8.0.57
 */
 export default class ForgotPasswordPin {
     /**

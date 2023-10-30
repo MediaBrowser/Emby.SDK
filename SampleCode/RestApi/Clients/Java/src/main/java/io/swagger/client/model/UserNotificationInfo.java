@@ -33,6 +33,9 @@ public class UserNotificationInfo {
   @SerializedName("ServiceName")
   private String serviceName = null;
 
+  @SerializedName("PluginId")
+  private String pluginId = null;
+
   @SerializedName("FriendlyName")
   private String friendlyName = null;
 
@@ -115,6 +118,24 @@ public class UserNotificationInfo {
 
   public void setServiceName(String serviceName) {
     this.serviceName = serviceName;
+  }
+
+  public UserNotificationInfo pluginId(String pluginId) {
+    this.pluginId = pluginId;
+    return this;
+  }
+
+   /**
+   * Get pluginId
+   * @return pluginId
+  **/
+  @Schema(description = "")
+  public String getPluginId() {
+    return pluginId;
+  }
+
+  public void setPluginId(String pluginId) {
+    this.pluginId = pluginId;
   }
 
   public UserNotificationInfo friendlyName(String friendlyName) {
@@ -350,6 +371,7 @@ public class UserNotificationInfo {
     return Objects.equals(this.notifierKey, userNotificationInfo.notifierKey) &&
         Objects.equals(this.setupModuleUrl, userNotificationInfo.setupModuleUrl) &&
         Objects.equals(this.serviceName, userNotificationInfo.serviceName) &&
+        Objects.equals(this.pluginId, userNotificationInfo.pluginId) &&
         Objects.equals(this.friendlyName, userNotificationInfo.friendlyName) &&
         Objects.equals(this.id, userNotificationInfo.id) &&
         Objects.equals(this.enabled, userNotificationInfo.enabled) &&
@@ -364,7 +386,7 @@ public class UserNotificationInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(notifierKey, setupModuleUrl, serviceName, friendlyName, id, enabled, userIds, deviceIds, libraryIds, eventIds, userId, isSelfNotification, options);
+    return Objects.hash(notifierKey, setupModuleUrl, serviceName, pluginId, friendlyName, id, enabled, userIds, deviceIds, libraryIds, eventIds, userId, isSelfNotification, options);
   }
 
 
@@ -376,6 +398,7 @@ public class UserNotificationInfo {
     sb.append("    notifierKey: ").append(toIndentedString(notifierKey)).append("\n");
     sb.append("    setupModuleUrl: ").append(toIndentedString(setupModuleUrl)).append("\n");
     sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");
+    sb.append("    pluginId: ").append(toIndentedString(pluginId)).append("\n");
     sb.append("    friendlyName: ").append(toIndentedString(friendlyName)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");

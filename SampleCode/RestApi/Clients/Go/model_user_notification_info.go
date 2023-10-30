@@ -10,6 +10,7 @@ type UserNotificationInfo struct {
 	NotifierKey string `json:"NotifierKey,omitempty"`
 	SetupModuleUrl string `json:"SetupModuleUrl,omitempty"`
 	ServiceName string `json:"ServiceName,omitempty"`
+	PluginId string `json:"PluginId,omitempty"`
 	FriendlyName string `json:"FriendlyName,omitempty"`
 	Id string `json:"Id,omitempty"`
 	Enabled bool `json:"Enabled,omitempty"`

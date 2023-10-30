@@ -9049,6 +9049,7 @@
   "MediaBrowser.Controller.Providers.IProviderManager.GetExternalIdInfos(MediaBrowser.Model.Entities.IHasProviderIds)": "MediaBrowser.Controller.Providers.IProviderManager.yml",
   "MediaBrowser.Controller.Providers.IProviderManager.GetExternalUrls(MediaBrowser.Controller.Entities.BaseItem)": "MediaBrowser.Controller.Providers.IProviderManager.yml",
   "MediaBrowser.Controller.Providers.IProviderManager.GetRefreshProgress(System.Int64)": "MediaBrowser.Controller.Providers.IProviderManager.yml",
+  "MediaBrowser.Controller.Providers.IProviderManager.GetRefreshQueue": "MediaBrowser.Controller.Providers.IProviderManager.yml",
   "MediaBrowser.Controller.Providers.IProviderManager.GetRemoteImageProviderInfo(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Configuration.LibraryOptions)": "MediaBrowser.Controller.Providers.IProviderManager.yml",
   "MediaBrowser.Controller.Providers.IProviderManager.GetRemoteSearchResults``2(MediaBrowser.Controller.Providers.RemoteSearchQuery{``1},MediaBrowser.Controller.Entities.BaseItem,System.Threading.CancellationToken)": "MediaBrowser.Controller.Providers.IProviderManager.yml",
   "MediaBrowser.Controller.Providers.IProviderManager.GetRemoteSearchResults``2(MediaBrowser.Controller.Providers.RemoteSearchQuery{``1},System.Threading.CancellationToken)": "MediaBrowser.Controller.Providers.IProviderManager.yml",

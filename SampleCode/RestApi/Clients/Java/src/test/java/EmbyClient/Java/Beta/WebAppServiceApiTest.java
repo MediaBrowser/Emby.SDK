@@ -66,4 +66,18 @@ public class WebAppServiceApiTest {
 
         // TODO: test validations
     }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getWebStringsetTest() throws Exception {
+        List<String> response = api.getWebStringset();
+
+        // TODO: test validations
+    }
 }

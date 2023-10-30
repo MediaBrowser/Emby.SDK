@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.56
+ * OpenAPI spec version: 4.8.0.57
  * 
  *
  * NOTE: This file is auto generated.
@@ -7236,6 +7236,9 @@ describe("WebAppServiceApi", () => {
   })
   test("getWebStrings", () => {
     return expect(instance.getWebStrings({})).resolves.toBe(null)
+  })
+  test("getWebStringset", () => {
+    return expect(instance.getWebStringset({})).resolves.toBe(null)
   })
 })
 

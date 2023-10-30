@@ -177,4 +177,39 @@ open class WebAppServiceAPI {
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
+    /**
+
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWebStringset(completion: @escaping ((_ data: [String]?,_ error: Error?) -> Void)) {
+        getWebStringsetWithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     - GET /web/stringset
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example=[ "", "" ]}]
+
+     - returns: RequestBuilder<[String]> 
+     */
+    open class func getWebStringsetWithRequestBuilder() -> RequestBuilder<[String]> {
+        let path = "/web/stringset"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<[String]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
 }

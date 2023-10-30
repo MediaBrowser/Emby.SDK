@@ -29,6 +29,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="notifierKey">notifierKey.</param>
         /// <param name="setupModuleUrl">setupModuleUrl.</param>
         /// <param name="serviceName">serviceName.</param>
+        /// <param name="pluginId">pluginId.</param>
         /// <param name="friendlyName">friendlyName.</param>
         /// <param name="id">id.</param>
         /// <param name="enabled">enabled.</param>
@@ -39,11 +40,12 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="userId">Notification intended for a specific user.</param>
         /// <param name="isSelfNotification">isSelfNotification.</param>
         /// <param name="options">This is for webhooks since this will cause xml serialization to fail.</param>
-        public UserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> deviceIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), bool? isSelfNotification = default(bool?), Dictionary<string, string> options = default(Dictionary<string, string>))
+        public UserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string pluginId = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> deviceIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), bool? isSelfNotification = default(bool?), Dictionary<string, string> options = default(Dictionary<string, string>))
         {
             this.NotifierKey = notifierKey;
             this.SetupModuleUrl = setupModuleUrl;
             this.ServiceName = serviceName;
+            this.PluginId = pluginId;
             this.FriendlyName = friendlyName;
             this.Id = id;
             this.Enabled = enabled;
@@ -73,6 +75,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="ServiceName", EmitDefaultValue=false)]
         public string ServiceName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PluginId
+        /// </summary>
+        [DataMember(Name="PluginId", EmitDefaultValue=false)]
+        public string PluginId { get; set; }
 
         /// <summary>
         /// Gets or Sets FriendlyName
@@ -148,6 +156,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  NotifierKey: ").Append(NotifierKey).Append("\n");
             sb.Append("  SetupModuleUrl: ").Append(SetupModuleUrl).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
+            sb.Append("  PluginId: ").Append(PluginId).Append("\n");
             sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
@@ -206,6 +215,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ServiceName == input.ServiceName ||
                     (this.ServiceName != null &&
                     this.ServiceName.Equals(input.ServiceName))
+                ) && 
+                (
+                    this.PluginId == input.PluginId ||
+                    (this.PluginId != null &&
+                    this.PluginId.Equals(input.PluginId))
                 ) && 
                 (
                     this.FriendlyName == input.FriendlyName ||
@@ -279,6 +293,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.SetupModuleUrl.GetHashCode();
                 if (this.ServiceName != null)
                     hashCode = hashCode * 59 + this.ServiceName.GetHashCode();
+                if (this.PluginId != null)
+                    hashCode = hashCode * 59 + this.PluginId.GetHashCode();
                 if (this.FriendlyName != null)
                     hashCode = hashCode * 59 + this.FriendlyName.GetHashCode();
                 if (this.Id != null)

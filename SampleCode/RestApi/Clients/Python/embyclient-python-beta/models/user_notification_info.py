@@ -25,6 +25,7 @@ class UserNotificationInfo(object):
         'notifier_key': 'str',
         'setup_module_url': 'str',
         'service_name': 'str',
+        'plugin_id': 'str',
         'friendly_name': 'str',
         'id': 'str',
         'enabled': 'bool',
@@ -41,6 +42,7 @@ class UserNotificationInfo(object):
         'notifier_key': 'NotifierKey',
         'setup_module_url': 'SetupModuleUrl',
         'service_name': 'ServiceName',
+        'plugin_id': 'PluginId',
         'friendly_name': 'FriendlyName',
         'id': 'Id',
         'enabled': 'Enabled',
@@ -53,11 +55,12 @@ class UserNotificationInfo(object):
         'options': 'Options'
     }
 
-    def __init__(self, notifier_key=None, setup_module_url=None, service_name=None, friendly_name=None, id=None, enabled=None, user_ids=None, device_ids=None, library_ids=None, event_ids=None, user_id=None, is_self_notification=None, options=None):  # noqa: E501
+    def __init__(self, notifier_key=None, setup_module_url=None, service_name=None, plugin_id=None, friendly_name=None, id=None, enabled=None, user_ids=None, device_ids=None, library_ids=None, event_ids=None, user_id=None, is_self_notification=None, options=None):  # noqa: E501
         """UserNotificationInfo - a model defined in Swagger"""  # noqa: E501
         self._notifier_key = None
         self._setup_module_url = None
         self._service_name = None
+        self._plugin_id = None
         self._friendly_name = None
         self._id = None
         self._enabled = None
@@ -75,6 +78,8 @@ class UserNotificationInfo(object):
             self.setup_module_url = setup_module_url
         if service_name is not None:
             self.service_name = service_name
+        if plugin_id is not None:
+            self.plugin_id = plugin_id
         if friendly_name is not None:
             self.friendly_name = friendly_name
         if id is not None:
@@ -158,6 +163,27 @@ class UserNotificationInfo(object):
         """
 
         self._service_name = service_name
+
+    @property
+    def plugin_id(self):
+        """Gets the plugin_id of this UserNotificationInfo.  # noqa: E501
+
+
+        :return: The plugin_id of this UserNotificationInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._plugin_id
+
+    @plugin_id.setter
+    def plugin_id(self, plugin_id):
+        """Sets the plugin_id of this UserNotificationInfo.
+
+
+        :param plugin_id: The plugin_id of this UserNotificationInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._plugin_id = plugin_id
 
     @property
     def friendly_name(self):

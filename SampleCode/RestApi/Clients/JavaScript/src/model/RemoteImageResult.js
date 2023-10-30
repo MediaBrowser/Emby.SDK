@@ -15,7 +15,7 @@ import RemoteImageInfo from './RemoteImageInfo';
 /**
 * The RemoteImageResult model module.
 * @module model/RemoteImageResult
-* @version 4.8.0.56
+* @version 4.8.0.57
 */
 export default class RemoteImageResult {
     /**

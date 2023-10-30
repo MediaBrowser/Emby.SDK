@@ -16,7 +16,7 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlayerStateInfo model module.
 * @module model/PlayerStateInfo
-* @version 4.8.0.56
+* @version 4.8.0.57
 */
 export default class PlayerStateInfo {
     /**

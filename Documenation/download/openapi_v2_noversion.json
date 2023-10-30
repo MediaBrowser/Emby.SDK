@@ -27478,6 +27478,54 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/web/stringset": {
+      "get": {
+        "tags": [
+          "WebAppService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "getWebStringset",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a String[] object.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Albums/{Id}/InstantMix": {
       "get": {
         "tags": [
@@ -64457,6 +64505,9 @@
           "type": "string"
         },
         "ServiceName": {
+          "type": "string"
+        },
+        "PluginId": {
           "type": "string"
         },
         "FriendlyName": {

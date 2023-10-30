@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.56"
+    "version": "4.8.0.57"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -27452,6 +27452,54 @@
         "responses": {
           "200": {
             "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/web/stringset": {
+      "get": {
+        "tags": [
+          "WebAppService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "getWebStringset",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a String[] object.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           },
           "400": {
             "$ref": "#/responses/400"
@@ -64459,6 +64507,9 @@
           "type": "string"
         },
         "ServiceName": {
+          "type": "string"
+        },
+        "PluginId": {
           "type": "string"
         },
         "FriendlyName": {

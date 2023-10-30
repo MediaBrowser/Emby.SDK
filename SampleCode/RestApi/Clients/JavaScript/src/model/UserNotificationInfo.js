@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserNotificationInfo model module.
 * @module model/UserNotificationInfo
-* @version 4.8.0.56
+* @version 4.8.0.57
 */
 export default class UserNotificationInfo {
     /**
@@ -49,6 +49,9 @@ export default class UserNotificationInfo {
             }
             if (data.hasOwnProperty('ServiceName')) {
                 obj['ServiceName'] = ApiClient.convertToType(data['ServiceName'], 'String');
+            }
+            if (data.hasOwnProperty('PluginId')) {
+                obj['PluginId'] = ApiClient.convertToType(data['PluginId'], 'String');
             }
             if (data.hasOwnProperty('FriendlyName')) {
                 obj['FriendlyName'] = ApiClient.convertToType(data['FriendlyName'], 'String');
@@ -96,6 +99,10 @@ export default class UserNotificationInfo {
     * @member {String} ServiceName
     */
     'ServiceName' = undefined;
+    /**
+    * @member {String} PluginId
+    */
+    'PluginId' = undefined;
     /**
     * @member {String} FriendlyName
     */

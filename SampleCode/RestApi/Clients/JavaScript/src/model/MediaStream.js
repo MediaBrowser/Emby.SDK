@@ -20,7 +20,7 @@ import SubtitleLocationType from './SubtitleLocationType';
 /**
 * The MediaStream model module.
 * @module model/MediaStream
-* @version 4.8.0.56
+* @version 4.8.0.57
 */
 export default class MediaStream {
     /**

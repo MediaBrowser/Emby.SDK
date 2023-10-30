@@ -14,6 +14,7 @@ public struct UserNotificationInfo: Codable {
     public var notifierKey: String?
     public var setupModuleUrl: String?
     public var serviceName: String?
+    public var pluginId: String?
     public var friendlyName: String?
     public var _id: String?
     public var enabled: Bool?
@@ -28,10 +29,11 @@ public struct UserNotificationInfo: Codable {
     /** This is for webhooks since this will cause xml serialization to fail */
     public var options: [String:String]?
 
-    public init(notifierKey: String? = nil, setupModuleUrl: String? = nil, serviceName: String? = nil, friendlyName: String? = nil, _id: String? = nil, enabled: Bool? = nil, userIds: [String]? = nil, deviceIds: [String]? = nil, libraryIds: [String]? = nil, eventIds: [String]? = nil, userId: String? = nil, isSelfNotification: Bool? = nil, options: [String:String]? = nil) {
+    public init(notifierKey: String? = nil, setupModuleUrl: String? = nil, serviceName: String? = nil, pluginId: String? = nil, friendlyName: String? = nil, _id: String? = nil, enabled: Bool? = nil, userIds: [String]? = nil, deviceIds: [String]? = nil, libraryIds: [String]? = nil, eventIds: [String]? = nil, userId: String? = nil, isSelfNotification: Bool? = nil, options: [String:String]? = nil) {
         self.notifierKey = notifierKey
         self.setupModuleUrl = setupModuleUrl
         self.serviceName = serviceName
+        self.pluginId = pluginId
         self.friendlyName = friendlyName
         self._id = _id
         self.enabled = enabled
@@ -48,6 +50,7 @@ public struct UserNotificationInfo: Codable {
         case notifierKey = "NotifierKey"
         case setupModuleUrl = "SetupModuleUrl"
         case serviceName = "ServiceName"
+        case pluginId = "PluginId"
         case friendlyName = "FriendlyName"
         case _id = "Id"
         case enabled = "Enabled"
