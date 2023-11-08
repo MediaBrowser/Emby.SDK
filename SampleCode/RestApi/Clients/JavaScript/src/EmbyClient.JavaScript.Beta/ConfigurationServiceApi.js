@@ -15,7 +15,7 @@ import ServerConfiguration from '../model/ServerConfiguration';
 /**
 * ConfigurationService service.
 * @module EmbyClient.JavaScript.Beta/ConfigurationServiceApi
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export default class ConfigurationServiceApi {
 

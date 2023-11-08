@@ -18,8 +18,10 @@ public struct UserAction: Codable {
     public var type: UserActionType?
     public var date: Date?
     public var positionTicks: Int64?
+    public var played: Bool?
+    public var isFavorite: Bool?
 
-    public init(_id: String? = nil, serverId: String? = nil, userId: String? = nil, itemId: String? = nil, type: UserActionType? = nil, date: Date? = nil, positionTicks: Int64? = nil) {
+    public init(_id: String? = nil, serverId: String? = nil, userId: String? = nil, itemId: String? = nil, type: UserActionType? = nil, date: Date? = nil, positionTicks: Int64? = nil, played: Bool? = nil, isFavorite: Bool? = nil) {
         self._id = _id
         self.serverId = serverId
         self.userId = userId
@@ -27,6 +29,8 @@ public struct UserAction: Codable {
         self.type = type
         self.date = date
         self.positionTicks = positionTicks
+        self.played = played
+        self.isFavorite = isFavorite
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -37,6 +41,8 @@ public struct UserAction: Codable {
         case type = "Type"
         case date = "Date"
         case positionTicks = "PositionTicks"
+        case played = "Played"
+        case isFavorite = "IsFavorite"
     }
 
 }

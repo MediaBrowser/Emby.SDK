@@ -17,4 +17,6 @@ type UserAction struct {
 	Type_ *UserActionType `json:"Type,omitempty"`
 	Date time.Time `json:"Date,omitempty"`
 	PositionTicks int64 `json:"PositionTicks,omitempty"`
+	Played bool `json:"Played,omitempty"`
+	IsFavorite bool `json:"IsFavorite,omitempty"`
 }

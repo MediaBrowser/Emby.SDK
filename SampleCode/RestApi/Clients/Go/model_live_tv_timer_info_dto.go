@@ -34,6 +34,7 @@ type LiveTvTimerInfoDto struct {
 	Name string `json:"Name,omitempty"`
 	// Description of the recording.
 	Overview string `json:"Overview,omitempty"`
+	ParentFolderId string `json:"ParentFolderId,omitempty"`
 	// The start date of the recording, in UTC.
 	StartDate time.Time `json:"StartDate,omitempty"`
 	// The end date of the recording, in UTC.

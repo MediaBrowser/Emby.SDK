@@ -48,6 +48,7 @@ class LiveTvSeriesTimerInfoDto(object):
         'program_id': 'str',
         'name': 'str',
         'overview': 'str',
+        'parent_folder_id': 'str',
         'start_date': 'datetime',
         'end_date': 'datetime',
         'priority': 'int',
@@ -87,6 +88,7 @@ class LiveTvSeriesTimerInfoDto(object):
         'program_id': 'ProgramId',
         'name': 'Name',
         'overview': 'Overview',
+        'parent_folder_id': 'ParentFolderId',
         'start_date': 'StartDate',
         'end_date': 'EndDate',
         'priority': 'Priority',
@@ -99,7 +101,7 @@ class LiveTvSeriesTimerInfoDto(object):
         'keep_until': 'KeepUntil'
     }
 
-    def __init__(self, record_any_time=None, skip_episodes_in_library=None, record_any_channel=None, keep_up_to=None, max_recording_seconds=None, record_new_only=None, channel_ids=None, days=None, image_tags=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, parent_primary_image_item_id=None, parent_primary_image_tag=None, series_id=None, keywords=None, timer_type=None, id=None, type=None, server_id=None, channel_id=None, channel_name=None, channel_number=None, channel_primary_image_tag=None, program_id=None, name=None, overview=None, start_date=None, end_date=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, is_post_padding_required=None, keep_until=None):  # noqa: E501
+    def __init__(self, record_any_time=None, skip_episodes_in_library=None, record_any_channel=None, keep_up_to=None, max_recording_seconds=None, record_new_only=None, channel_ids=None, days=None, image_tags=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, parent_primary_image_item_id=None, parent_primary_image_tag=None, series_id=None, keywords=None, timer_type=None, id=None, type=None, server_id=None, channel_id=None, channel_name=None, channel_number=None, channel_primary_image_tag=None, program_id=None, name=None, overview=None, parent_folder_id=None, start_date=None, end_date=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, is_post_padding_required=None, keep_until=None):  # noqa: E501
         """LiveTvSeriesTimerInfoDto - a model defined in Swagger"""  # noqa: E501
         self._record_any_time = None
         self._skip_episodes_in_library = None
@@ -127,6 +129,7 @@ class LiveTvSeriesTimerInfoDto(object):
         self._program_id = None
         self._name = None
         self._overview = None
+        self._parent_folder_id = None
         self._start_date = None
         self._end_date = None
         self._priority = None
@@ -190,6 +193,8 @@ class LiveTvSeriesTimerInfoDto(object):
             self.name = name
         if overview is not None:
             self.overview = overview
+        if parent_folder_id is not None:
+            self.parent_folder_id = parent_folder_id
         if start_date is not None:
             self.start_date = start_date
         if end_date is not None:
@@ -788,6 +793,27 @@ class LiveTvSeriesTimerInfoDto(object):
         """
 
         self._overview = overview
+
+    @property
+    def parent_folder_id(self):
+        """Gets the parent_folder_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+
+
+        :return: The parent_folder_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_folder_id
+
+    @parent_folder_id.setter
+    def parent_folder_id(self, parent_folder_id):
+        """Sets the parent_folder_id of this LiveTvSeriesTimerInfoDto.
+
+
+        :param parent_folder_id: The parent_folder_id of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_folder_id = parent_folder_id
 
     @property
     def start_date(self):

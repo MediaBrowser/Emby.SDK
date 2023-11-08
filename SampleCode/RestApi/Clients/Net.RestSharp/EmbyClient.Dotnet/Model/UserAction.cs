@@ -33,7 +33,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="type">type.</param>
         /// <param name="date">date.</param>
         /// <param name="positionTicks">positionTicks.</param>
-        public UserAction(string id = default(string), string serverId = default(string), string userId = default(string), string itemId = default(string), UserActionType type = default(UserActionType), DateTimeOffset? date = default(DateTimeOffset?), long? positionTicks = default(long?))
+        /// <param name="played">played.</param>
+        /// <param name="isFavorite">isFavorite.</param>
+        public UserAction(string id = default(string), string serverId = default(string), string userId = default(string), string itemId = default(string), UserActionType type = default(UserActionType), DateTimeOffset? date = default(DateTimeOffset?), long? positionTicks = default(long?), bool? played = default(bool?), bool? isFavorite = default(bool?))
         {
             this.Id = id;
             this.ServerId = serverId;
@@ -42,6 +44,8 @@ namespace EmbyClient.Dotnet.Model
             this.Type = type;
             this.Date = date;
             this.PositionTicks = positionTicks;
+            this.Played = played;
+            this.IsFavorite = isFavorite;
         }
         
         /// <summary>
@@ -87,6 +91,18 @@ namespace EmbyClient.Dotnet.Model
         public long? PositionTicks { get; set; }
 
         /// <summary>
+        /// Gets or Sets Played
+        /// </summary>
+        [DataMember(Name="Played", EmitDefaultValue=false)]
+        public bool? Played { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsFavorite
+        /// </summary>
+        [DataMember(Name="IsFavorite", EmitDefaultValue=false)]
+        public bool? IsFavorite { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,6 +117,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  PositionTicks: ").Append(PositionTicks).Append("\n");
+            sb.Append("  Played: ").Append(Played).Append("\n");
+            sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +187,16 @@ namespace EmbyClient.Dotnet.Model
                     this.PositionTicks == input.PositionTicks ||
                     (this.PositionTicks != null &&
                     this.PositionTicks.Equals(input.PositionTicks))
+                ) && 
+                (
+                    this.Played == input.Played ||
+                    (this.Played != null &&
+                    this.Played.Equals(input.Played))
+                ) && 
+                (
+                    this.IsFavorite == input.IsFavorite ||
+                    (this.IsFavorite != null &&
+                    this.IsFavorite.Equals(input.IsFavorite))
                 );
         }
 
@@ -195,6 +223,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Date.GetHashCode();
                 if (this.PositionTicks != null)
                     hashCode = hashCode * 59 + this.PositionTicks.GetHashCode();
+                if (this.Played != null)
+                    hashCode = hashCode * 59 + this.Played.GetHashCode();
+                if (this.IsFavorite != null)
+                    hashCode = hashCode * 59 + this.IsFavorite.GetHashCode();
                 return hashCode;
             }
         }

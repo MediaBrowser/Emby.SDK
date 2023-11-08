@@ -126,8 +126,10 @@ import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
 import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
 import LiveStreamRequest from './model/LiveStreamRequest';
 import LiveStreamResponse from './model/LiveStreamResponse';
+import LiveTVApiAvailableRecordingOptions from './model/LiveTVApiAvailableRecordingOptions';
 import LiveTVApiEpgRow from './model/LiveTVApiEpgRow';
 import LiveTVApiListingProviderTypeInfo from './model/LiveTVApiListingProviderTypeInfo';
+import LiveTVApiNameIdDescriptionPair from './model/LiveTVApiNameIdDescriptionPair';
 import LiveTVApiSetChannelDisabled from './model/LiveTVApiSetChannelDisabled';
 import LiveTVApiSetChannelMapping from './model/LiveTVApiSetChannelMapping';
 import LiveTVApiSetChannelSortIndex from './model/LiveTVApiSetChannelSortIndex';
@@ -414,7 +416,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export {
     /**
@@ -1120,6 +1122,12 @@ export {
     LiveStreamResponse,
 
     /**
+     * The LiveTVApiAvailableRecordingOptions model constructor.
+     * @property {module:model/LiveTVApiAvailableRecordingOptions}
+     */
+    LiveTVApiAvailableRecordingOptions,
+
+    /**
      * The LiveTVApiEpgRow model constructor.
      * @property {module:model/LiveTVApiEpgRow}
      */
@@ -1130,6 +1138,12 @@ export {
      * @property {module:model/LiveTVApiListingProviderTypeInfo}
      */
     LiveTVApiListingProviderTypeInfo,
+
+    /**
+     * The LiveTVApiNameIdDescriptionPair model constructor.
+     * @property {module:model/LiveTVApiNameIdDescriptionPair}
+     */
+    LiveTVApiNameIdDescriptionPair,
 
     /**
      * The LiveTVApiSetChannelDisabled model constructor.

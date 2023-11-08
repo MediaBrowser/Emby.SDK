@@ -15,6 +15,7 @@ type LiveTvSeriesTimerInfo struct {
 	// ChannelId of the recording.
 	ChannelId string `json:"ChannelId,omitempty"`
 	ChannelIds []string `json:"ChannelIds,omitempty"`
+	ParentFolderId int64 `json:"ParentFolderId,omitempty"`
 	// The program identifier.
 	ProgramId string `json:"ProgramId,omitempty"`
 	// Name of the recording.

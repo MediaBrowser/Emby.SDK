@@ -117,6 +117,12 @@ namespace Emby.ApiClient.Model
         public string Overview { get; set; }
 
         /// <summary>
+        /// Gets or Sets ParentFolderId
+        /// </summary>
+        /// <value>The ParentFolderId.</value>
+        public string ParentFolderId { get; set; }
+
+        /// <summary>
         /// The start date of the recording, in UTC.
         /// </summary>
         /// <value>The StartDate.</value>
@@ -199,6 +205,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Overview: ").Append(Overview).Append("\n");
+            sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -310,6 +317,11 @@ namespace Emby.ApiClient.Model
                     this.Overview.Equals(input.Overview))
                 ) && 
                 (
+                    this.ParentFolderId == input.ParentFolderId ||
+                    (this.ParentFolderId != null &&
+                    this.ParentFolderId.Equals(input.ParentFolderId))
+                ) && 
+                (
                     this.StartDate == input.StartDate ||
                     (this.StartDate != null &&
                     this.StartDate.Equals(input.StartDate))
@@ -401,6 +413,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Overview != null)
                     hashCode = hashCode * 59 + this.Overview.GetHashCode();
+                if (this.ParentFolderId != null)
+                    hashCode = hashCode * 59 + this.ParentFolderId.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)

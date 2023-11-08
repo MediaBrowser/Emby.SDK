@@ -25,6 +25,7 @@ class LiveTvSeriesTimerInfo(object):
         'id': 'str',
         'channel_id': 'str',
         'channel_ids': 'list[str]',
+        'parent_folder_id': 'int',
         'program_id': 'str',
         'name': 'str',
         'service_name': 'str',
@@ -53,6 +54,7 @@ class LiveTvSeriesTimerInfo(object):
         'id': 'Id',
         'channel_id': 'ChannelId',
         'channel_ids': 'ChannelIds',
+        'parent_folder_id': 'ParentFolderId',
         'program_id': 'ProgramId',
         'name': 'Name',
         'service_name': 'ServiceName',
@@ -77,11 +79,12 @@ class LiveTvSeriesTimerInfo(object):
         'timer_type': 'TimerType'
     }
 
-    def __init__(self, id=None, channel_id=None, channel_ids=None, program_id=None, name=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None):  # noqa: E501
+    def __init__(self, id=None, channel_id=None, channel_ids=None, parent_folder_id=None, program_id=None, name=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None):  # noqa: E501
         """LiveTvSeriesTimerInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._channel_id = None
         self._channel_ids = None
+        self._parent_folder_id = None
         self._program_id = None
         self._name = None
         self._service_name = None
@@ -111,6 +114,8 @@ class LiveTvSeriesTimerInfo(object):
             self.channel_id = channel_id
         if channel_ids is not None:
             self.channel_ids = channel_ids
+        if parent_folder_id is not None:
+            self.parent_folder_id = parent_folder_id
         if program_id is not None:
             self.program_id = program_id
         if name is not None:
@@ -222,6 +227,27 @@ class LiveTvSeriesTimerInfo(object):
         """
 
         self._channel_ids = channel_ids
+
+    @property
+    def parent_folder_id(self):
+        """Gets the parent_folder_id of this LiveTvSeriesTimerInfo.  # noqa: E501
+
+
+        :return: The parent_folder_id of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._parent_folder_id
+
+    @parent_folder_id.setter
+    def parent_folder_id(self, parent_folder_id):
+        """Sets the parent_folder_id of this LiveTvSeriesTimerInfo.
+
+
+        :param parent_folder_id: The parent_folder_id of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._parent_folder_id = parent_folder_id
 
     @property
     def program_id(self):

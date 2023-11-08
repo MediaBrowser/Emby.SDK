@@ -29,6 +29,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="id">Id of the recording..</param>
         /// <param name="channelId">ChannelId of the recording..</param>
         /// <param name="channelIds">channelIds.</param>
+        /// <param name="parentFolderId">parentFolderId.</param>
         /// <param name="programId">The program identifier..</param>
         /// <param name="name">Name of the recording..</param>
         /// <param name="serviceName">serviceName.</param>
@@ -51,11 +52,12 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="maxRecordingSeconds">maxRecordingSeconds.</param>
         /// <param name="keywords">keywords.</param>
         /// <param name="timerType">timerType.</param>
-        public LiveTvSeriesTimerInfo(string id = default(string), string channelId = default(string), List<string> channelIds = default(List<string>), string programId = default(string), string name = default(string), string serviceName = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? recordAnyTime = default(bool?), int? keepUpTo = default(int?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil), bool? skipEpisodesInLibrary = default(bool?), bool? recordNewOnly = default(bool?), List<DayOfWeek> days = default(List<DayOfWeek>), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), bool? isPostPaddingRequired = default(bool?), string seriesId = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? maxRecordingSeconds = default(int?), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType))
+        public LiveTvSeriesTimerInfo(string id = default(string), string channelId = default(string), List<string> channelIds = default(List<string>), long? parentFolderId = default(long?), string programId = default(string), string name = default(string), string serviceName = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? recordAnyTime = default(bool?), int? keepUpTo = default(int?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil), bool? skipEpisodesInLibrary = default(bool?), bool? recordNewOnly = default(bool?), List<DayOfWeek> days = default(List<DayOfWeek>), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), bool? isPostPaddingRequired = default(bool?), string seriesId = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? maxRecordingSeconds = default(int?), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType))
         {
             this.Id = id;
             this.ChannelId = channelId;
             this.ChannelIds = channelIds;
+            this.ParentFolderId = parentFolderId;
             this.ProgramId = programId;
             this.Name = name;
             this.ServiceName = serviceName;
@@ -99,6 +101,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="ChannelIds", EmitDefaultValue=false)]
         public List<string> ChannelIds { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ParentFolderId
+        /// </summary>
+        [DataMember(Name="ParentFolderId", EmitDefaultValue=false)]
+        public long? ParentFolderId { get; set; }
 
         /// <summary>
         /// The program identifier.
@@ -257,6 +265,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  ChannelIds: ").Append(ChannelIds).Append("\n");
+            sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
@@ -328,6 +337,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ChannelIds != null &&
                     input.ChannelIds != null &&
                     this.ChannelIds.SequenceEqual(input.ChannelIds)
+                ) && 
+                (
+                    this.ParentFolderId == input.ParentFolderId ||
+                    (this.ParentFolderId != null &&
+                    this.ParentFolderId.Equals(input.ParentFolderId))
                 ) && 
                 (
                     this.ProgramId == input.ProgramId ||
@@ -458,6 +472,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ChannelId.GetHashCode();
                 if (this.ChannelIds != null)
                     hashCode = hashCode * 59 + this.ChannelIds.GetHashCode();
+                if (this.ParentFolderId != null)
+                    hashCode = hashCode * 59 + this.ParentFolderId.GetHashCode();
                 if (this.ProgramId != null)
                     hashCode = hashCode * 59 + this.ProgramId.GetHashCode();
                 if (this.Name != null)

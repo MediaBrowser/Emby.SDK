@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.57"
+    "version": "4.8.0.58"
   },
   "servers": [
     {
@@ -36773,6 +36773,58 @@
               "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/LiveTv.GuideInfo"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/LiveTv/AvailableRecordingOptions": {
+      "summary": "Gets available recording options",
+      "get": {
+        "tags": [
+          "LiveTvService"
+        ],
+        "summary": "Gets available recording options",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvAvailablerecordingoptions",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a AvailableRecordingOptions object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiveTV.Api.AvailableRecordingOptions"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiveTV.Api.AvailableRecordingOptions"
                 }
               }
             }
@@ -82336,6 +82388,9 @@
             "type": "string",
             "description": "Description of the recording."
           },
+          "ParentFolderId": {
+            "type": "string"
+          },
           "StartDate": {
             "type": "string",
             "description": "The start date of the recording, in UTC.",
@@ -82522,6 +82577,9 @@
             "type": "string",
             "description": "Description of the recording."
           },
+          "ParentFolderId": {
+            "type": "string"
+          },
           "StartDate": {
             "type": "string",
             "description": "The start date of the recording, in UTC.",
@@ -82601,6 +82659,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "ParentFolderId": {
+            "type": "integer",
+            "format": "int64"
           },
           "ProgramId": {
             "type": "string",
@@ -82713,6 +82775,47 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.LiveTv.GuideInfo"
+      },
+      "LiveTV.Api.AvailableRecordingOptions": {
+        "type": "object",
+        "properties": {
+          "RecordingFolders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LiveTV.Api.NameIdDescriptionPair"
+            }
+          },
+          "MovieRecordingFolders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LiveTV.Api.NameIdDescriptionPair"
+            }
+          },
+          "SeriesRecordingFolders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LiveTV.Api.NameIdDescriptionPair"
+            }
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.LiveTV.Api.AvailableRecordingOptions"
+      },
+      "LiveTV.Api.NameIdDescriptionPair": {
+        "type": "object",
+        "properties": {
+          "ShortOverview": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "Id": {
+            "type": "string",
+            "description": "The identifier."
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.LiveTV.Api.NameIdDescriptionPair"
       },
       "ParentalRating": {
         "type": "object",
@@ -83499,13 +83602,23 @@
             "type": "integer",
             "format": "int64",
             "nullable": true
+          },
+          "Played": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsFavorite": {
+            "type": "boolean",
+            "nullable": true
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Users.UserAction"
       },
       "UserActionType": {
         "enum": [
-          "PlayedItem"
+          "PlayedItem",
+          "MarkPlayed",
+          "MarkFavorite"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Users.UserActionType"

@@ -15,7 +15,7 @@ import UserActionType from './UserActionType';
 /**
 * The UserAction model module.
 * @module model/UserAction
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export default class UserAction {
     /**
@@ -63,6 +63,12 @@ export default class UserAction {
             if (data.hasOwnProperty('PositionTicks')) {
                 obj['PositionTicks'] = ApiClient.convertToType(data['PositionTicks'], 'Number');
             }
+            if (data.hasOwnProperty('Played')) {
+                obj['Played'] = ApiClient.convertToType(data['Played'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsFavorite')) {
+                obj['IsFavorite'] = ApiClient.convertToType(data['IsFavorite'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -95,6 +101,14 @@ export default class UserAction {
     * @member {Number} PositionTicks
     */
     'PositionTicks' = undefined;
+    /**
+    * @member {Boolean} Played
+    */
+    'Played' = undefined;
+    /**
+    * @member {Boolean} IsFavorite
+    */
+    'IsFavorite' = undefined;
 
 
 

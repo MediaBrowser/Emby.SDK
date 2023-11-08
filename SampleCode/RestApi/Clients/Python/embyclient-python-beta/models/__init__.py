@@ -124,8 +124,10 @@ from embyclient-python-beta.models.library_update_media_path import LibraryUpdat
 from embyclient-python-beta.models.library_user_copy_options import LibraryUserCopyOptions
 from embyclient-python-beta.models.live_stream_request import LiveStreamRequest
 from embyclient-python-beta.models.live_stream_response import LiveStreamResponse
+from embyclient-python-beta.models.live_tv_api_available_recording_options import LiveTVApiAvailableRecordingOptions
 from embyclient-python-beta.models.live_tv_api_epg_row import LiveTVApiEpgRow
 from embyclient-python-beta.models.live_tv_api_listing_provider_type_info import LiveTVApiListingProviderTypeInfo
+from embyclient-python-beta.models.live_tv_api_name_id_description_pair import LiveTVApiNameIdDescriptionPair
 from embyclient-python-beta.models.live_tv_api_set_channel_disabled import LiveTVApiSetChannelDisabled
 from embyclient-python-beta.models.live_tv_api_set_channel_mapping import LiveTVApiSetChannelMapping
 from embyclient-python-beta.models.live_tv_api_set_channel_sort_index import LiveTVApiSetChannelSortIndex

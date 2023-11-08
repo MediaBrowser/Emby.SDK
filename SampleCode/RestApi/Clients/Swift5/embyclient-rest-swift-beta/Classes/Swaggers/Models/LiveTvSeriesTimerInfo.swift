@@ -16,6 +16,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
     /** ChannelId of the recording. */
     public var channelId: String?
     public var channelIds: [String]?
+    public var parentFolderId: Int64?
     /** The program identifier. */
     public var programId: String?
     /** Name of the recording. */
@@ -53,10 +54,11 @@ public struct LiveTvSeriesTimerInfo: Codable {
     public var keywords: [LiveTvKeywordInfo]?
     public var timerType: LiveTvTimerType?
 
-    public init(_id: String? = nil, channelId: String? = nil, channelIds: [String]? = nil, programId: String? = nil, name: String? = nil, serviceName: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, recordAnyTime: Bool? = nil, keepUpTo: Int? = nil, keepUntil: LiveTvKeepUntil? = nil, skipEpisodesInLibrary: Bool? = nil, recordNewOnly: Bool? = nil, days: [DayOfWeek]? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, isPostPaddingRequired: Bool? = nil, seriesId: String? = nil, providerIds: ProviderIdDictionary? = nil, maxRecordingSeconds: Int? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil) {
+    public init(_id: String? = nil, channelId: String? = nil, channelIds: [String]? = nil, parentFolderId: Int64? = nil, programId: String? = nil, name: String? = nil, serviceName: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, recordAnyTime: Bool? = nil, keepUpTo: Int? = nil, keepUntil: LiveTvKeepUntil? = nil, skipEpisodesInLibrary: Bool? = nil, recordNewOnly: Bool? = nil, days: [DayOfWeek]? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, isPostPaddingRequired: Bool? = nil, seriesId: String? = nil, providerIds: ProviderIdDictionary? = nil, maxRecordingSeconds: Int? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil) {
         self._id = _id
         self.channelId = channelId
         self.channelIds = channelIds
+        self.parentFolderId = parentFolderId
         self.programId = programId
         self.name = name
         self.serviceName = serviceName
@@ -85,6 +87,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
         case _id = "Id"
         case channelId = "ChannelId"
         case channelIds = "ChannelIds"
+        case parentFolderId = "ParentFolderId"
         case programId = "ProgramId"
         case name = "Name"
         case serviceName = "ServiceName"

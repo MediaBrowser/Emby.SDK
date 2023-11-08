@@ -19,7 +19,9 @@ import com.google.gson.stream.JsonWriter;
  */
 @JsonAdapter(UserActionType.Adapter.class)
 public enum UserActionType {
-  PLAYEDITEM("PlayedItem");
+  PLAYEDITEM("PlayedItem"),
+  MARKPLAYED("MarkPlayed"),
+  MARKFAVORITE("MarkFavorite");
 
   private String value;
 

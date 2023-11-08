@@ -225,6 +225,22 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets available recording options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <returns>Task of ApiResponse (LiveTVApiAvailableRecordingOptions)</returns>
+        public async Task<RestResponse<LiveTVApiAvailableRecordingOptions>> GetLivetvAvailablerecordingoptions ()
+        {
+            var request = new RestRequest("/LiveTv/AvailableRecordingOptions", Method.Get);
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<LiveTVApiAvailableRecordingOptions>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <remarks>

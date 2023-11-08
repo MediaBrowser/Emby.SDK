@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.57"
+    "version": "4.8.0.58"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -24196,6 +24196,53 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets guide info"
+    },
+    "/LiveTv/AvailableRecordingOptions": {
+      "get": {
+        "tags": [
+          "LiveTvService"
+        ],
+        "summary": "Gets available recording options",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvAvailablerecordingoptions",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a AvailableRecordingOptions object.",
+            "schema": {
+              "$ref": "#/definitions/LiveTV.Api.AvailableRecordingOptions"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets available recording options"
     },
     "/Localization/ParentalRatings": {
       "get": {
@@ -59758,6 +59805,9 @@
           "description": "Description of the recording.",
           "type": "string"
         },
+        "ParentFolderId": {
+          "type": "string"
+        },
         "StartDate": {
           "format": "date-time",
           "description": "The start date of the recording, in UTC.",
@@ -59945,6 +59995,9 @@
           "description": "Description of the recording.",
           "type": "string"
         },
+        "ParentFolderId": {
+          "type": "string"
+        },
         "StartDate": {
           "format": "date-time",
           "description": "The start date of the recording, in UTC.",
@@ -60023,6 +60076,10 @@
           "items": {
             "type": "string"
           }
+        },
+        "ParentFolderId": {
+          "format": "int64",
+          "type": "integer"
         },
         "ProgramId": {
           "description": "The program identifier.",
@@ -60135,6 +60192,47 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.LiveTv.GuideInfo"
+    },
+    "LiveTV.Api.AvailableRecordingOptions": {
+      "type": "object",
+      "properties": {
+        "RecordingFolders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LiveTV.Api.NameIdDescriptionPair"
+          }
+        },
+        "MovieRecordingFolders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LiveTV.Api.NameIdDescriptionPair"
+          }
+        },
+        "SeriesRecordingFolders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LiveTV.Api.NameIdDescriptionPair"
+          }
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.AvailableRecordingOptions"
+    },
+    "LiveTV.Api.NameIdDescriptionPair": {
+      "type": "object",
+      "properties": {
+        "ShortOverview": {
+          "type": "string"
+        },
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "Id": {
+          "description": "The identifier.",
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.NameIdDescriptionPair"
     },
     "ParentalRating": {
       "description": "Class ParentalRating\r\n",
@@ -60908,13 +61006,21 @@
         "PositionTicks": {
           "format": "int64",
           "type": "integer"
+        },
+        "Played": {
+          "type": "boolean"
+        },
+        "IsFavorite": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Users.UserAction"
     },
     "UserActionType": {
       "enum": [
-        "PlayedItem"
+        "PlayedItem",
+        "MarkPlayed",
+        "MarkFavorite"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Users.UserActionType"

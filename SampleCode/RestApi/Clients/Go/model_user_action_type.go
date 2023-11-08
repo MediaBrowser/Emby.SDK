@@ -11,4 +11,6 @@ type UserActionType string
 // List of UserActionType
 const (
 	PLAYED_ITEM_UserActionType UserActionType = "PlayedItem"
+	MARK_PLAYED_UserActionType UserActionType = "MarkPlayed"
+	MARK_FAVORITE_UserActionType UserActionType = "MarkFavorite"
 )

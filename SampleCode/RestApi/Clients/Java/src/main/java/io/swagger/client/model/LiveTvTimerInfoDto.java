@@ -72,6 +72,9 @@ public class LiveTvTimerInfoDto {
   @SerializedName("Overview")
   private String overview = null;
 
+  @SerializedName("ParentFolderId")
+  private String parentFolderId = null;
+
   @SerializedName("StartDate")
   private OffsetDateTime startDate = null;
 
@@ -372,6 +375,24 @@ public class LiveTvTimerInfoDto {
     this.overview = overview;
   }
 
+  public LiveTvTimerInfoDto parentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+    return this;
+  }
+
+   /**
+   * Get parentFolderId
+   * @return parentFolderId
+  **/
+  @Schema(description = "")
+  public String getParentFolderId() {
+    return parentFolderId;
+  }
+
+  public void setParentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+  }
+
   public LiveTvTimerInfoDto startDate(OffsetDateTime startDate) {
     this.startDate = startDate;
     return this;
@@ -585,6 +606,7 @@ public class LiveTvTimerInfoDto {
         Objects.equals(this.programId, liveTvTimerInfoDto.programId) &&
         Objects.equals(this.name, liveTvTimerInfoDto.name) &&
         Objects.equals(this.overview, liveTvTimerInfoDto.overview) &&
+        Objects.equals(this.parentFolderId, liveTvTimerInfoDto.parentFolderId) &&
         Objects.equals(this.startDate, liveTvTimerInfoDto.startDate) &&
         Objects.equals(this.endDate, liveTvTimerInfoDto.endDate) &&
         Objects.equals(this.priority, liveTvTimerInfoDto.priority) &&
@@ -599,7 +621,7 @@ public class LiveTvTimerInfoDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, seriesTimerId, runTimeTicks, programInfo, timerType, id, type, serverId, channelId, channelName, channelNumber, channelPrimaryImageTag, programId, name, overview, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
+    return Objects.hash(status, seriesTimerId, runTimeTicks, programInfo, timerType, id, type, serverId, channelId, channelName, channelNumber, channelPrimaryImageTag, programId, name, overview, parentFolderId, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
   }
 
 
@@ -623,6 +645,7 @@ public class LiveTvTimerInfoDto {
     sb.append("    programId: ").append(toIndentedString(programId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    overview: ").append(toIndentedString(overview)).append("\n");
+    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");

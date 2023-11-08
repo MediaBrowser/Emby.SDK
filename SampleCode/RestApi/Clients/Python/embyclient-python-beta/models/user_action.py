@@ -28,7 +28,9 @@ class UserAction(object):
         'item_id': 'str',
         'type': 'UserActionType',
         '_date': 'datetime',
-        'position_ticks': 'int'
+        'position_ticks': 'int',
+        'played': 'bool',
+        'is_favorite': 'bool'
     }
 
     attribute_map = {
@@ -38,10 +40,12 @@ class UserAction(object):
         'item_id': 'ItemId',
         'type': 'Type',
         '_date': 'Date',
-        'position_ticks': 'PositionTicks'
+        'position_ticks': 'PositionTicks',
+        'played': 'Played',
+        'is_favorite': 'IsFavorite'
     }
 
-    def __init__(self, id=None, server_id=None, user_id=None, item_id=None, type=None, _date=None, position_ticks=None):  # noqa: E501
+    def __init__(self, id=None, server_id=None, user_id=None, item_id=None, type=None, _date=None, position_ticks=None, played=None, is_favorite=None):  # noqa: E501
         """UserAction - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._server_id = None
@@ -50,6 +54,8 @@ class UserAction(object):
         self._type = None
         self.__date = None
         self._position_ticks = None
+        self._played = None
+        self._is_favorite = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -65,6 +71,10 @@ class UserAction(object):
             self._date = _date
         if position_ticks is not None:
             self.position_ticks = position_ticks
+        if played is not None:
+            self.played = played
+        if is_favorite is not None:
+            self.is_favorite = is_favorite
 
     @property
     def id(self):
@@ -212,6 +222,48 @@ class UserAction(object):
         """
 
         self._position_ticks = position_ticks
+
+    @property
+    def played(self):
+        """Gets the played of this UserAction.  # noqa: E501
+
+
+        :return: The played of this UserAction.  # noqa: E501
+        :rtype: bool
+        """
+        return self._played
+
+    @played.setter
+    def played(self, played):
+        """Sets the played of this UserAction.
+
+
+        :param played: The played of this UserAction.  # noqa: E501
+        :type: bool
+        """
+
+        self._played = played
+
+    @property
+    def is_favorite(self):
+        """Gets the is_favorite of this UserAction.  # noqa: E501
+
+
+        :return: The is_favorite of this UserAction.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_favorite
+
+    @is_favorite.setter
+    def is_favorite(self, is_favorite):
+        """Sets the is_favorite of this UserAction.
+
+
+        :param is_favorite: The is_favorite of this UserAction.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_favorite = is_favorite
 
     def to_dict(self):
         """Returns the model properties as a dict"""

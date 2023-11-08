@@ -18,7 +18,7 @@ import LiveTvTimerType from './LiveTvTimerType';
 /**
 * The LiveTvTimerInfoDto model module.
 * @module model/LiveTvTimerInfoDto
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export default class LiveTvTimerInfoDto {
     /**
@@ -89,6 +89,9 @@ export default class LiveTvTimerInfoDto {
             }
             if (data.hasOwnProperty('Overview')) {
                 obj['Overview'] = ApiClient.convertToType(data['Overview'], 'String');
+            }
+            if (data.hasOwnProperty('ParentFolderId')) {
+                obj['ParentFolderId'] = ApiClient.convertToType(data['ParentFolderId'], 'String');
             }
             if (data.hasOwnProperty('StartDate')) {
                 obj['StartDate'] = ApiClient.convertToType(data['StartDate'], 'Date');
@@ -193,6 +196,10 @@ export default class LiveTvTimerInfoDto {
     * @member {String} Overview
     */
     'Overview' = undefined;
+    /**
+    * @member {String} ParentFolderId
+    */
+    'ParentFolderId' = undefined;
     /**
     * The start date of the recording, in UTC.
     * @member {Date} StartDate

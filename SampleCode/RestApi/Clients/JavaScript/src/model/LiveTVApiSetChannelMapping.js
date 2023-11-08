@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTVApiSetChannelMapping model module.
 * @module model/LiveTVApiSetChannelMapping
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export default class LiveTVApiSetChannelMapping {
     /**

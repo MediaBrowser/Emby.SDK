@@ -17,7 +17,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * PlaylistService service.
 * @module EmbyClient.JavaScript.Beta/PlaylistServiceApi
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export default class PlaylistServiceApi {
 

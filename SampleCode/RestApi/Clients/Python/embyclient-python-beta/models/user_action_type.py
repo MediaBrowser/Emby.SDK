@@ -19,6 +19,8 @@ class UserActionType(object):
     allowed enum values
     """
     PLAYEDITEM = "PlayedItem"
+    MARKPLAYED = "MarkPlayed"
+    MARKFAVORITE = "MarkFavorite"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

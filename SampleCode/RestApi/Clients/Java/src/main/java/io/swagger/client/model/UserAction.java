@@ -43,6 +43,12 @@ public class UserAction {
   @SerializedName("PositionTicks")
   private Long positionTicks = null;
 
+  @SerializedName("Played")
+  private Boolean played = null;
+
+  @SerializedName("IsFavorite")
+  private Boolean isFavorite = null;
+
   public UserAction id(String id) {
     this.id = id;
     return this;
@@ -169,6 +175,42 @@ public class UserAction {
     this.positionTicks = positionTicks;
   }
 
+  public UserAction played(Boolean played) {
+    this.played = played;
+    return this;
+  }
+
+   /**
+   * Get played
+   * @return played
+  **/
+  @Schema(description = "")
+  public Boolean isPlayed() {
+    return played;
+  }
+
+  public void setPlayed(Boolean played) {
+    this.played = played;
+  }
+
+  public UserAction isFavorite(Boolean isFavorite) {
+    this.isFavorite = isFavorite;
+    return this;
+  }
+
+   /**
+   * Get isFavorite
+   * @return isFavorite
+  **/
+  @Schema(description = "")
+  public Boolean isIsFavorite() {
+    return isFavorite;
+  }
+
+  public void setIsFavorite(Boolean isFavorite) {
+    this.isFavorite = isFavorite;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -185,12 +227,14 @@ public class UserAction {
         Objects.equals(this.itemId, userAction.itemId) &&
         Objects.equals(this.type, userAction.type) &&
         Objects.equals(this.date, userAction.date) &&
-        Objects.equals(this.positionTicks, userAction.positionTicks);
+        Objects.equals(this.positionTicks, userAction.positionTicks) &&
+        Objects.equals(this.played, userAction.played) &&
+        Objects.equals(this.isFavorite, userAction.isFavorite);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, serverId, userId, itemId, type, date, positionTicks);
+    return Objects.hash(id, serverId, userId, itemId, type, date, positionTicks, played, isFavorite);
   }
 
 
@@ -206,6 +250,8 @@ public class UserAction {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    positionTicks: ").append(toIndentedString(positionTicks)).append("\n");
+    sb.append("    played: ").append(toIndentedString(played)).append("\n");
+    sb.append("    isFavorite: ").append(toIndentedString(isFavorite)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -10,4 +10,6 @@ import Foundation
 
 public enum UserActionType: String, Codable {
     case playedItem = "PlayedItem"
+    case markPlayed = "MarkPlayed"
+    case markFavorite = "MarkFavorite"
 }

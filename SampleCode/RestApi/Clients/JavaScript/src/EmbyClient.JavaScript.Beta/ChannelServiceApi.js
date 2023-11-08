@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ChannelService service.
 * @module EmbyClient.JavaScript.Beta/ChannelServiceApi
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export default class ChannelServiceApi {
 

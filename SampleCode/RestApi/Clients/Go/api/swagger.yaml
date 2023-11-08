@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.57
+  version: 4.8.0.58
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -30848,6 +30848,39 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/LiveTv.GuideInfo'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /LiveTv/AvailableRecordingOptions:
+    summary: Gets available recording options
+    get:
+      tags:
+      - LiveTvService
+      summary: Gets available recording options
+      description: Requires authentication as user
+      operationId: getLivetvAvailablerecordingoptions
+      responses:
+        "200":
+          description: Operation successful. Returning a AvailableRecordingOptions
+            object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LiveTV.Api.AvailableRecordingOptions'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/LiveTV.Api.AvailableRecordingOptions'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -71012,6 +71045,7 @@ components:
           PostPaddingSeconds: 5
           ProgramId: ProgramId
           EndDate: 2000-01-23T04:56:07.000+00:00
+          ParentFolderId: ParentFolderId
           Type: Type
           ChannelName: ChannelName
           ParentBackdropImageTags:
@@ -71573,6 +71607,7 @@ components:
           PostPaddingSeconds: 5
           ProgramId: ProgramId
           EndDate: 2000-01-23T04:56:07.000+00:00
+          ParentFolderId: ParentFolderId
           Type: Type
           ChannelName: ChannelName
           ParentBackdropImageTags:
@@ -71624,6 +71659,8 @@ components:
         Overview:
           type: string
           description: Description of the recording.
+        ParentFolderId:
+          type: string
         StartDate:
           type: string
           description: "The start date of the recording, in UTC."
@@ -72216,6 +72253,7 @@ components:
         PostPaddingSeconds: 5
         ProgramId: ProgramId
         EndDate: 2000-01-23T04:56:07.000+00:00
+        ParentFolderId: ParentFolderId
         Type: Type
         ChannelName: ChannelName
         ParentBackdropImageTags:
@@ -72285,6 +72323,7 @@ components:
           - ChannelIds
           ImageTags:
             key: ImageTags
+          ParentFolderId: ParentFolderId
           ParentThumbItemId: ParentThumbItemId
           Type: Type
           ChannelName: ChannelName
@@ -72332,6 +72371,7 @@ components:
           - ChannelIds
           ImageTags:
             key: ImageTags
+          ParentFolderId: ParentFolderId
           ParentThumbItemId: ParentThumbItemId
           Type: Type
           ChannelName: ChannelName
@@ -72420,6 +72460,8 @@ components:
         Overview:
           type: string
           description: Description of the recording.
+        ParentFolderId:
+          type: string
         StartDate:
           type: string
           description: "The start date of the recording, in UTC."
@@ -72499,6 +72541,7 @@ components:
         - ChannelIds
         ImageTags:
           key: ImageTags
+        ParentFolderId: ParentFolderId
         ParentThumbItemId: ParentThumbItemId
         Type: Type
         ChannelName: ChannelName
@@ -72531,6 +72574,9 @@ components:
           type: array
           items:
             type: string
+        ParentFolderId:
+          type: integer
+          format: int64
         ProgramId:
           type: string
           description: The program identifier.
@@ -72616,6 +72662,52 @@ components:
         StartDate: 2000-01-23T04:56:07.000+00:00
         EndDate: 2000-01-23T04:56:07.000+00:00
       x-internal-ref-name: MediaBrowser.Model.LiveTv.GuideInfo
+    LiveTV.Api.AvailableRecordingOptions:
+      type: object
+      properties:
+        RecordingFolders:
+          type: array
+          items:
+            $ref: '#/components/schemas/LiveTV.Api.NameIdDescriptionPair'
+        MovieRecordingFolders:
+          type: array
+          items:
+            $ref: '#/components/schemas/LiveTV.Api.NameIdDescriptionPair'
+        SeriesRecordingFolders:
+          type: array
+          items:
+            $ref: '#/components/schemas/LiveTV.Api.NameIdDescriptionPair'
+      example:
+        MovieRecordingFolders:
+        - null
+        - null
+        RecordingFolders:
+        - Id: Id
+          ShortOverview: ShortOverview
+          Name: Name
+        - Id: Id
+          ShortOverview: ShortOverview
+          Name: Name
+        SeriesRecordingFolders:
+        - null
+        - null
+      x-internal-ref-name: MediaBrowser.LiveTV.Api.AvailableRecordingOptions
+    LiveTV.Api.NameIdDescriptionPair:
+      type: object
+      properties:
+        ShortOverview:
+          type: string
+        Name:
+          type: string
+          description: The name.
+        Id:
+          type: string
+          description: The identifier.
+      example:
+        Id: Id
+        ShortOverview: ShortOverview
+        Name: Name
+      x-internal-ref-name: MediaBrowser.LiveTV.Api.NameIdDescriptionPair
     ParentalRating:
       type: object
       properties:
@@ -75363,11 +75455,19 @@ components:
           type: integer
           format: int64
           nullable: true
+        Played:
+          type: boolean
+          nullable: true
+        IsFavorite:
+          type: boolean
+          nullable: true
       x-internal-ref-name: MediaBrowser.Model.Users.UserAction
     UserActionType:
       type: string
       enum:
       - PlayedItem
+      - MarkPlayed
+      - MarkFavorite
       x-internal-ref-name: MediaBrowser.Model.Users.UserActionType
     SyncDataRequest:
       type: object

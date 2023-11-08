@@ -7,6 +7,7 @@ package EmbyClient.Java.Beta;
 
 import io.swagger.client.model.ApiBaseItemsRequest;
 import io.swagger.client.model.BaseItemDto;
+import io.swagger.client.model.LiveTVApiAvailableRecordingOptions;
 import io.swagger.client.model.LiveTVApiListingProviderTypeInfo;
 import io.swagger.client.model.LiveTVApiSetChannelDisabled;
 import io.swagger.client.model.LiveTVApiSetChannelMapping;
@@ -148,6 +149,20 @@ public class LiveTvServiceApiTest {
     public void deleteLivetvTunerhostsTest() throws Exception {
         String id = null;
         api.deleteLivetvTunerhosts(id);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets available recording options
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getLivetvAvailablerecordingoptionsTest() throws Exception {
+        LiveTVApiAvailableRecordingOptions response = api.getLivetvAvailablerecordingoptions();
 
         // TODO: test validations
     }

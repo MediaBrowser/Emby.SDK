@@ -322,6 +322,55 @@ open class LiveTvServiceAPI {
         return requestBuilder.init(method: "DELETE", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets available recording options
+
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLivetvAvailablerecordingoptions(completion: @escaping ((_ data: LiveTVApiAvailableRecordingOptions?,_ error: Error?) -> Void)) {
+        getLivetvAvailablerecordingoptionsWithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets available recording options
+     - GET /LiveTv/AvailableRecordingOptions
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "MovieRecordingFolders" : [ null, null ],
+  "RecordingFolders" : [ {
+    "Id" : "Id",
+    "ShortOverview" : "ShortOverview",
+    "Name" : "Name"
+  }, {
+    "Id" : "Id",
+    "ShortOverview" : "ShortOverview",
+    "Name" : "Name"
+  } ],
+  "SeriesRecordingFolders" : [ null, null ]
+}}]
+
+     - returns: RequestBuilder<LiveTVApiAvailableRecordingOptions> 
+     */
+    open class func getLivetvAvailablerecordingoptionsWithRequestBuilder() -> RequestBuilder<LiveTVApiAvailableRecordingOptions> {
+        let path = "/LiveTv/AvailableRecordingOptions"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<LiveTVApiAvailableRecordingOptions>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
 
      - parameter providerId: (query) Provider id 
      - parameter completion: completion handler to receive the data and the error objects
@@ -12268,6 +12317,7 @@ open class LiveTvServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
+    "ParentFolderId" : "ParentFolderId",
     "ParentThumbItemId" : "ParentThumbItemId",
     "Type" : "Type",
     "ChannelName" : "ChannelName",
@@ -12313,6 +12363,7 @@ open class LiveTvServiceAPI {
     "ImageTags" : {
       "key" : "ImageTags"
     },
+    "ParentFolderId" : "ParentFolderId",
     "ParentThumbItemId" : "ParentThumbItemId",
     "Type" : "Type",
     "ChannelName" : "ChannelName",
@@ -12903,6 +12954,7 @@ open class LiveTvServiceAPI {
   "PostPaddingSeconds" : 5,
   "ProgramId" : "ProgramId",
   "EndDate" : "2000-01-23T04:56:07.000+00:00",
+  "ParentFolderId" : "ParentFolderId",
   "Type" : "Type",
   "ChannelName" : "ChannelName",
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -13489,6 +13541,7 @@ open class LiveTvServiceAPI {
     "PostPaddingSeconds" : 5,
     "ProgramId" : "ProgramId",
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "ParentFolderId" : "ParentFolderId",
     "Type" : "Type",
     "ChannelName" : "ChannelName",
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -14030,6 +14083,7 @@ open class LiveTvServiceAPI {
     "PostPaddingSeconds" : 5,
     "ProgramId" : "ProgramId",
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "ParentFolderId" : "ParentFolderId",
     "Type" : "Type",
     "ChannelName" : "ChannelName",
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -14616,6 +14670,7 @@ open class LiveTvServiceAPI {
   "PostPaddingSeconds" : 5,
   "ProgramId" : "ProgramId",
   "EndDate" : "2000-01-23T04:56:07.000+00:00",
+  "ParentFolderId" : "ParentFolderId",
   "Type" : "Type",
   "ChannelName" : "ChannelName",
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -14703,6 +14758,7 @@ open class LiveTvServiceAPI {
   "ImageTags" : {
     "key" : "ImageTags"
   },
+  "ParentFolderId" : "ParentFolderId",
   "ParentThumbItemId" : "ParentThumbItemId",
   "Type" : "Type",
   "ChannelName" : "ChannelName",

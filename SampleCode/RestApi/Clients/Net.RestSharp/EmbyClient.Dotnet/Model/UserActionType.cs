@@ -27,5 +27,15 @@ namespace EmbyClient.Dotnet.Model
         /// Enum PlayedItem for value: PlayedItem
         /// </summary>
         [EnumMember(Value = "PlayedItem")]
-        PlayedItem = 1    }
+        PlayedItem = 1,
+        /// <summary>
+        /// Enum MarkPlayed for value: MarkPlayed
+        /// </summary>
+        [EnumMember(Value = "MarkPlayed")]
+        MarkPlayed = 2,
+        /// <summary>
+        /// Enum MarkFavorite for value: MarkFavorite
+        /// </summary>
+        [EnumMember(Value = "MarkFavorite")]
+        MarkFavorite = 3    }
 }

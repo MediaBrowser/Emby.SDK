@@ -22,6 +22,18 @@ export default class UserActionType {
          */
         playedItem = "PlayedItem";
 
+        /**
+         * value: "MarkPlayed"
+         * @const
+         */
+        markPlayed = "MarkPlayed";
+
+        /**
+         * value: "MarkFavorite"
+         * @const
+         */
+        markFavorite = "MarkFavorite";
+
 
     /**
     * Returns a <code>UserActionType</code> enum value from a Javascript object name.

@@ -12,6 +12,7 @@
 import ApiClient from "../ApiClient";
 import ApiBaseItemsRequest from '../model/ApiBaseItemsRequest';
 import BaseItemDto from '../model/BaseItemDto';
+import LiveTVApiAvailableRecordingOptions from '../model/LiveTVApiAvailableRecordingOptions';
 import LiveTVApiListingProviderTypeInfo from '../model/LiveTVApiListingProviderTypeInfo';
 import LiveTVApiSetChannelDisabled from '../model/LiveTVApiSetChannelDisabled';
 import LiveTVApiSetChannelMapping from '../model/LiveTVApiSetChannelMapping';
@@ -37,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.57
+* @version 4.8.0.58
 */
 export default class LiveTvServiceApi {
 
@@ -309,6 +310,43 @@ export default class LiveTvServiceApi {
 
       return this.apiClient.callApi(
         '/LiveTv/TunerHosts', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getLivetvAvailablerecordingoptions operation.
+     * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvAvailablerecordingoptionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LiveTVApiAvailableRecordingOptions} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets available recording options
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvAvailablerecordingoptionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LiveTVApiAvailableRecordingOptions}
+     */
+    getLivetvAvailablerecordingoptions() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = LiveTVApiAvailableRecordingOptions;
+
+      return this.apiClient.callApi(
+        '/LiveTv/AvailableRecordingOptions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

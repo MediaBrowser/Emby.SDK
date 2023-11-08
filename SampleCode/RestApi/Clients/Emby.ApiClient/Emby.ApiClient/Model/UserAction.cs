@@ -69,6 +69,18 @@ namespace Emby.ApiClient.Model
         public long? PositionTicks { get; set; }
 
         /// <summary>
+        /// Gets or Sets Played
+        /// </summary>
+        /// <value>The Played.</value>
+        public bool? Played { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsFavorite
+        /// </summary>
+        /// <value>The IsFavorite.</value>
+        public bool? IsFavorite { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,6 +95,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  PositionTicks: ").Append(PositionTicks).Append("\n");
+            sb.Append("  Played: ").Append(Played).Append("\n");
+            sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -142,6 +156,16 @@ namespace Emby.ApiClient.Model
                     this.PositionTicks == input.PositionTicks ||
                     (this.PositionTicks != null &&
                     this.PositionTicks.Equals(input.PositionTicks))
+                ) && 
+                (
+                    this.Played == input.Played ||
+                    (this.Played != null &&
+                    this.Played.Equals(input.Played))
+                ) && 
+                (
+                    this.IsFavorite == input.IsFavorite ||
+                    (this.IsFavorite != null &&
+                    this.IsFavorite.Equals(input.IsFavorite))
                 );
         }
 
@@ -168,6 +192,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Date.GetHashCode();
                 if (this.PositionTicks != null)
                     hashCode = hashCode * 59 + this.PositionTicks.GetHashCode();
+                if (this.Played != null)
+                    hashCode = hashCode * 59 + this.Played.GetHashCode();
+                if (this.IsFavorite != null)
+                    hashCode = hashCode * 59 + this.IsFavorite.GetHashCode();
                 return hashCode;
             }
         }

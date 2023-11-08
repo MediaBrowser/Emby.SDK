@@ -45,6 +45,12 @@ namespace Emby.ApiClient.Model
         public List<string> ChannelIds { get; set; }
 
         /// <summary>
+        /// Gets or Sets ParentFolderId
+        /// </summary>
+        /// <value>The ParentFolderId.</value>
+        public long? ParentFolderId { get; set; }
+
+        /// <summary>
         /// The program identifier.
         /// </summary>
         /// <value>The ProgramId.</value>
@@ -187,6 +193,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  ChannelIds: ").Append(ChannelIds).Append("\n");
+            sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
@@ -249,6 +256,11 @@ namespace Emby.ApiClient.Model
                     this.ChannelIds != null &&
                     input.ChannelIds != null &&
                     this.ChannelIds.SequenceEqual(input.ChannelIds)
+                ) && 
+                (
+                    this.ParentFolderId == input.ParentFolderId ||
+                    (this.ParentFolderId != null &&
+                    this.ParentFolderId.Equals(input.ParentFolderId))
                 ) && 
                 (
                     this.ProgramId == input.ProgramId ||
@@ -379,6 +391,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ChannelId.GetHashCode();
                 if (this.ChannelIds != null)
                     hashCode = hashCode * 59 + this.ChannelIds.GetHashCode();
+                if (this.ParentFolderId != null)
+                    hashCode = hashCode * 59 + this.ParentFolderId.GetHashCode();
                 if (this.ProgramId != null)
                     hashCode = hashCode * 59 + this.ProgramId.GetHashCode();
                 if (this.Name != null)
