@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * PersonsService service.
 * @module EmbyClient.JavaScript.Beta/PersonsServiceApi
-* @version 4.8.0.58
+* @version 4.8.0.59
 */
 export default class PersonsServiceApi {
 
@@ -71,9 +71,6 @@ export default class PersonsServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],

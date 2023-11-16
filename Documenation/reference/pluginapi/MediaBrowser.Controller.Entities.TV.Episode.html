@@ -478,6 +478,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaContainingFolderPath_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaContainingFolderPath(LibraryOptions)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsRemoteImageDownloading">BaseItem.SupportsRemoteImageDownloading</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Name">BaseItem.Name</a>
     </div>
     <div>
@@ -527,6 +530,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHidden">BaseItem.IsHidden</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocationType">BaseItem.LocationType</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PathProtocol">BaseItem.PathProtocol</a>
@@ -587,6 +593,15 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateModifiedChanged_System_DateTimeOffset_">BaseItem.HasDateModifiedChanged(DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_DateTimeOffset_System_DateTimeOffset_">BaseItem.HasDateChanged(DateTimeOffset, DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_Nullable_System_DateTimeOffset__System_DateTimeOffset_">BaseItem.HasDateChanged(Nullable&lt;DateTimeOffset&gt;, DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_Nullable_System_DateTimeOffset__System_Nullable_System_DateTimeOffset__">BaseItem.HasDateChanged(Nullable&lt;DateTimeOffset&gt;, Nullable&lt;DateTimeOffset&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastSaved">BaseItem.DateLastSaved</a>
@@ -1301,36 +1316,6 @@ public override long LatestItemsContainerId { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LatestItemsContainerId">BaseItem.LatestItemsContainerId</a></div>
   
   
-  <a id="MediaBrowser_Controller_Entities_TV_Episode_LocationType_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.LocationType*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_TV_Episode_LocationType" data-uid="MediaBrowser.Controller.Entities.TV.Episode.LocationType">LocationType</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the type of the location.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public override LocationType LocationType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Entities.LocationType.html">LocationType</a></td>
-        <td><p>The type of the location.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocationType">BaseItem.LocationType</a></div>
-  
-  
   <a id="MediaBrowser_Controller_Entities_TV_Episode_Season_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.Season*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_Season" data-uid="MediaBrowser.Controller.Entities.TV.Episode.Season">Season</h4>
   <div class="markdown level1 summary"></div>
@@ -1573,34 +1558,6 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsInheritedParentImages">BaseItem.SupportsInheritedParentImages</a></div>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_TV_Episode_SupportsRemoteImageDownloading_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.SupportsRemoteImageDownloading*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_TV_Episode_SupportsRemoteImageDownloading" data-uid="MediaBrowser.Controller.Entities.TV.Episode.SupportsRemoteImageDownloading">SupportsRemoteImageDownloading</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public override bool SupportsRemoteImageDownloading { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsRemoteImageDownloading">BaseItem.SupportsRemoteImageDownloading</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_TV_Episode_SupportsStudios_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.SupportsStudios*"></a>

@@ -38,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.58
+* @version 4.8.0.59
 */
 export default class LiveTvServiceApi {
 
@@ -468,9 +468,6 @@ export default class LiveTvServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -648,9 +645,6 @@ export default class LiveTvServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -787,9 +781,6 @@ export default class LiveTvServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -932,9 +923,6 @@ export default class LiveTvServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -1490,9 +1478,6 @@ export default class LiveTvServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -1686,9 +1671,6 @@ export default class LiveTvServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -2628,9 +2610,6 @@ export default class LiveTvServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],

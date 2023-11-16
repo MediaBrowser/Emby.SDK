@@ -69,9 +69,6 @@ public class LibraryOptions {
   @SerializedName("SaveLocalThumbnailSets")
   private Boolean saveLocalThumbnailSets = null;
 
-  @SerializedName("ImportMissingEpisodes")
-  private Boolean importMissingEpisodes = null;
-
   @SerializedName("ImportPlaylists")
   private Boolean importPlaylists = null;
 
@@ -479,24 +476,6 @@ public class LibraryOptions {
 
   public void setSaveLocalThumbnailSets(Boolean saveLocalThumbnailSets) {
     this.saveLocalThumbnailSets = saveLocalThumbnailSets;
-  }
-
-  public LibraryOptions importMissingEpisodes(Boolean importMissingEpisodes) {
-    this.importMissingEpisodes = importMissingEpisodes;
-    return this;
-  }
-
-   /**
-   * Get importMissingEpisodes
-   * @return importMissingEpisodes
-  **/
-  @Schema(description = "")
-  public Boolean isImportMissingEpisodes() {
-    return importMissingEpisodes;
-  }
-
-  public void setImportMissingEpisodes(Boolean importMissingEpisodes) {
-    this.importMissingEpisodes = importMissingEpisodes;
   }
 
   public LibraryOptions importPlaylists(Boolean importPlaylists) {
@@ -1342,7 +1321,6 @@ public class LibraryOptions {
         Objects.equals(this.saveLocalMetadata, libraryOptions.saveLocalMetadata) &&
         Objects.equals(this.saveMetadataHidden, libraryOptions.saveMetadataHidden) &&
         Objects.equals(this.saveLocalThumbnailSets, libraryOptions.saveLocalThumbnailSets) &&
-        Objects.equals(this.importMissingEpisodes, libraryOptions.importMissingEpisodes) &&
         Objects.equals(this.importPlaylists, libraryOptions.importPlaylists) &&
         Objects.equals(this.enableAutomaticSeriesGrouping, libraryOptions.enableAutomaticSeriesGrouping) &&
         Objects.equals(this.shareEmbeddedMusicAlbumImages, libraryOptions.shareEmbeddedMusicAlbumImages) &&
@@ -1388,7 +1366,7 @@ public class LibraryOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importMissingEpisodes, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
+    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
   }
 
 
@@ -1412,7 +1390,6 @@ public class LibraryOptions {
     sb.append("    saveLocalMetadata: ").append(toIndentedString(saveLocalMetadata)).append("\n");
     sb.append("    saveMetadataHidden: ").append(toIndentedString(saveMetadataHidden)).append("\n");
     sb.append("    saveLocalThumbnailSets: ").append(toIndentedString(saveLocalThumbnailSets)).append("\n");
-    sb.append("    importMissingEpisodes: ").append(toIndentedString(importMissingEpisodes)).append("\n");
     sb.append("    importPlaylists: ").append(toIndentedString(importPlaylists)).append("\n");
     sb.append("    enableAutomaticSeriesGrouping: ").append(toIndentedString(enableAutomaticSeriesGrouping)).append("\n");
     sb.append("    shareEmbeddedMusicAlbumImages: ").append(toIndentedString(shareEmbeddedMusicAlbumImages)).append("\n");

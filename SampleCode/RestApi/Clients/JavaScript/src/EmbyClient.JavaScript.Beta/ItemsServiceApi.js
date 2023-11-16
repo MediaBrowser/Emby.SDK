@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ItemsService service.
 * @module EmbyClient.JavaScript.Beta/ItemsServiceApi
-* @version 4.8.0.58
+* @version 4.8.0.59
 */
 export default class ItemsServiceApi {
 
@@ -70,9 +70,6 @@ export default class ItemsServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -210,9 +207,6 @@ export default class ItemsServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -349,9 +343,6 @@ export default class ItemsServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],

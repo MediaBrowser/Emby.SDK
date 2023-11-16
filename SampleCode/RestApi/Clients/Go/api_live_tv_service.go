@@ -892,9 +892,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -1001,9 +998,6 @@ type LiveTvServiceApiGetLivetvChannelsOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -1169,15 +1163,6 @@ func (a *LiveTvServiceApiService) GetLivetvChannels(ctx context.Context, localVa
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -1621,9 +1606,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -1725,9 +1707,6 @@ type LiveTvServiceApiGetLivetvChanneltagsOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -1878,15 +1857,6 @@ func (a *LiveTvServiceApiService) GetLivetvChanneltags(ctx context.Context, loca
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -2222,9 +2192,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -2326,9 +2293,6 @@ type LiveTvServiceApiGetLivetvChanneltagsPrefixesOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -2479,15 +2443,6 @@ func (a *LiveTvServiceApiService) GetLivetvChanneltagsPrefixes(ctx context.Conte
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -2829,9 +2784,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -2939,9 +2891,6 @@ type LiveTvServiceApiGetLivetvEPGOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -3110,15 +3059,6 @@ func (a *LiveTvServiceApiService) GetLivetvEPG(ctx context.Context, localVarOpti
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -4518,9 +4458,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -4623,9 +4560,6 @@ type LiveTvServiceApiGetLivetvProgramsOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -4779,15 +4713,6 @@ func (a *LiveTvServiceApiService) GetLivetvPrograms(ctx context.Context, localVa
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -5286,9 +5211,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -5394,9 +5316,6 @@ type LiveTvServiceApiGetLivetvRecordingsOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -5559,15 +5478,6 @@ func (a *LiveTvServiceApiService) GetLivetvRecordings(ctx context.Context, local
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -7956,9 +7866,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -8061,9 +7968,6 @@ type LiveTvServiceApiPostLivetvProgramsOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -8217,15 +8121,6 @@ func (a *LiveTvServiceApiService) PostLivetvPrograms(ctx context.Context, body A
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))

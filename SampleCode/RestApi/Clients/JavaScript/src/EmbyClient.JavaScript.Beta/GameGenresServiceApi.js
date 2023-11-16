@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * GameGenresService service.
 * @module EmbyClient.JavaScript.Beta/GameGenresServiceApi
-* @version 4.8.0.58
+* @version 4.8.0.59
 */
 export default class GameGenresServiceApi {
 
@@ -71,9 +71,6 @@ export default class GameGenresServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],

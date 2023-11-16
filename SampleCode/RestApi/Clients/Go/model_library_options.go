@@ -22,7 +22,6 @@ type LibraryOptions struct {
 	SaveLocalMetadata bool `json:"SaveLocalMetadata,omitempty"`
 	SaveMetadataHidden bool `json:"SaveMetadataHidden,omitempty"`
 	SaveLocalThumbnailSets bool `json:"SaveLocalThumbnailSets,omitempty"`
-	ImportMissingEpisodes bool `json:"ImportMissingEpisodes,omitempty"`
 	ImportPlaylists bool `json:"ImportPlaylists,omitempty"`
 	EnableAutomaticSeriesGrouping bool `json:"EnableAutomaticSeriesGrouping,omitempty"`
 	ShareEmbeddedMusicAlbumImages bool `json:"ShareEmbeddedMusicAlbumImages,omitempty"`

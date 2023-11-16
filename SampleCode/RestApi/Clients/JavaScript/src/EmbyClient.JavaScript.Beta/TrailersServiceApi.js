@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * TrailersService service.
 * @module EmbyClient.JavaScript.Beta/TrailersServiceApi
-* @version 4.8.0.58
+* @version 4.8.0.59
 */
 export default class TrailersServiceApi {
 
@@ -70,9 +70,6 @@ export default class TrailersServiceApi {
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],

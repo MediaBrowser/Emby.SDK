@@ -51,6 +51,272 @@ namespace Emby.ApiClient.Api
         /// <param name="id"></param>
         /// <param name="playlistId"></param>
         /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer (string segmentContainer, string segmentId, string id, string playlistId)
+        {
+            // verify the required parameter 'segmentContainer' is set
+            if (segmentContainer == null)
+            {
+                throw new ApiException("Missing required parameter 'segmentContainer' when calling VideoHlsServiceApi->GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer");
+            }
+            
+            // verify the required parameter 'segmentId' is set
+            if (segmentId == null)
+            {
+                throw new ApiException("Missing required parameter 'segmentId' when calling VideoHlsServiceApi->GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer");
+            }
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling VideoHlsServiceApi->GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer");
+            }
+            
+            // verify the required parameter 'playlistId' is set
+            if (playlistId == null)
+            {
+                throw new ApiException("Missing required parameter 'playlistId' when calling VideoHlsServiceApi->GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer");
+            }
+            
+            var request = new RestRequest("/Audio/{Id}/hls/{PlaylistId}/{SegmentId}.{SegmentContainer}", Method.Get);
+
+            if (segmentContainer != null)
+            {
+                request.AddParameter("SegmentContainer", this.ApiClient.ParameterToString(segmentContainer), ParameterType.UrlSegment);
+            }
+
+            if (segmentId != null)
+            {
+                request.AddParameter("SegmentId", this.ApiClient.ParameterToString(segmentId), ParameterType.UrlSegment);
+            }
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (playlistId != null)
+            {
+                request.AddParameter("PlaylistId", this.ApiClient.ParameterToString(playlistId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="deviceProfileId">Optional. The dlna device profile id to utilize. (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
+        /// <param name="container">Container</param>
+        /// <param name="audioCodec">Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#x27;s extension. Options: aac, mp3, vorbis, wma. (optional)</param>
+        /// <param name="enableAutoStreamCopy">Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)</param>
+        /// <param name="audioSampleRate">Optional. Specify a specific audio sample rate, e.g. 44100 (optional)</param>
+        /// <param name="audioBitRate">Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults. (optional)</param>
+        /// <param name="audioChannels">Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)</param>
+        /// <param name="maxAudioChannels">Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)</param>
+        /// <param name="_static">Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)</param>
+        /// <param name="profile">Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)</param>
+        /// <param name="level">Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)</param>
+        /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
+        /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
+        /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
+        /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
+        /// <param name="height">Optional. The fixed vertical resolution of the encoded video. (optional)</param>
+        /// <param name="maxWidth">Optional. The maximum horizontal resolution of the encoded video. (optional)</param>
+        /// <param name="maxHeight">Optional. The maximum vertical resolution of the encoded video. (optional)</param>
+        /// <param name="videoBitRate">Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)</param>
+        /// <param name="subtitleStreamIndex">Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)</param>
+        /// <param name="subtitleMethod">Optional. Specify the subtitle delivery method. (optional)</param>
+        /// <param name="maxRefFrames">Optional. (optional)</param>
+        /// <param name="maxVideoBitDepth">Optional. (optional)</param>
+        /// <param name="videoCodec">Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)</param>
+        /// <param name="audioStreamIndex">Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)</param>
+        /// <param name="videoStreamIndex">Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> GetAudioByIdLiveM3u8 (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, string profile, string level, float? framerate, float? maxFramerate, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxRefFrames, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling VideoHlsServiceApi->GetAudioByIdLiveM3u8");
+            }
+            
+            // verify the required parameter 'container' is set
+            if (container == null)
+            {
+                throw new ApiException("Missing required parameter 'container' when calling VideoHlsServiceApi->GetAudioByIdLiveM3u8");
+            }
+            
+            var request = new RestRequest("/Audio/{Id}/live.m3u8", Method.Get);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (deviceProfileId != null)
+            {
+                request.AddQueryParameter("DeviceProfileId", this.ApiClient.ParameterToString(deviceProfileId));
+            }
+
+            if (deviceId != null)
+            {
+                request.AddQueryParameter("DeviceId", this.ApiClient.ParameterToString(deviceId));
+            }
+
+            if (container != null)
+            {
+                request.AddQueryParameter("Container", this.ApiClient.ParameterToString(container));
+            }
+
+            if (audioCodec != null)
+            {
+                request.AddQueryParameter("AudioCodec", this.ApiClient.ParameterToString(audioCodec));
+            }
+
+            if (enableAutoStreamCopy != null)
+            {
+                request.AddQueryParameter("EnableAutoStreamCopy", this.ApiClient.ParameterToString(enableAutoStreamCopy));
+            }
+
+            if (audioSampleRate != null)
+            {
+                request.AddQueryParameter("AudioSampleRate", this.ApiClient.ParameterToString(audioSampleRate));
+            }
+
+            if (audioBitRate != null)
+            {
+                request.AddQueryParameter("AudioBitRate", this.ApiClient.ParameterToString(audioBitRate));
+            }
+
+            if (audioChannels != null)
+            {
+                request.AddQueryParameter("AudioChannels", this.ApiClient.ParameterToString(audioChannels));
+            }
+
+            if (maxAudioChannels != null)
+            {
+                request.AddQueryParameter("MaxAudioChannels", this.ApiClient.ParameterToString(maxAudioChannels));
+            }
+
+            if (_static != null)
+            {
+                request.AddQueryParameter("Static", this.ApiClient.ParameterToString(_static));
+            }
+
+            if (profile != null)
+            {
+                request.AddQueryParameter("Profile", this.ApiClient.ParameterToString(profile));
+            }
+
+            if (level != null)
+            {
+                request.AddQueryParameter("Level", this.ApiClient.ParameterToString(level));
+            }
+
+            if (framerate != null)
+            {
+                request.AddQueryParameter("Framerate", this.ApiClient.ParameterToString(framerate));
+            }
+
+            if (maxFramerate != null)
+            {
+                request.AddQueryParameter("MaxFramerate", this.ApiClient.ParameterToString(maxFramerate));
+            }
+
+            if (copyTimestamps != null)
+            {
+                request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
+            }
+
+            if (startTimeTicks != null)
+            {
+                request.AddQueryParameter("StartTimeTicks", this.ApiClient.ParameterToString(startTimeTicks));
+            }
+
+            if (width != null)
+            {
+                request.AddQueryParameter("Width", this.ApiClient.ParameterToString(width));
+            }
+
+            if (height != null)
+            {
+                request.AddQueryParameter("Height", this.ApiClient.ParameterToString(height));
+            }
+
+            if (maxWidth != null)
+            {
+                request.AddQueryParameter("MaxWidth", this.ApiClient.ParameterToString(maxWidth));
+            }
+
+            if (maxHeight != null)
+            {
+                request.AddQueryParameter("MaxHeight", this.ApiClient.ParameterToString(maxHeight));
+            }
+
+            if (videoBitRate != null)
+            {
+                request.AddQueryParameter("VideoBitRate", this.ApiClient.ParameterToString(videoBitRate));
+            }
+
+            if (subtitleStreamIndex != null)
+            {
+                request.AddQueryParameter("SubtitleStreamIndex", this.ApiClient.ParameterToString(subtitleStreamIndex));
+            }
+
+            if (subtitleMethod != null)
+            {
+                request.AddQueryParameter("SubtitleMethod", this.ApiClient.ParameterToString(subtitleMethod));
+            }
+
+            if (maxRefFrames != null)
+            {
+                request.AddQueryParameter("MaxRefFrames", this.ApiClient.ParameterToString(maxRefFrames));
+            }
+
+            if (maxVideoBitDepth != null)
+            {
+                request.AddQueryParameter("MaxVideoBitDepth", this.ApiClient.ParameterToString(maxVideoBitDepth));
+            }
+
+            if (videoCodec != null)
+            {
+                request.AddQueryParameter("VideoCodec", this.ApiClient.ParameterToString(videoCodec));
+            }
+
+            if (audioStreamIndex != null)
+            {
+                request.AddQueryParameter("AudioStreamIndex", this.ApiClient.ParameterToString(audioStreamIndex));
+            }
+
+            if (videoStreamIndex != null)
+            {
+                request.AddQueryParameter("VideoStreamIndex", this.ApiClient.ParameterToString(videoStreamIndex));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="segmentContainer"></param>
+        /// <param name="segmentId"></param>
+        /// <param name="id"></param>
+        /// <param name="playlistId"></param>
+        /// <returns>Task of ApiResponse</returns>
         public async Task<RestResponse<Object>> GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer (string segmentContainer, string segmentId, string id, string playlistId)
         {
             // verify the required parameter 'segmentContainer' is set

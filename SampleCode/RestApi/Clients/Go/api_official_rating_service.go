@@ -45,9 +45,6 @@ Requires authentication as user
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -149,9 +146,6 @@ type OfficialRatingServiceApiGetOfficialratingsOpts struct {
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -302,15 +296,6 @@ func (a *OfficialRatingServiceApiService) GetOfficialratings(ctx context.Context
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))

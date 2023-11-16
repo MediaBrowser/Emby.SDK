@@ -526,6 +526,15 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateModifiedChanged_System_DateTimeOffset_">BaseItem.HasDateModifiedChanged(DateTimeOffset)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_DateTimeOffset_System_DateTimeOffset_">BaseItem.HasDateChanged(DateTimeOffset, DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_Nullable_System_DateTimeOffset__System_DateTimeOffset_">BaseItem.HasDateChanged(Nullable&lt;DateTimeOffset&gt;, DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_Nullable_System_DateTimeOffset__System_Nullable_System_DateTimeOffset__">BaseItem.HasDateChanged(Nullable&lt;DateTimeOffset&gt;, Nullable&lt;DateTimeOffset&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastSaved">BaseItem.DateLastSaved</a>
     </div>
     <div>
@@ -767,9 +776,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsStudios">BaseItem.SupportsStudios</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsTags">BaseItem.SupportsTags</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.GetFileSystemChildren(IDirectoryService)</a>
@@ -1221,7 +1227,7 @@ public bool IsKids { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public bool IsLive { get; }</code></pre>
+public bool IsLive { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1277,7 +1283,7 @@ public bool IsMovie { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public bool IsNew { get; }</code></pre>
+public bool IsNew { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1333,7 +1339,7 @@ public bool IsNews { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public bool IsPremiere { get; }</code></pre>
+public bool IsPremiere { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1770,6 +1776,34 @@ public override bool SupportsPeople { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPeople">BaseItem.SupportsPeople</a></div>
   
   
+  <a id="MediaBrowser_Controller_LiveTv_LiveTvProgram_SupportsTags_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.SupportsTags*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_LiveTvProgram_SupportsTags" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.SupportsTags">SupportsTags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsTags">BaseItem.SupportsTags</a></div>
+  
+  
   <a id="MediaBrowser_Controller_LiveTv_LiveTvProgram_SupportsThemeMedia_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.SupportsThemeMedia*"></a>
   <h4 id="MediaBrowser_Controller_LiveTv_LiveTvProgram_SupportsThemeMedia" data-uid="MediaBrowser.Controller.LiveTv.LiveTvProgram.SupportsThemeMedia">SupportsThemeMedia</h4>
   <div class="markdown level1 summary"></div>
@@ -1922,7 +1956,7 @@ public override bool SupportsUserData { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

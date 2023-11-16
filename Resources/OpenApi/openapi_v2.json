@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.58"
+    "version": "4.8.0.59"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -143,24 +143,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -807,24 +789,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -1463,24 +1427,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -2304,24 +2250,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -3065,24 +2993,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -3779,24 +3689,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -4443,24 +4335,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -5103,24 +4977,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -5813,24 +5669,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -6477,24 +6315,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -7133,24 +6953,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -7939,24 +7741,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -8854,24 +8638,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -9518,24 +9284,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -10174,24 +9922,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -10904,24 +10634,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -11568,24 +11280,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -12228,24 +11922,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -12884,24 +12560,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -13941,24 +13599,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -14597,24 +14237,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -17724,24 +17346,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -19087,24 +18691,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -20681,24 +20267,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -21374,24 +20942,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -22036,24 +21586,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -22692,24 +22224,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -23377,24 +22891,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -25422,30 +24918,207 @@
       },
       "x-summary": "Reports playback has started within a session"
     },
-    "/Shows/Upcoming": {
+    "/Shows/Missing": {
       "get": {
         "tags": [
           "TvShowsService"
         ],
-        "summary": "Gets a list of upcoming episodes",
+        "summary": "Gets a list of missing episodes",
         "description": "Requires authentication as user",
-        "externalDocs": {
-          "description": "API Documentation: Item Information",
-          "url": "https://betadev.emby.media/doc/restapi/Item-Information.html"
-        },
-        "operationId": "getShowsUpcoming",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
+        "operationId": "getShowsMissing",
         "parameters": [
           {
             "in": "query",
-            "name": "UserId",
-            "description": "User Id",
-            "required": true,
-            "type": "string",
-            "format": "guid"
+            "name": "ArtistType",
+            "description": "Artist or AlbumArtist",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxOfficialRating",
+            "description": "Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "HasThemeSong",
+            "description": "Optional filter by items with theme songs.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasThemeVideo",
+            "description": "Optional filter by items with theme videos.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasSubtitles",
+            "description": "Optional filter by items with subtitles.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasSpecialFeature",
+            "description": "Optional filter by items with special features.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasTrailer",
+            "description": "Optional filter by items with trailers.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "AdjacentTo",
+            "description": "Optional. Return items that are siblings of a supplied item.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinIndexNumber",
+            "description": "Optional filter by minimum index number.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MinStartDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxStartDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinEndDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxEndDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinPlayers",
+            "description": "Optional filter by minimum number of game players.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxPlayers",
+            "description": "Optional filter by maximum number of game players.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "ParentIndexNumber",
+            "description": "Optional filter by parent index number.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "HasParentalRating",
+            "description": "Optional filter by items that have or do not have a parental rating",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsHD",
+            "description": "Optional filter by items that are HD or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsUnaired",
+            "description": "Optional filter by items that are unaired episodes or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "MinCommunityRating",
+            "description": "Optional filter by minimum community rating.",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "query",
+            "name": "MinCriticRating",
+            "description": "Optional filter by minimum critic rating.",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "query",
+            "name": "AiredDuringSeason",
+            "description": "Gets all episodes that aired during a season, including specials.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MinPremiereDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinDateLastSaved",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinDateLastSavedForUser",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxPremiereDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "HasOverview",
+            "description": "Optional filter by items that have an overview or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasImdbId",
+            "description": "Optional filter by items that have an imdb id or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasTmdbId",
+            "description": "Optional filter by items that have a tmdb id or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasTvdbId",
+            "description": "Optional filter by items that have a tvdb id or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeItemIds",
+            "description": "Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.",
+            "type": "string"
           },
           {
             "in": "query",
@@ -25463,8 +25136,20 @@
           },
           {
             "in": "query",
-            "name": "Fields",
-            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
+            "name": "Recursive",
+            "description": "When searching within folders, this determines whether or not the search will be recursive. true/false",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "SearchTerm",
+            "description": "Enter a search term to perform a search request",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "SortOrder",
+            "description": "Sort Order - Ascending,Descending",
             "type": "string"
           },
           {
@@ -25475,8 +25160,170 @@
           },
           {
             "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeItemTypes",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IncludeItemTypes",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AnyProviderIdEquals",
+            "description": "Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Filters",
+            "description": "Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IsFavorite",
+            "description": "Optional filter by items that are marked as favorite, or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsMovie",
+            "description": "Optional filter for movies.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsSeries",
+            "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsNews",
+            "description": "Optional filter for news.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsKids",
+            "description": "Optional filter for kids.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsSports",
+            "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsNew",
+            "description": "Optional filter for IsNew.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsPremiere",
+            "description": "Optional filter for IsPremiere.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsNewOrPremiere",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsRepeat",
+            "description": "Optional filter for IsRepeat.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "MediaTypes",
+            "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypes",
+            "description": "Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "SortBy",
+            "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IsPlayed",
+            "description": "Optional filter by items that are played, or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Genres",
+            "description": "Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "OfficialRatings",
+            "description": "Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Years",
+            "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "EnableImages",
             "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
             "type": "boolean"
           },
           {
@@ -25494,17 +25341,824 @@
           },
           {
             "in": "query",
-            "name": "EnableUserData",
-            "description": "Optional, include user data",
+            "name": "Person",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "PersonIds",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "PersonTypes",
+            "description": "Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Studios",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "StudioIds",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Artists",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ArtistIds",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Albums",
+            "description": "Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Ids",
+            "description": "Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "VideoTypes",
+            "description": "Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Containers",
+            "description": "Optional filter by Container. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioCodecs",
+            "description": "Optional filter by AudioCodec. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioLayouts",
+            "description": "Optional filter by AudioLayout. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "VideoCodecs",
+            "description": "Optional filter by VideoCodec. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExtendedVideoTypes",
+            "description": "Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleCodecs",
+            "description": "Optional filter by SubtitleCodec. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "Optional filter by Path.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "UserId",
+            "description": "User Id",
+            "type": "string",
+            "format": "guid"
+          },
+          {
+            "in": "query",
+            "name": "MinOfficialRating",
+            "description": "Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IsLocked",
+            "description": "Optional filter by items that are locked.",
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsPlaceHolder",
+            "description": "Optional filter by items that are placeholders",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasOfficialRating",
+            "description": "Optional filter by items that have official ratings",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "GroupItemsIntoCollections",
+            "description": "Whether or not to hide items behind their boxsets.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Is3D",
+            "description": "Optional filter by items that are 3D, or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "SeriesStatus",
+            "description": "Optional filter by Series Status. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "NameStartsWithOrGreater",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ArtistStartsWithOrGreater",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AlbumArtistStartsWithOrGreater",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "NameStartsWith",
+            "description": "Optional filter by items whose name is sorted equally than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "NameLessThan",
+            "description": "Optional filter by items whose name is equally or lesser than a given input string.",
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a QueryResult<BaseItemDto> object.",
-            "schema": {
-              "$ref": "#/definitions/QueryResult_BaseItemDto"
-            }
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a list of missing episodes"
+    },
+    "/Shows/Upcoming": {
+      "get": {
+        "tags": [
+          "TvShowsService"
+        ],
+        "summary": "Gets a list of upcoming episodes",
+        "description": "Requires authentication as user",
+        "operationId": "getShowsUpcoming",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ArtistType",
+            "description": "Artist or AlbumArtist",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxOfficialRating",
+            "description": "Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "HasThemeSong",
+            "description": "Optional filter by items with theme songs.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasThemeVideo",
+            "description": "Optional filter by items with theme videos.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasSubtitles",
+            "description": "Optional filter by items with subtitles.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasSpecialFeature",
+            "description": "Optional filter by items with special features.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasTrailer",
+            "description": "Optional filter by items with trailers.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "AdjacentTo",
+            "description": "Optional. Return items that are siblings of a supplied item.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinIndexNumber",
+            "description": "Optional filter by minimum index number.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MinStartDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxStartDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinEndDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxEndDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinPlayers",
+            "description": "Optional filter by minimum number of game players.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxPlayers",
+            "description": "Optional filter by maximum number of game players.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "ParentIndexNumber",
+            "description": "Optional filter by parent index number.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "HasParentalRating",
+            "description": "Optional filter by items that have or do not have a parental rating",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsHD",
+            "description": "Optional filter by items that are HD or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsUnaired",
+            "description": "Optional filter by items that are unaired episodes or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "MinCommunityRating",
+            "description": "Optional filter by minimum community rating.",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "query",
+            "name": "MinCriticRating",
+            "description": "Optional filter by minimum critic rating.",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "query",
+            "name": "AiredDuringSeason",
+            "description": "Gets all episodes that aired during a season, including specials.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MinPremiereDate",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinDateLastSaved",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MinDateLastSavedForUser",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "MaxPremiereDate",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "HasOverview",
+            "description": "Optional filter by items that have an overview or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasImdbId",
+            "description": "Optional filter by items that have an imdb id or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasTmdbId",
+            "description": "Optional filter by items that have a tmdb id or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasTvdbId",
+            "description": "Optional filter by items that have a tvdb id or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeItemIds",
+            "description": "Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "StartIndex",
+            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Limit",
+            "description": "Optional. The maximum number of records to return",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Recursive",
+            "description": "When searching within folders, this determines whether or not the search will be recursive. true/false",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "SearchTerm",
+            "description": "Enter a search term to perform a search request",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "SortOrder",
+            "description": "Sort Order - Ascending,Descending",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ParentId",
+            "description": "Specify this to localize the search to a specific item or folder. Omit to use the root",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Fields",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeItemTypes",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IncludeItemTypes",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AnyProviderIdEquals",
+            "description": "Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Filters",
+            "description": "Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IsFavorite",
+            "description": "Optional filter by items that are marked as favorite, or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsMovie",
+            "description": "Optional filter for movies.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsSeries",
+            "description": "Optional filter for series.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsFolder",
+            "description": "Optional filter for folders.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsNews",
+            "description": "Optional filter for news.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsKids",
+            "description": "Optional filter for kids.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsSports",
+            "description": "Optional filter for sports.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsNew",
+            "description": "Optional filter for IsNew.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsPremiere",
+            "description": "Optional filter for IsPremiere.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsNewOrPremiere",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsRepeat",
+            "description": "Optional filter for IsRepeat.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ProjectToMedia",
+            "description": "ProjectToMedia",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "MediaTypes",
+            "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypes",
+            "description": "Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "SortBy",
+            "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IsPlayed",
+            "description": "Optional filter by items that are played, or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Genres",
+            "description": "Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "OfficialRatings",
+            "description": "Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Tags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeTags",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Years",
+            "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableImages",
+            "description": "Optional, include image information in output",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "EnableUserData",
+            "description": "Optional, include user data",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "ImageTypeLimit",
+            "description": "Optional, the max number of images to return, per image type",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "EnableImageTypes",
+            "description": "Optional. The image types to include in the output.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Person",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "PersonIds",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "PersonTypes",
+            "description": "Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Studios",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "StudioIds",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Artists",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ArtistIds",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Albums",
+            "description": "Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Ids",
+            "description": "Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "VideoTypes",
+            "description": "Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Containers",
+            "description": "Optional filter by Container. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioCodecs",
+            "description": "Optional filter by AudioCodec. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioLayouts",
+            "description": "Optional filter by AudioLayout. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "VideoCodecs",
+            "description": "Optional filter by VideoCodec. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExtendedVideoTypes",
+            "description": "Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleCodecs",
+            "description": "Optional filter by SubtitleCodec. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "Optional filter by Path.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "UserId",
+            "description": "User Id",
+            "type": "string",
+            "format": "guid"
+          },
+          {
+            "in": "query",
+            "name": "MinOfficialRating",
+            "description": "Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IsLocked",
+            "description": "Optional filter by items that are locked.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsPlaceHolder",
+            "description": "Optional filter by items that are placeholders",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "HasOfficialRating",
+            "description": "Optional filter by items that have official ratings",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "GroupItemsIntoCollections",
+            "description": "Whether or not to hide items behind their boxsets.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Is3D",
+            "description": "Optional filter by items that are 3D, or not.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "SeriesStatus",
+            "description": "Optional filter by Series Status. Allows multiple, comma delimeted.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "NameStartsWithOrGreater",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ArtistStartsWithOrGreater",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AlbumArtistStartsWithOrGreater",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "NameStartsWith",
+            "description": "Optional filter by items whose name is sorted equally than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "NameLessThan",
+            "description": "Optional filter by items whose name is equally or lesser than a given input string.",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
           },
           "400": {
             "$ref": "#/responses/400"
@@ -30265,6 +30919,238 @@
       },
       "x-summary": "Gets an audio stream using HTTP live streaming."
     },
+    "/Audio/{Id}/live.m3u8": {
+      "get": {
+        "tags": [
+          "VideoHlsService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "getAudioByIdLiveM3u8",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "DeviceProfileId",
+            "description": "Optional. The dlna device profile id to utilize.",
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "DeviceId",
+            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Container",
+            "description": "Container",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioCodec",
+            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableAutoStreamCopy",
+            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "AudioSampleRate",
+            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "AudioBitRate",
+            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "AudioChannels",
+            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxAudioChannels",
+            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Static",
+            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Profile",
+            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Level",
+            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Framerate",
+            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "type": "number",
+            "format": "float"
+          },
+          {
+            "in": "query",
+            "name": "MaxFramerate",
+            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "type": "number",
+            "format": "float"
+          },
+          {
+            "in": "query",
+            "name": "CopyTimestamps",
+            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "StartTimeTicks",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "Width",
+            "description": "Optional. The fixed horizontal resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Height",
+            "description": "Optional. The fixed vertical resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxWidth",
+            "description": "Optional. The maximum horizontal resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxHeight",
+            "description": "Optional. The maximum vertical resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoBitRate",
+            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleStreamIndex",
+            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleMethod",
+            "description": "Optional. Specify the subtitle delivery method."
+          },
+          {
+            "in": "query",
+            "name": "MaxRefFrames",
+            "description": "Optional.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxVideoBitDepth",
+            "description": "Optional.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoCodec",
+            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioStreamIndex",
+            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoStreamIndex",
+            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Auth/Keys/{Key}": {
       "delete": {
         "tags": [
@@ -34003,24 +34889,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -37516,12 +38384,6 @@
           },
           {
             "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "AdjacentTo",
             "description": "Optional. Return items that are siblings of a supplied item.",
             "type": "string"
@@ -37732,24 +38594,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -40058,24 +40902,6 @@
             "in": "query",
             "name": "IsHD",
             "description": "Optional filter by items that are HD or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
             "type": "boolean"
           },
           {
@@ -48062,24 +48888,6 @@
           },
           {
             "in": "query",
-            "name": "LocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ExcludeLocationTypes",
-            "description": "Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "IsMissing",
-            "description": "Optional filter by items that are missing episodes or not.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "IsUnaired",
             "description": "Optional filter by items that are unaired episodes or not.",
             "type": "boolean"
@@ -50298,6 +51106,70 @@
         ],
         "description": "Requires authentication as user",
         "operationId": "headAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "SegmentContainer",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "SegmentId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "PlaylistId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Audio/{Id}/hls/{PlaylistId}/{SegmentId}.{SegmentContainer}": {
+      "get": {
+        "tags": [
+          "VideoHlsService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "getAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer",
         "parameters": [
           {
             "in": "path",
@@ -59015,9 +59887,6 @@
         "SaveLocalThumbnailSets": {
           "type": "boolean"
         },
-        "ImportMissingEpisodes": {
-          "type": "boolean"
-        },
         "ImportPlaylists": {
           "type": "boolean"
         },
@@ -65844,6 +66713,13 @@
       }
     },
     {
+      "name": "VideoHlsService",
+      "externalDocs": {
+        "description": "API Reference: VideoHlsService",
+        "url": "https://betadev.emby.media/reference/RestAPI/VideoHlsService.html"
+      }
+    },
+    {
       "name": "DlnaServerService",
       "externalDocs": {
         "description": "API Reference: DlnaServerService",
@@ -65911,13 +66787,6 @@
       "externalDocs": {
         "description": "API Documentation: Video streaming",
         "url": "https://betadev.emby.media/doc/restapi/Video-Streaming.html"
-      }
-    },
-    {
-      "name": "VideoHlsService",
-      "externalDocs": {
-        "description": "API Reference: VideoHlsService",
-        "url": "https://betadev.emby.media/reference/RestAPI/VideoHlsService.html"
       }
     },
     {

@@ -16,7 +16,7 @@ import TypeOptions from './TypeOptions';
 /**
 * The LibraryOptions model module.
 * @module model/LibraryOptions
-* @version 4.8.0.58
+* @version 4.8.0.59
 */
 export default class LibraryOptions {
     /**
@@ -87,9 +87,6 @@ export default class LibraryOptions {
             }
             if (data.hasOwnProperty('SaveLocalThumbnailSets')) {
                 obj['SaveLocalThumbnailSets'] = ApiClient.convertToType(data['SaveLocalThumbnailSets'], 'Boolean');
-            }
-            if (data.hasOwnProperty('ImportMissingEpisodes')) {
-                obj['ImportMissingEpisodes'] = ApiClient.convertToType(data['ImportMissingEpisodes'], 'Boolean');
             }
             if (data.hasOwnProperty('ImportPlaylists')) {
                 obj['ImportPlaylists'] = ApiClient.convertToType(data['ImportPlaylists'], 'Boolean');
@@ -278,10 +275,6 @@ export default class LibraryOptions {
     * @member {Boolean} SaveLocalThumbnailSets
     */
     'SaveLocalThumbnailSets' = undefined;
-    /**
-    * @member {Boolean} ImportMissingEpisodes
-    */
-    'ImportMissingEpisodes' = undefined;
     /**
     * @member {Boolean} ImportPlaylists
     */

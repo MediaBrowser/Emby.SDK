@@ -33,6 +33,67 @@ public class VideoHlsServiceApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerTest() throws Exception {
+        String segmentContainer = null;
+        String segmentId = null;
+        String id = null;
+        String playlistId = null;
+        api.getAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getAudioByIdLiveM3u8Test() throws Exception {
+        String id = null;
+        String container = null;
+        String deviceProfileId = null;
+        String deviceId = null;
+        String audioCodec = null;
+        Boolean enableAutoStreamCopy = null;
+        Integer audioSampleRate = null;
+        Integer audioBitRate = null;
+        Integer audioChannels = null;
+        Integer maxAudioChannels = null;
+        Boolean _static = null;
+        String profile = null;
+        String level = null;
+        Float framerate = null;
+        Float maxFramerate = null;
+        Boolean copyTimestamps = null;
+        Long startTimeTicks = null;
+        Integer width = null;
+        Integer height = null;
+        Integer maxWidth = null;
+        Integer maxHeight = null;
+        Integer videoBitRate = null;
+        Integer subtitleStreamIndex = null;
+        SubtitleDeliveryMethod subtitleMethod = null;
+        Integer maxRefFrames = null;
+        Integer maxVideoBitDepth = null;
+        String videoCodec = null;
+        Integer audioStreamIndex = null;
+        Integer videoStreamIndex = null;
+        api.getAudioByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerTest() throws Exception {
         String segmentContainer = null;
         String segmentId = null;

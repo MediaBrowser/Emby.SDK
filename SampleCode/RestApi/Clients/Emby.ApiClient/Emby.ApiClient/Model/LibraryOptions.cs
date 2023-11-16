@@ -117,12 +117,6 @@ namespace Emby.ApiClient.Model
         public bool? SaveLocalThumbnailSets { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImportMissingEpisodes
-        /// </summary>
-        /// <value>The ImportMissingEpisodes.</value>
-        public bool? ImportMissingEpisodes { get; set; }
-
-        /// <summary>
         /// Gets or Sets ImportPlaylists
         /// </summary>
         /// <value>The ImportPlaylists.</value>
@@ -391,7 +385,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  SaveLocalMetadata: ").Append(SaveLocalMetadata).Append("\n");
             sb.Append("  SaveMetadataHidden: ").Append(SaveMetadataHidden).Append("\n");
             sb.Append("  SaveLocalThumbnailSets: ").Append(SaveLocalThumbnailSets).Append("\n");
-            sb.Append("  ImportMissingEpisodes: ").Append(ImportMissingEpisodes).Append("\n");
             sb.Append("  ImportPlaylists: ").Append(ImportPlaylists).Append("\n");
             sb.Append("  EnableAutomaticSeriesGrouping: ").Append(EnableAutomaticSeriesGrouping).Append("\n");
             sb.Append("  ShareEmbeddedMusicAlbumImages: ").Append(ShareEmbeddedMusicAlbumImages).Append("\n");
@@ -534,11 +527,6 @@ namespace Emby.ApiClient.Model
                     this.SaveLocalThumbnailSets == input.SaveLocalThumbnailSets ||
                     (this.SaveLocalThumbnailSets != null &&
                     this.SaveLocalThumbnailSets.Equals(input.SaveLocalThumbnailSets))
-                ) && 
-                (
-                    this.ImportMissingEpisodes == input.ImportMissingEpisodes ||
-                    (this.ImportMissingEpisodes != null &&
-                    this.ImportMissingEpisodes.Equals(input.ImportMissingEpisodes))
                 ) && 
                 (
                     this.ImportPlaylists == input.ImportPlaylists ||
@@ -796,8 +784,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.SaveMetadataHidden.GetHashCode();
                 if (this.SaveLocalThumbnailSets != null)
                     hashCode = hashCode * 59 + this.SaveLocalThumbnailSets.GetHashCode();
-                if (this.ImportMissingEpisodes != null)
-                    hashCode = hashCode * 59 + this.ImportMissingEpisodes.GetHashCode();
                 if (this.ImportPlaylists != null)
                     hashCode = hashCode * 59 + this.ImportPlaylists.GetHashCode();
                 if (this.EnableAutomaticSeriesGrouping != null)
