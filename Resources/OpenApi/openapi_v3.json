@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.59"
+    "version": "4.8.0.60"
   },
   "servers": [
     {
@@ -87290,6 +87290,16 @@
             "nullable": true
           },
           "ParentIndexNumber": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "SortIndexNumber": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "SortParentIndexNumber": {
             "type": "integer",
             "format": "int32",
             "nullable": true

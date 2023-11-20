@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.59"
+    "version": "4.8.0.60"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -64126,6 +64126,14 @@
           "type": "integer"
         },
         "ParentIndexNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "SortIndexNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "SortParentIndexNumber": {
           "format": "int32",
           "type": "integer"
         },

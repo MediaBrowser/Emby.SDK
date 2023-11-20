@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.59
+  version: 4.8.0.60
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -80125,6 +80125,14 @@ components:
           type: integer
           format: int32
           nullable: true
+        SortIndexNumber:
+          type: integer
+          format: int32
+          nullable: true
+        SortParentIndexNumber:
+          type: integer
+          format: int32
+          nullable: true
         PremiereDate:
           type: string
           format: date-time
@@ -80149,6 +80157,7 @@ components:
         IndexNumberEnd: 1
         GameSystem: GameSystem
         PremiereDate: 2000-01-23T04:56:07.000+00:00
+        SortParentIndexNumber: 2
         ImageUrl: ImageUrl
         Overview: Overview
         ParentIndexNumber: 5
@@ -80157,6 +80166,7 @@ components:
         Name: Name
         ProductionYear: 0
         IndexNumber: 6
+        SortIndexNumber: 5
         SearchProviderName: SearchProviderName
         ProviderIds:
           key: ProviderIds

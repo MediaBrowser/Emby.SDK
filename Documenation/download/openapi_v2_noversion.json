@@ -64127,6 +64127,14 @@
           "format": "int32",
           "type": "integer"
         },
+        "SortIndexNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "SortParentIndexNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
         "PremiereDate": {
           "format": "date-time",
           "type": "string"

@@ -18,6 +18,8 @@ type RemoteSearchResult struct {
 	IndexNumber int32 `json:"IndexNumber,omitempty"`
 	IndexNumberEnd int32 `json:"IndexNumberEnd,omitempty"`
 	ParentIndexNumber int32 `json:"ParentIndexNumber,omitempty"`
+	SortIndexNumber int32 `json:"SortIndexNumber,omitempty"`
+	SortParentIndexNumber int32 `json:"SortParentIndexNumber,omitempty"`
 	PremiereDate time.Time `json:"PremiereDate,omitempty"`
 	ImageUrl string `json:"ImageUrl,omitempty"`
 	SearchProviderName string `json:"SearchProviderName,omitempty"`

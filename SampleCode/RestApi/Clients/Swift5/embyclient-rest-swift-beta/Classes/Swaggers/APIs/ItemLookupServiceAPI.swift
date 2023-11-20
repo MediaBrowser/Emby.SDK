@@ -232,6 +232,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -239,6 +240,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -248,6 +250,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -255,6 +258,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -301,6 +305,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -308,6 +313,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -317,6 +323,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -324,6 +331,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -370,6 +378,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -377,6 +386,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -386,6 +396,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -393,6 +404,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -439,6 +451,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -446,6 +459,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -455,6 +469,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -462,6 +477,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -508,6 +524,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -515,6 +532,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -524,6 +542,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -531,6 +550,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -577,6 +597,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -584,6 +605,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -593,6 +615,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -600,6 +623,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -646,6 +670,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -653,6 +678,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -662,6 +688,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -669,6 +696,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -715,6 +743,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -722,6 +751,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -731,6 +761,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -738,6 +769,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -784,6 +816,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -791,6 +824,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -800,6 +834,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -807,6 +842,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -853,6 +889,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -860,6 +897,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -869,6 +907,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -876,6 +915,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"

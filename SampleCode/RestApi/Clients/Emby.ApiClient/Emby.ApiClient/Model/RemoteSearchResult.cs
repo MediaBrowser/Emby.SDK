@@ -63,6 +63,18 @@ namespace Emby.ApiClient.Model
         public int? ParentIndexNumber { get; set; }
 
         /// <summary>
+        /// Gets or Sets SortIndexNumber
+        /// </summary>
+        /// <value>The SortIndexNumber.</value>
+        public int? SortIndexNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SortParentIndexNumber
+        /// </summary>
+        /// <value>The SortParentIndexNumber.</value>
+        public int? SortParentIndexNumber { get; set; }
+
+        /// <summary>
         /// Gets or Sets PremiereDate
         /// </summary>
         /// <value>The PremiereDate.</value>
@@ -124,6 +136,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  IndexNumber: ").Append(IndexNumber).Append("\n");
             sb.Append("  IndexNumberEnd: ").Append(IndexNumberEnd).Append("\n");
             sb.Append("  ParentIndexNumber: ").Append(ParentIndexNumber).Append("\n");
+            sb.Append("  SortIndexNumber: ").Append(SortIndexNumber).Append("\n");
+            sb.Append("  SortParentIndexNumber: ").Append(SortParentIndexNumber).Append("\n");
             sb.Append("  PremiereDate: ").Append(PremiereDate).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  SearchProviderName: ").Append(SearchProviderName).Append("\n");
@@ -186,6 +200,16 @@ namespace Emby.ApiClient.Model
                     this.ParentIndexNumber == input.ParentIndexNumber ||
                     (this.ParentIndexNumber != null &&
                     this.ParentIndexNumber.Equals(input.ParentIndexNumber))
+                ) && 
+                (
+                    this.SortIndexNumber == input.SortIndexNumber ||
+                    (this.SortIndexNumber != null &&
+                    this.SortIndexNumber.Equals(input.SortIndexNumber))
+                ) && 
+                (
+                    this.SortParentIndexNumber == input.SortParentIndexNumber ||
+                    (this.SortParentIndexNumber != null &&
+                    this.SortParentIndexNumber.Equals(input.SortParentIndexNumber))
                 ) && 
                 (
                     this.PremiereDate == input.PremiereDate ||
@@ -251,6 +275,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IndexNumberEnd.GetHashCode();
                 if (this.ParentIndexNumber != null)
                     hashCode = hashCode * 59 + this.ParentIndexNumber.GetHashCode();
+                if (this.SortIndexNumber != null)
+                    hashCode = hashCode * 59 + this.SortIndexNumber.GetHashCode();
+                if (this.SortParentIndexNumber != null)
+                    hashCode = hashCode * 59 + this.SortParentIndexNumber.GetHashCode();
                 if (this.PremiereDate != null)
                     hashCode = hashCode * 59 + this.PremiereDate.GetHashCode();
                 if (this.ImageUrl != null)

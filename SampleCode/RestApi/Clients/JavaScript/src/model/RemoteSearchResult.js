@@ -15,7 +15,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The RemoteSearchResult model module.
 * @module model/RemoteSearchResult
-* @version 4.8.0.59
+* @version 4.8.0.60
 */
 export default class RemoteSearchResult {
     /**
@@ -59,6 +59,12 @@ export default class RemoteSearchResult {
             }
             if (data.hasOwnProperty('ParentIndexNumber')) {
                 obj['ParentIndexNumber'] = ApiClient.convertToType(data['ParentIndexNumber'], 'Number');
+            }
+            if (data.hasOwnProperty('SortIndexNumber')) {
+                obj['SortIndexNumber'] = ApiClient.convertToType(data['SortIndexNumber'], 'Number');
+            }
+            if (data.hasOwnProperty('SortParentIndexNumber')) {
+                obj['SortParentIndexNumber'] = ApiClient.convertToType(data['SortParentIndexNumber'], 'Number');
             }
             if (data.hasOwnProperty('PremiereDate')) {
                 obj['PremiereDate'] = ApiClient.convertToType(data['PremiereDate'], 'Date');
@@ -114,6 +120,14 @@ export default class RemoteSearchResult {
     * @member {Number} ParentIndexNumber
     */
     'ParentIndexNumber' = undefined;
+    /**
+    * @member {Number} SortIndexNumber
+    */
+    'SortIndexNumber' = undefined;
+    /**
+    * @member {Number} SortParentIndexNumber
+    */
+    'SortParentIndexNumber' = undefined;
     /**
     * @member {Date} PremiereDate
     */
