@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTVApiListingProviderTypeInfo model module.
 * @module model/LiveTVApiListingProviderTypeInfo
-* @version 4.8.0.60
+* @version 4.8.0.61
 */
 export default class LiveTVApiListingProviderTypeInfo {
     /**

@@ -15,7 +15,7 @@ import LiveTVApiNameIdDescriptionPair from './LiveTVApiNameIdDescriptionPair';
 /**
 * The LiveTVApiAvailableRecordingOptions model module.
 * @module model/LiveTVApiAvailableRecordingOptions
-* @version 4.8.0.60
+* @version 4.8.0.61
 */
 export default class LiveTVApiAvailableRecordingOptions {
     /**
